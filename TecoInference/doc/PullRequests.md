@@ -176,7 +176,7 @@ Python代码遵循[PEP8](https://peps.python.org/pep-0008/)规范。
 
 ## 2. 提交PR
 
-基于您Fork的个人空间的Tecorgin Modelzoo仓库，新建Pull Requests提交内容。关于如何Fork仓库及提交Pull Request，请查阅gitee官方使用文档：[Fork+PullRequest 模式](https://help.gitee.com/base/%E5%BC%80%E5%8F%91%E5%8D%8F%E4%BD%9C/Fork+PullRequest%E6%A8%A1%E5%BC%8F)。
+基于您Fork的个人空间的Tecorgin Modelzoo仓库，新建Pull Requests提交内容。关于如何Fork仓库及提交Pull Request，请查阅gitee官方使用文档：[Fork+PullRequest 模式](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)。
 
 提交PR时注意以下事项：
 
