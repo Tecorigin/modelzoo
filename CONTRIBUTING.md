@@ -8,6 +8,6 @@
 ## 如何贡献模型
 我们诚挚欢迎各位开发者参与modelzoo建设，您可以点击如下链接了解如何贡献模型。
 
-[小模型训练](doc/Contributing.md)
+[小模型训练](PyTorch/doc/模型适配指南.md)
 
 [小模型推理](TecoInference/doc/Contributing.md)
