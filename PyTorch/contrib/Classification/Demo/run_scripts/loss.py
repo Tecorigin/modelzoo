@@ -35,10 +35,11 @@ def compare_loss(benchmark_loss_array, sdaa_loss_array):
         return False, print_str
 
 def parse_string(string):
-    pattern=r"rank : (-?\d+)  train.loss : ([\d\.e-]+)"
+    #默认取rank 0 进行对比，这里根据情况修改
+    pattern=r"rank : 0  train.loss : ([\d\.e-]+)"
     pattern1=r"loss ([\d\.e-]+)"
-    match = re.findall(pattern, string) or re.findall(pattern1, string)
-    #print("xxxxx",match)
+    match = re.findall(pattern, string)  or re.findall(pattern1, string)
+    print("xxxxx",match)
     return match
 
 def parse_loss(ret_list):
@@ -57,11 +58,11 @@ def parse_loss(ret_list):
 def plot_loss(sdaa_loss,a100_loss):
     fig, ax = plt.subplots(figsize=(12, 6))
 
-    smoothed_losses = savgol_filter(sdaa_loss, 20, 1)
+    smoothed_losses = savgol_filter(sdaa_loss, 5, 1)
     x = list(range(len(sdaa_loss)))
     ax.plot(x, smoothed_losses, label="sdaa_loss")
 
-    smoothed_losses = savgol_filter(a100_loss, 20, 1)
+    smoothed_losses = savgol_filter(a100_loss, 5, 1)
     x = list(range(len(a100_loss)))
     ax.plot(x, smoothed_losses, "--", label="cuda_loss")
 

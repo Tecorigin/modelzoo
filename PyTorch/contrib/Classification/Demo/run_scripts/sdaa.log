@@ -1,0 +1,162 @@
+#100iter对齐用户提供100iter的复现sdaa.log即可
+#长训精度对齐用户提供基线sdaa完整log即可
+
+
+--------------+------------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1b0+gitebfa9da
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.1 (N/A)
+ SDAA Runtime | 2.1.0b0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0b2 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0b0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+--------------+------------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1b0+gitebfa9da
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.1 (N/A)
+ SDAA Runtime | 2.1.0b0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0b2 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0b0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+W0515 14:20:08.430000 140114268497728 torch/distributed/run.py:779] 
+W0515 14:20:08.430000 140114268497728 torch/distributed/run.py:779] *****************************************
+W0515 14:20:08.430000 140114268497728 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0515 14:20:08.430000 140114268497728 torch/distributed/run.py:779] *****************************************
+--------------+------------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1b0+gitebfa9da
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.1 (N/A)
+ SDAA Runtime | 2.1.0b0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0b2 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0b0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+--------------+------------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1b0+gitebfa9da
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.1 (N/A)
+ SDAA Runtime | 2.1.0b0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0b2 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0b0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+--------------+------------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1b0+gitebfa9da
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.1 (N/A)
+ SDAA Runtime | 2.1.0b0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0b2 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0b0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+--------------+------------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1b0+gitebfa9da
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.1 (N/A)
+ SDAA Runtime | 2.1.0b0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0b2 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0b0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+[GPU1] Epoch 0 | Batchsize: 32 | Steps: 16[GPU0] Epoch 0 | Batchsize: 32 | Steps: 16[GPU3] Epoch 0 | Batchsize: 32 | Steps: 16
+
+
+[GPU2] Epoch 0 | Batchsize: 32 | Steps: 16
+TCAPPDLL 2025-05-15 14:20:10.930385 - Epoch: 0 Iteration: 0  rank : 0  train.loss : 0.5300281643867493  train.ips : 10415.778984944902 imgs/sTCAPPDLL 2025-05-15 14:20:10.930387 - Epoch: 0 Iteration: 0  rank : 3  train.loss : 0.6068281531333923  train.ips : 10400.443858969391 imgs/s
+
+TCAPPDLL 2025-05-15 14:20:10.930607 - Epoch: 0 Iteration: 0  rank : 1  train.loss : 0.6361681222915649  train.ips : 9718.879652425778 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.930751 - Epoch: 0 Iteration: 0  rank : 2  train.loss : 0.4424075186252594  train.ips : 9414.163428491267 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.932304 - Epoch: 0 Iteration: 1  rank : 3  train.loss : 0.7836378812789917  train.ips : 16619.33234274393 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.932350 - Epoch: 0 Iteration: 1  rank : 0  train.loss : 0.7011028528213501  train.ips : 16221.62533236645 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.932384 - Epoch: 0 Iteration: 1  rank : 1  train.loss : 0.5650151371955872  train.ips : 17912.415320966236 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.932400 - Epoch: 0 Iteration: 1  rank : 2  train.loss : 0.651081919670105  train.ips : 19314.682400345373 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.933500 - Epoch: 0 Iteration: 2  rank : 3  train.loss : 0.6293463706970215  train.ips : 26747.255480271026 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.933531 - Epoch: 0 Iteration: 2  rank : 0  train.loss : 0.5010838508605957  train.ips : 27005.57907444668 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.933597 - Epoch: 0 Iteration: 2  rank : 1  train.loss : 0.568400502204895  train.ips : 26368.905304518663 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.933637 - Epoch: 0 Iteration: 2  rank : 2  train.loss : 0.6680447459220886  train.ips : 25880.780563054377 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.934864 - Epoch: 0 Iteration: 3  rank : 0  train.loss : 0.756533682346344  train.ips : 24023.219616967963 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.934867 - Epoch: 0 Iteration: 3  rank : 3  train.loss : 0.5830315947532654  train.ips : 23411.429966858537 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.934968 - Epoch: 0 Iteration: 3  rank : 1  train.loss : 0.5533216595649719  train.ips : 23350.335421016007 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.935020 - Epoch: 0 Iteration: 3  rank : 2  train.loss : 0.6919647455215454  train.ips : 23136.998448543356 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.936076 - Epoch: 0 Iteration: 4  rank : 0  train.loss : 0.5606489777565002  train.ips : 26426.014569797204 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.936077 - Epoch: 0 Iteration: 4  rank : 3  train.loss : 0.5785338282585144  train.ips : 26462.485804416403 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.936164 - Epoch: 0 Iteration: 4  rank : 1  train.loss : 0.5457870364189148  train.ips : 26779.275339185955 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.936221 - Epoch: 0 Iteration: 4  rank : 2  train.loss : 0.42493936419487  train.ips : 26667.539837075303 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.937441 - Epoch: 0 Iteration: 5  rank : 0  train.loss : 0.5745197534561157  train.ips : 23448.24039133473 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.937448 - Epoch: 0 Iteration: 5  rank : 3  train.loss : 0.44483524560928345  train.ips : 23346.27378674552 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.937523 - Epoch: 0 Iteration: 5  rank : 1  train.loss : 0.45311930775642395  train.ips : 23563.505617977527 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.937585 - Epoch: 0 Iteration: 5  rank : 2  train.loss : 0.5271936058998108  train.ips : 23481.058082575226 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.938790 - Epoch: 0 Iteration: 6  rank : 0  train.loss : 0.6072927117347717  train.ips : 23734.346242263484 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.938807 - Epoch: 0 Iteration: 6  rank : 3  train.loss : 0.5986886024475098  train.ips : 23563.505617977527 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.938888 - Epoch: 0 Iteration: 6  rank : 1  train.loss : 0.52203369140625  train.ips : 23460.536269882887 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.938947 - Epoch: 0 Iteration: 6  rank : 2  train.loss : 0.34140515327453613  train.ips : 23489.27686384319 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.939989 - Epoch: 0 Iteration: 7  rank : 0  train.loss : 0.481216698884964  train.ips : 26720.630698785586 imgs/sTCAPPDLL 2025-05-15 14:20:10.939990 - Epoch: 0 Iteration: 7  rank : 3  train.loss : 0.5416151881217957  train.ips : 27070.94150867285 imgs/s
+
+TCAPPDLL 2025-05-15 14:20:10.940069 - Epoch: 0 Iteration: 7  rank : 1  train.loss : 0.4432945251464844  train.ips : 27092.799354057326 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.940130 - Epoch: 0 Iteration: 7  rank : 2  train.loss : 0.4395947754383087  train.ips : 27060.025806451613 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.941167 - Epoch: 0 Iteration: 8  rank : 0  train.loss : 0.5595873594284058  train.ips : 27169.58056680162 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.941173 - Epoch: 0 Iteration: 8  rank : 3  train.loss : 0.4557790160179138  train.ips : 27070.94150867285 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.941251 - Epoch: 0 Iteration: 8  rank : 1  train.loss : 0.358997642993927  train.ips : 27114.692525252525 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.941309 - Epoch: 0 Iteration: 8  rank : 2  train.loss : 0.5717604160308838  train.ips : 27175.081595464668 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.942336 - Epoch: 0 Iteration: 9  rank : 0  train.loss : 0.5103887915611267  train.ips : 27408.153563406166 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.942345 - Epoch: 0 Iteration: 9  rank : 3  train.loss : 0.54775470495224  train.ips : 27313.33496133496 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.942424 - Epoch: 0 Iteration: 9  rank : 1  train.loss : 0.628984808921814  train.ips : 27280.026016260163 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.942481 - Epoch: 0 Iteration: 9  rank : 2  train.loss : 0.5108749270439148  train.ips : 27313.33496133496 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.943504 - Epoch: 0 Iteration: 10  rank : 0  train.loss : 0.5366145372390747  train.ips : 27413.75163398693 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.943513 - Epoch: 0 Iteration: 10  rank : 3  train.loss : 0.44465139508247375  train.ips : 27424.954638332652 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.943577 - Epoch: 0 Iteration: 10  rank : 1  train.loss : 0.5457836389541626  train.ips : 27765.355399255273 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.943642 - Epoch: 0 Iteration: 10  rank : 2  train.loss : 0.5547557473182678  train.ips : 27577.09636326279 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.944534 - Epoch: 0 Iteration: 11  rank : 0  train.loss : 0.49687570333480835  train.ips : 31090.509149872596 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.944540 - Epoch: 0 Iteration: 11  rank : 3  train.loss : 0.5444294214248657  train.ips : 31155.46146703807 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.944598 - Epoch: 0 Iteration: 11  rank : 1  train.loss : 0.5595361590385437  train.ips : 31388.617399438728 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.944674 - Epoch: 0 Iteration: 11  rank : 2  train.loss : 0.5198143720626831  train.ips : 31025.827092001848 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.945560 - Epoch: 0 Iteration: 12  rank : 0  train.loss : 0.6975353360176086  train.ips : 31184.416356877322 imgs/sTCAPPDLL 2025-05-15 14:20:10.945560 - Epoch: 0 Iteration: 12  rank : 3  train.loss : 0.6269744038581848  train.ips : 31388.617399438728 imgs/s
+
+TCAPPDLL 2025-05-15 14:20:10.945617 - Epoch: 0 Iteration: 12  rank : 1  train.loss : 0.47592467069625854  train.ips : 31410.654809267493 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.945696 - Epoch: 0 Iteration: 12  rank : 2  train.loss : 0.4624941647052765  train.ips : 31330.001867413634 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.946578 - Epoch: 0 Iteration: 13  rank : 0  train.loss : 0.4157799184322357  train.ips : 31462.19596812002 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.946586 - Epoch: 0 Iteration: 13  rank : 3  train.loss : 0.46689745783805847  train.ips : 31235.217128228996 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.946633 - Epoch: 0 Iteration: 13  rank : 1  train.loss : 0.4020390212535858  train.ips : 31528.71223866573 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.946716 - Epoch: 0 Iteration: 13  rank : 2  train.loss : 0.5465364456176758  train.ips : 31395.959766081873 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.947618 - Epoch: 0 Iteration: 14  rank : 0  train.loss : 0.36368557810783386  train.ips : 30798.010096374484 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.947624 - Epoch: 0 Iteration: 14  rank : 3  train.loss : 0.3722972869873047  train.ips : 30833.385711003906 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.947665 - Epoch: 0 Iteration: 14  rank : 1  train.loss : 0.47483378648757935  train.ips : 31025.827092001848 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.947756 - Epoch: 0 Iteration: 14  rank : 2  train.loss : 0.4672921299934387  train.ips : 30783.88256880734 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.948641 - Epoch: 0 Iteration: 15  rank : 0  train.loss : 0.37493908405303955  train.ips : 31300.776119402984 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.948668 - Epoch: 0 Iteration: 15  rank : 3  train.loss : 0.48955920338630676  train.ips : 30671.327239488117 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.948691 - Epoch: 0 Iteration: 15  rank : 1  train.loss : 0.4418518543243408  train.ips : 31213.42511627907 imgs/s
+TCAPPDLL 2025-05-15 14:20:10.948782 - Epoch: 0 Iteration: 15  rank : 2  train.loss : 0.4673537015914917  train.ips : 31206.16786793769 imgs/s
+Epoch 0 | Training snapshot saved at snapshot.pt
+  torchrun         --nnodes 1         --node_rank 0         --master_addr 127.0.0.1         --master_port 29500         --nproc_per_node 4         /data/application/sunhn/lq/github/sunhn/modelzoo/PyTorch/contrib/Classification/Demo/multigpu_torchrun.py                  --total_epochs 1          --batch_size 32          --device sdaa          --save_every 1                  

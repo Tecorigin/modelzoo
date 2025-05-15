@@ -1,4 +1,6 @@
 git+https://gitee.com/sunny8654/dllogger.git
 # torch>=1.11.0
-git+https://github.com/Tecorigin/tcap_dllogger.git
 tqdm
+scipy
+matplotlib
+git+https://github.com/Tecorigin/tcap_dllogger.git
