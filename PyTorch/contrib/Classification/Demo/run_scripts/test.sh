@@ -14,7 +14,10 @@ data_path="/data/imagnet"
 # done
 
 #如长训请提供完整命令即可，100iter对齐提供100iter命令即可
-python run_demo.py --nproc_per_node 4 --model_name demo --epoch 1 --batch_size 32 --device sdaa --step 100 --datasets $dataset 2>&1 | tee sdaa.log
+
+#示例1: python run_resnet.py --nproc_per_node 4 --model_name resnet50 --epoch 1 --batch_size 32 --device sdaa --step 100 --datasets $dataset 2>&1 | tee sdaa.log
+#由于demo无需下载数据集及数据集太小所以未做step适配，正常场景参考示例1即可
+python run_demo.py --nproc_per_node 4 --model_name demo --epoch 1 --batch_size 32 --device sdaa  2>&1 | tee sdaa.log
 
 #生成loss对比图
 python loss.py --sdaa-log sdaa.log --cuda-log cuda.log

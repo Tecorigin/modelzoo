@@ -17,6 +17,7 @@ from torch.distributed import init_process_group, destroy_process_group
 import os
 
 # 初始化logger
+import dllogger
 from tcap_dllogger import Logger, StdOutBackend, JSONStreamBackend, Verbosity
 json_logger = Logger(
 [
