@@ -1,0 +1,4 @@
+timm==0.3.2
+matplotlib
+numpy
+git+https://github.com/Tecorigin/tcap_dllogger.git
