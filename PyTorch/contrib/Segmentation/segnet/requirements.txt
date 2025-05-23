@@ -1,2 +1,6 @@
-scikit-image
-numpy==1.26.4
+tqdm
+matplotlib
+scikit-learn
+opencv-python
+torchsummary
+git+https://gitee.com/xiwei777/tcap_dllogger.git
