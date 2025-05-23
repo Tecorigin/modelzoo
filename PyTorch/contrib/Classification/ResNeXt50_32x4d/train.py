@@ -1,178 +1,192 @@
-# Adapted to tecorigin hardware。
-
-import os
+# BSD 3- Clause License Copyright (c) 2023, Tecorigin Co., Ltd. All rights
+# reserved.
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+# Redistributions of source code must retain the above copyright notice,
+# this list of conditions and the following disclaimer.
+# Redistributions in binary form must reproduce the above copyright notice,
+# this list of conditions and the following disclaimer in the documentation
+# and/or other materials provided with the distribution.
+# Neither the name of the copyright holder nor the names of its contributors
+# may be used to endorse or promote products derived from this software
+# without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+# STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING IN ANY
+# WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+# OF SUCH DAMAGE.
 import argparse
+import os
+import sys
 import time
-import math
-from argparse import ArgumentParser, ArgumentTypeError
 
+import loguru
 import torch
-import torch_sdaa
 import torch.optim as optim
 import torch.optim.lr_scheduler as lr_scheduler
-import random
-import numpy as np
-from utils import train_one_epoch, evaluate, collate_fn, get_datasets
-import torch.nn as nn
-# 导入DDP所需的依赖库
-import torch.distributed as dist
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.utils.data.distributed import DistributedSampler
-import matplotlib.pyplot as plt
 
 # 加载模型
-from resnext import resnext50_32x4d
+from ResNeXt import create_ResNeXt50_32x4d
+from utils import collate_fn, evaluate, get_datasets, train_one_epoch
 
-local_rank = int(os.environ.get("LOCAL_RANK", -1))
 
-def str2bool(v):
-    if isinstance(v, bool):
-        return v
-    if v.lower() in ("yes", "true", "t", "y", "1"):
-        return True
-    elif v.lower() in ("no", "false", "f", "n", "0"):
-        return False
+def init_distributed_device(args):
+    local_rank = int(os.environ.get("LOCAL_RANK", -1))
+    distributed = local_rank != -1
+    if distributed:
+        if args.device == "cuda":
+            if not torch.cuda.is_available():
+                loguru.logger.error(f"CUDA is not available.")
+                sys.exit(0)
+            device = torch.device(f"cuda:{local_rank}")
+            torch.cuda.set_device(device)
+            torch.distributed.init_process_group(backend="nccl", init_method="env://")
+        elif args.device == "sdaa":
+            if not torch.sdaa.is_available():
+                loguru.logger.error(f"SDAA is not available.")
+                sys.exit(0)
+            device = torch.device(f"sdaa:{local_rank}")
+            torch.sdaa.set_device(device)
+            torch.distributed.init_process_group(backend="tccl", init_method="env://")
+        else:
+            loguru.logger.error("This device type is not supported.")
+            sys.exit(0)
     else:
-        raise ArgumentTypeError(
-            f"Truthy value expected: got {v} but expected one of yes/no, true/false, t/f, y/n, 1/0 (case insensitive)."
-        )
-def set_seed(seed):
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
+        if args.device == "cuda":
+            device = torch.device("cuda")
+        elif args.device == "sdaa":
+            device = torch.device("sdaa")
+        elif args.device == "cpu":
+            device = torch.device("cpu")
+        else:
+            loguru.logger.error("This device type is not supported.")
+            sys.exit(0)
 
-set_seed(42)
+    args.local_rank = local_rank
+    args.distributed = distributed
+    return device
 
 
 def main(args):
-    if args.distributed is False:
-        device = torch.device(args.device)
-    # DDP backend初始化
-    else:
-        device = torch.device(f"sdaa:{local_rank}")
-        torch.sdaa.set_device(device)
-        # 初始化ProcessGroup，通信后端选择tccl
-        torch.distributed.init_process_group(backend="tccl",init_method="env://")
-
+    device = init_distributed_device(args)
 
     dataset_path = args.dataset_path
-    img_size = 224        
 
     train_dataset, val_dataset = get_datasets(dataset_path)
 
-
     batch_size = args.batch_size
     nw = min([os.cpu_count(), batch_size if batch_size > 1 else 0, 8])  # number of workers
-    print('Using {} dataloader workers every process'.format(nw))
+    loguru.logger.info("Using {} dataloader workers every process".format(nw))
 
-    if local_rank != -1:
+    if args.local_rank != -1:
         train_sampler = DistributedSampler(train_dataset)
         val_sampler = DistributedSampler(val_dataset, shuffle=False)
     else:
         train_sampler = None
         val_sampler = None
-    
-    train_loader = torch.utils.data.DataLoader(train_dataset,
-                                               batch_size=batch_size,
-                                               shuffle=(train_sampler is None),
-                                               pin_memory=True,
-                                               num_workers=nw,
-                                               sampler=train_sampler,
-                                               collate_fn=collate_fn)
 
-    val_loader = torch.utils.data.DataLoader(val_dataset,
-                                             batch_size=batch_size,
-                                             shuffle=(train_sampler is None),
-                                             pin_memory=True,
-                                             num_workers=nw,
-                                             sampler=val_sampler,
-                                             collate_fn=collate_fn)
+    loguru.logger.info(f"创建 DataLoader")
+    train_loader = torch.utils.data.DataLoader(
+        train_dataset,
+        batch_size=batch_size,
+        shuffle=(train_sampler is None),
+        pin_memory=True,
+        num_workers=nw,
+        sampler=train_sampler,
+        collate_fn=collate_fn,
+    )
+
+    val_loader = torch.utils.data.DataLoader(
+        val_dataset,
+        batch_size=batch_size,
+        shuffle=(train_sampler is None),
+        pin_memory=True,
+        num_workers=nw,
+        sampler=val_sampler,
+        collate_fn=collate_fn,
+    )
 
     # 如果存在预训练权重则载入
-    model = resnext50_32x4d()
-    model.to(args.device)
-    if args.weights != "":
-        if args.weights is None:
-            assert os.path.exists(args.weights), "weights file: '{}' not exist.".format(args.weights)
-            weights_dict = torch.load(args.weights, map_location=device)
-            weights_dict = weights_dict["model"] if "model" in weights_dict else weights_dict
-            # 删除有关分类类别的权重
-            for k in list(weights_dict.keys()):
-                if "classifier" in k:
-                    del weights_dict[k]
-            print(model.load_state_dict(weights_dict, strict=False))
-        elif os.path.exists(args.weights):
-            weights_dict = torch.load(args.weights, map_location=device)
-            load_weights_dict = {k: v for k, v in weights_dict.items()
-                                 if model.state_dict()[k].numel() == v.numel()}
-            print(model.load_state_dict(load_weights_dict, strict=False))
+    loguru.logger.info(f"创建模型并加载预训练权重")
+    model = create_ResNeXt50_32x4d()
+    if "sdaa" in args.device and not args.amp:
+        loguru.logger.warning(f"sdaa 训练模式下推荐开启混合精度训练")
+    if args.precision == "float16":
+        args.dtype = torch.float16
+    elif args.precision == "float32":
+        args.dtype = torch.float32
+    elif args.precision == "bfloat16":
+        args.dtype = torch.bfloat16
+    else:
+        loguru.logger.error(f"使用了暂不支持的 precision ({args.precision})")
+        sys.exit(-1)
 
+    model.to(device, dtype=args.dtype)
+
+    if args.pretrained_path is not None:
+        pretrained_path = args.pretrained_path
+        assert os.path.exists(pretrained_path), f"weights file: {pretrained_path} not exist."
+        weights_dict = torch.load(args.weights, map_location="cpu")
+        weights_dict = weights_dict["model"] if "model" in weights_dict else weights_dict
+        loguru.logger.info(model.load_state_dict(weights_dict, strict=False))
 
     if args.distributed:
-        model = DDP(model, device_ids=[local_rank], output_device=local_rank)
+        model = DDP(model, device_ids=[args.local_rank], output_device=args.local_rank)
 
     pg = [p for p in model.parameters() if p.requires_grad]
-    optimizer = optim.SGD(pg, lr=args.lr, momentum=0.9, weight_decay=1E-4)
- 
-    lf = lambda x: ((1 + math.cos(x * math.pi / args.epochs)) / 2) * (1 - args.lrf) + args.lrf  # cosine
-    scheduler = lr_scheduler.LambdaLR(optimizer, lr_lambda=lf)
-    scaler = torch_sdaa.amp.GradScaler()
+    optimizer = optim.SGD(pg, lr=args.lr, momentum=0.9, weight_decay=1e-4)
 
-    best_acc = 0.
+    scheduler = lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs, eta_min=0.01 * args.lrf)
+    if "sdaa" in args.device:
+        scaler = torch.sdaa.amp.GradScaler()
+    else:
+        scaler = None
+
+    best_acc = 0.0
     global_step = 0
 
-    train_losses = []
-    train_accuracies = []
     val_losses = []
     val_accuracies = []
-    
-    
+
+    loss_function = torch.nn.CrossEntropyLoss(label_smoothing=0.1)
+    loss_function.to(device)
+
+    loguru.logger.info(f"开始训练")
     for epoch in range(args.epochs):
-        if local_rank != -1:
-            train_sampler.set_epoch(epoch)        
+        if args.local_rank != -1:
+            train_sampler.set_epoch(epoch)
         # 记录训练时间
         start_time = time.time()
-        train_throughput = len(train_loader.dataset)  # 计算训练吞吐量
-        train_loss, train_acc, train_data_to_device_time, train_compute_time, total_forward_time, total_backward_time, total_optimizer_step_time = train_one_epoch(model=model,
-                                                optimizer=optimizer,
-                                                scaler=scaler,
-                                                data_loader=train_loader,
-                                                device=device,
-                                                epoch=epoch,
-                                                use_acm = args.autocast,
-                                                rank = opt.local_rank,
-                                                local_rank = local_rank,
-                                                img_size=img_size,
-                                                lr=args.lr,
-                                                train_throughput=train_throughput,
-                                                max_step=args.step,
-                                                save_path=args.path)
+        train_one_epoch(
+            model=model, loss_function=loss_function, optimizer=optimizer, scaler=scaler, data_loader=train_loader, device=device, epoch=epoch, args=args
+        )
         scheduler.step()
-        
+
         end_time = time.time()
         train_time = end_time - start_time
 
-        if args.step < 0:
-            val_loss, val_acc = evaluate(model=model,
-                                         data_loader=val_loader,
-                                         device=device,
-                                         epoch=epoch)
+        loguru.logger.info(f"第 {epoch} 训练共花费: {train_time:.3f} seconds")
+
+        if args.max_step < 0:
+            val_loss, val_acc = evaluate(model=model, data_loader=val_loader, device=device, epoch=epoch, args=args)
         else:
             break
         global_step += 1
 
         if args.local_rank == 0:
-            tags = ["train_loss", "train_acc", "val_loss", "val_acc", "learning_rate"]
-            
-            best_model_name = f'best_model_batchsize_{args.batch_size}_lr_{args.str_lr}.pth'
-            latest_model_name = f'latest_model_batchsize_{args.batch_size}_lr_{args.str_lr}.pth'
-            
-            train_losses.append(train_loss)
-            train_accuracies.append(train_acc)
+            best_model_name = f"best_model_batchsize{batch_size}_lr{args.str_lr}.pth"
+            latest_model_name = f"latest_model_batchsize{batch_size}_lr{args.str_lr}.pth"
+
             val_losses.append(val_loss)
             val_accuracies.append(val_acc)
 
@@ -187,68 +201,45 @@ def main(args):
                     torch.save(model.state_dict(), os.path.join(args.path, best_model_name))
                 torch.save(model.state_dict(), os.path.join(args.path, latest_model_name))
 
-    if args.local_rank == 0 and args.step < 0:
-        plt.figure()
-        plt.plot(range(args.epochs), train_losses, label='Train Loss')
-        plt.plot(range(args.epochs), val_losses, label='Validation Loss')
-        plt.xlabel('Epochs')
-        plt.ylabel('Loss')
-        plt.legend()
-        plt.title('Loss Curve')
-        plt.savefig(os.path.join(args.path, f'loss_curve_batch_size_{args.batch_size}_lr_{args.str_lr}.png'))
-        
-        # 画出精度曲线
-        plt.figure()
-        plt.plot(range(args.epochs), train_accuracies, label='Train Accuracy')
-        plt.plot(range(args.epochs), val_accuracies, label='Validation Accuracy')
-        plt.xlabel('Epochs')
-        plt.ylabel('Accuracy')
-        plt.legend()
-        plt.title('Accuracy Curve')
-        plt.savefig(os.path.join(args.path, f'accuracy_curve_batch_size_{args.batch_size}_lr_{args.str_lr}.png'))
-        
 
+if __name__ == "__main__":
+    # 设置IP:PORT，框架启动TCP Store为ProcessGroup服务
+    os.environ["MASTER_ADDR"] = "localhost"  # 设置IP
 
-if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--nnodes", default=1, type=int)
-    parser.add_argument("--local-rank", default= -1, type=int)
-    parser.add_argument('--num_classes', type=int, default=1000)
-    parser.add_argument('--epochs', type=int, default=150)
-    parser.add_argument('--batch_size', type=int, default=64)
-    parser.add_argument('--lr', type=float, default=0.1)
-    parser.add_argument('--lrf', type=float, default=0.1)
-    parser.add_argument('--distributed', type=str2bool, default=True)
-    parser.add_argument('--autocast', type=str2bool, default=True)
-    parser.add_argument("--step", default=-1, type=int)
-    parser.add_argument('--dataset_path', type=str, default="")
 
-    # 预训练权重路径，如果不想载入就设置为空字符
-    parser.add_argument('--weights', type=str, default='None',
-                        help='initial weights path')
-    parser.add_argument('--freeze_layers', type=bool, default=False)
-    parser.add_argument('--device', default='sdaa')
-    parser.add_argument('--path', type=str, default='/data/ckpt/ResNeXt50_32x4d/experiments/')
-    parser.add_argument('--weights_path', type=str, default='weights')
+    # 我认为有用的参数 (一部分是原来就有的, 另一部分是从 timm 上拿过来的)
+    parser.add_argument("--epochs", type=int, default=300, metavar="N", help="number of epochs to train (default: 300)")
+    parser.add_argument("--batch_size", type=int, default=128, help="Input batch size for training (default: 128)")
+    parser.add_argument(
+        "--precision", default="float32", type=str, help="Numeric precision. One of (float32, float16, bfloat16)"
+    )
+    parser.add_argument("--device", default="sdaa", type=str, help="Device (accelerator) to use.")
+    parser.add_argument("--max_step", default=-1, type=int)
+
+    # 路径问题
+    parser.add_argument("--dataset_path", type=str, default="")
+    parser.add_argument(
+        "--pretrained_path",
+        default=None,
+        type=str,
+        help="Load this checkpoint as if they were the pretrained weights (with adaptation).",
+    )
+    parser.add_argument("--save_path", type=str, default="", help="Path to save checkpoints.")
+
+    # 优化器参数
+    parser.add_argument("--lr", type=float, default=0.1, metavar="LR", help="learning rate (default: 0.1)")
+    parser.add_argument("--lrf", type=float, default=0.1)
+    parser.add_argument("--weight_decay", type=float, default=1e-4, help="weight decay (default: 1e-4)")
+    parser.add_argument("--momentum", type=float, default=0.9, help="Optimizer momentum (default: 0.9)")
+    parser.add_argument(
+        "--amp", action="store_true", default=False, help="use NVIDIA Apex AMP or Native AMP for mixed precision training"
+    )
 
     opt = parser.parse_args()
-    
-    opt.str_lr = str(opt.lr).replace('.', '_')
-    if not opt.distributed:
-        opt.path = '/data/ckpt/ResNeXt50_32x4d/single_experiments/'
-    opt.path = os.path.join(opt.path, f'batchsize_{opt.batch_size}_lr_{opt.str_lr}')
-    os.makedirs(opt.path, exist_ok=True)
-    if 'scripts' in os.getcwd():
-        with open(os.path.join(os.getcwd(), '../log_epoch.jsonl'), 'w') as f:
-            pass
-        with open(os.path.join(os.getcwd(), '../log.jsonl'), 'w') as f:
-            pass
-    else:
-        with open(os.path.join(os.getcwd(), 'log_epoch.jsonl'), 'w') as f:
-            pass
-        with open(os.path.join(os.getcwd(), 'log.jsonl'), 'w') as f:
-            pass
-    
-    local_rank = opt.local_rank
+
+    opt.str_lr = str(opt.lr).replace(".", "_")
+    opt.save_path = os.path.join(opt.save_path, f"batchsize{opt.batch_size}_lr{opt.str_lr}")
+    os.makedirs(opt.save_path, exist_ok=True)
 
     main(opt)
