@@ -3,7 +3,7 @@ script_path=$(dirname $(readlink -f "$0"))
 echo "当前脚本路径: $script_path"
 
 # 添加 PYTHONPATH，确保能找到 mmpretrain 模块
-export PYTHONPATH=/data/bigc-data/lsq/mmpretrain:$PYTHONPATH
+export PYTHONPATH="$SCRIPT_PATH/../mmpretrain:$PYTHONPATH"
 
 
 # 安装依赖
