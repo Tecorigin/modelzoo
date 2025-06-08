@@ -1,8 +1,0 @@
-scipy
-numpy
-matplotlib
-opencv_python
-tqdm
-Pillow
-h5py
-git+https://gitee.com/xiwei777/tcap_dllogger.git

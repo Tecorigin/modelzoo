@@ -1,3 +1,0 @@
-
-baboon.png (480,500,3)
-/baboon.png (480,500,3)

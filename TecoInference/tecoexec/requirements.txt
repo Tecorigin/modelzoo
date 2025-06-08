@@ -1,2 +1,0 @@
-pandas==2.0.3
-git+http://10.10.30.109/tecoap1/application/benchmark-tools.git@b0c13d2dd417702dfabce18095690c1ca797f94e

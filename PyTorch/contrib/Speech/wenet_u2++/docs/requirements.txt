@@ -1,9 +1,0 @@
-jinja2
-nbsphinx
-sphinx
-recommonmark
-sphinx-markdown-tables
-sphinx-rtd-theme
-torch
-torchaudio
-typeguard

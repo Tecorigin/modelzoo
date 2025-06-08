@@ -1,2 +1,0 @@
-gt/sequence_1
-gt/sequence_2

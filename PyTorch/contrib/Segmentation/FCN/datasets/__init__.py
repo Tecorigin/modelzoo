@@ -1,1 +1,0 @@
-from .vaihingen_voc import Vaihingen_VOC

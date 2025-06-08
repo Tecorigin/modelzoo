@@ -1,9 +1,0 @@
-{
-    "model_path": "/mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs1.onnx",
-    "model_name": "resnet_sync_cross",
-    "dtype": "float16",
-    "warm_up": 10,
-    "run_loops": 500,
-    "use_device_id": null,
-    "use_cross_memory": true
-}
