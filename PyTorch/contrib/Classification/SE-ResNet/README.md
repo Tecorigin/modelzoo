@@ -54,7 +54,7 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageN
 
 2. 运行训练。该模型支持单机单卡。
     ```
-   torchrun --master_port=29500 ./run_resnext.py ./seresnet/seresnet50_8xb32_in1k.py --launcher pytorch --amp | tee sdaa.log
+   torchrun --master_port=29500 ./run_sesnext.py ./seresnet/seresnet50_8xb32_in1k.py --launcher pytorch --amp | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
 
