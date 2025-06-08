@@ -1,0 +1,10 @@
+matplotlib
+scipy
+mmengine
+tcap_dllogger
+modelindex
+einops
+mat4py
+git+https://github.com/Tecorigin/tcap_dllogger.git
+
+
