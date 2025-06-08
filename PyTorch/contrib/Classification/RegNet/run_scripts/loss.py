@@ -60,12 +60,15 @@ def compare_loss(benchmark_loss_array, sdaa_loss_array):
         return False, print_str
 
 def parse_string(string):
-    #默认取rank 0 进行对比，这里根据情况修改
-    pattern=r"rank: 0 train.loss : ([\d\.e-]+)"
-    pattern1=r"loss ([\d\.e-]+)"
-    match = re.findall(pattern, string)  or re.findall(pattern1, string)
-    print("xxxxx",match)
-    return match
+    # 匹配 rank 后有无空格都可以，兼容 cuda.log 和 sdaa.log
+    pattern = r"rank\s*:\s*0\s+train\.loss\s*:\s*([\d\.e-]+)"
+    matches = []
+    for line in string.splitlines():
+        match = re.search(pattern, line)
+        if match:
+            matches.append(match.group(1))
+    print("xxxxx", matches)
+    return matches
 
 def parse_loss(ret_list):
     step_num=len(ret_list)
