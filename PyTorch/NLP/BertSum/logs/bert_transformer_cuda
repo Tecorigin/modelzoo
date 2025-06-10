@@ -1,0 +1,198 @@
+python train.py -mode train -encoder transformer -dropout 0.1 -bert_data_path ../bert_data/cnndm -model_path ../models/bert_transformer -lr 2e-3 -visible_gpus 0  -gpu_ranks 0 -world_size 1 -report_every 1 -save_checkpoint_steps 1000 -batch_size 3000 -decay_method noam -train_steps 100 -accum_count 2 -log_file ../logs/bert_transformer -use_interval true -warmup_steps 10000 
+-ff_size 2048 -inter_layers 2 -heads 8
+[2025-06-09 15:44:35,567 INFO] Device ID 0
+[2025-06-09 15:44:35,567 INFO] Device cuda
+[2025-06-09 15:44:36,471 INFO] loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz from cache at ../temp/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba
+[2025-06-09 15:44:36,472 INFO] extracting archive file ../temp/9c41111e2de84547a463fd39217199738d1e3deb72d4fec4399e6e241983c6f0.ae3cef932725ca7a30cdcb93fc6e09150a55e2a130ec7af63975a16c153ae2ba to temp dir /tmp/tmpo350462x
+[2025-06-09 15:44:39,674 INFO] Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+[2025-06-09 15:44:42,432 INFO] Summarizer(
+  (bert): Bert(
+    (model): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): BertLayerNorm()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): BertLayerNorm()
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): BertLayerNorm()
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+  )
+  (encoder): TransformerInterEncoder(
+    (pos_emb): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (transformer_inter): ModuleList(
+      (0-1): 2 x TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=768, out_features=768, bias=True)
+          (linear_values): Linear(in_features=768, out_features=768, bias=True)
+          (linear_query): Linear(in_features=768, out_features=768, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=768, out_features=768, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=768, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=768, bias=True)
+          (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (layer_norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+    (wo): Linear(in_features=768, out_features=1, bias=True)
+    (sigmoid): Sigmoid()
+  )
+)
+[2025-06-09 15:44:42,437 INFO] * number of parameters: 120512513
+[2025-06-09 15:44:42,437 INFO] Start training...
+[2025-06-09 15:44:45,512 INFO] Loading train dataset from ../bert_data/cnndm.train.123.bert.pt, number of examples: 2001
+[2025-06-09 15:44:46,007 INFO] Step  1/  100; xent: 4.61; lr: 0.0000000;  40 docs/s;      0 sec
+[2025-06-09 15:44:46,180 INFO] Step  2/  100; xent: 3.72; lr: 0.0000000; 116 docs/s;      1 sec
+[2025-06-09 15:44:46,353 INFO] Step  3/  100; xent: 4.31; lr: 0.0000000; 116 docs/s;      1 sec
+[2025-06-09 15:44:46,526 INFO] Step  4/  100; xent: 4.11; lr: 0.0000000; 116 docs/s;      1 sec
+[2025-06-09 15:44:46,698 INFO] Step  5/  100; xent: 4.34; lr: 0.0000000; 116 docs/s;      1 sec
+[2025-06-09 15:44:46,873 INFO] Step  6/  100; xent: 4.26; lr: 0.0000000; 115 docs/s;      1 sec
+[2025-06-09 15:44:47,047 INFO] Step  7/  100; xent: 4.44; lr: 0.0000000; 115 docs/s;      2 sec
+[2025-06-09 15:44:47,212 INFO] Step  8/  100; xent: 3.50; lr: 0.0000000; 145 docs/s;      2 sec
+[2025-06-09 15:44:47,386 INFO] Step  9/  100; xent: 5.44; lr: 0.0000000; 115 docs/s;      2 sec
+[2025-06-09 15:44:47,561 INFO] Step 10/  100; xent: 4.18; lr: 0.0000000; 115 docs/s;      2 sec
+[2025-06-09 15:44:47,740 INFO] Step 11/  100; xent: 4.84; lr: 0.0000000; 112 docs/s;      2 sec
+[2025-06-09 15:44:47,916 INFO] Step 12/  100; xent: 3.94; lr: 0.0000000; 114 docs/s;      2 sec
+[2025-06-09 15:44:48,091 INFO] Step 13/  100; xent: 4.68; lr: 0.0000000; 115 docs/s;      3 sec
+[2025-06-09 15:44:48,265 INFO] Step 14/  100; xent: 4.23; lr: 0.0000000; 115 docs/s;      3 sec
+[2025-06-09 15:44:48,439 INFO] Step 15/  100; xent: 3.17; lr: 0.0000000; 115 docs/s;      3 sec
+[2025-06-09 15:44:48,612 INFO] Step 16/  100; xent: 4.20; lr: 0.0000000; 115 docs/s;      3 sec
+[2025-06-09 15:44:48,786 INFO] Step 17/  100; xent: 4.64; lr: 0.0000000; 115 docs/s;      3 sec
+[2025-06-09 15:44:48,960 INFO] Step 18/  100; xent: 4.52; lr: 0.0000000; 115 docs/s;      3 sec
+[2025-06-09 15:44:49,132 INFO] Step 19/  100; xent: 3.97; lr: 0.0000000; 116 docs/s;      4 sec
+[2025-06-09 15:44:49,304 INFO] Step 20/  100; xent: 3.77; lr: 0.0000000; 117 docs/s;      4 sec
+[2025-06-09 15:44:49,476 INFO] Step 21/  100; xent: 4.62; lr: 0.0000000; 116 docs/s;      4 sec
+[2025-06-09 15:44:49,648 INFO] Step 22/  100; xent: 4.48; lr: 0.0000000; 117 docs/s;      4 sec
+[2025-06-09 15:44:49,821 INFO] Step 23/  100; xent: 5.28; lr: 0.0000000; 116 docs/s;      4 sec
+[2025-06-09 15:44:49,994 INFO] Step 24/  100; xent: 5.10; lr: 0.0000000; 116 docs/s;      4 sec
+[2025-06-09 15:44:50,166 INFO] Step 25/  100; xent: 5.10; lr: 0.0000000; 116 docs/s;      5 sec
+[2025-06-09 15:44:50,339 INFO] Step 26/  100; xent: 4.47; lr: 0.0000001; 116 docs/s;      5 sec
+[2025-06-09 15:44:50,512 INFO] Step 27/  100; xent: 4.40; lr: 0.0000001; 116 docs/s;      5 sec
+[2025-06-09 15:44:50,685 INFO] Step 28/  100; xent: 3.82; lr: 0.0000001; 116 docs/s;      5 sec
+[2025-06-09 15:44:50,858 INFO] Step 29/  100; xent: 4.85; lr: 0.0000001; 116 docs/s;      5 sec
+[2025-06-09 15:44:51,030 INFO] Step 30/  100; xent: 3.69; lr: 0.0000001; 116 docs/s;      6 sec
+[2025-06-09 15:44:51,202 INFO] Step 31/  100; xent: 4.47; lr: 0.0000001; 116 docs/s;      6 sec
+[2025-06-09 15:44:51,374 INFO] Step 32/  100; xent: 4.03; lr: 0.0000001; 116 docs/s;      6 sec
+[2025-06-09 15:44:51,545 INFO] Step 33/  100; xent: 3.67; lr: 0.0000001; 129 docs/s;      6 sec
+[2025-06-09 15:44:51,719 INFO] Step 34/  100; xent: 3.14; lr: 0.0000001; 115 docs/s;      6 sec
+[2025-06-09 15:44:51,856 INFO] Step 35/  100; xent: 4.53; lr: 0.0000001;  88 docs/s;      6 sec
+[2025-06-09 15:44:52,030 INFO] Step 36/  100; xent: 4.21; lr: 0.0000001; 115 docs/s;      7 sec
+[2025-06-09 15:44:52,204 INFO] Step 37/  100; xent: 3.49; lr: 0.0000001; 115 docs/s;      7 sec
+[2025-06-09 15:44:52,378 INFO] Step 38/  100; xent: 4.72; lr: 0.0000001; 115 docs/s;      7 sec
+[2025-06-09 15:44:52,552 INFO] Step 39/  100; xent: 4.52; lr: 0.0000001; 116 docs/s;      7 sec
+[2025-06-09 15:44:52,726 INFO] Step 40/  100; xent: 4.34; lr: 0.0000001; 115 docs/s;      7 sec
+[2025-06-09 15:44:52,899 INFO] Step 41/  100; xent: 3.15; lr: 0.0000001; 116 docs/s;      7 sec
+[2025-06-09 15:44:53,072 INFO] Step 42/  100; xent: 3.33; lr: 0.0000001; 116 docs/s;      8 sec
+[2025-06-09 15:44:53,244 INFO] Step 43/  100; xent: 3.57; lr: 0.0000001; 116 docs/s;      8 sec
+[2025-06-09 15:44:53,417 INFO] Step 44/  100; xent: 3.56; lr: 0.0000001; 116 docs/s;      8 sec
+[2025-06-09 15:44:53,590 INFO] Step 45/  100; xent: 3.83; lr: 0.0000001; 116 docs/s;      8 sec
+[2025-06-09 15:44:53,762 INFO] Step 46/  100; xent: 3.13; lr: 0.0000001; 116 docs/s;      8 sec
+[2025-06-09 15:44:53,934 INFO] Step 47/  100; xent: 3.17; lr: 0.0000001; 116 docs/s;      8 sec
+[2025-06-09 15:44:54,107 INFO] Step 48/  100; xent: 5.30; lr: 0.0000001; 116 docs/s;      9 sec
+[2025-06-09 15:44:54,280 INFO] Step 49/  100; xent: 3.85; lr: 0.0000001; 116 docs/s;      9 sec
+[2025-06-09 15:44:54,454 INFO] Step 50/  100; xent: 4.46; lr: 0.0000001; 115 docs/s;      9 sec
+[2025-06-09 15:44:54,627 INFO] Step 51/  100; xent: 4.64; lr: 0.0000001; 116 docs/s;      9 sec
+[2025-06-09 15:44:54,802 INFO] Step 52/  100; xent: 4.44; lr: 0.0000001; 115 docs/s;      9 sec
+[2025-06-09 15:44:54,976 INFO] Step 53/  100; xent: 3.31; lr: 0.0000001; 115 docs/s;      9 sec
+[2025-06-09 15:44:55,149 INFO] Step 54/  100; xent: 3.86; lr: 0.0000001; 116 docs/s;     10 sec
+[2025-06-09 15:44:55,322 INFO] Step 55/  100; xent: 4.08; lr: 0.0000001; 116 docs/s;     10 sec
+[2025-06-09 15:44:55,498 INFO] Step 56/  100; xent: 3.60; lr: 0.0000001; 114 docs/s;     10 sec
+[2025-06-09 15:44:55,671 INFO] Step 57/  100; xent: 3.41; lr: 0.0000001; 116 docs/s;     10 sec
+[2025-06-09 15:44:55,845 INFO] Step 58/  100; xent: 4.01; lr: 0.0000001; 115 docs/s;     10 sec
+[2025-06-09 15:44:56,019 INFO] Step 59/  100; xent: 3.48; lr: 0.0000001; 115 docs/s;     11 sec
+[2025-06-09 15:44:56,192 INFO] Step 60/  100; xent: 3.76; lr: 0.0000001; 116 docs/s;     11 sec
+[2025-06-09 15:44:56,363 INFO] Step 61/  100; xent: 4.06; lr: 0.0000001; 117 docs/s;     11 sec
+[2025-06-09 15:44:56,534 INFO] Step 62/  100; xent: 3.96; lr: 0.0000001; 117 docs/s;     11 sec
+[2025-06-09 15:44:56,705 INFO] Step 63/  100; xent: 3.82; lr: 0.0000001; 117 docs/s;     11 sec
+[2025-06-09 15:44:56,876 INFO] Step 64/  100; xent: 3.78; lr: 0.0000001; 117 docs/s;     11 sec
+[2025-06-09 15:44:57,047 INFO] Step 65/  100; xent: 3.69; lr: 0.0000001; 117 docs/s;     12 sec
+[2025-06-09 15:44:57,218 INFO] Step 66/  100; xent: 4.17; lr: 0.0000001; 117 docs/s;     12 sec
+[2025-06-09 15:44:57,390 INFO] Step 67/  100; xent: 3.26; lr: 0.0000001; 117 docs/s;     12 sec
+[2025-06-09 15:44:57,561 INFO] Step 68/  100; xent: 4.02; lr: 0.0000001; 117 docs/s;     12 sec
+[2025-06-09 15:44:57,732 INFO] Step 69/  100; xent: 4.32; lr: 0.0000001; 117 docs/s;     12 sec
+[2025-06-09 15:44:57,904 INFO] Step 70/  100; xent: 3.53; lr: 0.0000001; 117 docs/s;     12 sec
+[2025-06-09 15:44:58,075 INFO] Step 71/  100; xent: 4.23; lr: 0.0000001; 117 docs/s;     13 sec
+[2025-06-09 15:44:58,247 INFO] Step 72/  100; xent: 3.88; lr: 0.0000001; 117 docs/s;     13 sec
+[2025-06-09 15:44:58,418 INFO] Step 73/  100; xent: 3.74; lr: 0.0000001; 117 docs/s;     13 sec
+[2025-06-09 15:44:58,589 INFO] Step 74/  100; xent: 3.45; lr: 0.0000001; 117 docs/s;     13 sec
+[2025-06-09 15:44:58,760 INFO] Step 75/  100; xent: 4.12; lr: 0.0000001; 117 docs/s;     13 sec
+[2025-06-09 15:44:58,931 INFO] Step 76/  100; xent: 4.34; lr: 0.0000002; 117 docs/s;     13 sec
+[2025-06-09 15:44:59,103 INFO] Step 77/  100; xent: 4.24; lr: 0.0000002; 117 docs/s;     14 sec
+[2025-06-09 15:44:59,274 INFO] Step 78/  100; xent: 4.24; lr: 0.0000002; 117 docs/s;     14 sec
+[2025-06-09 15:44:59,445 INFO] Step 79/  100; xent: 3.31; lr: 0.0000002; 117 docs/s;     14 sec
+[2025-06-09 15:44:59,617 INFO] Step 80/  100; xent: 3.66; lr: 0.0000002; 117 docs/s;     14 sec
+[2025-06-09 15:44:59,788 INFO] Step 81/  100; xent: 3.18; lr: 0.0000002; 117 docs/s;     14 sec
+[2025-06-09 15:44:59,959 INFO] Step 82/  100; xent: 4.07; lr: 0.0000002; 117 docs/s;     14 sec
+[2025-06-09 15:45:00,130 INFO] Step 83/  100; xent: 4.18; lr: 0.0000002; 117 docs/s;     15 sec
+[2025-06-09 15:45:00,301 INFO] Step 84/  100; xent: 4.17; lr: 0.0000002; 117 docs/s;     15 sec
+[2025-06-09 15:45:00,458 INFO] Step 85/  100; xent: 3.63; lr: 0.0000002; 115 docs/s;     15 sec
+[2025-06-09 15:45:00,623 INFO] Step 86/  100; xent: 3.64; lr: 0.0000002; 159 docs/s;     15 sec
+[2025-06-09 15:45:00,793 INFO] Step 87/  100; xent: 4.51; lr: 0.0000002; 117 docs/s;     15 sec
+[2025-06-09 15:45:00,966 INFO] Step 88/  100; xent: 3.80; lr: 0.0000002; 116 docs/s;     15 sec
+[2025-06-09 15:45:01,137 INFO] Step 89/  100; xent: 3.67; lr: 0.0000002; 117 docs/s;     16 sec
+[2025-06-09 15:45:01,308 INFO] Step 90/  100; xent: 3.73; lr: 0.0000002; 117 docs/s;     16 sec
+[2025-06-09 15:45:01,479 INFO] Step 91/  100; xent: 3.26; lr: 0.0000002; 117 docs/s;     16 sec
+[2025-06-09 15:45:01,649 INFO] Step 92/  100; xent: 3.39; lr: 0.0000002; 117 docs/s;     16 sec
+[2025-06-09 15:45:01,820 INFO] Step 93/  100; xent: 3.79; lr: 0.0000002; 117 docs/s;     16 sec
+[2025-06-09 15:45:01,991 INFO] Step 94/  100; xent: 3.79; lr: 0.0000002; 117 docs/s;     16 sec
+[2025-06-09 15:45:02,162 INFO] Step 95/  100; xent: 3.77; lr: 0.0000002; 117 docs/s;     17 sec
+[2025-06-09 15:45:02,319 INFO] Step 96/  100; xent: 3.71; lr: 0.0000002; 115 docs/s;     17 sec
+[2025-06-09 15:45:02,471 INFO] Step 97/  100; xent: 3.00; lr: 0.0000002; 131 docs/s;     17 sec
+[2025-06-09 15:45:02,644 INFO] Step 98/  100; xent: 2.82; lr: 0.0000002; 116 docs/s;     17 sec
+[2025-06-09 15:45:02,817 INFO] Step 99/  100; xent: 4.04; lr: 0.0000002; 116 docs/s;     17 sec
+[2025-06-09 15:45:02,992 INFO] Step 100/  100; xent: 3.67; lr: 0.0000002; 115 docs/s;     17 sec
+[2025-06-09 15:45:06,075 INFO] Loading train dataset from ../bert_data/cnndm.train.59.bert.pt, number of examples: 2000
