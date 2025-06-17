@@ -1,0 +1,2 @@
+TCAPPDLL {"timestamp": "1750080422.229582", "elapsedtime": "5e-06", "datetime": "2025-06-16 13:27:02.229582", "type": "METADATA", "metric": "train.loss", "metadata": {"unit": "", "GOAL": "MINIMIZE", "STAGE": "TRAIN"}}
+TCAPPDLL {"timestamp": "1750080422.229671", "elapsedtime": "9.4e-05", "datetime": "2025-06-16 13:27:02.229671", "type": "METADATA", "metric": "train.ips", "metadata": {"unit": "imgs/s", "format": ":.3f", "GOAL": "MAXIMIZE", "STAGE": "TRAIN"}}
