@@ -36,9 +36,12 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageN
     ```
 2. 安装python依赖。
     ```
- 
+    pip3 install  -U openmim 
+    pip3 install git+https://gitee.com/xiwei777/mmengine_sdaa.git 
+    pip3 install opencv_python mmcv --no-deps
+    mim install -e .
     pip install -r requirements.txt
-    pip install -e .
+
     ```
 
 ### 2.4 启动训练
@@ -49,13 +52,9 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageN
     ```
 
 2. 运行训练。该模型支持单机单卡。
-    ```
-   torchrun  \
-      --master_port=29500 \
-      $train_file \
-      $config_file \
-      --launcher pytorch
-   ```
+python run_hivit.py --config ../configs/hivit/hivit-base-p16_16xb64_in1k.py \
+       --launcher pytorch --nproc-per-node 1 --amp \
+       --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/imagenet" "val_dataloader.dataset.data_root=/data/teco-data/imagenet" 2>&1 | tee sdaa.log
     更多训练参数参考 run_scripts/argument.py
 
 ### 2.5 训练结果
