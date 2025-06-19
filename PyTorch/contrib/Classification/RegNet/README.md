@@ -57,8 +57,7 @@ RegNet 使用 ImageNet 数据集，该数据集为开源数据集，可从 [Imag
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-
-MeanRelativeError: 0.0008037261371356254
-MeanAbsoluteError: 0.005479326342592145
-Rule,mean_relative_error 0.0008037261371356254
-pass mean_relative_error=0.0008037261371356254 <= 0.05 or mean_absolute_error=0.005479326342592145 <= 0.0002
+MeanRelativeError: -0.0016677278414623106
+MeanAbsoluteError: -0.011544100128778137
+Rule,mean_absolute_error -0.011544100128778137
+pass mean_relative_error=-0.0016677278414623106 <= 0.05 or mean_absolute_error=-0.011544100128778137 <= 0.0002
