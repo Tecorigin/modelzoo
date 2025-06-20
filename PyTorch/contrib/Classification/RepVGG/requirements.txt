@@ -1,5 +1,0 @@
-timm
-yacs
-termcolor
-scipy
-matplotlib
