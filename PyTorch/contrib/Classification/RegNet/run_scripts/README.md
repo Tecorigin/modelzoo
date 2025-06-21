@@ -4,7 +4,7 @@
 -----------------|-----------------|-----------------
 config | 配置文件。 | --config  ../configs/regnet/regnetx-400mf_8xb128_in1k.py
 cfg-options | 动态覆盖配置文件。 | --cfg-options train_dataloader.dataset.data_root=xxx
-work-dir | 工作目录。 | --work-dir ./work_dirs/seresnet50_8xb32_in1k.py
+work-dir | 工作目录。 | --work-dir ./work_dirs/regnetx-400mf_8xb128_in1k.py
 resume | 恢复训练。 | --resume auto
 amp | 是否使用amp。 | --amp
 no-validate | 是否验证。 | --no-validate
