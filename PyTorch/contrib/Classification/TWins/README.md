@@ -55,7 +55,7 @@ Twins使用 ImageNet数据集，该数据集为开源数据集，可从 [ImageNe
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: -0.00014572076253557847
-MeanAbsoluteError: -0.0010479464389310026
-Rule,mean_absolute_error -0.0010479464389310026
-pass mean_relative_error=-0.00014572076253557847 <= 0.05 or mean_absolute_error=-0.0010479464389310026 <= 0.0002
+MeanRelativeError: -1.745806156396174e-06
+MeanAbsoluteError: -3.879377157381265e-05
+Rule,mean_absolute_error -3.879377157381265e-05
+pass mean_relative_error=-1.745806156396174e-06 <= 0.05 or mean_absolute_error=-3.879377157381265e-05 <= 0.0002
