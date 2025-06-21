@@ -80,4 +80,3 @@ if __name__ == "__main__":
     hyper_parameters = build_hyper_parameters(args)
     cmd = build_command(args,hyper_parameters)
     excute_command(cmd)
-

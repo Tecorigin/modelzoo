@@ -1,9 +1,9 @@
-# Res2Net
+# MLP-Mixer
 ## 1. 模型概述
-Res2Net是由南开大学和牛津大学的研究团队在2019年提出的卷积神经网络改进架构，基于经典 ResNet 进行创新，通过引入多尺度特征融合机制，显著提升了模型对不同尺度目标的识别能力。该设计在图像分类、目标检测、语义分割等任务上均表现出色。
+MLP-Mixer（Multi-Layer Perceptron Mixer）是一种完全基于多层感知机（MLP）构建的视觉架构，由Google Research在2021年提出。其核心思想是通过纯MLP结构替代传统卷积（CNN）或自注意力（Transformer）操作，实现高效的图像特征提取与跨位置信息融合。
 
-- 论文链接：[[1904.01169]]Res2Net: A New Multi-scale Backbone Architecture(https://arxiv.org/abs/1904.01169)
-- 仓库链接：https://github.com/open-mmlab/mmpretrain/tree/main/configs/res2net
+- 论文链接：[[2105.01601]]MLP-Mixer: An all-MLP Architecture for Vision(https://arxiv.org/abs/2105.01601)
+- 仓库链接：https://github.com/open-mmlab/mmpretrain/tree/main/configs/mlp_mixer
 ## 2. 快速开始
 使用本模型执行训练的主要流程如下：
 1. 基础环境安装：介绍训练前需要完成的基础环境检查和安装。
@@ -17,7 +17,7 @@ Res2Net是由南开大学和牛津大学的研究团队在2019年提出的卷积
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
-Res2Net使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
+MLP-Mixer使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
 
 #### 2.2.2 处理数据集
 具体配置方式可参考：https://blog.csdn.net/xzxg001/article/details/142465729。
@@ -41,12 +41,12 @@ Res2Net使用 ImageNet 数据集，该数据集为开源数据集，可从 [Imag
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd <ModelZoo_path>/PyTorch/contrib/Classification/Res2net/run_scripts
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/mlp_Mixer/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
     ```
-   python run_res2net.py --config ../configs/res2net/res2net50-w14-s8_8xb32_in1k.py \
+   python run_mlp_mixer.py --config ../configs/mlp_mixer/mlp-mixer-base-p16_64xb64_in1k.py \
     --launcher pytorch --nproc-per-node 4 --amp \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
    ```
@@ -55,7 +55,7 @@ Res2Net使用 ImageNet 数据集，该数据集为开源数据集，可从 [Imag
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: -0.006869100967065001
-MeanAbsoluteError: -0.051356943527070605
-Rule,mean_absolute_error -0.051356943527070605
-pass mean_relative_error=-0.006869100967065001 <= 0.05 or mean_absolute_error=-0.051356943527070605 <= 0.0002
+MeanRelativeError: 4.9691139597484474e-05
+MeanAbsoluteError: 0.00033106662259243505
+Rule,mean_relative_error 4.9691139597484474e-05
+pass mean_relative_error=4.9691139597484474e-05 <= 0.05 or mean_absolute_error=0.00033106662259243505 <= 0.0002

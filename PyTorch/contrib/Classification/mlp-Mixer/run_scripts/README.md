@@ -2,9 +2,9 @@
 
 参数名 | 解释 | 样例
 -----------------|-----------------|-----------------
-config | 配置文件。 | --config  ../configs/vgg/vgg11_8xb32_in1k.py
+config | 配置文件。 | --config  ../configs/mlp_mixer/mlp-mixer-base-p16_64xb64_in1k.py
 cfg-options | 动态覆盖配置文件。 | --cfg-options train_dataloader.dataset.data_root=xxx
-work-dir | 工作目录。 | --work-dir ./work_dirs/vgg11_8xb32_in1k
+work-dir | 工作目录。 | --work-dir ./work_dirs/mlp-mixer-base-p16_64xb64_in1k
 resume | 恢复训练。 | --resume auto
 amp | 是否使用amp。 | --amp
 no-validate | 是否验证。 | --no-validate

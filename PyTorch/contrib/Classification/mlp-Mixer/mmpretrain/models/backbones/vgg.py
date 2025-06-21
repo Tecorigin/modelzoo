@@ -158,7 +158,9 @@ class VGG(BaseBackbone):
             if i in self.out_indices:
                 outs.append(x)
         if self.num_classes > 0:
-            x = x.view(x.size(0), -1)
+            # x = x.view(x.size(0), -1)源代码。报错:张量的内存布局是非连续的。pytorch要求view()操作张量必须是内存连续的，否则会报此错误。
+            #修改为reshape（）
+            x=x.reshape(x.size(0),-1)
             x = self.classifier(x)
             outs.append(x)
 

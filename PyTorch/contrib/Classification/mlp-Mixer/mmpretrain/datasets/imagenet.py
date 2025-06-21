@@ -74,13 +74,13 @@ class ImageNet(CustomDataset):
 
     Examples:
         >>> from mmpretrain.datasets import ImageNet
-        >>> train_dataset = ImageNet(data_root='data/imagenet', split='train')
+        >>> train_dataset = ImageNet(data_root='/data/teco-data/imagenet', split='train')
         >>> train_dataset
         Dataset ImageNet
             Number of samples:  1281167
             Number of categories:       1000
             Root of dataset:    data/imagenet
-        >>> test_dataset = ImageNet(data_root='data/imagenet', split='val')
+        >>> test_dataset = ImageNet(data_root='/data/teco-data/imagenet', split='val')
         >>> test_dataset
         Dataset ImageNet
             Number of samples:  50000

@@ -1,30 +1,31 @@
 # dataset settings
 dataset_type = 'ImageNet'
+
+# Google research usually use the below normalization setting.
 data_preprocessor = dict(
     num_classes=1000,
-    # RGB format normalization parameters
-    mean=[123.675, 116.28, 103.53],
-    std=[58.395, 57.12, 57.375],
+    mean=[127.5, 127.5, 127.5],
+    std=[127.5, 127.5, 127.5],
     # convert image from BGR to RGB
     to_rgb=True,
 )
 
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='RandomResizedCrop', scale=224, backend='pillow'),
+    dict(type='RandomResizedCrop', scale=224),
     dict(type='RandomFlip', prob=0.5, direction='horizontal'),
     dict(type='PackInputs'),
 ]
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='ResizeEdge', scale=256, edge='short', backend='pillow'),
+    dict(type='ResizeEdge', scale=256, edge='short', interpolation='bicubic'),
     dict(type='CenterCrop', crop_size=224),
     dict(type='PackInputs'),
 ]
 
 train_dataloader = dict(
-    batch_size=32,
+    batch_size=64,
     num_workers=5,
     dataset=dict(
         type=dataset_type,
@@ -35,7 +36,7 @@ train_dataloader = dict(
 )
 
 val_dataloader = dict(
-    batch_size=32,
+    batch_size=64,
     num_workers=5,
     dataset=dict(
         type=dataset_type,

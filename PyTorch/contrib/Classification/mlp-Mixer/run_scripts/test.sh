@@ -16,7 +16,7 @@ pip3 install numpy==1.24.3
 cd $script_path
 
 #执行训练
-python run_res2net.py --config ../configs/res2net/res2net50-w14-s8_8xb32_in1k.py \
+python run_mlp_mixer.py --config ../configs/mlp_mixer/mlp-mixer-base-p16_64xb64_in1k.py \
     --launcher pytorch --nproc-per-node 4 --amp \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 
