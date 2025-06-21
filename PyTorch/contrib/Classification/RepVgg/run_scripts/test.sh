@@ -16,7 +16,7 @@ pip3 install numpy==1.24.3
 cd $script_path
 
 #执行训练
-python run_repvgg.py --config ../configs/repvgg/swin-tiny_16xb64_in1k.py \
+python run_mobilenet_v2.py --config ../configs/repvgg/repvgg-A0_8xb32_in1k.py \
     --launcher pytorch --nproc-per-node 4 --amp \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 
