@@ -9,66 +9,37 @@ data_preprocessor = dict(
     to_rgb=True,
 )
 
-bgr_mean = data_preprocessor['mean'][::-1]
-bgr_std = data_preprocessor['std'][::-1]
-
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(
-        type='RandomResizedCrop',
-        scale=224,
-        backend='pillow',
-        interpolation='bicubic'),
+    dict(type='RandomResizedCrop', scale=224),
     dict(type='RandomFlip', prob=0.5, direction='horizontal'),
-    dict(
-        type='RandAugment',
-        policies='timm_increasing',
-        num_policies=2,
-        total_level=10,
-        magnitude_level=9,
-        magnitude_std=0.5,
-        hparams=dict(
-            pad_val=[round(x) for x in bgr_mean], interpolation='bicubic')),
-    dict(
-        type='RandomErasing',
-        erase_prob=0.25,
-        mode='rand',
-        min_area_ratio=0.02,
-        max_area_ratio=1 / 3,
-        fill_color=bgr_mean,
-        fill_std=bgr_std),
     dict(type='PackInputs'),
 ]
 
 test_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(
-        type='ResizeEdge',
-        scale=248,
-        edge='short',
-        backend='pillow',
-        interpolation='bicubic'),
+    dict(type='ResizeEdge', scale=256, edge='short'),
     dict(type='CenterCrop', crop_size=224),
     dict(type='PackInputs'),
 ]
 
 train_dataloader = dict(
-    batch_size=64,
+    batch_size=32,
     num_workers=5,
     dataset=dict(
         type=dataset_type,
-        data_root='/data/teco-data/imagenet',
+        data_root='/home/01/imagenet',
         split='train',
         pipeline=train_pipeline),
     sampler=dict(type='DefaultSampler', shuffle=True),
 )
 
 val_dataloader = dict(
-    batch_size=64,
+    batch_size=32,
     num_workers=5,
     dataset=dict(
         type=dataset_type,
-        data_root='/data/teco-data/imagenet',
+        data_root='/home/01/imagenet',
         split='val',
         pipeline=test_pipeline),
     sampler=dict(type='DefaultSampler', shuffle=False),

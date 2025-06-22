@@ -2,9 +2,9 @@
 
 参数名 | 解释 | 样例
 -----------------|-----------------|-----------------
-config | 配置文件。 | --config  ../configs/t2t_vit/t2t-vit-t-14_8xb64_in1k.py
+config | 配置文件。 | --config  ../configs/efficient_net/efficientnet-b0_8xb32_in1k.py
 cfg-options | 动态覆盖配置文件。 | --cfg-options train_dataloader.dataset.data_root=xxx
-work-dir | 工作目录。 | --work-dir ./work_dirs/t2t-vit-t-14_8xb64_in1k
+work-dir | 工作目录。 | --work-dir ./work_dirs/efficientnet-b0_8xb32_in1k
 resume | 恢复训练。 | --resume auto
 amp | 是否使用amp。 | --amp
 no-validate | 是否验证。 | --no-validate

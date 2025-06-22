@@ -1,10 +1,10 @@
-# T2T-ViT
+# EfficientNet
 ## 1. 模型概述
-T2T-ViT（Tokens-to-Token Vision Transformer）是一种基于Transformer架构的视觉模型，由清华大学团队于2021年提出。该模型旨在改进传统Vision Transformer（ViT）在处理图像数据时的效率与性能问题，通过引入Tokens-to-Token（T2T）模块，逐步将图像局部结构信息聚合为更具代表性的token，从而减少计算开销并提升特征表达能力。
-- 论文链接：[[2101.11986\]]Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet(https://arxiv.org/abs/2101.11986)
-- 仓库链接：https://github.com/open-mmlab/mmpretrain/tree/main/configs/t2t_vit
+EfficientNet 是由 Google Research 在 2019 年提出的一系列高效卷积神经网络（CNN），其核心思想是通过复合缩放（Compound Scaling）策略，在计算资源受限的情况下，实现更高的准确率和更低的计算成本。EfficientNet 在 ImageNet 分类任务上表现优异，并在多个视觉任务（如目标检测、语义分割）中成为基准模型之一。
 
-## 2. 快速开始
+- 论文链接：[[1905.11946\]]EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks(https://arxiv.org/abs/1905.11946v5)
+- 仓库链接：https://github.com/open-mmlab/mmpretrain/tree/main/configs/efficientnet
+
 使用本模型执行训练的主要流程如下：
 1. 基础环境安装：介绍训练前需要完成的基础环境检查和安装。
 2. 获取数据集：介绍如何获取训练所需的数据集。
@@ -17,7 +17,7 @@ T2T-ViT（Tokens-to-Token Vision Transformer）是一种基于Transformer架构�
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
-T2T-ViT使用 ImageNet数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
+EfficientNet使用 ImageNet数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
 
 #### 2.2.2 处理数据集
 具体配置方式可参考：https://blog.csdn.net/xzxg001/article/details/142465729。
@@ -41,12 +41,12 @@ T2T-ViT使用 ImageNet数据集，该数据集为开源数据集，可从 [Image
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd <ModelZoo_path>/PyTorch/contrib/Classification/T2T-Vit/run_scripts
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/efficient_net/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
     ```
-   python run_t2t_vit.py --config ../configs/t2t_vit/t2t-vit-t-14_8xb64_in1k.py \
+   python run_efficient_net.py --config ../configs/efficient_net/efficientnet-b0_8xb32_in1k.py \
     --launcher pytorch --nproc-per-node 4 --amp \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
    ```
@@ -55,7 +55,7 @@ T2T-ViT使用 ImageNet数据集，该数据集为开源数据集，可从 [Image
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: 0.001626946951161288
-MeanAbsoluteError: 0.011090689366406734
-Rule,mean_relative_error 0.001626946951161288
-pass mean_relative_error=0.001626946951161288 <= 0.05 or mean_absolute_error=0.011090689366406734 <= 0.0002
+MeanRelativeError: -0.00031475151136514386
+MeanAbsoluteError: -0.002962395696356745
+Rule,mean_absolute_error -0.002962395696356745
+pass mean_relative_error=-0.00031475151136514386 <= 0.05 or mean_absolute_error=-0.002962395696356745 <= 0.0002

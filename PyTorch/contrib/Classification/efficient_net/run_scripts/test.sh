@@ -16,7 +16,7 @@ pip3 install numpy==1.24.3
 cd $script_path
 
 #执行训练
-python run_t2t_vit.py --config ../configs/t2t_vit/t2t-vit-t-14_8xb64_in1k.py \
+python run_efficient_net.py --config ../configs/efficient_net/efficientnet-b0_8xb32_in1k.py \
     --launcher pytorch --nproc-per-node 4 --amp \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 
