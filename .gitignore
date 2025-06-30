@@ -8,7 +8,7 @@ __pycache__/
 *$py.class
 .pytest_cache
 dlloger_example.json
-# TecoInference/contrib/Detection
+TecoInference/contrib/Detection
 output_test
 .idea
 .gitignore
