@@ -55,7 +55,7 @@ datasets #根目录
   ```
 2. 运行训练。该模型支持单机单卡。
   ```
-  python run_SOLO.py --config ../configs/solo/solo_r50_fpn_1x_coco.py --launcher pytorch --nproc-per-node 1 --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/coco/" "val_dataloader.dataset.data_root=/data/teco-data/coco/" 
+  run_MaskFormer.py --config ../configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py --launcher pytorch --nproc-per-node 1 --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/coco/" "val_dataloader.dataset.data_root=/data/teco-data/coco/" 
   ```
   # 该模型开启amp在sdaa和cuda上都会梯度爆炸，长nan现象，且训练很慢
     更多训练参数参考 run_scripts/argument.py
