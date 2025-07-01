@@ -16,7 +16,7 @@ cd ..
 cd $script_path
 
 #执行训练
-python run_MaskFormer.py --config ../configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py \
+python run_Mask2former.py --config ../configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco.py \
     --launcher pytorch --nproc-per-node 1  \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 

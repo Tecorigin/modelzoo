@@ -2,9 +2,9 @@
 
 参数名 | 解释 | 样例
 -----------------|-----------------|-----------------
-config | 配置文件。 | --config  ../configs/solo/solo_r50_fpn_1x_coco.py
+config | 配置文件。 | --config  ../configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco.py
 cfg-options | 动态覆盖配置文件。 | --cfg-options train_dataloader.dataset.data_root=xxx
-work-dir | 工作目录。 | --work-dir ./work_dirs/solo_r50_fpn_1x_coco
+work-dir | 工作目录。 | --work-dir ./work_dirs/mask2former_r50_8xb2-lsj-50e_coco
 resume | 恢复训练。 | --resume auto
 amp | 是否使用amp。 | --amp
 no-validate | 是否验证。 | --no-validate

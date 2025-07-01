@@ -1,9 +1,9 @@
-# MaskFormer
+# Mask2former
 ## 1. 模型概述
-MaskFormer 是一种基于 Transformer 的全景分割模型，将分割任务统一为序列到掩码（sequence-to-mask）的预测范式，实现语义、实例和全景分割的统一建模。
+Mask2former 是一种基于全新 mask 解码器和多尺度特征融合的统一分割框架，能够实现语义分割、实例分割和全景分割任务。
 
-- 论文链接：https://arxiv.org/abs/2107.06278
-- 仓库链接：https://github.com/open-mmlab/mmdetection/tree/main/configs/maskformer
+- 论文链接：https://arxiv.org/abs/2112.01527
+- 仓库链接：https://github.com/open-mmlab/mmdetection/tree/main/configs/mask2former
 
 ## 2. 快速开始
 使用本模型执行训练的主要流程如下：
@@ -18,7 +18,8 @@ MaskFormer 是一种基于 Transformer 的全景分割模型，将分割任务�
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
-<MODLE MaskFormer>使用 COCO2017 数据集，该数据集为开源数据集，可从 [COCO](https://cocodataset.org/#download) 下载。
+<MODLE Mask2former>使用 COCO2017 数据集，该数据集为开源数据集，可从 [COCO](https://cocodataset.org/#download) 下载。
+
 
 #### 2.2.2 处理数据集
 1.具体配置方式可参考：https://github.com/Atten4Vis/ConditionalDETR/blob/main/README.md。
@@ -51,18 +52,18 @@ datasets #根目录
 ### 2.4 启动训练
 1. 在构建好的环境中，进入训练脚本所在目录。
   ```
-  cd <ModelZoo_path>/PyTorch/contrib/Detection/MaskFormer/run_scripts
+  cd <ModelZoo_path>/PyTorch/contrib/Detection/Mask2former/run_scripts
   ```
 2. 运行训练。该模型支持单机单卡。
   ```
-  run_MaskFormer.py --config ../configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py --launcher pytorch --nproc-per-node 1 --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/coco/" "val_dataloader.dataset.data_root=/data/teco-data/coco/" 
+  python run_Mask2former.py --config ../configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco.py --launcher pytorch --nproc-per-node 1  --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/coco/" "val_dataloader.dataset.data_root=/data/teco-data/coco/" 
   ```
   # 该模型开启amp在sdaa和cuda上都会梯度爆炸，长nan现象，且训练很慢
     更多训练参数参考 run_scripts/argument.py
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: -0.005558040372513249
-MeanAbsoluteError: -0.8171269416809082
-Rule,mean_absolute_error -0.8171269416809082
-pass mean_relative_error=-0.005558040372513249 <= 0.05 or mean_absolute_error=-0.8171269416809082 <= 0.0002
+MeanRelativeError: -0.0024590707799176438
+MeanAbsoluteError: -4.644323873519897
+Rule,mean_absolute_error -4.644323873519897
+pass mean_relative_error=-0.0024590707799176438 <= 0.05 or mean_absolute_error=-4.644323873519897 <= 0.0002
