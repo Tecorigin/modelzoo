@@ -51,7 +51,7 @@ PointRend 是一种基于 自适应点采样 和 精细化渲染 的神经网络
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_upernet.py --config ../configs/pointrend/pointrend_r50_4xb2-80k_cityscapes-512x1024.py \
+python run_pointrend.py --config ../configs/pointrend/pointrend_r50_4xb2-80k_cityscapes-512x1024.py \
        --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
