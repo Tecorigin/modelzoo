@@ -1,0 +1,667 @@
+--------------+------------------------------------------------
+ Host IP      | 10.244.54.9
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 20250616.14.30.dev0+git35328dc
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.0 (N/A)
+ SDAA Runtime | 2.1.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.2.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.2.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+/data/bigc-data/wyc/wyc_mmlab3/lib/python3.10/site-packages/torch/distributed/launch.py:208: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  main()
+--------------+------------------------------------------------
+ Host IP      | 10.244.54.9
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 20250616.14.30.dev0+git35328dc
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.0 (N/A)
+ SDAA Runtime | 2.1.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.2.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.2.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+/data/bigc-data/wyc/wyc_mmlab3/lib/python3.10/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+/data/bigc-data/wyc/wyc_mmlab3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:46: UserWarning: Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/data/bigc-data/wyc/wyc_mmlab3/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+06/30 14:58:28 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.16 (main, Dec 11 2024, 16:24:50) [GCC 11.2.0]
+    CUDA available: False
+    MUSA available: False
+    numpy_random_seed: 1148811989
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    PyTorch: 2.4.0a0+git4451b0e
+    PyTorch compiling details: PyTorch built with:
+  - GCC 11.5
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2025.0-Product Build 20241009 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.4.2 (Git Hash 1137e04ec0b5251ca2b4400a4fd3c667ce843d67)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=/usr/bin/g++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=1 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, FORCE_FALLBACK_CUDA_MPI=1, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.4.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=1, USE_MPI=ON, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+    TorchVision: 0.15.1a0+42759b1
+    OpenCV: 4.11.0
+    MMEngine: 0.10.4
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'tccl'}
+    seed: 1148811989
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 1
+------------------------------------------------------------
+
+06/30 14:58:28 - mmengine - INFO - Config:
+auto_scale_lr = dict(base_batch_size=16, enable=False)
+backend_args = None
+custom_hooks = []
+data_root = '/data/teco-data/coco/'
+dataset_type = 'CocoPanopticDataset'
+default_hooks = dict(
+    checkpoint=dict(interval=1, type='CheckpointHook'),
+    logger=dict(interval=50, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'),
+    visualization=dict(type='DetVisualizationHook'))
+default_scope = 'mmdet'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+launcher = 'pytorch'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
+model = dict(
+    backbone=dict(
+        depth=50,
+        frozen_stages=1,
+        init_cfg=dict(checkpoint='torchvision://resnet50', type='Pretrained'),
+        norm_cfg=dict(requires_grad=True, type='BN'),
+        norm_eval=True,
+        num_stages=4,
+        out_indices=(
+            0,
+            1,
+            2,
+            3,
+        ),
+        style='pytorch',
+        type='ResNet'),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mask_pad_value=0,
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        pad_mask=True,
+        pad_seg=True,
+        pad_size_divisor=32,
+        seg_pad_value=255,
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='DetDataPreprocessor'),
+    neck=dict(
+        in_channels=[
+            256,
+            512,
+            1024,
+            2048,
+        ],
+        num_outs=5,
+        out_channels=256,
+        type='FPN'),
+    panoptic_fusion_head=dict(
+        num_stuff_classes=53,
+        num_things_classes=80,
+        type='HeuristicFusionHead'),
+    roi_head=dict(
+        bbox_head=dict(
+            bbox_coder=dict(
+                target_means=[
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                ],
+                target_stds=[
+                    0.1,
+                    0.1,
+                    0.2,
+                    0.2,
+                ],
+                type='DeltaXYWHBBoxCoder'),
+            fc_out_channels=1024,
+            in_channels=256,
+            loss_bbox=dict(loss_weight=1.0, type='L1Loss'),
+            loss_cls=dict(
+                loss_weight=1.0, type='CrossEntropyLoss', use_sigmoid=False),
+            num_classes=80,
+            reg_class_agnostic=False,
+            roi_feat_size=7,
+            type='Shared2FCBBoxHead'),
+        bbox_roi_extractor=dict(
+            featmap_strides=[
+                4,
+                8,
+                16,
+                32,
+            ],
+            out_channels=256,
+            roi_layer=dict(output_size=7, sampling_ratio=0, type='RoIAlign'),
+            type='SingleRoIExtractor'),
+        mask_head=dict(
+            conv_out_channels=256,
+            in_channels=256,
+            loss_mask=dict(
+                loss_weight=1.0, type='CrossEntropyLoss', use_mask=True),
+            num_classes=80,
+            num_convs=4,
+            type='FCNMaskHead'),
+        mask_roi_extractor=dict(
+            featmap_strides=[
+                4,
+                8,
+                16,
+                32,
+            ],
+            out_channels=256,
+            roi_layer=dict(output_size=14, sampling_ratio=0, type='RoIAlign'),
+            type='SingleRoIExtractor'),
+        type='StandardRoIHead'),
+    rpn_head=dict(
+        anchor_generator=dict(
+            ratios=[
+                0.5,
+                1.0,
+                2.0,
+            ],
+            scales=[
+                8,
+            ],
+            strides=[
+                4,
+                8,
+                16,
+                32,
+                64,
+            ],
+            type='AnchorGenerator'),
+        bbox_coder=dict(
+            target_means=[
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+            ],
+            target_stds=[
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+            ],
+            type='DeltaXYWHBBoxCoder'),
+        feat_channels=256,
+        in_channels=256,
+        loss_bbox=dict(loss_weight=1.0, type='L1Loss'),
+        loss_cls=dict(
+            loss_weight=1.0, type='CrossEntropyLoss', use_sigmoid=True),
+        type='RPNHead'),
+    semantic_head=dict(
+        conv_cfg=None,
+        end_level=4,
+        in_channels=256,
+        inner_channels=128,
+        loss_seg=dict(
+            ignore_index=255, loss_weight=0.5, type='CrossEntropyLoss'),
+        norm_cfg=dict(num_groups=32, requires_grad=True, type='GN'),
+        num_stuff_classes=53,
+        num_things_classes=80,
+        start_level=0,
+        type='PanopticFPNHead'),
+    test_cfg=dict(
+        panoptic=dict(mask_overlap=0.5, stuff_area_limit=4096),
+        rcnn=dict(
+            mask_thr_binary=0.5,
+            max_per_img=100,
+            nms=dict(class_agnostic=True, iou_threshold=0.5, type='nms'),
+            score_thr=0.6),
+        rpn=dict(
+            max_per_img=1000,
+            min_bbox_size=0,
+            nms=dict(iou_threshold=0.7, type='nms'),
+            nms_pre=1000)),
+    train_cfg=dict(
+        rcnn=dict(
+            assigner=dict(
+                ignore_iof_thr=-1,
+                match_low_quality=True,
+                min_pos_iou=0.5,
+                neg_iou_thr=0.5,
+                pos_iou_thr=0.5,
+                type='MaxIoUAssigner'),
+            debug=False,
+            mask_size=28,
+            pos_weight=-1,
+            sampler=dict(
+                add_gt_as_proposals=True,
+                neg_pos_ub=-1,
+                num=512,
+                pos_fraction=0.25,
+                type='RandomSampler')),
+        rpn=dict(
+            allowed_border=-1,
+            assigner=dict(
+                ignore_iof_thr=-1,
+                match_low_quality=True,
+                min_pos_iou=0.3,
+                neg_iou_thr=0.3,
+                pos_iou_thr=0.7,
+                type='MaxIoUAssigner'),
+            debug=False,
+            pos_weight=-1,
+            sampler=dict(
+                add_gt_as_proposals=False,
+                neg_pos_ub=-1,
+                num=256,
+                pos_fraction=0.5,
+                type='RandomSampler')),
+        rpn_proposal=dict(
+            max_per_img=1000,
+            min_bbox_size=0,
+            nms=dict(iou_threshold=0.7, type='nms'),
+            nms_pre=2000)),
+    type='PanopticFPN')
+optim_wrapper = dict(
+    optimizer=dict(lr=0.01, momentum=0.9, type='SGD', weight_decay=0.0001),
+    type='OptimWrapper')
+param_scheduler = [
+    dict(
+        begin=0, by_epoch=False, end=500, start_factor=0.001, type='LinearLR'),
+    dict(
+        begin=0,
+        by_epoch=True,
+        end=12,
+        gamma=0.1,
+        milestones=[
+            8,
+            11,
+        ],
+        type='MultiStepLR'),
+]
+resume = False
+test_cfg = dict(type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/panoptic_val2017.json',
+        backend_args=None,
+        data_prefix=dict(img='val2017/', seg='annotations/panoptic_val2017/'),
+        data_root='/data/teco-data/coco/',
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(backend_args=None, type='LoadPanopticAnnotations'),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                ),
+                type='PackDetInputs'),
+        ],
+        test_mode=True,
+        type='CocoPanopticDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    ann_file='/data/teco-data/coco/annotations/panoptic_val2017.json',
+    backend_args=None,
+    seg_prefix='/data/teco-data/coco/annotations/panoptic_val2017/',
+    type='CocoPanopticMetric')
+test_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(keep_ratio=True, scale=(
+        1333,
+        800,
+    ), type='Resize'),
+    dict(backend_args=None, type='LoadPanopticAnnotations'),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+            'scale_factor',
+        ),
+        type='PackDetInputs'),
+]
+train_cfg = dict(max_epochs=12, type='EpochBasedTrainLoop', val_interval=1)
+train_dataloader = dict(
+    batch_sampler=dict(type='AspectRatioBatchSampler'),
+    batch_size=2,
+    dataset=dict(
+        ann_file='annotations/panoptic_train2017.json',
+        backend_args=None,
+        data_prefix=dict(
+            img='train2017/', seg='annotations/panoptic_train2017/'),
+        data_root='/data/teco-data/coco/',
+        filter_cfg=dict(filter_empty_gt=True, min_size=32),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(backend_args=None, type='LoadPanopticAnnotations'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(prob=0.5, type='RandomFlip'),
+            dict(type='PackDetInputs'),
+        ],
+        type='CocoPanopticDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+train_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(backend_args=None, type='LoadPanopticAnnotations'),
+    dict(keep_ratio=True, scale=(
+        1333,
+        800,
+    ), type='Resize'),
+    dict(prob=0.5, type='RandomFlip'),
+    dict(type='PackDetInputs'),
+]
+val_cfg = dict(type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/panoptic_val2017.json',
+        backend_args=None,
+        data_prefix=dict(img='val2017/', seg='annotations/panoptic_val2017/'),
+        data_root='/data/teco-data/coco/',
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(backend_args=None, type='LoadPanopticAnnotations'),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                ),
+                type='PackDetInputs'),
+        ],
+        test_mode=True,
+        type='CocoPanopticDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    ann_file='/data/teco-data/coco/annotations/panoptic_val2017.json',
+    backend_args=None,
+    seg_prefix='/data/teco-data/coco/annotations/panoptic_val2017/',
+    type='CocoPanopticMetric')
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+visualizer = dict(
+    name='visualizer',
+    type='DetLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = './work_dirs/panoptic-fpn_r50_fpn_1x_coco'
+
+/data/bigc-data/wyc/mmdetection/mmdet/models/losses/cross_entropy_loss.py:240: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
+  warnings.warn(
+06/30 14:58:40 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+Done (t=6.99s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.17s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.17s)
+creating index...
+index created!
+06/30 14:59:04 - mmengine - INFO - load model from: torchvision://resnet50
+06/30 14:59:04 - mmengine - INFO - Loads checkpoint by torchvision backend from path: torchvision://resnet50
+06/30 14:59:05 - mmengine - WARNING - The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: fc.weight, fc.bias
+
+06/30 14:59:05 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+06/30 14:59:05 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+06/30 14:59:05 - mmengine - INFO - Checkpoints will be saved to /data/bigc-data/wyc/PanopticFPN/run_scripts/work_dirs/panoptic-fpn_r50_fpn_1x_coco.
+TCAPPDLL 2025-06-30 14:59:14.670971 - Epoch: 0 Iteration: 0  rank : 0  train.loss : 7.818050384521484  train.ips : 0.225353868313153 imgs/s train.total_time : 8.87493085861206 
+TCAPPDLL 2025-06-30 14:59:22.754529 - Epoch: 0 Iteration: 1  rank : 0  train.loss : 7.739375114440918  train.ips : 0.24743145505431638 imgs/s train.total_time : 8.083046674728394 
+TCAPPDLL 2025-06-30 14:59:31.076747 - Epoch: 0 Iteration: 2  rank : 0  train.loss : 7.831242561340332  train.ips : 0.2403377296841739 imgs/s train.total_time : 8.321623086929321 
+TCAPPDLL 2025-06-30 14:59:39.751215 - Epoch: 0 Iteration: 3  rank : 0  train.loss : 7.509758472442627  train.ips : 0.23057721542173798 imgs/s train.total_time : 8.67388391494751 
+TCAPPDLL 2025-06-30 14:59:48.371671 - Epoch: 0 Iteration: 4  rank : 0  train.loss : 7.744500160217285  train.ips : 0.23201789716300406 imgs/s train.total_time : 8.620024681091309 
+TCAPPDLL 2025-06-30 14:59:57.249865 - Epoch: 0 Iteration: 5  rank : 0  train.loss : 7.543953895568848  train.ips : 0.22528060280161297 imgs/s train.total_time : 8.877817153930664 
+TCAPPDLL 2025-06-30 15:00:05.509043 - Epoch: 0 Iteration: 6  rank : 0  train.loss : 7.587810516357422  train.ips : 0.24216853188549295 imgs/s train.total_time : 8.258711338043213 
+TCAPPDLL 2025-06-30 15:00:13.372921 - Epoch: 0 Iteration: 7  rank : 0  train.loss : 6.9471917152404785  train.ips : 0.25434148672987306 imgs/s train.total_time : 7.863443851470947 
+TCAPPDLL 2025-06-30 15:00:21.504854 - Epoch: 0 Iteration: 8  rank : 0  train.loss : 7.284121990203857  train.ips : 0.2459588976409859 imgs/s train.total_time : 8.131439924240112 
+TCAPPDLL 2025-06-30 15:00:29.773001 - Epoch: 0 Iteration: 9  rank : 0  train.loss : 7.430606842041016  train.ips : 0.2419049051575417 imgs/s train.total_time : 8.267711639404297 
+TCAPPDLL 2025-06-30 15:00:39.015578 - Epoch: 0 Iteration: 10  rank : 0  train.loss : 7.583113193511963  train.ips : 0.21639877349896355 imgs/s train.total_time : 9.242196559906006 
+TCAPPDLL 2025-06-30 15:00:46.594536 - Epoch: 0 Iteration: 11  rank : 0  train.loss : 6.232903957366943  train.ips : 0.2639055032578705 imgs/s train.total_time : 7.578470230102539 
+TCAPPDLL 2025-06-30 15:00:55.318326 - Epoch: 0 Iteration: 12  rank : 0  train.loss : 7.139278411865234  train.ips : 0.2292738029935172 imgs/s train.total_time : 8.723194599151611 
+TCAPPDLL 2025-06-30 15:01:03.636263 - Epoch: 0 Iteration: 13  rank : 0  train.loss : 7.132291316986084  train.ips : 0.24046175170913117 imgs/s train.total_time : 8.317331075668335 
+TCAPPDLL 2025-06-30 15:01:12.089642 - Epoch: 0 Iteration: 14  rank : 0  train.loss : 7.157835960388184  train.ips : 0.23660863424660053 imgs/s train.total_time : 8.452776908874512 
+TCAPPDLL 2025-06-30 15:01:19.883271 - Epoch: 0 Iteration: 15  rank : 0  train.loss : 7.221747398376465  train.ips : 0.2566346161788627 imgs/s train.total_time : 7.7931809425354 
+TCAPPDLL 2025-06-30 15:01:28.260847 - Epoch: 0 Iteration: 16  rank : 0  train.loss : 6.559820175170898  train.ips : 0.23874228704567474 imgs/s train.total_time : 8.377233982086182 
+TCAPPDLL 2025-06-30 15:01:36.622299 - Epoch: 0 Iteration: 17  rank : 0  train.loss : 6.91517972946167  train.ips : 0.23920670797863652 imgs/s train.total_time : 8.360969543457031 
+TCAPPDLL 2025-06-30 15:01:45.542674 - Epoch: 0 Iteration: 18  rank : 0  train.loss : 6.470447540283203  train.ips : 0.22421854088786353 imgs/s train.total_time : 8.91986894607544 
+TCAPPDLL 2025-06-30 15:01:53.856069 - Epoch: 0 Iteration: 19  rank : 0  train.loss : 6.552034854888916  train.ips : 0.24058964166873478 imgs/s train.total_time : 8.312909841537476 
+TCAPPDLL 2025-06-30 15:02:01.936550 - Epoch: 0 Iteration: 20  rank : 0  train.loss : 6.049067497253418  train.ips : 0.24752159962193432 imgs/s train.total_time : 8.080102920532227 
+TCAPPDLL 2025-06-30 15:02:10.580359 - Epoch: 0 Iteration: 21  rank : 0  train.loss : 5.523934841156006  train.ips : 0.23138819239477063 imgs/s train.total_time : 8.643483400344849 
+TCAPPDLL 2025-06-30 15:02:18.911381 - Epoch: 0 Iteration: 22  rank : 0  train.loss : 5.542344093322754  train.ips : 0.24007662204965127 imgs/s train.total_time : 8.330673694610596 
+TCAPPDLL 2025-06-30 15:02:26.651802 - Epoch: 0 Iteration: 23  rank : 0  train.loss : 4.7145233154296875  train.ips : 0.2584094823122165 imgs/s train.total_time : 7.739654064178467 
+TCAPPDLL 2025-06-30 15:02:35.573781 - Epoch: 0 Iteration: 24  rank : 0  train.loss : 5.469234943389893  train.ips : 0.22418551765502695 imgs/s train.total_time : 8.921182870864868 
+TCAPPDLL 2025-06-30 15:02:43.568588 - Epoch: 0 Iteration: 25  rank : 0  train.loss : 5.376338958740234  train.ips : 0.25017674833524334 imgs/s train.total_time : 7.994348049163818 
+TCAPPDLL 2025-06-30 15:02:52.055839 - Epoch: 0 Iteration: 26  rank : 0  train.loss : 5.416733264923096  train.ips : 0.2356706848209468 imgs/s train.total_time : 8.4864182472229 
+TCAPPDLL 2025-06-30 15:02:59.682929 - Epoch: 0 Iteration: 27  rank : 0  train.loss : 5.1683526039123535  train.ips : 0.262247186072495 imgs/s train.total_time : 7.626392602920532 
+TCAPPDLL 2025-06-30 15:03:07.729464 - Epoch: 0 Iteration: 28  rank : 0  train.loss : 4.308520317077637  train.ips : 0.2485697975508997 imgs/s train.total_time : 8.046029806137085 
+TCAPPDLL 2025-06-30 15:03:15.842664 - Epoch: 0 Iteration: 29  rank : 0  train.loss : 4.710227966308594  train.ips : 0.24652398601803663 imgs/s train.total_time : 8.11280083656311 
+TCAPPDLL 2025-06-30 15:03:24.215668 - Epoch: 0 Iteration: 30  rank : 0  train.loss : 4.373573303222656  train.ips : 0.23887422420981091 imgs/s train.total_time : 8.372606992721558 
+TCAPPDLL 2025-06-30 15:03:33.372497 - Epoch: 0 Iteration: 31  rank : 0  train.loss : 4.714179039001465  train.ips : 0.21842393142443925 imgs/s train.total_time : 9.156505823135376 
+TCAPPDLL 2025-06-30 15:03:42.147503 - Epoch: 0 Iteration: 32  rank : 0  train.loss : 4.140189170837402  train.ips : 0.22793267332931047 imgs/s train.total_time : 8.774520874023438 
+TCAPPDLL 2025-06-30 15:03:50.311039 - Epoch: 0 Iteration: 33  rank : 0  train.loss : 3.4908206462860107  train.ips : 0.2450049039779189 imgs/s train.total_time : 8.1631019115448 
+TCAPPDLL 2025-06-30 15:03:59.588750 - Epoch: 0 Iteration: 34  rank : 0  train.loss : 4.676451683044434  train.ips : 0.21557833241172653 imgs/s train.total_time : 9.27737021446228 
+TCAPPDLL 2025-06-30 15:04:08.254791 - Epoch: 0 Iteration: 35  rank : 0  train.loss : 3.55092716217041  train.ips : 0.23079485373583372 imgs/s train.total_time : 8.665704488754272 
+TCAPPDLL 2025-06-30 15:04:17.897588 - Epoch: 0 Iteration: 36  rank : 0  train.loss : 4.108312606811523  train.ips : 0.20741751177159892 imgs/s train.total_time : 9.642387390136719 
+TCAPPDLL 2025-06-30 15:04:26.970329 - Epoch: 0 Iteration: 37  rank : 0  train.loss : 3.8863017559051514  train.ips : 0.22045019879025027 imgs/s train.total_time : 9.072343826293945 
+TCAPPDLL 2025-06-30 15:04:38.728356 - Epoch: 0 Iteration: 38  rank : 0  train.loss : 3.8447744846343994  train.ips : 0.17010385864233987 imgs/s train.total_time : 11.757522821426392 
+TCAPPDLL 2025-06-30 15:04:47.469634 - Epoch: 0 Iteration: 39  rank : 0  train.loss : 3.8984670639038086  train.ips : 0.22881079354413006 imgs/s train.total_time : 8.740846395492554 
+TCAPPDLL 2025-06-30 15:04:57.091651 - Epoch: 0 Iteration: 40  rank : 0  train.loss : 4.158263683319092  train.ips : 0.20786365449756294 imgs/s train.total_time : 9.621691703796387 
+TCAPPDLL 2025-06-30 15:05:06.249918 - Epoch: 0 Iteration: 41  rank : 0  train.loss : 3.6882572174072266  train.ips : 0.21838972732524986 imgs/s train.total_time : 9.157939910888672 
+TCAPPDLL 2025-06-30 15:05:15.992707 - Epoch: 0 Iteration: 42  rank : 0  train.loss : 3.764159917831421  train.ips : 0.20528711585361437 imgs/s train.total_time : 9.742452621459961 
+TCAPPDLL 2025-06-30 15:05:25.846516 - Epoch: 0 Iteration: 43  rank : 0  train.loss : 3.958204746246338  train.ips : 0.20297389402428692 imgs/s train.total_time : 9.85348391532898 
+TCAPPDLL 2025-06-30 15:05:35.695029 - Epoch: 0 Iteration: 44  rank : 0  train.loss : 3.5668177604675293  train.ips : 0.20308310488946935 imgs/s train.total_time : 9.848185062408447 
+TCAPPDLL 2025-06-30 15:05:44.639482 - Epoch: 0 Iteration: 45  rank : 0  train.loss : 3.959648370742798  train.ips : 0.22361044233060046 imgs/s train.total_time : 8.94412612915039 
+TCAPPDLL 2025-06-30 15:05:53.963499 - Epoch: 0 Iteration: 46  rank : 0  train.loss : 3.431255340576172  train.ips : 0.21450749039210087 imgs/s train.total_time : 9.323683738708496 
+TCAPPDLL 2025-06-30 15:06:04.013090 - Epoch: 0 Iteration: 47  rank : 0  train.loss : 3.2783403396606445  train.ips : 0.19901944239638672 imgs/s train.total_time : 10.049269437789917 
+TCAPPDLL 2025-06-30 15:06:14.020915 - Epoch: 0 Iteration: 48  rank : 0  train.loss : 3.509429931640625  train.ips : 0.19984990425505786 imgs/s train.total_time : 10.007510423660278 
+TCAPPDLL 2025-06-30 15:06:23.514548 - Epoch: 0 Iteration: 49  rank : 0  train.loss : 2.873272180557251  train.ips : 0.21067465451157663 imgs/s train.total_time : 9.493310928344727 
+06/30 15:06:23 - mmengine - INFO - Epoch(train)  [1][   50/58633]  lr: 9.9098e-04  eta: 71 days, 6:46:09  time: 8.7539  data_time: 0.1469  memory: 4330  loss: 5.4710  loss_rpn_cls: 0.6638  loss_rpn_bbox: 0.1005  loss_cls: 2.3009  acc: 98.7305  loss_bbox: 0.0087  loss_mask: 0.7229  loss_seg: 1.6742
+TCAPPDLL 2025-06-30 15:06:33.562647 - Epoch: 0 Iteration: 50  rank : 0  train.loss : 3.435290575027466  train.ips : 0.19904903787599224 imgs/s train.total_time : 10.047775268554688 
+TCAPPDLL 2025-06-30 15:06:43.663801 - Epoch: 0 Iteration: 51  rank : 0  train.loss : 3.667707920074463  train.ips : 0.19800669765525417 imgs/s train.total_time : 10.10066843032837 
+TCAPPDLL 2025-06-30 15:06:53.674018 - Epoch: 0 Iteration: 52  rank : 0  train.loss : 2.759831666946411  train.ips : 0.19980533492073535 imgs/s train.total_time : 10.009742736816406 
+TCAPPDLL 2025-06-30 15:07:05.105534 - Epoch: 0 Iteration: 53  rank : 0  train.loss : 3.8777706623077393  train.ips : 0.17496072585334776 imgs/s train.total_time : 11.431136846542358 
+TCAPPDLL 2025-06-30 15:07:14.693438 - Epoch: 0 Iteration: 54  rank : 0  train.loss : 3.3709487915039062  train.ips : 0.20860686131548775 imgs/s train.total_time : 9.587412357330322 
+TCAPPDLL 2025-06-30 15:07:24.864969 - Epoch: 0 Iteration: 55  rank : 0  train.loss : 3.44842267036438  train.ips : 0.19663860495537439 imgs/s train.total_time : 10.170942783355713 
+TCAPPDLL 2025-06-30 15:07:35.105809 - Epoch: 0 Iteration: 56  rank : 0  train.loss : 3.2946019172668457  train.ips : 0.19530416010781648 imgs/s train.total_time : 10.240437269210815 
+TCAPPDLL 2025-06-30 15:07:44.344164 - Epoch: 0 Iteration: 57  rank : 0  train.loss : 3.0556883811950684  train.ips : 0.21649630818994073 imgs/s train.total_time : 9.238032817840576 
+TCAPPDLL 2025-06-30 15:07:54.847349 - Epoch: 0 Iteration: 58  rank : 0  train.loss : 3.4533815383911133  train.ips : 0.1904255056885837 imgs/s train.total_time : 10.502794742584229 
+TCAPPDLL 2025-06-30 15:08:05.023006 - Epoch: 0 Iteration: 59  rank : 0  train.loss : 3.377894401550293  train.ips : 0.1965544772944836 imgs/s train.total_time : 10.175296068191528 
+TCAPPDLL 2025-06-30 15:08:14.347879 - Epoch: 0 Iteration: 60  rank : 0  train.loss : 3.256772518157959  train.ips : 0.21448764665757197 imgs/s train.total_time : 9.324546337127686 
+TCAPPDLL 2025-06-30 15:08:23.824832 - Epoch: 0 Iteration: 61  rank : 0  train.loss : 3.2045373916625977  train.ips : 0.21104590245258673 imgs/s train.total_time : 9.476611375808716 
+TCAPPDLL 2025-06-30 15:08:34.065458 - Epoch: 0 Iteration: 62  rank : 0  train.loss : 3.6063668727874756  train.ips : 0.19530843446141236 imgs/s train.total_time : 10.24021315574646 
+TCAPPDLL 2025-06-30 15:08:43.762238 - Epoch: 0 Iteration: 63  rank : 0  train.loss : 3.466679096221924  train.ips : 0.20626612105674957 imgs/s train.total_time : 9.696211814880371 
+TCAPPDLL 2025-06-30 15:08:53.235342 - Epoch: 0 Iteration: 64  rank : 0  train.loss : 3.188368797302246  train.ips : 0.21113336699107654 imgs/s train.total_time : 9.47268557548523 
+TCAPPDLL 2025-06-30 15:09:03.049696 - Epoch: 0 Iteration: 65  rank : 0  train.loss : 3.2696399688720703  train.ips : 0.20378995607949954 imgs/s train.total_time : 9.814026355743408 
+TCAPPDLL 2025-06-30 15:09:12.976635 - Epoch: 0 Iteration: 66  rank : 0  train.loss : 3.432854413986206  train.ips : 0.20148080056921647 imgs/s train.total_time : 9.926504135131836 
+TCAPPDLL 2025-06-30 15:09:23.932536 - Epoch: 0 Iteration: 67  rank : 0  train.loss : 3.943554401397705  train.ips : 0.1825567164979768 imgs/s train.total_time : 10.955499410629272 
+TCAPPDLL 2025-06-30 15:09:34.059700 - Epoch: 0 Iteration: 68  rank : 0  train.loss : 3.209569215774536  train.ips : 0.19749651987054037 imgs/s train.total_time : 10.126760721206665 
+TCAPPDLL 2025-06-30 15:09:43.888644 - Epoch: 0 Iteration: 69  rank : 0  train.loss : 3.2804746627807617  train.ips : 0.20348831017948293 imgs/s train.total_time : 9.828574419021606 
+TCAPPDLL 2025-06-30 15:09:53.825821 - Epoch: 0 Iteration: 70  rank : 0  train.loss : 3.7524213790893555  train.ips : 0.2012686636583005 imgs/s train.total_time : 9.93696665763855 
+TCAPPDLL 2025-06-30 15:10:03.680967 - Epoch: 0 Iteration: 71  rank : 0  train.loss : 3.4407596588134766  train.ips : 0.20294643412936134 imgs/s train.total_time : 9.854817152023315 
+TCAPPDLL 2025-06-30 15:10:13.956492 - Epoch: 0 Iteration: 72  rank : 0  train.loss : 3.3805224895477295  train.ips : 0.19464280112363033 imgs/s train.total_time : 10.275232315063477 
+TCAPPDLL 2025-06-30 15:10:23.934810 - Epoch: 0 Iteration: 73  rank : 0  train.loss : 3.629295587539673  train.ips : 0.20043930971296534 imgs/s train.total_time : 9.978082656860352 
+TCAPPDLL 2025-06-30 15:10:33.939146 - Epoch: 0 Iteration: 74  rank : 0  train.loss : 3.292415142059326  train.ips : 0.19992047135675936 imgs/s train.total_time : 10.00397801399231 
+TCAPPDLL 2025-06-30 15:10:43.633116 - Epoch: 0 Iteration: 75  rank : 0  train.loss : 3.6605207920074463  train.ips : 0.20632067809553156 imgs/s train.total_time : 9.693647861480713 
+TCAPPDLL 2025-06-30 15:10:53.384471 - Epoch: 0 Iteration: 76  rank : 0  train.loss : 3.3318581581115723  train.ips : 0.20510646290616016 imgs/s train.total_time : 9.751033544540405 
+TCAPPDLL 2025-06-30 15:11:02.604285 - Epoch: 0 Iteration: 77  rank : 0  train.loss : 2.9004921913146973  train.ips : 0.21693167625888768 imgs/s train.total_time : 9.219492673873901 
+TCAPPDLL 2025-06-30 15:11:12.782927 - Epoch: 0 Iteration: 78  rank : 0  train.loss : 3.2607879638671875  train.ips : 0.19649614763820925 imgs/s train.total_time : 10.178316593170166 
+TCAPPDLL 2025-06-30 15:11:22.305101 - Epoch: 0 Iteration: 79  rank : 0  train.loss : 3.345081329345703  train.ips : 0.21004309302143845 imgs/s train.total_time : 9.521855592727661 
+TCAPPDLL 2025-06-30 15:11:32.318910 - Epoch: 0 Iteration: 80  rank : 0  train.loss : 3.3481125831604004  train.ips : 0.1997305024134258 imgs/s train.total_time : 10.013493061065674 
+TCAPPDLL 2025-06-30 15:11:42.553475 - Epoch: 0 Iteration: 81  rank : 0  train.loss : 3.4552106857299805  train.ips : 0.19542227382681926 imgs/s train.total_time : 10.234247922897339 
+TCAPPDLL 2025-06-30 15:11:53.004779 - Epoch: 0 Iteration: 82  rank : 0  train.loss : 3.1489129066467285  train.ips : 0.19136970581618168 imgs/s train.total_time : 10.450974941253662 
+TCAPPDLL 2025-06-30 15:12:02.511393 - Epoch: 0 Iteration: 83  rank : 0  train.loss : 3.06634259223938  train.ips : 0.21038726106675162 imgs/s train.total_time : 9.506278991699219 
+TCAPPDLL 2025-06-30 15:12:12.434976 - Epoch: 0 Iteration: 84  rank : 0  train.loss : 3.2263665199279785  train.ips : 0.20154657282856575 imgs/s train.total_time : 9.923264741897583 
+TCAPPDLL 2025-06-30 15:12:22.456634 - Epoch: 0 Iteration: 85  rank : 0  train.loss : 2.5088250637054443  train.ips : 0.19957419169329546 imgs/s train.total_time : 10.02133584022522 
+TCAPPDLL 2025-06-30 15:12:32.276358 - Epoch: 0 Iteration: 86  rank : 0  train.loss : 2.8980793952941895  train.ips : 0.2036785150668929 imgs/s train.total_time : 9.819396018981934 
+TCAPPDLL 2025-06-30 15:12:41.945238 - Epoch: 0 Iteration: 87  rank : 0  train.loss : 3.30951189994812  train.ips : 0.2068560613766595 imgs/s train.total_time : 9.668558835983276 
+TCAPPDLL 2025-06-30 15:12:51.884694 - Epoch: 0 Iteration: 88  rank : 0  train.loss : 3.0572028160095215  train.ips : 0.20122475778437854 imgs/s train.total_time : 9.9391348361969 
+TCAPPDLL 2025-06-30 15:13:01.858808 - Epoch: 0 Iteration: 89  rank : 0  train.loss : 3.0730929374694824  train.ips : 0.20052554059146682 imgs/s train.total_time : 9.97379183769226 
+TCAPPDLL 2025-06-30 15:13:12.384314 - Epoch: 0 Iteration: 90  rank : 0  train.loss : 3.335822105407715  train.ips : 0.19002068647042494 imgs/s train.total_time : 10.525169849395752 
+TCAPPDLL 2025-06-30 15:13:22.551668 - Epoch: 0 Iteration: 91  rank : 0  train.loss : 3.627310037612915  train.ips : 0.19671571414822828 imgs/s train.total_time : 10.166955947875977 
+TCAPPDLL 2025-06-30 15:13:32.389166 - Epoch: 0 Iteration: 92  rank : 0  train.loss : 3.439382314682007  train.ips : 0.2033129218367676 imgs/s train.total_time : 9.837053060531616 
+TCAPPDLL 2025-06-30 15:13:41.975760 - Epoch: 0 Iteration: 93  rank : 0  train.loss : 3.2134947776794434  train.ips : 0.20863204501191165 imgs/s train.total_time : 9.586255073547363 
+TCAPPDLL 2025-06-30 15:13:51.800568 - Epoch: 0 Iteration: 94  rank : 0  train.loss : 3.8986728191375732  train.ips : 0.2035733611578631 imgs/s train.total_time : 9.82446813583374 
+TCAPPDLL 2025-06-30 15:14:01.742761 - Epoch: 0 Iteration: 95  rank : 0  train.loss : 3.409419059753418  train.ips : 0.20116941270510993 imgs/s train.total_time : 9.941869258880615 
+TCAPPDLL 2025-06-30 15:14:12.095951 - Epoch: 0 Iteration: 96  rank : 0  train.loss : 4.0717668533325195  train.ips : 0.19318376494270484 imgs/s train.total_time : 10.352836847305298 
+TCAPPDLL 2025-06-30 15:14:21.827340 - Epoch: 0 Iteration: 97  rank : 0  train.loss : 2.8905696868896484  train.ips : 0.20552728358244646 imgs/s train.total_time : 9.731068134307861 
+TCAPPDLL 2025-06-30 15:14:32.085425 - Epoch: 0 Iteration: 98  rank : 0  train.loss : 3.2691478729248047  train.ips : 0.1949741138792216 imgs/s train.total_time : 10.257771968841553 
+TCAPPDLL 2025-06-30 15:14:41.825745 - Epoch: 0 Iteration: 99  rank : 0  train.loss : 3.4894134998321533  train.ips : 0.2053388942817312 imgs/s train.total_time : 9.739995956420898 
+06/30 15:14:41 - mmengine - INFO - Epoch(train)  [1][  100/58633]  lr: 1.9920e-03  eta: 76 days, 5:03:48  time: 9.9658  data_time: 0.1269  memory: 4289  loss: 3.3466  loss_rpn_cls: 0.5458  loss_rpn_bbox: 0.0824  loss_cls: 0.1762  acc: 97.9492  loss_bbox: 0.0021  loss_mask: 0.7197  loss_seg: 1.8205

@@ -2,9 +2,9 @@
 
 参数名 | 解释 | 样例
 -----------------|-----------------|-----------------
-config | 配置文件。 | --config  ../configs/scnet/scnet_r50_fpn_1x_coco.py
+config | 配置文件。 | --config  ../configs/panoptic_fpn/panoptic-fpn_r50_fpn_1x_coco.py
 cfg-options | 动态覆盖配置文件。 | --cfg-options train_dataloader.dataset.data_root=xxx
-work-dir | 工作目录。 | --work-dir ./work_dirs/scnet_r50_fpn_1x_coco
+work-dir | 工作目录。 | --work-dir ./work_dirs/panoptic-fpn_r50_fpn_1x_coco
 resume | 恢复训练。 | --resume auto
 amp | 是否使用amp。 | --amp
 no-validate | 是否验证。 | --no-validate
