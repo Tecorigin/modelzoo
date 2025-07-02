@@ -1,10 +1,10 @@
 
-# DNLNet
+# ISANet
 ## 1. 模型概述
-DNLNet是一种高效的动态非线性网络模型，通过自适应学习机制灵活捕捉复杂数据特征，在保持轻量化的同时显著提升任务性能。
+ISANet（Interlaced Sparse Self-Attention Network）是一种通过交错稀疏注意力机制来高效捕获长程依赖的轻量化视觉模型，显著提升了计算效率与特征表达能力。
 
-- 论文链接：[2006.06668 \]Disentangled Non-Local Neural Networks(https://arxiv.org/abs/2006.06668 )
-- 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/dnlnet
+- 论文链接：[1907.12273\]Interlaced Sparse Self-Attention for Semantic Segmentation(https://arxiv.org/abs/1907.12273 )
+- 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/isanet
 
 ## 2. 快速开始
 使用本模型执行训练的主要流程如下：
@@ -46,12 +46,12 @@ DNLNet是一种高效的动态非线性网络模型，通过自适应学习机�
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd <ModelZoo_path>/PyTorch/contrib/Classification/dnlnet/run_scripts
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/isanet/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_upernet.py --config ../configs/dnlnet/dnl_r50-d8_4xb2-40k_cityscapes-512x1024.py \
+python run_isanet.py --config ../configs/isanet/isanet_r50-d8_4xb2-40k_cityscapes-512x1024.py \
        --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
@@ -61,9 +61,9 @@ python run_upernet.py --config ../configs/dnlnet/dnl_r50-d8_4xb2-40k_cityscapes-
 
 ![loss](./image/loss.jpg)
 
-MeanRelativeError: 0.1329191625533209
-MeanAbsoluteError: 0.08796937807951824
-Rule,mean_absolute_error 0.08796937807951824
-fail mean_relative_error=0.1329191625533209 <= 0.05 or mean_absolute_error=0.08796937807951824 <= 0.0002
+MeanRelativeError: -0.011750200408765846
+MeanAbsoluteError: -0.17370413199509724
+Rule,mean_absolute_error -0.17370413199509724
+pass mean_relative_error=-0.011750200408765846 <= 0.05 or mean_absolute_error=-0.17370413199509724 <= 0.0002
 
 
