@@ -16,7 +16,7 @@ pip3 install numpy==1.24.3
 cd $script_path
 
 
-python run_pspnet.py --config ../configs/pointrend/pointrend_r50_4xb2-80k_cityscapes-512x1024.py \
+python run_pspnet.py --config ../configs/pspnet/pspnet_r50-d8_4xb2-40k_cityscapes-512x1024 \
        --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
 # 生成loss对比图
 python loss.py --sdaa-log sdaa.log --cuda-log cuda.log

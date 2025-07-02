@@ -1,10 +1,10 @@
 
-# Pspnet
+# DNLNet
 ## 1. 模型概述
-PointRend 是一种基于 自适应点采样 和 精细化渲染 的神经网络模型，用于提升图像分割任务（如实例分割、语义分割）在物体边缘和细节部分的预测精度
+DNLNet是一种高效的动态非线性网络模型，通过自适应学习机制灵活捕捉复杂数据特征，在保持轻量化的同时显著提升任务性能。
 
-- 论文链接：[1912.08193 \]PointRend: Image Segmentation as Rendering(https://arxiv.org/abs/1912.08193  )
-- 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/point_rend
+- 论文链接：[2006.06668 \]Disentangled Non-Local Neural Networks(https://arxiv.org/abs/2006.06668 )
+- 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/dnlnet
 
 ## 2. 快速开始
 使用本模型执行训练的主要流程如下：
@@ -46,12 +46,12 @@ PointRend 是一种基于 自适应点采样 和 精细化渲染 的神经网络
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd <ModelZoo_path>/PyTorch/contrib/Classification/pointrend/run_scripts
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/dnlnet/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_upernet.py --config ../configs/pointrend/pointrend_r50_4xb2-80k_cityscapes-512x1024.py \
+python run_upernet.py --config ../configs/dnlnet/dnl_r50-d8_4xb2-40k_cityscapes-512x1024.py \
        --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
@@ -60,9 +60,10 @@ python run_upernet.py --config ../configs/pointrend/pointrend_r50_4xb2-80k_citys
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
 ![loss](./image/loss.jpg)
-MeanRelativeError: 0.07341102202426913
-MeanAbsoluteError: -0.022966164173466145
-Rule,mean_absolute_error -0.022966164173466145
-pass mean_relative_error=0.07341102202426913 <= 0.05 or mean_absolute_error=-0.022966164173466145 <= 0.0002
+
+MeanRelativeError: 0.1329191625533209
+MeanAbsoluteError: 0.08796937807951824
+Rule,mean_absolute_error 0.08796937807951824
+fail mean_relative_error=0.1329191625533209 <= 0.05 or mean_absolute_error=0.08796937807951824 <= 0.0002
 
 
