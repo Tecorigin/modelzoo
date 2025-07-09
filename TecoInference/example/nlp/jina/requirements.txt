@@ -1,0 +1,12 @@
+transformers
+tqdm
+onnx
+onnxsim
+onnxconverter_common
+datasets
+scikit-learn
+
+torch==2.0.0
+optimum[onnxruntime]
+protobuf==3.20.2
+numpy==1.23.5
