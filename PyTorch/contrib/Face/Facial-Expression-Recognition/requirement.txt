@@ -1,0 +1,3 @@
+pip install git+https://gitee.com/xiwei777/tcap_dlloger.git
+pip install h5py
+pip install scikit-learn
