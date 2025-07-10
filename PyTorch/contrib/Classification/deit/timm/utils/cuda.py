@@ -1,5 +1,3 @@
-# Adapted to tecorigin hardware
-
 """ CUDA / AMP utils
 
 Hacked together by / Copyright 2020 Ross Wightman
@@ -13,17 +11,15 @@ except ImportError:
     amp = None
     has_apex = False
 
-from .clip_grad import dispatch_clip_grad
-
 
 class ApexScaler:
     state_dict_key = "amp"
 
-    def __call__(self, loss, optimizer, clip_grad=None, clip_mode='norm', parameters=None, create_graph=False):
+    def __call__(self, loss, optimizer, clip_grad=None, parameters=None, create_graph=False):
         with amp.scale_loss(loss, optimizer) as scaled_loss:
             scaled_loss.backward(create_graph=create_graph)
         if clip_grad is not None:
-            dispatch_clip_grad(amp.master_params(optimizer), clip_grad, mode=clip_mode)
+            torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), clip_grad)
         optimizer.step()
 
     def state_dict(self):
@@ -39,15 +35,14 @@ class NativeScaler:
     state_dict_key = "amp_scaler"
 
     def __init__(self):
-        # self._scaler = torch.cuda.amp.GradScaler()
-        self._scaler = torch.sdaa.amp.GradScaler()
+        self._scaler = torch.cuda.amp.GradScaler()
 
-    def __call__(self, loss, optimizer, clip_grad=None, clip_mode='norm', parameters=None, create_graph=False):
+    def __call__(self, loss, optimizer, clip_grad=None, parameters=None, create_graph=False):
         self._scaler.scale(loss).backward(create_graph=create_graph)
         if clip_grad is not None:
             assert parameters is not None
             self._scaler.unscale_(optimizer)  # unscale the gradients of optimizer's assigned params in-place
-            dispatch_clip_grad(parameters, clip_grad, mode=clip_mode)
+            torch.nn.utils.clip_grad_norm_(parameters, clip_grad)
         self._scaler.step(optimizer)
         self._scaler.update()
 

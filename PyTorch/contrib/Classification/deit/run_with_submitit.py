@@ -1,5 +1,6 @@
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
+# Adapted to tecorigin hardware。
 """
 A script to run multinode training with submitit.
 """
@@ -28,9 +29,9 @@ def parse_args():
 
 
 def get_shared_folder() -> Path:
-    user = os.getenv("USER")
-    if Path("/checkpoint/").is_dir():
-        p = Path(f"/checkpoint/{user}/experiments")
+    store_dir = "/workspace/modelzoo/PyTorch/contrib/Classification/Deit/run_scripts"
+    if Path(store_dir).is_dir():
+        p = Path(store_dir)
         p.mkdir(exist_ok=True)
         return p
     raise RuntimeError("No shared folder available")

@@ -91,7 +91,7 @@ class Bottle2neck(nn.Module):
         nn.init.zeros_(self.bn3.weight)
 
     def forward(self, x):
-        shortcut = x
+        residual = x
 
         out = self.conv1(x)
         out = self.bn1(out)
@@ -124,9 +124,9 @@ class Bottle2neck(nn.Module):
             out = self.se(out)
 
         if self.downsample is not None:
-            shortcut = self.downsample(x)
+            residual = self.downsample(x)
 
-        out += shortcut
+        out += residual
         out = self.relu(out)
 
         return out
@@ -134,9 +134,7 @@ class Bottle2neck(nn.Module):
 
 def _create_res2net(variant, pretrained=False, **kwargs):
     return build_model_with_cfg(
-        ResNet, variant, pretrained,
-        default_cfg=default_cfgs[variant],
-        **kwargs)
+        ResNet, variant, pretrained, default_cfg=default_cfgs[variant], **kwargs)
 
 
 @register_model

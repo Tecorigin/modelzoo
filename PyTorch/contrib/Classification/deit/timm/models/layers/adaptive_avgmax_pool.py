@@ -55,7 +55,7 @@ class FastAdaptiveAvgPool2d(nn.Module):
         self.flatten = flatten
 
     def forward(self, x):
-        return x.mean((2, 3), keepdim=not self.flatten)
+        return x.mean((2, 3)) if self.flatten else x.mean((2, 3), keepdim=True)
 
 
 class AdaptiveAvgMaxPool2d(nn.Module):
@@ -82,13 +82,13 @@ class SelectAdaptivePool2d(nn.Module):
     def __init__(self, output_size=1, pool_type='fast', flatten=False):
         super(SelectAdaptivePool2d, self).__init__()
         self.pool_type = pool_type or ''  # convert other falsy values to empty string for consistent TS typing
-        self.flatten = nn.Flatten(1) if flatten else nn.Identity()
+        self.flatten = flatten
         if pool_type == '':
             self.pool = nn.Identity()  # pass through
         elif pool_type == 'fast':
             assert output_size == 1
-            self.pool = FastAdaptiveAvgPool2d(flatten)
-            self.flatten = nn.Identity()
+            self.pool = FastAdaptiveAvgPool2d(self.flatten)
+            self.flatten = False
         elif pool_type == 'avg':
             self.pool = nn.AdaptiveAvgPool2d(output_size)
         elif pool_type == 'avgmax':
@@ -101,11 +101,12 @@ class SelectAdaptivePool2d(nn.Module):
             assert False, 'Invalid pool type: %s' % pool_type
 
     def is_identity(self):
-        return not self.pool_type
+        return self.pool_type == ''
 
     def forward(self, x):
         x = self.pool(x)
-        x = self.flatten(x)
+        if self.flatten:
+            x = x.flatten(1)
         return x
 
     def feat_mult(self):
