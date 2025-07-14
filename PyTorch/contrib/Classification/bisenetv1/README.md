@@ -51,7 +51,7 @@
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_bisenetv1.py --config ../configs/bisenetv1/bisenetv1_r18-d32_4xb4-160k_cityscapes-1024x1024.py \
+    python run_bisenetv1.py --config ../configs/bisenetv1/bisenetv1_r18-d32_4xb4-160k_cityscapes-1024x1024.py \
        --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
