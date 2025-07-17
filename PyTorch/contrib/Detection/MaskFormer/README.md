@@ -57,7 +57,7 @@ datasets #根目录
   ```
   run_MaskFormer.py --config ../configs/maskformer/maskformer_r50_ms-16xb1-75e_coco.py --launcher pytorch --nproc-per-node 1 --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/coco/" "val_dataloader.dataset.data_root=/data/teco-data/coco/" 
   ```
-  # 该模型开启amp在sdaa和cuda上都会梯度爆炸，长nan现象，且训练很慢
+    该模型开启amp在sdaa和cuda上都会梯度爆炸，长nan现象，且训练很慢
     更多训练参数参考 run_scripts/argument.py
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
