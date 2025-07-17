@@ -41,7 +41,7 @@ ViTDet 是一种基于视觉Transformer（Vision Transformer，简称ViT）的�
     ```
 3. 下载预训练权重
    ```
-   wget https://dl.fbaipublicfiles.com/mae/pretrain/vit_base_patch16_224.pth -O mae_pretrain_vit_base.pth 
+   下载链接： https://github.com/facebookresearch/mae?tab=readme-ov-file 
    ```
 
 ### 2.4 启动训练
@@ -57,7 +57,7 @@ ViTDet 是一种基于视觉Transformer（Vision Transformer，简称ViT）的�
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: -0.019998730426817938
-MeanAbsoluteError: -0.14312899947166444
-Rule,mean_absolute_error -0.14312899947166444
-pass mean_relative_error=-0.019998730426817938 <= 0.05 or mean_absolute_error=-0.14312899947166444 <= 0.0002
+MeanRelativeError: -0.015035356724990512
+MeanAbsoluteError: -0.11158662319183349
+Rule,mean_absolute_error -0.11158662319183349
+pass mean_relative_error=-0.015035356724990512 <= 0.05 or mean_absolute_error=-0.11158662319183349 <= 0.0002

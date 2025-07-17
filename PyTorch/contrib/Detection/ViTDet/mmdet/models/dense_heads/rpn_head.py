@@ -233,6 +233,7 @@ class RPNHead(AnchorHead):
         return self._bbox_post_process(
             results=results, cfg=cfg, rescale=rescale, img_meta=img_meta)
 
+
     def _bbox_post_process(self,
                            results: InstanceData,
                            cfg: ConfigDict,
@@ -278,6 +279,7 @@ class RPNHead(AnchorHead):
             valid_mask = (w > cfg.min_bbox_size) & (h > cfg.min_bbox_size)
             if not valid_mask.all():
                 results = results[valid_mask]
+             
 
         if results.bboxes.numel() > 0:
             bboxes = get_box_tensor(results.bboxes)

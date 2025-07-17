@@ -17,7 +17,7 @@ cd $script_path
 
 #执行训练
 python run_ViTDet.py --config ../projects/ViTDet/configs/vitdet_mask-rcnn_vit-b-mae_lsj-100e.py \
-    --launcher pytorch --nproc-per-node 1 --amp \
+    --launcher pytorch --nproc-per-node 1 --amp  \
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 
 # 生成loss对比图

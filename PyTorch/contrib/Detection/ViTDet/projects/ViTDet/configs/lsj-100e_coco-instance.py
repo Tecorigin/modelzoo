@@ -1,5 +1,5 @@
 _base_ = [
-    '../../../configs/_base_/default_runtime.py',
+    './_base_/default_runtime.py',
 ]
 
 # dataset settings

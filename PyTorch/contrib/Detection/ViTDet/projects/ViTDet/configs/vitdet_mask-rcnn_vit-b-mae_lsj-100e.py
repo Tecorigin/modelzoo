@@ -1,5 +1,5 @@
 _base_ = [
-    '../../../configs/_base_/models/mask-rcnn_r50_fpn.py',
+    './_base_/models/mask-rcnn_r50_fpn.py',
     './lsj-100e_coco-instance.py',
 ]
 
@@ -40,7 +40,7 @@ model = dict(
         ],
         use_rel_pos=True,
         init_cfg=dict(
-            type='Pretrained', checkpoint='mae_pretrain_vit_base.pth')),
+            type='Pretrained', checkpoint='/data/bigc-data/wyc/ViTDet/mae_pretrain_vit_base.pth')),
     neck=dict(
         _delete_=True,
         type='SimpleFPN',
