@@ -1,0 +1,1743 @@
+/root/miniconda3/envs/wyc_mmlab4_pre/lib/python3.9/site-packages/mmengine/utils/package_utils.py:17: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/root/miniconda3/envs/wyc_mmlab4_pre/lib/python3.9/importlib/__init__.py:169: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  _bootstrap._exec(spec, module)
+/root/miniconda3/envs/wyc_mmlab4_pre/lib/python3.9/importlib/__init__.py:169: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  _bootstrap._exec(spec, module)
+/root/miniconda3/envs/wyc_mmlab4_pre/lib/python3.9/importlib/__init__.py:169: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  _bootstrap._exec(spec, module)
+07/19 06:32:48 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.9.23 (main, Jun  5 2025, 13:40:20) [GCC 11.2.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 1590906783
+    GPU 0: NVIDIA GeForce RTX 4090
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 12.9, V12.9.86
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    PyTorch: 2.1.0+cu121
+    PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2023.1-Product Build 20230303 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.1.1 (Git Hash 64f6bcbcbab628e96f33a62c3e975f8535a7bde4)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - CUDA Runtime 12.1
+  - NVCC architecture flags: -gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90
+  - CuDNN 8.9.2
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=12.1, CUDNN_VERSION=8.9.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=0 -fabi-version=11 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-invalid-partial-specialization -Wno-unused-private-field -Wno-aligned-allocation-unavailable -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_DISABLE_GPU_ASSERTS=ON, TORCH_VERSION=2.1.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=1, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+    TorchVision: 0.16.0+cu121
+    OpenCV: 4.11.0
+    MMEngine: 0.10.4
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'nccl'}
+    seed: 1590906783
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+07/19 06:32:49 - mmengine - INFO - Config:
+auto_scale_lr = dict(base_batch_size=16, enable=False)
+backend_args = None
+checkpoint_file = 'https://download.openmmlab.com/mmclassification/v0/convnext-v2/convnext-v2-base_3rdparty-fcmae_in1k_20230104-8a798eaf.pth'
+custom_imports = dict(
+    allow_failed_imports=False, imports=[
+        'mmpretrain.models',
+    ])
+data_root = '/home/01/wyc/datasets/coco/'
+dataset_type = 'CocoDataset'
+default_hooks = dict(
+    checkpoint=dict(
+        _scope_='mmdet', interval=1, max_keep_ckpts=1, type='CheckpointHook'),
+    logger=dict(_scope_='mmdet', interval=50, type='LoggerHook'),
+    param_scheduler=dict(_scope_='mmdet', type='ParamSchedulerHook'),
+    sampler_seed=dict(_scope_='mmdet', type='DistSamplerSeedHook'),
+    timer=dict(_scope_='mmdet', type='IterTimerHook'),
+    visualization=dict(_scope_='mmdet', type='DetVisualizationHook'))
+default_scope = 'mmdet'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+image_size = (
+    1024,
+    1024,
+)
+launcher = 'none'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(
+    _scope_='mmdet', by_epoch=True, type='LogProcessor', window_size=50)
+max_epochs = 36
+model = dict(
+    _scope_='mmdet',
+    backbone=dict(
+        arch='base',
+        drop_path_rate=0.4,
+        gap_before_final_norm=False,
+        init_cfg=dict(
+            checkpoint=
+            'https://download.openmmlab.com/mmclassification/v0/convnext-v2/convnext-v2-base_3rdparty-fcmae_in1k_20230104-8a798eaf.pth',
+            prefix='backbone.',
+            type='Pretrained'),
+        layer_scale_init_value=0.0,
+        out_indices=[
+            0,
+            1,
+            2,
+            3,
+        ],
+        type='mmpretrain.ConvNeXt',
+        use_grn=True),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        pad_mask=True,
+        pad_size_divisor=32,
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='DetDataPreprocessor'),
+    neck=dict(
+        in_channels=[
+            128,
+            256,
+            512,
+            1024,
+        ],
+        num_outs=5,
+        out_channels=256,
+        type='FPN'),
+    roi_head=dict(
+        bbox_head=dict(
+            bbox_coder=dict(
+                target_means=[
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                ],
+                target_stds=[
+                    0.1,
+                    0.1,
+                    0.2,
+                    0.2,
+                ],
+                type='DeltaXYWHBBoxCoder'),
+            fc_out_channels=1024,
+            in_channels=256,
+            loss_bbox=dict(loss_weight=1.0, type='L1Loss'),
+            loss_cls=dict(
+                loss_weight=1.0, type='CrossEntropyLoss', use_sigmoid=False),
+            num_classes=80,
+            reg_class_agnostic=False,
+            roi_feat_size=7,
+            type='Shared2FCBBoxHead'),
+        bbox_roi_extractor=dict(
+            featmap_strides=[
+                4,
+                8,
+                16,
+                32,
+            ],
+            out_channels=256,
+            roi_layer=dict(output_size=7, sampling_ratio=0, type='RoIAlign'),
+            type='SingleRoIExtractor'),
+        mask_head=dict(
+            conv_out_channels=256,
+            in_channels=256,
+            loss_mask=dict(
+                loss_weight=1.0, type='CrossEntropyLoss', use_mask=True),
+            num_classes=80,
+            num_convs=4,
+            type='FCNMaskHead'),
+        mask_roi_extractor=dict(
+            featmap_strides=[
+                4,
+                8,
+                16,
+                32,
+            ],
+            out_channels=256,
+            roi_layer=dict(output_size=14, sampling_ratio=0, type='RoIAlign'),
+            type='SingleRoIExtractor'),
+        type='StandardRoIHead'),
+    rpn_head=dict(
+        anchor_generator=dict(
+            ratios=[
+                0.5,
+                1.0,
+                2.0,
+            ],
+            scales=[
+                8,
+            ],
+            strides=[
+                4,
+                8,
+                16,
+                32,
+                64,
+            ],
+            type='AnchorGenerator'),
+        bbox_coder=dict(
+            target_means=[
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+            ],
+            target_stds=[
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+            ],
+            type='DeltaXYWHBBoxCoder'),
+        feat_channels=256,
+        in_channels=256,
+        loss_bbox=dict(loss_weight=1.0, type='L1Loss'),
+        loss_cls=dict(
+            loss_weight=1.0, type='CrossEntropyLoss', use_sigmoid=True),
+        type='RPNHead'),
+    test_cfg=dict(
+        rcnn=dict(
+            mask_thr_binary=0.5,
+            max_per_img=100,
+            nms=dict(iou_threshold=0.5, type='soft_nms'),
+            score_thr=0.05),
+        rpn=dict(
+            max_per_img=1000,
+            min_bbox_size=0,
+            nms=dict(iou_threshold=0.7, type='nms'),
+            nms_pre=1000)),
+    train_cfg=dict(
+        rcnn=dict(
+            assigner=dict(
+                ignore_iof_thr=-1,
+                match_low_quality=True,
+                min_pos_iou=0.5,
+                neg_iou_thr=0.5,
+                pos_iou_thr=0.5,
+                type='MaxIoUAssigner'),
+            debug=False,
+            mask_size=28,
+            pos_weight=-1,
+            sampler=dict(
+                add_gt_as_proposals=True,
+                neg_pos_ub=-1,
+                num=512,
+                pos_fraction=0.25,
+                type='RandomSampler')),
+        rpn=dict(
+            allowed_border=-1,
+            assigner=dict(
+                ignore_iof_thr=-1,
+                match_low_quality=True,
+                min_pos_iou=0.3,
+                neg_iou_thr=0.3,
+                pos_iou_thr=0.7,
+                type='MaxIoUAssigner'),
+            debug=False,
+            pos_weight=-1,
+            sampler=dict(
+                add_gt_as_proposals=False,
+                neg_pos_ub=-1,
+                num=256,
+                pos_fraction=0.5,
+                type='RandomSampler')),
+        rpn_proposal=dict(
+            max_per_img=1000,
+            min_bbox_size=0,
+            nms=dict(iou_threshold=0.7, type='nms'),
+            nms_pre=2000)),
+    type='MaskRCNN')
+optim_wrapper = dict(
+    _scope_='mmdet',
+    constructor='LearningRateDecayOptimizerConstructor',
+    optimizer=dict(
+        betas=(
+            0.9,
+            0.999,
+        ), lr=3e-05, type='AdamW', weight_decay=0.05),
+    paramwise_cfg=dict(
+        decay_rate=0.95, decay_type='layer_wise', num_layers=12),
+    type='AmpOptimWrapper')
+param_scheduler = [
+    dict(
+        begin=0, by_epoch=False, end=1000, start_factor=0.001,
+        type='LinearLR'),
+    dict(
+        begin=0,
+        by_epoch=True,
+        end=36,
+        gamma=0.1,
+        milestones=[
+            27,
+            33,
+        ],
+        type='MultiStepLR'),
+]
+resume = False
+test_cfg = dict(_scope_='mmdet', type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/instances_val2017.json',
+        backend_args=None,
+        data_prefix=dict(img='images/val2017/'),
+        data_root='/home/01/wyc/datasets/coco/',
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(type='LoadAnnotations', with_bbox=True, with_mask=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                ),
+                type='PackDetInputs'),
+        ],
+        test_mode=True,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    ann_file='/home/01/wyc/datasets/coco/annotations/instances_val2017.json',
+    backend_args=None,
+    format_only=False,
+    metric=[
+        'bbox',
+        'segm',
+    ],
+    type='CocoMetric')
+test_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(keep_ratio=True, scale=(
+        1333,
+        800,
+    ), type='Resize'),
+    dict(type='LoadAnnotations', with_bbox=True, with_mask=True),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+            'scale_factor',
+        ),
+        type='PackDetInputs'),
+]
+train_cfg = dict(
+    _scope_='mmdet', max_epochs=36, type='EpochBasedTrainLoop', val_interval=1)
+train_dataloader = dict(
+    batch_sampler=dict(type='AspectRatioBatchSampler'),
+    batch_size=4,
+    dataset=dict(
+        ann_file='annotations/instances_train2017.json',
+        backend_args=None,
+        data_prefix=dict(img='images/train2017/'),
+        data_root='/home/01/wyc/datasets/coco/',
+        filter_cfg=dict(filter_empty_gt=True, min_size=32),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True, with_mask=True),
+            dict(
+                keep_ratio=True,
+                ratio_range=(
+                    0.1,
+                    2.0,
+                ),
+                scale=(
+                    1024,
+                    1024,
+                ),
+                type='RandomResize'),
+            dict(
+                allow_negative_crop=True,
+                crop_size=(
+                    1024,
+                    1024,
+                ),
+                crop_type='absolute_range',
+                recompute_bbox=True,
+                type='RandomCrop'),
+            dict(min_gt_bbox_wh=(
+                0.01,
+                0.01,
+            ), type='FilterAnnotations'),
+            dict(prob=0.5, type='RandomFlip'),
+            dict(type='PackDetInputs'),
+        ],
+        type='CocoDataset'),
+    num_workers=8,
+    persistent_workers=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+train_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True, with_mask=True),
+    dict(
+        keep_ratio=True,
+        ratio_range=(
+            0.1,
+            2.0,
+        ),
+        scale=(
+            1024,
+            1024,
+        ),
+        type='RandomResize'),
+    dict(
+        allow_negative_crop=True,
+        crop_size=(
+            1024,
+            1024,
+        ),
+        crop_type='absolute_range',
+        recompute_bbox=True,
+        type='RandomCrop'),
+    dict(min_gt_bbox_wh=(
+        0.01,
+        0.01,
+    ), type='FilterAnnotations'),
+    dict(prob=0.5, type='RandomFlip'),
+    dict(type='PackDetInputs'),
+]
+val_cfg = dict(_scope_='mmdet', type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/instances_val2017.json',
+        backend_args=None,
+        data_prefix=dict(img='images/val2017/'),
+        data_root='/home/01/wyc/datasets/coco/',
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(type='LoadAnnotations', with_bbox=True, with_mask=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                ),
+                type='PackDetInputs'),
+        ],
+        test_mode=True,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    ann_file='/home/01/wyc/datasets/coco/annotations/instances_val2017.json',
+    backend_args=None,
+    format_only=False,
+    metric=[
+        'bbox',
+        'segm',
+    ],
+    type='CocoMetric')
+vis_backends = [
+    dict(_scope_='mmdet', type='LocalVisBackend'),
+]
+visualizer = dict(
+    _scope_='mmdet',
+    name='visualizer',
+    type='DetLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = './work_dirs/mask-rcnn_convnext-v2-b_fpn_lsj-3x-fcmae_coco'
+
+07/19 06:32:51 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+07/19 06:32:51 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+Done (t=15.40s)
+creating index...
+index created!
+07/19 06:33:22 - mmengine - INFO - self.paramwise_cfg is {'decay_rate': 0.95, 'decay_type': 'layer_wise', 'num_layers': 12}
+07/19 06:33:22 - mmengine - INFO - Build LearningRateDecayOptimizerConstructor  layer_wise 0.95 - 14
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.0.0.weight as id 0
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.0.0.bias as id 0
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.0.1.weight as id 0
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.0.1.bias as id 0
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.1.0.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.1.0.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.1.1.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.1.1.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.2.0.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.2.0.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.2.1.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.2.1.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.3.0.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.3.0.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.3.1.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.downsample_layers.3.1.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.depthwise_conv.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.depthwise_conv.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.norm.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.norm.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.pointwise_conv1.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.pointwise_conv1.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.pointwise_conv2.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.pointwise_conv2.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.grn.gamma as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.0.grn.beta as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.depthwise_conv.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.depthwise_conv.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.norm.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.norm.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.pointwise_conv1.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.pointwise_conv1.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.pointwise_conv2.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.pointwise_conv2.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.grn.gamma as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.1.grn.beta as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.depthwise_conv.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.depthwise_conv.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.norm.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.norm.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.pointwise_conv1.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.pointwise_conv1.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.pointwise_conv2.weight as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.pointwise_conv2.bias as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.grn.gamma as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.0.2.grn.beta as id 1
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.depthwise_conv.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.depthwise_conv.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.norm.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.norm.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.pointwise_conv1.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.pointwise_conv1.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.pointwise_conv2.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.pointwise_conv2.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.grn.gamma as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.0.grn.beta as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.depthwise_conv.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.depthwise_conv.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.norm.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.norm.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.pointwise_conv1.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.pointwise_conv1.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.pointwise_conv2.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.pointwise_conv2.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.grn.gamma as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.1.grn.beta as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.depthwise_conv.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.depthwise_conv.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.norm.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.norm.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.pointwise_conv1.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.pointwise_conv1.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.pointwise_conv2.weight as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.pointwise_conv2.bias as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.grn.gamma as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.1.2.grn.beta as id 2
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.depthwise_conv.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.depthwise_conv.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.norm.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.norm.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.pointwise_conv1.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.pointwise_conv1.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.pointwise_conv2.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.pointwise_conv2.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.grn.gamma as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.0.grn.beta as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.depthwise_conv.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.depthwise_conv.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.norm.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.norm.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.pointwise_conv1.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.pointwise_conv1.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.pointwise_conv2.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.pointwise_conv2.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.grn.gamma as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.1.grn.beta as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.depthwise_conv.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.depthwise_conv.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.norm.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.norm.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.pointwise_conv1.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.pointwise_conv1.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.pointwise_conv2.weight as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.pointwise_conv2.bias as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.grn.gamma as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.2.grn.beta as id 3
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.depthwise_conv.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.depthwise_conv.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.norm.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.norm.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.pointwise_conv1.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.pointwise_conv1.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.pointwise_conv2.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.pointwise_conv2.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.grn.gamma as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.3.grn.beta as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.depthwise_conv.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.depthwise_conv.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.norm.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.norm.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.pointwise_conv1.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.pointwise_conv1.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.pointwise_conv2.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.pointwise_conv2.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.grn.gamma as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.4.grn.beta as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.depthwise_conv.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.depthwise_conv.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.norm.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.norm.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.pointwise_conv1.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.pointwise_conv1.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.pointwise_conv2.weight as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.pointwise_conv2.bias as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.grn.gamma as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.5.grn.beta as id 4
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.depthwise_conv.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.depthwise_conv.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.norm.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.norm.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.pointwise_conv1.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.pointwise_conv1.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.pointwise_conv2.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.pointwise_conv2.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.grn.gamma as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.6.grn.beta as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.depthwise_conv.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.depthwise_conv.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.norm.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.norm.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.pointwise_conv1.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.pointwise_conv1.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.pointwise_conv2.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.pointwise_conv2.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.grn.gamma as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.7.grn.beta as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.depthwise_conv.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.depthwise_conv.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.norm.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.norm.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.pointwise_conv1.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.pointwise_conv1.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.pointwise_conv2.weight as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.pointwise_conv2.bias as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.grn.gamma as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.8.grn.beta as id 5
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.depthwise_conv.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.depthwise_conv.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.norm.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.norm.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.pointwise_conv1.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.pointwise_conv1.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.pointwise_conv2.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.pointwise_conv2.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.grn.gamma as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.9.grn.beta as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.depthwise_conv.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.depthwise_conv.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.norm.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.norm.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.pointwise_conv1.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.pointwise_conv1.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.pointwise_conv2.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.pointwise_conv2.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.grn.gamma as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.10.grn.beta as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.depthwise_conv.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.depthwise_conv.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.norm.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.norm.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.pointwise_conv1.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.pointwise_conv1.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.pointwise_conv2.weight as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.pointwise_conv2.bias as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.grn.gamma as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.11.grn.beta as id 6
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.depthwise_conv.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.depthwise_conv.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.norm.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.norm.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.pointwise_conv1.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.pointwise_conv1.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.pointwise_conv2.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.pointwise_conv2.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.grn.gamma as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.12.grn.beta as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.depthwise_conv.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.depthwise_conv.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.norm.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.norm.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.pointwise_conv1.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.pointwise_conv1.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.pointwise_conv2.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.pointwise_conv2.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.grn.gamma as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.13.grn.beta as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.depthwise_conv.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.depthwise_conv.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.norm.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.norm.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.pointwise_conv1.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.pointwise_conv1.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.pointwise_conv2.weight as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.pointwise_conv2.bias as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.grn.gamma as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.14.grn.beta as id 7
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.depthwise_conv.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.depthwise_conv.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.norm.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.norm.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.pointwise_conv1.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.pointwise_conv1.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.pointwise_conv2.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.pointwise_conv2.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.grn.gamma as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.15.grn.beta as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.depthwise_conv.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.depthwise_conv.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.norm.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.norm.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.pointwise_conv1.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.pointwise_conv1.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.pointwise_conv2.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.pointwise_conv2.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.grn.gamma as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.16.grn.beta as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.depthwise_conv.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.depthwise_conv.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.norm.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.norm.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.pointwise_conv1.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.pointwise_conv1.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.pointwise_conv2.weight as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.pointwise_conv2.bias as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.grn.gamma as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.17.grn.beta as id 8
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.depthwise_conv.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.depthwise_conv.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.norm.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.norm.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.pointwise_conv1.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.pointwise_conv1.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.pointwise_conv2.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.pointwise_conv2.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.grn.gamma as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.18.grn.beta as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.depthwise_conv.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.depthwise_conv.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.norm.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.norm.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.pointwise_conv1.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.pointwise_conv1.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.pointwise_conv2.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.pointwise_conv2.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.grn.gamma as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.19.grn.beta as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.depthwise_conv.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.depthwise_conv.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.norm.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.norm.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.pointwise_conv1.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.pointwise_conv1.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.pointwise_conv2.weight as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.pointwise_conv2.bias as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.grn.gamma as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.20.grn.beta as id 9
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.depthwise_conv.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.depthwise_conv.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.norm.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.norm.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.pointwise_conv1.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.pointwise_conv1.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.pointwise_conv2.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.pointwise_conv2.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.grn.gamma as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.21.grn.beta as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.depthwise_conv.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.depthwise_conv.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.norm.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.norm.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.pointwise_conv1.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.pointwise_conv1.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.pointwise_conv2.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.pointwise_conv2.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.grn.gamma as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.22.grn.beta as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.depthwise_conv.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.depthwise_conv.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.norm.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.norm.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.pointwise_conv1.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.pointwise_conv1.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.pointwise_conv2.weight as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.pointwise_conv2.bias as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.grn.gamma as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.23.grn.beta as id 10
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.depthwise_conv.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.depthwise_conv.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.norm.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.norm.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.pointwise_conv1.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.pointwise_conv1.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.pointwise_conv2.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.pointwise_conv2.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.grn.gamma as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.24.grn.beta as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.depthwise_conv.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.depthwise_conv.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.norm.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.norm.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.pointwise_conv1.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.pointwise_conv1.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.pointwise_conv2.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.pointwise_conv2.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.grn.gamma as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.25.grn.beta as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.depthwise_conv.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.depthwise_conv.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.norm.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.norm.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.pointwise_conv1.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.pointwise_conv1.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.pointwise_conv2.weight as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.pointwise_conv2.bias as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.grn.gamma as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.2.26.grn.beta as id 11
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.depthwise_conv.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.depthwise_conv.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.norm.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.norm.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.pointwise_conv1.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.pointwise_conv1.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.pointwise_conv2.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.pointwise_conv2.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.grn.gamma as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.0.grn.beta as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.depthwise_conv.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.depthwise_conv.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.norm.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.norm.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.pointwise_conv1.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.pointwise_conv1.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.pointwise_conv2.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.pointwise_conv2.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.grn.gamma as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.1.grn.beta as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.depthwise_conv.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.depthwise_conv.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.norm.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.norm.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.pointwise_conv1.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.pointwise_conv1.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.pointwise_conv2.weight as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.pointwise_conv2.bias as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.grn.gamma as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.stages.3.2.grn.beta as id 12
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm0.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm0.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm1.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm1.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm2.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm2.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm3.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param backbone.norm3.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.0.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.0.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.1.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.1.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.2.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.2.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.3.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.lateral_convs.3.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.0.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.0.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.1.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.1.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.2.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.2.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.3.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param neck.fpn_convs.3.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param rpn_head.rpn_conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param rpn_head.rpn_conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param rpn_head.rpn_cls.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param rpn_head.rpn_cls.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param rpn_head.rpn_reg.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param rpn_head.rpn_reg.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.fc_cls.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.fc_cls.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.fc_reg.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.fc_reg.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.shared_fcs.0.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.shared_fcs.0.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.shared_fcs.1.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.bbox_head.shared_fcs.1.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.0.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.0.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.1.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.1.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.2.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.2.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.3.conv.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.convs.3.conv.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.upsample.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.upsample.bias as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.conv_logits.weight as id 13
+07/19 06:33:22 - mmengine - INFO - set param roi_head.mask_head.conv_logits.bias as id 13
+07/19 06:33:22 - mmengine - INFO - Param groups = {
+  "layer_0_decay": {
+    "param_names": [
+      "backbone.downsample_layers.0.0.weight"
+    ],
+    "lr_scale": 0.5133420832795048,
+    "lr": 1.5400262498385145e-05,
+    "weight_decay": 0.05
+  },
+  "layer_0_no_decay": {
+    "param_names": [
+      "backbone.downsample_layers.0.0.bias",
+      "backbone.downsample_layers.0.1.weight",
+      "backbone.downsample_layers.0.1.bias"
+    ],
+    "lr_scale": 0.5133420832795048,
+    "lr": 1.5400262498385145e-05,
+    "weight_decay": 0.0
+  },
+  "layer_2_no_decay": {
+    "param_names": [
+      "backbone.downsample_layers.1.0.weight",
+      "backbone.downsample_layers.1.0.bias",
+      "backbone.downsample_layers.1.1.bias",
+      "backbone.stages.1.0.depthwise_conv.bias",
+      "backbone.stages.1.0.norm.weight",
+      "backbone.stages.1.0.norm.bias",
+      "backbone.stages.1.0.pointwise_conv1.bias",
+      "backbone.stages.1.0.pointwise_conv2.bias",
+      "backbone.stages.1.0.grn.gamma",
+      "backbone.stages.1.0.grn.beta",
+      "backbone.stages.1.1.depthwise_conv.bias",
+      "backbone.stages.1.1.norm.weight",
+      "backbone.stages.1.1.norm.bias",
+      "backbone.stages.1.1.pointwise_conv1.bias",
+      "backbone.stages.1.1.pointwise_conv2.bias",
+      "backbone.stages.1.1.grn.gamma",
+      "backbone.stages.1.1.grn.beta",
+      "backbone.stages.1.2.depthwise_conv.bias",
+      "backbone.stages.1.2.norm.weight",
+      "backbone.stages.1.2.norm.bias",
+      "backbone.stages.1.2.pointwise_conv1.bias",
+      "backbone.stages.1.2.pointwise_conv2.bias",
+      "backbone.stages.1.2.grn.gamma",
+      "backbone.stages.1.2.grn.beta"
+    ],
+    "lr_scale": 0.5688000922764597,
+    "lr": 1.706400276829379e-05,
+    "weight_decay": 0.0
+  },
+  "layer_2_decay": {
+    "param_names": [
+      "backbone.downsample_layers.1.1.weight",
+      "backbone.stages.1.0.depthwise_conv.weight",
+      "backbone.stages.1.0.pointwise_conv1.weight",
+      "backbone.stages.1.0.pointwise_conv2.weight",
+      "backbone.stages.1.1.depthwise_conv.weight",
+      "backbone.stages.1.1.pointwise_conv1.weight",
+      "backbone.stages.1.1.pointwise_conv2.weight",
+      "backbone.stages.1.2.depthwise_conv.weight",
+      "backbone.stages.1.2.pointwise_conv1.weight",
+      "backbone.stages.1.2.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.5688000922764597,
+    "lr": 1.706400276829379e-05,
+    "weight_decay": 0.05
+  },
+  "layer_3_no_decay": {
+    "param_names": [
+      "backbone.downsample_layers.2.0.weight",
+      "backbone.downsample_layers.2.0.bias",
+      "backbone.downsample_layers.2.1.bias",
+      "backbone.stages.2.0.depthwise_conv.bias",
+      "backbone.stages.2.0.norm.weight",
+      "backbone.stages.2.0.norm.bias",
+      "backbone.stages.2.0.pointwise_conv1.bias",
+      "backbone.stages.2.0.pointwise_conv2.bias",
+      "backbone.stages.2.0.grn.gamma",
+      "backbone.stages.2.0.grn.beta",
+      "backbone.stages.2.1.depthwise_conv.bias",
+      "backbone.stages.2.1.norm.weight",
+      "backbone.stages.2.1.norm.bias",
+      "backbone.stages.2.1.pointwise_conv1.bias",
+      "backbone.stages.2.1.pointwise_conv2.bias",
+      "backbone.stages.2.1.grn.gamma",
+      "backbone.stages.2.1.grn.beta",
+      "backbone.stages.2.2.depthwise_conv.bias",
+      "backbone.stages.2.2.norm.weight",
+      "backbone.stages.2.2.norm.bias",
+      "backbone.stages.2.2.pointwise_conv1.bias",
+      "backbone.stages.2.2.pointwise_conv2.bias",
+      "backbone.stages.2.2.grn.gamma",
+      "backbone.stages.2.2.grn.beta"
+    ],
+    "lr_scale": 0.5987369392383787,
+    "lr": 1.796210817715136e-05,
+    "weight_decay": 0.0
+  },
+  "layer_3_decay": {
+    "param_names": [
+      "backbone.downsample_layers.2.1.weight",
+      "backbone.stages.2.0.depthwise_conv.weight",
+      "backbone.stages.2.0.pointwise_conv1.weight",
+      "backbone.stages.2.0.pointwise_conv2.weight",
+      "backbone.stages.2.1.depthwise_conv.weight",
+      "backbone.stages.2.1.pointwise_conv1.weight",
+      "backbone.stages.2.1.pointwise_conv2.weight",
+      "backbone.stages.2.2.depthwise_conv.weight",
+      "backbone.stages.2.2.pointwise_conv1.weight",
+      "backbone.stages.2.2.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.5987369392383787,
+    "lr": 1.796210817715136e-05,
+    "weight_decay": 0.05
+  },
+  "layer_12_no_decay": {
+    "param_names": [
+      "backbone.downsample_layers.3.0.weight",
+      "backbone.downsample_layers.3.0.bias",
+      "backbone.downsample_layers.3.1.bias",
+      "backbone.stages.3.0.depthwise_conv.bias",
+      "backbone.stages.3.0.norm.weight",
+      "backbone.stages.3.0.norm.bias",
+      "backbone.stages.3.0.pointwise_conv1.bias",
+      "backbone.stages.3.0.pointwise_conv2.bias",
+      "backbone.stages.3.0.grn.gamma",
+      "backbone.stages.3.0.grn.beta",
+      "backbone.stages.3.1.depthwise_conv.bias",
+      "backbone.stages.3.1.norm.weight",
+      "backbone.stages.3.1.norm.bias",
+      "backbone.stages.3.1.pointwise_conv1.bias",
+      "backbone.stages.3.1.pointwise_conv2.bias",
+      "backbone.stages.3.1.grn.gamma",
+      "backbone.stages.3.1.grn.beta",
+      "backbone.stages.3.2.depthwise_conv.bias",
+      "backbone.stages.3.2.norm.weight",
+      "backbone.stages.3.2.norm.bias",
+      "backbone.stages.3.2.pointwise_conv1.bias",
+      "backbone.stages.3.2.pointwise_conv2.bias",
+      "backbone.stages.3.2.grn.gamma",
+      "backbone.stages.3.2.grn.beta"
+    ],
+    "lr_scale": 0.95,
+    "lr": 2.8499999999999998e-05,
+    "weight_decay": 0.0
+  },
+  "layer_12_decay": {
+    "param_names": [
+      "backbone.downsample_layers.3.1.weight",
+      "backbone.stages.3.0.depthwise_conv.weight",
+      "backbone.stages.3.0.pointwise_conv1.weight",
+      "backbone.stages.3.0.pointwise_conv2.weight",
+      "backbone.stages.3.1.depthwise_conv.weight",
+      "backbone.stages.3.1.pointwise_conv1.weight",
+      "backbone.stages.3.1.pointwise_conv2.weight",
+      "backbone.stages.3.2.depthwise_conv.weight",
+      "backbone.stages.3.2.pointwise_conv1.weight",
+      "backbone.stages.3.2.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.95,
+    "lr": 2.8499999999999998e-05,
+    "weight_decay": 0.05
+  },
+  "layer_1_decay": {
+    "param_names": [
+      "backbone.stages.0.0.depthwise_conv.weight",
+      "backbone.stages.0.0.pointwise_conv1.weight",
+      "backbone.stages.0.0.pointwise_conv2.weight",
+      "backbone.stages.0.1.depthwise_conv.weight",
+      "backbone.stages.0.1.pointwise_conv1.weight",
+      "backbone.stages.0.1.pointwise_conv2.weight",
+      "backbone.stages.0.2.depthwise_conv.weight",
+      "backbone.stages.0.2.pointwise_conv1.weight",
+      "backbone.stages.0.2.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.5403600876626367,
+    "lr": 1.62108026298791e-05,
+    "weight_decay": 0.05
+  },
+  "layer_1_no_decay": {
+    "param_names": [
+      "backbone.stages.0.0.depthwise_conv.bias",
+      "backbone.stages.0.0.norm.weight",
+      "backbone.stages.0.0.norm.bias",
+      "backbone.stages.0.0.pointwise_conv1.bias",
+      "backbone.stages.0.0.pointwise_conv2.bias",
+      "backbone.stages.0.0.grn.gamma",
+      "backbone.stages.0.0.grn.beta",
+      "backbone.stages.0.1.depthwise_conv.bias",
+      "backbone.stages.0.1.norm.weight",
+      "backbone.stages.0.1.norm.bias",
+      "backbone.stages.0.1.pointwise_conv1.bias",
+      "backbone.stages.0.1.pointwise_conv2.bias",
+      "backbone.stages.0.1.grn.gamma",
+      "backbone.stages.0.1.grn.beta",
+      "backbone.stages.0.2.depthwise_conv.bias",
+      "backbone.stages.0.2.norm.weight",
+      "backbone.stages.0.2.norm.bias",
+      "backbone.stages.0.2.pointwise_conv1.bias",
+      "backbone.stages.0.2.pointwise_conv2.bias",
+      "backbone.stages.0.2.grn.gamma",
+      "backbone.stages.0.2.grn.beta"
+    ],
+    "lr_scale": 0.5403600876626367,
+    "lr": 1.62108026298791e-05,
+    "weight_decay": 0.0
+  },
+  "layer_4_decay": {
+    "param_names": [
+      "backbone.stages.2.3.depthwise_conv.weight",
+      "backbone.stages.2.3.pointwise_conv1.weight",
+      "backbone.stages.2.3.pointwise_conv2.weight",
+      "backbone.stages.2.4.depthwise_conv.weight",
+      "backbone.stages.2.4.pointwise_conv1.weight",
+      "backbone.stages.2.4.pointwise_conv2.weight",
+      "backbone.stages.2.5.depthwise_conv.weight",
+      "backbone.stages.2.5.pointwise_conv1.weight",
+      "backbone.stages.2.5.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.6302494097246091,
+    "lr": 1.890748229173827e-05,
+    "weight_decay": 0.05
+  },
+  "layer_4_no_decay": {
+    "param_names": [
+      "backbone.stages.2.3.depthwise_conv.bias",
+      "backbone.stages.2.3.norm.weight",
+      "backbone.stages.2.3.norm.bias",
+      "backbone.stages.2.3.pointwise_conv1.bias",
+      "backbone.stages.2.3.pointwise_conv2.bias",
+      "backbone.stages.2.3.grn.gamma",
+      "backbone.stages.2.3.grn.beta",
+      "backbone.stages.2.4.depthwise_conv.bias",
+      "backbone.stages.2.4.norm.weight",
+      "backbone.stages.2.4.norm.bias",
+      "backbone.stages.2.4.pointwise_conv1.bias",
+      "backbone.stages.2.4.pointwise_conv2.bias",
+      "backbone.stages.2.4.grn.gamma",
+      "backbone.stages.2.4.grn.beta",
+      "backbone.stages.2.5.depthwise_conv.bias",
+      "backbone.stages.2.5.norm.weight",
+      "backbone.stages.2.5.norm.bias",
+      "backbone.stages.2.5.pointwise_conv1.bias",
+      "backbone.stages.2.5.pointwise_conv2.bias",
+      "backbone.stages.2.5.grn.gamma",
+      "backbone.stages.2.5.grn.beta"
+    ],
+    "lr_scale": 0.6302494097246091,
+    "lr": 1.890748229173827e-05,
+    "weight_decay": 0.0
+  },
+  "layer_5_decay": {
+    "param_names": [
+      "backbone.stages.2.6.depthwise_conv.weight",
+      "backbone.stages.2.6.pointwise_conv1.weight",
+      "backbone.stages.2.6.pointwise_conv2.weight",
+      "backbone.stages.2.7.depthwise_conv.weight",
+      "backbone.stages.2.7.pointwise_conv1.weight",
+      "backbone.stages.2.7.pointwise_conv2.weight",
+      "backbone.stages.2.8.depthwise_conv.weight",
+      "backbone.stages.2.8.pointwise_conv1.weight",
+      "backbone.stages.2.8.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.6634204312890623,
+    "lr": 1.9902612938671867e-05,
+    "weight_decay": 0.05
+  },
+  "layer_5_no_decay": {
+    "param_names": [
+      "backbone.stages.2.6.depthwise_conv.bias",
+      "backbone.stages.2.6.norm.weight",
+      "backbone.stages.2.6.norm.bias",
+      "backbone.stages.2.6.pointwise_conv1.bias",
+      "backbone.stages.2.6.pointwise_conv2.bias",
+      "backbone.stages.2.6.grn.gamma",
+      "backbone.stages.2.6.grn.beta",
+      "backbone.stages.2.7.depthwise_conv.bias",
+      "backbone.stages.2.7.norm.weight",
+      "backbone.stages.2.7.norm.bias",
+      "backbone.stages.2.7.pointwise_conv1.bias",
+      "backbone.stages.2.7.pointwise_conv2.bias",
+      "backbone.stages.2.7.grn.gamma",
+      "backbone.stages.2.7.grn.beta",
+      "backbone.stages.2.8.depthwise_conv.bias",
+      "backbone.stages.2.8.norm.weight",
+      "backbone.stages.2.8.norm.bias",
+      "backbone.stages.2.8.pointwise_conv1.bias",
+      "backbone.stages.2.8.pointwise_conv2.bias",
+      "backbone.stages.2.8.grn.gamma",
+      "backbone.stages.2.8.grn.beta"
+    ],
+    "lr_scale": 0.6634204312890623,
+    "lr": 1.9902612938671867e-05,
+    "weight_decay": 0.0
+  },
+  "layer_6_decay": {
+    "param_names": [
+      "backbone.stages.2.9.depthwise_conv.weight",
+      "backbone.stages.2.9.pointwise_conv1.weight",
+      "backbone.stages.2.9.pointwise_conv2.weight",
+      "backbone.stages.2.10.depthwise_conv.weight",
+      "backbone.stages.2.10.pointwise_conv1.weight",
+      "backbone.stages.2.10.pointwise_conv2.weight",
+      "backbone.stages.2.11.depthwise_conv.weight",
+      "backbone.stages.2.11.pointwise_conv1.weight",
+      "backbone.stages.2.11.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.6983372960937497,
+    "lr": 2.0950118882812494e-05,
+    "weight_decay": 0.05
+  },
+  "layer_6_no_decay": {
+    "param_names": [
+      "backbone.stages.2.9.depthwise_conv.bias",
+      "backbone.stages.2.9.norm.weight",
+      "backbone.stages.2.9.norm.bias",
+      "backbone.stages.2.9.pointwise_conv1.bias",
+      "backbone.stages.2.9.pointwise_conv2.bias",
+      "backbone.stages.2.9.grn.gamma",
+      "backbone.stages.2.9.grn.beta",
+      "backbone.stages.2.10.depthwise_conv.bias",
+      "backbone.stages.2.10.norm.weight",
+      "backbone.stages.2.10.norm.bias",
+      "backbone.stages.2.10.pointwise_conv1.bias",
+      "backbone.stages.2.10.pointwise_conv2.bias",
+      "backbone.stages.2.10.grn.gamma",
+      "backbone.stages.2.10.grn.beta",
+      "backbone.stages.2.11.depthwise_conv.bias",
+      "backbone.stages.2.11.norm.weight",
+      "backbone.stages.2.11.norm.bias",
+      "backbone.stages.2.11.pointwise_conv1.bias",
+      "backbone.stages.2.11.pointwise_conv2.bias",
+      "backbone.stages.2.11.grn.gamma",
+      "backbone.stages.2.11.grn.beta"
+    ],
+    "lr_scale": 0.6983372960937497,
+    "lr": 2.0950118882812494e-05,
+    "weight_decay": 0.0
+  },
+  "layer_7_decay": {
+    "param_names": [
+      "backbone.stages.2.12.depthwise_conv.weight",
+      "backbone.stages.2.12.pointwise_conv1.weight",
+      "backbone.stages.2.12.pointwise_conv2.weight",
+      "backbone.stages.2.13.depthwise_conv.weight",
+      "backbone.stages.2.13.pointwise_conv1.weight",
+      "backbone.stages.2.13.pointwise_conv2.weight",
+      "backbone.stages.2.14.depthwise_conv.weight",
+      "backbone.stages.2.14.pointwise_conv1.weight",
+      "backbone.stages.2.14.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.7350918906249998,
+    "lr": 2.2052756718749993e-05,
+    "weight_decay": 0.05
+  },
+  "layer_7_no_decay": {
+    "param_names": [
+      "backbone.stages.2.12.depthwise_conv.bias",
+      "backbone.stages.2.12.norm.weight",
+      "backbone.stages.2.12.norm.bias",
+      "backbone.stages.2.12.pointwise_conv1.bias",
+      "backbone.stages.2.12.pointwise_conv2.bias",
+      "backbone.stages.2.12.grn.gamma",
+      "backbone.stages.2.12.grn.beta",
+      "backbone.stages.2.13.depthwise_conv.bias",
+      "backbone.stages.2.13.norm.weight",
+      "backbone.stages.2.13.norm.bias",
+      "backbone.stages.2.13.pointwise_conv1.bias",
+      "backbone.stages.2.13.pointwise_conv2.bias",
+      "backbone.stages.2.13.grn.gamma",
+      "backbone.stages.2.13.grn.beta",
+      "backbone.stages.2.14.depthwise_conv.bias",
+      "backbone.stages.2.14.norm.weight",
+      "backbone.stages.2.14.norm.bias",
+      "backbone.stages.2.14.pointwise_conv1.bias",
+      "backbone.stages.2.14.pointwise_conv2.bias",
+      "backbone.stages.2.14.grn.gamma",
+      "backbone.stages.2.14.grn.beta"
+    ],
+    "lr_scale": 0.7350918906249998,
+    "lr": 2.2052756718749993e-05,
+    "weight_decay": 0.0
+  },
+  "layer_8_decay": {
+    "param_names": [
+      "backbone.stages.2.15.depthwise_conv.weight",
+      "backbone.stages.2.15.pointwise_conv1.weight",
+      "backbone.stages.2.15.pointwise_conv2.weight",
+      "backbone.stages.2.16.depthwise_conv.weight",
+      "backbone.stages.2.16.pointwise_conv1.weight",
+      "backbone.stages.2.16.pointwise_conv2.weight",
+      "backbone.stages.2.17.depthwise_conv.weight",
+      "backbone.stages.2.17.pointwise_conv1.weight",
+      "backbone.stages.2.17.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.7737809374999998,
+    "lr": 2.3213428124999993e-05,
+    "weight_decay": 0.05
+  },
+  "layer_8_no_decay": {
+    "param_names": [
+      "backbone.stages.2.15.depthwise_conv.bias",
+      "backbone.stages.2.15.norm.weight",
+      "backbone.stages.2.15.norm.bias",
+      "backbone.stages.2.15.pointwise_conv1.bias",
+      "backbone.stages.2.15.pointwise_conv2.bias",
+      "backbone.stages.2.15.grn.gamma",
+      "backbone.stages.2.15.grn.beta",
+      "backbone.stages.2.16.depthwise_conv.bias",
+      "backbone.stages.2.16.norm.weight",
+      "backbone.stages.2.16.norm.bias",
+      "backbone.stages.2.16.pointwise_conv1.bias",
+      "backbone.stages.2.16.pointwise_conv2.bias",
+      "backbone.stages.2.16.grn.gamma",
+      "backbone.stages.2.16.grn.beta",
+      "backbone.stages.2.17.depthwise_conv.bias",
+      "backbone.stages.2.17.norm.weight",
+      "backbone.stages.2.17.norm.bias",
+      "backbone.stages.2.17.pointwise_conv1.bias",
+      "backbone.stages.2.17.pointwise_conv2.bias",
+      "backbone.stages.2.17.grn.gamma",
+      "backbone.stages.2.17.grn.beta"
+    ],
+    "lr_scale": 0.7737809374999998,
+    "lr": 2.3213428124999993e-05,
+    "weight_decay": 0.0
+  },
+  "layer_9_decay": {
+    "param_names": [
+      "backbone.stages.2.18.depthwise_conv.weight",
+      "backbone.stages.2.18.pointwise_conv1.weight",
+      "backbone.stages.2.18.pointwise_conv2.weight",
+      "backbone.stages.2.19.depthwise_conv.weight",
+      "backbone.stages.2.19.pointwise_conv1.weight",
+      "backbone.stages.2.19.pointwise_conv2.weight",
+      "backbone.stages.2.20.depthwise_conv.weight",
+      "backbone.stages.2.20.pointwise_conv1.weight",
+      "backbone.stages.2.20.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.8145062499999999,
+    "lr": 2.44351875e-05,
+    "weight_decay": 0.05
+  },
+  "layer_9_no_decay": {
+    "param_names": [
+      "backbone.stages.2.18.depthwise_conv.bias",
+      "backbone.stages.2.18.norm.weight",
+      "backbone.stages.2.18.norm.bias",
+      "backbone.stages.2.18.pointwise_conv1.bias",
+      "backbone.stages.2.18.pointwise_conv2.bias",
+      "backbone.stages.2.18.grn.gamma",
+      "backbone.stages.2.18.grn.beta",
+      "backbone.stages.2.19.depthwise_conv.bias",
+      "backbone.stages.2.19.norm.weight",
+      "backbone.stages.2.19.norm.bias",
+      "backbone.stages.2.19.pointwise_conv1.bias",
+      "backbone.stages.2.19.pointwise_conv2.bias",
+      "backbone.stages.2.19.grn.gamma",
+      "backbone.stages.2.19.grn.beta",
+      "backbone.stages.2.20.depthwise_conv.bias",
+      "backbone.stages.2.20.norm.weight",
+      "backbone.stages.2.20.norm.bias",
+      "backbone.stages.2.20.pointwise_conv1.bias",
+      "backbone.stages.2.20.pointwise_conv2.bias",
+      "backbone.stages.2.20.grn.gamma",
+      "backbone.stages.2.20.grn.beta"
+    ],
+    "lr_scale": 0.8145062499999999,
+    "lr": 2.44351875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_10_decay": {
+    "param_names": [
+      "backbone.stages.2.21.depthwise_conv.weight",
+      "backbone.stages.2.21.pointwise_conv1.weight",
+      "backbone.stages.2.21.pointwise_conv2.weight",
+      "backbone.stages.2.22.depthwise_conv.weight",
+      "backbone.stages.2.22.pointwise_conv1.weight",
+      "backbone.stages.2.22.pointwise_conv2.weight",
+      "backbone.stages.2.23.depthwise_conv.weight",
+      "backbone.stages.2.23.pointwise_conv1.weight",
+      "backbone.stages.2.23.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.8573749999999999,
+    "lr": 2.5721249999999997e-05,
+    "weight_decay": 0.05
+  },
+  "layer_10_no_decay": {
+    "param_names": [
+      "backbone.stages.2.21.depthwise_conv.bias",
+      "backbone.stages.2.21.norm.weight",
+      "backbone.stages.2.21.norm.bias",
+      "backbone.stages.2.21.pointwise_conv1.bias",
+      "backbone.stages.2.21.pointwise_conv2.bias",
+      "backbone.stages.2.21.grn.gamma",
+      "backbone.stages.2.21.grn.beta",
+      "backbone.stages.2.22.depthwise_conv.bias",
+      "backbone.stages.2.22.norm.weight",
+      "backbone.stages.2.22.norm.bias",
+      "backbone.stages.2.22.pointwise_conv1.bias",
+      "backbone.stages.2.22.pointwise_conv2.bias",
+      "backbone.stages.2.22.grn.gamma",
+      "backbone.stages.2.22.grn.beta",
+      "backbone.stages.2.23.depthwise_conv.bias",
+      "backbone.stages.2.23.norm.weight",
+      "backbone.stages.2.23.norm.bias",
+      "backbone.stages.2.23.pointwise_conv1.bias",
+      "backbone.stages.2.23.pointwise_conv2.bias",
+      "backbone.stages.2.23.grn.gamma",
+      "backbone.stages.2.23.grn.beta"
+    ],
+    "lr_scale": 0.8573749999999999,
+    "lr": 2.5721249999999997e-05,
+    "weight_decay": 0.0
+  },
+  "layer_11_decay": {
+    "param_names": [
+      "backbone.stages.2.24.depthwise_conv.weight",
+      "backbone.stages.2.24.pointwise_conv1.weight",
+      "backbone.stages.2.24.pointwise_conv2.weight",
+      "backbone.stages.2.25.depthwise_conv.weight",
+      "backbone.stages.2.25.pointwise_conv1.weight",
+      "backbone.stages.2.25.pointwise_conv2.weight",
+      "backbone.stages.2.26.depthwise_conv.weight",
+      "backbone.stages.2.26.pointwise_conv1.weight",
+      "backbone.stages.2.26.pointwise_conv2.weight"
+    ],
+    "lr_scale": 0.9025,
+    "lr": 2.7075e-05,
+    "weight_decay": 0.05
+  },
+  "layer_11_no_decay": {
+    "param_names": [
+      "backbone.stages.2.24.depthwise_conv.bias",
+      "backbone.stages.2.24.norm.weight",
+      "backbone.stages.2.24.norm.bias",
+      "backbone.stages.2.24.pointwise_conv1.bias",
+      "backbone.stages.2.24.pointwise_conv2.bias",
+      "backbone.stages.2.24.grn.gamma",
+      "backbone.stages.2.24.grn.beta",
+      "backbone.stages.2.25.depthwise_conv.bias",
+      "backbone.stages.2.25.norm.weight",
+      "backbone.stages.2.25.norm.bias",
+      "backbone.stages.2.25.pointwise_conv1.bias",
+      "backbone.stages.2.25.pointwise_conv2.bias",
+      "backbone.stages.2.25.grn.gamma",
+      "backbone.stages.2.25.grn.beta",
+      "backbone.stages.2.26.depthwise_conv.bias",
+      "backbone.stages.2.26.norm.weight",
+      "backbone.stages.2.26.norm.bias",
+      "backbone.stages.2.26.pointwise_conv1.bias",
+      "backbone.stages.2.26.pointwise_conv2.bias",
+      "backbone.stages.2.26.grn.gamma",
+      "backbone.stages.2.26.grn.beta"
+    ],
+    "lr_scale": 0.9025,
+    "lr": 2.7075e-05,
+    "weight_decay": 0.0
+  },
+  "layer_13_no_decay": {
+    "param_names": [
+      "backbone.norm0.weight",
+      "backbone.norm0.bias",
+      "backbone.norm1.weight",
+      "backbone.norm1.bias",
+      "backbone.norm2.weight",
+      "backbone.norm2.bias",
+      "backbone.norm3.weight",
+      "backbone.norm3.bias",
+      "neck.lateral_convs.0.conv.bias",
+      "neck.lateral_convs.1.conv.bias",
+      "neck.lateral_convs.2.conv.bias",
+      "neck.lateral_convs.3.conv.bias",
+      "neck.fpn_convs.0.conv.bias",
+      "neck.fpn_convs.1.conv.bias",
+      "neck.fpn_convs.2.conv.bias",
+      "neck.fpn_convs.3.conv.bias",
+      "rpn_head.rpn_conv.bias",
+      "rpn_head.rpn_cls.bias",
+      "rpn_head.rpn_reg.bias",
+      "roi_head.bbox_head.fc_cls.bias",
+      "roi_head.bbox_head.fc_reg.bias",
+      "roi_head.bbox_head.shared_fcs.0.bias",
+      "roi_head.bbox_head.shared_fcs.1.bias",
+      "roi_head.mask_head.convs.0.conv.bias",
+      "roi_head.mask_head.convs.1.conv.bias",
+      "roi_head.mask_head.convs.2.conv.bias",
+      "roi_head.mask_head.convs.3.conv.bias",
+      "roi_head.mask_head.upsample.bias",
+      "roi_head.mask_head.conv_logits.bias"
+    ],
+    "lr_scale": 1.0,
+    "lr": 3e-05,
+    "weight_decay": 0.0
+  },
+  "layer_13_decay": {
+    "param_names": [
+      "neck.lateral_convs.0.conv.weight",
+      "neck.lateral_convs.1.conv.weight",
+      "neck.lateral_convs.2.conv.weight",
+      "neck.lateral_convs.3.conv.weight",
+      "neck.fpn_convs.0.conv.weight",
+      "neck.fpn_convs.1.conv.weight",
+      "neck.fpn_convs.2.conv.weight",
+      "neck.fpn_convs.3.conv.weight",
+      "rpn_head.rpn_conv.weight",
+      "rpn_head.rpn_cls.weight",
+      "rpn_head.rpn_reg.weight",
+      "roi_head.bbox_head.fc_cls.weight",
+      "roi_head.bbox_head.fc_reg.weight",
+      "roi_head.bbox_head.shared_fcs.0.weight",
+      "roi_head.bbox_head.shared_fcs.1.weight",
+      "roi_head.mask_head.convs.0.conv.weight",
+      "roi_head.mask_head.convs.1.conv.weight",
+      "roi_head.mask_head.convs.2.conv.weight",
+      "roi_head.mask_head.convs.3.conv.weight",
+      "roi_head.mask_head.upsample.weight",
+      "roi_head.mask_head.conv_logits.weight"
+    ],
+    "lr_scale": 1.0,
+    "lr": 3e-05,
+    "weight_decay": 0.05
+  }
+}
+loading annotations into memory...
+Done (t=0.72s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.63s)
+creating index...
+index created!
+07/19 06:33:25 - mmengine - INFO - load backbone. in model from: https://download.openmmlab.com/mmclassification/v0/convnext-v2/convnext-v2-base_3rdparty-fcmae_in1k_20230104-8a798eaf.pth
+Loads checkpoint by http backend from path: https://download.openmmlab.com/mmclassification/v0/convnext-v2/convnext-v2-base_3rdparty-fcmae_in1k_20230104-8a798eaf.pth
+07/19 06:33:26 - mmengine - WARNING - The model and loaded state dict do not match exactly
+
+missing keys in source state_dict: norm0.weight, norm0.bias, norm1.weight, norm1.bias, norm2.weight, norm2.bias, norm3.weight, norm3.bias
+
+07/19 06:33:26 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+07/19 06:33:26 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+07/19 06:33:26 - mmengine - INFO - Checkpoints will be saved to /home/01/wyc/mmdetection/work_dirs/mask-rcnn_convnext-v2-b_fpn_lsj-3x-fcmae_coco.
+TCAPPDLL 2025-07-19 06:33:30.506476 - Epoch: 0 Iteration: 0  rank : 0  train.loss : 6.542635917663574  train.ips : 0.9870344048571563 imgs/s train.total_time : 4.052543640136719 
+TCAPPDLL 2025-07-19 06:33:31.171174 - Epoch: 0 Iteration: 1  rank : 0  train.loss : 6.593544960021973  train.ips : 6.019215893940895 imgs/s train.total_time : 0.6645383834838867 
+TCAPPDLL 2025-07-19 06:33:31.898995 - Epoch: 0 Iteration: 2  rank : 0  train.loss : 6.461944580078125  train.ips : 5.4968517274707995 imgs/s train.total_time : 0.727689266204834 
+TCAPPDLL 2025-07-19 06:33:32.537702 - Epoch: 0 Iteration: 3  rank : 0  train.loss : 6.764065265655518  train.ips : 6.264255038558818 imgs/s train.total_time : 0.6385436058044434 
+TCAPPDLL 2025-07-19 06:33:33.133404 - Epoch: 0 Iteration: 4  rank : 0  train.loss : 6.397410869598389  train.ips : 6.716079272493492 imgs/s train.total_time : 0.5955855846405029 
+TCAPPDLL 2025-07-19 06:33:33.838152 - Epoch: 0 Iteration: 5  rank : 0  train.loss : 6.603132724761963  train.ips : 5.6766467714212245 imgs/s train.total_time : 0.7046413421630859 
+TCAPPDLL 2025-07-19 06:33:34.250402 - Epoch: 0 Iteration: 6  rank : 0  train.loss : 6.567145347595215  train.ips : 9.705257153897817 imgs/s train.total_time : 0.41214776039123535 
+TCAPPDLL 2025-07-19 06:33:34.994754 - Epoch: 0 Iteration: 7  rank : 0  train.loss : 6.751737117767334  train.ips : 5.37450326447937 imgs/s train.total_time : 0.7442548274993896 
+TCAPPDLL 2025-07-19 06:33:35.662521 - Epoch: 0 Iteration: 8  rank : 0  train.loss : 7.107021808624268  train.ips : 5.990994162989224 imgs/s train.total_time : 0.6676688194274902 
+TCAPPDLL 2025-07-19 06:33:36.407639 - Epoch: 0 Iteration: 9  rank : 0  train.loss : 6.729030132293701  train.ips : 5.368985730144817 imgs/s train.total_time : 0.7450196743011475 
+TCAPPDLL 2025-07-19 06:33:37.034110 - Epoch: 0 Iteration: 10  rank : 0  train.loss : 6.658021926879883  train.ips : 6.385985346337327 imgs/s train.total_time : 0.6263716220855713 
+TCAPPDLL 2025-07-19 06:33:37.600989 - Epoch: 0 Iteration: 11  rank : 0  train.loss : 6.626114368438721  train.ips : 7.057369360213556 imgs/s train.total_time : 0.5667834281921387 
+TCAPPDLL 2025-07-19 06:33:38.231439 - Epoch: 0 Iteration: 12  rank : 0  train.loss : 6.4596476554870605  train.ips : 6.345744638601314 imgs/s train.total_time : 0.6303436756134033 
+TCAPPDLL 2025-07-19 06:33:38.878422 - Epoch: 0 Iteration: 13  rank : 0  train.loss : 6.373724937438965  train.ips : 6.183534767699343 imgs/s train.total_time : 0.6468791961669922 
+TCAPPDLL 2025-07-19 06:33:39.504959 - Epoch: 0 Iteration: 14  rank : 0  train.loss : 6.820451259613037  train.ips : 6.3852780835202045 imgs/s train.total_time : 0.6264410018920898 
+TCAPPDLL 2025-07-19 06:33:40.145689 - Epoch: 0 Iteration: 15  rank : 0  train.loss : 6.472541809082031  train.ips : 6.244227783162054 imgs/s train.total_time : 0.6405916213989258 
+TCAPPDLL 2025-07-19 06:33:40.869164 - Epoch: 0 Iteration: 16  rank : 0  train.loss : 6.383182048797607  train.ips : 5.529765987482461 imgs/s train.total_time : 0.7233579158782959 
+TCAPPDLL 2025-07-19 06:33:41.677566 - Epoch: 0 Iteration: 17  rank : 0  train.loss : 6.241631984710693  train.ips : 4.948708653506659 imgs/s train.total_time : 0.8082916736602783 
+TCAPPDLL 2025-07-19 06:33:42.322252 - Epoch: 0 Iteration: 18  rank : 0  train.loss : 6.046977519989014  train.ips : 6.20642334535118 imgs/s train.total_time : 0.644493579864502 
+TCAPPDLL 2025-07-19 06:33:43.031445 - Epoch: 0 Iteration: 19  rank : 0  train.loss : 6.190865993499756  train.ips : 5.641514718961897 imgs/s train.total_time : 0.7090294361114502 
+TCAPPDLL 2025-07-19 06:33:43.832603 - Epoch: 0 Iteration: 20  rank : 0  train.loss : 6.604427337646484  train.ips : 4.993528170791525 imgs/s train.total_time : 0.8010368347167969 
+TCAPPDLL 2025-07-19 06:33:44.466500 - Epoch: 0 Iteration: 21  rank : 0  train.loss : 6.487468242645264  train.ips : 6.311238577320611 imgs/s train.total_time : 0.6337900161743164 
+TCAPPDLL 2025-07-19 06:33:45.107692 - Epoch: 0 Iteration: 22  rank : 0  train.loss : 7.281735420227051  train.ips : 6.239437033521899 imgs/s train.total_time : 0.6410834789276123 
+TCAPPDLL 2025-07-19 06:33:46.080587 - Epoch: 0 Iteration: 23  rank : 0  train.loss : 6.6613450050354  train.ips : 4.112160509698392 imgs/s train.total_time : 0.9727246761322021 
+TCAPPDLL 2025-07-19 06:33:47.027052 - Epoch: 0 Iteration: 24  rank : 0  train.loss : 6.272038459777832  train.ips : 4.226994518860235 imgs/s train.total_time : 0.9462988376617432 
+TCAPPDLL 2025-07-19 06:33:47.829323 - Epoch: 0 Iteration: 25  rank : 0  train.loss : 5.964358329772949  train.ips : 4.9866162334456545 imgs/s train.total_time : 0.8021471500396729 
+TCAPPDLL 2025-07-19 06:33:48.496529 - Epoch: 0 Iteration: 26  rank : 0  train.loss : 6.448122501373291  train.ips : 5.996510152511053 imgs/s train.total_time : 0.6670546531677246 
+TCAPPDLL 2025-07-19 06:33:49.178005 - Epoch: 0 Iteration: 27  rank : 0  train.loss : 6.064125061035156  train.ips : 5.871139645027565 imgs/s train.total_time : 0.6812987327575684 
+TCAPPDLL 2025-07-19 06:33:49.788523 - Epoch: 0 Iteration: 28  rank : 0  train.loss : 6.509539604187012  train.ips : 6.553216022498682 imgs/s train.total_time : 0.6103873252868652 
+TCAPPDLL 2025-07-19 06:33:50.461616 - Epoch: 0 Iteration: 29  rank : 0  train.loss : 6.528427600860596  train.ips : 5.943710312596097 imgs/s train.total_time : 0.6729803085327148 
+TCAPPDLL 2025-07-19 06:33:51.108724 - Epoch: 0 Iteration: 30  rank : 0  train.loss : 6.378307342529297  train.ips : 6.182507087294313 imgs/s train.total_time : 0.646986722946167 
+TCAPPDLL 2025-07-19 06:33:51.727221 - Epoch: 0 Iteration: 31  rank : 0  train.loss : 6.325738430023193  train.ips : 6.468511282253945 imgs/s train.total_time : 0.6183803081512451 
+TCAPPDLL 2025-07-19 06:33:52.391146 - Epoch: 0 Iteration: 32  rank : 0  train.loss : 5.836143493652344  train.ips : 6.025681997353001 imgs/s train.total_time : 0.663825273513794 
+TCAPPDLL 2025-07-19 06:33:52.955776 - Epoch: 0 Iteration: 33  rank : 0  train.loss : 5.932658672332764  train.ips : 7.085604333832111 imgs/s train.total_time : 0.5645248889923096 
+TCAPPDLL 2025-07-19 06:33:53.634374 - Epoch: 0 Iteration: 34  rank : 0  train.loss : 6.076165199279785  train.ips : 5.895834453481773 imgs/s train.total_time : 0.6784451007843018 
+TCAPPDLL 2025-07-19 06:33:54.360814 - Epoch: 0 Iteration: 35  rank : 0  train.loss : 6.2538981437683105  train.ips : 5.507264854438663 imgs/s train.total_time : 0.7263133525848389 
+TCAPPDLL 2025-07-19 06:33:55.000471 - Epoch: 0 Iteration: 36  rank : 0  train.loss : 6.273876190185547  train.ips : 6.254365268570401 imgs/s train.total_time : 0.6395533084869385 
+TCAPPDLL 2025-07-19 06:33:55.804198 - Epoch: 0 Iteration: 37  rank : 0  train.loss : 6.242981910705566  train.ips : 4.977814489564734 imgs/s train.total_time : 0.803565502166748 
+TCAPPDLL 2025-07-19 06:33:56.429540 - Epoch: 0 Iteration: 38  rank : 0  train.loss : 5.571058750152588  train.ips : 6.397525371274386 imgs/s train.total_time : 0.625241756439209 
+TCAPPDLL 2025-07-19 06:33:57.098865 - Epoch: 0 Iteration: 39  rank : 0  train.loss : 6.815913200378418  train.ips : 5.9774167218012755 imgs/s train.total_time : 0.6691854000091553 
+TCAPPDLL 2025-07-19 06:33:57.767083 - Epoch: 0 Iteration: 40  rank : 0  train.loss : 5.765801429748535  train.ips : 5.987043287296584 imgs/s train.total_time : 0.6681094169616699 
+TCAPPDLL 2025-07-19 06:33:58.602903 - Epoch: 0 Iteration: 41  rank : 0  train.loss : 5.638339996337891  train.ips : 4.7863954800712545 imgs/s train.total_time : 0.8357019424438477 
+TCAPPDLL 2025-07-19 06:33:59.234455 - Epoch: 0 Iteration: 42  rank : 0  train.loss : 5.445598602294922  train.ips : 6.334885600092131 imgs/s train.total_time : 0.6314241886138916 
+TCAPPDLL 2025-07-19 06:33:59.910105 - Epoch: 0 Iteration: 43  rank : 0  train.loss : 5.588216304779053  train.ips : 5.921237299255981 imgs/s train.total_time : 0.6755344867706299 
+TCAPPDLL 2025-07-19 06:34:00.616370 - Epoch: 0 Iteration: 44  rank : 0  train.loss : 5.6954145431518555  train.ips : 5.664543292158978 imgs/s train.total_time : 0.7061469554901123 
+TCAPPDLL 2025-07-19 06:34:01.284391 - Epoch: 0 Iteration: 45  rank : 0  train.loss : 5.738630771636963  train.ips : 5.988947523045032 imgs/s train.total_time : 0.6678969860076904 
+TCAPPDLL 2025-07-19 06:34:01.947350 - Epoch: 0 Iteration: 46  rank : 0  train.loss : 5.487727642059326  train.ips : 6.037345631698229 imgs/s train.total_time : 0.6625428199768066 
+TCAPPDLL 2025-07-19 06:34:02.623370 - Epoch: 0 Iteration: 47  rank : 0  train.loss : 5.890003204345703  train.ips : 5.9179456030092705 imgs/s train.total_time : 0.675910234451294 
+TCAPPDLL 2025-07-19 06:34:03.308074 - Epoch: 0 Iteration: 48  rank : 0  train.loss : 5.724847793579102  train.ips : 5.842796426596309 imgs/s train.total_time : 0.6846036911010742 
+TCAPPDLL 2025-07-19 06:34:04.101786 - Epoch: 0 Iteration: 49  rank : 0  train.loss : 5.386283874511719  train.ips : 5.040267545024449 imgs/s train.total_time : 0.7936086654663086 
+07/19 06:34:04 - mmengine - INFO - Epoch(train)  [1][   50/29317]  base_lr: 1.5000e-06 lr: 7.7001e-07  eta: 9 days, 4:41:31  time: 0.7528  data_time: 0.0932  memory: 21209  loss: 6.2736  loss_rpn_cls: 0.6654  loss_rpn_bbox: 0.1038  loss_cls: 4.1624  acc: 75.1953  loss_bbox: 0.0562  loss_mask: 1.2859
+TCAPPDLL 2025-07-19 06:34:04.856465 - Epoch: 0 Iteration: 50  rank : 0  train.loss : 5.18327522277832  train.ips : 5.302129641831959 imgs/s train.total_time : 0.7544138431549072 
+TCAPPDLL 2025-07-19 06:34:05.572120 - Epoch: 0 Iteration: 51  rank : 0  train.loss : 5.0632524490356445  train.ips : 5.590573488753519 imgs/s train.total_time : 0.7154901027679443 
+TCAPPDLL 2025-07-19 06:34:06.168225 - Epoch: 0 Iteration: 52  rank : 0  train.loss : 5.157833099365234  train.ips : 6.71141525952245 imgs/s train.total_time : 0.5959994792938232 
+TCAPPDLL 2025-07-19 06:34:06.868952 - Epoch: 0 Iteration: 53  rank : 0  train.loss : 5.581059455871582  train.ips : 5.709169263102302 imgs/s train.total_time : 0.700627326965332 
+TCAPPDLL 2025-07-19 06:34:07.496917 - Epoch: 0 Iteration: 54  rank : 0  train.loss : 5.193546295166016  train.ips : 6.370771306418497 imgs/s train.total_time : 0.6278674602508545 
+TCAPPDLL 2025-07-19 06:34:08.126696 - Epoch: 0 Iteration: 55  rank : 0  train.loss : 5.570461273193359  train.ips : 6.35246266930248 imgs/s train.total_time : 0.6296770572662354 
+TCAPPDLL 2025-07-19 06:34:08.863879 - Epoch: 0 Iteration: 56  rank : 0  train.loss : 5.699869632720947  train.ips : 5.4267835182131465 imgs/s train.total_time : 0.7370848655700684 
+TCAPPDLL 2025-07-19 06:34:09.599048 - Epoch: 0 Iteration: 57  rank : 0  train.loss : 5.680466175079346  train.ips : 5.441655160424104 imgs/s train.total_time : 0.7350704669952393 
+TCAPPDLL 2025-07-19 06:34:10.323626 - Epoch: 0 Iteration: 58  rank : 0  train.loss : 4.990800857543945  train.ips : 5.521200254056847 imgs/s train.total_time : 0.724480152130127 
+TCAPPDLL 2025-07-19 06:34:10.953319 - Epoch: 0 Iteration: 59  rank : 0  train.loss : 4.401851654052734  train.ips : 6.353290190944643 imgs/s train.total_time : 0.6295950412750244 
+TCAPPDLL 2025-07-19 06:34:11.619312 - Epoch: 0 Iteration: 60  rank : 0  train.loss : 5.009860038757324  train.ips : 6.007308075297882 imgs/s train.total_time : 0.6658556461334229 
+TCAPPDLL 2025-07-19 06:34:12.260261 - Epoch: 0 Iteration: 61  rank : 0  train.loss : 4.9121551513671875  train.ips : 6.241911606859504 imgs/s train.total_time : 0.64082932472229 
+TCAPPDLL 2025-07-19 06:34:12.985332 - Epoch: 0 Iteration: 62  rank : 0  train.loss : 4.621146202087402  train.ips : 5.517485240415478 imgs/s train.total_time : 0.7249679565429688 
+TCAPPDLL 2025-07-19 06:34:13.633345 - Epoch: 0 Iteration: 63  rank : 0  train.loss : 5.046215534210205  train.ips : 6.1737071977573725 imgs/s train.total_time : 0.6479089260101318 
+TCAPPDLL 2025-07-19 06:34:14.368606 - Epoch: 0 Iteration: 64  rank : 0  train.loss : 4.639344692230225  train.ips : 5.440986311605559 imgs/s train.total_time : 0.7351608276367188 
+TCAPPDLL 2025-07-19 06:34:15.072819 - Epoch: 0 Iteration: 65  rank : 0  train.loss : 4.551794052124023  train.ips : 5.680944750924746 imgs/s train.total_time : 0.7041082382202148 
+TCAPPDLL 2025-07-19 06:34:15.734047 - Epoch: 0 Iteration: 66  rank : 0  train.loss : 4.783571243286133  train.ips : 6.050605593735755 imgs/s train.total_time : 0.6610908508300781 
+TCAPPDLL 2025-07-19 06:34:16.379372 - Epoch: 0 Iteration: 67  rank : 0  train.loss : 4.164361953735352  train.ips : 6.199586650274575 imgs/s train.total_time : 0.6452043056488037 
+TCAPPDLL 2025-07-19 06:34:16.982826 - Epoch: 0 Iteration: 68  rank : 0  train.loss : 4.628803730010986  train.ips : 6.62966504756922 imgs/s train.total_time : 0.6033487319946289 
+TCAPPDLL 2025-07-19 06:34:17.585239 - Epoch: 0 Iteration: 69  rank : 0  train.loss : 4.087037563323975  train.ips : 6.641067528855635 imgs/s train.total_time : 0.6023128032684326 
+TCAPPDLL 2025-07-19 06:34:18.205612 - Epoch: 0 Iteration: 70  rank : 0  train.loss : 4.710968971252441  train.ips : 6.448787057850375 imgs/s train.total_time : 0.6202716827392578 
+TCAPPDLL 2025-07-19 06:34:18.828819 - Epoch: 0 Iteration: 71  rank : 0  train.loss : 4.164264678955078  train.ips : 6.41946330809507 imgs/s train.total_time : 0.6231050491333008 
+TCAPPDLL 2025-07-19 06:34:19.542498 - Epoch: 0 Iteration: 72  rank : 0  train.loss : 4.369372367858887  train.ips : 5.605552221810887 imgs/s train.total_time : 0.7135782241821289 
+TCAPPDLL 2025-07-19 06:34:20.320711 - Epoch: 0 Iteration: 73  rank : 0  train.loss : 4.4051971435546875  train.ips : 5.140702119497341 imgs/s train.total_time : 0.7781038284301758 
+TCAPPDLL 2025-07-19 06:34:20.977781 - Epoch: 0 Iteration: 74  rank : 0  train.loss : 4.377874851226807  train.ips : 6.088741254147691 imgs/s train.total_time : 0.6569502353668213 
+TCAPPDLL 2025-07-19 06:34:21.730928 - Epoch: 0 Iteration: 75  rank : 0  train.loss : 4.177579402923584  train.ips : 5.3117837954212295 imgs/s train.total_time : 0.7530426979064941 
+TCAPPDLL 2025-07-19 06:34:22.366071 - Epoch: 0 Iteration: 76  rank : 0  train.loss : 4.141354560852051  train.ips : 6.299155930730827 imgs/s train.total_time : 0.6350057125091553 
+TCAPPDLL 2025-07-19 06:34:23.076711 - Epoch: 0 Iteration: 77  rank : 0  train.loss : 4.3938984870910645  train.ips : 5.629806011268192 imgs/s train.total_time : 0.7105040550231934 
+TCAPPDLL 2025-07-19 06:34:23.696984 - Epoch: 0 Iteration: 78  rank : 0  train.loss : 3.6359424591064453  train.ips : 6.450140750201264 imgs/s train.total_time : 0.6201415061950684 
+TCAPPDLL 2025-07-19 06:34:24.293987 - Epoch: 0 Iteration: 79  rank : 0  train.loss : 3.3286867141723633  train.ips : 6.701332979704134 imgs/s train.total_time : 0.5968961715698242 
+TCAPPDLL 2025-07-19 06:34:24.879270 - Epoch: 0 Iteration: 80  rank : 0  train.loss : 4.014829635620117  train.ips : 6.835478025058343 imgs/s train.total_time : 0.5851821899414062 
+TCAPPDLL 2025-07-19 06:34:25.561574 - Epoch: 0 Iteration: 81  rank : 0  train.loss : 3.3378000259399414  train.ips : 5.86337331317042 imgs/s train.total_time : 0.6822011470794678 
+TCAPPDLL 2025-07-19 06:34:26.298585 - Epoch: 0 Iteration: 82  rank : 0  train.loss : 4.160772800445557  train.ips : 5.428100354341001 imgs/s train.total_time : 0.7369060516357422 
+TCAPPDLL 2025-07-19 06:34:26.970883 - Epoch: 0 Iteration: 83  rank : 0  train.loss : 3.6189699172973633  train.ips : 5.950671459206308 imgs/s train.total_time : 0.6721930503845215 
+TCAPPDLL 2025-07-19 06:34:27.418316 - Epoch: 0 Iteration: 84  rank : 0  train.loss : 3.348659038543701  train.ips : 8.941868211873233 imgs/s train.total_time : 0.44733381271362305 
+TCAPPDLL 2025-07-19 06:34:28.078818 - Epoch: 0 Iteration: 85  rank : 0  train.loss : 3.2995505332946777  train.ips : 6.056903181412691 imgs/s train.total_time : 0.6604034900665283 
+TCAPPDLL 2025-07-19 06:34:28.680845 - Epoch: 0 Iteration: 86  rank : 0  train.loss : 3.0772485733032227  train.ips : 6.646005436526454 imgs/s train.total_time : 0.601865291595459 
+TCAPPDLL 2025-07-19 06:34:29.335413 - Epoch: 0 Iteration: 87  rank : 0  train.loss : 3.5209696292877197  train.ips : 6.112254626757246 imgs/s train.total_time : 0.6544229984283447 
+TCAPPDLL 2025-07-19 06:34:29.920549 - Epoch: 0 Iteration: 88  rank : 0  train.loss : 3.00333833694458  train.ips : 6.837391823518744 imgs/s train.total_time : 0.5850183963775635 
+TCAPPDLL 2025-07-19 06:34:30.760354 - Epoch: 0 Iteration: 89  rank : 0  train.loss : 3.2996506690979004  train.ips : 4.763631841332812 imgs/s train.total_time : 0.8396954536437988 
+TCAPPDLL 2025-07-19 06:34:31.467752 - Epoch: 0 Iteration: 90  rank : 0  train.loss : 3.418853282928467  train.ips : 5.655450409346592 imgs/s train.total_time : 0.707282304763794 
+TCAPPDLL 2025-07-19 06:34:32.089586 - Epoch: 0 Iteration: 91  rank : 0  train.loss : 3.4939165115356445  train.ips : 6.433694531334186 imgs/s train.total_time : 0.6217267513275146 
+TCAPPDLL 2025-07-19 06:34:32.766866 - Epoch: 0 Iteration: 92  rank : 0  train.loss : 4.190500259399414  train.ips : 5.907002438187115 imgs/s train.total_time : 0.6771624088287354 
+TCAPPDLL 2025-07-19 06:34:33.407553 - Epoch: 0 Iteration: 93  rank : 0  train.loss : 2.4511871337890625  train.ips : 6.244413709320831 imgs/s train.total_time : 0.6405725479125977 
+TCAPPDLL 2025-07-19 06:34:34.049054 - Epoch: 0 Iteration: 94  rank : 0  train.loss : 3.734174966812134  train.ips : 6.236639833761136 imgs/s train.total_time : 0.6413710117340088 
+TCAPPDLL 2025-07-19 06:34:34.705480 - Epoch: 0 Iteration: 95  rank : 0  train.loss : 3.18367862701416  train.ips : 6.094556127897937 imgs/s train.total_time : 0.6563234329223633 
+TCAPPDLL 2025-07-19 06:34:35.358502 - Epoch: 0 Iteration: 96  rank : 0  train.loss : 3.0207982063293457  train.ips : 6.1267207329329 imgs/s train.total_time : 0.6528778076171875 
+TCAPPDLL 2025-07-19 06:34:36.076359 - Epoch: 0 Iteration: 97  rank : 0  train.loss : 3.4037342071533203  train.ips : 5.572927950147568 imgs/s train.total_time : 0.7177555561065674 
+TCAPPDLL 2025-07-19 06:34:36.738161 - Epoch: 0 Iteration: 98  rank : 0  train.loss : 3.3010478019714355  train.ips : 6.045076804671984 imgs/s train.total_time : 0.6616954803466797 
+TCAPPDLL 2025-07-19 06:34:37.339276 - Epoch: 0 Iteration: 99  rank : 0  train.loss : 2.644279718399048  train.ips : 6.655369965892511 imgs/s train.total_time : 0.6010184288024902 
+07/19 06:34:37 - mmengine - INFO - Epoch(train)  [1][  100/29317]  base_lr: 3.0000e-06 lr: 1.5400e-06  eta: 8 days, 15:45:18  time: 0.6646  data_time: 0.0431  memory: 21163  loss: 4.1639  loss_rpn_cls: 0.6300  loss_rpn_bbox: 0.1148  loss_cls: 2.2480  acc: 93.9941  loss_bbox: 0.0639  loss_mask: 1.1072
