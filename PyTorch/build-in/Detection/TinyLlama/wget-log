@@ -1,0 +1,62 @@
+Retrying.
+
+--2025-07-19 05:07:34--  (try: 9)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:09:52--  (try:10)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:12:13--  (try:11)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:14:32--  (try:12)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:16:51--  (try:13)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:19:10--  (try:14)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:21:30--  (try:15)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:23:49--  (try:16)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:26:08--  (try:17)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:28:28--  (try:18)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:30:47--  (try:19)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-19 05:33:06--  (try:20)  https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0/resolve/main/config.json
+Connecting to huggingface.co (huggingface.co)|31.13.69.169|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10d:183:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Giving up.
+
