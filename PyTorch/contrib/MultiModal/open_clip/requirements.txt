@@ -1,0 +1,16 @@
+astunparse==1.6.3
+cffi==1.17.1
+future==1.0.0
+matplotlib==3.10.3
+open-clip-torch==2.32.0
+pandas==2.3.1
+pip-chill==1.0.3
+protobuf==6.31.1
+scipy==1.15.3
+sentencepiece==0.2.0
+tcap-dllogger==1.0.0
+torch-sdaa==2.1.0
+torchaudio==2.0.2+da3eb8d
+torchtext==0.15.2a0+4571036
+transformers==4.53.1
+webdataset==0.2.86
