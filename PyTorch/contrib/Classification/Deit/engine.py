@@ -1,12 +1,13 @@
+# Adapted to tecorigin hardware
+
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
-# Adapted to tecorigin hardware。
 """
 Train and eval functions used in main.py
 """
 import math
+import time
 import sys
-import os
 from typing import Iterable, Optional
 
 import torch
@@ -17,39 +18,24 @@ from timm.utils import accuracy, ModelEma
 from losses import DistillationLoss
 import utils
 
-from torch_sdaa.utils import cuda_migrate  # 使用torch_sdaa自动迁移方法
-from torch.sdaa import amp              # 导入AMP
-
-from tcap_dllogger import Logger, StdOutBackend,    JSONStreamBackend, Verbosity
-
-json_logger = Logger(
-    [
-        StdOutBackend(Verbosity.DEFAULT),
-        JSONStreamBackend(Verbosity.VERBOSE,    'dlloger_example.json'),
-    ]
-)
-json_logger.metadata("train.loss", {"unit": "", "GOAL":    "MINIMIZE", "STAGE": "TRAIN"})
-json_logger.metadata("train.ips",{"unit": "imgs/s",    "format": ":.3f", "GOAL": "MAXIMIZE", "STAGE": "TRAIN"})
-
 
 def train_one_epoch(model: torch.nn.Module, criterion: DistillationLoss,
                     data_loader: Iterable, optimizer: torch.optim.Optimizer,
-                    device: torch.device, epoch: int, loss_scaler, max_norm: float = 0,
+                    device: torch.device, epoch: int, start_time, loss_scaler, max_norm: float = 0,
                     model_ema: Optional[ModelEma] = None, mixup_fn: Optional[Mixup] = None,
                     set_training_mode=True, args = None):
     model.train(set_training_mode)
-    # metric_logger = utils.MetricLogger(delimiter="  ")
-    # metric_logger.add_meter('lr', utils.SmoothedValue(window_size=1, fmt='{value:.6f}'))
+    scaler = torch.sdaa.amp.GradScaler()
+
+    metric_logger = utils.MetricLogger(delimiter="  ")
+    metric_logger.add_meter('lr', utils.SmoothedValue(window_size=1, fmt='{value:.6f}'))
+    header = 'Epoch: [{}]'.format(epoch)
+    print_freq = 10
+    
     if args.cosub:
         criterion = torch.nn.BCEWithLogitsLoss()
-
-    from time import time
-    _time = time()
         
-    for step, (samples, targets) in enumerate(data_loader):
-        if step > args.steps:
-            break
-        
+    for samples, targets in metric_logger.log_every(data_loader, print_freq, header):
         samples = samples.to(device, non_blocking=True)
         targets = targets.to(device, non_blocking=True)
 
@@ -61,8 +47,9 @@ def train_one_epoch(model: torch.nn.Module, criterion: DistillationLoss,
             
         if args.bce_loss:
             targets = targets.gt(0.0).type(targets.dtype)
-        
-        with amp.autocast():
+         
+        # with torch.cuda.amp.autocast():
+        with torch.sdaa.amp.autocast():
             outputs = model(samples)
             if not args.cosub:
                 loss = criterion(samples, outputs, targets)
@@ -83,36 +70,26 @@ def train_one_epoch(model: torch.nn.Module, criterion: DistillationLoss,
 
         # this attribute is added by timm on one optimizer (adahessian)
         is_second_order = hasattr(optimizer, 'is_second_order') and optimizer.is_second_order
-        # loss_scaler(loss, optimizer, clip_grad=max_norm,
-        #             parameters=model.parameters(), create_graph=is_second_order)
-        loss_scaler.scale(loss).backward(create_graph=is_second_order)
+        loss_scaler(loss, optimizer, clip_grad=max_norm,
+                    parameters=model.parameters(), create_graph=is_second_order)
+        # scaler.scale(loss).backward()
+        # scaler.step(optimizer)
+        # scaler.update()
 
-        # 梯度裁剪（如果启用了梯度裁剪）
-        if max_norm is not None:
-            loss_scaler.unscale_(optimizer)  # 反缩放梯度
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm)  # 进行梯度裁剪
-
-        # 更新优化器
-        loss_scaler.step(optimizer)
-        loss_scaler.update()
-
-        torch.cuda.synchronize()
+        # torch.cuda.synchronize()
+        torch.sdaa.synchronize()
         if model_ema is not None:
             model_ema.update(model)
 
-        # 计算ips
-        ips = samples.size(0) / (time() - _time)
-        _time = time()
-
-        json_logger.log(
-            step=(epoch, step),
-            data={
-                "rank": os.environ.get("LOCAL_RANK", "0"),
-                "train.loss": loss_value,
-                "train.ips": ips,
-            },
-            verbosity=Verbosity.DEFAULT,
-        )
+        metric_logger.update(loss=loss_value)
+        metric_logger.update(lr=optimizer.param_groups[0]["lr"])
+        now_time = time.time()
+        if now_time -start_time >= 7200:
+            break
+    # gather the stats from all processes
+    metric_logger.synchronize_between_processes()
+    print("Averaged stats:", metric_logger)
+    return {k: meter.global_avg for k, meter in metric_logger.meters.items()}
 
 
 @torch.no_grad()
@@ -130,6 +107,7 @@ def evaluate(data_loader, model, device):
         target = target.to(device, non_blocking=True)
 
         # compute output
+        # with torch.cuda.amp.autocast():
         with torch.sdaa.amp.autocast():
             output = model(images)
             loss = criterion(output, target)

@@ -5,16 +5,13 @@ https://arxiv.org/pdf/2003.13630.pdf
 Original model: https://github.com/mrT23/TResNet
 
 """
-import copy
 from collections import OrderedDict
-from functools import partial
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from .helpers import build_model_with_cfg
-from .layers import SpaceToDepthModule, AntiAliasDownsampleLayer, InplaceAbn, ClassifierHead, SEModule
+from .layers import SpaceToDepthModule, BlurPool2d, InplaceAbn, ClassifierHead, SEModule
 from .registry import register_model
 
 __all__ = ['tresnet_m', 'tresnet_l', 'tresnet_xl']
@@ -32,7 +29,9 @@ def _cfg(url='', **kwargs):
 
 default_cfgs = {
     'tresnet_m': _cfg(
-        url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-tresnet/tresnet_m_80_8-dbc13962.pth'),
+        url='https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/timm/tresnet_m_1k_miil_83_1.pth'),
+    'tresnet_m_miil_in21k': _cfg(
+        url='https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ImageNet_21K_P/models/timm/tresnet_m_miil_in21k.pth', num_classes=11221),
     'tresnet_l': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-tresnet/tresnet_l_81_5-235b486c.pth'),
     'tresnet_xl': _cfg(
@@ -85,14 +84,14 @@ class BasicBlock(nn.Module):
         self.relu = nn.ReLU(inplace=True)
         self.downsample = downsample
         self.stride = stride
-        reduction_chs = max(planes * self.expansion // 4, 64)
-        self.se = SEModule(planes * self.expansion, reduction_channels=reduction_chs) if use_se else None
+        rd_chs = max(planes * self.expansion // 4, 64)
+        self.se = SEModule(planes * self.expansion, rd_channels=rd_chs) if use_se else None
 
     def forward(self, x):
         if self.downsample is not None:
-            residual = self.downsample(x)
+            shortcut = self.downsample(x)
         else:
-            residual = x
+            shortcut = x
 
         out = self.conv1(x)
         out = self.conv2(out)
@@ -100,7 +99,7 @@ class BasicBlock(nn.Module):
         if self.se is not None:
             out = self.se(out)
 
-        out += residual
+        out += shortcut
         out = self.relu(out)
         return out
 
@@ -126,7 +125,7 @@ class Bottleneck(nn.Module):
                     aa_layer(channels=planes, filt_size=3, stride=2))
 
         reduction_chs = max(planes * self.expansion // 8, 64)
-        self.se = SEModule(planes, reduction_channels=reduction_chs) if use_se else None
+        self.se = SEModule(planes, rd_channels=reduction_chs) if use_se else None
 
         self.conv3 = conv2d_iabn(
             planes, planes * self.expansion, kernel_size=1, stride=1, act_layer="identity")
@@ -137,9 +136,9 @@ class Bottleneck(nn.Module):
 
     def forward(self, x):
         if self.downsample is not None:
-            residual = self.downsample(x)
+            shortcut = self.downsample(x)
         else:
-            residual = x
+            shortcut = x
 
         out = self.conv1(x)
         out = self.conv2(out)
@@ -147,22 +146,19 @@ class Bottleneck(nn.Module):
             out = self.se(out)
 
         out = self.conv3(out)
-        out = out + residual  # no inplace
+        out = out + shortcut  # no inplace
         out = self.relu(out)
 
         return out
 
 
 class TResNet(nn.Module):
-    def __init__(self, layers, in_chans=3, num_classes=1000, width_factor=1.0, no_aa_jit=False,
-                 global_pool='fast', drop_rate=0.):
+    def __init__(self, layers, in_chans=3, num_classes=1000, width_factor=1.0, global_pool='fast', drop_rate=0.):
         self.num_classes = num_classes
         self.drop_rate = drop_rate
         super(TResNet, self).__init__()
 
-        # JIT layers
-        space_to_depth = SpaceToDepthModule()
-        aa_layer = partial(AntiAliasDownsampleLayer, no_jit=no_aa_jit)
+        aa_layer = BlurPool2d
 
         # TResnet stages
         self.inplanes = int(64 * width_factor)
@@ -179,7 +175,7 @@ class TResNet(nn.Module):
 
         # body
         self.body = nn.Sequential(OrderedDict([
-            ('SpaceToDepth', space_to_depth),
+            ('SpaceToDepth', SpaceToDepthModule()),
             ('conv1', conv1),
             ('layer1', layer1),
             ('layer2', layer2),
@@ -253,14 +249,22 @@ class TResNet(nn.Module):
 
 def _create_tresnet(variant, pretrained=False, **kwargs):
     return build_model_with_cfg(
-        TResNet, variant, default_cfg=default_cfgs[variant], pretrained=pretrained,
-        feature_cfg=dict(out_indices=(1, 2, 3, 4), flatten_sequential=True), **kwargs)
+        TResNet, variant, pretrained,
+        default_cfg=default_cfgs[variant],
+        feature_cfg=dict(out_indices=(1, 2, 3, 4), flatten_sequential=True),
+        **kwargs)
 
 
 @register_model
 def tresnet_m(pretrained=False, **kwargs):
     model_kwargs = dict(layers=[3, 4, 11, 3], **kwargs)
     return _create_tresnet('tresnet_m', pretrained=pretrained, **model_kwargs)
+
+
+@register_model
+def tresnet_m_miil_in21k(pretrained=False, **kwargs):
+    model_kwargs = dict(layers=[3, 4, 11, 3], **kwargs)
+    return _create_tresnet('tresnet_m_miil_in21k', pretrained=pretrained, **model_kwargs)
 
 
 @register_model

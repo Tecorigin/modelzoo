@@ -6,11 +6,8 @@ This implementation is compatible with the pretrained weights from cypw's MXNet 
 
 Hacked together by / Copyright 2020 Ross Wightman
 """
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 from collections import OrderedDict
+from functools import partial
 from typing import Tuple
 
 import torch
@@ -177,12 +174,14 @@ class DPN(nn.Module):
         self.drop_rate = drop_rate
         self.b = b
         assert output_stride == 32  # FIXME look into dilation support
+        norm_layer = partial(BatchNormAct2d, eps=.001)
+        fc_norm_layer = partial(BatchNormAct2d, eps=.001, act_layer=fc_act, inplace=False)
         bw_factor = 1 if small else 4
         blocks = OrderedDict()
 
         # conv1
         blocks['conv1_1'] = ConvBnAct(
-            in_chans, num_init_features, kernel_size=3 if small else 7, stride=2, norm_kwargs=dict(eps=.001))
+            in_chans, num_init_features, kernel_size=3 if small else 7, stride=2, norm_layer=norm_layer)
         blocks['conv1_pool'] = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
         self.feature_info = [dict(num_chs=num_init_features, reduction=2, module='features.conv1_1')]
 
@@ -230,8 +229,7 @@ class DPN(nn.Module):
             in_chs += inc
         self.feature_info += [dict(num_chs=in_chs, reduction=32, module=f'features.conv5_{k_sec[3]}')]
 
-        def _fc_norm(f, eps): return BatchNormAct2d(f, eps=eps, act_layer=fc_act, inplace=False)
-        blocks['conv5_bn_ac'] = CatBnAct(in_chs, norm_layer=_fc_norm)
+        blocks['conv5_bn_ac'] = CatBnAct(in_chs, norm_layer=fc_norm_layer)
 
         self.num_features = in_chs
         self.features = nn.Sequential(blocks)
@@ -239,6 +237,7 @@ class DPN(nn.Module):
         # Using 1x1 conv for the FC layer to allow the extra pooling scheme
         self.global_pool, self.classifier = create_classifier(
             self.num_features, self.num_classes, pool_type=global_pool, use_conv=True)
+        self.flatten = nn.Flatten(1) if global_pool else nn.Identity()
 
     def get_classifier(self):
         return self.classifier
@@ -247,6 +246,7 @@ class DPN(nn.Module):
         self.num_classes = num_classes
         self.global_pool, self.classifier = create_classifier(
             self.num_features, self.num_classes, pool_type=global_pool, use_conv=True)
+        self.flatten = nn.Flatten(1) if global_pool else nn.Identity()
 
     def forward_features(self, x):
         return self.features(x)
@@ -257,15 +257,16 @@ class DPN(nn.Module):
         if self.drop_rate > 0.:
             x = F.dropout(x, p=self.drop_rate, training=self.training)
         x = self.classifier(x)
-        if not self.global_pool.is_identity():
-            x = x.flatten(1)  # conv classifier, flatten if pooling isn't pass-through (disabled)
+        x = self.flatten(x)
         return x
 
 
 def _create_dpn(variant, pretrained=False, **kwargs):
     return build_model_with_cfg(
-        DPN, variant, pretrained, default_cfg=default_cfgs[variant],
-        feature_cfg=dict(feature_concat=True, flatten_sequential=True), **kwargs)
+        DPN, variant, pretrained,
+        default_cfg=default_cfgs[variant],
+        feature_cfg=dict(feature_concat=True, flatten_sequential=True),
+        **kwargs)
 
 
 @register_model

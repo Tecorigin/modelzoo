@@ -1,6 +1,7 @@
+# Adapted to tecorigin hardware
+
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
-# Adapted to tecorigin hardware。
 import argparse
 import datetime
 import numpy as np
@@ -29,13 +30,9 @@ import models_v2
 
 import utils
 
-from torch_sdaa.utils import cuda_migrate  # 使用torch_sdaa自动迁移方法
-from torch.sdaa import amp              # 导入AMP
-
 
 def get_args_parser():
     parser = argparse.ArgumentParser('DeiT training and evaluation script', add_help=False)
-    parser.add_argument('--steps', default=int(1e18), type=int)
     parser.add_argument('--batch-size', default=64, type=int)
     parser.add_argument('--epochs', default=300, type=int)
     parser.add_argument('--bce-loss', action='store_true')
@@ -169,7 +166,8 @@ def get_args_parser():
 
     parser.add_argument('--output_dir', default='',
                         help='path where to save, empty for no saving')
-    parser.add_argument('--device', default='cuda',
+    # parser.add_argument('--device', default='cuda',
+    parser.add_argument('--device', default='sdaa',
                         help='device to use for training / testing')
     parser.add_argument('--seed', default=0, type=int)
     parser.add_argument('--resume', default='', help='resume from checkpoint')
@@ -355,7 +353,7 @@ def main(args):
         linear_scaled_lr = args.lr * args.batch_size * utils.get_world_size() / 512.0
         args.lr = linear_scaled_lr
     optimizer = create_optimizer(args, model_without_ddp)
-    loss_scaler = amp.GradScaler()
+    loss_scaler = NativeScaler()
 
     lr_scheduler, _ = create_scheduler(args, optimizer)
 
@@ -426,12 +424,12 @@ def main(args):
         if args.distributed:
             data_loader_train.sampler.set_epoch(epoch)
 
-        train_one_epoch(
+        train_stats = train_one_epoch(
             model, criterion, data_loader_train,
-            optimizer, device, epoch, loss_scaler,
+            optimizer, device, epoch, start_time, loss_scaler,
             args.clip_grad, model_ema, mixup_fn,
             set_training_mode=args.train_mode,  # keep in eval mode for deit finetuning / train mode for training and deit III finetuning
-            args = args,
+            args = args
         )
 
         lr_scheduler.step(epoch)
@@ -468,6 +466,21 @@ def main(args):
                     }, checkpoint_path)
             
         print(f'Max accuracy: {max_accuracy:.2f}%')
+
+        log_stats = {**{f'train_{k}': v for k, v in train_stats.items()},
+                     **{f'test_{k}': v for k, v in test_stats.items()},
+                     'epoch': epoch,
+                     'n_parameters': n_parameters}
+        
+        
+        
+        if args.output_dir and utils.is_main_process():
+            with (output_dir / "log.txt").open("a") as f:
+                f.write(json.dumps(log_stats) + "\n")
+
+        end_time = time.time()
+        if end_time-start_time >= 7200:
+            break
 
     total_time = time.time() - start_time
     total_time_str = str(datetime.timedelta(seconds=int(total_time)))

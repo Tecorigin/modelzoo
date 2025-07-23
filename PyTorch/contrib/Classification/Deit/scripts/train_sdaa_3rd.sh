@@ -23,23 +23,21 @@
 # STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING IN ANY
 # WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 # OF SUCH DAMAGE.
-import os
 
-from argument import parse_args
+#!/bin/bash
+cd "$(dirname "$0")/.."
 
-if __name__ == "__main__":
-    args = parse_args()
+pip install -r requirements.txt
 
-    os.chdir("..")
-    cmd = (
-        f"python train.py --data_path {args.data_path} --batch_size {args.batch_size} --epochs {args.epochs} --lr {args.lr} --save_path {args.save_path} --num_steps {args.num_steps} --growthRate {args.growthRate} --dropRate {args.dropRate} --reduction {args.reduction} --bottleneck --depth {args.depth} --dataset {args.dataset} --optMemory {args.optMemory} --cudnn {args.cudnn}"
-    )
+# 运行后面的命令
+echo "开始运行训练命令"
 
-
-    import subprocess
-    try:
-        subprocess.check_call(cmd, shell=True)
-    except subprocess.CalledProcessError as e:
-        exit_code = e.returncode
-        print("Command failed with exit code:", exit_code)
-        exit(exit_code)
+python -m torch.distributed.launch \
+    --nproc_per_node=4 \
+    --master_port 65501 \
+    --use_env main.py \
+    --model deit_tiny_patch16_224 \
+    --batch-size 256 \
+    --data-path /data/datasets/imagenet \
+    --output_dir /data/ckpt \
+    2>&1 | tee scripts/train_sdaa_3rd.log

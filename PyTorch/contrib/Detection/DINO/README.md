@@ -1,60 +1,66 @@
-# DINO
-## 1. 模型概述
-DINO (DETR with Improved DeNoising Anchor Boxes) 是一款在 ICLR 2023 发布的前沿端到端目标检测 Transformer 模型,是
-首个在 COCO leader 上夺魁的 end-to-end Transformer 检测模型，通过噪声对比训练+动态 anchor queries+双层梯度 lo‑forward，
-兼顾速度与精度，为 DETR 设立新标杆。
+# Dino
 
-- 论文链接：https://arxiv.org/abs/2203.03605
-- 仓库链接：https://github.com/open-mmlab/mmdetection/tree/main/configs/dino
+## 1. 模型概述
+Dino 即 Distilling Representations with NO labels，是一种基于自监督学习的视觉模型。它开创性地采用基于注意力机制的 Transformer 架构，在没有标注数据的情况下，通过自监督的方式让模型学习图像的特征表示。Dino 利用多尺度特征聚合和动态掩码等技术，能够捕捉图像中丰富的语义信息和结构信息，从而生成高质量的特征表示。在图像分类、目标检测、语义分割等众多计算机视觉任务中，Dino 展现出了强大的性能，即使在没有大规模标注数据的情况下，也能学习到具有良好泛化能力的特征。凭借其在自监督学习领域的创新性和高效性，Dino 成为了深度学习和计算机视觉领域中推动自监督学习发展的重要模型之一，为解决数据标注难题和提升模型性能提供了新的思路和方法。
 
 ## 2. 快速开始
-使用本模型执行训练的主要流程如下：
-1. 基础环境安装：介绍训练前需要完成的基础环境检查和安装。
-2. 获取数据集：介绍如何获取训练所需的数据集。
-3. 构建环境：介绍如何构建模型运行所需要的环境。
-4. 启动训练：介绍如何运行训练。
 
 ### 2.1 基础环境安装
 
-请参考基础环境安装章节，完成训练前的基础环境检查和安装。
+请参考[基础环境安装](../../../../doc/Environment.md)章节，完成训练前的基础环境检查和安装。
 
-### 2.2 准备数据集
-#### 2.2.1 获取数据集
-<MODLE DINO>使用 COCO2017 数据集，该数据集为开源数据集，可从 [COCO](https://cocodataset.org/#download) 下载。
 
-#### 2.2.2 处理数据集
-具体配置方式可参考：https://blog.csdn.net/xzxg001/article/details/142465729。
+### 2.2 数据集准备
+#### 2.2.1 数据集准备
+
+我们在本项目中使用了 ImageNet1K 数据集。链接：https://www.kaggle.com/c/imagenet-object-localization-challenge/data
+
+#### 2.2.2 数据集目录结构
+
+数据集目录结构参考如下所示:
+
+```
+imagenet1k/
+|-- class_names
+|-- meta
+|-- train
+`-- val
+```
 
 
 ### 2.3 构建环境
 
-所使用的环境下已经包含PyTorch框架虚拟环境。
 1. 执行以下命令，启动虚拟环境。
-    ```
-    conda activate torch_env
-    ```
-2. 安装python依赖。
-    ```
-    pip3 install  -U openmim 
-    pip3 install git+https://gitee.com/xiwei777/mmengine_sdaa.git 
-    pip3 install opencv_python mmcv --no-deps
-    mim install -e .
-    pip install -r requirements.txt
-    ```
+``` bash
+cd PyTorch/contrib/Detection/dino
+conda activate dino
+```
+2. 安装python依赖
+``` bash
+pip install -r requirements.txt
+```
+
 ### 2.4 启动训练
 1. 在构建好的环境中，进入训练脚本所在目录。
-  ```
-  cd <ModelZoo_path>/PyTorch/contrib/Detection/DINO/run_scripts
-  ```
-2. 运行训练。该模型支持单机单卡。
-  ```
-  python run_DINO.py --config ../configs/dino/dino-4scale_r50_8xb2-36e_coco.py --launcher pytorch --nproc-per-node 1 --amp --cfg-options "train_dataloader.dataset.data_root=/data/teco-data/coco/" "val_dataloader.dataset.data_root=/data/teco-data/coco/"
-  ```
-    更多训练参数参考 run_scripts/argument.py
-### 2.5 训练结果
-输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
+    ```
+    cd PyTorch/contrib/Detection/dino
+    ```
 
-MeanRelativeError: -0.019506659922123023
-MeanAbsoluteError: -4.331806333065033
-Rule,mean_absolute_error -4.331806333065033
-pass mean_relative_error=-0.019506659922123023 <= 0.05 or mean_absolute_error=-4.331806333065033 <= 0.0002
+2. 运行训练。
+    ```
+    export SDAA_VISIBLE_DEVICES=0,1,2,3
+    cfg_file=configs/bisenetv2_city.py
+    python -m torch.distributed.launch --nproc_per_node=4 --master_port 9292 --use_env main_dino.py
+    ```
+
+
+### 2.5 训练结果
+
+- 可视化命令
+    ```
+    cd ./script
+    python plot_curve.py
+    ```
+| 加速卡数量 | 模型 | 混合精度 | Batch Size | epoch | train_loss |
+| --- | --- | --- | --- | --- | --- |
+| 2 | Dino | 是 | 16 | 100 | 10.203 |
