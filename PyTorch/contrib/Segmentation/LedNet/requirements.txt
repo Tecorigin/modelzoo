@@ -1,3 +1,6 @@
+tqdm
 matplotlib
-thop
-
+scikit-learn
+opencv-python
+torchsummary
+git+https://gitee.com/xiwei777/tcap_dllogger.git
