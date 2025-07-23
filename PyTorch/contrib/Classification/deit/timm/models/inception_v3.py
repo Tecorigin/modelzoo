@@ -32,12 +32,12 @@ default_cfgs = {
     # my port of Tensorflow SLIM weights (http://download.tensorflow.org/models/inception_v3_2016_08_28.tar.gz)
     'tf_inception_v3': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/tf_inception_v3-e0069de4.pth',
-        num_classes=1000, has_aux=False, label_offset=1),
+        num_classes=1001, has_aux=False),
     # my port of Tensorflow adversarially trained Inception V3 from
     # http://download.tensorflow.org/models/adv_inception_v3_2017_08_18.tar.gz
     'adv_inception_v3': _cfg(
         url='https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-weights/adv_inception_v3-9e27bd63.pth',
-        num_classes=1000, has_aux=False, label_offset=1),
+        num_classes=1001, has_aux=False),
     # from gluon pretrained models, best performing in terms of accuracy/loss metrics
     # https://gluon-cv.mxnet.io/model_zoo/classification.html
     'gluon_inception_v3': _cfg(
@@ -434,10 +434,8 @@ def _create_inception_v3(variant, pretrained=False, **kwargs):
         model_cls = InceptionV3
         load_strict = not default_cfg['has_aux']
     return build_model_with_cfg(
-        model_cls, variant, pretrained,
-        default_cfg=default_cfg,
-        pretrained_strict=load_strict,
-        **kwargs)
+        model_cls, variant, pretrained, default_cfg=default_cfgs[variant],
+        pretrained_strict=load_strict, **kwargs)
 
 
 @register_model

@@ -1,7 +1,6 @@
-# Adapted to tecorigin hardware
-
 # Copyright (c) 2015-present, Facebook, Inc.
 # All rights reserved.
+# Adapted to tecorigin hardware。
 """
 Misc functions, including distributed helpers.
 
@@ -15,6 +14,8 @@ import datetime
 
 import torch
 import torch.distributed as dist
+
+from torch_sdaa.utils import cuda_migrate  # 使用torch_sdaa自动迁移方法
 
 
 class SmoothedValue(object):
@@ -41,8 +42,7 @@ class SmoothedValue(object):
         """
         if not is_dist_avail_and_initialized():
             return
-        # t = torch.tensor([self.count, self.total], dtype=torch.float64, device='cuda')
-        t = torch.tensor([self.count, self.total], dtype=torch.float64, device='sdaa')
+        t = torch.tensor([self.count, self.total], dtype=torch.float64, device='cuda')
         dist.barrier()
         dist.all_reduce(t)
         t = t.tolist()
@@ -132,8 +132,7 @@ class MetricLogger(object):
             'time: {time}',
             'data: {data}'
         ]
-        # if torch.cuda.is_available():
-        if torch.sdaa.is_available():
+        if torch.cuda.is_available():
             log_msg.append('max mem: {memory:.0f}')
         log_msg = self.delimiter.join(log_msg)
         MB = 1024.0 * 1024.0
@@ -144,14 +143,12 @@ class MetricLogger(object):
             if i % print_freq == 0 or i == len(iterable) - 1:
                 eta_seconds = iter_time.global_avg * (len(iterable) - i)
                 eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
-                # if torch.cuda.is_available():
-                if torch.sdaa.is_available():
+                if torch.cuda.is_available():
                     print(log_msg.format(
                         i, len(iterable), eta=eta_string,
                         meters=str(self),
                         time=str(iter_time), data=str(data_time),
-                        # memory=torch.cuda.max_memory_allocated() / MB))
-                        memory=torch.sdaa.max_memory_allocated() / MB))
+                        memory=torch.cuda.max_memory_allocated() / MB))
                 else:
                     print(log_msg.format(
                         i, len(iterable), eta=eta_string,
@@ -226,8 +223,7 @@ def init_distributed_mode(args):
         args.gpu = int(os.environ['LOCAL_RANK'])
     elif 'SLURM_PROCID' in os.environ:
         args.rank = int(os.environ['SLURM_PROCID'])
-        # args.gpu = args.rank % torch.cuda.device_count()
-        args.gpu = args.rank % torch.sdaa.device_count()
+        args.gpu = args.rank % torch.cuda.device_count()
     else:
         print('Not using distributed mode')
         args.distributed = False
@@ -235,10 +231,8 @@ def init_distributed_mode(args):
 
     args.distributed = True
 
-    # torch.cuda.set_device(args.gpu)
-    torch.sdaa.set_device(args.gpu)
-    # args.dist_backend = 'nccl'
-    args.dist_backend = 'tccl'
+    torch.cuda.set_device(args.gpu)
+    args.dist_backend = 'nccl'
     print('| distributed init (rank {}): {}'.format(
         args.rank, args.dist_url), flush=True)
     torch.distributed.init_process_group(backend=args.dist_backend, init_method=args.dist_url,
