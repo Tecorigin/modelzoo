@@ -1,0 +1,38 @@
+{
+  "_class_name": "StableDiffusionImg2ImgPipeline",
+  "_diffusers_version": "0.31.0",
+  "_name_or_path": "C:\\Users\\songkey-win\\.cache\\huggingface\\hub\\models--stable-diffusion-v1-5--stable-diffusion-v1-5\\snapshots\\f03de327dd89b501a01da37fc5240cf4fdba85a1",
+  "feature_extractor": [
+    "transformers",
+    "CLIPImageProcessor"
+  ],
+  "image_encoder": [
+    null,
+    null
+  ],
+  "requires_safety_checker": true,
+  "safety_checker": [
+    "stable_diffusion",
+    "StableDiffusionSafetyChecker"
+  ],
+  "scheduler": [
+    "diffusers",
+    "PNDMScheduler"
+  ],
+  "text_encoder": [
+    "transformers",
+    "CLIPTextModel"
+  ],
+  "tokenizer": [
+    "transformers",
+    "CLIPTokenizer"
+  ],
+  "unet": [
+    "diffusers",
+    "UNet2DConditionModel"
+  ],
+  "vae": [
+    "diffusers",
+    "AutoencoderKL"
+  ]
+}
