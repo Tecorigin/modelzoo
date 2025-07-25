@@ -53,7 +53,7 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [zhwiki
 
 2. 运行训练。该模型支持单机单卡。
     ```
-    python run_electra.py   --model_name_or_path ../configs/electra-small-generator   \
+    mkdir -p electra_out &&  python run_electra.py   --model_name_or_path ../configs/electra-small-generator   \
     --train_file ../configs/train.txt   \
     --do_train --do_eval   \
     --output_dir electra_out   \
