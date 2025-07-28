@@ -40,6 +40,7 @@ RoBERTa通过新的预训练目标改进了 BERT，证明了BERT训练不足，�
     pip3 install numpy==1.24.3
     pip install huggingface_hub
     pip install parameterized
+    pip install transformers==4.41.2
     ```
 
 ### 2.4 启动训练
