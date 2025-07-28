@@ -45,7 +45,7 @@ def create_coco_csv(
 所使用的环境下已经包含PyTorch框架虚拟环境。
 1. 执行以下命令，启动虚拟环境。
     ```
-    conda activate torch_env
+    conda activate torch_env_py310
     ```
 2. 安装python依赖。
     ```
@@ -59,7 +59,7 @@ def create_coco_csv(
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd open_clip/run_scripts
+    cd ./open_clip/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
