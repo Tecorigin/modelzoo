@@ -11,7 +11,7 @@
    ```
 2. 运行训练。该模型支持单机单卡。
    ```
-   python run_encnet.py --config ../configs/danet/danet_r50-d8_4xb2-80k_cityscapes-512x1024.py \
+   python run_danet.py --config ../configs/danet/danet_r50-d8_4xb2-80k_cityscapes-512x1024.py \
     --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
    
