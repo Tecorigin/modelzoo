@@ -7,7 +7,7 @@ In this paper, we address the scene segmentation task by capturing rich contextu
 The main steps for training with this model are as follows:
 1. In the configured environment, navigate to the training script directory.
    ```
-   cd <ModelZoo_path>/PyTorch/contrib/Segmentation/danet/run_scripts
+   cd <ModelZoo_path>/PyTorch/contrib/Segmentation/danet_cityspaces/run_scripts
    ```
 2. Run the training script.
   ```
