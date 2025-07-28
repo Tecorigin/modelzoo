@@ -43,6 +43,7 @@ DistilBERT 通过知识蒸馏进行预训练，以创建具有更快推理的更
     pip3 install numpy==1.24.3
     pip install huggingface_hub
     pip install parameterized
+    pip install transformers==4.41.2
     ```
 
 ### 2.4 启动训练
