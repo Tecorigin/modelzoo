@@ -25,4 +25,4 @@ python run_retinanet.py --config ../configs/retinanet/retinanet_r50_fpn_1x_coco.
         "val_evaluator.ann_file=$data_path/annotations/instances_val2017.json" 2>&1 | tee sdaa.log
 
 # 生成loss对比图
-python loss.py --sdaa-log sdaa.log --cuda-log cuda.log
+#python loss.py --sdaa-log sdaa.log --cuda-log cuda.log

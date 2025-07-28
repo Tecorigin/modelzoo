@@ -61,7 +61,10 @@ RetinaNet是一种基于单阶段(one-stage)架构的目标检测模型，由Fac
     更多训练参数参考 run_scripts/argument.py
 
 ### 2.5 训练结果
-输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
+### 2.5 训练结果
+|模型             |    数据集      |    sdaa结果       |   cuda结果         |  sdaa耗时    |    
+|:---------------|:--------------:|:-----------------:|:-----------------:|:-------------:|
+|retinanet_r50    |coco           |0.364               |  0.367           |41h
 
 bbox_mAP_copypaste: 0.364 0.556 0.387 0.210 0.402 0.476 
 coco/bbox_mAP: 0.3640  
