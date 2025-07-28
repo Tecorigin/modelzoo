@@ -7,7 +7,7 @@ Recent work has made significant progress in improving spatial resolution for pi
 The main steps for training with this model are as follows:
 1. In the configured environment, navigate to the training script directory.
    ```
-   cd <ModelZoo_path>/PyTorch/contrib/Segmentation/encnet/run_scripts
+   cd <ModelZoo_path>/PyTorch/contrib/Segmentation/encnet_cityspaces/run_scripts
    ```
 2. Run the training script.
   ```
