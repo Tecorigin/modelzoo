@@ -7,7 +7,7 @@
 使用本模型执行训练的主要流程如下：
 1. 在构建好的环境中，进入训练脚本所在目录。
    ```
-   cd <ModelZoo_path>/PyTorch/contrib/Segmentation/danet/run_scripts
+   cd <ModelZoo_path>/PyTorch/contrib/Segmentation/danet_cityspaces/run_scripts
    ```
 2. 运行训练。该模型支持单机单卡。
    ```
