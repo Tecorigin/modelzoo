@@ -40,8 +40,9 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [zhwiki
     cd .. 
     pip install -r requirements.txt
     pip3 install numpy==1.24.3
-    pip install huggingface_hub
+    pip install huggingface_hub==0.33.4
     pip install parameterized
+    pip install transformers==4.41.2
     ```
 
 ### 2.4 启动训练
