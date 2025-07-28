@@ -43,6 +43,8 @@ BART 是一个序列到序列模型，结合了 BERT 和 GPT 的预训练目标�
     pip3 install numpy==1.24.3
     pip install huggingface_hub
     pip install parameterized
+    pip install transformers==4.41.2
+
     ```
 
 ### 2.4 启动训练
