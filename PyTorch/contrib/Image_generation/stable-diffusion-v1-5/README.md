@@ -42,10 +42,10 @@ git clone https://www.modelscope.cn/songkey/stable-diffusion-v1-5.git
 | scheduler     | `scheduler/`    | `scheduler_config.json` | ❌         |
 
 ### 2.4 构建环境
-所使用的环境下已经包含PyTorch框架虚拟环境命名为sd15。
+所使用的环境下已经包含PyTorch框架虚拟环境。
 1. 执行以下命令，启动虚拟环境。
     ```
-    conda activate sd15
+    conda activate torch_env_py310
     ```
 2. 安装python依赖。
     ```
@@ -56,7 +56,7 @@ git clone https://www.modelscope.cn/songkey/stable-diffusion-v1-5.git
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd stable-diffusion-v1-5/run_scripts
+    cd ./stable-diffusion-v1-5/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
