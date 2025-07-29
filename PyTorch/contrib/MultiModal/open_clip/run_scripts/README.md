@@ -35,11 +35,13 @@ unzip annotations_trainval2017.zip -d COCO
 
 # 修改create_coco_csv.py代码生成train_data.csv
 替换路径
+```
 def create_coco_csv(
     annotations_file="/.../COCO/annotations/captions_train2017.json",
     images_dir="/.../COCO/train2017",
     output_csv="/.../COCO/train_data.csv"
 ):
+```
 ### 2.3 构建环境
 
 所使用的环境下已经包含PyTorch框架虚拟环境。
