@@ -27,7 +27,7 @@ pip install modelscope
 from modelscope import snapshot_download
 model_dir = snapshot_download('songkey/stable-diffusion-v1-5')
 ```
-2.Git下载
+2.或者Git下载
 ```
 #Git模型下载
 git clone https://www.modelscope.cn/songkey/stable-diffusion-v1-5.git
@@ -36,7 +36,7 @@ git clone https://www.modelscope.cn/songkey/stable-diffusion-v1-5.git
 所使用的环境下已经包含PyTorch框架虚拟环境命名为sd15。
 1. 执行以下命令，启动虚拟环境。
     ```
-    conda activate sd15
+    conda activate torch_env_py310
     ```
 2. 安装python依赖。
     ```
@@ -47,7 +47,7 @@ git clone https://www.modelscope.cn/songkey/stable-diffusion-v1-5.git
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd stable-diffusion-v1-5/run_scripts
+    cd ./stable-diffusion-v1-5/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
@@ -58,9 +58,7 @@ python run_demo.py \
   --coco_ann_path /path/to/COCO/annotations/captions_train2017.json \
   --max_iter 100 \
   --batch_size 1
-
-或者
-cd ./stable-diffusion-v1-5/run_scripts
+或使用 shell 脚本（确保可执行权限）：
 ./run_demo.sh \
   --coco_img_root /path/to/COCO/train2017 \
   --coco_ann_path /path/to/COCO/annotations/captions_train2017.json \
