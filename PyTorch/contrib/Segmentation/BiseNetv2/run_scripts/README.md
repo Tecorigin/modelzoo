@@ -3,9 +3,9 @@
 
 参数名 | 解释 | 样例
 -----------------|-----------------|-----------------
-config | 配置文件。 | --config  ../configs/danet/danet_r50-d8_4xb2-80k_cityscapes-512x1024.py
+config | 配置文件。 | --config  ../configs/bisenetv2/bisenetv2_fcn_4xb4-160k_cityscapes-1024x1024.py
 cfg-options | 动态覆盖配置文件。 | --cfg-options train_dataloader.dataset.data_root=xxx
-work-dir | 工作目录。 | --work-dir ./work_dirs/danet_r50-d8_4xb2-80k_cityscapes-512x1024
+work-dir | 工作目录。 | --work-dir ./work_dirs/bisenetv2_fcn_4xb4-160k_cityscapes-1024x1024
 resume | 恢复训练。 | --resume auto
 amp | 是否使用amp。 | --amp
 no-validate | 是否验证。 | --no-validate
