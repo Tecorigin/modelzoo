@@ -24,4 +24,4 @@ python run_encnet.py --config ../configs/encnet/encnet_r50-d8_4xb2-80k_cityscape
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 
 #可视化loss对比图
- python loss.py --sdaa-log sdaa.log --cuda-log cuda.log
+python loss.py --sdaa-log sdaa.log --cuda-log cuda.log
