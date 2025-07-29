@@ -35,7 +35,7 @@ BiseNetv2使用Cityscapes数据集，该数据集为开源数据集，可从[Cit
    ``` 
 2. 运行训练。该模型支持单机单卡。
    ```
-   python run_danet.py --config ../configs/bisenetv2/bisenetv2_fcn_4xb4-160k_cityscapes-1024x1024.py \
+   python run_bisenetv2.py --config ../configs/bisenetv2/bisenetv2_fcn_4xb4-160k_cityscapes-1024x1024.py \
     --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
 更多训练参数参考 run_scripts/argument.py
