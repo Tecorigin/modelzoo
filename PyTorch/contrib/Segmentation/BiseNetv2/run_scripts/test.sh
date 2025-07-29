@@ -19,7 +19,7 @@ data_path="/data/teco-data/Cityscapes/"
 cd $script_path
 
 #执行训练
-python run_emanet.py --config ../configs/bisenetv2/bisenetv2_fcn_4xb4-160k_cityscapes-1024x1024.py \
+python run_bisenetv2.py --config ../configs/bisenetv2/bisenetv2_fcn_4xb4-160k_cityscapes-1024x1024.py \
     --launcher pytorch --nproc-per-node 4 --amp\
     --cfg-options "train_dataloader.dataset.data_root=$data_path" "val_dataloader.dataset.data_root=$data_path" 2>&1 | tee sdaa.log
 
