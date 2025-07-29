@@ -14,3 +14,4 @@ torchaudio==2.0.2+da3eb8d
 torchtext==0.15.2a0+4571036
 transformers==4.53.1
 webdataset==0.2.86
+git+https://gitee.com/xiwei777/tcap_dlloger.git
