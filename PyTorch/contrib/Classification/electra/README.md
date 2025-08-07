@@ -22,7 +22,7 @@ ELECTRA修改了 BERT 等传统掩码语言模型的预训练目标。ELECTRA �
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
-Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [zhwiki](https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2) 下载。
+Electra使用 wiki 数据集，该数据集为开源数据集，可从 [zhwiki](https://dumps.wikimedia.org/zhwiki/latest/zhwiki-latest-pages-articles.xml.bz2) 下载。
 
 #### 2.2.2 处理数据集
 具体配置方式可参考：https://blog.csdn.net/weixin_39709674/article/details/111847635。
@@ -38,11 +38,15 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [zhwiki
 2. 安装python依赖。
     ```
     cd .. 
-    pip install -r requirements.txt
+    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
     pip3 install numpy==1.24.3
-    pip install huggingface_hub==0.33.4
+    pip install huggingface_hub
     pip install parameterized
-    pip install transformers==4.41.2
+    cd $script_path
+    git clone https://gitee.com/xiwei777/tcap_dllogger.git
+    cd tcap_dllogger
+    python setup.py install
+    cd ..
     ```
 
 ### 2.4 启动训练
@@ -55,7 +59,7 @@ Deit 使用 ImageNet 数据集，该数据集为开源数据集，可从 [zhwiki
 2. 运行训练。该模型支持单机单卡。
     ```
     mkdir -p electra_out &&  python run_electra.py   --model_name_or_path ../configs/electra-small-generator   \
-    --train_file ../configs/train.txt   \
+    --train_file ../configs/train_sample.txt   \
     --do_train --do_eval   \
     --output_dir electra_out   \
     --overwrite_output_dir   \
