@@ -1,9 +1,9 @@
-# EVA
+# Milan
 ## 1. 模型概述
-EVA是一个高性能的开源视觉基础模型，它通过以CLIP为锚点进行改进，在多个视觉及多模态任务上取得了顶尖性能。
+Milan是一个由谷歌开发的多模态大模型，其核心特点是能够对图像进行极其精细和全面的描述（Rich Image Captioning）。
 
-- 论文链接：[[2211.07636]]EVA: Exploring the Limits of Masked Visual Representation Learning at Scale(https://arxiv.org/abs/2211.07636)
-- 仓库链接：https://github.com/open-mmlab/mmpretrain/tree/main/configs/eva
+- 论文链接：[[2403.15360]]Milan: Masked Image Pretraining for Language Image Representation(https://arxiv.org/abs/2403.15360)
+- 仓库链接：https://github.com/open-mmlab/mmpretrain/tree/main/configs/milan
 
 
 ## 2. 快速开始
@@ -19,7 +19,7 @@ EVA是一个高性能的开源视觉基础模型，它通过以CLIP为锚点进�
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
-EVA使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
+Milan使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
 
 #### 2.2.2 处理数据集
 具体配置方式可参考：https://blog.csdn.net/xzxg001/article/details/142465729。
@@ -43,12 +43,12 @@ EVA使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd <ModelZoo_path>/PyTorch/contrib/Classification/EVA/run_scripts
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/MILAN/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_eva.py --config ../configs/eva/eva-l-p14_8xb16_in1k-196px.py --launcher pytorch --nproc-per-node 1 --amp | tee sdaa.log
+python run_milan.py --config ../configs/milan/milan_vit-base-p16_16xb256-amp-coslr-400e_in1k.py --launcher pytorch --nproc-per-node 1 --amp | tee sdaa.log
 
    ```
     更多训练参数参考 run_scripts/argument.py
@@ -56,7 +56,7 @@ python run_eva.py --config ../configs/eva/eva-l-p14_8xb16_in1k-196px.py --launch
 ### 2.5 训练结果
 输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: 0.008249334472737697
-MeanAbsoluteError: 0.040366385242726545
-Rule,mean_relative_error 0.008249334472737697
-pass mean_relative_error=0.008249334472737697 <= 0.05 or mean_absolute_error=0.040366385242726545 <= 0.0002
+MeanRelativeError: -0.005533788008300723
+MeanAbsoluteError: -0.00786734689580332
+Rule,mean_absolute_error -0.00786734689580332
+pass mean_relative_error=np.float64(-0.005533788008300723) <= 0.05 or mean_absolute_error=np.float64(-0.00786734689580332) <= 0.0002
