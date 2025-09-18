@@ -19,7 +19,7 @@ BLIP（Bootstrapping Language-Image Pre-training）是一个统一的视觉-语�
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
-CAE使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet](https://image-net.org/) 下载。
+BLIP使用coco数据集，该数据集为开源数据集，可从 [COCO](https://cocodataset.org/#download) 下载。
 
 #### 2.2.2 处理数据集
 具体配置方式可参考：https://blog.csdn.net/xzxg001/article/details/142465729。
@@ -43,12 +43,15 @@ CAE使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet
 
 1. 在构建好的环境中，进入训练脚本所在目录。
     ```
-    cd <ModelZoo_path>/PyTorch/contrib/Classification/MILAN/run_scripts
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/BLIP/run_scripts
     ```
 
 2. 运行训练。该模型支持单机单卡。
     ```
-    python run_milan.py --config ../configs/milan/milan_vit-base-p16_16xb256-amp-coslr-400e_in1k.py --launcher pytorch --nproc-per-node 1 --amp | tee sdaa.log
+   python run_blip.py --config ../configs/blip/blip-base_8xb32_caption.py \
+    --launcher pytorch --nproc-per-node 4 --amp \
+    --cfg-options "train_dataloader.dataset.data_root=$train_path" "val_dataloader.dataset.data_root=$val_path" 2>&1 | tee sdaa.log
+
    ```
     更多训练参数参考 run_scripts/argument.py
 
