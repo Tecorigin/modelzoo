@@ -48,15 +48,15 @@ EVA使用 ImageNet 数据集，该数据集为开源数据集，可从 [ImageNet
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_eva.py --config ../configs/eva/eva-l-p14_8xb16_in1k-196px.py --launcher pytorch --nproc-per-node 1 --amp | tee sdaa.log
+    python run_eva.py --config ../configs/eva/eva-l-p14_8xb16_in1k-196px.py --launcher pytorch --nproc-per-node 1 --amp | tee sdaa.log
 
    ```
     更多训练参数参考 run_scripts/argument.py
 
 ### 2.5 训练结果
-输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
+    输出训练loss曲线及结果（参考使用[loss.py](./run_scripts/loss.py)）: 
 
-MeanRelativeError: 0.008249334472737697
-MeanAbsoluteError: 0.040366385242726545
-Rule,mean_relative_error 0.008249334472737697
-pass mean_relative_error=0.008249334472737697 <= 0.05 or mean_absolute_error=0.040366385242726545 <= 0.0002
+    MeanRelativeError: 0.008249334472737697
+    MeanAbsoluteError: 0.040366385242726545
+    Rule,mean_relative_error 0.008249334472737697
+    pass mean_relative_error=0.008249334472737697 <= 0.05 or mean_absolute_error=0.040366385242726545 <= 0.0002
