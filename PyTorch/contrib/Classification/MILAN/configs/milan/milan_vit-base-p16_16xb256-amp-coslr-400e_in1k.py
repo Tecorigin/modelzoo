@@ -32,13 +32,13 @@ model = dict(
     target_generator=dict(
         type='CLIPGenerator',
         tokenizer_path=  # noqa
-        '/data/bigc-data/lsq/Milan/hub/checkpoints/clip_vit_base_16.pth.tar'  # noqa
+        '/data/bigc-data/zym/iic/multi-modal_clip-vit-base-patch16_zh.tar'  # noqa
     ),
     init_cfg=None)
 
 # optimizer wrapper
 optim_wrapper = dict(
-    type='AmpOptimWrapper',
+    type='OptimWrapper',
     optimizer=dict(
         type='AdamW',
         lr=1.5e-4 * 4096 / 32,
@@ -82,6 +82,7 @@ randomness = dict(seed=0, diff_rank_seed=True)
 
 # auto resume
 resume = True
+
 
 # NOTE: `auto_scale_lr` is for automatically scaling LR
 # based on the actual training batch size.
