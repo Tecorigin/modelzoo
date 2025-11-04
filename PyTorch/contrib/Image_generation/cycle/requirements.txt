@@ -1,0 +1,6 @@
+dominate>=2.4.0
+visdom>=0.1.8.8
+wandb
+git+https://gitee.com/xiwei777/tcap_dllogger.git
+opencv-python
+scikit-image

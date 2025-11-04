@@ -1,0 +1,13 @@
+pynvml==11.0.0
+pyyaml
+onnx==1.12.0
+torch==1.12.0
+torchvision==0.13.0
+pytest
+matplotlib>=3.2.2
+numpy>=1.18.5
+Pillow>=7.1.2
+onnxruntime
+onnxconverter_common
+onnx-simplifier
+pretrainedmodels

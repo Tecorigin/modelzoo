@@ -1,0 +1,8 @@
+{
+    "model_path": "/mnt/checkpoint/TecoInferenceEngine/resnet_dynamic/resnet50_fp16_dyn.onnx",
+    "model_name": "resnet50",
+    "input_shape": {"input": [8, 3, 224, 224]},
+    "dtype": "float16",
+    "warm_up": 1,
+    "run_loops": 5
+}

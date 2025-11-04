@@ -1,0 +1,4 @@
+h5py
+tensorboard
+coloredlogs
+matplotlib

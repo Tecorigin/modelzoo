@@ -1,0 +1,11 @@
+diffusers==0.34.0
+matplotlib==3.10.3
+numpy==1.23.5
+paddle==1.0.2
+scipy==1.16.0
+setuptools==59.5.0
+torch==2.4.0a0+git4451b0e
+torchvision==0.15.1a0+42759b1
+transformers==4.53.2
+torch-sdaa==2.1.0 
+git+https://gitee.com/xiwei777/tcap_dlloger.git

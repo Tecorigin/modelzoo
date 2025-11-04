@@ -1,0 +1,6 @@
+torch
+numpy
+scipy
+matplotlib
+einops
+git+https://gitee.com/xiwei777/tcap_dllogger.git

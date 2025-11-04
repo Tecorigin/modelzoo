@@ -1,0 +1,13 @@
+colorednoise
+visualdl==2.5.3
+matplotlib>=3.7.5
+numpy==1.23.4
+pyworld
+mir_eval
+git+https://gitee.com/xiwei777/tcap_dllogger.git
+pyyaml==6.0.1
+librosa==0.8.1
+tqdm==4.66.4
+praat-parselmouth==0.4.3
+#paddlepaddle==2.5.1
+#export CUSTOM_DEVICE_BLACK_LIST=conv2d,conv2d_grad

@@ -1,0 +1,178 @@
+--------------+----------------------------------------------
+ Host IP      | 20.21.22.7
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+/root/miniconda3/envs/torch_env_py310/lib/python3.10/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /root/pytorch/aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Setting Arguments.. :  Namespace(seed=42, cuda=True, img_size=640, eval_first=False, tfboard=False, save_folder='weights/', vis_tgt=False, vis_aux_loss=False, fp16=True, batch_size=4, max_epoch=1, wp_epoch=1, eval_epoch=10, no_aug_epoch=20, model='yolov1', conf_thresh=0.001, nms_thresh=0.7, topk=1000, pretrained=None, resume=None, no_multi_labels=False, nms_class_agnostic=False, root='/mnt/nvme1/application/zhaoyt/dataset', dataset='coco', load_cache=False, num_workers=4, multi_scale=True, ema=True, min_box_size=8.0, mosaic=None, mixup=None, grad_accumulate=1, distributed=False, dist_url='env://', world_size=1, sybn=False, find_unused_parameters=False, debug=False)
+----------------------------------------------------------
+LOCAL RANK:  -1
+LOCAL_PROCESS_RANL:  -1
+WORLD SIZE: 1
+use cuda
+==============================
+Dataset Config: {'data_name': 'COCO', 'num_classes': 80, 'class_indexs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 70, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 84, 85, 86, 87, 88, 89, 90], 'class_names': ('background', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'street sign', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'hat', 'backpack', 'umbrella', 'shoe', 'eye glasses', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'plate', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'mirror', 'dining table', 'window', 'desk', 'toilet', 'door', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'blender', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush')} 
+
+==============================
+Model: YOLOV1 ...
+==============================
+Transform: ssd-Style ...
+Transform Config: {'aug_type': 'ssd', 'use_ablu': False, 'mosaic_prob': 0.0, 'mixup_prob': 0.0, 'mosaic_type': 'yolov5', 'mixup_type': 'yolov5', 'mixup_scale': [0.5, 1.5]} 
+
+==============================
+Build YOLOV1 ...
+==============================
+Model Configuration: 
+ {'backbone': 'resnet18', 'pretrained': True, 'stride': 32, 'max_stride': 32, 'neck': 'sppf', 'neck_act': 'lrelu', 'neck_norm': 'BN', 'neck_depthwise': False, 'expand_ratio': 0.5, 'pooling_size': 5, 'head': 'decoupled_head', 'head_act': 'lrelu', 'head_norm': 'BN', 'num_cls_head': 2, 'num_reg_head': 2, 'head_depthwise': False, 'multi_scale': [0.5, 1.5], 'trans_type': 'ssd', 'loss_obj_weight': 1.0, 'loss_cls_weight': 1.0, 'loss_box_weight': 5.0, 'trainer_type': 'yolo'}
+==============================
+Neck: sppf
+==============================
+Head: Decoupled Head
+==============================
+GFLOPs : 37.89
+Params : 21.32 M
+loading annotations into memory...
+Done (t=9.62s)
+creating index...
+index created!
+==============================
+use Mosaic Augmentation: 0.0
+use Mixup Augmentation: 0.0
+loading annotations into memory...
+Done (t=1.66s)
+creating index...
+index created!
+==============================
+use Mosaic Augmentation: 0.0
+use Mixup Augmentation: 0.0
+==============================
+Optimizer: adamw
+--base lr: 6.25e-05
+--momentum: None
+--weight_decay: 0.05
+==============================
+Lr Scheduler: linear
+Build ModelEMA ...
+============== Second stage of Training ==============
+ - Rebuild transforms ...
+Saving state of the last Mosaic epoch-0.
+Iter 0: Loss = 15.860671043395996
+Epoch: [0 / 1]  [    0/29316]  eta: 4:45:36  lr: 0.000000  size: 960  grad_norm: 62.2  loss_obj: 6.8050 (6.8050)  loss_cls: 5.2442 (5.2442)  loss_box: 0.7623 (0.7623)  losses: 15.8607 (15.8607)  time: 0.5845  data: 0.2292  max mem: 1035
+Iter 1: Loss = 15.050567626953125
+Iter 2: Loss = 14.495316505432129
+Iter 3: Loss = 13.891064643859863
+Iter 4: Loss = 12.567436218261719
+Iter 5: Loss = 14.410951614379883
+Iter 6: Loss = 13.806940078735352
+Iter 7: Loss = 12.989839553833008
+Iter 8: Loss = 15.9779634475708
+Iter 9: Loss = 14.366281509399414
+Iter 10: Loss = 29.236000061035156
+Epoch: [0 / 1]  [   10/29316]  eta: 2:08:29  lr: 0.000000  size: 896  grad_norm: inf  loss_obj: 5.3184 (6.6143)  loss_cls: 5.2442 (5.2168)  loss_box: 0.7710 (0.7729)  losses: 14.4110 (15.6957)  time: 0.2631  data: 0.0209  max mem: 1104
+Iter 11: Loss = 17.625728607177734
+Iter 12: Loss = 12.381587982177734
+Iter 13: Loss = 14.032657623291016
+Iter 14: Loss = 13.534524917602539
+Iter 15: Loss = 12.669509887695312
+Iter 16: Loss = 12.910728454589844
+Iter 17: Loss = 17.62942886352539
+Iter 18: Loss = 15.581653594970703
+Iter 19: Loss = 13.680892944335938
+Iter 20: Loss = 19.86847686767578
+Epoch: [0 / 1]  [   20/29316]  eta: 2:08:46  lr: 0.000000  size: 864  grad_norm: 120.2  loss_obj: 4.9175 (6.3102)  loss_cls: 5.0163 (5.0894)  loss_box: 0.8100 (0.7921)  losses: 14.0327 (15.3604)  time: 0.2477  data: 0.0001  max mem: 1156
+Iter 21: Loss = 14.357978820800781
+Iter 22: Loss = 14.483375549316406
+Iter 23: Loss = 16.12262725830078
+Iter 24: Loss = 15.677809715270996
+Iter 25: Loss = 13.476806640625
+Iter 26: Loss = 15.546217918395996
+Iter 27: Loss = 16.356822967529297
+Iter 28: Loss = 14.128179550170898
+Iter 29: Loss = 13.887402534484863
+Iter 30: Loss = 14.757965087890625
+Epoch: [0 / 1]  [   30/29316]  eta: 2:13:13  lr: 0.000000  size: 480  grad_norm: 52.4  loss_obj: 5.5433 (6.0734)  loss_cls: 4.8807 (5.1294)  loss_box: 0.8200 (0.8005)  losses: 14.3580 (15.2053)  time: 0.2783  data: 0.0001  max mem: 1201
+Iter 31: Loss = 15.651092529296875
+Iter 32: Loss = 12.859498023986816
+Iter 33: Loss = 13.737483024597168
+Iter 34: Loss = 15.477893829345703
+Iter 35: Loss = 11.822813034057617
+Iter 36: Loss = 15.998214721679688
+Iter 37: Loss = 11.266382217407227
+Iter 38: Loss = 12.328304290771484
+Iter 39: Loss = 14.226297378540039
+Iter 40: Loss = 14.382946014404297
+Epoch: [0 / 1]  [   40/29316]  eta: 2:11:25  lr: 0.000000  size: 416  grad_norm: 51.4  loss_obj: 5.5167 (5.7917)  loss_cls: 5.0476 (5.1146)  loss_box: 0.7933 (0.7900)  losses: 14.3580 (14.8564)  time: 0.2752  data: 0.0001  max mem: 1201
+Iter 41: Loss = 18.358196258544922
+Iter 42: Loss = 14.200786590576172
+Iter 43: Loss = 15.931953430175781
+Iter 44: Loss = 11.937596321105957
+Iter 45: Loss = 11.53225326538086
+Iter 46: Loss = 11.92866325378418
+Iter 47: Loss = 13.450113296508789
+Iter 48: Loss = 12.334517478942871
+Iter 49: Loss = 12.112689018249512
+Iter 50: Loss = 13.547277450561523
+Epoch: [0 / 1]  [   50/29316]  eta: 2:13:07  lr: 0.000000  size: 384  grad_norm: 41.6  loss_obj: 4.9710 (5.7076)  loss_cls: 4.5889 (4.9743)  loss_box: 0.7655 (0.7830)  losses: 13.4501 (14.5970)  time: 0.2729  data: 0.0001  max mem: 1201
+Iter 51: Loss = 16.087482452392578
+Iter 52: Loss = 13.950223922729492
+Iter 53: Loss = 17.338489532470703
+Iter 54: Loss = 15.992717742919922
+Iter 55: Loss = 12.45111083984375
+Iter 56: Loss = 13.007455825805664
+Iter 57: Loss = 13.765385627746582
+Iter 58: Loss = 12.65750789642334
+Iter 59: Loss = 13.455886840820312
+Iter 60: Loss = 13.988147735595703
+Epoch: [0 / 1]  [   60/29316]  eta: 2:15:13  lr: 0.000000  size: 544  grad_norm: 36.6  loss_obj: 4.9710 (5.6702)  loss_cls: 4.3576 (4.9124)  loss_box: 0.7942 (0.7921)  losses: 13.4559 (14.5433)  time: 0.2937  data: 0.0001  max mem: 1201
+Iter 61: Loss = 14.12088680267334
+Iter 62: Loss = 13.219682693481445
+Iter 63: Loss = 12.849128723144531
+Iter 64: Loss = 14.529756546020508
+Iter 65: Loss = 11.970857620239258
+Iter 66: Loss = 12.097561836242676
+Iter 67: Loss = 12.20976448059082
+Iter 68: Loss = 18.60910987854004
+Iter 69: Loss = 15.356739044189453
+Iter 70: Loss = 13.692201614379883
+Epoch: [0 / 1]  [   70/29316]  eta: 2:14:57  lr: 0.000000  size: 480  grad_norm: 50.9  loss_obj: 4.9134 (5.6073)  loss_cls: 4.6888 (4.8931)  loss_box: 0.8171 (0.7895)  losses: 13.6922 (14.4479)  time: 0.2869  data: 0.0001  max mem: 1201
+Iter 71: Loss = 12.70868968963623
+Iter 72: Loss = 11.109712600708008
+Iter 73: Loss = 14.554069519042969
+Iter 74: Loss = 17.652851104736328
+Iter 75: Loss = 14.48465347290039
+Iter 76: Loss = 12.867525100708008
+Iter 77: Loss = 14.457618713378906
+Iter 78: Loss = 12.040494918823242
+Iter 79: Loss = 11.69937515258789
+Iter 80: Loss = 13.502737045288086
+Epoch: [0 / 1]  [   80/29316]  eta: 2:16:28  lr: 0.000000  size: 864  grad_norm: 52.9  loss_obj: 4.6975 (5.5256)  loss_cls: 4.8546 (4.8610)  loss_box: 0.7861 (0.7891)  losses: 13.2197 (14.3318)  time: 0.2885  data: 0.0001  max mem: 1201
+Iter 81: Loss = 12.8133544921875
+Iter 82: Loss = 13.248214721679688
+Iter 83: Loss = 13.926945686340332
+Iter 84: Loss = 12.261889457702637
+Iter 85: Loss = 12.59394359588623
+Iter 86: Loss = 16.956066131591797
+Iter 87: Loss = 11.537651062011719
+Iter 88: Loss = 11.813874244689941
+Iter 89: Loss = 11.785265922546387
+Iter 90: Loss = 12.170540809631348
+Epoch: [0 / 1]  [   90/29316]  eta: 2:16:35  lr: 0.000000  size: 352  grad_norm: 73.1  loss_obj: 4.3748 (5.4232)  loss_cls: 4.6361 (4.8291)  loss_box: 0.7754 (0.7847)  losses: 12.7087 (14.1756)  time: 0.2930  data: 0.0001  max mem: 1201
+Iter 91: Loss = 12.596382141113281
+Iter 92: Loss = 12.16124153137207
+Iter 93: Loss = 15.599029541015625
+Iter 94: Loss = 15.573336601257324
+Iter 95: Loss = 13.181803703308105
+Iter 96: Loss = 12.072368621826172
+Iter 97: Loss = 13.345817565917969
+Iter 98: Loss = 13.337158203125
+Iter 99: Loss = 12.922699928283691

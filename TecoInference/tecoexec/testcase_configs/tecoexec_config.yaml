@@ -1,0 +1,164 @@
+#resnet50
+# 说明：cuda_latency单位为s,后处理阶段换算为ms， history_latency单位为ms
+  - case_name: model.infer.async.resnet50.1card.batch1.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs1.onnx
+    pass_path: resnet/resnet_pass.py
+    onnx_dtype: float16
+    input_shapes: 1*3*224*224
+    batch_size: 1
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 0.920975
+    run_sync: 0
+    cuda_throughput: 1118.93
+    cuda_latency: 0.000920975
+    history_throughput: 227.1895965
+    history_latency: 4.51501
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch4.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs1.onnx
+    pass_path: resnet/resnet_pass.py
+    onnx_dtype: float16
+    input_shapes: 4*3*224*224
+    batch_size: 4
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 1.37634
+    run_sync: 0
+    cuda_throughput: 3103.06
+    cuda_latency: 0.00137634
+    history_throughput: 889.8301314
+    history_latency: 4.56452
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch8.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs2.onnx
+    pass_path: resnet/resnet_pass.py
+    onnx_dtype: float16
+    input_shapes: 8*3*224*224
+    batch_size: 8
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 1.9934100000000001
+    run_sync: 0
+    cuda_throughput: 4304.136
+    cuda_latency: 0.00199341
+    history_throughput: 1602.949427
+    history_latency: 5.131
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch16.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs4.onnx
+    pass_path: resnet/resnet_pass.py
+    onnx_dtype: float16
+    input_shapes: 16*3*224*224
+    batch_size: 16
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 3.44
+    run_sync: 0
+    cuda_throughput: 5092.656
+    cuda_latency: 0.00344
+    history_throughput: 2642.034102
+    history_latency: 6.39783
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch32.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs8.onnx
+    pass_path: resnet/resnet_pass_5d.py
+    onnx_dtype: float16
+    input_shapes: 32*3*224*224
+    batch_size: 32
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 6.039
+    run_sync: 0
+    cuda_throughput: 5949.536
+    cuda_latency: 0.006039
+    history_throughput: 6102.50298
+    history_latency: 5.78689
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch64.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs16.onnx
+    pass_path: resnet/resnet_pass_5d.py
+    onnx_dtype: float16
+    input_shapes: 64*3*224*224
+    batch_size: 64
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 11.117999999999999
+    run_sync: 0
+    cuda_throughput: 6619.84
+    cuda_latency: 0.011118
+    history_throughput: 7458.694565
+    history_latency: 9.49552
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch128.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs32.onnx
+    pass_path: resnet/resnet_pass_5d.py
+    onnx_dtype: float16
+    input_shapes: 128*3*224*224
+    batch_size: 128
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 20.595
+    run_sync: 0
+    cuda_throughput: 7152.0512
+    cuda_latency: 0.020595
+    history_throughput: 8288.008288
+    history_latency: 17.8209
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch256.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs64.onnx
+    pass_path: resnet/resnet_pass_5d.py
+    onnx_dtype: float16
+    input_shapes: 256*3*224*224
+    batch_size: 256
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 39.19799999999999
+    run_sync: 0
+    cuda_throughput: 7652.3776
+    cuda_latency: 0.039198
+    history_throughput: 8854.608028
+    history_latency: 34.51
+    desc:
+      dataset: imagenet
+      shape: 224*224
+  - case_name: model.infer.async.resnet50.1card.batch512.shape224*224
+    model_name: ResNet50
+    onnx_path: /mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs128.onnx
+    pass_path: resnet/resnet_pass_5d.py
+    onnx_dtype: float16
+    input_shapes: 512*3*224*224
+    batch_size: 512
+    iterations: 50
+    warm_up: 10
+    benchmark_of_latency: 77.702
+    run_sync: 0
+    cuda_throughput: 7643.7504
+    cuda_latency: 0.077702
+    history_throughput: 7469.294925
+    history_latency: 77.0582
+    desc:
+      dataset: imagenet
+      shape: 224*224

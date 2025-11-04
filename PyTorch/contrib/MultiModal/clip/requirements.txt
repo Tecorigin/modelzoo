@@ -1,0 +1,10 @@
+ftfy
+regex
+tqdm
+transformers
+matplotlib
+scipy
+tensorboard
+opencv-python
+
+git+https://gitee.com/xiwei777/tcap_dllogger.git

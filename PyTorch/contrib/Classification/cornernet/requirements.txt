@@ -1,0 +1,82 @@
+absl-py==2.1.0
+addict==2.4.0
+astunparse==1.6.3
+babel==2.16.0
+bce-python-sdk==0.9.25
+blinker==1.9.0
+certifi==2024.12.14
+# cffi @ file:///croot/cffi_1736182485317/work
+charset-normalizer==3.4.1
+click==8.1.8
+contourpy==1.3.1
+cycler==0.12.1
+Cython==3.0.12
+filelock==3.16.1
+Flask==3.1.0
+flask-babel==4.0.0
+fonttools==4.55.3
+fsspec==2024.12.0
+# future @ file:///croot/future_1730902796226/work
+grpcio==1.70.0
+idna==3.10
+imageio==2.37.0
+itsdangerous==2.2.0
+Jinja2==3.1.5
+joblib==1.4.2
+kiwisolver==1.4.8
+lazy_loader==0.4
+Markdown==3.7
+markdown-it-py==3.0.0
+MarkupSafe==3.0.2
+matplotlib==3.10.0
+mdurl==0.1.2
+mmcv==2.1.0
+# -e git+https://github.com/open-mmlab/mmdetection@cfd5d3a985b0249de009b67d04f37263e11cdf3d#egg=mmdet
+mmengine==0.10.6
+mpmath==1.3.0
+networkx==3.4.2
+numpy==1.24.0
+opencv-python==4.11.0.86
+# packaging @ file:///croot/packaging_1734472117206/work
+pandas==2.2.3
+pillow==11.1.0
+platformdirs==4.3.6
+protobuf==5.29.3
+psutil==6.1.1
+pycocotools==2.0.8
+# pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pycryptodome==3.21.0
+Pygments==2.19.1
+pyparsing==3.2.1
+python-dateutil==2.9.0.post0
+pytz==2024.2
+# PyYAML @ file:///croot/pyyaml_1728657952215/work
+rarfile==4.2
+requests==2.32.3
+rich==13.9.4
+scikit-image==0.25.0
+scikit-learn==1.6.1
+scipy==1.15.2
+shapely==2.0.7
+# six @ file:///tmp/build/80754af9/six_1644875935023/work
+sympy==1.13.3
+tensorboard==2.19.0
+tensorboard-data-server==0.7.2
+termcolor==2.5.0
+terminaltables==3.1.10
+threadpoolctl==3.5.0
+tifffile==2025.1.10
+tomli==2.2.1
+# torch @ file:///apps/torch-2.4.0a0%2Bgit4451b0e-cp310-cp310-linux_x86_64.whl#sha256=2e472c916044cac5a1a0e0d8b0e12bb943d8522b24ff826c8014dd444dccd378
+# torch_sdaa @ file:///apps/torch_sdaa-2.0.0-cp310-cp310-linux_x86_64.whl#sha256=5aa57889b002e1231fbf806642e1353bfa016297bc25178396e89adc2b1f92e7
+# torchaudio @ file:///apps/torchaudio-2.0.2%2Bda3eb8d-cp310-cp310-linux_x86_64.whl#sha256=46525c02fb7eaa8dafea860428de3d01e437ba8d6ff2cc228d7c71975ac4054b
+# torchdata @ file:///apps/torchdata-0.6.1%2Be1feeb2-py3-none-any.whl#sha256=aa2dc1a7732ea68adfad186978049bf68cc1afdbbdd1e17a8024227ab770e433
+# torchtext @ file:///apps/torchtext-0.15.2a0%2B4571036-cp310-cp310-linux_x86_64.whl#sha256=7e42c684ba366f97b59ec37488bf95e416cce3892b6589200d2b3ad159ee5788
+# torchvision @ file:///apps/torchvision-0.15.1a0%2B42759b1-cp310-cp310-linux_x86_64.whl#sha256=4b904db2d50102415536bc764bbc31c669b90b1b014f90964e9eccaadb2fd9eb
+tqdm==4.67.1
+# typing_extensions @ file:///croot/typing_extensions_1734714854207/work
+tzdata==2024.2
+urllib3==2.3.0
+Werkzeug==3.1.3
+xmltodict==0.14.2
+yapf==0.43.0

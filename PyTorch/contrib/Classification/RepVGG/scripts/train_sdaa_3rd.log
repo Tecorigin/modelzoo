@@ -1,0 +1,2884 @@
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.7
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+/root/miniconda3/envs/zzx/lib/python3.10/site-packages/torch/distributed/launch.py:208: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  main()
+W0122 13:35:41.398000 140339554051904 torch/distributed/run.py:779] 
+W0122 13:35:41.398000 140339554051904 torch/distributed/run.py:779] *****************************************
+W0122 13:35:41.398000 140339554051904 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0122 13:35:41.398000 140339554051904 torch/distributed/run.py:779] *****************************************
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.7
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.7
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.7
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.7
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+==============================================================================================================================
+
+real base lr: 
+real base lr:   real base lr:  0.00250.0025
+0.0025
+==========================================
+==========================================
+
+==========================================
+==========================================
+real base lr:  0.0025
+==========================================
+[2025-01-22 13:35:44 RepVGGplus-L2pse](main.py 418): INFO Full config saved to /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/config.json
+---------------------- RAND AUG 15 distortion!
+---------------------- RAND AUG 15 distortion!
+Compose(
+    RandomResizedCrop(size=(256, 256), scale=(0.08, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=warn)
+    RandomHorizontalFlip(p=0.5)
+    <train.randaug.RandAugPolicy object at 0x7fd8a6967130>
+    ToTensor()
+    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+)
+---------------------- RAND AUG 15 distortion!
+use raw ImageNet data
+Compose(
+    RandomResizedCrop(size=(256, 256), scale=(0.08, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=warn)
+    RandomHorizontalFlip(p=0.5)
+    <train.randaug.RandAugPolicy object at 0x7feaaca070d0>
+    ToTensor()
+    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+)
+use raw ImageNet data
+Compose(
+    RandomResizedCrop(size=(256, 256), scale=(0.08, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=warn)
+    RandomHorizontalFlip(p=0.5)
+    <train.randaug.RandAugPolicy object at 0x7f998b2d70a0>
+    ToTensor()
+    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+)
+use raw ImageNet data
+/root/miniconda3/envs/zzx/lib/python3.10/site-packages/torchvision/datasets/imagenet.py:81: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(file)
+/root/miniconda3/envs/zzx/lib/python3.10/site-packages/torchvision/datasets/imagenet.py:81: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(file)
+/root/miniconda3/envs/zzx/lib/python3.10/site-packages/torchvision/datasets/imagenet.py:81: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(file)
+[2025-01-22 13:35:44 RepVGGplus-L2pse](main.py 421): INFO AMP_OPT_LEVEL: O0
+AUG:
+  AUTO_AUGMENT: rand-m9-mstd0.5-inc1
+  COLOR_JITTER: 0.4
+  CUTMIX: 1.0
+  CUTMIX_MINMAX: null
+  MIXUP: 0.4
+  MIXUP_MODE: batch
+  MIXUP_PROB: 1.0
+  MIXUP_SWITCH_PROB: 0.5
+  PRESET: raug15
+  RECOUNT: 1
+  REMODE: pixel
+  REPROB: 0.25
+BASE:
+- ''
+DATA:
+  BATCH_SIZE: 32
+  CACHE_MODE: part
+  DATASET: imagenet
+  DATA_PATH: /root/data/datasets/imagenet
+  IMG_SIZE: 256
+  INTERPOLATION: bilinear
+  NUM_WORKERS: 8
+  PIN_MEMORY: true
+  TEST_BATCH_SIZE: 32
+  TEST_SIZE: 256
+  ZIP_MODE: false
+EVAL_MODE: false
+LOCAL_RANK: 0
+MODEL:
+  ARCH: RepVGGplus-L2pse
+  LABEL_SMOOTHING: 0.1
+  NUM_CLASSES: 1000
+  RESUME: ''
+OUTPUT: /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment
+PRINT_FREQ: 10
+SAVE_FREQ: 20
+SEED: 0
+TAG: my_experiment
+TEST:
+  CROP: false
+THROUGHPUT_MODE: false
+TRAIN:
+  ACCUMULATION_STEPS: 0
+  AUTO_RESUME: false
+  BASE_LR: 0.0025
+  CLIP_GRAD: 0.0
+  EMA_ALPHA: 0.0
+  EMA_UPDATE_PERIOD: 8
+  EPOCHS: 1
+  LR_SCHEDULER:
+    DECAY_EPOCHS: 30
+    DECAY_RATE: 0.1
+    NAME: cosine
+  MIN_LR: 0.0
+  OPTIMIZER:
+    BETAS:
+    - 0.9
+    - 0.999
+    EPS: 1.0e-08
+    MOMENTUM: 0.9
+    NAME: adamw
+  SCALES_PATH: null
+  START_EPOCH: 0
+  USE_CHECKPOINT: false
+  WARMUP_EPOCHS: 0
+  WARMUP_LR: 2.5e-07
+  WEIGHT_DECAY: 0.1
+
+---------------------- RAND AUG 15 distortion!
+Compose(
+    RandomResizedCrop(size=(256, 256), scale=(0.08, 1.0), ratio=(0.75, 1.3333), interpolation=bilinear, antialias=warn)
+    RandomHorizontalFlip(p=0.5)
+    <train.randaug.RandAugPolicy object at 0x7f723cd9b280>
+    ToTensor()
+    Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225))
+)
+use raw ImageNet data
+/root/miniconda3/envs/zzx/lib/python3.10/site-packages/torchvision/datasets/imagenet.py:81: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(file)
+local rank 0 / global rank 0 successfully build train dataset
+use raw ImageNet data
+local rank 0 / global rank 2 successfully build train dataset
+use raw ImageNet data
+local rank 0 / global rank 1 successfully build train dataset
+use raw ImageNet data
+local rank 0 / global rank 3 successfully build train dataset
+use raw ImageNet data
+local rank 0 / global rank 0 successfully build val dataset
+[2025-01-22 13:35:47 RepVGGplus-L2pse](main.py 80): INFO Creating model:RepVGGplus-L2pse
+local rank 0 / global rank 2 successfully build val dataset
+local rank 0 / global rank 3 successfully build val dataset
+local rank 0 / global rank 1 successfully build val dataset
+stage0.post_se.down.weight USE weight decay
+stage0.post_se.down.bias has no weight decay
+stage0.post_se.up.weight USE weight decay
+stage0.post_se.up.bias has no weight decay
+stage0.rbr_dense.conv.weight USE weight decay
+stage0.rbr_dense.bn.weight has no weight decay
+stage0.rbr_dense.bn.bias has no weight decay
+stage0.rbr_1x1.conv.weight USE weight decay
+stage0.rbr_1x1.bn.weight has no weight decay
+stage0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.0.post_se.down.weight USE weight decay
+stage1.blocks.0.post_se.down.bias has no weight decay
+stage1.blocks.0.post_se.up.weight USE weight decay
+stage1.blocks.0.post_se.up.bias has no weight decay
+stage1.blocks.0.rbr_dense.conv.weight USE weight decay
+stage1.blocks.0.rbr_dense.bn.weight has no weight decay
+stage1.blocks.0.rbr_dense.bn.bias has no weight decay
+stage1.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.1.post_se.down.weight USE weight decay
+stage1.blocks.1.post_se.down.bias has no weight decay
+stage1.blocks.1.post_se.up.weight USE weight decay
+stage1.blocks.1.post_se.up.bias has no weight decay
+stage1.blocks.1.rbr_identity.weight USE weight decay
+stage1.blocks.1.rbr_identity.bias has no weight decay
+stage1.blocks.1.rbr_dense.conv.weight USE weight decay
+stage1.blocks.1.rbr_dense.bn.weight has no weight decay
+stage1.blocks.1.rbr_dense.bn.bias has no weight decay
+stage1.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.2.post_se.down.weight USE weight decay
+stage1.blocks.2.post_se.down.bias has no weight decay
+stage1.blocks.2.post_se.up.weight USE weight decay
+stage1.blocks.2.post_se.up.bias has no weight decay
+stage1.blocks.2.rbr_identity.weight USE weight decay
+stage1.blocks.2.rbr_identity.bias has no weight decay
+stage1.blocks.2.rbr_dense.conv.weight USE weight decay
+stage1.blocks.2.rbr_dense.bn.weight has no weight decay
+stage1.blocks.2.rbr_dense.bn.bias has no weight decay
+stage1.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.3.post_se.down.weight USE weight decay
+stage1.blocks.3.post_se.down.bias has no weight decay
+stage1.blocks.3.post_se.up.weight USE weight decay
+stage1.blocks.3.post_se.up.bias has no weight decay
+stage1.blocks.3.rbr_identity.weight USE weight decay
+stage1.blocks.3.rbr_identity.bias has no weight decay
+stage1.blocks.3.rbr_dense.conv.weight USE weight decay
+stage1.blocks.3.rbr_dense.bn.weight has no weight decay
+stage1.blocks.3.rbr_dense.bn.bias has no weight decay
+stage1.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.4.post_se.down.weight USE weight decay
+stage1.blocks.4.post_se.down.bias has no weight decay
+stage1.blocks.4.post_se.up.weight USE weight decay
+stage1.blocks.4.post_se.up.bias has no weight decay
+stage1.blocks.4.rbr_identity.weight USE weight decay
+stage1.blocks.4.rbr_identity.bias has no weight decay
+stage1.blocks.4.rbr_dense.conv.weight USE weight decay
+stage1.blocks.4.rbr_dense.bn.weight has no weight decay
+stage1.blocks.4.rbr_dense.bn.bias has no weight decay
+stage1.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.5.post_se.down.weight USE weight decay
+stage1.blocks.5.post_se.down.bias has no weight decay
+stage1.blocks.5.post_se.up.weight USE weight decay
+stage1.blocks.5.post_se.up.bias has no weight decay
+stage1.blocks.5.rbr_identity.weight USE weight decay
+stage1.blocks.5.rbr_identity.bias has no weight decay
+stage1.blocks.5.rbr_dense.conv.weight USE weight decay
+stage1.blocks.5.rbr_dense.bn.weight has no weight decay
+stage1.blocks.5.rbr_dense.bn.bias has no weight decay
+stage1.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.6.post_se.down.weight USE weight decay
+stage1.blocks.6.post_se.down.bias has no weight decay
+stage1.blocks.6.post_se.up.weight USE weight decay
+stage1.blocks.6.post_se.up.bias has no weight decay
+stage1.blocks.6.rbr_identity.weight USE weight decay
+stage1.blocks.6.rbr_identity.bias has no weight decay
+stage1.blocks.6.rbr_dense.conv.weight USE weight decay
+stage1.blocks.6.rbr_dense.bn.weight has no weight decay
+stage1.blocks.6.rbr_dense.bn.bias has no weight decay
+stage1.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.7.post_se.down.weight USE weight decay
+stage1.blocks.7.post_se.down.bias has no weight decay
+stage1.blocks.7.post_se.up.weight USE weight decay
+stage1.blocks.7.post_se.up.bias has no weight decay
+stage1.blocks.7.rbr_identity.weight USE weight decay
+stage1.blocks.7.rbr_identity.bias has no weight decay
+stage1.blocks.7.rbr_dense.conv.weight USE weight decay
+stage1.blocks.7.rbr_dense.bn.weight has no weight decay
+stage1.blocks.7.rbr_dense.bn.bias has no weight decay
+stage1.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.0.post_se.down.weight USE weight decay
+stage2.blocks.0.post_se.down.bias has no weight decay
+stage2.blocks.0.post_se.up.weight USE weight decay
+stage2.blocks.0.post_se.up.bias has no weight decay
+stage2.blocks.0.rbr_dense.conv.weight USE weight decay
+stage2.blocks.0.rbr_dense.bn.weight has no weight decay
+stage2.blocks.0.rbr_dense.bn.bias has no weight decay
+stage2.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.1.post_se.down.weight USE weight decay
+stage2.blocks.1.post_se.down.bias has no weight decay
+stage2.blocks.1.post_se.up.weight USE weight decay
+stage2.blocks.1.post_se.up.bias has no weight decay
+stage2.blocks.1.rbr_identity.weight USE weight decay
+stage2.blocks.1.rbr_identity.bias has no weight decay
+stage2.blocks.1.rbr_dense.conv.weight USE weight decay
+stage2.blocks.1.rbr_dense.bn.weight has no weight decay
+stage2.blocks.1.rbr_dense.bn.bias has no weight decay
+stage2.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.2.post_se.down.weight USE weight decay
+stage2.blocks.2.post_se.down.bias has no weight decay
+stage2.blocks.2.post_se.up.weight USE weight decay
+stage2.blocks.2.post_se.up.bias has no weight decay
+stage2.blocks.2.rbr_identity.weight USE weight decay
+stage2.blocks.2.rbr_identity.bias has no weight decay
+stage2.blocks.2.rbr_dense.conv.weight USE weight decay
+stage2.blocks.2.rbr_dense.bn.weight has no weight decay
+stage2.blocks.2.rbr_dense.bn.bias has no weight decay
+stage2.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.3.post_se.down.weight USE weight decay
+stage2.blocks.3.post_se.down.bias has no weight decay
+stage2.blocks.3.post_se.up.weight USE weight decay
+stage2.blocks.3.post_se.up.bias has no weight decay
+stage2.blocks.3.rbr_identity.weight USE weight decay
+stage2.blocks.3.rbr_identity.bias has no weight decay
+stage2.blocks.3.rbr_dense.conv.weight USE weight decay
+stage2.blocks.3.rbr_dense.bn.weight has no weight decay
+stage2.blocks.3.rbr_dense.bn.bias has no weight decay
+stage2.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.4.post_se.down.weight USE weight decay
+stage2.blocks.4.post_se.down.bias has no weight decay
+stage2.blocks.4.post_se.up.weight USE weight decay
+stage2.blocks.4.post_se.up.bias has no weight decay
+stage2.blocks.4.rbr_identity.weight USE weight decay
+stage2.blocks.4.rbr_identity.bias has no weight decay
+stage2.blocks.4.rbr_dense.conv.weight USE weight decay
+stage2.blocks.4.rbr_dense.bn.weight has no weight decay
+stage2.blocks.4.rbr_dense.bn.bias has no weight decay
+stage2.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.5.post_se.down.weight USE weight decay
+stage2.blocks.5.post_se.down.bias has no weight decay
+stage2.blocks.5.post_se.up.weight USE weight decay
+stage2.blocks.5.post_se.up.bias has no weight decay
+stage2.blocks.5.rbr_identity.weight USE weight decay
+stage2.blocks.5.rbr_identity.bias has no weight decay
+stage2.blocks.5.rbr_dense.conv.weight USE weight decay
+stage2.blocks.5.rbr_dense.bn.weight has no weight decay
+stage2.blocks.5.rbr_dense.bn.bias has no weight decay
+stage2.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.6.post_se.down.weight USE weight decay
+stage2.blocks.6.post_se.down.bias has no weight decay
+stage2.blocks.6.post_se.up.weight USE weight decay
+stage2.blocks.6.post_se.up.bias has no weight decay
+stage2.blocks.6.rbr_identity.weight USE weight decay
+stage2.blocks.6.rbr_identity.bias has no weight decay
+stage2.blocks.6.rbr_dense.conv.weight USE weight decay
+stage2.blocks.6.rbr_dense.bn.weight has no weight decay
+stage2.blocks.6.rbr_dense.bn.bias has no weight decay
+stage2.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.7.post_se.down.weight USE weight decay
+stage2.blocks.7.post_se.down.bias has no weight decay
+stage2.blocks.7.post_se.up.weight USE weight decay
+stage2.blocks.7.post_se.up.bias has no weight decay
+stage2.blocks.7.rbr_identity.weight USE weight decay
+stage2.blocks.7.rbr_identity.bias has no weight decay
+stage2.blocks.7.rbr_dense.conv.weight USE weight decay
+stage2.blocks.7.rbr_dense.bn.weight has no weight decay
+stage2.blocks.7.rbr_dense.bn.bias has no weight decay
+stage2.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.8.post_se.down.weight USE weight decay
+stage2.blocks.8.post_se.down.bias has no weight decay
+stage2.blocks.8.post_se.up.weight USE weight decay
+stage2.blocks.8.post_se.up.bias has no weight decay
+stage2.blocks.8.rbr_identity.weight USE weight decay
+stage2.blocks.8.rbr_identity.bias has no weight decay
+stage2.blocks.8.rbr_dense.conv.weight USE weight decay
+stage2.blocks.8.rbr_dense.bn.weight has no weight decay
+stage2.blocks.8.rbr_dense.bn.bias has no weight decay
+stage2.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.9.post_se.down.weight USE weight decay
+stage2.blocks.9.post_se.down.bias has no weight decay
+stage2.blocks.9.post_se.up.weight USE weight decay
+stage2.blocks.9.post_se.up.bias has no weight decay
+stage2.blocks.9.rbr_identity.weight USE weight decay
+stage2.blocks.9.rbr_identity.bias has no weight decay
+stage2.blocks.9.rbr_dense.conv.weight USE weight decay
+stage2.blocks.9.rbr_dense.bn.weight has no weight decay
+stage2.blocks.9.rbr_dense.bn.bias has no weight decay
+stage2.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.10.post_se.down.weight USE weight decay
+stage2.blocks.10.post_se.down.bias has no weight decay
+stage2.blocks.10.post_se.up.weight USE weight decay
+stage2.blocks.10.post_se.up.bias has no weight decay
+stage2.blocks.10.rbr_identity.weight USE weight decay
+stage2.blocks.10.rbr_identity.bias has no weight decay
+stage2.blocks.10.rbr_dense.conv.weight USE weight decay
+stage2.blocks.10.rbr_dense.bn.weight has no weight decay
+stage2.blocks.10.rbr_dense.bn.bias has no weight decay
+stage2.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.11.post_se.down.weight USE weight decay
+stage2.blocks.11.post_se.down.bias has no weight decay
+stage2.blocks.11.post_se.up.weight USE weight decay
+stage2.blocks.11.post_se.up.bias has no weight decay
+stage2.blocks.11.rbr_identity.weight USE weight decay
+stage2.blocks.11.rbr_identity.bias has no weight decay
+stage2.blocks.11.rbr_dense.conv.weight USE weight decay
+stage2.blocks.11.rbr_dense.bn.weight has no weight decay
+stage2.blocks.11.rbr_dense.bn.bias has no weight decay
+stage2.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.12.post_se.down.weight USE weight decay
+stage2.blocks.12.post_se.down.bias has no weight decay
+stage2.blocks.12.post_se.up.weight USE weight decay
+stage2.blocks.12.post_se.up.bias has no weight decay
+stage2.blocks.12.rbr_identity.weight USE weight decay
+stage2.blocks.12.rbr_identity.bias has no weight decay
+stage2.blocks.12.rbr_dense.conv.weight USE weight decay
+stage2.blocks.12.rbr_dense.bn.weight has no weight decay
+stage2.blocks.12.rbr_dense.bn.bias has no weight decay
+stage2.blocks.12.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.12.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.12.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.13.post_se.down.weight USE weight decay
+stage2.blocks.13.post_se.down.bias has no weight decay
+stage2.blocks.13.post_se.up.weight USE weight decay
+stage2.blocks.13.post_se.up.bias has no weight decay
+stage2.blocks.13.rbr_identity.weight USE weight decay
+stage2.blocks.13.rbr_identity.bias has no weight decay
+stage2.blocks.13.rbr_dense.conv.weight USE weight decay
+stage2.blocks.13.rbr_dense.bn.weight has no weight decay
+stage2.blocks.13.rbr_dense.bn.bias has no weight decay
+stage2.blocks.13.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.13.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.13.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.0.post_se.down.weight USE weight decay
+stage3_first.blocks.0.post_se.down.bias has no weight decay
+stage3_first.blocks.0.post_se.up.weight USE weight decay
+stage3_first.blocks.0.post_se.up.bias has no weight decay
+stage3_first.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.1.post_se.down.weight USE weight decay
+stage3_first.blocks.1.post_se.down.bias has no weight decay
+stage3_first.blocks.1.post_se.up.weight USE weight decay
+stage3_first.blocks.1.post_se.up.bias has no weight decay
+stage3_first.blocks.1.rbr_identity.weight USE weight decay
+stage3_first.blocks.1.rbr_identity.bias has no weight decay
+stage3_first.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.2.post_se.down.weight USE weight decay
+stage3_first.blocks.2.post_se.down.bias has no weight decay
+stage3_first.blocks.2.post_se.up.weight USE weight decay
+stage3_first.blocks.2.post_se.up.bias has no weight decay
+stage3_first.blocks.2.rbr_identity.weight USE weight decay
+stage3_first.blocks.2.rbr_identity.bias has no weight decay
+stage3_first.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.3.post_se.down.weight USE weight decay
+stage3_first.blocks.3.post_se.down.bias has no weight decay
+stage3_first.blocks.3.post_se.up.weight USE weight decay
+stage3_first.blocks.3.post_se.up.bias has no weight decay
+stage3_first.blocks.3.rbr_identity.weight USE weight decay
+stage3_first.blocks.3.rbr_identity.bias has no weight decay
+stage3_first.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.4.post_se.down.weight USE weight decay
+stage3_first.blocks.4.post_se.down.bias has no weight decay
+stage3_first.blocks.4.post_se.up.weight USE weight decay
+stage3_first.blocks.4.post_se.up.bias has no weight decay
+stage3_first.blocks.4.rbr_identity.weight USE weight decay
+stage3_first.blocks.4.rbr_identity.bias has no weight decay
+stage3_first.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.5.post_se.down.weight USE weight decay
+stage3_first.blocks.5.post_se.down.bias has no weight decay
+stage3_first.blocks.5.post_se.up.weight USE weight decay
+stage3_first.blocks.5.post_se.up.bias has no weight decay
+stage3_first.blocks.5.rbr_identity.weight USE weight decay
+stage3_first.blocks.5.rbr_identity.bias has no weight decay
+stage3_first.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.6.post_se.down.weight USE weight decay
+stage3_first.blocks.6.post_se.down.bias has no weight decay
+stage3_first.blocks.6.post_se.up.weight USE weight decay
+stage3_first.blocks.6.post_se.up.bias has no weight decay
+stage3_first.blocks.6.rbr_identity.weight USE weight decay
+stage3_first.blocks.6.rbr_identity.bias has no weight decay
+stage3_first.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.7.post_se.down.weight USE weight decay
+stage3_first.blocks.7.post_se.down.bias has no weight decay
+stage3_first.blocks.7.post_se.up.weight USE weight decay
+stage3_first.blocks.7.post_se.up.bias has no weight decay
+stage3_first.blocks.7.rbr_identity.weight USE weight decay
+stage3_first.blocks.7.rbr_identity.bias has no weight decay
+stage3_first.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.8.post_se.down.weight USE weight decay
+stage3_first.blocks.8.post_se.down.bias has no weight decay
+stage3_first.blocks.8.post_se.up.weight USE weight decay
+stage3_first.blocks.8.post_se.up.bias has no weight decay
+stage3_first.blocks.8.rbr_identity.weight USE weight decay
+stage3_first.blocks.8.rbr_identity.bias has no weight decay
+stage3_first.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.9.post_se.down.weight USE weight decay
+stage3_first.blocks.9.post_se.down.bias has no weight decay
+stage3_first.blocks.9.post_se.up.weight USE weight decay
+stage3_first.blocks.9.post_se.up.bias has no weight decay
+stage3_first.blocks.9.rbr_identity.weight USE weight decay
+stage3_first.blocks.9.rbr_identity.bias has no weight decay
+stage3_first.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.10.post_se.down.weight USE weight decay
+stage3_first.blocks.10.post_se.down.bias has no weight decay
+stage3_first.blocks.10.post_se.up.weight USE weight decay
+stage3_first.blocks.10.post_se.up.bias has no weight decay
+stage3_first.blocks.10.rbr_identity.weight USE weight decay
+stage3_first.blocks.10.rbr_identity.bias has no weight decay
+stage3_first.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.11.post_se.down.weight USE weight decay
+stage3_first.blocks.11.post_se.down.bias has no weight decay
+stage3_first.blocks.11.post_se.up.weight USE weight decay
+stage3_first.blocks.11.post_se.up.bias has no weight decay
+stage3_first.blocks.11.rbr_identity.weight USE weight decay
+stage3_first.blocks.11.rbr_identity.bias has no weight decay
+stage3_first.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.0.post_se.down.weight USE weight decay
+stage3_second.blocks.0.post_se.down.bias has no weight decay
+stage3_second.blocks.0.post_se.up.weight USE weight decay
+stage3_second.blocks.0.post_se.up.bias has no weight decay
+stage3_second.blocks.0.rbr_identity.weight USE weight decay
+stage3_second.blocks.0.rbr_identity.bias has no weight decay
+stage3_second.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.1.post_se.down.weight USE weight decay
+stage3_second.blocks.1.post_se.down.bias has no weight decay
+stage3_second.blocks.1.post_se.up.weight USE weight decay
+stage3_second.blocks.1.post_se.up.bias has no weight decay
+stage3_second.blocks.1.rbr_identity.weight USE weight decay
+stage3_second.blocks.1.rbr_identity.bias has no weight decay
+stage3_second.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.2.post_se.down.weight USE weight decay
+stage3_second.blocks.2.post_se.down.bias has no weight decay
+stage3_second.blocks.2.post_se.up.weight USE weight decay
+stage3_second.blocks.2.post_se.up.bias has no weight decay
+stage3_second.blocks.2.rbr_identity.weight USE weight decay
+stage3_second.blocks.2.rbr_identity.bias has no weight decay
+stage3_second.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.3.post_se.down.weight USE weight decay
+stage3_second.blocks.3.post_se.down.bias has no weight decay
+stage3_second.blocks.3.post_se.up.weight USE weight decay
+stage3_second.blocks.3.post_se.up.bias has no weight decay
+stage3_second.blocks.3.rbr_identity.weight USE weight decay
+stage3_second.blocks.3.rbr_identity.bias has no weight decay
+stage3_second.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.4.post_se.down.weight USE weight decay
+stage3_second.blocks.4.post_se.down.bias has no weight decay
+stage3_second.blocks.4.post_se.up.weight USE weight decay
+stage3_second.blocks.4.post_se.up.bias has no weight decay
+stage3_second.blocks.4.rbr_identity.weight USE weight decay
+stage3_second.blocks.4.rbr_identity.bias has no weight decay
+stage3_second.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.5.post_se.down.weight USE weight decay
+stage3_second.blocks.5.post_se.down.bias has no weight decay
+stage3_second.blocks.5.post_se.up.weight USE weight decay
+stage3_second.blocks.5.post_se.up.bias has no weight decay
+stage3_second.blocks.5.rbr_identity.weight USE weight decay
+stage3_second.blocks.5.rbr_identity.bias has no weight decay
+stage3_second.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.6.post_se.down.weight USE weight decay
+stage3_second.blocks.6.post_se.down.bias has no weight decay
+stage3_second.blocks.6.post_se.up.weight USE weight decay
+stage3_second.blocks.6.post_se.up.bias has no weight decay
+stage3_second.blocks.6.rbr_identity.weight USE weight decay
+stage3_second.blocks.6.rbr_identity.bias has no weight decay
+stage3_second.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.7.post_se.down.weight USE weight decay
+stage3_second.blocks.7.post_se.down.bias has no weight decay
+stage3_second.blocks.7.post_se.up.weight USE weight decay
+stage3_second.blocks.7.post_se.up.bias has no weight decay
+stage3_second.blocks.7.rbr_identity.weight USE weight decay
+stage3_second.blocks.7.rbr_identity.bias has no weight decay
+stage3_second.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.8.post_se.down.weight USE weight decay
+stage3_second.blocks.8.post_se.down.bias has no weight decay
+stage3_second.blocks.8.post_se.up.weight USE weight decay
+stage3_second.blocks.8.post_se.up.bias has no weight decay
+stage3_second.blocks.8.rbr_identity.weight USE weight decay
+stage3_second.blocks.8.rbr_identity.bias has no weight decay
+stage3_second.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.9.post_se.down.weight USE weight decay
+stage3_second.blocks.9.post_se.down.bias has no weight decay
+stage3_second.blocks.9.post_se.up.weight USE weight decay
+stage3_second.blocks.9.post_se.up.bias has no weight decay
+stage3_second.blocks.9.rbr_identity.weight USE weight decay
+stage3_second.blocks.9.rbr_identity.bias has no weight decay
+stage3_second.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.10.post_se.down.weight USE weight decay
+stage3_second.blocks.10.post_se.down.bias has no weight decay
+stage3_second.blocks.10.post_se.up.weight USE weight decay
+stage3_second.blocks.10.post_se.up.bias has no weight decay
+stage3_second.blocks.10.rbr_identity.weight USE weight decay
+stage3_second.blocks.10.rbr_identity.bias has no weight decay
+stage3_second.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.11.post_se.down.weight USE weight decay
+stage3_second.blocks.11.post_se.down.bias has no weight decay
+stage3_second.blocks.11.post_se.up.weight USE weight decay
+stage3_second.blocks.11.post_se.up.bias has no weight decay
+stage3_second.blocks.11.rbr_identity.weight USE weight decay
+stage3_second.blocks.11.rbr_identity.bias has no weight decay
+stage3_second.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage4.blocks.0.post_se.down.weight USE weight decay
+stage4.blocks.0.post_se.down.bias has no weight decay
+stage4.blocks.0.post_se.up.weight USE weight decay
+stage4.blocks.0.post_se.up.bias has no weight decay
+stage4.blocks.0.rbr_dense.conv.weight USE weight decay
+stage4.blocks.0.rbr_dense.bn.weight has no weight decay
+stage4.blocks.0.rbr_dense.bn.bias has no weight decay
+stage4.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage4.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage4.blocks.0.rbr_1x1.bn.bias has no weight decay
+linear.weight USE weight decay
+linear.bias has no weight decay
+stage1_aux.0.conv.weight USE weight decay
+stage1_aux.0.bn.weight has no weight decay
+stage1_aux.0.bn.bias has no weight decay
+stage1_aux.3.weight USE weight decay
+stage1_aux.3.bias has no weight decay
+stage2_aux.0.conv.weight USE weight decay
+stage2_aux.0.bn.weight has no weight decay
+stage2_aux.0.bn.bias has no weight decay
+stage2_aux.3.weight USE weight decay
+stage2_aux.3.bias has no weight decay
+stage3_first_aux.0.conv.weight USE weight decay
+stage3_first_aux.0.bn.weight has no weight decay
+stage3_first_aux.0.bn.bias has no weight decay
+stage3_first_aux.3.weight USE weight decay
+stage3_first_aux.3.bias has no weight decay
+stage0.post_se.down.weight USE weight decay
+stage0.post_se.down.bias has no weight decay
+stage0.post_se.up.weight USE weight decay
+stage0.post_se.up.bias has no weight decay
+stage0.rbr_dense.conv.weight USE weight decay
+stage0.rbr_dense.bn.weight has no weight decay
+stage0.rbr_dense.bn.bias has no weight decay
+stage0.rbr_1x1.conv.weight USE weight decay
+stage0.rbr_1x1.bn.weight has no weight decay
+stage0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.0.post_se.down.weight USE weight decay
+stage1.blocks.0.post_se.down.bias has no weight decay
+stage1.blocks.0.post_se.up.weight USE weight decay
+stage1.blocks.0.post_se.up.bias has no weight decay
+stage1.blocks.0.rbr_dense.conv.weight USE weight decay
+stage1.blocks.0.rbr_dense.bn.weight has no weight decay
+stage1.blocks.0.rbr_dense.bn.bias has no weight decay
+stage1.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.1.post_se.down.weight USE weight decay
+stage1.blocks.1.post_se.down.bias has no weight decay
+stage1.blocks.1.post_se.up.weight USE weight decay
+stage1.blocks.1.post_se.up.bias has no weight decay
+stage1.blocks.1.rbr_identity.weight USE weight decay
+stage1.blocks.1.rbr_identity.bias has no weight decay
+stage1.blocks.1.rbr_dense.conv.weight USE weight decay
+stage1.blocks.1.rbr_dense.bn.weight has no weight decay
+stage1.blocks.1.rbr_dense.bn.bias has no weight decay
+stage1.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.2.post_se.down.weight USE weight decay
+stage1.blocks.2.post_se.down.bias has no weight decay
+stage1.blocks.2.post_se.up.weight USE weight decay
+stage1.blocks.2.post_se.up.bias has no weight decay
+stage1.blocks.2.rbr_identity.weight USE weight decay
+stage1.blocks.2.rbr_identity.bias has no weight decay
+stage1.blocks.2.rbr_dense.conv.weight USE weight decay
+stage1.blocks.2.rbr_dense.bn.weight has no weight decay
+stage1.blocks.2.rbr_dense.bn.bias has no weight decay
+stage1.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.3.post_se.down.weight USE weight decay
+stage1.blocks.3.post_se.down.bias has no weight decay
+stage1.blocks.3.post_se.up.weight USE weight decay
+stage1.blocks.3.post_se.up.bias has no weight decay
+stage1.blocks.3.rbr_identity.weight USE weight decay
+stage1.blocks.3.rbr_identity.bias has no weight decay
+stage1.blocks.3.rbr_dense.conv.weight USE weight decay
+stage1.blocks.3.rbr_dense.bn.weight has no weight decay
+stage1.blocks.3.rbr_dense.bn.bias has no weight decay
+stage1.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.4.post_se.down.weight USE weight decay
+stage1.blocks.4.post_se.down.bias has no weight decay
+stage1.blocks.4.post_se.up.weight USE weight decay
+stage1.blocks.4.post_se.up.bias has no weight decay
+stage1.blocks.4.rbr_identity.weight USE weight decay
+stage1.blocks.4.rbr_identity.bias has no weight decay
+stage1.blocks.4.rbr_dense.conv.weight USE weight decay
+stage1.blocks.4.rbr_dense.bn.weight has no weight decay
+stage1.blocks.4.rbr_dense.bn.bias has no weight decay
+stage1.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.5.post_se.down.weight USE weight decay
+stage1.blocks.5.post_se.down.bias has no weight decay
+stage1.blocks.5.post_se.up.weight USE weight decay
+stage1.blocks.5.post_se.up.bias has no weight decay
+stage1.blocks.5.rbr_identity.weight USE weight decay
+stage1.blocks.5.rbr_identity.bias has no weight decay
+stage1.blocks.5.rbr_dense.conv.weight USE weight decay
+stage1.blocks.5.rbr_dense.bn.weight has no weight decay
+stage1.blocks.5.rbr_dense.bn.bias has no weight decay
+stage1.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.6.post_se.down.weight USE weight decay
+stage1.blocks.6.post_se.down.bias has no weight decay
+stage1.blocks.6.post_se.up.weight USE weight decay
+stage1.blocks.6.post_se.up.bias has no weight decay
+stage1.blocks.6.rbr_identity.weight USE weight decay
+stage1.blocks.6.rbr_identity.bias has no weight decay
+stage1.blocks.6.rbr_dense.conv.weight USE weight decay
+stage1.blocks.6.rbr_dense.bn.weight has no weight decay
+stage1.blocks.6.rbr_dense.bn.bias has no weight decay
+stage1.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.7.post_se.down.weight USE weight decay
+stage1.blocks.7.post_se.down.bias has no weight decay
+stage1.blocks.7.post_se.up.weight USE weight decay
+stage1.blocks.7.post_se.up.bias has no weight decay
+stage1.blocks.7.rbr_identity.weight USE weight decay
+stage1.blocks.7.rbr_identity.bias has no weight decay
+stage1.blocks.7.rbr_dense.conv.weight USE weight decay
+stage1.blocks.7.rbr_dense.bn.weight has no weight decay
+stage1.blocks.7.rbr_dense.bn.bias has no weight decay
+stage1.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.0.post_se.down.weight USE weight decay
+stage2.blocks.0.post_se.down.bias has no weight decay
+stage2.blocks.0.post_se.up.weight USE weight decay
+stage2.blocks.0.post_se.up.bias has no weight decay
+stage2.blocks.0.rbr_dense.conv.weight USE weight decay
+stage2.blocks.0.rbr_dense.bn.weight has no weight decay
+stage2.blocks.0.rbr_dense.bn.bias has no weight decay
+stage2.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.1.post_se.down.weight USE weight decay
+stage2.blocks.1.post_se.down.bias has no weight decay
+stage2.blocks.1.post_se.up.weight USE weight decay
+stage2.blocks.1.post_se.up.bias has no weight decay
+stage2.blocks.1.rbr_identity.weight USE weight decay
+stage2.blocks.1.rbr_identity.bias has no weight decay
+stage2.blocks.1.rbr_dense.conv.weight USE weight decay
+stage2.blocks.1.rbr_dense.bn.weight has no weight decay
+stage2.blocks.1.rbr_dense.bn.bias has no weight decay
+stage2.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.2.post_se.down.weight USE weight decay
+stage2.blocks.2.post_se.down.bias has no weight decay
+stage2.blocks.2.post_se.up.weight USE weight decay
+stage2.blocks.2.post_se.up.bias has no weight decay
+stage2.blocks.2.rbr_identity.weight USE weight decay
+stage2.blocks.2.rbr_identity.bias has no weight decay
+stage2.blocks.2.rbr_dense.conv.weight USE weight decay
+stage2.blocks.2.rbr_dense.bn.weight has no weight decay
+stage2.blocks.2.rbr_dense.bn.bias has no weight decay
+stage2.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.3.post_se.down.weight USE weight decay
+stage2.blocks.3.post_se.down.bias has no weight decay
+stage2.blocks.3.post_se.up.weight USE weight decay
+stage2.blocks.3.post_se.up.bias has no weight decay
+stage2.blocks.3.rbr_identity.weight USE weight decay
+stage2.blocks.3.rbr_identity.bias has no weight decay
+stage2.blocks.3.rbr_dense.conv.weight USE weight decay
+stage2.blocks.3.rbr_dense.bn.weight has no weight decay
+stage2.blocks.3.rbr_dense.bn.bias has no weight decay
+stage2.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.4.post_se.down.weight USE weight decay
+stage2.blocks.4.post_se.down.bias has no weight decay
+stage2.blocks.4.post_se.up.weight USE weight decay
+stage2.blocks.4.post_se.up.bias has no weight decay
+stage2.blocks.4.rbr_identity.weight USE weight decay
+stage2.blocks.4.rbr_identity.bias has no weight decay
+stage2.blocks.4.rbr_dense.conv.weight USE weight decay
+stage2.blocks.4.rbr_dense.bn.weight has no weight decay
+stage2.blocks.4.rbr_dense.bn.bias has no weight decay
+stage2.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.5.post_se.down.weight USE weight decay
+stage2.blocks.5.post_se.down.bias has no weight decay
+stage2.blocks.5.post_se.up.weight USE weight decay
+stage2.blocks.5.post_se.up.bias has no weight decay
+stage2.blocks.5.rbr_identity.weight USE weight decay
+stage2.blocks.5.rbr_identity.bias has no weight decay
+stage2.blocks.5.rbr_dense.conv.weight USE weight decay
+stage2.blocks.5.rbr_dense.bn.weight has no weight decay
+stage2.blocks.5.rbr_dense.bn.bias has no weight decay
+stage2.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.6.post_se.down.weight USE weight decay
+stage2.blocks.6.post_se.down.bias has no weight decay
+stage2.blocks.6.post_se.up.weight USE weight decay
+stage2.blocks.6.post_se.up.bias has no weight decay
+stage2.blocks.6.rbr_identity.weight USE weight decay
+stage2.blocks.6.rbr_identity.bias has no weight decay
+stage2.blocks.6.rbr_dense.conv.weight USE weight decay
+stage2.blocks.6.rbr_dense.bn.weight has no weight decay
+stage2.blocks.6.rbr_dense.bn.bias has no weight decay
+stage2.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.7.post_se.down.weight USE weight decay
+stage2.blocks.7.post_se.down.bias has no weight decay
+stage2.blocks.7.post_se.up.weight USE weight decay
+stage2.blocks.7.post_se.up.bias has no weight decay
+stage2.blocks.7.rbr_identity.weight USE weight decay
+stage2.blocks.7.rbr_identity.bias has no weight decay
+stage2.blocks.7.rbr_dense.conv.weight USE weight decay
+stage2.blocks.7.rbr_dense.bn.weight has no weight decay
+stage2.blocks.7.rbr_dense.bn.bias has no weight decay
+stage2.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.8.post_se.down.weight USE weight decay
+stage2.blocks.8.post_se.down.bias has no weight decay
+stage2.blocks.8.post_se.up.weight USE weight decay
+stage2.blocks.8.post_se.up.bias has no weight decay
+stage2.blocks.8.rbr_identity.weight USE weight decay
+stage2.blocks.8.rbr_identity.bias has no weight decay
+stage2.blocks.8.rbr_dense.conv.weight USE weight decay
+stage2.blocks.8.rbr_dense.bn.weight has no weight decay
+stage2.blocks.8.rbr_dense.bn.bias has no weight decay
+stage2.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.9.post_se.down.weight USE weight decay
+stage2.blocks.9.post_se.down.bias has no weight decay
+stage2.blocks.9.post_se.up.weight USE weight decay
+stage2.blocks.9.post_se.up.bias has no weight decay
+stage2.blocks.9.rbr_identity.weight USE weight decay
+stage2.blocks.9.rbr_identity.bias has no weight decay
+stage2.blocks.9.rbr_dense.conv.weight USE weight decay
+stage2.blocks.9.rbr_dense.bn.weight has no weight decay
+stage2.blocks.9.rbr_dense.bn.bias has no weight decay
+stage2.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.10.post_se.down.weight USE weight decay
+stage2.blocks.10.post_se.down.bias has no weight decay
+stage2.blocks.10.post_se.up.weight USE weight decay
+stage2.blocks.10.post_se.up.bias has no weight decay
+stage2.blocks.10.rbr_identity.weight USE weight decay
+stage2.blocks.10.rbr_identity.bias has no weight decay
+stage2.blocks.10.rbr_dense.conv.weight USE weight decay
+stage2.blocks.10.rbr_dense.bn.weight has no weight decay
+stage2.blocks.10.rbr_dense.bn.bias has no weight decay
+stage2.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.11.post_se.down.weight USE weight decay
+stage2.blocks.11.post_se.down.bias has no weight decay
+stage2.blocks.11.post_se.up.weight USE weight decay
+stage2.blocks.11.post_se.up.bias has no weight decay
+stage2.blocks.11.rbr_identity.weight USE weight decay
+stage2.blocks.11.rbr_identity.bias has no weight decay
+stage2.blocks.11.rbr_dense.conv.weight USE weight decay
+stage2.blocks.11.rbr_dense.bn.weight has no weight decay
+stage2.blocks.11.rbr_dense.bn.bias has no weight decay
+stage2.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.12.post_se.down.weight USE weight decay
+stage2.blocks.12.post_se.down.bias has no weight decay
+stage2.blocks.12.post_se.up.weight USE weight decay
+stage2.blocks.12.post_se.up.bias has no weight decay
+stage2.blocks.12.rbr_identity.weight USE weight decay
+stage2.blocks.12.rbr_identity.bias has no weight decay
+stage2.blocks.12.rbr_dense.conv.weight USE weight decay
+stage2.blocks.12.rbr_dense.bn.weight has no weight decay
+stage2.blocks.12.rbr_dense.bn.bias has no weight decay
+stage2.blocks.12.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.12.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.12.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.13.post_se.down.weight USE weight decay
+stage2.blocks.13.post_se.down.bias has no weight decay
+stage2.blocks.13.post_se.up.weight USE weight decay
+stage2.blocks.13.post_se.up.bias has no weight decay
+stage2.blocks.13.rbr_identity.weight USE weight decay
+stage2.blocks.13.rbr_identity.bias has no weight decay
+stage2.blocks.13.rbr_dense.conv.weight USE weight decay
+stage2.blocks.13.rbr_dense.bn.weight has no weight decay
+stage2.blocks.13.rbr_dense.bn.bias has no weight decay
+stage2.blocks.13.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.13.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.13.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.0.post_se.down.weight USE weight decay
+stage3_first.blocks.0.post_se.down.bias has no weight decay
+stage3_first.blocks.0.post_se.up.weight USE weight decay
+stage3_first.blocks.0.post_se.up.bias has no weight decay
+stage3_first.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.1.post_se.down.weight USE weight decay
+stage3_first.blocks.1.post_se.down.bias has no weight decay
+stage3_first.blocks.1.post_se.up.weight USE weight decay
+stage3_first.blocks.1.post_se.up.bias has no weight decay
+stage3_first.blocks.1.rbr_identity.weight USE weight decay
+stage3_first.blocks.1.rbr_identity.bias has no weight decay
+stage3_first.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.2.post_se.down.weight USE weight decay
+stage3_first.blocks.2.post_se.down.bias has no weight decay
+stage3_first.blocks.2.post_se.up.weight USE weight decay
+stage3_first.blocks.2.post_se.up.bias has no weight decay
+stage3_first.blocks.2.rbr_identity.weight USE weight decay
+stage3_first.blocks.2.rbr_identity.bias has no weight decay
+stage3_first.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.3.post_se.down.weight USE weight decay
+stage3_first.blocks.3.post_se.down.bias has no weight decay
+stage3_first.blocks.3.post_se.up.weight USE weight decay
+stage3_first.blocks.3.post_se.up.bias has no weight decay
+stage3_first.blocks.3.rbr_identity.weight USE weight decay
+stage3_first.blocks.3.rbr_identity.bias has no weight decay
+stage3_first.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.4.post_se.down.weight USE weight decay
+stage3_first.blocks.4.post_se.down.bias has no weight decay
+stage3_first.blocks.4.post_se.up.weight USE weight decay
+stage3_first.blocks.4.post_se.up.bias has no weight decay
+stage3_first.blocks.4.rbr_identity.weight USE weight decay
+stage3_first.blocks.4.rbr_identity.bias has no weight decay
+stage3_first.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.5.post_se.down.weight USE weight decay
+stage3_first.blocks.5.post_se.down.bias has no weight decay
+stage3_first.blocks.5.post_se.up.weight USE weight decay
+stage3_first.blocks.5.post_se.up.bias has no weight decay
+stage3_first.blocks.5.rbr_identity.weight USE weight decay
+stage3_first.blocks.5.rbr_identity.bias has no weight decay
+stage3_first.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.6.post_se.down.weight USE weight decay
+stage3_first.blocks.6.post_se.down.bias has no weight decay
+stage3_first.blocks.6.post_se.up.weight USE weight decay
+stage3_first.blocks.6.post_se.up.bias has no weight decay
+stage3_first.blocks.6.rbr_identity.weight USE weight decay
+stage3_first.blocks.6.rbr_identity.bias has no weight decay
+stage3_first.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.7.post_se.down.weight USE weight decay
+stage3_first.blocks.7.post_se.down.bias has no weight decay
+stage3_first.blocks.7.post_se.up.weight USE weight decay
+stage3_first.blocks.7.post_se.up.bias has no weight decay
+stage3_first.blocks.7.rbr_identity.weight USE weight decay
+stage3_first.blocks.7.rbr_identity.bias has no weight decay
+stage3_first.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.8.post_se.down.weight USE weight decay
+stage3_first.blocks.8.post_se.down.bias has no weight decay
+stage3_first.blocks.8.post_se.up.weight USE weight decay
+stage3_first.blocks.8.post_se.up.bias has no weight decay
+stage3_first.blocks.8.rbr_identity.weight USE weight decay
+stage3_first.blocks.8.rbr_identity.bias has no weight decay
+stage3_first.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.9.post_se.down.weight USE weight decay
+stage3_first.blocks.9.post_se.down.bias has no weight decay
+stage3_first.blocks.9.post_se.up.weight USE weight decay
+stage3_first.blocks.9.post_se.up.bias has no weight decay
+stage3_first.blocks.9.rbr_identity.weight USE weight decay
+stage3_first.blocks.9.rbr_identity.bias has no weight decay
+stage3_first.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.10.post_se.down.weight USE weight decay
+stage3_first.blocks.10.post_se.down.bias has no weight decay
+stage3_first.blocks.10.post_se.up.weight USE weight decay
+stage3_first.blocks.10.post_se.up.bias has no weight decay
+stage3_first.blocks.10.rbr_identity.weight USE weight decay
+stage3_first.blocks.10.rbr_identity.bias has no weight decay
+stage3_first.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.11.post_se.down.weight USE weight decay
+stage3_first.blocks.11.post_se.down.bias has no weight decay
+stage3_first.blocks.11.post_se.up.weight USE weight decay
+stage3_first.blocks.11.post_se.up.bias has no weight decay
+stage3_first.blocks.11.rbr_identity.weight USE weight decay
+stage3_first.blocks.11.rbr_identity.bias has no weight decay
+stage3_first.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.0.post_se.down.weight USE weight decay
+stage3_second.blocks.0.post_se.down.bias has no weight decay
+stage3_second.blocks.0.post_se.up.weight USE weight decay
+stage3_second.blocks.0.post_se.up.bias has no weight decay
+stage3_second.blocks.0.rbr_identity.weight USE weight decay
+stage3_second.blocks.0.rbr_identity.bias has no weight decay
+stage3_second.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.1.post_se.down.weight USE weight decay
+stage3_second.blocks.1.post_se.down.bias has no weight decay
+stage3_second.blocks.1.post_se.up.weight USE weight decay
+stage3_second.blocks.1.post_se.up.bias has no weight decay
+stage3_second.blocks.1.rbr_identity.weight USE weight decay
+stage3_second.blocks.1.rbr_identity.bias has no weight decay
+stage3_second.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.2.post_se.down.weight USE weight decay
+stage3_second.blocks.2.post_se.down.bias has no weight decay
+stage3_second.blocks.2.post_se.up.weight USE weight decay
+stage3_second.blocks.2.post_se.up.bias has no weight decay
+stage3_second.blocks.2.rbr_identity.weight USE weight decay
+stage3_second.blocks.2.rbr_identity.bias has no weight decay
+stage3_second.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.3.post_se.down.weight USE weight decay
+stage3_second.blocks.3.post_se.down.bias has no weight decay
+stage3_second.blocks.3.post_se.up.weight USE weight decay
+stage3_second.blocks.3.post_se.up.bias has no weight decay
+stage3_second.blocks.3.rbr_identity.weight USE weight decay
+stage3_second.blocks.3.rbr_identity.bias has no weight decay
+stage3_second.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.4.post_se.down.weight USE weight decay
+stage3_second.blocks.4.post_se.down.bias has no weight decay
+stage3_second.blocks.4.post_se.up.weight USE weight decay
+stage3_second.blocks.4.post_se.up.bias has no weight decay
+stage3_second.blocks.4.rbr_identity.weight USE weight decay
+stage3_second.blocks.4.rbr_identity.bias has no weight decay
+stage3_second.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.5.post_se.down.weight USE weight decay
+stage3_second.blocks.5.post_se.down.bias has no weight decay
+stage3_second.blocks.5.post_se.up.weight USE weight decay
+stage3_second.blocks.5.post_se.up.bias has no weight decay
+stage3_second.blocks.5.rbr_identity.weight USE weight decay
+stage3_second.blocks.5.rbr_identity.bias has no weight decay
+stage3_second.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.6.post_se.down.weight USE weight decay
+stage3_second.blocks.6.post_se.down.bias has no weight decay
+stage3_second.blocks.6.post_se.up.weight USE weight decay
+stage3_second.blocks.6.post_se.up.bias has no weight decay
+stage3_second.blocks.6.rbr_identity.weight USE weight decay
+stage3_second.blocks.6.rbr_identity.bias has no weight decay
+stage3_second.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.7.post_se.down.weight USE weight decay
+stage3_second.blocks.7.post_se.down.bias has no weight decay
+stage3_second.blocks.7.post_se.up.weight USE weight decay
+stage3_second.blocks.7.post_se.up.bias has no weight decay
+stage3_second.blocks.7.rbr_identity.weight USE weight decay
+stage3_second.blocks.7.rbr_identity.bias has no weight decay
+stage3_second.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.8.post_se.down.weight USE weight decay
+stage3_second.blocks.8.post_se.down.bias has no weight decay
+stage3_second.blocks.8.post_se.up.weight USE weight decay
+stage3_second.blocks.8.post_se.up.bias has no weight decay
+stage3_second.blocks.8.rbr_identity.weight USE weight decay
+stage3_second.blocks.8.rbr_identity.bias has no weight decay
+stage3_second.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.9.post_se.down.weight USE weight decay
+stage3_second.blocks.9.post_se.down.bias has no weight decay
+stage3_second.blocks.9.post_se.up.weight USE weight decay
+stage3_second.blocks.9.post_se.up.bias has no weight decay
+stage3_second.blocks.9.rbr_identity.weight USE weight decay
+stage3_second.blocks.9.rbr_identity.bias has no weight decay
+stage3_second.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.10.post_se.down.weight USE weight decay
+stage3_second.blocks.10.post_se.down.bias has no weight decay
+stage3_second.blocks.10.post_se.up.weight USE weight decay
+stage3_second.blocks.10.post_se.up.bias has no weight decay
+stage3_second.blocks.10.rbr_identity.weight USE weight decay
+stage3_second.blocks.10.rbr_identity.bias has no weight decay
+stage3_second.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.11.post_se.down.weight USE weight decay
+stage3_second.blocks.11.post_se.down.bias has no weight decay
+stage3_second.blocks.11.post_se.up.weight USE weight decay
+stage3_second.blocks.11.post_se.up.bias has no weight decay
+stage3_second.blocks.11.rbr_identity.weight USE weight decay
+stage3_second.blocks.11.rbr_identity.bias has no weight decay
+stage3_second.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage4.blocks.0.post_se.down.weight USE weight decay
+stage4.blocks.0.post_se.down.bias has no weight decay
+stage4.blocks.0.post_se.up.weight USE weight decay
+stage4.blocks.0.post_se.up.bias has no weight decay
+stage4.blocks.0.rbr_dense.conv.weight USE weight decay
+stage4.blocks.0.rbr_dense.bn.weight has no weight decay
+stage4.blocks.0.rbr_dense.bn.bias has no weight decay
+stage4.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage4.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage4.blocks.0.rbr_1x1.bn.bias has no weight decay
+linear.weight USE weight decay
+linear.bias has no weight decay
+stage1_aux.0.conv.weight USE weight decay
+stage1_aux.0.bn.weight has no weight decay
+stage1_aux.0.bn.bias has no weight decay
+stage1_aux.3.weight USE weight decay
+stage1_aux.3.bias has no weight decay
+stage2_aux.0.conv.weight USE weight decay
+stage2_aux.0.bn.weight has no weight decay
+stage2_aux.0.bn.bias has no weight decay
+stage2_aux.3.weight USE weight decay
+stage2_aux.3.bias has no weight decay
+stage3_first_aux.0.conv.weight USE weight decay
+stage3_first_aux.0.bn.weight has no weight decay
+stage3_first_aux.0.bn.bias has no weight decay
+stage3_first_aux.3.weight USE weight decay
+stage3_first_aux.3.bias has no weight decay
+stage0.post_se.down.weight USE weight decay
+stage0.post_se.down.bias has no weight decay
+stage0.post_se.up.weight USE weight decay
+stage0.post_se.up.bias has no weight decay
+stage0.rbr_dense.conv.weight USE weight decay
+stage0.rbr_dense.bn.weight has no weight decay
+stage0.rbr_dense.bn.bias has no weight decay
+stage0.rbr_1x1.conv.weight USE weight decay
+stage0.rbr_1x1.bn.weight has no weight decay
+stage0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.0.post_se.down.weight USE weight decay
+stage1.blocks.0.post_se.down.bias has no weight decay
+stage1.blocks.0.post_se.up.weight USE weight decay
+stage1.blocks.0.post_se.up.bias has no weight decay
+stage1.blocks.0.rbr_dense.conv.weight USE weight decay
+stage1.blocks.0.rbr_dense.bn.weight has no weight decay
+stage1.blocks.0.rbr_dense.bn.bias has no weight decay
+stage1.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.1.post_se.down.weight USE weight decay
+stage1.blocks.1.post_se.down.bias has no weight decay
+stage1.blocks.1.post_se.up.weight USE weight decay
+stage1.blocks.1.post_se.up.bias has no weight decay
+stage1.blocks.1.rbr_identity.weight USE weight decay
+stage1.blocks.1.rbr_identity.bias has no weight decay
+stage1.blocks.1.rbr_dense.conv.weight USE weight decay
+stage1.blocks.1.rbr_dense.bn.weight has no weight decay
+stage1.blocks.1.rbr_dense.bn.bias has no weight decay
+stage1.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.2.post_se.down.weight USE weight decay
+stage1.blocks.2.post_se.down.bias has no weight decay
+stage1.blocks.2.post_se.up.weight USE weight decay
+stage1.blocks.2.post_se.up.bias has no weight decay
+stage1.blocks.2.rbr_identity.weight USE weight decay
+stage1.blocks.2.rbr_identity.bias has no weight decay
+stage1.blocks.2.rbr_dense.conv.weight USE weight decay
+stage1.blocks.2.rbr_dense.bn.weight has no weight decay
+stage1.blocks.2.rbr_dense.bn.bias has no weight decay
+stage1.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.3.post_se.down.weight USE weight decay
+stage1.blocks.3.post_se.down.bias has no weight decay
+stage1.blocks.3.post_se.up.weight USE weight decay
+stage1.blocks.3.post_se.up.bias has no weight decay
+stage1.blocks.3.rbr_identity.weight USE weight decay
+stage1.blocks.3.rbr_identity.bias has no weight decay
+stage1.blocks.3.rbr_dense.conv.weight USE weight decay
+stage1.blocks.3.rbr_dense.bn.weight has no weight decay
+stage1.blocks.3.rbr_dense.bn.bias has no weight decay
+stage1.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.4.post_se.down.weight USE weight decay
+stage1.blocks.4.post_se.down.bias has no weight decay
+stage1.blocks.4.post_se.up.weight USE weight decay
+stage1.blocks.4.post_se.up.bias has no weight decay
+stage1.blocks.4.rbr_identity.weight USE weight decay
+stage1.blocks.4.rbr_identity.bias has no weight decay
+stage1.blocks.4.rbr_dense.conv.weight USE weight decay
+stage1.blocks.4.rbr_dense.bn.weight has no weight decay
+stage1.blocks.4.rbr_dense.bn.bias has no weight decay
+stage1.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.5.post_se.down.weight USE weight decay
+stage1.blocks.5.post_se.down.bias has no weight decay
+stage1.blocks.5.post_se.up.weight USE weight decay
+stage1.blocks.5.post_se.up.bias has no weight decay
+stage1.blocks.5.rbr_identity.weight USE weight decay
+stage1.blocks.5.rbr_identity.bias has no weight decay
+stage1.blocks.5.rbr_dense.conv.weight USE weight decay
+stage1.blocks.5.rbr_dense.bn.weight has no weight decay
+stage1.blocks.5.rbr_dense.bn.bias has no weight decay
+stage1.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.6.post_se.down.weight USE weight decay
+stage1.blocks.6.post_se.down.bias has no weight decay
+stage1.blocks.6.post_se.up.weight USE weight decay
+stage1.blocks.6.post_se.up.bias has no weight decay
+stage1.blocks.6.rbr_identity.weight USE weight decay
+stage1.blocks.6.rbr_identity.bias has no weight decay
+stage1.blocks.6.rbr_dense.conv.weight USE weight decay
+stage1.blocks.6.rbr_dense.bn.weight has no weight decay
+stage1.blocks.6.rbr_dense.bn.bias has no weight decay
+stage1.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.7.post_se.down.weight USE weight decay
+stage1.blocks.7.post_se.down.bias has no weight decay
+stage1.blocks.7.post_se.up.weight USE weight decay
+stage1.blocks.7.post_se.up.bias has no weight decay
+stage1.blocks.7.rbr_identity.weight USE weight decay
+stage1.blocks.7.rbr_identity.bias has no weight decay
+stage1.blocks.7.rbr_dense.conv.weight USE weight decay
+stage1.blocks.7.rbr_dense.bn.weight has no weight decay
+stage1.blocks.7.rbr_dense.bn.bias has no weight decay
+stage1.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.0.post_se.down.weight USE weight decay
+stage2.blocks.0.post_se.down.bias has no weight decay
+stage2.blocks.0.post_se.up.weight USE weight decay
+stage2.blocks.0.post_se.up.bias has no weight decay
+stage2.blocks.0.rbr_dense.conv.weight USE weight decay
+stage2.blocks.0.rbr_dense.bn.weight has no weight decay
+stage2.blocks.0.rbr_dense.bn.bias has no weight decay
+stage2.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.1.post_se.down.weight USE weight decay
+stage2.blocks.1.post_se.down.bias has no weight decay
+stage2.blocks.1.post_se.up.weight USE weight decay
+stage2.blocks.1.post_se.up.bias has no weight decay
+stage2.blocks.1.rbr_identity.weight USE weight decay
+stage2.blocks.1.rbr_identity.bias has no weight decay
+stage2.blocks.1.rbr_dense.conv.weight USE weight decay
+stage2.blocks.1.rbr_dense.bn.weight has no weight decay
+stage2.blocks.1.rbr_dense.bn.bias has no weight decay
+stage2.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.2.post_se.down.weight USE weight decay
+stage2.blocks.2.post_se.down.bias has no weight decay
+stage2.blocks.2.post_se.up.weight USE weight decay
+stage2.blocks.2.post_se.up.bias has no weight decay
+stage2.blocks.2.rbr_identity.weight USE weight decay
+stage2.blocks.2.rbr_identity.bias has no weight decay
+stage2.blocks.2.rbr_dense.conv.weight USE weight decay
+stage2.blocks.2.rbr_dense.bn.weight has no weight decay
+stage2.blocks.2.rbr_dense.bn.bias has no weight decay
+stage2.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.3.post_se.down.weight USE weight decay
+stage2.blocks.3.post_se.down.bias has no weight decay
+stage2.blocks.3.post_se.up.weight USE weight decay
+stage2.blocks.3.post_se.up.bias has no weight decay
+stage2.blocks.3.rbr_identity.weight USE weight decay
+stage2.blocks.3.rbr_identity.bias has no weight decay
+stage2.blocks.3.rbr_dense.conv.weight USE weight decay
+stage2.blocks.3.rbr_dense.bn.weight has no weight decay
+stage2.blocks.3.rbr_dense.bn.bias has no weight decay
+stage2.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.4.post_se.down.weight USE weight decay
+stage2.blocks.4.post_se.down.bias has no weight decay
+stage2.blocks.4.post_se.up.weight USE weight decay
+stage2.blocks.4.post_se.up.bias has no weight decay
+stage2.blocks.4.rbr_identity.weight USE weight decay
+stage2.blocks.4.rbr_identity.bias has no weight decay
+stage2.blocks.4.rbr_dense.conv.weight USE weight decay
+stage2.blocks.4.rbr_dense.bn.weight has no weight decay
+stage2.blocks.4.rbr_dense.bn.bias has no weight decay
+stage2.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.5.post_se.down.weight USE weight decay
+stage2.blocks.5.post_se.down.bias has no weight decay
+stage2.blocks.5.post_se.up.weight USE weight decay
+stage2.blocks.5.post_se.up.bias has no weight decay
+stage2.blocks.5.rbr_identity.weight USE weight decay
+stage2.blocks.5.rbr_identity.bias has no weight decay
+stage2.blocks.5.rbr_dense.conv.weight USE weight decay
+stage2.blocks.5.rbr_dense.bn.weight has no weight decay
+stage2.blocks.5.rbr_dense.bn.bias has no weight decay
+stage2.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.6.post_se.down.weight USE weight decay
+stage2.blocks.6.post_se.down.bias has no weight decay
+stage2.blocks.6.post_se.up.weight USE weight decay
+stage2.blocks.6.post_se.up.bias has no weight decay
+stage2.blocks.6.rbr_identity.weight USE weight decay
+stage2.blocks.6.rbr_identity.bias has no weight decay
+stage2.blocks.6.rbr_dense.conv.weight USE weight decay
+stage2.blocks.6.rbr_dense.bn.weight has no weight decay
+stage2.blocks.6.rbr_dense.bn.bias has no weight decay
+stage2.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.7.post_se.down.weight USE weight decay
+stage2.blocks.7.post_se.down.bias has no weight decay
+stage2.blocks.7.post_se.up.weight USE weight decay
+stage2.blocks.7.post_se.up.bias has no weight decay
+stage2.blocks.7.rbr_identity.weight USE weight decay
+stage2.blocks.7.rbr_identity.bias has no weight decay
+stage2.blocks.7.rbr_dense.conv.weight USE weight decay
+stage2.blocks.7.rbr_dense.bn.weight has no weight decay
+stage2.blocks.7.rbr_dense.bn.bias has no weight decay
+stage2.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.8.post_se.down.weight USE weight decay
+stage2.blocks.8.post_se.down.bias has no weight decay
+stage2.blocks.8.post_se.up.weight USE weight decay
+stage2.blocks.8.post_se.up.bias has no weight decay
+stage2.blocks.8.rbr_identity.weight USE weight decay
+stage2.blocks.8.rbr_identity.bias has no weight decay
+stage2.blocks.8.rbr_dense.conv.weight USE weight decay
+stage2.blocks.8.rbr_dense.bn.weight has no weight decay
+stage2.blocks.8.rbr_dense.bn.bias has no weight decay
+stage2.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.9.post_se.down.weight USE weight decay
+stage2.blocks.9.post_se.down.bias has no weight decay
+stage2.blocks.9.post_se.up.weight USE weight decay
+stage2.blocks.9.post_se.up.bias has no weight decay
+stage2.blocks.9.rbr_identity.weight USE weight decay
+stage2.blocks.9.rbr_identity.bias has no weight decay
+stage2.blocks.9.rbr_dense.conv.weight USE weight decay
+stage2.blocks.9.rbr_dense.bn.weight has no weight decay
+stage2.blocks.9.rbr_dense.bn.bias has no weight decay
+stage2.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.10.post_se.down.weight USE weight decay
+stage2.blocks.10.post_se.down.bias has no weight decay
+stage2.blocks.10.post_se.up.weight USE weight decay
+stage2.blocks.10.post_se.up.bias has no weight decay
+stage2.blocks.10.rbr_identity.weight USE weight decay
+stage2.blocks.10.rbr_identity.bias has no weight decay
+stage2.blocks.10.rbr_dense.conv.weight USE weight decay
+stage2.blocks.10.rbr_dense.bn.weight has no weight decay
+stage2.blocks.10.rbr_dense.bn.bias has no weight decay
+stage2.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.11.post_se.down.weight USE weight decay
+stage2.blocks.11.post_se.down.bias has no weight decay
+stage2.blocks.11.post_se.up.weight USE weight decay
+stage2.blocks.11.post_se.up.bias has no weight decay
+stage2.blocks.11.rbr_identity.weight USE weight decay
+stage2.blocks.11.rbr_identity.bias has no weight decay
+stage2.blocks.11.rbr_dense.conv.weight USE weight decay
+stage2.blocks.11.rbr_dense.bn.weight has no weight decay
+stage2.blocks.11.rbr_dense.bn.bias has no weight decay
+stage2.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.12.post_se.down.weight USE weight decay
+stage2.blocks.12.post_se.down.bias has no weight decay
+stage2.blocks.12.post_se.up.weight USE weight decay
+stage2.blocks.12.post_se.up.bias has no weight decay
+stage2.blocks.12.rbr_identity.weight USE weight decay
+stage2.blocks.12.rbr_identity.bias has no weight decay
+stage2.blocks.12.rbr_dense.conv.weight USE weight decay
+stage2.blocks.12.rbr_dense.bn.weight has no weight decay
+stage2.blocks.12.rbr_dense.bn.bias has no weight decay
+stage2.blocks.12.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.12.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.12.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.13.post_se.down.weight USE weight decay
+stage2.blocks.13.post_se.down.bias has no weight decay
+stage2.blocks.13.post_se.up.weight USE weight decay
+stage2.blocks.13.post_se.up.bias has no weight decay
+stage2.blocks.13.rbr_identity.weight USE weight decay
+stage2.blocks.13.rbr_identity.bias has no weight decay
+stage2.blocks.13.rbr_dense.conv.weight USE weight decay
+stage2.blocks.13.rbr_dense.bn.weight has no weight decay
+stage2.blocks.13.rbr_dense.bn.bias has no weight decay
+stage2.blocks.13.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.13.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.13.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.0.post_se.down.weight USE weight decay
+stage3_first.blocks.0.post_se.down.bias has no weight decay
+stage3_first.blocks.0.post_se.up.weight USE weight decay
+stage3_first.blocks.0.post_se.up.bias has no weight decay
+stage3_first.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.1.post_se.down.weight USE weight decay
+stage3_first.blocks.1.post_se.down.bias has no weight decay
+stage3_first.blocks.1.post_se.up.weight USE weight decay
+stage3_first.blocks.1.post_se.up.bias has no weight decay
+stage3_first.blocks.1.rbr_identity.weight USE weight decay
+stage3_first.blocks.1.rbr_identity.bias has no weight decay
+stage3_first.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.2.post_se.down.weight USE weight decay
+stage3_first.blocks.2.post_se.down.bias has no weight decay
+stage3_first.blocks.2.post_se.up.weight USE weight decay
+stage3_first.blocks.2.post_se.up.bias has no weight decay
+stage3_first.blocks.2.rbr_identity.weight USE weight decay
+stage3_first.blocks.2.rbr_identity.bias has no weight decay
+stage3_first.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.3.post_se.down.weight USE weight decay
+stage3_first.blocks.3.post_se.down.bias has no weight decay
+stage3_first.blocks.3.post_se.up.weight USE weight decay
+stage3_first.blocks.3.post_se.up.bias has no weight decay
+stage3_first.blocks.3.rbr_identity.weight USE weight decay
+stage3_first.blocks.3.rbr_identity.bias has no weight decay
+stage3_first.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.4.post_se.down.weight USE weight decay
+stage3_first.blocks.4.post_se.down.bias has no weight decay
+stage3_first.blocks.4.post_se.up.weight USE weight decay
+stage3_first.blocks.4.post_se.up.bias has no weight decay
+stage3_first.blocks.4.rbr_identity.weight USE weight decay
+stage3_first.blocks.4.rbr_identity.bias has no weight decay
+stage3_first.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.5.post_se.down.weight USE weight decay
+stage3_first.blocks.5.post_se.down.bias has no weight decay
+stage3_first.blocks.5.post_se.up.weight USE weight decay
+stage3_first.blocks.5.post_se.up.bias has no weight decay
+stage3_first.blocks.5.rbr_identity.weight USE weight decay
+stage3_first.blocks.5.rbr_identity.bias has no weight decay
+stage3_first.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.6.post_se.down.weight USE weight decay
+stage3_first.blocks.6.post_se.down.bias has no weight decay
+stage3_first.blocks.6.post_se.up.weight USE weight decay
+stage3_first.blocks.6.post_se.up.bias has no weight decay
+stage3_first.blocks.6.rbr_identity.weight USE weight decay
+stage3_first.blocks.6.rbr_identity.bias has no weight decay
+stage3_first.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.7.post_se.down.weight USE weight decay
+stage3_first.blocks.7.post_se.down.bias has no weight decay
+stage3_first.blocks.7.post_se.up.weight USE weight decay
+stage3_first.blocks.7.post_se.up.bias has no weight decay
+stage3_first.blocks.7.rbr_identity.weight USE weight decay
+stage3_first.blocks.7.rbr_identity.bias has no weight decay
+stage3_first.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.8.post_se.down.weight USE weight decay
+stage3_first.blocks.8.post_se.down.bias has no weight decay
+stage3_first.blocks.8.post_se.up.weight USE weight decay
+stage3_first.blocks.8.post_se.up.bias has no weight decay
+stage3_first.blocks.8.rbr_identity.weight USE weight decay
+stage3_first.blocks.8.rbr_identity.bias has no weight decay
+stage3_first.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.9.post_se.down.weight USE weight decay
+stage3_first.blocks.9.post_se.down.bias has no weight decay
+stage3_first.blocks.9.post_se.up.weight USE weight decay
+stage3_first.blocks.9.post_se.up.bias has no weight decay
+stage3_first.blocks.9.rbr_identity.weight USE weight decay
+stage3_first.blocks.9.rbr_identity.bias has no weight decay
+stage3_first.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.10.post_se.down.weight USE weight decay
+stage3_first.blocks.10.post_se.down.bias has no weight decay
+stage3_first.blocks.10.post_se.up.weight USE weight decay
+stage3_first.blocks.10.post_se.up.bias has no weight decay
+stage3_first.blocks.10.rbr_identity.weight USE weight decay
+stage3_first.blocks.10.rbr_identity.bias has no weight decay
+stage3_first.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.11.post_se.down.weight USE weight decay
+stage3_first.blocks.11.post_se.down.bias has no weight decay
+stage3_first.blocks.11.post_se.up.weight USE weight decay
+stage3_first.blocks.11.post_se.up.bias has no weight decay
+stage3_first.blocks.11.rbr_identity.weight USE weight decay
+stage3_first.blocks.11.rbr_identity.bias has no weight decay
+stage3_first.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.0.post_se.down.weight USE weight decay
+stage3_second.blocks.0.post_se.down.bias has no weight decay
+stage3_second.blocks.0.post_se.up.weight USE weight decay
+stage3_second.blocks.0.post_se.up.bias has no weight decay
+stage3_second.blocks.0.rbr_identity.weight USE weight decay
+stage3_second.blocks.0.rbr_identity.bias has no weight decay
+stage3_second.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.1.post_se.down.weight USE weight decay
+stage3_second.blocks.1.post_se.down.bias has no weight decay
+stage3_second.blocks.1.post_se.up.weight USE weight decay
+stage3_second.blocks.1.post_se.up.bias has no weight decay
+stage3_second.blocks.1.rbr_identity.weight USE weight decay
+stage3_second.blocks.1.rbr_identity.bias has no weight decay
+stage3_second.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.2.post_se.down.weight USE weight decay
+stage3_second.blocks.2.post_se.down.bias has no weight decay
+stage3_second.blocks.2.post_se.up.weight USE weight decay
+stage3_second.blocks.2.post_se.up.bias has no weight decay
+stage3_second.blocks.2.rbr_identity.weight USE weight decay
+stage3_second.blocks.2.rbr_identity.bias has no weight decay
+stage3_second.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.3.post_se.down.weight USE weight decay
+stage3_second.blocks.3.post_se.down.bias has no weight decay
+stage3_second.blocks.3.post_se.up.weight USE weight decay
+stage3_second.blocks.3.post_se.up.bias has no weight decay
+stage3_second.blocks.3.rbr_identity.weight USE weight decay
+stage3_second.blocks.3.rbr_identity.bias has no weight decay
+stage3_second.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.4.post_se.down.weight USE weight decay
+stage3_second.blocks.4.post_se.down.bias has no weight decay
+stage3_second.blocks.4.post_se.up.weight USE weight decay
+stage3_second.blocks.4.post_se.up.bias has no weight decay
+stage3_second.blocks.4.rbr_identity.weight USE weight decay
+stage3_second.blocks.4.rbr_identity.bias has no weight decay
+stage3_second.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.5.post_se.down.weight USE weight decay
+stage3_second.blocks.5.post_se.down.bias has no weight decay
+stage3_second.blocks.5.post_se.up.weight USE weight decay
+stage3_second.blocks.5.post_se.up.bias has no weight decay
+stage3_second.blocks.5.rbr_identity.weight USE weight decay
+stage3_second.blocks.5.rbr_identity.bias has no weight decay
+stage3_second.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.6.post_se.down.weight USE weight decay
+stage3_second.blocks.6.post_se.down.bias has no weight decay
+stage3_second.blocks.6.post_se.up.weight USE weight decay
+stage3_second.blocks.6.post_se.up.bias has no weight decay
+stage3_second.blocks.6.rbr_identity.weight USE weight decay
+stage3_second.blocks.6.rbr_identity.bias has no weight decay
+stage3_second.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.7.post_se.down.weight USE weight decay
+stage3_second.blocks.7.post_se.down.bias has no weight decay
+stage3_second.blocks.7.post_se.up.weight USE weight decay
+stage3_second.blocks.7.post_se.up.bias has no weight decay
+stage3_second.blocks.7.rbr_identity.weight USE weight decay
+stage3_second.blocks.7.rbr_identity.bias has no weight decay
+stage3_second.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.8.post_se.down.weight USE weight decay
+stage3_second.blocks.8.post_se.down.bias has no weight decay
+stage3_second.blocks.8.post_se.up.weight USE weight decay
+stage3_second.blocks.8.post_se.up.bias has no weight decay
+stage3_second.blocks.8.rbr_identity.weight USE weight decay
+stage3_second.blocks.8.rbr_identity.bias has no weight decay
+stage3_second.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.9.post_se.down.weight USE weight decay
+stage3_second.blocks.9.post_se.down.bias has no weight decay
+stage3_second.blocks.9.post_se.up.weight USE weight decay
+stage3_second.blocks.9.post_se.up.bias has no weight decay
+stage3_second.blocks.9.rbr_identity.weight USE weight decay
+stage3_second.blocks.9.rbr_identity.bias has no weight decay
+stage3_second.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.10.post_se.down.weight USE weight decay
+stage3_second.blocks.10.post_se.down.bias has no weight decay
+stage3_second.blocks.10.post_se.up.weight USE weight decay
+stage3_second.blocks.10.post_se.up.bias has no weight decay
+stage3_second.blocks.10.rbr_identity.weight USE weight decay
+stage3_second.blocks.10.rbr_identity.bias has no weight decay
+stage3_second.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.11.post_se.down.weight USE weight decay
+stage3_second.blocks.11.post_se.down.bias has no weight decay
+stage3_second.blocks.11.post_se.up.weight USE weight decay
+stage3_second.blocks.11.post_se.up.bias has no weight decay
+stage3_second.blocks.11.rbr_identity.weight USE weight decay
+stage3_second.blocks.11.rbr_identity.bias has no weight decay
+stage3_second.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage4.blocks.0.post_se.down.weight USE weight decay
+stage4.blocks.0.post_se.down.bias has no weight decay
+stage4.blocks.0.post_se.up.weight USE weight decay
+stage4.blocks.0.post_se.up.bias has no weight decay
+stage4.blocks.0.rbr_dense.conv.weight USE weight decay
+stage4.blocks.0.rbr_dense.bn.weight has no weight decay
+stage4.blocks.0.rbr_dense.bn.bias has no weight decay
+stage4.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage4.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage4.blocks.0.rbr_1x1.bn.bias has no weight decay
+linear.weight USE weight decay
+linear.bias has no weight decay
+stage1_aux.0.conv.weight USE weight decay
+stage1_aux.0.bn.weight has no weight decay
+stage1_aux.0.bn.bias has no weight decay
+stage1_aux.3.weight USE weight decay
+stage1_aux.3.bias has no weight decay
+stage2_aux.0.conv.weight USE weight decay
+stage2_aux.0.bn.weight has no weight decay
+stage2_aux.0.bn.bias has no weight decay
+stage2_aux.3.weight USE weight decay
+stage2_aux.3.bias has no weight decay
+stage3_first_aux.0.conv.weight USE weight decay
+stage3_first_aux.0.bn.weight has no weight decay
+stage3_first_aux.0.bn.bias has no weight decay
+stage3_first_aux.3.weight USE weight decay
+stage3_first_aux.3.bias has no weight decay
+stage0.post_se.down.weight USE weight decay
+stage0.post_se.down.bias has no weight decay
+stage0.post_se.up.weight USE weight decay
+stage0.post_se.up.bias has no weight decay
+stage0.rbr_dense.conv.weight USE weight decay
+stage0.rbr_dense.bn.weight has no weight decay
+stage0.rbr_dense.bn.bias has no weight decay
+stage0.rbr_1x1.conv.weight USE weight decay
+stage0.rbr_1x1.bn.weight has no weight decay
+stage0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.0.post_se.down.weight USE weight decay
+stage1.blocks.0.post_se.down.bias has no weight decay
+stage1.blocks.0.post_se.up.weight USE weight decay
+stage1.blocks.0.post_se.up.bias has no weight decay
+stage1.blocks.0.rbr_dense.conv.weight USE weight decay
+stage1.blocks.0.rbr_dense.bn.weight has no weight decay
+stage1.blocks.0.rbr_dense.bn.bias has no weight decay
+stage1.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.1.post_se.down.weight USE weight decay
+stage1.blocks.1.post_se.down.bias has no weight decay
+stage1.blocks.1.post_se.up.weight USE weight decay
+stage1.blocks.1.post_se.up.bias has no weight decay
+stage1.blocks.1.rbr_identity.weight USE weight decay
+stage1.blocks.1.rbr_identity.bias has no weight decay
+stage1.blocks.1.rbr_dense.conv.weight USE weight decay
+stage1.blocks.1.rbr_dense.bn.weight has no weight decay
+stage1.blocks.1.rbr_dense.bn.bias has no weight decay
+stage1.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.2.post_se.down.weight USE weight decay
+stage1.blocks.2.post_se.down.bias has no weight decay
+stage1.blocks.2.post_se.up.weight USE weight decay
+stage1.blocks.2.post_se.up.bias has no weight decay
+stage1.blocks.2.rbr_identity.weight USE weight decay
+stage1.blocks.2.rbr_identity.bias has no weight decay
+stage1.blocks.2.rbr_dense.conv.weight USE weight decay
+stage1.blocks.2.rbr_dense.bn.weight has no weight decay
+stage1.blocks.2.rbr_dense.bn.bias has no weight decay
+stage1.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.3.post_se.down.weight USE weight decay
+stage1.blocks.3.post_se.down.bias has no weight decay
+stage1.blocks.3.post_se.up.weight USE weight decay
+stage1.blocks.3.post_se.up.bias has no weight decay
+stage1.blocks.3.rbr_identity.weight USE weight decay
+stage1.blocks.3.rbr_identity.bias has no weight decay
+stage1.blocks.3.rbr_dense.conv.weight USE weight decay
+stage1.blocks.3.rbr_dense.bn.weight has no weight decay
+stage1.blocks.3.rbr_dense.bn.bias has no weight decay
+stage1.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.4.post_se.down.weight USE weight decay
+stage1.blocks.4.post_se.down.bias has no weight decay
+stage1.blocks.4.post_se.up.weight USE weight decay
+stage1.blocks.4.post_se.up.bias has no weight decay
+stage1.blocks.4.rbr_identity.weight USE weight decay
+stage1.blocks.4.rbr_identity.bias has no weight decay
+stage1.blocks.4.rbr_dense.conv.weight USE weight decay
+stage1.blocks.4.rbr_dense.bn.weight has no weight decay
+stage1.blocks.4.rbr_dense.bn.bias has no weight decay
+stage1.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.5.post_se.down.weight USE weight decay
+stage1.blocks.5.post_se.down.bias has no weight decay
+stage1.blocks.5.post_se.up.weight USE weight decay
+stage1.blocks.5.post_se.up.bias has no weight decay
+stage1.blocks.5.rbr_identity.weight USE weight decay
+stage1.blocks.5.rbr_identity.bias has no weight decay
+stage1.blocks.5.rbr_dense.conv.weight USE weight decay
+stage1.blocks.5.rbr_dense.bn.weight has no weight decay
+stage1.blocks.5.rbr_dense.bn.bias has no weight decay
+stage1.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.6.post_se.down.weight USE weight decay
+stage1.blocks.6.post_se.down.bias has no weight decay
+stage1.blocks.6.post_se.up.weight USE weight decay
+stage1.blocks.6.post_se.up.bias has no weight decay
+stage1.blocks.6.rbr_identity.weight USE weight decay
+stage1.blocks.6.rbr_identity.bias has no weight decay
+stage1.blocks.6.rbr_dense.conv.weight USE weight decay
+stage1.blocks.6.rbr_dense.bn.weight has no weight decay
+stage1.blocks.6.rbr_dense.bn.bias has no weight decay
+stage1.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage1.blocks.7.post_se.down.weight USE weight decay
+stage1.blocks.7.post_se.down.bias has no weight decay
+stage1.blocks.7.post_se.up.weight USE weight decay
+stage1.blocks.7.post_se.up.bias has no weight decay
+stage1.blocks.7.rbr_identity.weight USE weight decay
+stage1.blocks.7.rbr_identity.bias has no weight decay
+stage1.blocks.7.rbr_dense.conv.weight USE weight decay
+stage1.blocks.7.rbr_dense.bn.weight has no weight decay
+stage1.blocks.7.rbr_dense.bn.bias has no weight decay
+stage1.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage1.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage1.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.0.post_se.down.weight USE weight decay
+stage2.blocks.0.post_se.down.bias has no weight decay
+stage2.blocks.0.post_se.up.weight USE weight decay
+stage2.blocks.0.post_se.up.bias has no weight decay
+stage2.blocks.0.rbr_dense.conv.weight USE weight decay
+stage2.blocks.0.rbr_dense.bn.weight has no weight decay
+stage2.blocks.0.rbr_dense.bn.bias has no weight decay
+stage2.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.1.post_se.down.weight USE weight decay
+stage2.blocks.1.post_se.down.bias has no weight decay
+stage2.blocks.1.post_se.up.weight USE weight decay
+stage2.blocks.1.post_se.up.bias has no weight decay
+stage2.blocks.1.rbr_identity.weight USE weight decay
+stage2.blocks.1.rbr_identity.bias has no weight decay
+stage2.blocks.1.rbr_dense.conv.weight USE weight decay
+stage2.blocks.1.rbr_dense.bn.weight has no weight decay
+stage2.blocks.1.rbr_dense.bn.bias has no weight decay
+stage2.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.2.post_se.down.weight USE weight decay
+stage2.blocks.2.post_se.down.bias has no weight decay
+stage2.blocks.2.post_se.up.weight USE weight decay
+stage2.blocks.2.post_se.up.bias has no weight decay
+stage2.blocks.2.rbr_identity.weight USE weight decay
+stage2.blocks.2.rbr_identity.bias has no weight decay
+stage2.blocks.2.rbr_dense.conv.weight USE weight decay
+stage2.blocks.2.rbr_dense.bn.weight has no weight decay
+stage2.blocks.2.rbr_dense.bn.bias has no weight decay
+stage2.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.3.post_se.down.weight USE weight decay
+stage2.blocks.3.post_se.down.bias has no weight decay
+stage2.blocks.3.post_se.up.weight USE weight decay
+stage2.blocks.3.post_se.up.bias has no weight decay
+stage2.blocks.3.rbr_identity.weight USE weight decay
+stage2.blocks.3.rbr_identity.bias has no weight decay
+stage2.blocks.3.rbr_dense.conv.weight USE weight decay
+stage2.blocks.3.rbr_dense.bn.weight has no weight decay
+stage2.blocks.3.rbr_dense.bn.bias has no weight decay
+stage2.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.4.post_se.down.weight USE weight decay
+stage2.blocks.4.post_se.down.bias has no weight decay
+stage2.blocks.4.post_se.up.weight USE weight decay
+stage2.blocks.4.post_se.up.bias has no weight decay
+stage2.blocks.4.rbr_identity.weight USE weight decay
+stage2.blocks.4.rbr_identity.bias has no weight decay
+stage2.blocks.4.rbr_dense.conv.weight USE weight decay
+stage2.blocks.4.rbr_dense.bn.weight has no weight decay
+stage2.blocks.4.rbr_dense.bn.bias has no weight decay
+stage2.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.5.post_se.down.weight USE weight decay
+stage2.blocks.5.post_se.down.bias has no weight decay
+stage2.blocks.5.post_se.up.weight USE weight decay
+stage2.blocks.5.post_se.up.bias has no weight decay
+stage2.blocks.5.rbr_identity.weight USE weight decay
+stage2.blocks.5.rbr_identity.bias has no weight decay
+stage2.blocks.5.rbr_dense.conv.weight USE weight decay
+stage2.blocks.5.rbr_dense.bn.weight has no weight decay
+stage2.blocks.5.rbr_dense.bn.bias has no weight decay
+stage2.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.6.post_se.down.weight USE weight decay
+stage2.blocks.6.post_se.down.bias has no weight decay
+stage2.blocks.6.post_se.up.weight USE weight decay
+stage2.blocks.6.post_se.up.bias has no weight decay
+stage2.blocks.6.rbr_identity.weight USE weight decay
+stage2.blocks.6.rbr_identity.bias has no weight decay
+stage2.blocks.6.rbr_dense.conv.weight USE weight decay
+stage2.blocks.6.rbr_dense.bn.weight has no weight decay
+stage2.blocks.6.rbr_dense.bn.bias has no weight decay
+stage2.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.7.post_se.down.weight USE weight decay
+stage2.blocks.7.post_se.down.bias has no weight decay
+stage2.blocks.7.post_se.up.weight USE weight decay
+stage2.blocks.7.post_se.up.bias has no weight decay
+stage2.blocks.7.rbr_identity.weight USE weight decay
+stage2.blocks.7.rbr_identity.bias has no weight decay
+stage2.blocks.7.rbr_dense.conv.weight USE weight decay
+stage2.blocks.7.rbr_dense.bn.weight has no weight decay
+stage2.blocks.7.rbr_dense.bn.bias has no weight decay
+stage2.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.8.post_se.down.weight USE weight decay
+stage2.blocks.8.post_se.down.bias has no weight decay
+stage2.blocks.8.post_se.up.weight USE weight decay
+stage2.blocks.8.post_se.up.bias has no weight decay
+stage2.blocks.8.rbr_identity.weight USE weight decay
+stage2.blocks.8.rbr_identity.bias has no weight decay
+stage2.blocks.8.rbr_dense.conv.weight USE weight decay
+stage2.blocks.8.rbr_dense.bn.weight has no weight decay
+stage2.blocks.8.rbr_dense.bn.bias has no weight decay
+stage2.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.9.post_se.down.weight USE weight decay
+stage2.blocks.9.post_se.down.bias has no weight decay
+stage2.blocks.9.post_se.up.weight USE weight decay
+stage2.blocks.9.post_se.up.bias has no weight decay
+stage2.blocks.9.rbr_identity.weight USE weight decay
+stage2.blocks.9.rbr_identity.bias has no weight decay
+stage2.blocks.9.rbr_dense.conv.weight USE weight decay
+stage2.blocks.9.rbr_dense.bn.weight has no weight decay
+stage2.blocks.9.rbr_dense.bn.bias has no weight decay
+stage2.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.10.post_se.down.weight USE weight decay
+stage2.blocks.10.post_se.down.bias has no weight decay
+stage2.blocks.10.post_se.up.weight USE weight decay
+stage2.blocks.10.post_se.up.bias has no weight decay
+stage2.blocks.10.rbr_identity.weight USE weight decay
+stage2.blocks.10.rbr_identity.bias has no weight decay
+stage2.blocks.10.rbr_dense.conv.weight USE weight decay
+stage2.blocks.10.rbr_dense.bn.weight has no weight decay
+stage2.blocks.10.rbr_dense.bn.bias has no weight decay
+stage2.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.11.post_se.down.weight USE weight decay
+stage2.blocks.11.post_se.down.bias has no weight decay
+stage2.blocks.11.post_se.up.weight USE weight decay
+stage2.blocks.11.post_se.up.bias has no weight decay
+stage2.blocks.11.rbr_identity.weight USE weight decay
+stage2.blocks.11.rbr_identity.bias has no weight decay
+stage2.blocks.11.rbr_dense.conv.weight USE weight decay
+stage2.blocks.11.rbr_dense.bn.weight has no weight decay
+stage2.blocks.11.rbr_dense.bn.bias has no weight decay
+stage2.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.12.post_se.down.weight USE weight decay
+stage2.blocks.12.post_se.down.bias has no weight decay
+stage2.blocks.12.post_se.up.weight USE weight decay
+stage2.blocks.12.post_se.up.bias has no weight decay
+stage2.blocks.12.rbr_identity.weight USE weight decay
+stage2.blocks.12.rbr_identity.bias has no weight decay
+stage2.blocks.12.rbr_dense.conv.weight USE weight decay
+stage2.blocks.12.rbr_dense.bn.weight has no weight decay
+stage2.blocks.12.rbr_dense.bn.bias has no weight decay
+stage2.blocks.12.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.12.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.12.rbr_1x1.bn.bias has no weight decay
+stage2.blocks.13.post_se.down.weight USE weight decay
+stage2.blocks.13.post_se.down.bias has no weight decay
+stage2.blocks.13.post_se.up.weight USE weight decay
+stage2.blocks.13.post_se.up.bias has no weight decay
+stage2.blocks.13.rbr_identity.weight USE weight decay
+stage2.blocks.13.rbr_identity.bias has no weight decay
+stage2.blocks.13.rbr_dense.conv.weight USE weight decay
+stage2.blocks.13.rbr_dense.bn.weight has no weight decay
+stage2.blocks.13.rbr_dense.bn.bias has no weight decay
+stage2.blocks.13.rbr_1x1.conv.weight USE weight decay
+stage2.blocks.13.rbr_1x1.bn.weight has no weight decay
+stage2.blocks.13.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.0.post_se.down.weight USE weight decay
+stage3_first.blocks.0.post_se.down.bias has no weight decay
+stage3_first.blocks.0.post_se.up.weight USE weight decay
+stage3_first.blocks.0.post_se.up.bias has no weight decay
+stage3_first.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.1.post_se.down.weight USE weight decay
+stage3_first.blocks.1.post_se.down.bias has no weight decay
+stage3_first.blocks.1.post_se.up.weight USE weight decay
+stage3_first.blocks.1.post_se.up.bias has no weight decay
+stage3_first.blocks.1.rbr_identity.weight USE weight decay
+stage3_first.blocks.1.rbr_identity.bias has no weight decay
+stage3_first.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.2.post_se.down.weight USE weight decay
+stage3_first.blocks.2.post_se.down.bias has no weight decay
+stage3_first.blocks.2.post_se.up.weight USE weight decay
+stage3_first.blocks.2.post_se.up.bias has no weight decay
+stage3_first.blocks.2.rbr_identity.weight USE weight decay
+stage3_first.blocks.2.rbr_identity.bias has no weight decay
+stage3_first.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.3.post_se.down.weight USE weight decay
+stage3_first.blocks.3.post_se.down.bias has no weight decay
+stage3_first.blocks.3.post_se.up.weight USE weight decay
+stage3_first.blocks.3.post_se.up.bias has no weight decay
+stage3_first.blocks.3.rbr_identity.weight USE weight decay
+stage3_first.blocks.3.rbr_identity.bias has no weight decay
+stage3_first.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.4.post_se.down.weight USE weight decay
+stage3_first.blocks.4.post_se.down.bias has no weight decay
+stage3_first.blocks.4.post_se.up.weight USE weight decay
+stage3_first.blocks.4.post_se.up.bias has no weight decay
+stage3_first.blocks.4.rbr_identity.weight USE weight decay
+stage3_first.blocks.4.rbr_identity.bias has no weight decay
+stage3_first.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.5.post_se.down.weight USE weight decay
+stage3_first.blocks.5.post_se.down.bias has no weight decay
+stage3_first.blocks.5.post_se.up.weight USE weight decay
+stage3_first.blocks.5.post_se.up.bias has no weight decay
+stage3_first.blocks.5.rbr_identity.weight USE weight decay
+stage3_first.blocks.5.rbr_identity.bias has no weight decay
+stage3_first.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.6.post_se.down.weight USE weight decay
+stage3_first.blocks.6.post_se.down.bias has no weight decay
+stage3_first.blocks.6.post_se.up.weight USE weight decay
+stage3_first.blocks.6.post_se.up.bias has no weight decay
+stage3_first.blocks.6.rbr_identity.weight USE weight decay
+stage3_first.blocks.6.rbr_identity.bias has no weight decay
+stage3_first.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.7.post_se.down.weight USE weight decay
+stage3_first.blocks.7.post_se.down.bias has no weight decay
+stage3_first.blocks.7.post_se.up.weight USE weight decay
+stage3_first.blocks.7.post_se.up.bias has no weight decay
+stage3_first.blocks.7.rbr_identity.weight USE weight decay
+stage3_first.blocks.7.rbr_identity.bias has no weight decay
+stage3_first.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.8.post_se.down.weight USE weight decay
+stage3_first.blocks.8.post_se.down.bias has no weight decay
+stage3_first.blocks.8.post_se.up.weight USE weight decay
+stage3_first.blocks.8.post_se.up.bias has no weight decay
+stage3_first.blocks.8.rbr_identity.weight USE weight decay
+stage3_first.blocks.8.rbr_identity.bias has no weight decay
+stage3_first.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.9.post_se.down.weight USE weight decay
+stage3_first.blocks.9.post_se.down.bias has no weight decay
+stage3_first.blocks.9.post_se.up.weight USE weight decay
+stage3_first.blocks.9.post_se.up.bias has no weight decay
+stage3_first.blocks.9.rbr_identity.weight USE weight decay
+stage3_first.blocks.9.rbr_identity.bias has no weight decay
+stage3_first.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.10.post_se.down.weight USE weight decay
+stage3_first.blocks.10.post_se.down.bias has no weight decay
+stage3_first.blocks.10.post_se.up.weight USE weight decay
+stage3_first.blocks.10.post_se.up.bias has no weight decay
+stage3_first.blocks.10.rbr_identity.weight USE weight decay
+stage3_first.blocks.10.rbr_identity.bias has no weight decay
+stage3_first.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_first.blocks.11.post_se.down.weight USE weight decay
+stage3_first.blocks.11.post_se.down.bias has no weight decay
+stage3_first.blocks.11.post_se.up.weight USE weight decay
+stage3_first.blocks.11.post_se.up.bias has no weight decay
+stage3_first.blocks.11.rbr_identity.weight USE weight decay
+stage3_first.blocks.11.rbr_identity.bias has no weight decay
+stage3_first.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_first.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_first.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_first.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.0.post_se.down.weight USE weight decay
+stage3_second.blocks.0.post_se.down.bias has no weight decay
+stage3_second.blocks.0.post_se.up.weight USE weight decay
+stage3_second.blocks.0.post_se.up.bias has no weight decay
+stage3_second.blocks.0.rbr_identity.weight USE weight decay
+stage3_second.blocks.0.rbr_identity.bias has no weight decay
+stage3_second.blocks.0.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.0.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.1.post_se.down.weight USE weight decay
+stage3_second.blocks.1.post_se.down.bias has no weight decay
+stage3_second.blocks.1.post_se.up.weight USE weight decay
+stage3_second.blocks.1.post_se.up.bias has no weight decay
+stage3_second.blocks.1.rbr_identity.weight USE weight decay
+stage3_second.blocks.1.rbr_identity.bias has no weight decay
+stage3_second.blocks.1.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.1.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.1.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.1.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.2.post_se.down.weight USE weight decay
+stage3_second.blocks.2.post_se.down.bias has no weight decay
+stage3_second.blocks.2.post_se.up.weight USE weight decay
+stage3_second.blocks.2.post_se.up.bias has no weight decay
+stage3_second.blocks.2.rbr_identity.weight USE weight decay
+stage3_second.blocks.2.rbr_identity.bias has no weight decay
+stage3_second.blocks.2.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.2.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.2.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.2.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.3.post_se.down.weight USE weight decay
+stage3_second.blocks.3.post_se.down.bias has no weight decay
+stage3_second.blocks.3.post_se.up.weight USE weight decay
+stage3_second.blocks.3.post_se.up.bias has no weight decay
+stage3_second.blocks.3.rbr_identity.weight USE weight decay
+stage3_second.blocks.3.rbr_identity.bias has no weight decay
+stage3_second.blocks.3.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.3.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.3.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.3.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.4.post_se.down.weight USE weight decay
+stage3_second.blocks.4.post_se.down.bias has no weight decay
+stage3_second.blocks.4.post_se.up.weight USE weight decay
+stage3_second.blocks.4.post_se.up.bias has no weight decay
+stage3_second.blocks.4.rbr_identity.weight USE weight decay
+stage3_second.blocks.4.rbr_identity.bias has no weight decay
+stage3_second.blocks.4.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.4.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.4.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.4.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.5.post_se.down.weight USE weight decay
+stage3_second.blocks.5.post_se.down.bias has no weight decay
+stage3_second.blocks.5.post_se.up.weight USE weight decay
+stage3_second.blocks.5.post_se.up.bias has no weight decay
+stage3_second.blocks.5.rbr_identity.weight USE weight decay
+stage3_second.blocks.5.rbr_identity.bias has no weight decay
+stage3_second.blocks.5.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.5.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.5.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.5.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.6.post_se.down.weight USE weight decay
+stage3_second.blocks.6.post_se.down.bias has no weight decay
+stage3_second.blocks.6.post_se.up.weight USE weight decay
+stage3_second.blocks.6.post_se.up.bias has no weight decay
+stage3_second.blocks.6.rbr_identity.weight USE weight decay
+stage3_second.blocks.6.rbr_identity.bias has no weight decay
+stage3_second.blocks.6.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.6.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.6.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.6.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.7.post_se.down.weight USE weight decay
+stage3_second.blocks.7.post_se.down.bias has no weight decay
+stage3_second.blocks.7.post_se.up.weight USE weight decay
+stage3_second.blocks.7.post_se.up.bias has no weight decay
+stage3_second.blocks.7.rbr_identity.weight USE weight decay
+stage3_second.blocks.7.rbr_identity.bias has no weight decay
+stage3_second.blocks.7.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.7.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.7.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.7.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.8.post_se.down.weight USE weight decay
+stage3_second.blocks.8.post_se.down.bias has no weight decay
+stage3_second.blocks.8.post_se.up.weight USE weight decay
+stage3_second.blocks.8.post_se.up.bias has no weight decay
+stage3_second.blocks.8.rbr_identity.weight USE weight decay
+stage3_second.blocks.8.rbr_identity.bias has no weight decay
+stage3_second.blocks.8.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.8.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.8.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.8.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.9.post_se.down.weight USE weight decay
+stage3_second.blocks.9.post_se.down.bias has no weight decay
+stage3_second.blocks.9.post_se.up.weight USE weight decay
+stage3_second.blocks.9.post_se.up.bias has no weight decay
+stage3_second.blocks.9.rbr_identity.weight USE weight decay
+stage3_second.blocks.9.rbr_identity.bias has no weight decay
+stage3_second.blocks.9.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.9.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.9.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.9.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.10.post_se.down.weight USE weight decay
+stage3_second.blocks.10.post_se.down.bias has no weight decay
+stage3_second.blocks.10.post_se.up.weight USE weight decay
+stage3_second.blocks.10.post_se.up.bias has no weight decay
+stage3_second.blocks.10.rbr_identity.weight USE weight decay
+stage3_second.blocks.10.rbr_identity.bias has no weight decay
+stage3_second.blocks.10.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.10.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.10.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.10.rbr_1x1.bn.bias has no weight decay
+stage3_second.blocks.11.post_se.down.weight USE weight decay
+stage3_second.blocks.11.post_se.down.bias has no weight decay
+stage3_second.blocks.11.post_se.up.weight USE weight decay
+stage3_second.blocks.11.post_se.up.bias has no weight decay
+stage3_second.blocks.11.rbr_identity.weight USE weight decay
+stage3_second.blocks.11.rbr_identity.bias has no weight decay
+stage3_second.blocks.11.rbr_dense.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_dense.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_dense.bn.bias has no weight decay
+stage3_second.blocks.11.rbr_1x1.conv.weight USE weight decay
+stage3_second.blocks.11.rbr_1x1.bn.weight has no weight decay
+stage3_second.blocks.11.rbr_1x1.bn.bias has no weight decay
+stage4.blocks.0.post_se.down.weight USE weight decay
+stage4.blocks.0.post_se.down.bias has no weight decay
+stage4.blocks.0.post_se.up.weight USE weight decay
+stage4.blocks.0.post_se.up.bias has no weight decay
+stage4.blocks.0.rbr_dense.conv.weight USE weight decay
+stage4.blocks.0.rbr_dense.bn.weight has no weight decay
+stage4.blocks.0.rbr_dense.bn.bias has no weight decay
+stage4.blocks.0.rbr_1x1.conv.weight USE weight decay
+stage4.blocks.0.rbr_1x1.bn.weight has no weight decay
+stage4.blocks.0.rbr_1x1.bn.bias has no weight decay
+linear.weight USE weight decay
+linear.bias has no weight decay
+stage1_aux.0.conv.weight USE weight decay
+stage1_aux.0.bn.weight has no weight decay
+stage1_aux.0.bn.bias has no weight decay
+stage1_aux.3.weight USE weight decay
+stage1_aux.3.bias has no weight decay
+stage2_aux.0.conv.weight USE weight decay
+stage2_aux.0.bn.weight has no weight decay
+stage2_aux.0.bn.bias has no weight decay
+stage2_aux.3.weight USE weight decay
+stage2_aux.3.bias has no weight decay
+stage3_first_aux.0.conv.weight USE weight decay
+stage3_first_aux.0.bn.weight has no weight decay
+stage3_first_aux.0.bn.bias has no weight decay
+stage3_first_aux.3.weight USE weight decay
+stage3_first_aux.3.bias has no weight decay
+[2025-01-22 13:35:48 RepVGGplus-L2pse](main.py 85): INFO RepVGGplus(
+  (stage0): RepVGGplusBlock(
+    (nonlinearity): ReLU()
+    (post_se): SEBlock(
+      (down): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+      (up): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1))
+    )
+    (rbr_dense): Sequential(
+      (conv): Conv2d(3, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (rbr_1x1): Sequential(
+      (conv): Conv2d(3, 64, kernel_size=(1, 1), stride=(2, 2), bias=False)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (stage1): RepVGGplusStage(
+    (blocks): ModuleList(
+      (0): RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(160, 40, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(40, 160, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_dense): Sequential(
+          (conv): Conv2d(64, 160, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(64, 160, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (bn): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1-7): 7 x RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(160, 40, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(40, 160, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_identity): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (rbr_dense): Sequential(
+          (conv): Conv2d(160, 160, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(160, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (stage2): RepVGGplusStage(
+    (blocks): ModuleList(
+      (0): RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(320, 80, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(80, 320, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_dense): Sequential(
+          (conv): Conv2d(160, 320, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(160, 320, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (bn): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1-13): 13 x RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(320, 80, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(80, 320, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_identity): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (rbr_dense): Sequential(
+          (conv): Conv2d(320, 320, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(320, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (stage3_first): RepVGGplusStage(
+    (blocks): ModuleList(
+      (0): RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(640, 160, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(160, 640, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_dense): Sequential(
+          (conv): Conv2d(320, 640, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(320, 640, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (1-11): 11 x RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(640, 160, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(160, 640, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_identity): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (rbr_dense): Sequential(
+          (conv): Conv2d(640, 640, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(640, 640, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (stage3_second): RepVGGplusStage(
+    (blocks): ModuleList(
+      (0-11): 12 x RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(640, 160, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(160, 640, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_identity): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (rbr_dense): Sequential(
+          (conv): Conv2d(640, 640, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(640, 640, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (stage4): RepVGGplusStage(
+    (blocks): ModuleList(
+      (0): RepVGGplusBlock(
+        (nonlinearity): ReLU()
+        (post_se): SEBlock(
+          (down): Conv2d(2560, 640, kernel_size=(1, 1), stride=(1, 1))
+          (up): Conv2d(640, 2560, kernel_size=(1, 1), stride=(1, 1))
+        )
+        (rbr_dense): Sequential(
+          (conv): Conv2d(640, 2560, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(2560, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (rbr_1x1): Sequential(
+          (conv): Conv2d(640, 2560, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (bn): BatchNorm2d(2560, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+    )
+  )
+  (gap): AdaptiveAvgPool2d(output_size=1)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (linear): Linear(in_features=2560, out_features=1000, bias=True)
+  (stage1_aux): Sequential(
+    (0): Sequential(
+      (conv): Conv2d(160, 160, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU()
+    )
+    (1): AdaptiveAvgPool2d(output_size=1)
+    (2): Flatten(start_dim=1, end_dim=-1)
+    (3): Linear(in_features=160, out_features=1000, bias=True)
+  )
+  (stage2_aux): Sequential(
+    (0): Sequential(
+      (conv): Conv2d(320, 320, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU()
+    )
+    (1): AdaptiveAvgPool2d(output_size=1)
+    (2): Flatten(start_dim=1, end_dim=-1)
+    (3): Linear(in_features=320, out_features=1000, bias=True)
+  )
+  (stage3_first_aux): Sequential(
+    (0): Sequential(
+      (conv): Conv2d(640, 640, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU()
+    )
+    (1): AdaptiveAvgPool2d(output_size=1)
+    (2): Flatten(start_dim=1, end_dim=-1)
+    (3): Linear(in_features=640, out_features=1000, bias=True)
+  )
+)
+[2025-01-22 13:35:49 RepVGGplus-L2pse](main.py 101): INFO number of params: 146062864
+[2025-01-22 13:35:49 RepVGGplus-L2pse](main.py 149): INFO Start training
+[2025-01-22 13:35:56 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][0/10009]	eta 20:53:14 lr 0.002500	time 7.5127 (7.5127)	loss 8.9721 (8.9721)	grad_norm 1770894.2395 (1770894.2395)	mem 8653MB
+[2025-01-22 13:37:02 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][10/10009]	eta 18:38:59 lr 0.002500	time 6.5729 (6.7146)	loss 9.1033 (9.3035)	grad_norm 19819.2930 (280348.9119)	mem 10266MB
+[2025-01-22 13:38:09 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][20/10009]	eta 18:32:07 lr 0.002500	time 6.6511 (6.6801)	loss 8.9915 (9.1904)	grad_norm 13048.4024 (156815.2017)	mem 10266MB
+[2025-01-22 13:39:15 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][30/10009]	eta 18:29:25 lr 0.002500	time 6.6605 (6.6706)	loss 8.9842 (9.1329)	grad_norm 13493.9358 (111225.6741)	mem 10266MB
+[2025-01-22 13:40:22 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][40/10009]	eta 18:26:09 lr 0.002500	time 6.7228 (6.6575)	loss 9.0422 (9.0998)	grad_norm 9523.9280 (89243.4298)	mem 10266MB
+[2025-01-22 13:41:28 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][50/10009]	eta 18:23:26 lr 0.002500	time 6.5831 (6.6479)	loss 9.0119 (9.0774)	grad_norm 9866.8474 (74293.9982)	mem 10266MB
+[2025-01-22 13:42:34 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][60/10009]	eta 18:22:21 lr 0.002500	time 6.7024 (6.6481)	loss 9.0016 (9.0630)	grad_norm 8184.9183 (63738.0594)	mem 10266MB
+[2025-01-22 13:43:48 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][70/10009]	eta 18:37:38 lr 0.002500	time 8.6560 (6.7470)	loss 8.9754 (9.0508)	grad_norm 8044.6941 (55930.9115)	mem 10266MB
+[2025-01-22 13:45:20 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][80/10009]	eta 19:26:52 lr 0.002500	time 9.4465 (7.0513)	loss 8.9946 (9.0420)	grad_norm 6451.1147 (49901.8496)	mem 10266MB
+[2025-01-22 13:46:52 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][90/10009]	eta 20:04:54 lr 0.002500	time 8.9673 (7.2885)	loss 8.9726 (9.0353)	grad_norm 5748.4991 (45120.8630)	mem 10266MB
+[2025-01-22 13:48:22 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][100/10009]	eta 20:32:32 lr 0.002499	time 8.8445 (7.4632)	loss 8.9706 (9.0301)	grad_norm 5526.0671 (41259.5266)	mem 10266MB
+[2025-01-22 13:49:53 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][110/10009]	eta 20:55:13 lr 0.002499	time 8.8495 (7.6082)	loss 8.9845 (9.0260)	grad_norm 5712.2549 (38049.4849)	mem 10266MB
+[2025-01-22 13:51:26 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][120/10009]	eta 21:16:09 lr 0.002499	time 9.6173 (7.7429)	loss 8.9877 (9.0228)	grad_norm 5576.9253 (35360.8758)	mem 10266MB
+[2025-01-22 13:52:59 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][130/10009]	eta 21:35:14 lr 0.002499	time 9.1968 (7.8666)	loss 8.9804 (9.0198)	grad_norm 5391.5968 (33086.4097)	mem 10266MB
+[2025-01-22 13:54:33 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][140/10009]	eta 21:51:28 lr 0.002499	time 9.5273 (7.9733)	loss 8.9774 (9.0173)	grad_norm 5506.1633 (31124.8663)	mem 10266MB
+[2025-01-22 13:56:06 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][150/10009]	eta 22:04:38 lr 0.002499	time 9.4430 (8.0615)	loss 8.9741 (9.0147)	grad_norm 5359.2240 (29421.4802)	mem 10266MB
+[2025-01-22 13:57:37 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][160/10009]	eta 22:13:49 lr 0.002498	time 8.4536 (8.1256)	loss 8.9749 (9.0126)	grad_norm 5285.4166 (27930.9096)	mem 10266MB
+[2025-01-22 13:59:09 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][170/10009]	eta 22:23:22 lr 0.002498	time 9.3079 (8.1922)	loss 8.9794 (9.0106)	grad_norm 5465.3124 (26610.2229)	mem 10266MB
+[2025-01-22 14:00:40 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][180/10009]	eta 22:29:57 lr 0.002498	time 9.0405 (8.2407)	loss 8.9742 (9.0090)	grad_norm 5393.0951 (25434.1113)	mem 10266MB
+[2025-01-22 14:02:11 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][190/10009]	eta 22:36:04 lr 0.002498	time 9.1777 (8.2864)	loss 8.9786 (9.0075)	grad_norm 5464.2129 (24383.8826)	mem 10266MB
+[2025-01-22 14:03:41 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][200/10009]	eta 22:40:35 lr 0.002498	time 9.2342 (8.3225)	loss 8.9842 (9.0060)	grad_norm 5284.5047 (23437.6650)	mem 10266MB
+[2025-01-22 14:05:13 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][210/10009]	eta 22:45:33 lr 0.002497	time 8.9654 (8.3614)	loss 8.9866 (9.0046)	grad_norm 5838.1189 (22586.5397)	mem 10266MB
+[2025-01-22 14:06:45 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][220/10009]	eta 22:50:12 lr 0.002497	time 9.0391 (8.3984)	loss 8.9920 (9.0034)	grad_norm 5274.0007 (21807.9818)	mem 10266MB
+[2025-01-22 14:08:15 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][230/10009]	eta 22:53:37 lr 0.002497	time 8.9731 (8.4280)	loss 8.9811 (9.0024)	grad_norm 5869.8427 (21098.5982)	mem 10266MB
+[2025-01-22 14:09:46 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][240/10009]	eta 22:56:17 lr 0.002496	time 8.8520 (8.4530)	loss 8.9662 (9.0016)	grad_norm 5349.5228 (20446.8431)	mem 10266MB
+[2025-01-22 14:11:16 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][250/10009]	eta 22:58:52 lr 0.002496	time 9.0228 (8.4776)	loss 8.9558 (9.0004)	grad_norm 5274.1590 (19845.9223)	mem 10266MB
+[2025-01-22 14:12:47 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][260/10009]	eta 23:01:07 lr 0.002496	time 8.6258 (8.5001)	loss 8.9849 (8.9999)	grad_norm 5702.9723 (19293.6078)	mem 10266MB
+[2025-01-22 14:14:19 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][270/10009]	eta 23:03:45 lr 0.002496	time 8.9076 (8.5251)	loss 8.9756 (8.9991)	grad_norm 5407.3774 (18780.9598)	mem 10266MB
+[2025-01-22 14:15:50 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][280/10009]	eta 23:05:40 lr 0.002495	time 8.6815 (8.5456)	loss 8.9858 (8.9986)	grad_norm 5464.8356 (18305.0682)	mem 10266MB
+[2025-01-22 14:17:20 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][290/10009]	eta 23:07:01 lr 0.002495	time 9.2329 (8.5628)	loss 8.9828 (8.9980)	grad_norm 5530.4365 (17861.4532)	mem 10266MB
+[2025-01-22 14:18:50 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][300/10009]	eta 23:07:56 lr 0.002494	time 8.7223 (8.5773)	loss 8.9795 (8.9974)	grad_norm 5565.7196 (17450.1351)	mem 10266MB
+[2025-01-22 14:20:22 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][310/10009]	eta 23:09:36 lr 0.002494	time 9.4007 (8.5964)	loss 8.9723 (8.9969)	grad_norm 5517.7580 (17064.5943)	mem 10266MB
+[2025-01-22 14:21:53 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][320/10009]	eta 23:10:53 lr 0.002494	time 9.1005 (8.6133)	loss 8.9744 (8.9963)	grad_norm 5264.3119 (16705.7484)	mem 10266MB
+[2025-01-22 14:23:24 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][330/10009]	eta 23:11:45 lr 0.002493	time 9.8171 (8.6275)	loss 8.9738 (8.9957)	grad_norm 5472.0017 (16367.0378)	mem 10266MB
+[2025-01-22 14:24:55 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][340/10009]	eta 23:12:18 lr 0.002493	time 9.0097 (8.6398)	loss 8.9830 (8.9953)	grad_norm 5447.2465 (16048.6087)	mem 10266MB
+[2025-01-22 14:26:26 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][350/10009]	eta 23:13:11 lr 0.002492	time 9.1464 (8.6542)	loss 8.9928 (8.9950)	grad_norm 5334.7380 (15749.2681)	mem 10266MB
+[2025-01-22 14:27:57 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][360/10009]	eta 23:13:43 lr 0.002492	time 8.9625 (8.6665)	loss 8.9603 (8.9944)	grad_norm 5453.9984 (15471.5289)	mem 10266MB
+[2025-01-22 14:29:29 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][370/10009]	eta 23:14:26 lr 0.002492	time 9.7488 (8.6799)	loss 8.9719 (8.9939)	grad_norm 5344.8327 (15203.6815)	mem 10266MB
+[2025-01-22 14:31:00 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][380/10009]	eta 23:14:39 lr 0.002491	time 9.0015 (8.6903)	loss 8.9723 (8.9934)	grad_norm 5421.5031 (14948.4457)	mem 10266MB
+[2025-01-22 14:32:31 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][390/10009]	eta 23:14:53 lr 0.002491	time 8.6571 (8.7008)	loss 8.9748 (8.9930)	grad_norm 5578.0029 (14708.4404)	mem 10266MB
+[2025-01-22 14:34:03 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][400/10009]	eta 23:15:35 lr 0.002490	time 8.8776 (8.7142)	loss 8.9791 (8.9928)	grad_norm 5598.6748 (14482.2454)	mem 10266MB
+[2025-01-22 14:35:35 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][410/10009]	eta 23:15:52 lr 0.002490	time 9.1898 (8.7251)	loss 8.9663 (8.9924)	grad_norm 5233.1653 (14261.4946)	mem 10266MB
+[2025-01-22 14:37:05 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][420/10009]	eta 23:15:42 lr 0.002489	time 9.3471 (8.7332)	loss 8.9688 (8.9920)	grad_norm 5650.6418 (14054.7487)	mem 10266MB
+[2025-01-22 14:38:37 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][430/10009]	eta 23:15:47 lr 0.002489	time 8.9976 (8.7428)	loss 8.9867 (8.9918)	grad_norm 6403.5256 (13890.2992)	mem 10266MB
+[2025-01-22 14:40:08 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][440/10009]	eta 23:15:38 lr 0.002488	time 9.2074 (8.7510)	loss 8.9739 (8.9915)	grad_norm 5828.5153 (13703.7021)	mem 10266MB
+[2025-01-22 14:41:39 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][450/10009]	eta 23:15:22 lr 0.002488	time 8.7713 (8.7585)	loss 8.9607 (8.9914)	grad_norm 5939.8784 (13526.1362)	mem 10266MB
+[2025-01-22 14:43:10 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][460/10009]	eta 23:15:15 lr 0.002487	time 9.1873 (8.7669)	loss 8.9607 (8.9912)	grad_norm 7482.6762 (13385.5254)	mem 10266MB
+[2025-01-22 14:44:40 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][470/10009]	eta 23:14:40 lr 0.002486	time 8.9450 (8.7725)	loss 8.9528 (8.9909)	grad_norm 9331.0757 (13314.3972)	mem 10266MB
+[2025-01-22 14:46:12 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][480/10009]	eta 23:14:27 lr 0.002486	time 9.2258 (8.7803)	loss 8.9918 (8.9907)	grad_norm 22129.3587 (13445.7501)	mem 10266MB
+[2025-01-22 14:47:42 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][490/10009]	eta 23:13:41 lr 0.002485	time 8.6494 (8.7847)	loss 9.0024 (8.9903)	grad_norm 9116.5934 (13518.5308)	mem 10266MB
+[2025-01-22 14:49:12 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][500/10009]	eta 23:12:55 lr 0.002485	time 8.4851 (8.7891)	loss 8.9620 (8.9901)	grad_norm 27905.8372 (14978.9833)	mem 10266MB
+[2025-01-22 14:50:43 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][510/10009]	eta 23:12:31 lr 0.002484	time 9.2562 (8.7959)	loss 8.9525 (8.9900)	grad_norm 22696.1699 (15294.1984)	mem 10266MB
+[2025-01-22 14:52:14 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][520/10009]	eta 23:11:54 lr 0.002483	time 8.7718 (8.8012)	loss 8.9655 (8.9897)	grad_norm 15212.0371 (15533.5415)	mem 10266MB
+[2025-01-22 14:53:45 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][530/10009]	eta 23:11:18 lr 0.002483	time 9.0181 (8.8066)	loss 8.9631 (8.9896)	grad_norm 13820.3467 (15461.2238)	mem 10266MB
+[2025-01-22 14:55:15 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][540/10009]	eta 23:10:26 lr 0.002482	time 9.0988 (8.8105)	loss 9.0154 (8.9895)	grad_norm 18921.1190 (15404.2819)	mem 10266MB
+[2025-01-22 14:56:45 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][550/10009]	eta 23:09:34 lr 0.002481	time 9.1899 (8.8143)	loss 8.9709 (8.9895)	grad_norm 7333.9320 (15344.6202)	mem 10266MB
+[2025-01-22 14:58:16 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][560/10009]	eta 23:08:55 lr 0.002481	time 9.2236 (8.8195)	loss 8.9792 (8.9893)	grad_norm 8919.0099 (15248.6741)	mem 10266MB
+[2025-01-22 14:59:48 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][570/10009]	eta 23:08:25 lr 0.002480	time 9.0670 (8.8256)	loss 8.9733 (8.9892)	grad_norm 9045.9282 (15241.1750)	mem 10266MB
+[2025-01-22 15:01:19 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][580/10009]	eta 23:07:41 lr 0.002479	time 10.1321 (8.8304)	loss 8.9812 (8.9891)	grad_norm 11746.6564 (15208.4047)	mem 10266MB
+[2025-01-22 15:02:50 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][590/10009]	eta 23:07:01 lr 0.002479	time 8.9421 (8.8355)	loss 8.9957 (8.9889)	grad_norm 7371.9743 (15191.8318)	mem 10266MB
+[2025-01-22 15:04:22 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][600/10009]	eta 23:06:17 lr 0.002478	time 9.8877 (8.8402)	loss 8.9812 (8.9889)	grad_norm 7740.9648 (15091.7508)	mem 10266MB
+[2025-01-22 15:05:52 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][610/10009]	eta 23:05:20 lr 0.002477	time 8.9230 (8.8436)	loss 8.9810 (8.9887)	grad_norm 8453.2520 (14961.9063)	mem 10266MB
+[2025-01-22 15:07:23 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][620/10009]	eta 23:04:27 lr 0.002476	time 8.9918 (8.8473)	loss 8.9919 (8.9887)	grad_norm 7583.6559 (14861.2674)	mem 10266MB
+[2025-01-22 15:08:53 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][630/10009]	eta 23:03:27 lr 0.002476	time 8.6820 (8.8504)	loss 8.9722 (8.9886)	grad_norm 6465.1137 (14753.9828)	mem 10266MB
+[2025-01-22 15:10:24 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][640/10009]	eta 23:02:38 lr 0.002475	time 8.9521 (8.8546)	loss 8.9693 (8.9885)	grad_norm 10742.4976 (14743.2464)	mem 10266MB
+[2025-01-22 15:11:55 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][650/10009]	eta 23:01:37 lr 0.002474	time 8.7657 (8.8575)	loss 9.0193 (8.9885)	grad_norm 6206.6607 (14653.2364)	mem 10266MB
+[2025-01-22 15:13:26 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][660/10009]	eta 23:00:44 lr 0.002473	time 9.0664 (8.8613)	loss 8.9625 (8.9883)	grad_norm 18483.8207 (14699.5300)	mem 10266MB
+[2025-01-22 15:14:57 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][670/10009]	eta 22:59:47 lr 0.002472	time 8.8063 (8.8647)	loss 8.9958 (8.9883)	grad_norm 26774.5035 (14784.3313)	mem 10266MB
+[2025-01-22 15:16:30 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][680/10009]	eta 22:59:18 lr 0.002472	time 9.0410 (8.8712)	loss 8.9653 (8.9881)	grad_norm 41185.3937 (15026.1314)	mem 10266MB
+[2025-01-22 15:18:01 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][690/10009]	eta 22:58:25 lr 0.002471	time 8.7121 (8.8750)	loss 8.9700 (8.9879)	grad_norm 6260.3407 (15038.1738)	mem 10266MB
+[2025-01-22 15:19:32 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][700/10009]	eta 22:57:27 lr 0.002470	time 8.6003 (8.8782)	loss 8.9990 (8.9878)	grad_norm 7500.3120 (15006.2107)	mem 10266MB
+[2025-01-22 15:21:03 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][710/10009]	eta 22:56:21 lr 0.002469	time 9.2815 (8.8807)	loss 8.9705 (8.9876)	grad_norm 8723.8968 (14913.3077)	mem 10266MB
+[2025-01-22 15:22:35 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][720/10009]	eta 22:55:39 lr 0.002468	time 8.9101 (8.8858)	loss 8.9885 (8.9875)	grad_norm 5360.4390 (14802.9436)	mem 10266MB
+[2025-01-22 15:24:06 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][730/10009]	eta 22:54:40 lr 0.002467	time 9.8682 (8.8889)	loss 8.9799 (8.9873)	grad_norm 6761.9046 (14713.5615)	mem 10266MB
+[2025-01-22 15:25:38 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][740/10009]	eta 22:53:48 lr 0.002466	time 8.8705 (8.8929)	loss 8.9800 (8.9872)	grad_norm 18622.4425 (14625.0153)	mem 10266MB
+[2025-01-22 15:27:10 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][750/10009]	eta 22:52:55 lr 0.002466	time 9.1237 (8.8968)	loss 8.9741 (8.9870)	grad_norm 145831.3603 (14767.6895)	mem 10266MB
+[2025-01-22 15:28:41 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][760/10009]	eta 22:51:52 lr 0.002465	time 9.1781 (8.8997)	loss 8.9887 (8.9869)	grad_norm 44867.3710 (16368.6006)	mem 10266MB
+[2025-01-22 15:30:13 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][770/10009]	eta 22:50:59 lr 0.002464	time 9.1939 (8.9035)	loss 8.9863 (8.9868)	grad_norm 15454.6107 (16419.6553)	mem 10266MB
+[2025-01-22 15:31:44 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][780/10009]	eta 22:49:52 lr 0.002463	time 9.1719 (8.9059)	loss 8.9744 (8.9867)	grad_norm 99736.4449 (16586.9669)	mem 10266MB
+[2025-01-22 15:33:24 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][790/10009]	eta 22:50:24 lr 0.002462	time 10.0846 (8.9190)	loss 9.0038 (8.9867)	grad_norm 33289.4669 (16827.5689)	mem 10266MB
+[2025-01-22 15:34:59 RepVGGplus-L2pse](main.py 280): INFO Train: [0/1][800/10009]	eta 22:50:03 lr 0.002461	time 9.7707 (8.9264)	loss 8.9887 (8.9866)	grad_norm 24845.6844 (inf)	mem 10266MB
+[2025-01-22 15:35:49 RepVGGplus-L2pse](main.py 288): INFO Reach Limited Time(2 hours)!
+[2025-01-22 15:35:49 RepVGGplus-L2pse](main.py 291): INFO EPOCH 0 training takes 2:00:00
+[2025-01-22 15:35:49 RepVGGplus-L2pse](utils.py 174): INFO /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/latest.pth saving......
+[2025-01-22 15:35:57 RepVGGplus-L2pse](utils.py 176): INFO /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/latest.pth saved !!!
+[2025-01-22 15:35:57 RepVGGplus-L2pse](utils.py 195): INFO /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/ckpt_epoch_0.pth saving......
+[2025-01-22 15:36:05 RepVGGplus-L2pse](utils.py 197): INFO /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/ckpt_epoch_0.pth saved !!!
+[2025-01-22 15:36:06 RepVGGplus-L2pse](main.py 334): INFO Test: [0/391]	Time 1.090 (1.090)	Loss 6.8934 (6.8934)	Acc@1 0.000 (0.000)	Acc@5 1.562 (1.562)	Mem 10266MB
+[2025-01-22 15:36:12 RepVGGplus-L2pse](main.py 334): INFO Test: [10/391]	Time 0.630 (0.568)	Loss 6.9145 (6.9106)	Acc@1 0.000 (0.071)	Acc@5 0.781 (0.710)	Mem 10266MB
+[2025-01-22 15:36:17 RepVGGplus-L2pse](main.py 334): INFO Test: [20/391]	Time 0.419 (0.559)	Loss 6.9141 (6.9121)	Acc@1 0.000 (0.260)	Acc@5 0.000 (0.707)	Mem 10266MB
+[2025-01-22 15:36:22 RepVGGplus-L2pse](main.py 334): INFO Test: [30/391]	Time 0.688 (0.546)	Loss 6.9058 (6.9115)	Acc@1 0.000 (0.227)	Acc@5 0.781 (0.655)	Mem 10266MB
+[2025-01-22 15:36:28 RepVGGplus-L2pse](main.py 334): INFO Test: [40/391]	Time 0.416 (0.544)	Loss 6.9141 (6.9111)	Acc@1 0.000 (0.191)	Acc@5 0.000 (0.667)	Mem 10266MB
+[2025-01-22 15:36:33 RepVGGplus-L2pse](main.py 334): INFO Test: [50/391]	Time 0.896 (0.548)	Loss 6.9060 (6.9101)	Acc@1 0.000 (0.184)	Acc@5 0.000 (0.628)	Mem 10266MB
+[2025-01-22 15:36:38 RepVGGplus-L2pse](main.py 334): INFO Test: [60/391]	Time 0.436 (0.539)	Loss 6.9127 (6.9105)	Acc@1 0.000 (0.166)	Acc@5 2.344 (0.666)	Mem 10266MB
+[2025-01-22 15:36:44 RepVGGplus-L2pse](main.py 334): INFO Test: [70/391]	Time 0.416 (0.543)	Loss 6.9060 (6.9102)	Acc@1 0.000 (0.165)	Acc@5 0.000 (0.660)	Mem 10266MB
+[2025-01-22 15:36:49 RepVGGplus-L2pse](main.py 334): INFO Test: [80/391]	Time 0.761 (0.543)	Loss 6.8981 (6.9099)	Acc@1 0.000 (0.164)	Acc@5 0.000 (0.675)	Mem 10266MB
+[2025-01-22 15:36:54 RepVGGplus-L2pse](main.py 334): INFO Test: [90/391]	Time 0.437 (0.540)	Loss 6.9145 (6.9100)	Acc@1 0.000 (0.146)	Acc@5 0.781 (0.635)	Mem 10266MB
+[2025-01-22 15:37:00 RepVGGplus-L2pse](main.py 334): INFO Test: [100/391]	Time 0.422 (0.543)	Loss 6.9160 (6.9100)	Acc@1 0.000 (0.155)	Acc@5 0.000 (0.603)	Mem 10266MB
+[2025-01-22 15:37:05 RepVGGplus-L2pse](main.py 334): INFO Test: [110/391]	Time 0.688 (0.541)	Loss 6.9110 (6.9099)	Acc@1 0.000 (0.141)	Acc@5 0.000 (0.591)	Mem 10266MB
+[2025-01-22 15:37:11 RepVGGplus-L2pse](main.py 334): INFO Test: [120/391]	Time 0.418 (0.541)	Loss 6.9053 (6.9098)	Acc@1 0.000 (0.136)	Acc@5 0.000 (0.575)	Mem 10266MB
+[2025-01-22 15:37:16 RepVGGplus-L2pse](main.py 334): INFO Test: [130/391]	Time 0.461 (0.542)	Loss 6.9105 (6.9099)	Acc@1 0.000 (0.125)	Acc@5 0.781 (0.555)	Mem 10266MB
+[2025-01-22 15:37:21 RepVGGplus-L2pse](main.py 334): INFO Test: [140/391]	Time 0.636 (0.540)	Loss 6.9048 (6.9097)	Acc@1 0.000 (0.122)	Acc@5 1.562 (0.543)	Mem 10266MB
+[2025-01-22 15:37:27 RepVGGplus-L2pse](main.py 334): INFO Test: [150/391]	Time 0.418 (0.541)	Loss 6.9099 (6.9095)	Acc@1 0.000 (0.114)	Acc@5 0.000 (0.548)	Mem 10266MB
+[2025-01-22 15:37:33 RepVGGplus-L2pse](main.py 334): INFO Test: [160/391]	Time 0.505 (0.542)	Loss 6.9111 (6.9096)	Acc@1 0.000 (0.112)	Acc@5 0.000 (0.534)	Mem 10266MB
+[2025-01-22 15:37:38 RepVGGplus-L2pse](main.py 334): INFO Test: [170/391]	Time 0.634 (0.541)	Loss 6.9067 (6.9097)	Acc@1 0.000 (0.114)	Acc@5 0.000 (0.557)	Mem 10266MB
+[2025-01-22 15:37:43 RepVGGplus-L2pse](main.py 334): INFO Test: [180/391]	Time 0.416 (0.541)	Loss 6.9074 (6.9096)	Acc@1 0.000 (0.108)	Acc@5 1.562 (0.557)	Mem 10266MB
+[2025-01-22 15:37:49 RepVGGplus-L2pse](main.py 334): INFO Test: [190/391]	Time 0.891 (0.542)	Loss 6.8975 (6.9097)	Acc@1 0.000 (0.102)	Acc@5 2.344 (0.544)	Mem 10266MB
+[2025-01-22 15:37:54 RepVGGplus-L2pse](main.py 334): INFO Test: [200/391]	Time 0.436 (0.540)	Loss 6.9046 (6.9098)	Acc@1 0.000 (0.101)	Acc@5 1.562 (0.536)	Mem 10266MB
+[2025-01-22 15:37:59 RepVGGplus-L2pse](main.py 334): INFO Test: [210/391]	Time 0.416 (0.541)	Loss 6.9194 (6.9099)	Acc@1 0.000 (0.096)	Acc@5 0.000 (0.533)	Mem 10266MB
+[2025-01-22 15:38:05 RepVGGplus-L2pse](main.py 334): INFO Test: [220/391]	Time 0.689 (0.540)	Loss 6.9138 (6.9099)	Acc@1 0.000 (0.092)	Acc@5 0.000 (0.523)	Mem 10266MB
+[2025-01-22 15:38:10 RepVGGplus-L2pse](main.py 334): INFO Test: [230/391]	Time 0.425 (0.540)	Loss 6.9126 (6.9099)	Acc@1 0.000 (0.095)	Acc@5 1.562 (0.534)	Mem 10266MB
+[2025-01-22 15:38:16 RepVGGplus-L2pse](main.py 334): INFO Test: [240/391]	Time 0.452 (0.541)	Loss 6.9095 (6.9099)	Acc@1 0.000 (0.097)	Acc@5 0.781 (0.528)	Mem 10266MB
+[2025-01-22 15:38:21 RepVGGplus-L2pse](main.py 334): INFO Test: [250/391]	Time 0.577 (0.540)	Loss 6.9136 (6.9100)	Acc@1 0.000 (0.096)	Acc@5 0.000 (0.526)	Mem 10266MB
+[2025-01-22 15:38:26 RepVGGplus-L2pse](main.py 334): INFO Test: [260/391]	Time 0.417 (0.540)	Loss 6.9029 (6.9100)	Acc@1 0.781 (0.099)	Acc@5 0.781 (0.533)	Mem 10266MB
+[2025-01-22 15:38:32 RepVGGplus-L2pse](main.py 334): INFO Test: [270/391]	Time 0.885 (0.541)	Loss 6.9035 (6.9099)	Acc@1 0.000 (0.101)	Acc@5 0.000 (0.528)	Mem 10266MB
+[2025-01-22 15:38:37 RepVGGplus-L2pse](main.py 334): INFO Test: [280/391]	Time 0.438 (0.539)	Loss 6.9171 (6.9099)	Acc@1 0.000 (0.100)	Acc@5 1.562 (0.531)	Mem 10266MB
+[2025-01-22 15:38:42 RepVGGplus-L2pse](main.py 334): INFO Test: [290/391]	Time 0.417 (0.540)	Loss 6.9085 (6.9100)	Acc@1 0.000 (0.102)	Acc@5 0.000 (0.532)	Mem 10266MB
+[2025-01-22 15:38:48 RepVGGplus-L2pse](main.py 334): INFO Test: [300/391]	Time 0.884 (0.541)	Loss 6.9202 (6.9100)	Acc@1 0.000 (0.101)	Acc@5 0.000 (0.532)	Mem 10266MB
+[2025-01-22 15:38:53 RepVGGplus-L2pse](main.py 334): INFO Test: [310/391]	Time 0.437 (0.539)	Loss 6.8960 (6.9100)	Acc@1 0.000 (0.098)	Acc@5 0.781 (0.525)	Mem 10266MB
+[2025-01-22 15:38:59 RepVGGplus-L2pse](main.py 334): INFO Test: [320/391]	Time 0.417 (0.540)	Loss 6.9211 (6.9100)	Acc@1 0.000 (0.095)	Acc@5 0.781 (0.526)	Mem 10266MB
+[2025-01-22 15:39:04 RepVGGplus-L2pse](main.py 334): INFO Test: [330/391]	Time 0.762 (0.540)	Loss 6.9178 (6.9100)	Acc@1 0.000 (0.097)	Acc@5 0.000 (0.529)	Mem 10266MB
+[2025-01-22 15:39:09 RepVGGplus-L2pse](main.py 334): INFO Test: [340/391]	Time 0.426 (0.540)	Loss 6.9125 (6.9100)	Acc@1 0.000 (0.096)	Acc@5 0.781 (0.525)	Mem 10266MB
+[2025-01-22 15:39:15 RepVGGplus-L2pse](main.py 334): INFO Test: [350/391]	Time 0.463 (0.540)	Loss 6.9004 (6.9099)	Acc@1 0.000 (0.098)	Acc@5 0.781 (0.521)	Mem 10266MB
+[2025-01-22 15:39:20 RepVGGplus-L2pse](main.py 334): INFO Test: [360/391]	Time 0.634 (0.540)	Loss 6.9129 (6.9099)	Acc@1 0.000 (0.100)	Acc@5 0.000 (0.515)	Mem 10266MB
+[2025-01-22 15:39:26 RepVGGplus-L2pse](main.py 334): INFO Test: [370/391]	Time 0.418 (0.540)	Loss 6.9065 (6.9099)	Acc@1 0.781 (0.099)	Acc@5 1.562 (0.516)	Mem 10266MB
+[2025-01-22 15:39:31 RepVGGplus-L2pse](main.py 334): INFO Test: [380/391]	Time 0.467 (0.540)	Loss 6.9049 (6.9099)	Acc@1 0.000 (0.103)	Acc@5 0.000 (0.517)	Mem 10266MB
+[2025-01-22 15:39:36 RepVGGplus-L2pse](main.py 334): INFO Test: [390/391]	Time 0.433 (0.539)	Loss 6.9187 (6.9100)	Acc@1 0.000 (0.102)	Acc@5 0.000 (0.512)	Mem 10266MB
+[2025-01-22 15:39:36 RepVGGplus-L2pse](main.py 341): INFO  * Acc@1 0.102 Acc@5 0.512
+[2025-01-22 15:39:36 RepVGGplus-L2pse](main.py 164): INFO Accuracy of the network at epoch 0: 0.102%
+[2025-01-22 15:39:36 RepVGGplus-L2pse](main.py 166): INFO Max accuracy: 0.10%
+[2025-01-22 15:39:41 RepVGGplus-L2pse](utils.py 195): INFO /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/ckpt_epoch_0.pth saving......
+[2025-01-22 15:39:49 RepVGGplus-L2pse](utils.py 197): INFO /root/data/ckpt/RepVGG/RepVGGplus-L2pse/my_experiment/ckpt_epoch_0.pth saved !!!
+[2025-01-22 15:39:49 RepVGGplus-L2pse](main.py 188): INFO Training time 2:04:00

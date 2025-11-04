@@ -1,0 +1,5 @@
+pillow==9.1.0
+matplotlib
+decorator
+sympy
+git+https://gitee.com/xiwei777/tcap_dlloger.git

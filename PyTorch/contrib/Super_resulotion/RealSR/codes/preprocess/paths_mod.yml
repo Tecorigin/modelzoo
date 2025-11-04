@@ -1,0 +1,13 @@
+df2k:
+  tdsr:
+    source: '/root/cas/lzk/Real-SR/datasets/DIV2K/DIV2K_train_LR_bicubic/X2'
+    target: '/root/cas/lzk/Real-SR/datasets/DIV2K/DIV2K_train_HR'
+    valid:
+dped:
+  clean:
+    hr:
+      train: '../../ntire20/DPEDiphone-tr-x'
+      valid: '../../ntire20/DPEDiphone-va'
+datasets:
+  df2k: '../datasets/DF2K'
+  dped: '../datasets/DPED'

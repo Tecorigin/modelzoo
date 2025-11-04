@@ -1,0 +1,1047 @@
+--------------+------------------------------------------------
+ Host IP      | 10.244.54.9
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.2.0b0+git0636d14
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.0 (N/A)
+ SDAA Runtime | 2.1.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.2.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.2.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+/data/bigc-data/wyc/wyc_mmlab/lib/python3.10/site-packages/torch/distributed/launch.py:208: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  main()
+--------------+------------------------------------------------
+ Host IP      | 10.244.54.9
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.2.0b0+git0636d14
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.0 (N/A)
+ SDAA Runtime | 2.1.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.2.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.2.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+/data/bigc-data/wyc/wyc_mmlab/lib/python3.10/site-packages/mmengine/optim/optimizer/zero_optimizer.py:11: DeprecationWarning: `TorchScript` support for functional optimizers is deprecated and will be removed in a future PyTorch release. Consider using the `torch.compile` optimizer instead.
+  from torch.distributed.optim import \
+/data/bigc-data/wyc/wyc_mmlab/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:46: UserWarning: Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+/data/bigc-data/wyc/wyc_mmlab/lib/python3.10/site-packages/mmengine/utils/dl_utils/setup_env.py:56: UserWarning: Setting MKL_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed.
+  warnings.warn(
+06/23 11:18:55 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.16 (main, Dec 11 2024, 16:24:50) [GCC 11.2.0]
+    CUDA available: False
+    MUSA available: False
+    numpy_random_seed: 176478655
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    PyTorch: 2.4.0a0+git4451b0e
+    PyTorch compiling details: PyTorch built with:
+  - GCC 11.5
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2025.0-Product Build 20241009 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.4.2 (Git Hash 1137e04ec0b5251ca2b4400a4fd3c667ce843d67)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=/usr/bin/g++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=1 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, FORCE_FALLBACK_CUDA_MPI=1, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.4.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=1, USE_MPI=ON, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+    TorchVision: 0.15.1a0+42759b1
+    OpenCV: 4.11.0
+    MMEngine: 0.10.4
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 0}
+    dist_cfg: {'backend': 'tccl'}
+    seed: 176478655
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 1
+------------------------------------------------------------
+
+06/23 11:18:56 - mmengine - INFO - Config:
+auto_scale_lr = dict(base_batch_size=16)
+backend_args = None
+data_root = '/data/teco-data/coco/'
+dataset_type = 'CocoDataset'
+default_hooks = dict(
+    checkpoint=dict(interval=1, type='CheckpointHook'),
+    logger=dict(interval=50, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'),
+    visualization=dict(type='DetVisualizationHook'))
+default_scope = 'mmdet'
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='nccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=0))
+launcher = 'pytorch'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=True, type='LogProcessor', window_size=50)
+max_epochs = 36
+model = dict(
+    as_two_stage=True,
+    backbone=dict(
+        depth=50,
+        frozen_stages=1,
+        init_cfg=dict(checkpoint='torchvision://resnet50', type='Pretrained'),
+        norm_cfg=dict(requires_grad=False, type='BN'),
+        norm_eval=True,
+        num_stages=4,
+        out_indices=(
+            1,
+            2,
+            3,
+        ),
+        style='pytorch',
+        type='ResNet'),
+    bbox_head=dict(
+        loss_bbox=dict(loss_weight=5.0, type='L1Loss'),
+        loss_cls=dict(
+            alpha=0.25,
+            gamma=2.0,
+            loss_weight=1.0,
+            type='FocalLoss',
+            use_sigmoid=True),
+        loss_iou=dict(loss_weight=2.0, type='GIoULoss'),
+        num_classes=80,
+        sync_cls_avg_factor=True,
+        type='DINOHead'),
+    data_preprocessor=dict(
+        bgr_to_rgb=True,
+        mean=[
+            123.675,
+            116.28,
+            103.53,
+        ],
+        pad_size_divisor=1,
+        std=[
+            58.395,
+            57.12,
+            57.375,
+        ],
+        type='DetDataPreprocessor'),
+    decoder=dict(
+        layer_cfg=dict(
+            cross_attn_cfg=dict(dropout=0.0, embed_dims=256, num_levels=4),
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(dropout=0.0, embed_dims=256, num_heads=8)),
+        num_layers=6,
+        post_norm_cfg=None,
+        return_intermediate=True),
+    dn_cfg=dict(
+        box_noise_scale=1.0,
+        group_cfg=dict(dynamic=True, num_dn_queries=100, num_groups=None),
+        label_noise_scale=0.5),
+    encoder=dict(
+        layer_cfg=dict(
+            ffn_cfg=dict(
+                embed_dims=256, feedforward_channels=2048, ffn_drop=0.0),
+            self_attn_cfg=dict(dropout=0.0, embed_dims=256, num_levels=4)),
+        num_layers=6),
+    neck=dict(
+        act_cfg=None,
+        in_channels=[
+            512,
+            1024,
+            2048,
+        ],
+        kernel_size=1,
+        norm_cfg=dict(num_groups=32, type='GN'),
+        num_outs=4,
+        out_channels=256,
+        type='ChannelMapper'),
+    num_queries=900,
+    positional_encoding=dict(
+        normalize=True, num_feats=128, offset=0.0, temperature=20),
+    test_cfg=dict(max_per_img=300),
+    train_cfg=dict(
+        assigner=dict(
+            match_costs=[
+                dict(type='FocalLossCost', weight=2.0),
+                dict(box_format='xywh', type='BBoxL1Cost', weight=5.0),
+                dict(iou_mode='giou', type='IoUCost', weight=2.0),
+            ],
+            type='HungarianAssigner')),
+    type='DINO',
+    with_box_refine=True)
+optim_wrapper = dict(
+    clip_grad=dict(max_norm=0.1, norm_type=2),
+    loss_scale='dynamic',
+    optimizer=dict(lr=0.0001, type='AdamW', weight_decay=0.0001),
+    paramwise_cfg=dict(custom_keys=dict(backbone=dict(lr_mult=0.1))),
+    type='AmpOptimWrapper')
+param_scheduler = [
+    dict(
+        begin=0,
+        by_epoch=True,
+        end=36,
+        gamma=0.1,
+        milestones=[
+            30,
+        ],
+        type='MultiStepLR'),
+]
+resume = False
+test_cfg = dict(type='TestLoop')
+test_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/instances_val2017.json',
+        backend_args=None,
+        data_prefix=dict(img='val2017/'),
+        data_root='/data/teco-data/coco/',
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                ),
+                type='PackDetInputs'),
+        ],
+        test_mode=True,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+test_evaluator = dict(
+    ann_file='/data/teco-data/coco/annotations/instances_val2017.json',
+    backend_args=None,
+    format_only=False,
+    metric='bbox',
+    type='CocoMetric')
+test_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(keep_ratio=True, scale=(
+        1333,
+        800,
+    ), type='Resize'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(
+        meta_keys=(
+            'img_id',
+            'img_path',
+            'ori_shape',
+            'img_shape',
+            'scale_factor',
+        ),
+        type='PackDetInputs'),
+]
+train_cfg = dict(max_epochs=36, type='EpochBasedTrainLoop', val_interval=1)
+train_dataloader = dict(
+    batch_sampler=dict(type='AspectRatioBatchSampler'),
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/instances_train2017.json',
+        backend_args=None,
+        data_prefix=dict(img='train2017/'),
+        data_root='/data/teco-data/coco/',
+        filter_cfg=dict(filter_empty_gt=False, min_size=32),
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(prob=0.5, type='RandomFlip'),
+            dict(
+                transforms=[
+                    [
+                        dict(
+                            keep_ratio=True,
+                            scales=[
+                                (
+                                    480,
+                                    1333,
+                                ),
+                                (
+                                    512,
+                                    1333,
+                                ),
+                                (
+                                    544,
+                                    1333,
+                                ),
+                                (
+                                    576,
+                                    1333,
+                                ),
+                                (
+                                    608,
+                                    1333,
+                                ),
+                                (
+                                    640,
+                                    1333,
+                                ),
+                                (
+                                    672,
+                                    1333,
+                                ),
+                                (
+                                    704,
+                                    1333,
+                                ),
+                                (
+                                    736,
+                                    1333,
+                                ),
+                                (
+                                    768,
+                                    1333,
+                                ),
+                                (
+                                    800,
+                                    1333,
+                                ),
+                            ],
+                            type='RandomChoiceResize'),
+                    ],
+                    [
+                        dict(
+                            keep_ratio=True,
+                            scales=[
+                                (
+                                    400,
+                                    4200,
+                                ),
+                                (
+                                    500,
+                                    4200,
+                                ),
+                                (
+                                    600,
+                                    4200,
+                                ),
+                            ],
+                            type='RandomChoiceResize'),
+                        dict(
+                            allow_negative_crop=True,
+                            crop_size=(
+                                384,
+                                600,
+                            ),
+                            crop_type='absolute_range',
+                            type='RandomCrop'),
+                        dict(
+                            keep_ratio=True,
+                            scales=[
+                                (
+                                    480,
+                                    1333,
+                                ),
+                                (
+                                    512,
+                                    1333,
+                                ),
+                                (
+                                    544,
+                                    1333,
+                                ),
+                                (
+                                    576,
+                                    1333,
+                                ),
+                                (
+                                    608,
+                                    1333,
+                                ),
+                                (
+                                    640,
+                                    1333,
+                                ),
+                                (
+                                    672,
+                                    1333,
+                                ),
+                                (
+                                    704,
+                                    1333,
+                                ),
+                                (
+                                    736,
+                                    1333,
+                                ),
+                                (
+                                    768,
+                                    1333,
+                                ),
+                                (
+                                    800,
+                                    1333,
+                                ),
+                            ],
+                            type='RandomChoiceResize'),
+                    ],
+                ],
+                type='RandomChoice'),
+            dict(type='PackDetInputs'),
+        ],
+        type='CocoDataset'),
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=True, type='DefaultSampler'))
+train_pipeline = [
+    dict(backend_args=None, type='LoadImageFromFile'),
+    dict(type='LoadAnnotations', with_bbox=True),
+    dict(prob=0.5, type='RandomFlip'),
+    dict(
+        transforms=[
+            [
+                dict(
+                    keep_ratio=True,
+                    scales=[
+                        (
+                            480,
+                            1333,
+                        ),
+                        (
+                            512,
+                            1333,
+                        ),
+                        (
+                            544,
+                            1333,
+                        ),
+                        (
+                            576,
+                            1333,
+                        ),
+                        (
+                            608,
+                            1333,
+                        ),
+                        (
+                            640,
+                            1333,
+                        ),
+                        (
+                            672,
+                            1333,
+                        ),
+                        (
+                            704,
+                            1333,
+                        ),
+                        (
+                            736,
+                            1333,
+                        ),
+                        (
+                            768,
+                            1333,
+                        ),
+                        (
+                            800,
+                            1333,
+                        ),
+                    ],
+                    type='RandomChoiceResize'),
+            ],
+            [
+                dict(
+                    keep_ratio=True,
+                    scales=[
+                        (
+                            400,
+                            4200,
+                        ),
+                        (
+                            500,
+                            4200,
+                        ),
+                        (
+                            600,
+                            4200,
+                        ),
+                    ],
+                    type='RandomChoiceResize'),
+                dict(
+                    allow_negative_crop=True,
+                    crop_size=(
+                        384,
+                        600,
+                    ),
+                    crop_type='absolute_range',
+                    type='RandomCrop'),
+                dict(
+                    keep_ratio=True,
+                    scales=[
+                        (
+                            480,
+                            1333,
+                        ),
+                        (
+                            512,
+                            1333,
+                        ),
+                        (
+                            544,
+                            1333,
+                        ),
+                        (
+                            576,
+                            1333,
+                        ),
+                        (
+                            608,
+                            1333,
+                        ),
+                        (
+                            640,
+                            1333,
+                        ),
+                        (
+                            672,
+                            1333,
+                        ),
+                        (
+                            704,
+                            1333,
+                        ),
+                        (
+                            736,
+                            1333,
+                        ),
+                        (
+                            768,
+                            1333,
+                        ),
+                        (
+                            800,
+                            1333,
+                        ),
+                    ],
+                    type='RandomChoiceResize'),
+            ],
+        ],
+        type='RandomChoice'),
+    dict(type='PackDetInputs'),
+]
+val_cfg = dict(type='ValLoop')
+val_dataloader = dict(
+    batch_size=1,
+    dataset=dict(
+        ann_file='annotations/instances_val2017.json',
+        backend_args=None,
+        data_prefix=dict(img='val2017/'),
+        data_root='/data/teco-data/coco/',
+        pipeline=[
+            dict(backend_args=None, type='LoadImageFromFile'),
+            dict(keep_ratio=True, scale=(
+                1333,
+                800,
+            ), type='Resize'),
+            dict(type='LoadAnnotations', with_bbox=True),
+            dict(
+                meta_keys=(
+                    'img_id',
+                    'img_path',
+                    'ori_shape',
+                    'img_shape',
+                    'scale_factor',
+                ),
+                type='PackDetInputs'),
+        ],
+        test_mode=True,
+        type='CocoDataset'),
+    drop_last=False,
+    num_workers=2,
+    persistent_workers=True,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    ann_file='/data/teco-data/coco/annotations/instances_val2017.json',
+    backend_args=None,
+    format_only=False,
+    metric='bbox',
+    type='CocoMetric')
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+visualizer = dict(
+    name='visualizer',
+    type='DetLocalVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = './work_dirs/dino-4scale_r50_8xb2-36e_coco'
+
+06/23 11:19:09 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DetVisualizationHook               
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+loading annotations into memory...
+Done (t=16.38s)
+creating index...
+index created!
+06/23 11:19:38 - mmengine - WARNING - backbone.conv1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.conv1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.conv2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.conv3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.downsample.0.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.downsample.1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.0.downsample.1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.conv1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.conv2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.conv3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.1.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.conv1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.conv2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.conv3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer1.2.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.downsample.0.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.downsample.0.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.0.downsample.0.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.downsample.1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.0.downsample.1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.1.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.1.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.1.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.1.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.1.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.1.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.1.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.2.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.2.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.2.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.2.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.2.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.2.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.2.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.3.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.3.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.3.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.3.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer2.3.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.3.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer2.3.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.downsample.0.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.downsample.0.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.0.downsample.0.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.downsample.1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.0.downsample.1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.1.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.1.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.1.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.1.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.1.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.1.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.1.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.2.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.2.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.2.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.2.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.2.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.2.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.2.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.3.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.3.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.3.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.3.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.3.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.3.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.3.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.4.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.4.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.4.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.4.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.4.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.4.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.4.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.5.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.5.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.5.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.5.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer3.5.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.5.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer3.5.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.downsample.0.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.downsample.0.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.0.downsample.0.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.downsample.1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.0.downsample.1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.1.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.1.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.1.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.1.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.1.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.1.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.1.bn3.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv1.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv1.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv1.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.2.bn1.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.2.bn1.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv2.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv2.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv2.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.2.bn2.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.2.bn2.bias is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv3.weight:lr=1e-05
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv3.weight:weight_decay=0.0001
+06/23 11:19:38 - mmengine - INFO - paramwise_options -- backbone.layer4.2.conv3.weight:lr_mult=0.1
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.2.bn3.weight is skipped since its requires_grad=False
+06/23 11:19:38 - mmengine - WARNING - backbone.layer4.2.bn3.bias is skipped since its requires_grad=False
+loading annotations into memory...
+Done (t=0.43s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.43s)
+creating index...
+index created!
+06/23 11:19:41 - mmengine - INFO - load model from: torchvision://resnet50
+06/23 11:19:41 - mmengine - INFO - Loads checkpoint by torchvision backend from path: torchvision://resnet50
+06/23 11:19:42 - mmengine - WARNING - The model and loaded state dict do not match exactly
+
+unexpected key in source state_dict: fc.weight, fc.bias
+
+06/23 11:19:42 - mmengine - WARNING - "FileClient" will be deprecated in future. Please use io functions in https://mmengine.readthedocs.io/en/latest/api/fileio.html#file-io
+06/23 11:19:42 - mmengine - WARNING - "HardDiskBackend" is the alias of "LocalBackend" and the former will be deprecated in future.
+06/23 11:19:42 - mmengine - INFO - Checkpoints will be saved to /data/bigc-data/wyc/DINO/run_scripts/work_dirs/dino-4scale_r50_8xb2-36e_coco.
+/data/bigc-data/wyc/wyc_mmlab/lib/python3.10/site-packages/torch/functional.py:513: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /root/pytorch/aten/src/ATen/native/TensorShape.cpp:3609.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+TCAPPDLL 2025-06-23 11:20:26.406508 - Epoch: 0 Iteration: 0  rank : 0  train.loss : 64.40160369873047  train.ips : 0.023024179350561325 imgs/s train.total_time : 43.4326012134552 
+TCAPPDLL 2025-06-23 11:21:05.201776 - Epoch: 0 Iteration: 1  rank : 0  train.loss : 40.116451263427734  train.ips : 0.025776690212218477 imgs/s train.total_time : 38.794740200042725 
+TCAPPDLL 2025-06-23 11:21:52.509449 - Epoch: 0 Iteration: 2  rank : 0  train.loss : 59.73182678222656  train.ips : 0.021138416890872702 imgs/s train.total_time : 47.30723237991333 
+TCAPPDLL 2025-06-23 11:22:44.393903 - Epoch: 0 Iteration: 3  rank : 0  train.loss : 70.05531311035156  train.ips : 0.019273736098263012 imgs/s train.total_time : 51.8840765953064 
+TCAPPDLL 2025-06-23 11:23:38.627575 - Epoch: 0 Iteration: 4  rank : 0  train.loss : 143.0840606689453  train.ips : 0.018438854058778816 imgs/s train.total_time : 54.23330521583557 
+TCAPPDLL 2025-06-23 11:24:15.300640 - Epoch: 0 Iteration: 5  rank : 0  train.loss : 93.88356018066406  train.ips : 0.02726827839853943 imgs/s train.total_time : 36.672648906707764 
+TCAPPDLL 2025-06-23 11:25:04.109470 - Epoch: 0 Iteration: 6  rank : 0  train.loss : 57.21805953979492  train.ips : 0.020488271739553286 imgs/s train.total_time : 48.808411598205566 
+TCAPPDLL 2025-06-23 11:25:41.906696 - Epoch: 0 Iteration: 7  rank : 0  train.loss : 75.15965270996094  train.ips : 0.026457244599222895 imgs/s train.total_time : 37.796830892562866 
+TCAPPDLL 2025-06-23 11:26:17.546452 - Epoch: 0 Iteration: 8  rank : 0  train.loss : 61.7928352355957  train.ips : 0.02805879302617604 imgs/s train.total_time : 35.63945174217224 
+TCAPPDLL 2025-06-23 11:27:07.016547 - Epoch: 0 Iteration: 9  rank : 0  train.loss : 54.41337966918945  train.ips : 0.02021433497790621 imgs/s train.total_time : 49.4698441028595 
+TCAPPDLL 2025-06-23 11:27:46.012466 - Epoch: 0 Iteration: 10  rank : 0  train.loss : 66.40199279785156  train.ips : 0.025643886512884566 imgs/s train.total_time : 38.995649099349976 
+TCAPPDLL 2025-06-23 11:28:36.229939 - Epoch: 0 Iteration: 11  rank : 0  train.loss : 54.38461685180664  train.ips : 0.019913499256307976 imgs/s train.total_time : 50.217191219329834 
+TCAPPDLL 2025-06-23 11:29:24.935944 - Epoch: 0 Iteration: 12  rank : 0  train.loss : 80.78345489501953  train.ips : 0.02053146188867114 imgs/s train.total_time : 48.705737829208374 
+TCAPPDLL 2025-06-23 11:30:13.825465 - Epoch: 0 Iteration: 13  rank : 0  train.loss : 78.14383697509766  train.ips : 0.020454385875437565 imgs/s train.total_time : 48.889270305633545 
+TCAPPDLL 2025-06-23 11:30:55.958138 - Epoch: 0 Iteration: 14  rank : 0  train.loss : 69.91563415527344  train.ips : 0.02373468604070413 imgs/s train.total_time : 42.13243007659912 
+TCAPPDLL 2025-06-23 11:31:43.732981 - Epoch: 0 Iteration: 15  rank : 0  train.loss : 66.08927917480469  train.ips : 0.020931643544516213 imgs/s train.total_time : 47.77455711364746 
+TCAPPDLL 2025-06-23 11:32:29.728417 - Epoch: 0 Iteration: 16  rank : 0  train.loss : 83.05838012695312  train.ips : 0.021741403536133824 imgs/s train.total_time : 45.99519062042236 
+TCAPPDLL 2025-06-23 11:33:16.219349 - Epoch: 0 Iteration: 17  rank : 0  train.loss : 97.76612854003906  train.ips : 0.021509690300345618 imgs/s train.total_time : 46.49067401885986 
+TCAPPDLL 2025-06-23 11:33:55.422678 - Epoch: 0 Iteration: 18  rank : 0  train.loss : 52.85316848754883  train.ips : 0.025508196803064508 imgs/s train.total_time : 39.20308470726013 
+TCAPPDLL 2025-06-23 11:34:28.410909 - Epoch: 0 Iteration: 19  rank : 0  train.loss : 75.2489013671875  train.ips : 0.030314066817941736 imgs/s train.total_time : 32.987985610961914 
+TCAPPDLL 2025-06-23 11:35:21.227825 - Epoch: 0 Iteration: 20  rank : 0  train.loss : 44.186885833740234  train.ips : 0.018933431179365794 imgs/s train.total_time : 52.81662845611572 
+TCAPPDLL 2025-06-23 11:36:02.563932 - Epoch: 0 Iteration: 21  rank : 0  train.loss : 90.79161834716797  train.ips : 0.02419210275072938 imgs/s train.total_time : 41.335803270339966 
+TCAPPDLL 2025-06-23 11:36:53.595891 - Epoch: 0 Iteration: 22  rank : 0  train.loss : 63.32182693481445  train.ips : 0.019595656353110783 imgs/s train.total_time : 51.03171753883362 
+TCAPPDLL 2025-06-23 11:37:40.733681 - Epoch: 0 Iteration: 23  rank : 0  train.loss : 91.2762222290039  train.ips : 0.021214513155130177 imgs/s train.total_time : 47.13754177093506 
+TCAPPDLL 2025-06-23 11:38:16.574809 - Epoch: 0 Iteration: 24  rank : 0  train.loss : 74.09188842773438  train.ips : 0.02790110608957906 imgs/s train.total_time : 35.84087300300598 
+TCAPPDLL 2025-06-23 11:39:05.225244 - Epoch: 0 Iteration: 25  rank : 0  train.loss : 75.17221069335938  train.ips : 0.020554901942238638 imgs/s train.total_time : 48.650195598602295 
+TCAPPDLL 2025-06-23 11:39:49.623813 - Epoch: 0 Iteration: 26  rank : 0  train.loss : 71.56678771972656  train.ips : 0.022523351677311215 imgs/s train.total_time : 44.39836549758911 
+TCAPPDLL 2025-06-23 11:40:26.218325 - Epoch: 0 Iteration: 27  rank : 0  train.loss : 65.08712768554688  train.ips : 0.027326663878080887 imgs/s train.total_time : 36.594295024871826 
+TCAPPDLL 2025-06-23 11:41:08.923167 - Epoch: 0 Iteration: 28  rank : 0  train.loss : 70.46493530273438  train.ips : 0.023416685368695227 imgs/s train.total_time : 42.70459222793579 
+TCAPPDLL 2025-06-23 11:41:55.625435 - Epoch: 0 Iteration: 29  rank : 0  train.loss : 75.472412109375  train.ips : 0.021412376966949167 imgs/s train.total_time : 46.701961278915405 
+TCAPPDLL 2025-06-23 11:42:39.011904 - Epoch: 0 Iteration: 30  rank : 0  train.loss : 74.82479858398438  train.ips : 0.0230487988761574 imgs/s train.total_time : 43.3862087726593 
+TCAPPDLL 2025-06-23 11:43:19.433625 - Epoch: 0 Iteration: 31  rank : 0  train.loss : 49.36506271362305  train.ips : 0.024739340918586667 imgs/s train.total_time : 40.421448707580566 
+TCAPPDLL 2025-06-23 11:44:13.860758 - Epoch: 0 Iteration: 32  rank : 0  train.loss : 73.16973876953125  train.ips : 0.018373279411681348 imgs/s train.total_time : 54.426865100860596 
+TCAPPDLL 2025-06-23 11:44:58.919078 - Epoch: 0 Iteration: 33  rank : 0  train.loss : 79.36669921875  train.ips : 0.022193569981305256 imgs/s train.total_time : 45.05809569358826 
+TCAPPDLL 2025-06-23 11:45:41.725942 - Epoch: 0 Iteration: 34  rank : 0  train.loss : 97.49372863769531  train.ips : 0.02336086403400828 imgs/s train.total_time : 42.80663585662842 
+TCAPPDLL 2025-06-23 11:46:28.620447 - Epoch: 0 Iteration: 35  rank : 0  train.loss : 56.68169403076172  train.ips : 0.021324574235831895 imgs/s train.total_time : 46.894253969192505 
+TCAPPDLL 2025-06-23 11:47:05.334909 - Epoch: 0 Iteration: 36  rank : 0  train.loss : 46.65164566040039  train.ips : 0.027237413238258575 imgs/s train.total_time : 36.7142059803009 
+TCAPPDLL 2025-06-23 11:47:44.116263 - Epoch: 0 Iteration: 37  rank : 0  train.loss : 72.96719360351562  train.ips : 0.025785778634388853 imgs/s train.total_time : 38.78106665611267 
+TCAPPDLL 2025-06-23 11:48:30.318232 - Epoch: 0 Iteration: 38  rank : 0  train.loss : 73.84555053710938  train.ips : 0.02164421104059403 imgs/s train.total_time : 46.201730251312256 
+TCAPPDLL 2025-06-23 11:49:08.914781 - Epoch: 0 Iteration: 39  rank : 0  train.loss : 53.29686737060547  train.ips : 0.02590919950768182 imgs/s train.total_time : 38.5963294506073 
+TCAPPDLL 2025-06-23 11:49:58.826190 - Epoch: 0 Iteration: 40  rank : 0  train.loss : 70.7320556640625  train.ips : 0.020035614377630677 imgs/s train.total_time : 49.91112232208252 
+TCAPPDLL 2025-06-23 11:50:51.334266 - Epoch: 0 Iteration: 41  rank : 0  train.loss : 72.47613525390625  train.ips : 0.019044781197317912 imgs/s train.total_time : 52.50782299041748 
+TCAPPDLL 2025-06-23 11:51:37.014323 - Epoch: 0 Iteration: 42  rank : 0  train.loss : 70.50922393798828  train.ips : 0.021891511310094505 imgs/s train.total_time : 45.67980647087097 
+TCAPPDLL 2025-06-23 11:52:25.034269 - Epoch: 0 Iteration: 43  rank : 0  train.loss : 54.61709976196289  train.ips : 0.020824780578503344 imgs/s train.total_time : 48.01971364021301 
+TCAPPDLL 2025-06-23 11:53:13.827640 - Epoch: 0 Iteration: 44  rank : 0  train.loss : 54.11235046386719  train.ips : 0.020494690429982573 imgs/s train.total_time : 48.79312539100647 
+TCAPPDLL 2025-06-23 11:53:55.431163 - Epoch: 0 Iteration: 45  rank : 0  train.loss : 69.64498138427734  train.ips : 0.02403656038552949 imgs/s train.total_time : 41.60329031944275 
+TCAPPDLL 2025-06-23 11:54:39.433937 - Epoch: 0 Iteration: 46  rank : 0  train.loss : 64.90924835205078  train.ips : 0.022725962116421326 imgs/s train.total_time : 44.00253748893738 
+TCAPPDLL 2025-06-23 11:55:16.905884 - Epoch: 0 Iteration: 47  rank : 0  train.loss : 69.06990051269531  train.ips : 0.02668680770163115 imgs/s train.total_time : 37.47169804573059 
+TCAPPDLL 2025-06-23 11:55:53.517650 - Epoch: 0 Iteration: 48  rank : 0  train.loss : 49.38631820678711  train.ips : 0.027313790658081667 imgs/s train.total_time : 36.61154222488403 
+TCAPPDLL 2025-06-23 11:56:38.626117 - Epoch: 0 Iteration: 49  rank : 0  train.loss : 90.30350494384766  train.ips : 0.022168894467626925 imgs/s train.total_time : 45.108248472213745 
+06/23 11:56:38 - mmengine - INFO - Epoch(train)  [1][    50/118287]  base_lr: 1.0000e-04 lr: 1.0000e-04  eta: 2183 days, 23:37:00  time: 44.3128  data_time: 0.0253  memory: 5441  grad_norm: nan  loss: 70.1872  loss_cls: 1.4055  loss_bbox: 3.0347  loss_iou: 2.3882  d0.loss_cls: 1.0875  d0.loss_bbox: 3.1500  d0.loss_iou: 2.4521  d1.loss_cls: 1.2164  d1.loss_bbox: 3.0977  d1.loss_iou: 2.4377  d2.loss_cls: 1.2421  d2.loss_bbox: 3.0643  d2.loss_iou: 2.4210  d3.loss_cls: 2.0718  d3.loss_bbox: 3.0542  d3.loss_iou: 2.4041  d4.loss_cls: 1.5270  d4.loss_bbox: 3.0410  d4.loss_iou: 2.3972  enc_loss_cls: 1.1548  enc_loss_bbox: 3.1338  enc_loss_iou: 2.4514  dn_loss_cls: 1.0190  dn_loss_bbox: 1.3405  dn_loss_iou: 1.3741  d0.dn_loss_cls: 0.9687  d0.dn_loss_bbox: 1.2710  d0.dn_loss_iou: 1.3011  d1.dn_loss_cls: 1.0064  d1.dn_loss_bbox: 1.2818  d1.dn_loss_iou: 1.3187  d2.dn_loss_cls: 1.0183  d2.dn_loss_bbox: 1.2973  d2.dn_loss_iou: 1.3359  d3.dn_loss_cls: 1.0370  d3.dn_loss_bbox: 1.3120  d3.dn_loss_iou: 1.3513  d4.dn_loss_cls: 1.0313  d4.dn_loss_bbox: 1.3263  d4.dn_loss_iou: 1.3640
+TCAPPDLL 2025-06-23 11:57:15.308176 - Epoch: 0 Iteration: 50  rank : 0  train.loss : 66.91449737548828  train.ips : 0.027261474029088368 imgs/s train.total_time : 36.68180227279663 
+TCAPPDLL 2025-06-23 11:58:03.524929 - Epoch: 0 Iteration: 51  rank : 0  train.loss : 71.63670349121094  train.ips : 0.020739776639400073 imgs/s train.total_time : 48.21652698516846 
+TCAPPDLL 2025-06-23 11:58:38.019119 - Epoch: 0 Iteration: 52  rank : 0  train.loss : 50.162960052490234  train.ips : 0.02899059179713221 imgs/s train.total_time : 34.49394917488098 
+TCAPPDLL 2025-06-23 11:59:25.820555 - Epoch: 0 Iteration: 53  rank : 0  train.loss : 63.60932922363281  train.ips : 0.020919975898981775 imgs/s train.total_time : 47.80120229721069 
+TCAPPDLL 2025-06-23 12:00:03.610066 - Epoch: 0 Iteration: 54  rank : 0  train.loss : 70.8895492553711  train.ips : 0.026462533720802383 imgs/s train.total_time : 37.789276361465454 
+TCAPPDLL 2025-06-23 12:00:50.220537 - Epoch: 0 Iteration: 55  rank : 0  train.loss : 45.3548698425293  train.ips : 0.021454527054857633 imgs/s train.total_time : 46.610209465026855 
+TCAPPDLL 2025-06-23 12:01:36.325454 - Epoch: 0 Iteration: 56  rank : 0  train.loss : 43.63031005859375  train.ips : 0.021689775393884198 imgs/s train.total_time : 46.10467290878296 
+TCAPPDLL 2025-06-23 12:02:15.722415 - Epoch: 0 Iteration: 57  rank : 0  train.loss : 47.048606872558594  train.ips : 0.025382796295026665 imgs/s train.total_time : 39.39676260948181 
+TCAPPDLL 2025-06-23 12:02:58.218117 - Epoch: 0 Iteration: 58  rank : 0  train.loss : 61.87313461303711  train.ips : 0.02353190544181036 imgs/s train.total_time : 42.49549627304077 
+TCAPPDLL 2025-06-23 12:03:33.614996 - Epoch: 0 Iteration: 59  rank : 0  train.loss : 46.25180435180664  train.ips : 0.028251241976098906 imgs/s train.total_time : 35.396673917770386 
+TCAPPDLL 2025-06-23 12:04:06.910936 - Epoch: 0 Iteration: 60  rank : 0  train.loss : 47.76625442504883  train.ips : 0.03003391036700454 imgs/s train.total_time : 33.2956976890564 
+TCAPPDLL 2025-06-23 12:04:51.618707 - Epoch: 0 Iteration: 61  rank : 0  train.loss : 68.00732421875  train.ips : 0.022367602761566248 imgs/s train.total_time : 44.707517862319946 
+TCAPPDLL 2025-06-23 12:05:26.313904 - Epoch: 0 Iteration: 62  rank : 0  train.loss : 70.82111358642578  train.ips : 0.028822626879188056 imgs/s train.total_time : 34.69496393203735 
+TCAPPDLL 2025-06-23 12:06:02.938151 - Epoch: 0 Iteration: 63  rank : 0  train.loss : 60.477874755859375  train.ips : 0.027304467377145897 imgs/s train.total_time : 36.624043464660645 
+TCAPPDLL 2025-06-23 12:06:37.109669 - Epoch: 0 Iteration: 64  rank : 0  train.loss : 48.398948669433594  train.ips : 0.029264329111621412 imgs/s train.total_time : 34.17129421234131 
+TCAPPDLL 2025-06-23 12:07:20.619529 - Epoch: 0 Iteration: 65  rank : 0  train.loss : 51.86924362182617  train.ips : 0.022983419223846568 imgs/s train.total_time : 43.50962710380554 
+TCAPPDLL 2025-06-23 12:08:05.021231 - Epoch: 0 Iteration: 66  rank : 0  train.loss : 62.150604248046875  train.ips : 0.022521791045725017 imgs/s train.total_time : 44.40144205093384 
+TCAPPDLL 2025-06-23 12:08:50.115589 - Epoch: 0 Iteration: 67  rank : 0  train.loss : 61.53499221801758  train.ips : 0.02217583880084463 imgs/s train.total_time : 45.094122886657715 
+TCAPPDLL 2025-06-23 12:09:38.992384 - Epoch: 0 Iteration: 68  rank : 0  train.loss : 64.4278335571289  train.ips : 0.020459695051372625 imgs/s train.total_time : 48.87658381462097 
+TCAPPDLL 2025-06-23 12:10:24.925856 - Epoch: 0 Iteration: 69  rank : 0  train.loss : 56.85429382324219  train.ips : 0.021770718278443645 imgs/s train.total_time : 45.93325710296631 
+TCAPPDLL 2025-06-23 12:11:13.725645 - Epoch: 0 Iteration: 70  rank : 0  train.loss : 56.492271423339844  train.ips : 0.020492000327516014 imgs/s train.total_time : 48.79953074455261 
+TCAPPDLL 2025-06-23 12:11:57.623367 - Epoch: 0 Iteration: 71  rank : 0  train.loss : 46.94093704223633  train.ips : 0.02278035564086158 imgs/s train.total_time : 43.89747095108032 
+TCAPPDLL 2025-06-23 12:12:49.356487 - Epoch: 0 Iteration: 72  rank : 0  train.loss : 62.467811584472656  train.ips : 0.019330053957450896 imgs/s train.total_time : 51.73291301727295 
+TCAPPDLL 2025-06-23 12:13:38.446388 - Epoch: 0 Iteration: 73  rank : 0  train.loss : 55.2717170715332  train.ips : 0.020370963522537262 imgs/s train.total_time : 49.08947968482971 
+TCAPPDLL 2025-06-23 12:14:27.530087 - Epoch: 0 Iteration: 74  rank : 0  train.loss : 53.07673263549805  train.ips : 0.020373498828115698 imgs/s train.total_time : 49.08337092399597 
+TCAPPDLL 2025-06-23 12:15:06.221880 - Epoch: 0 Iteration: 75  rank : 0  train.loss : 56.746498107910156  train.ips : 0.025845439232354647 imgs/s train.total_time : 38.69154596328735 
+TCAPPDLL 2025-06-23 12:15:52.144384 - Epoch: 0 Iteration: 76  rank : 0  train.loss : 64.90538024902344  train.ips : 0.021775920545103265 imgs/s train.total_time : 45.92228364944458 
+TCAPPDLL 2025-06-23 12:16:35.328070 - Epoch: 0 Iteration: 77  rank : 0  train.loss : 48.17399978637695  train.ips : 0.02315703844822207 imgs/s train.total_time : 43.183414936065674 
+TCAPPDLL 2025-06-23 12:17:21.837517 - Epoch: 0 Iteration: 78  rank : 0  train.loss : 55.14656448364258  train.ips : 0.021501149648863592 imgs/s train.total_time : 46.509140968322754 
+TCAPPDLL 2025-06-23 12:18:14.028256 - Epoch: 0 Iteration: 79  rank : 0  train.loss : 50.427589416503906  train.ips : 0.019160597600484056 imgs/s train.total_time : 52.190438985824585 
+TCAPPDLL 2025-06-23 12:19:04.627390 - Epoch: 0 Iteration: 80  rank : 0  train.loss : 59.15229415893555  train.ips : 0.019763348743324475 imgs/s train.total_time : 50.59871244430542 
+TCAPPDLL 2025-06-23 12:19:52.927832 - Epoch: 0 Iteration: 81  rank : 0  train.loss : 57.90583419799805  train.ips : 0.020703904947827746 imgs/s train.total_time : 48.30006718635559 
+TCAPPDLL 2025-06-23 12:20:32.216541 - Epoch: 0 Iteration: 82  rank : 0  train.loss : 64.03428649902344  train.ips : 0.025452808385181023 imgs/s train.total_time : 39.288395404815674 
+TCAPPDLL 2025-06-23 12:21:27.246852 - Epoch: 0 Iteration: 83  rank : 0  train.loss : 56.34626388549805  train.ips : 0.018171884591646432 imgs/s train.total_time : 55.03006553649902 
+TCAPPDLL 2025-06-23 12:22:13.625446 - Epoch: 0 Iteration: 84  rank : 0  train.loss : 52.62539291381836  train.ips : 0.021561789401546766 imgs/s train.total_time : 46.378340005874634 
+TCAPPDLL 2025-06-23 12:23:02.242963 - Epoch: 0 Iteration: 85  rank : 0  train.loss : 41.8538932800293  train.ips : 0.020568858069463344 imgs/s train.total_time : 48.617186069488525 
+TCAPPDLL 2025-06-23 12:23:55.122153 - Epoch: 0 Iteration: 86  rank : 0  train.loss : 56.75566864013672  train.ips : 0.018911140210995065 imgs/s train.total_time : 52.8788845539093 
+TCAPPDLL 2025-06-23 12:24:41.117094 - Epoch: 0 Iteration: 87  rank : 0  train.loss : 52.19367599487305  train.ips : 0.021741644373895485 imgs/s train.total_time : 45.99468111991882 
+TCAPPDLL 2025-06-23 12:25:16.868489 - Epoch: 0 Iteration: 88  rank : 0  train.loss : 47.54365539550781  train.ips : 0.027971137425548916 imgs/s train.total_time : 35.75113821029663 
+TCAPPDLL 2025-06-23 12:25:55.438132 - Epoch: 0 Iteration: 89  rank : 0  train.loss : 55.001258850097656  train.ips : 0.025927292986791695 imgs/s train.total_time : 38.56939482688904 
+TCAPPDLL 2025-06-23 12:26:38.664340 - Epoch: 0 Iteration: 90  rank : 0  train.loss : 48.753150939941406  train.ips : 0.023134246553944828 imgs/s train.total_time : 43.22595930099487 
+TCAPPDLL 2025-06-23 12:27:29.429135 - Epoch: 0 Iteration: 91  rank : 0  train.loss : 54.27286148071289  train.ips : 0.019698785229116007 imgs/s train.total_time : 50.764551639556885 
+TCAPPDLL 2025-06-23 12:28:04.639888 - Epoch: 0 Iteration: 92  rank : 0  train.loss : 47.973819732666016  train.ips : 0.028400635093471335 imgs/s train.total_time : 35.21048021316528 
+TCAPPDLL 2025-06-23 12:28:50.535722 - Epoch: 0 Iteration: 93  rank : 0  train.loss : 65.07425689697266  train.ips : 0.021788608167240268 imgs/s train.total_time : 45.89554286003113 
+TCAPPDLL 2025-06-23 12:29:28.521888 - Epoch: 0 Iteration: 94  rank : 0  train.loss : 49.268959045410156  train.ips : 0.02632552035046833 imgs/s train.total_time : 37.98595380783081 
+TCAPPDLL 2025-06-23 12:30:22.226594 - Epoch: 0 Iteration: 95  rank : 0  train.loss : 58.65243911743164  train.ips : 0.018620417541166865 imgs/s train.total_time : 53.70448851585388 
+TCAPPDLL 2025-06-23 12:31:16.750013 - Epoch: 0 Iteration: 96  rank : 0  train.loss : 2.3898050785064697  train.ips : 0.018340833617750883 imgs/s train.total_time : 54.52314877510071 
+TCAPPDLL 2025-06-23 12:32:07.240553 - Epoch: 0 Iteration: 97  rank : 0  train.loss : 67.04216003417969  train.ips : 0.019805791141131127 imgs/s train.total_time : 50.49028301239014 
+TCAPPDLL 2025-06-23 12:32:53.223448 - Epoch: 0 Iteration: 98  rank : 0  train.loss : 60.083412170410156  train.ips : 0.021747314223772636 imgs/s train.total_time : 45.98268961906433 
+TCAPPDLL 2025-06-23 12:33:50.585668 - Epoch: 0 Iteration: 99  rank : 0  train.loss : 58.73341369628906  train.ips : 0.01743313650584665 imgs/s train.total_time : 57.36202430725098 
+06/23 12:33:50 - mmengine - INFO - Epoch(train)  [1][   100/118287]  base_lr: 1.0000e-04 lr: 1.0000e-04  eta: 2191 days, 23:54:00  time: 44.6389  data_time: 0.0139  memory: 4879  grad_norm: 64.2857  loss: 55.2997  loss_cls: 1.0936  loss_bbox: 2.1112  loss_iou: 1.5309  d0.loss_cls: 1.0252  d0.loss_bbox: 2.1444  d0.loss_iou: 1.5972  d1.loss_cls: 1.0853  d1.loss_bbox: 2.1223  d1.loss_iou: 1.5519  d2.loss_cls: 1.1011  d2.loss_bbox: 2.1143  d2.loss_iou: 1.5345  d3.loss_cls: 1.0926  d3.loss_bbox: 2.1137  d3.loss_iou: 1.5312  d4.loss_cls: 1.0953  d4.loss_bbox: 2.1099  d4.loss_iou: 1.5330  enc_loss_cls: 1.0470  enc_loss_bbox: 2.1140  enc_loss_iou: 1.6061  dn_loss_cls: 0.9153  dn_loss_bbox: 1.5818  dn_loss_iou: 1.2439  d0.dn_loss_cls: 0.7691  d0.dn_loss_bbox: 1.5595  d0.dn_loss_iou: 1.2238  d1.dn_loss_cls: 0.7978  d1.dn_loss_bbox: 1.5644  d1.dn_loss_iou: 1.2280  d2.dn_loss_cls: 0.8820  d2.dn_loss_bbox: 1.5714  d2.dn_loss_iou: 1.2339  d3.dn_loss_cls: 0.9202  d3.dn_loss_bbox: 1.5759  d3.dn_loss_iou: 1.2378  d4.dn_loss_cls: 0.9206  d4.dn_loss_bbox: 1.5789  d4.dn_loss_iou: 1.2408

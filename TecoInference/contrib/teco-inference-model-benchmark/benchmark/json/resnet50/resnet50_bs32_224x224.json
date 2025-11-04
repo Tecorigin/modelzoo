@@ -1,0 +1,10 @@
+{
+    "model_path": "/mnt/test_models/onnx_models/CV/resnet/resnet_fp16_ngc_bs8.onnx",
+    "model_name": "resnet50",
+    "bs": "bs32",
+    "use_async": true,
+    "dtype": "float16",
+    "warm_up": 1,
+    "run_loops": 5,
+    "use_device_id": null
+}

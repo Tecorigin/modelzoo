@@ -1,0 +1,165 @@
+Setting Arguments.. :  Namespace(batch_size=4, conf_thresh=0.001, cuda=True, dataset='coco', debug=False, dist_url='env://', distributed=False, ema=True, eval_epoch=10, eval_first=False, find_unused_parameters=False, fp16=True, grad_accumulate=1, img_size=640, load_cache=False, max_epoch=1, min_box_size=8.0, mixup=None, model='yolov2', mosaic=None, multi_scale=True, nms_class_agnostic=False, nms_thresh=0.7, no_aug_epoch=20, no_multi_labels=False, num_workers=4, pretrained=None, resume=None, root='./dataset', save_folder='weights/', seed=42, sybn=False, tfboard=False, topk=1000, vis_aux_loss=False, vis_tgt=False, world_size=1, wp_epoch=1)
+----------------------------------------------------------
+LOCAL RANK:  -1
+LOCAL_PROCESS_RANL:  -1
+WORLD SIZE: 1
+use cuda
+==============================
+Dataset Config: {'data_name': 'COCO', 'num_classes': 80, 'class_indexs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 28, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 70, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 84, 85, 86, 87, 88, 89, 90], 'class_names': ('background', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'street sign', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'hat', 'backpack', 'umbrella', 'shoe', 'eye glasses', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', 'plate', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'mirror', 'dining table', 'window', 'desk', 'toilet', 'door', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'blender', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush')} 
+
+==============================
+Model: YOLOV2 ...
+==============================
+Transform: ssd-Style ...
+Transform Config: {'aug_type': 'ssd', 'use_ablu': False, 'mosaic_prob': 0.0, 'mixup_prob': 0.0, 'mosaic_type': 'yolov5', 'mixup_type': 'yolov5', 'mixup_scale': [0.5, 1.5]} 
+
+==============================
+Build YOLOV2 ...
+==============================
+Model Configuration: 
+ {'backbone': 'darknet19', 'pretrained': True, 'stride': 32, 'max_stride': 32, 'neck': 'sppf', 'neck_act': 'lrelu', 'neck_norm': 'BN', 'neck_depthwise': False, 'expand_ratio': 0.5, 'pooling_size': 5, 'head': 'decoupled_head', 'head_act': 'lrelu', 'head_norm': 'BN', 'num_cls_head': 2, 'num_reg_head': 2, 'head_depthwise': False, 'anchor_size': [[17, 25], [55, 75], [92, 206], [202, 21], [289, 311]], 'multi_scale': [0.5, 1.5], 'trans_type': 'ssd', 'iou_thresh': 0.5, 'loss_obj_weight': 1.0, 'loss_cls_weight': 1.0, 'loss_box_weight': 5.0, 'trainer_type': 'yolo'}
+Loading pretrained weight ...
+Unused key:  conv_7.weight
+Unused key:  conv_7.bias
+==============================
+Neck: sppf
+==============================
+Head: Decoupled Head
+==============================
+GFLOPs : 54.03
+Params : 31.06 M
+loading annotations into memory...
+Done (t=13.24s)
+creating index...
+index created!
+==============================
+use Mosaic Augmentation: 0.0
+use Mixup Augmentation: 0.0
+loading annotations into memory...
+Done (t=1.86s)
+creating index...
+index created!
+==============================
+use Mosaic Augmentation: 0.0
+use Mixup Augmentation: 0.0
+==============================
+Optimizer: adamw
+--base lr: 6.25e-05
+--momentum: None
+--weight_decay: 0.05
+==============================
+Lr Scheduler: linear
+Build ModelEMA ...
+============== Second stage of Training ==============
+ - Rebuild transforms ...
+Saving state of the last Mosaic epoch-0.
+Iter 0: Loss = 22.550579071044922
+Epoch: [0 / 1]  [    0/29316]  eta: 6:14:02  lr: 0.000000  size: 960  grad_norm: inf  loss_obj: 16.5210 (16.5210)  loss_cls: 2.0440 (2.0440)  loss_box: 0.7971 (0.7971)  losses: 22.5506 (22.5506)  time: 0.7656  data: 0.5733  max mem: 2318
+Iter 1: Loss = 12.545388221740723
+Iter 2: Loss = 11.82246208190918
+Iter 3: Loss = 13.621382713317871
+Iter 4: Loss = 13.091737747192383
+Iter 5: Loss = 11.296070098876953
+Iter 6: Loss = 11.93331241607666
+Iter 7: Loss = 10.635675430297852
+Iter 8: Loss = 13.497096061706543
+Iter 9: Loss = 10.842439651489258
+Iter 10: Loss = 13.719493865966797
+Epoch: [0 / 1]  [   10/29316]  eta: 1:10:52  lr: 0.000000  size: 896  grad_norm: 51.8  loss_obj: 6.6439 (7.6034)  loss_cls: 1.6308 (1.7025)  loss_box: 0.7971 (0.7853)  losses: 12.5454 (13.2323)  time: 0.1451  data: 0.0523  max mem: 2318
+Iter 11: Loss = 13.149764060974121
+Iter 12: Loss = 11.291048049926758
+Iter 13: Loss = 10.93942642211914
+Iter 14: Loss = 13.304649353027344
+Iter 15: Loss = 10.71402645111084
+Iter 16: Loss = 11.08851146697998
+Iter 17: Loss = 11.947942733764648
+Iter 18: Loss = 11.555168151855469
+Iter 19: Loss = 12.129568099975586
+Iter 20: Loss = 12.998368263244629
+Epoch: [0 / 1]  [   20/29316]  eta: 0:54:15  lr: 0.000000  size: 864  grad_norm: 43.6  loss_obj: 6.4801 (7.1739)  loss_cls: 1.5181 (1.6080)  loss_box: 0.7620 (0.7643)  losses: 11.9333 (12.6035)  time: 0.0784  data: 0.0002  max mem: 2428
+Iter 21: Loss = 11.971183776855469
+Iter 22: Loss = 12.379170417785645
+Iter 23: Loss = 12.482991218566895
+Iter 24: Loss = 12.070206642150879
+Iter 25: Loss = 12.642751693725586
+Iter 26: Loss = 11.50018310546875
+Iter 27: Loss = 12.7319917678833
+Iter 28: Loss = 11.332452774047852
+Iter 29: Loss = 11.308198928833008
+Iter 30: Loss = 11.352043151855469
+Epoch: [0 / 1]  [   30/29316]  eta: 0:46:19  lr: 0.000000  size: 480  grad_norm: 42.3  loss_obj: 6.6237 (7.0440)  loss_cls: 1.4757 (1.5762)  loss_box: 0.7496 (0.7563)  losses: 11.9479 (12.4015)  time: 0.0673  data: 0.0002  max mem: 2562
+Iter 31: Loss = 11.0515718460083
+Iter 32: Loss = 11.679808616638184
+Iter 33: Loss = 11.781923294067383
+Iter 34: Loss = 11.793597221374512
+Iter 35: Loss = 10.977313995361328
+Iter 36: Loss = 11.990696907043457
+Iter 37: Loss = 10.410666465759277
+Iter 38: Loss = 11.512293815612793
+Iter 39: Loss = 12.985421180725098
+Iter 40: Loss = 11.008160591125488
+Epoch: [0 / 1]  [   40/29316]  eta: 0:40:51  lr: 0.000000  size: 416  grad_norm: 37.6  loss_obj: 6.4204 (6.8779)  loss_cls: 1.3935 (1.5015)  loss_box: 0.7693 (0.7614)  losses: 11.6798 (12.1863)  time: 0.0550  data: 0.0002  max mem: 2562
+Iter 41: Loss = 12.055227279663086
+Iter 42: Loss = 10.465456008911133
+Iter 43: Loss = 12.10523509979248
+Iter 44: Loss = 9.36819076538086
+Iter 45: Loss = 10.84386157989502
+Iter 46: Loss = 12.302200317382812
+Iter 47: Loss = 14.494644165039062
+Iter 48: Loss = 11.222867965698242
+Iter 49: Loss = 12.292679786682129
+Iter 50: Loss = 10.574583053588867
+Epoch: [0 / 1]  [   50/29316]  eta: 0:38:03  lr: 0.000000  size: 384  grad_norm: 58.3  loss_obj: 6.0771 (6.7907)  loss_cls: 1.0269 (1.3672)  loss_box: 0.8055 (0.7816)  losses: 11.5123 (12.0659)  time: 0.0519  data: 0.0002  max mem: 2562
+Iter 51: Loss = 15.332136154174805
+Iter 52: Loss = 11.146595001220703
+Iter 53: Loss = 13.001699447631836
+Iter 54: Loss = 13.680909156799316
+Iter 55: Loss = 10.76106071472168
+Iter 56: Loss = 13.709922790527344
+Iter 57: Loss = 11.21147346496582
+Iter 58: Loss = 11.696918487548828
+Iter 59: Loss = 12.918889999389648
+Iter 60: Loss = 11.61845588684082
+Epoch: [0 / 1]  [   60/29316]  eta: 0:36:13  lr: 0.000000  size: 544  grad_norm: 39.3  loss_obj: 6.3771 (6.8615)  loss_cls: 0.8005 (1.3082)  loss_box: 0.8494 (0.7937)  losses: 11.6969 (12.1384)  time: 0.0549  data: 0.0002  max mem: 2563
+Iter 61: Loss = 12.234010696411133
+Iter 62: Loss = 11.218791961669922
+Iter 63: Loss = 11.859321594238281
+Iter 64: Loss = 11.136749267578125
+Iter 65: Loss = 11.177743911743164
+Iter 66: Loss = 11.082764625549316
+Iter 67: Loss = 13.91473388671875
+Iter 68: Loss = 11.874861717224121
+Iter 69: Loss = 13.057241439819336
+Iter 70: Loss = 11.184246063232422
+Epoch: [0 / 1]  [   70/29316]  eta: 0:34:18  lr: 0.000000  size: 480  grad_norm: 44.1  loss_obj: 6.3771 (6.8508)  loss_cls: 0.7449 (1.2400)  loss_box: 0.8494 (0.8021)  losses: 11.6969 (12.1011)  time: 0.0509  data: 0.0002  max mem: 2563
+Iter 71: Loss = 12.654435157775879
+Iter 72: Loss = 10.946736335754395
+Iter 73: Loss = 11.290105819702148
+Iter 74: Loss = 10.50430679321289
+Iter 75: Loss = 14.300333023071289
+Iter 76: Loss = 10.844515800476074
+Iter 77: Loss = 11.702698707580566
+Iter 78: Loss = 12.595279693603516
+Iter 79: Loss = 10.267871856689453
+Iter 80: Loss = 11.200851440429688
+Epoch: [0 / 1]  [   80/29316]  eta: 0:33:17  lr: 0.000000  size: 864  grad_norm: 29.7  loss_obj: 6.1580 (6.7864)  loss_cls: 0.7079 (1.2309)  loss_box: 0.8335 (0.8051)  losses: 11.2188 (12.0431)  time: 0.0501  data: 0.0002  max mem: 2563
+Iter 81: Loss = 11.251984596252441
+Iter 82: Loss = 10.736618041992188
+Iter 83: Loss = 11.821609497070312
+Iter 84: Loss = 13.357685089111328
+Iter 85: Loss = 11.683768272399902
+Iter 86: Loss = 15.02180290222168
+Iter 87: Loss = 12.661033630371094
+Iter 88: Loss = 11.196858406066895
+Iter 89: Loss = 11.424349784851074
+Iter 90: Loss = 10.088619232177734
+Epoch: [0 / 1]  [   90/29316]  eta: 0:32:07  lr: 0.000000  size: 352  grad_norm: 58.1  loss_obj: 6.0948 (6.7891)  loss_cls: 1.0226 (1.1983)  loss_box: 0.8125 (0.8085)  losses: 11.2901 (12.0300)  time: 0.0501  data: 0.0002  max mem: 2563
+Iter 91: Loss = 11.098325729370117
+Iter 92: Loss = 10.698604583740234
+Iter 93: Loss = 13.314990043640137
+Iter 94: Loss = 11.810680389404297
+Iter 95: Loss = 11.15934944152832
+Iter 96: Loss = 10.821981430053711
+Iter 97: Loss = 10.293008804321289
+Iter 98: Loss = 13.3605375289917
+Iter 99: Loss = 12.019079208374023

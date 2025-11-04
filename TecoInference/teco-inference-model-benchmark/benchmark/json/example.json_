@@ -1,0 +1,48 @@
+{
+    "model_path": "/share/models/uiex_fp16_0823_bs8.onnx",
+    "onnx_model_path": "/share/models/uiex_fp32_0908_bs8.onnx",
+    "onnx_model_convert_to_fp32": true,
+
+    "dtype": "float16",
+    "warm_up": 0,
+    "run_loops": 1,
+    "use_device_id": null,
+
+    "boundary": {
+        "default_float": [-1, 1],
+        "default_int": [0, 256],
+
+        "inputs": {
+            "input_ids": {
+                "dtype": "int64",
+                "low": 0,
+                "high": 100
+            },
+            "token_type_ids": {
+                "dtype": "int64",
+                "low": 0,
+                "high": 100
+            },
+            "position_ids": {
+                "dtype": "int64",
+                "low": 0,
+                "high": 100
+            },
+            "attention_mask": {
+                "dtype": "int64",
+                "low": 1,
+                "high": 2
+            },
+            "bbox": {
+                "dtype": "int64",
+                "low": 0,
+                "high": 224
+            },
+            "image": {
+                "dtype": "float32",
+                "low": 0,
+                "high": 255
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+_BASE_: [
+  '../datasets/coco_detection_ppyoloe.yml',
+  '../runtime.yml',
+  './_base_/optimizer_80e.yml',
+  './_base_/ppyoloe_plus_crn.yml',
+  './_base_/ppyoloe_plus_reader.yml',
+]
+
+log_iter: 100
+snapshot_epoch: 5
+weights: /data/ckpt
+
+pretrain_weights: https://bj.bcebos.com/v1/paddledet/models/pretrained/ppyoloe_crn_s_obj365_pretrained.pdparams
+depth_mult: 0.33
+width_mult: 0.50
+
+TrainReader:
+  batch_size: 16
+
+LearningRate:
+  base_lr: 0.0032
+  schedulers:
+  - !CosineDecay
+    max_epochs: 300
+  - !LinearWarmup
+    start_factor: 0.1
+    steps: 300

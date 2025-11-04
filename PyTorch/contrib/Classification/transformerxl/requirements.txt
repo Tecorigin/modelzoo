@@ -1,0 +1,12 @@
+accelerate==1.0.0
+torch==2.4.0
+datasets==2.19.1
+sentencepiece != 0.1.92
+protobuf
+evaluate
+scikit-learn
+tf-keras
+transformers==4.41.2
+huggingface_hub==0.33.4
+numpy==1.24.3
+parameterized

@@ -1,0 +1,1427 @@
+I0214 09:28:59.035666 1679764 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0214 09:28:59.035715 1679764 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0214 09:28:59.113270 1679764 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0214 09:28:59.115170 1679764 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0214 09:28:59.115252 1679764 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0214 09:28:59.115267 1679764 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+[02/14 09:29:00] [35mDATASET[0m : 
+[02/14 09:29:00]     [35mbatch_size[0m : [92m32[0m
+[02/14 09:29:00]     [35mnum_workers[0m : [92m4[0m
+[02/14 09:29:00]     [35mtest[0m : 
+[02/14 09:29:00]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:29:00]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:29:00]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:29:00]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:29:00]     [35mtest_batch_size[0m : [92m1[0m
+[02/14 09:29:00]     [35mtrain[0m : 
+[02/14 09:29:00]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/14 09:29:00]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/14 09:29:00]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:29:00]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:29:00]     [35mvalid[0m : 
+[02/14 09:29:00]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:29:00]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:29:00]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:29:00]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:29:00]     [35mvalid_batch_size[0m : [92m32[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mINFERENCE[0m : 
+[02/14 09:29:00]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/14 09:29:00]     [35mnum_seg[0m : [92m25[0m
+[02/14 09:29:00]     [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mMETRIC[0m : 
+[02/14 09:29:00]     [35mname[0m : [92mCenterCropMetric[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mMODEL[0m : 
+[02/14 09:29:00]     [35mbackbone[0m : 
+[02/14 09:29:00]         [35mdepth[0m : [92m50[0m
+[02/14 09:29:00]         [35mname[0m : [92mResNet[0m
+[02/14 09:29:00]         [35mpretrained[0m : [92m../ckpt/ResNet50_pretrain.pdparams[0m
+[02/14 09:29:00]     [35mframework[0m : [92mRecognizer2D[0m
+[02/14 09:29:00]     [35mhead[0m : 
+[02/14 09:29:00]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/14 09:29:00]         [35min_channels[0m : [92m2048[0m
+[02/14 09:29:00]         [35mname[0m : [92mTSNHead[0m
+[02/14 09:29:00]         [35mnum_classes[0m : [92m400[0m
+[02/14 09:29:00]         [35mstd[0m : [92m0.01[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mOPTIMIZER[0m : 
+[02/14 09:29:00]     [35mgrad_clip[0m : 
+[02/14 09:29:00]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/14 09:29:00]         [35mvalue[0m : [92m40.0[0m
+[02/14 09:29:00]     [35mlearning_rate[0m : 
+[02/14 09:29:00]         [35mboundaries[0m : [92m[40, 80][0m
+[02/14 09:29:00]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/14 09:29:00]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/14 09:29:00]     [35mmomentum[0m : [92m0.9[0m
+[02/14 09:29:00]     [35mname[0m : [92mMomentum[0m
+[02/14 09:29:00]     [35mweight_decay[0m : 
+[02/14 09:29:00]         [35mname[0m : [92mL2[0m
+[02/14 09:29:00]         [35mvalue[0m : [92m0.0001[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mPIPELINE[0m : 
+[02/14 09:29:00]     [35mtest[0m : 
+[02/14 09:29:00]         [35mdecode[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:29:00]         [35msample[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mSampler[0m
+[02/14 09:29:00]             [35mnum_seg[0m : [92m25[0m
+[02/14 09:29:00]             [35mseg_len[0m : [92m1[0m
+[02/14 09:29:00]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:29:00]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:29:00]         [35mtransform[0m : 
+[02/14 09:29:00]             [35mScale[0m : 
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:29:00]             [35mTenCrop[0m : 
+[02/14 09:29:00]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:29:00]             [35mNormalization[0m : 
+[02/14 09:29:00]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:29:00]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:29:00]     [35mtrain[0m : 
+[02/14 09:29:00]         [35mdecode[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:29:00]         [35msample[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mSampler[0m
+[02/14 09:29:00]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:29:00]             [35mseg_len[0m : [92m1[0m
+[02/14 09:29:00]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:29:00]             [35mvalid_mode[0m : [92mFalse[0m
+[02/14 09:29:00]         [35mtransform[0m : 
+[02/14 09:29:00]             [35mScale[0m : 
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:29:00]             [35mMultiScaleCrop[0m : 
+[02/14 09:29:00]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00]             [35mRandomFlip[0m : [92mNone[0m
+[02/14 09:29:00]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:29:00]             [35mNormalization[0m : 
+[02/14 09:29:00]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:29:00]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:29:00]     [35mvalid[0m : 
+[02/14 09:29:00]         [35mdecode[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:29:00]         [35msample[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mSampler[0m
+[02/14 09:29:00]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:29:00]             [35mseg_len[0m : [92m1[0m
+[02/14 09:29:00]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:29:00]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:29:00]         [35mtransform[0m : 
+[02/14 09:29:00]             [35mScale[0m : 
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:29:00]             [35mCenterCrop[0m : 
+[02/14 09:29:00]                 [35mdo_round[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:29:00]             [35mNormalization[0m : 
+[02/14 09:29:00]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:29:00]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mepochs[0m : [92m100[0m
+[02/14 09:29:00] [35mlog_interval[0m : [92m20[0m
+[02/14 09:29:00] [35mlog_level[0m : [92mINFO[0m
+[02/14 09:29:00] [35mmodel_name[0m : [92mTSN[0m
+[02/14 09:29:00] [35msave_interval[0m : [92m10[0m
+I0214 09:29:00.189896 1679764 tcp_utils.cc:181] The server starts to listen on IP_ANY:35432
+I0214 09:29:00.190038 1679764 tcp_utils.cc:130] Successfully connected to 172.17.0.3:35432
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/main.py", line 142, in <module>
+    main()
+  File "/root/cas/tww/PaddleVideo/main.py", line 130, in main
+    train_model(cfg,
+  File "/root/cas/tww/PaddleVideo/paddlevideo/tasks/train.py", line 151, in train_model
+    model = build_model(cfg.MODEL)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/builder.py", line 111, in build_model
+    return build_recognizer(cfg)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/builder.py", line 69, in build_recognizer
+    return build(cfg, RECOGNIZERS, key='framework')
+  File "/root/cas/tww/PaddleVideo/paddlevideo/utils/build_utils.py", line 35, in build
+    return obj_cls(**cfg_copy)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/framework/recognizers/base.py", line 27, in __init__
+    self.backbone.init_weights()
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/backbones/resnet.py", line 262, in init_weights
+    load_ckpt(self, self.pretrained)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/utils/dist_utils.py", line 30, in wrapper
+    return func(*args, **kwargs)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/utils/save_load.py", line 221, in load_ckpt
+    raise IOError(f'{weight_path} is not a checkpoint file')
+OSError: ../ckpt/ResNet50_pretrain.pdparams is not a checkpoint file
+I0214 09:31:51.992779 1681807 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0214 09:31:51.992821 1681807 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0214 09:31:52.074436 1681807 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0214 09:31:52.076511 1681807 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0214 09:31:52.076597 1681807 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0214 09:31:52.076615 1681807 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+[02/14 09:31:52] [35mDATASET[0m : 
+[02/14 09:31:52]     [35mbatch_size[0m : [92m32[0m
+[02/14 09:31:52]     [35mnum_workers[0m : [92m4[0m
+[02/14 09:31:52]     [35mtest[0m : 
+[02/14 09:31:52]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:31:52]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:31:52]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:31:52]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:31:52]     [35mtest_batch_size[0m : [92m1[0m
+[02/14 09:31:52]     [35mtrain[0m : 
+[02/14 09:31:52]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/14 09:31:52]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/14 09:31:52]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:31:52]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:31:52]     [35mvalid[0m : 
+[02/14 09:31:52]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:31:52]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:31:52]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:31:52]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:31:52]     [35mvalid_batch_size[0m : [92m32[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mINFERENCE[0m : 
+[02/14 09:31:52]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/14 09:31:52]     [35mnum_seg[0m : [92m25[0m
+[02/14 09:31:52]     [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mMETRIC[0m : 
+[02/14 09:31:52]     [35mname[0m : [92mCenterCropMetric[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mMODEL[0m : 
+[02/14 09:31:52]     [35mbackbone[0m : 
+[02/14 09:31:52]         [35mdepth[0m : [92m50[0m
+[02/14 09:31:52]         [35mname[0m : [92mResNet[0m
+[02/14 09:31:52]         [35mpretrained[0m : [92m/ckpt/ResNet50_pretrain.pdparams[0m
+[02/14 09:31:52]     [35mframework[0m : [92mRecognizer2D[0m
+[02/14 09:31:52]     [35mhead[0m : 
+[02/14 09:31:52]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/14 09:31:52]         [35min_channels[0m : [92m2048[0m
+[02/14 09:31:52]         [35mname[0m : [92mTSNHead[0m
+[02/14 09:31:52]         [35mnum_classes[0m : [92m400[0m
+[02/14 09:31:52]         [35mstd[0m : [92m0.01[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mOPTIMIZER[0m : 
+[02/14 09:31:52]     [35mgrad_clip[0m : 
+[02/14 09:31:52]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/14 09:31:52]         [35mvalue[0m : [92m40.0[0m
+[02/14 09:31:52]     [35mlearning_rate[0m : 
+[02/14 09:31:52]         [35mboundaries[0m : [92m[40, 80][0m
+[02/14 09:31:52]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/14 09:31:52]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/14 09:31:52]     [35mmomentum[0m : [92m0.9[0m
+[02/14 09:31:52]     [35mname[0m : [92mMomentum[0m
+[02/14 09:31:52]     [35mweight_decay[0m : 
+[02/14 09:31:52]         [35mname[0m : [92mL2[0m
+[02/14 09:31:52]         [35mvalue[0m : [92m0.0001[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mPIPELINE[0m : 
+[02/14 09:31:52]     [35mtest[0m : 
+[02/14 09:31:52]         [35mdecode[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:31:52]         [35msample[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mSampler[0m
+[02/14 09:31:52]             [35mnum_seg[0m : [92m25[0m
+[02/14 09:31:52]             [35mseg_len[0m : [92m1[0m
+[02/14 09:31:52]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:31:52]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:31:52]         [35mtransform[0m : 
+[02/14 09:31:52]             [35mScale[0m : 
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:31:52]             [35mTenCrop[0m : 
+[02/14 09:31:52]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:31:52]             [35mNormalization[0m : 
+[02/14 09:31:52]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:31:52]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:31:52]     [35mtrain[0m : 
+[02/14 09:31:52]         [35mdecode[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:31:52]         [35msample[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mSampler[0m
+[02/14 09:31:52]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:31:52]             [35mseg_len[0m : [92m1[0m
+[02/14 09:31:52]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:31:52]             [35mvalid_mode[0m : [92mFalse[0m
+[02/14 09:31:52]         [35mtransform[0m : 
+[02/14 09:31:52]             [35mScale[0m : 
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:31:52]             [35mMultiScaleCrop[0m : 
+[02/14 09:31:52]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52]             [35mRandomFlip[0m : [92mNone[0m
+[02/14 09:31:52]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:31:52]             [35mNormalization[0m : 
+[02/14 09:31:52]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:31:52]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:31:52]     [35mvalid[0m : 
+[02/14 09:31:52]         [35mdecode[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:31:52]         [35msample[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mSampler[0m
+[02/14 09:31:52]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:31:52]             [35mseg_len[0m : [92m1[0m
+[02/14 09:31:52]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:31:52]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:31:52]         [35mtransform[0m : 
+[02/14 09:31:52]             [35mScale[0m : 
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:31:52]             [35mCenterCrop[0m : 
+[02/14 09:31:52]                 [35mdo_round[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:31:52]             [35mNormalization[0m : 
+[02/14 09:31:52]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:31:52]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mepochs[0m : [92m100[0m
+[02/14 09:31:52] [35mlog_interval[0m : [92m20[0m
+[02/14 09:31:52] [35mlog_level[0m : [92mINFO[0m
+[02/14 09:31:52] [35mmodel_name[0m : [92mTSN[0m
+[02/14 09:31:52] [35msave_interval[0m : [92m10[0m
+I0214 09:31:52.771560 1681807 tcp_utils.cc:181] The server starts to listen on IP_ANY:52132
+I0214 09:31:52.771687 1681807 tcp_utils.cc:130] Successfully connected to 172.17.0.3:52132
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/main.py", line 142, in <module>
+    main()
+  File "/root/cas/tww/PaddleVideo/main.py", line 130, in main
+    train_model(cfg,
+  File "/root/cas/tww/PaddleVideo/paddlevideo/tasks/train.py", line 151, in train_model
+    model = build_model(cfg.MODEL)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/builder.py", line 111, in build_model
+    return build_recognizer(cfg)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/builder.py", line 69, in build_recognizer
+    return build(cfg, RECOGNIZERS, key='framework')
+  File "/root/cas/tww/PaddleVideo/paddlevideo/utils/build_utils.py", line 35, in build
+    return obj_cls(**cfg_copy)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/framework/recognizers/base.py", line 27, in __init__
+    self.backbone.init_weights()
+  File "/root/cas/tww/PaddleVideo/paddlevideo/modeling/backbones/resnet.py", line 262, in init_weights
+    load_ckpt(self, self.pretrained)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/utils/dist_utils.py", line 30, in wrapper
+    return func(*args, **kwargs)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/utils/save_load.py", line 221, in load_ckpt
+    raise IOError(f'{weight_path} is not a checkpoint file')
+OSError: /ckpt/ResNet50_pretrain.pdparams is not a checkpoint file
+I0214 09:33:05.339269 1682875 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0214 09:33:05.339308 1682875 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0214 09:33:05.414856 1682875 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0214 09:33:05.417014 1682875 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0214 09:33:05.417102 1682875 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0214 09:33:05.417119 1682875 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+[02/14 09:33:06] [35mDATASET[0m : 
+[02/14 09:33:06]     [35mbatch_size[0m : [92m32[0m
+[02/14 09:33:06]     [35mnum_workers[0m : [92m4[0m
+[02/14 09:33:06]     [35mtest[0m : 
+[02/14 09:33:06]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:33:06]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:33:06]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:33:06]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:33:06]     [35mtest_batch_size[0m : [92m1[0m
+[02/14 09:33:06]     [35mtrain[0m : 
+[02/14 09:33:06]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/14 09:33:06]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/14 09:33:06]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:33:06]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:33:06]     [35mvalid[0m : 
+[02/14 09:33:06]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:33:06]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:33:06]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:33:06]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:33:06]     [35mvalid_batch_size[0m : [92m32[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mINFERENCE[0m : 
+[02/14 09:33:06]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/14 09:33:06]     [35mnum_seg[0m : [92m25[0m
+[02/14 09:33:06]     [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mMETRIC[0m : 
+[02/14 09:33:06]     [35mname[0m : [92mCenterCropMetric[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mMODEL[0m : 
+[02/14 09:33:06]     [35mbackbone[0m : 
+[02/14 09:33:06]         [35mdepth[0m : [92m50[0m
+[02/14 09:33:06]         [35mname[0m : [92mResNet[0m
+[02/14 09:33:06]         [35mpretrained[0m : [92mckpt/ResNet50_pretrain.pdparams[0m
+[02/14 09:33:06]     [35mframework[0m : [92mRecognizer2D[0m
+[02/14 09:33:06]     [35mhead[0m : 
+[02/14 09:33:06]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/14 09:33:06]         [35min_channels[0m : [92m2048[0m
+[02/14 09:33:06]         [35mname[0m : [92mTSNHead[0m
+[02/14 09:33:06]         [35mnum_classes[0m : [92m400[0m
+[02/14 09:33:06]         [35mstd[0m : [92m0.01[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mOPTIMIZER[0m : 
+[02/14 09:33:06]     [35mgrad_clip[0m : 
+[02/14 09:33:06]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/14 09:33:06]         [35mvalue[0m : [92m40.0[0m
+[02/14 09:33:06]     [35mlearning_rate[0m : 
+[02/14 09:33:06]         [35mboundaries[0m : [92m[40, 80][0m
+[02/14 09:33:06]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/14 09:33:06]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/14 09:33:06]     [35mmomentum[0m : [92m0.9[0m
+[02/14 09:33:06]     [35mname[0m : [92mMomentum[0m
+[02/14 09:33:06]     [35mweight_decay[0m : 
+[02/14 09:33:06]         [35mname[0m : [92mL2[0m
+[02/14 09:33:06]         [35mvalue[0m : [92m0.0001[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mPIPELINE[0m : 
+[02/14 09:33:06]     [35mtest[0m : 
+[02/14 09:33:06]         [35mdecode[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:33:06]         [35msample[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mSampler[0m
+[02/14 09:33:06]             [35mnum_seg[0m : [92m25[0m
+[02/14 09:33:06]             [35mseg_len[0m : [92m1[0m
+[02/14 09:33:06]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:33:06]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:33:06]         [35mtransform[0m : 
+[02/14 09:33:06]             [35mScale[0m : 
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:33:06]             [35mTenCrop[0m : 
+[02/14 09:33:06]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:33:06]             [35mNormalization[0m : 
+[02/14 09:33:06]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:33:06]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:33:06]     [35mtrain[0m : 
+[02/14 09:33:06]         [35mdecode[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:33:06]         [35msample[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mSampler[0m
+[02/14 09:33:06]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:33:06]             [35mseg_len[0m : [92m1[0m
+[02/14 09:33:06]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:33:06]             [35mvalid_mode[0m : [92mFalse[0m
+[02/14 09:33:06]         [35mtransform[0m : 
+[02/14 09:33:06]             [35mScale[0m : 
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:33:06]             [35mMultiScaleCrop[0m : 
+[02/14 09:33:06]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06]             [35mRandomFlip[0m : [92mNone[0m
+[02/14 09:33:06]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:33:06]             [35mNormalization[0m : 
+[02/14 09:33:06]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:33:06]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:33:06]     [35mvalid[0m : 
+[02/14 09:33:06]         [35mdecode[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:33:06]         [35msample[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mSampler[0m
+[02/14 09:33:06]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:33:06]             [35mseg_len[0m : [92m1[0m
+[02/14 09:33:06]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:33:06]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:33:06]         [35mtransform[0m : 
+[02/14 09:33:06]             [35mScale[0m : 
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:33:06]             [35mCenterCrop[0m : 
+[02/14 09:33:06]                 [35mdo_round[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:33:06]             [35mNormalization[0m : 
+[02/14 09:33:06]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:33:06]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mepochs[0m : [92m100[0m
+[02/14 09:33:06] [35mlog_interval[0m : [92m20[0m
+[02/14 09:33:06] [35mlog_level[0m : [92mINFO[0m
+[02/14 09:33:06] [35mmodel_name[0m : [92mTSN[0m
+[02/14 09:33:06] [35msave_interval[0m : [92m10[0m
+I0214 09:33:06.076982 1682875 tcp_utils.cc:181] The server starts to listen on IP_ANY:37271
+I0214 09:33:06.077128 1682875 tcp_utils.cc:130] Successfully connected to 172.17.0.3:37271
+
+Loading weights[A  0%|          | 0/265 [00:00<?, ?it/s]
+Loading conv._conv.weight: [A
+Loading conv._batch_norm.weight: [A
+Loading conv._batch_norm.bias:   [A
+Loading conv._batch_norm._mean: [A
+Loading conv._batch_norm._variance: [A
+Loading res2a.conv0._conv.weight:   [A
+Loading res2a.conv0._batch_norm.weight: [A
+Loading res2a.conv0._batch_norm.bias:   [A
+Loading res2a.conv0._batch_norm._mean: [A
+Loading res2a.conv0._batch_norm._variance: [A  4%|▍         | 10/265 [00:00<00:02, 98.85it/s]
+Loading res2a.conv1._conv.weight:          [A
+Loading res2a.conv1._batch_norm.weight: [A
+Loading res2a.conv1._batch_norm.bias:   [A
+Loading res2a.conv1._batch_norm._mean: [A
+Loading res2a.conv1._batch_norm._variance: [A
+Loading res2a.conv2._conv.weight:          [A
+Loading res2a.conv2._batch_norm.weight: [A
+Loading res2a.conv2._batch_norm.bias:   [A
+Loading res2a.conv2._batch_norm._mean: [A
+Loading res2a.conv2._batch_norm._variance: [A  8%|▊         | 20/265 [00:00<00:02, 98.84it/s]
+Loading res2a.short._conv.weight:          [A
+Loading res2a.short._batch_norm.weight: [A
+Loading res2a.short._batch_norm.bias:   [A
+Loading res2a.short._batch_norm._mean: [A
+Loading res2a.short._batch_norm._variance: [A
+Loading res2b.conv0._conv.weight:          [A
+Loading res2b.conv0._batch_norm.weight: [A
+Loading res2b.conv0._batch_norm.bias:   [A
+Loading res2b.conv0._batch_norm._mean: [A
+Loading res2b.conv0._batch_norm._variance: [A 11%|█▏        | 30/265 [00:00<00:02, 98.48it/s]
+Loading res2b.conv1._conv.weight:          [A
+Loading res2b.conv1._batch_norm.weight: [A
+Loading res2b.conv1._batch_norm.bias:   [A
+Loading res2b.conv1._batch_norm._mean: [A
+Loading res2b.conv1._batch_norm._variance: [A
+Loading res2b.conv2._conv.weight:          [A
+Loading res2b.conv2._batch_norm.weight: [A
+Loading res2b.conv2._batch_norm.bias:   [A
+Loading res2b.conv2._batch_norm._mean: [A
+Loading res2b.conv2._batch_norm._variance: [A 15%|█▌        | 40/265 [00:00<00:02, 98.03it/s]
+Loading res2c.conv0._conv.weight:          [A
+Loading res2c.conv0._batch_norm.weight: [A
+Loading res2c.conv0._batch_norm.bias:   [A
+Loading res2c.conv0._batch_norm._mean: [A
+Loading res2c.conv0._batch_norm._variance: [A
+Loading res2c.conv1._conv.weight:          [A
+Loading res2c.conv1._batch_norm.weight: [A
+Loading res2c.conv1._batch_norm.bias:   [A
+Loading res2c.conv1._batch_norm._mean: [A
+Loading res2c.conv1._batch_norm._variance: [A 19%|█▉        | 50/265 [00:00<00:02, 97.44it/s]
+Loading res2c.conv2._conv.weight:          [A
+Loading res2c.conv2._batch_norm.weight: [A
+Loading res2c.conv2._batch_norm.bias:   [A
+Loading res2c.conv2._batch_norm._mean: [A
+Loading res2c.conv2._batch_norm._variance: [A
+Loading res3a.conv0._conv.weight:          [A
+Loading res3a.conv0._batch_norm.weight: [A
+Loading res3a.conv0._batch_norm.bias:   [A
+Loading res3a.conv0._batch_norm._mean: [A
+Loading res3a.conv0._batch_norm._variance: [A 23%|██▎       | 60/265 [00:00<00:02, 97.14it/s]
+Loading res3a.conv1._conv.weight:          [A
+Loading res3a.conv1._batch_norm.weight: [A
+Loading res3a.conv1._batch_norm.bias:   [A
+Loading res3a.conv1._batch_norm._mean: [A
+Loading res3a.conv1._batch_norm._variance: [A
+Loading res3a.conv2._conv.weight:          [A
+Loading res3a.conv2._batch_norm.weight: [A
+Loading res3a.conv2._batch_norm.bias:   [A
+Loading res3a.conv2._batch_norm._mean: [A
+Loading res3a.conv2._batch_norm._variance: [A 26%|██▋       | 70/265 [00:00<00:02, 96.98it/s]
+Loading res3a.short._conv.weight:          [A
+Loading res3a.short._batch_norm.weight: [A
+Loading res3a.short._batch_norm.bias:   [A
+Loading res3a.short._batch_norm._mean: [A
+Loading res3a.short._batch_norm._variance: [A
+Loading res3b.conv0._conv.weight:          [A
+Loading res3b.conv0._batch_norm.weight: [A
+Loading res3b.conv0._batch_norm.bias:   [A
+Loading res3b.conv0._batch_norm._mean: [A
+Loading res3b.conv0._batch_norm._variance: [A 30%|███       | 80/265 [00:00<00:01, 96.83it/s]
+Loading res3b.conv1._conv.weight:          [A
+Loading res3b.conv1._batch_norm.weight: [A
+Loading res3b.conv1._batch_norm.bias:   [A
+Loading res3b.conv1._batch_norm._mean: [A
+Loading res3b.conv1._batch_norm._variance: [A
+Loading res3b.conv2._conv.weight:          [A
+Loading res3b.conv2._batch_norm.weight: [A
+Loading res3b.conv2._batch_norm.bias:   [A
+Loading res3b.conv2._batch_norm._mean: [A
+Loading res3b.conv2._batch_norm._variance: [A 34%|███▍      | 90/265 [00:00<00:01, 96.76it/s]
+Loading res3c.conv0._conv.weight:          [A
+Loading res3c.conv0._batch_norm.weight: [A
+Loading res3c.conv0._batch_norm.bias:   [A
+Loading res3c.conv0._batch_norm._mean: [A
+Loading res3c.conv0._batch_norm._variance: [A
+Loading res3c.conv1._conv.weight:          [A
+Loading res3c.conv1._batch_norm.weight: [A
+Loading res3c.conv1._batch_norm.bias:   [A
+Loading res3c.conv1._batch_norm._mean: [A
+Loading res3c.conv1._batch_norm._variance: [A 38%|███▊      | 100/265 [00:01<00:01, 96.77it/s]
+Loading res3c.conv2._conv.weight:          [A
+Loading res3c.conv2._batch_norm.weight: [A
+Loading res3c.conv2._batch_norm.bias:   [A
+Loading res3c.conv2._batch_norm._mean: [A
+Loading res3c.conv2._batch_norm._variance: [A
+Loading res3d.conv0._conv.weight:          [A
+Loading res3d.conv0._batch_norm.weight: [A
+Loading res3d.conv0._batch_norm.bias:   [A
+Loading res3d.conv0._batch_norm._mean: [A
+Loading res3d.conv0._batch_norm._variance: [A 42%|████▏     | 110/265 [00:01<00:01, 96.61it/s]
+Loading res3d.conv1._conv.weight:          [A
+Loading res3d.conv1._batch_norm.weight: [A
+Loading res3d.conv1._batch_norm.bias:   [A
+Loading res3d.conv1._batch_norm._mean: [A
+Loading res3d.conv1._batch_norm._variance: [A
+Loading res3d.conv2._conv.weight:          [A
+Loading res3d.conv2._batch_norm.weight: [A
+Loading res3d.conv2._batch_norm.bias:   [A
+Loading res3d.conv2._batch_norm._mean: [A
+Loading res3d.conv2._batch_norm._variance: [A 45%|████▌     | 120/265 [00:01<00:01, 96.65it/s]
+Loading res4a.conv0._conv.weight:          [A
+Loading res4a.conv0._batch_norm.weight: [A
+Loading res4a.conv0._batch_norm.bias:   [A
+Loading res4a.conv0._batch_norm._mean: [A
+Loading res4a.conv0._batch_norm._variance: [A
+Loading res4a.conv1._conv.weight:          [A
+Loading res4a.conv1._batch_norm.weight: [A
+Loading res4a.conv1._batch_norm.bias:   [A
+Loading res4a.conv1._batch_norm._mean: [A
+Loading res4a.conv1._batch_norm._variance: [A 49%|████▉     | 130/265 [00:01<00:01, 96.52it/s]
+Loading res4a.conv2._conv.weight:          [A
+Loading res4a.conv2._batch_norm.weight: [A
+Loading res4a.conv2._batch_norm.bias:   [A
+Loading res4a.conv2._batch_norm._mean: [A
+Loading res4a.conv2._batch_norm._variance: [A
+Loading res4a.short._conv.weight:          [A
+Loading res4a.short._batch_norm.weight: [A
+Loading res4a.short._batch_norm.bias:   [A
+Loading res4a.short._batch_norm._mean: [A
+Loading res4a.short._batch_norm._variance: [A 53%|█████▎    | 140/265 [00:01<00:01, 96.57it/s]
+Loading res4b.conv0._conv.weight:          [A
+Loading res4b.conv0._batch_norm.weight: [A
+Loading res4b.conv0._batch_norm.bias:   [A
+Loading res4b.conv0._batch_norm._mean: [A
+Loading res4b.conv0._batch_norm._variance: [A
+Loading res4b.conv1._conv.weight:          [A
+Loading res4b.conv1._batch_norm.weight: [A
+Loading res4b.conv1._batch_norm.bias:   [A
+Loading res4b.conv1._batch_norm._mean: [A
+Loading res4b.conv1._batch_norm._variance: [A 57%|█████▋    | 150/265 [00:01<00:01, 96.69it/s]
+Loading res4b.conv2._conv.weight:          [A
+Loading res4b.conv2._batch_norm.weight: [A
+Loading res4b.conv2._batch_norm.bias:   [A
+Loading res4b.conv2._batch_norm._mean: [A
+Loading res4b.conv2._batch_norm._variance: [A
+Loading res4c.conv0._conv.weight:          [A
+Loading res4c.conv0._batch_norm.weight: [A
+Loading res4c.conv0._batch_norm.bias:   [A
+Loading res4c.conv0._batch_norm._mean: [A
+Loading res4c.conv0._batch_norm._variance: [A 60%|██████    | 160/265 [00:01<00:01, 96.62it/s]
+Loading res4c.conv1._conv.weight:          [A
+Loading res4c.conv1._batch_norm.weight: [A
+Loading res4c.conv1._batch_norm.bias:   [A
+Loading res4c.conv1._batch_norm._mean: [A
+Loading res4c.conv1._batch_norm._variance: [A
+Loading res4c.conv2._conv.weight:          [A
+Loading res4c.conv2._batch_norm.weight: [A
+Loading res4c.conv2._batch_norm.bias:   [A
+Loading res4c.conv2._batch_norm._mean: [A
+Loading res4c.conv2._batch_norm._variance: [A 64%|██████▍   | 170/265 [00:01<00:00, 96.62it/s]
+Loading res4d.conv0._conv.weight:          [A
+Loading res4d.conv0._batch_norm.weight: [A
+Loading res4d.conv0._batch_norm.bias:   [A
+Loading res4d.conv0._batch_norm._mean: [A
+Loading res4d.conv0._batch_norm._variance: [A
+Loading res4d.conv1._conv.weight:          [A
+Loading res4d.conv1._batch_norm.weight: [A
+Loading res4d.conv1._batch_norm.bias:   [A
+Loading res4d.conv1._batch_norm._mean: [A
+Loading res4d.conv1._batch_norm._variance: [A 68%|██████▊   | 180/265 [00:01<00:00, 96.56it/s]
+Loading res4d.conv2._conv.weight:          [A
+Loading res4d.conv2._batch_norm.weight: [A
+Loading res4d.conv2._batch_norm.bias:   [A
+Loading res4d.conv2._batch_norm._mean: [A
+Loading res4d.conv2._batch_norm._variance: [A
+Loading res4e.conv0._conv.weight:          [A
+Loading res4e.conv0._batch_norm.weight: [A
+Loading res4e.conv0._batch_norm.bias:   [A
+Loading res4e.conv0._batch_norm._mean: [A
+Loading res4e.conv0._batch_norm._variance: [A 72%|███████▏  | 190/265 [00:01<00:00, 96.47it/s]
+Loading res4e.conv1._conv.weight:          [A
+Loading res4e.conv1._batch_norm.weight: [A
+Loading res4e.conv1._batch_norm.bias:   [A
+Loading res4e.conv1._batch_norm._mean: [A
+Loading res4e.conv1._batch_norm._variance: [A
+Loading res4e.conv2._conv.weight:          [A
+Loading res4e.conv2._batch_norm.weight: [A
+Loading res4e.conv2._batch_norm.bias:   [A
+Loading res4e.conv2._batch_norm._mean: [A
+Loading res4e.conv2._batch_norm._variance: [A 75%|███████▌  | 200/265 [00:02<00:00, 96.62it/s]
+Loading res4f.conv0._conv.weight:          [A
+Loading res4f.conv0._batch_norm.weight: [A
+Loading res4f.conv0._batch_norm.bias:   [A
+Loading res4f.conv0._batch_norm._mean: [A
+Loading res4f.conv0._batch_norm._variance: [A
+Loading res4f.conv1._conv.weight:          [A
+Loading res4f.conv1._batch_norm.weight: [A
+Loading res4f.conv1._batch_norm.bias:   [A
+Loading res4f.conv1._batch_norm._mean: [A
+Loading res4f.conv1._batch_norm._variance: [A 79%|███████▉  | 210/265 [00:02<00:00, 96.52it/s]
+Loading res4f.conv2._conv.weight:          [A
+Loading res4f.conv2._batch_norm.weight: [A
+Loading res4f.conv2._batch_norm.bias:   [A
+Loading res4f.conv2._batch_norm._mean: [A
+Loading res4f.conv2._batch_norm._variance: [A
+Loading res5a.conv0._conv.weight:          [A
+Loading res5a.conv0._batch_norm.weight: [A
+Loading res5a.conv0._batch_norm.bias:   [A
+Loading res5a.conv0._batch_norm._mean: [A
+Loading res5a.conv0._batch_norm._variance: [A 83%|████████▎ | 220/265 [00:02<00:00, 96.82it/s]
+Loading res5a.conv1._conv.weight:          [A
+Loading res5a.conv1._batch_norm.weight: [A
+Loading res5a.conv1._batch_norm.bias:   [A
+Loading res5a.conv1._batch_norm._mean: [A
+Loading res5a.conv1._batch_norm._variance: [A
+Loading res5a.conv2._conv.weight:          [A
+Loading res5a.conv2._batch_norm.weight: [A
+Loading res5a.conv2._batch_norm.bias:   [A
+Loading res5a.conv2._batch_norm._mean: [A
+Loading res5a.conv2._batch_norm._variance: [A 87%|████████▋ | 230/265 [00:02<00:00, 97.11it/s]
+Loading res5a.short._conv.weight:          [A
+Loading res5a.short._batch_norm.weight: [A
+Loading res5a.short._batch_norm.bias:   [A
+Loading res5a.short._batch_norm._mean: [A
+Loading res5a.short._batch_norm._variance: [A
+Loading res5b.conv0._conv.weight:          [A
+Loading res5b.conv0._batch_norm.weight: [A
+Loading res5b.conv0._batch_norm.bias:   [A
+Loading res5b.conv0._batch_norm._mean: [A
+Loading res5b.conv0._batch_norm._variance: [A 91%|█████████ | 240/265 [00:02<00:00, 97.31it/s]
+Loading res5b.conv1._conv.weight:          [A
+Loading res5b.conv1._batch_norm.weight: [A
+Loading res5b.conv1._batch_norm.bias:   [A
+Loading res5b.conv1._batch_norm._mean: [A
+Loading res5b.conv1._batch_norm._variance: [A
+Loading res5b.conv2._conv.weight:          [A
+Loading res5b.conv2._batch_norm.weight: [A
+Loading res5b.conv2._batch_norm.bias:   [A
+Loading res5b.conv2._batch_norm._mean: [A
+Loading res5b.conv2._batch_norm._variance: [A 94%|█████████▍| 250/265 [00:02<00:00, 97.36it/s]
+Loading res5c.conv0._conv.weight:          [A
+Loading res5c.conv0._batch_norm.weight: [A
+Loading res5c.conv0._batch_norm.bias:   [A
+Loading res5c.conv0._batch_norm._mean: [A
+Loading res5c.conv0._batch_norm._variance: [A
+Loading res5c.conv1._conv.weight:          [A
+Loading res5c.conv1._batch_norm.weight: [A
+Loading res5c.conv1._batch_norm.bias:   [A
+Loading res5c.conv1._batch_norm._mean: [A
+Loading res5c.conv1._batch_norm._variance: [A 98%|█████████▊| 260/265 [00:02<00:00, 97.10it/s]
+Loading res5c.conv2._conv.weight:          [A
+Loading res5c.conv2._batch_norm.weight: [A
+Loading res5c.conv2._batch_norm.bias:   [A
+Loading res5c.conv2._batch_norm._mean: [A
+Loading res5c.conv2._batch_norm._variance: [A100%|██████████| 265/265 [00:02<00:00, 96.95it/s]
+Loading res5c.conv2._batch_norm._variance: 
+[02/14 09:33:14] Training in fp32 mode.
+/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/nn/layer/norm.py:824: UserWarning: When training, we now always track global mean and variance.
+  warnings.warn(
+[02/14 09:33:16] [35mepoch:[  1/100][0m [95mtrain step:0   [0m [92mloss: 6.13152 lr: 0.010000 top1: 0.00000 top5: 0.00000[0m [92mbatch_cost: 1.82952 sec,[0m [92mreader_cost: 0.77908 sec,[0m ips: 17.49093 instance/sec, eta: 3 days, 21:06:06,  
+[02/14 09:33:35] epoch:[  1/100] [95mtrain step:20  [0m [92mloss: 6.01696 lr: 0.010000 top1: 0.00000 top5: 0.00000[0m [92mbatch_cost: 0.95862 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.38147 instance/sec, eta: 2 days, 2:33:42,  
+[02/14 09:33:54] epoch:[  1/100] [95mtrain step:40  [0m [92mloss: 5.74694 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.92949 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.42760 instance/sec, eta: 2 days, 1:26:06,  
+[02/14 09:34:13] epoch:[  1/100] [95mtrain step:60  [0m [92mloss: 5.16998 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.97265 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 32.89996 instance/sec, eta: 2 days, 1:04:26,  
+[02/14 09:34:32] epoch:[  1/100] [95mtrain step:80  [0m [92mloss: 4.92256 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.94984 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.68978 instance/sec, eta: 2 days, 0:53:13,  
+[02/14 09:34:51] epoch:[  1/100] [95mtrain step:100 [0m [92mloss: 4.99410 lr: 0.010000 top1: 0.06250 top5: 0.28125[0m [92mbatch_cost: 0.94295 sec,[0m [92mreader_cost: 0.00067 sec,[0m ips: 33.93618 instance/sec, eta: 2 days, 0:46:20,  
+[02/14 09:35:07] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/dancing_ballet/7x6LxAdMgb0_000118_000128.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/dancing_ballet/7x6LxAdMgb0_000118_000128.mp4/img_001.0.jpg'
+
+[02/14 09:35:07] Error when loading /data/datasets/22001/raw-part/k400/train_256/dancing_ballet/7x6LxAdMgb0_000118_000128.mp4, have 0 trys, will try again
+[02/14 09:35:10] epoch:[  1/100] [95mtrain step:120 [0m [92mloss: 4.97331 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.97034 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 32.97803 instance/sec, eta: 2 days, 0:41:30,  
+[02/14 09:35:29] epoch:[  1/100] [95mtrain step:140 [0m [92mloss: 5.13034 lr: 0.010000 top1: 0.12500 top5: 0.25000[0m [92mbatch_cost: 0.94317 sec,[0m [92mreader_cost: 0.00022 sec,[0m ips: 33.92829 instance/sec, eta: 2 days, 0:37:02,  
+[02/14 09:35:48] epoch:[  1/100] [95mtrain step:160 [0m [92mloss: 4.84609 lr: 0.010000 top1: 0.15625 top5: 0.28125[0m [92mbatch_cost: 0.95164 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.62618 instance/sec, eta: 2 days, 0:33:49,  
+[02/14 09:36:07] epoch:[  1/100] [95mtrain step:180 [0m [92mloss: 4.58293 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.93078 sec,[0m [92mreader_cost: 0.00027 sec,[0m ips: 34.37987 instance/sec, eta: 2 days, 0:30:44,  
+[02/14 09:36:26] epoch:[  1/100] [95mtrain step:200 [0m [92mloss: 5.32769 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.93553 sec,[0m [92mreader_cost: 0.00060 sec,[0m ips: 34.20538 instance/sec, eta: 2 days, 0:29:01,  
+[02/14 09:36:45] epoch:[  1/100] [95mtrain step:220 [0m [92mloss: 4.88835 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.94766 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 33.76755 instance/sec, eta: 2 days, 0:27:22,  
+[02/14 09:37:04] epoch:[  1/100] [95mtrain step:240 [0m [92mloss: 4.89342 lr: 0.010000 top1: 0.12500 top5: 0.25000[0m [92mbatch_cost: 0.93574 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.19748 instance/sec, eta: 2 days, 0:25:45,  
+[02/14 09:37:16] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_tennis/efTAWmCkLKE_000418_000428.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_tennis/efTAWmCkLKE_000418_000428.mp4/img_001.0.jpg'
+
+[02/14 09:37:16] Error when loading /data/datasets/22001/raw-part/k400/train_256/playing_tennis/efTAWmCkLKE_000418_000428.mp4, have 0 trys, will try again
+[02/14 09:37:23] epoch:[  1/100] [95mtrain step:260 [0m [92mloss: 4.84981 lr: 0.010000 top1: 0.25000 top5: 0.31250[0m [92mbatch_cost: 0.95240 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.59946 instance/sec, eta: 2 days, 0:24:25,  
+[02/14 09:37:42] epoch:[  1/100] [95mtrain step:280 [0m [92mloss: 5.27754 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.95046 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.66777 instance/sec, eta: 2 days, 0:23:23,  
+[02/14 09:38:01] epoch:[  1/100] [95mtrain step:300 [0m [92mloss: 5.28277 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.95083 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.65492 instance/sec, eta: 2 days, 0:22:25,  
+[02/14 09:38:20] epoch:[  1/100] [95mtrain step:320 [0m [92mloss: 5.59946 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.92983 sec,[0m [92mreader_cost: 0.00031 sec,[0m ips: 34.41496 instance/sec, eta: 2 days, 0:21:00,  
+[02/14 09:38:39] epoch:[  1/100] [95mtrain step:340 [0m [92mloss: 4.90041 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.94643 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.81125 instance/sec, eta: 2 days, 0:19:24,  
+[02/14 09:38:57] epoch:[  1/100] [95mtrain step:360 [0m [92mloss: 5.54625 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.95098 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.64933 instance/sec, eta: 2 days, 0:17:59,  
+[02/14 09:39:16] epoch:[  1/100] [95mtrain step:380 [0m [92mloss: 4.99467 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.96901 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.02346 instance/sec, eta: 2 days, 0:17:06,  
+[02/14 09:39:35] epoch:[  1/100] [95mtrain step:400 [0m [92mloss: 5.21548 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.93368 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 34.27313 instance/sec, eta: 2 days, 0:16:20,  
+[02/14 09:39:54] epoch:[  1/100] [95mtrain step:420 [0m [92mloss: 5.27601 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95200 sec,[0m [92mreader_cost: 0.00022 sec,[0m ips: 33.61347 instance/sec, eta: 2 days, 0:15:44,  
+[02/14 09:40:13] epoch:[  1/100] [95mtrain step:440 [0m [92mloss: 5.31572 lr: 0.010000 top1: 0.00000 top5: 0.21875[0m [92mbatch_cost: 0.93104 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.37009 instance/sec, eta: 2 days, 0:15:08,  
+[02/14 09:40:32] epoch:[  1/100] [95mtrain step:460 [0m [92mloss: 5.11964 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.95122 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 33.64108 instance/sec, eta: 2 days, 0:14:23,  
+[02/14 09:40:51] epoch:[  1/100] [95mtrain step:480 [0m [92mloss: 5.26406 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95023 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.67598 instance/sec, eta: 2 days, 0:13:49,  
+[02/14 09:41:10] epoch:[  1/100] [95mtrain step:500 [0m [92mloss: 4.69957 lr: 0.010000 top1: 0.09375 top5: 0.34375[0m [92mbatch_cost: 0.95673 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.44713 instance/sec, eta: 2 days, 0:13:23,  
+[02/14 09:41:29] epoch:[  1/100] [95mtrain step:520 [0m [92mloss: 5.03766 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.94447 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.88154 instance/sec, eta: 2 days, 0:12:19,  
+[02/14 09:41:48] epoch:[  1/100] [95mtrain step:540 [0m [92mloss: 4.89696 lr: 0.010000 top1: 0.12500 top5: 0.21875[0m [92mbatch_cost: 0.95507 sec,[0m [92mreader_cost: 0.00026 sec,[0m ips: 33.50554 instance/sec, eta: 2 days, 0:11:31,  
+[02/14 09:42:07] epoch:[  1/100] [95mtrain step:560 [0m [92mloss: 4.94942 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.95140 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 33.63452 instance/sec, eta: 2 days, 0:10:38,  
+[02/14 09:42:08] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/shaving_head/_M6Ko0yRfD4_000097_000107.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/shaving_head/_M6Ko0yRfD4_000097_000107.mp4/img_001.0.jpg'
+
+[02/14 09:42:08] Error when loading /data/datasets/22001/raw-part/k400/train_256/shaving_head/_M6Ko0yRfD4_000097_000107.mp4, have 0 trys, will try again
+[02/14 09:42:26] epoch:[  1/100] [95mtrain step:580 [0m [92mloss: 5.28604 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.96522 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.15309 instance/sec, eta: 2 days, 0:10:10,  
+[02/14 09:42:31] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/dying_hair/fNFXTBUF3nY_000230_000240.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/dying_hair/fNFXTBUF3nY_000230_000240.mp4/img_001.0.jpg'
+
+[02/14 09:42:31] Error when loading /data/datasets/22001/raw-part/k400/train_256/dying_hair/fNFXTBUF3nY_000230_000240.mp4, have 0 trys, will try again
+[02/14 09:42:45] epoch:[  1/100] [95mtrain step:600 [0m [92mloss: 5.15265 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.93331 sec,[0m [92mreader_cost: 0.00051 sec,[0m ips: 34.28642 instance/sec, eta: 2 days, 0:09:29,  
+[02/14 09:43:04] epoch:[  1/100] [95mtrain step:620 [0m [92mloss: 5.12409 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.94151 sec,[0m [92mreader_cost: 0.00053 sec,[0m ips: 33.98790 instance/sec, eta: 2 days, 0:09:01,  
+[02/14 09:43:23] epoch:[  1/100] [95mtrain step:640 [0m [92mloss: 5.06499 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.93778 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 34.12310 instance/sec, eta: 2 days, 0:08:23,  
+[02/14 09:43:31] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/crossing_river/LSRil2XG1UU_000191_000201.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/crossing_river/LSRil2XG1UU_000191_000201.mp4/img_001.0.jpg'
+
+[02/14 09:43:31] Error when loading /data/datasets/22001/raw-part/k400/train_256/crossing_river/LSRil2XG1UU_000191_000201.mp4, have 0 trys, will try again
+[02/14 09:43:41] epoch:[  1/100] [95mtrain step:660 [0m [92mloss: 5.33535 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.96694 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.09398 instance/sec, eta: 2 days, 0:07:21,  
+[02/14 09:44:00] epoch:[  1/100] [95mtrain step:680 [0m [92mloss: 5.45276 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.93557 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.20391 instance/sec, eta: 2 days, 0:06:41,  
+[02/14 09:44:19] epoch:[  1/100] [95mtrain step:700 [0m [92mloss: 5.10658 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.93485 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 34.23001 instance/sec, eta: 2 days, 0:05:42,  
+[02/14 09:44:38] epoch:[  1/100] [95mtrain step:720 [0m [92mloss: 4.84661 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.96556 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.14146 instance/sec, eta: 2 days, 0:04:56,  
+[02/14 09:44:57] epoch:[  1/100] [95mtrain step:740 [0m [92mloss: 5.48040 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.95344 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.56282 instance/sec, eta: 2 days, 0:04:28,  
+[02/14 09:45:16] epoch:[  1/100] [95mtrain step:760 [0m [92mloss: 5.24102 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.94807 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.75293 instance/sec, eta: 2 days, 0:03:58,  
+[02/14 09:45:35] epoch:[  1/100] [95mtrain step:780 [0m [92mloss: 5.58760 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.94600 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.82652 instance/sec, eta: 2 days, 0:03:18,  
+[02/14 09:45:54] epoch:[  1/100] [95mtrain step:800 [0m [92mloss: 4.71620 lr: 0.010000 top1: 0.09375 top5: 0.31250[0m [92mbatch_cost: 0.92959 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 34.42392 instance/sec, eta: 2 days, 0:02:06,  
+[02/14 09:46:12] epoch:[  1/100] [95mtrain step:820 [0m [92mloss: 5.47985 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.94886 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.72472 instance/sec, eta: 2 days, 0:01:26,  
+[02/14 09:46:31] epoch:[  1/100] [95mtrain step:840 [0m [92mloss: 4.94373 lr: 0.010000 top1: 0.15625 top5: 0.25000[0m [92mbatch_cost: 0.94542 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.84726 instance/sec, eta: 2 days, 0:00:40,  
+[02/14 09:46:50] epoch:[  1/100] [95mtrain step:860 [0m [92mloss: 5.05668 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.94353 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 33.91515 instance/sec, eta: 2 days, 0:00:10,  
+[02/14 09:47:09] epoch:[  1/100] [95mtrain step:880 [0m [92mloss: 5.25879 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.93215 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 34.32916 instance/sec, eta: 1 day, 23:59:39,  
+[02/14 09:47:19] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/cleaning_gutters/pM9KHPPo6oE_000046_000056.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/cleaning_gutters/pM9KHPPo6oE_000046_000056.mp4/img_001.0.jpg'
+
+[02/14 09:47:19] Error when loading /data/datasets/22001/raw-part/k400/train_256/cleaning_gutters/pM9KHPPo6oE_000046_000056.mp4, have 0 trys, will try again
+[02/14 09:47:28] epoch:[  1/100] [95mtrain step:900 [0m [92mloss: 5.18011 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.95047 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 33.66759 instance/sec, eta: 1 day, 23:59:09,  
+[02/14 09:47:47] epoch:[  1/100] [95mtrain step:920 [0m [92mloss: 5.25614 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95274 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 33.58735 instance/sec, eta: 1 day, 23:58:55,  
+[02/14 09:47:53] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/bowling/OErKBwdGJIk_000057_000067.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/bowling/OErKBwdGJIk_000057_000067.mp4/img_001.0.jpg'
+
+[02/14 09:47:53] Error when loading /data/datasets/22001/raw-part/k400/train_256/bowling/OErKBwdGJIk_000057_000067.mp4, have 0 trys, will try again
+[02/14 09:48:06] epoch:[  1/100] [95mtrain step:940 [0m [92mloss: 5.30494 lr: 0.010000 top1: 0.12500 top5: 0.15625[0m [92mbatch_cost: 0.93204 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 34.33336 instance/sec, eta: 1 day, 23:58:11,  
+[02/14 09:48:24] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/hitting_baseball/uz5cIbBTf4Y_000049_000059.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/hitting_baseball/uz5cIbBTf4Y_000049_000059.mp4/img_001.0.jpg'
+
+[02/14 09:48:24] Error when loading /data/datasets/22001/raw-part/k400/train_256/hitting_baseball/uz5cIbBTf4Y_000049_000059.mp4, have 0 trys, will try again
+[02/14 09:48:25] epoch:[  1/100] [95mtrain step:960 [0m [92mloss: 5.48703 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.93124 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.36280 instance/sec, eta: 1 day, 23:57:37,  
+[02/14 09:48:44] epoch:[  1/100] [95mtrain step:980 [0m [92mloss: 5.44875 lr: 0.010000 top1: 0.06250 top5: 0.06250[0m [92mbatch_cost: 0.93418 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 34.25451 instance/sec, eta: 1 day, 23:57:13,  
+[02/14 09:49:02] epoch:[  1/100] [95mtrain step:1000[0m [92mloss: 5.41952 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.95479 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.51519 instance/sec, eta: 1 day, 23:56:52,  
+[02/14 09:49:21] epoch:[  1/100] [95mtrain step:1020[0m [92mloss: 5.31182 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.96235 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.25195 instance/sec, eta: 1 day, 23:56:24,  
+[02/14 09:49:40] epoch:[  1/100] [95mtrain step:1040[0m [92mloss: 5.35876 lr: 0.010000 top1: 0.03125 top5: 0.25000[0m [92mbatch_cost: 0.95463 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.52081 instance/sec, eta: 1 day, 23:56:03,  
+[02/14 09:49:42] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/punching_bag/ixQrfusr6k8_000001_000011.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/punching_bag/ixQrfusr6k8_000001_000011.mp4/img_001.0.jpg'
+
+[02/14 09:49:42] Error when loading /data/datasets/22001/raw-part/k400/train_256/punching_bag/ixQrfusr6k8_000001_000011.mp4, have 0 trys, will try again
+[02/14 09:49:59] epoch:[  1/100] [95mtrain step:1060[0m [92mloss: 5.49871 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.96784 sec,[0m [92mreader_cost: 0.00029 sec,[0m ips: 33.06333 instance/sec, eta: 1 day, 23:55:39,  
+[02/14 09:50:14] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/tai_chi/LlflsbkvcKw_000090_000100.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/tai_chi/LlflsbkvcKw_000090_000100.mp4/img_001.0.jpg'
+
+[02/14 09:50:14] Error when loading /data/datasets/22001/raw-part/k400/train_256/tai_chi/LlflsbkvcKw_000090_000100.mp4, have 0 trys, will try again
+[02/14 09:50:18] epoch:[  1/100] [95mtrain step:1080[0m [92mloss: 5.35499 lr: 0.010000 top1: 0.00000 top5: 0.09375[0m [92mbatch_cost: 0.95614 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.46783 instance/sec, eta: 1 day, 23:55:01,  
+[02/14 09:50:32] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/wrapping_present/rKJk6ws2sGs_000103_000113.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/wrapping_present/rKJk6ws2sGs_000103_000113.mp4/img_001.0.jpg'
+
+[02/14 09:50:32] Error when loading /data/datasets/22001/raw-part/k400/train_256/wrapping_present/rKJk6ws2sGs_000103_000113.mp4, have 0 trys, will try again
+[02/14 09:50:37] epoch:[  1/100] [95mtrain step:1100[0m [92mloss: 4.83358 lr: 0.010000 top1: 0.03125 top5: 0.28125[0m [92mbatch_cost: 0.94885 sec,[0m [92mreader_cost: 0.00058 sec,[0m ips: 33.72512 instance/sec, eta: 1 day, 23:54:31,  
+[02/14 09:50:56] epoch:[  1/100] [95mtrain step:1120[0m [92mloss: 5.03978 lr: 0.010000 top1: 0.09375 top5: 0.12500[0m [92mbatch_cost: 0.93092 sec,[0m [92mreader_cost: 0.00031 sec,[0m ips: 34.37470 instance/sec, eta: 1 day, 23:54:01,  
+[02/14 09:51:15] epoch:[  1/100] [95mtrain step:1140[0m [92mloss: 4.84800 lr: 0.010000 top1: 0.15625 top5: 0.18750[0m [92mbatch_cost: 0.95054 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.66513 instance/sec, eta: 1 day, 23:53:35,  
+[02/14 09:51:34] epoch:[  1/100] [95mtrain step:1160[0m [92mloss: 5.63039 lr: 0.010000 top1: 0.06250 top5: 0.09375[0m [92mbatch_cost: 0.95376 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 33.55132 instance/sec, eta: 1 day, 23:53:18,  
+[02/14 09:51:53] epoch:[  1/100] [95mtrain step:1180[0m [92mloss: 4.94141 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.92862 sec,[0m [92mreader_cost: 0.00063 sec,[0m ips: 34.45992 instance/sec, eta: 1 day, 23:52:56,  
+[02/14 09:52:11] epoch:[  1/100] [95mtrain step:1200[0m [92mloss: 4.87454 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.95080 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.65588 instance/sec, eta: 1 day, 23:52:25,  
+[02/14 09:52:30] epoch:[  1/100] [95mtrain step:1220[0m [92mloss: 5.14869 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.94645 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 33.81055 instance/sec, eta: 1 day, 23:51:57,  
+[02/14 09:52:49] epoch:[  1/100] [95mtrain step:1240[0m [92mloss: 5.14626 lr: 0.010000 top1: 0.00000 top5: 0.15625[0m [92mbatch_cost: 0.94741 sec,[0m [92mreader_cost: 0.00022 sec,[0m ips: 33.77636 instance/sec, eta: 1 day, 23:51:38,  
+[02/14 09:53:08] epoch:[  1/100] [95mtrain step:1260[0m [92mloss: 5.27552 lr: 0.010000 top1: 0.12500 top5: 0.18750[0m [92mbatch_cost: 0.94919 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.71306 instance/sec, eta: 1 day, 23:51:23,  
+[02/14 09:53:27] epoch:[  1/100] [95mtrain step:1280[0m [92mloss: 4.96632 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.95140 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 33.63475 instance/sec, eta: 1 day, 23:51:06,  
+[02/14 09:53:46] epoch:[  1/100] [95mtrain step:1300[0m [92mloss: 5.24404 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.93331 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.28661 instance/sec, eta: 1 day, 23:50:44,  
+[02/14 09:54:05] epoch:[  1/100] [95mtrain step:1320[0m [92mloss: 5.07178 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.93669 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.16269 instance/sec, eta: 1 day, 23:50:23,  
+[02/14 09:54:24] epoch:[  1/100] [95mtrain step:1340[0m [92mloss: 5.03829 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.95094 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.65077 instance/sec, eta: 1 day, 23:50:05,  
+[02/14 09:54:43] epoch:[  1/100] [95mtrain step:1360[0m [92mloss: 4.96619 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.94133 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.99443 instance/sec, eta: 1 day, 23:49:45,  
+[02/14 09:55:02] epoch:[  1/100] [95mtrain step:1380[0m [92mloss: 5.12433 lr: 0.010000 top1: 0.12500 top5: 0.21875[0m [92mbatch_cost: 0.93121 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.36384 instance/sec, eta: 1 day, 23:49:20,  
+[02/14 09:55:21] epoch:[  1/100] [95mtrain step:1400[0m [92mloss: 4.82178 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.95249 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.59605 instance/sec, eta: 1 day, 23:48:52,  
+[02/14 09:55:40] epoch:[  1/100] [95mtrain step:1420[0m [92mloss: 5.57175 lr: 0.010000 top1: 0.09375 top5: 0.21875[0m [92mbatch_cost: 0.94929 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.70943 instance/sec, eta: 1 day, 23:48:38,  
+[02/14 09:55:59] epoch:[  1/100] [95mtrain step:1440[0m [92mloss: 5.07055 lr: 0.010000 top1: 0.00000 top5: 0.18750[0m [92mbatch_cost: 0.94070 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 34.01740 instance/sec, eta: 1 day, 23:48:15,  
+[02/14 09:56:17] epoch:[  1/100] [95mtrain step:1460[0m [92mloss: 5.27754 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.96888 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.02774 instance/sec, eta: 1 day, 23:47:45,  
+[02/14 09:56:36] epoch:[  1/100] [95mtrain step:1480[0m [92mloss: 5.38693 lr: 0.010000 top1: 0.00000 top5: 0.25000[0m [92mbatch_cost: 0.94914 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.71470 instance/sec, eta: 1 day, 23:47:20,  
+[02/14 09:56:55] epoch:[  1/100] [95mtrain step:1500[0m [92mloss: 5.16429 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.93946 sec,[0m [92mreader_cost: 0.00031 sec,[0m ips: 34.06223 instance/sec, eta: 1 day, 23:46:53,  
+[02/14 09:57:14] epoch:[  1/100] [95mtrain step:1520[0m [92mloss: 4.73982 lr: 0.010000 top1: 0.15625 top5: 0.25000[0m [92mbatch_cost: 0.95089 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.65265 instance/sec, eta: 1 day, 23:46:30,  
+[02/14 09:57:33] epoch:[  1/100] [95mtrain step:1540[0m [92mloss: 5.29333 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.94884 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.72527 instance/sec, eta: 1 day, 23:45:57,  
+[02/14 09:57:52] epoch:[  1/100] [95mtrain step:1560[0m [92mloss: 5.52593 lr: 0.010000 top1: 0.00000 top5: 0.03125[0m [92mbatch_cost: 0.94521 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.85498 instance/sec, eta: 1 day, 23:45:29,  
+[02/14 09:58:07] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/spinning_poi/5_gyoV_sQXU_000001_000011.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/spinning_poi/5_gyoV_sQXU_000001_000011.mp4/img_001.0.jpg'
+
+[02/14 09:58:07] Error when loading /data/datasets/22001/raw-part/k400/train_256/spinning_poi/5_gyoV_sQXU_000001_000011.mp4, have 0 trys, will try again
+[02/14 09:58:11] epoch:[  1/100] [95mtrain step:1580[0m [92mloss: 5.31670 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.97385 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 32.85935 instance/sec, eta: 1 day, 23:45:09,  
+[02/14 09:58:30] epoch:[  1/100] [95mtrain step:1600[0m [92mloss: 5.17239 lr: 0.010000 top1: 0.03125 top5: 0.25000[0m [92mbatch_cost: 0.93280 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 34.30524 instance/sec, eta: 1 day, 23:44:50,  
+[02/14 09:58:49] epoch:[  1/100] [95mtrain step:1620[0m [92mloss: 5.26456 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.92968 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 34.42032 instance/sec, eta: 1 day, 23:44:34,  
+[02/14 09:59:07] epoch:[  1/100] [95mtrain step:1640[0m [92mloss: 5.08052 lr: 0.010000 top1: 0.00000 top5: 0.18750[0m [92mbatch_cost: 0.94928 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.70967 instance/sec, eta: 1 day, 23:44:10,  
+[02/14 09:59:26] epoch:[  1/100] [95mtrain step:1660[0m [92mloss: 4.91082 lr: 0.010000 top1: 0.12500 top5: 0.18750[0m [92mbatch_cost: 0.95034 sec,[0m [92mreader_cost: 0.00038 sec,[0m ips: 33.67227 instance/sec, eta: 1 day, 23:43:52,  
+[02/14 09:59:45] epoch:[  1/100] [95mtrain step:1680[0m [92mloss: 4.88698 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.94123 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 33.99800 instance/sec, eta: 1 day, 23:43:28,  
+[02/14 10:00:04] epoch:[  1/100] [95mtrain step:1700[0m [92mloss: 4.85942 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.94969 sec,[0m [92mreader_cost: 0.00039 sec,[0m ips: 33.69532 instance/sec, eta: 1 day, 23:43:09,  
+[02/14 10:00:23] epoch:[  1/100] [95mtrain step:1720[0m [92mloss: 4.98168 lr: 0.010000 top1: 0.15625 top5: 0.25000[0m [92mbatch_cost: 0.95231 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.60236 instance/sec, eta: 1 day, 23:42:45,  
+[02/14 10:00:42] epoch:[  1/100] [95mtrain step:1740[0m [92mloss: 5.55562 lr: 0.010000 top1: 0.00000 top5: 0.03125[0m [92mbatch_cost: 0.93252 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.31559 instance/sec, eta: 1 day, 23:42:22,  
+[02/14 10:01:01] epoch:[  1/100] [95mtrain step:1760[0m [92mloss: 5.20072 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.93052 sec,[0m [92mreader_cost: 0.00021 sec,[0m ips: 34.38937 instance/sec, eta: 1 day, 23:41:51,  
+[02/14 10:01:20] epoch:[  1/100] [95mtrain step:1780[0m [92mloss: 5.69670 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.93438 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 34.24718 instance/sec, eta: 1 day, 23:41:25,  
+[02/14 10:01:39] epoch:[  1/100] [95mtrain step:1800[0m [92mloss: 5.28476 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.93041 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 34.39357 instance/sec, eta: 1 day, 23:41:04,  
+[02/14 10:01:57] epoch:[  1/100] [95mtrain step:1820[0m [92mloss: 5.30742 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.97081 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 32.96224 instance/sec, eta: 1 day, 23:40:49,  
+[02/14 10:02:08] [31mEND epoch:1  [0m [95mtrain[0m [92mloss_avg: 5.16925  top1_avg: 0.05895 top5_avg: 0.17322[0m [92mavg_batch_cost: 0.93505 sec,[0m [92mavg_reader_cost: 0.00009 sec,[0m [92mbatch_cost_sum: 1733.71557 sec,[0m avg_ips: 33.81408 instance/sec.
+[02/14 10:02:09] [35mepoch:[  1/100][0m [95mval step:0   [0m [92mloss: 4.77415 top1: 0.13281 top5: 0.28906[0m [92mbatch_cost: 1.10791 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 28.88310 instance/sec. ,  
+[02/14 10:02:16] epoch:[  1/100] [95mval step:20  [0m [92mloss: 4.84613 top1: 0.07812 top5: 0.29688[0m [92mbatch_cost: 0.32223 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 99.30777 instance/sec. ,  
+[02/14 10:02:22] epoch:[  1/100] [95mval step:40  [0m [92mloss: 5.43127 top1: 0.03125 top5: 0.03125[0m [92mbatch_cost: 0.32178 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 99.44772 instance/sec. ,  
+[02/14 10:02:28] epoch:[  1/100] [95mval step:60  [0m [92mloss: 5.39379 top1: 0.01562 top5: 0.06250[0m [92mbatch_cost: 0.32308 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 99.04761 instance/sec. ,  
+[02/14 10:02:29] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13ee0>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/val_256/peeling_potatoes/jwO2HAMrCt4.mkv/img_00302.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/val_256/peeling_potatoes/jwO2HAMrCt4.mkv/img_00302.jpg'
+
+[02/14 10:02:29] Error when loading /data/datasets/22001/raw-part/k400/val_256/peeling_potatoes/jwO2HAMrCt4.mkv, have 0 trys, will try again
+[02/14 10:02:35] epoch:[  1/100] [95mval step:80  [0m [92mloss: 5.03629 top1: 0.02344 top5: 0.21875[0m [92mbatch_cost: 0.32477 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 98.53164 instance/sec. ,  
+[02/14 10:02:41] epoch:[  1/100] [95mval step:100 [0m [92mloss: 5.57231 top1: 0.05469 top5: 0.10156[0m [92mbatch_cost: 0.32498 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 98.46658 instance/sec. ,  
+[02/14 10:02:48] epoch:[  1/100] [95mval step:120 [0m [92mloss: 5.50008 top1: 0.12500 top5: 0.18750[0m [92mbatch_cost: 0.32925 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 97.18992 instance/sec. ,  
+[02/14 10:02:54] epoch:[  1/100] [95mval step:140 [0m [92mloss: 5.67446 top1: 0.03125 top5: 0.14844[0m [92mbatch_cost: 0.32882 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 97.31747 instance/sec. ,  
+[02/14 10:02:59] [31mEND epoch:1  [0m [95mval[0m [92mloss_avg: 5.17019 top1_avg: 0.06225 top5_avg: 0.16884[0m [92mavg_batch_cost: 0.13616 sec,[0m [92mavg_reader_cost: 0.00000 sec,[0m [92mbatch_cost_sum: 50.85799 sec,[0m avg_ips: 97.52646 instance/sec.
+[02/14 10:02:59] Already save the best model (top1 acc)0.0622
+[02/14 10:03:01] [35mepoch:[  2/100][0m [95mtrain step:0   [0m [92mloss: 5.58579 lr: 0.010000 top1: 0.00000 top5: 0.03125[0m [92mbatch_cost: 1.62121 sec,[0m [92mreader_cost: 0.68140 sec,[0m ips: 19.73832 instance/sec, eta: 0:02:40,  
+[02/14 10:03:20] epoch:[  2/100] [95mtrain step:20  [0m [92mloss: 5.42604 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.96156 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 33.27943 instance/sec, eta: 0:33:26,  
+[02/14 10:03:39] epoch:[  2/100] [95mtrain step:40  [0m [92mloss: 5.64073 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.92972 sec,[0m [92mreader_cost: 0.00025 sec,[0m ips: 34.41891 instance/sec, eta: 1:03:29,  
+[02/14 10:03:58] epoch:[  2/100] [95mtrain step:60  [0m [92mloss: 5.25073 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.92689 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 34.52400 instance/sec, eta: 1:32:53,  
+[02/14 10:04:17] epoch:[  2/100] [95mtrain step:80  [0m [92mloss: 5.77743 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.94536 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.84969 instance/sec, eta: 2:01:44,  
+[02/14 10:04:36] epoch:[  2/100] [95mtrain step:100 [0m [92mloss: 5.58124 lr: 0.010000 top1: 0.00000 top5: 0.03125[0m [92mbatch_cost: 0.92915 sec,[0m [92mreader_cost: 0.00030 sec,[0m ips: 34.44018 instance/sec, eta: 2:30:09,  
+[02/14 10:04:55] epoch:[  2/100] [95mtrain step:120 [0m [92mloss: 5.11152 lr: 0.010000 top1: 0.03125 top5: 0.25000[0m [92mbatch_cost: 0.93648 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 34.17064 instance/sec, eta: 2:57:41,  
+[02/14 10:05:13] epoch:[  2/100] [95mtrain step:140 [0m [92mloss: 5.04643 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.94603 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.82545 instance/sec, eta: 3:24:45,  
+[02/14 10:05:32] epoch:[  2/100] [95mtrain step:160 [0m [92mloss: 5.18792 lr: 0.010000 top1: 0.09375 top5: 0.21875[0m [92mbatch_cost: 0.95896 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.36945 instance/sec, eta: 3:51:22,  
+[02/14 10:05:51] epoch:[  2/100] [95mtrain step:180 [0m [92mloss: 5.35803 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.92986 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.41374 instance/sec, eta: 4:17:19,  
+[02/14 10:06:10] epoch:[  2/100] [95mtrain step:200 [0m [92mloss: 5.02831 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.94661 sec,[0m [92mreader_cost: 0.00077 sec,[0m ips: 33.80476 instance/sec, eta: 4:42:55,  
+[02/14 10:06:29] epoch:[  2/100] [95mtrain step:220 [0m [92mloss: 4.82258 lr: 0.010000 top1: 0.09375 top5: 0.21875[0m [92mbatch_cost: 0.94899 sec,[0m [92mreader_cost: 0.00027 sec,[0m ips: 33.71992 instance/sec, eta: 5:07:47,  
+[02/14 10:06:48] epoch:[  2/100] [95mtrain step:240 [0m [92mloss: 5.39932 lr: 0.010000 top1: 0.00000 top5: 0.15625[0m [92mbatch_cost: 0.93292 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 34.30095 instance/sec, eta: 5:32:05,  
+[02/14 10:07:05] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/dying_hair/jHODDw65G4A_000085_000095.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/dying_hair/jHODDw65G4A_000085_000095.mp4/img_001.0.jpg'
+
+[02/14 10:07:05] Error when loading /data/datasets/22001/raw-part/k400/train_256/dying_hair/jHODDw65G4A_000085_000095.mp4, have 0 trys, will try again
+[02/14 10:07:07] epoch:[  2/100] [95mtrain step:260 [0m [92mloss: 5.22683 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.94497 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 33.86367 instance/sec, eta: 5:56:13,  
+[02/14 10:07:26] epoch:[  2/100] [95mtrain step:280 [0m [92mloss: 5.29848 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.94952 sec,[0m [92mreader_cost: 0.00066 sec,[0m ips: 33.70109 instance/sec, eta: 6:19:54,  
+[02/14 10:07:45] epoch:[  2/100] [95mtrain step:300 [0m [92mloss: 5.03370 lr: 0.010000 top1: 0.12500 top5: 0.21875[0m [92mbatch_cost: 0.93046 sec,[0m [92mreader_cost: 0.00025 sec,[0m ips: 34.39151 instance/sec, eta: 6:42:58,  
+[02/14 10:08:03] epoch:[  2/100] [95mtrain step:320 [0m [92mloss: 5.05387 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.93081 sec,[0m [92mreader_cost: 0.00050 sec,[0m ips: 34.37859 instance/sec, eta: 7:05:39,  
+[02/14 10:08:22] epoch:[  2/100] [95mtrain step:340 [0m [92mloss: 5.15899 lr: 0.010000 top1: 0.00000 top5: 0.18750[0m [92mbatch_cost: 0.92962 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 34.42271 instance/sec, eta: 7:27:54,  
+[02/14 10:08:41] epoch:[  2/100] [95mtrain step:360 [0m [92mloss: 5.12488 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.94052 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 34.02369 instance/sec, eta: 7:49:41,  
+[02/14 10:08:55] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_recorder/bgCrldl9pQ8_000027_000037.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_recorder/bgCrldl9pQ8_000027_000037.mp4/img_001.0.jpg'
+
+[02/14 10:08:55] Error when loading /data/datasets/22001/raw-part/k400/train_256/playing_recorder/bgCrldl9pQ8_000027_000037.mp4, have 0 trys, will try again
+[02/14 10:09:00] epoch:[  2/100] [95mtrain step:380 [0m [92mloss: 5.52714 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.96192 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 33.26673 instance/sec, eta: 8:11:11,  
+[02/14 10:09:19] epoch:[  2/100] [95mtrain step:400 [0m [92mloss: 5.46475 lr: 0.010000 top1: 0.00000 top5: 0.12500[0m [92mbatch_cost: 0.94424 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.88962 instance/sec, eta: 8:32:12,  
+[02/14 10:09:38] epoch:[  2/100] [95mtrain step:420 [0m [92mloss: 4.85219 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.92809 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 34.47946 instance/sec, eta: 8:52:58,  
+[02/14 10:09:57] epoch:[  2/100] [95mtrain step:440 [0m [92mloss: 5.74965 lr: 0.010000 top1: 0.06250 top5: 0.09375[0m [92mbatch_cost: 0.92999 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 34.40904 instance/sec, eta: 9:13:18,  
+[02/14 10:10:16] epoch:[  2/100] [95mtrain step:460 [0m [92mloss: 5.47524 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.96708 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.08917 instance/sec, eta: 9:33:22,  
+[02/14 10:10:35] epoch:[  2/100] [95mtrain step:480 [0m [92mloss: 5.35130 lr: 0.010000 top1: 0.09375 top5: 0.12500[0m [92mbatch_cost: 0.92836 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.46931 instance/sec, eta: 9:53:00,  
+[02/14 10:10:54] epoch:[  2/100] [95mtrain step:500 [0m [92mloss: 4.89457 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.94863 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.73294 instance/sec, eta: 10:12:18,  
+[02/14 10:11:12] epoch:[  2/100] [95mtrain step:520 [0m [92mloss: 5.30078 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.94829 sec,[0m [92mreader_cost: 0.00030 sec,[0m ips: 33.74511 instance/sec, eta: 10:31:15,  
+[02/14 10:11:31] epoch:[  2/100] [95mtrain step:540 [0m [92mloss: 5.34365 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.95081 sec,[0m [92mreader_cost: 0.00060 sec,[0m ips: 33.65566 instance/sec, eta: 10:49:55,  
+[02/14 10:11:50] epoch:[  2/100] [95mtrain step:560 [0m [92mloss: 5.70261 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.94595 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.82840 instance/sec, eta: 11:08:14,  
+[02/14 10:12:09] epoch:[  2/100] [95mtrain step:580 [0m [92mloss: 4.99631 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.93489 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 34.22856 instance/sec, eta: 11:26:16,  
+[02/14 10:12:28] epoch:[  2/100] [95mtrain step:600 [0m [92mloss: 5.35816 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.95210 sec,[0m [92mreader_cost: 0.00082 sec,[0m ips: 33.61008 instance/sec, eta: 11:43:57,  
+[02/14 10:12:35] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/air_drumming/CUxsn4YXksI_000119_000129.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/air_drumming/CUxsn4YXksI_000119_000129.mp4/img_001.0.jpg'
+
+[02/14 10:12:35] Error when loading /data/datasets/22001/raw-part/k400/train_256/air_drumming/CUxsn4YXksI_000119_000129.mp4, have 0 trys, will try again
+[02/14 10:12:47] epoch:[  2/100] [95mtrain step:620 [0m [92mloss: 5.20746 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95398 sec,[0m [92mreader_cost: 0.00025 sec,[0m ips: 33.54375 instance/sec, eta: 12:01:23,  
+[02/14 10:13:06] epoch:[  2/100] [95mtrain step:640 [0m [92mloss: 5.45269 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.94422 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.89035 instance/sec, eta: 12:18:33,  
+[02/14 10:13:25] epoch:[  2/100] [95mtrain step:660 [0m [92mloss: 5.67355 lr: 0.010000 top1: 0.00000 top5: 0.03125[0m [92mbatch_cost: 0.94045 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 34.02634 instance/sec, eta: 12:35:27,  
+[02/14 10:13:44] epoch:[  2/100] [95mtrain step:680 [0m [92mloss: 5.46302 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.96177 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 33.27196 instance/sec, eta: 12:52:02,  
+[02/14 10:14:03] epoch:[  2/100] [95mtrain step:700 [0m [92mloss: 5.46168 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.97312 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 32.88394 instance/sec, eta: 13:08:25,  
+[02/14 10:14:22] epoch:[  2/100] [95mtrain step:720 [0m [92mloss: 5.33454 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.94678 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.79867 instance/sec, eta: 13:24:26,  
+[02/14 10:14:41] epoch:[  2/100] [95mtrain step:740 [0m [92mloss: 5.26155 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.93666 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 34.16401 instance/sec, eta: 13:40:11,  
+[02/14 10:14:57] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_paintball/SZtj2TEWiHc_000195_000205.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_paintball/SZtj2TEWiHc_000195_000205.mp4/img_001.0.jpg'
+
+[02/14 10:14:57] Error when loading /data/datasets/22001/raw-part/k400/train_256/playing_paintball/SZtj2TEWiHc_000195_000205.mp4, have 0 trys, will try again
+[02/14 10:15:00] epoch:[  2/100] [95mtrain step:760 [0m [92mloss: 5.25950 lr: 0.010000 top1: 0.12500 top5: 0.15625[0m [92mbatch_cost: 0.92957 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 34.42461 instance/sec, eta: 13:55:44,  
+[02/14 10:15:07] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/deadlifting/Hm8X9u8jtOk_000022_000032.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/deadlifting/Hm8X9u8jtOk_000022_000032.mp4/img_001.0.jpg'
+
+[02/14 10:15:07] Error when loading /data/datasets/22001/raw-part/k400/train_256/deadlifting/Hm8X9u8jtOk_000022_000032.mp4, have 0 trys, will try again
+[02/14 10:15:18] epoch:[  2/100] [95mtrain step:780 [0m [92mloss: 5.40144 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.93053 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 34.38911 instance/sec, eta: 14:10:59,  
+[02/14 10:15:37] epoch:[  2/100] [95mtrain step:800 [0m [92mloss: 5.03253 lr: 0.010000 top1: 0.12500 top5: 0.25000[0m [92mbatch_cost: 0.95270 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.58869 instance/sec, eta: 14:25:57,  
+[02/14 10:15:56] epoch:[  2/100] [95mtrain step:820 [0m [92mloss: 5.52116 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.94841 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 33.74056 instance/sec, eta: 14:40:47,  
+[02/14 10:16:15] epoch:[  2/100] [95mtrain step:840 [0m [92mloss: 5.23374 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.94779 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.76285 instance/sec, eta: 14:55:22,  
+[02/14 10:16:34] epoch:[  2/100] [95mtrain step:860 [0m [92mloss: 5.11629 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.93355 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 34.27780 instance/sec, eta: 15:09:43,  
+[02/14 10:16:39] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f70c8c13c40>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_tennis/efTAWmCkLKE_000418_000428.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/playing_tennis/efTAWmCkLKE_000418_000428.mp4/img_001.0.jpg'
+
+[02/14 10:16:39] Error when loading /data/datasets/22001/raw-part/k400/train_256/playing_tennis/efTAWmCkLKE_000418_000428.mp4, have 0 trys, will try again
+[02/14 10:16:53] epoch:[  2/100] [95mtrain step:880 [0m [92mloss: 5.14543 lr: 0.010000 top1: 0.00000 top5: 0.09375[0m [92mbatch_cost: 0.92942 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.42996 instance/sec, eta: 15:23:49,  
+[02/14 10:17:04] main proc 1682875 exit, kill process group 1682875
+I0215 10:33:55.628443 3901016 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0215 10:33:55.628674 3901016 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0215 10:33:55.720954 3901016 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0215 10:33:55.723366 3901016 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0215 10:33:55.723475 3901016 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0215 10:33:55.723495 3901016 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+[02/15 10:33:56] [35mDATASET[0m : 
+[02/15 10:33:56]     [35mbatch_size[0m : [92m32[0m
+[02/15 10:33:56]     [35mnum_workers[0m : [92m4[0m
+[02/15 10:33:56]     [35mtest[0m : 
+[02/15 10:33:56]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/15 10:33:56]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/15 10:33:56]         [35mformat[0m : [92mFrameDataset[0m
+[02/15 10:33:56]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/15 10:33:56]     [35mtest_batch_size[0m : [92m1[0m
+[02/15 10:33:56]     [35mtrain[0m : 
+[02/15 10:33:56]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/15 10:33:56]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/15 10:33:56]         [35mformat[0m : [92mFrameDataset[0m
+[02/15 10:33:56]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/15 10:33:56]     [35mvalid[0m : 
+[02/15 10:33:56]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/15 10:33:56]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/15 10:33:56]         [35mformat[0m : [92mFrameDataset[0m
+[02/15 10:33:56]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/15 10:33:56]     [35mvalid_batch_size[0m : [92m32[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mINFERENCE[0m : 
+[02/15 10:33:56]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/15 10:33:56]     [35mnum_seg[0m : [92m25[0m
+[02/15 10:33:56]     [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mMETRIC[0m : 
+[02/15 10:33:56]     [35mname[0m : [92mCenterCropMetric[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mMODEL[0m : 
+[02/15 10:33:56]     [35mbackbone[0m : 
+[02/15 10:33:56]         [35mdepth[0m : [92m50[0m
+[02/15 10:33:56]         [35mname[0m : [92mResNet[0m
+[02/15 10:33:56]         [35mpretrained[0m : [92mckpt/ResNet50_pretrain.pdparams[0m
+[02/15 10:33:56]     [35mframework[0m : [92mRecognizer2D[0m
+[02/15 10:33:56]     [35mhead[0m : 
+[02/15 10:33:56]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/15 10:33:56]         [35min_channels[0m : [92m2048[0m
+[02/15 10:33:56]         [35mname[0m : [92mTSNHead[0m
+[02/15 10:33:56]         [35mnum_classes[0m : [92m400[0m
+[02/15 10:33:56]         [35mstd[0m : [92m0.01[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mOPTIMIZER[0m : 
+[02/15 10:33:56]     [35mgrad_clip[0m : 
+[02/15 10:33:56]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/15 10:33:56]         [35mvalue[0m : [92m40.0[0m
+[02/15 10:33:56]     [35mlearning_rate[0m : 
+[02/15 10:33:56]         [35mboundaries[0m : [92m[40, 80][0m
+[02/15 10:33:56]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/15 10:33:56]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/15 10:33:56]     [35mmomentum[0m : [92m0.9[0m
+[02/15 10:33:56]     [35mname[0m : [92mMomentum[0m
+[02/15 10:33:56]     [35mweight_decay[0m : 
+[02/15 10:33:56]         [35mname[0m : [92mL2[0m
+[02/15 10:33:56]         [35mvalue[0m : [92m0.0001[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mPIPELINE[0m : 
+[02/15 10:33:56]     [35mtest[0m : 
+[02/15 10:33:56]         [35mdecode[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mFrameDecoder[0m
+[02/15 10:33:56]         [35msample[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mSampler[0m
+[02/15 10:33:56]             [35mnum_seg[0m : [92m25[0m
+[02/15 10:33:56]             [35mseg_len[0m : [92m1[0m
+[02/15 10:33:56]             [35mselect_left[0m : [92mTrue[0m
+[02/15 10:33:56]             [35mvalid_mode[0m : [92mTrue[0m
+[02/15 10:33:56]         [35mtransform[0m : 
+[02/15 10:33:56]             [35mScale[0m : 
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mdo_round[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mshort_size[0m : [92m256[0m
+[02/15 10:33:56]             [35mTenCrop[0m : 
+[02/15 10:33:56]                 [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56]             [35mImage2Array[0m : [92mNone[0m
+[02/15 10:33:56]             [35mNormalization[0m : 
+[02/15 10:33:56]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/15 10:33:56]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/15 10:33:56]     [35mtrain[0m : 
+[02/15 10:33:56]         [35mdecode[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mFrameDecoder[0m
+[02/15 10:33:56]         [35msample[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mSampler[0m
+[02/15 10:33:56]             [35mnum_seg[0m : [92m3[0m
+[02/15 10:33:56]             [35mseg_len[0m : [92m1[0m
+[02/15 10:33:56]             [35mselect_left[0m : [92mTrue[0m
+[02/15 10:33:56]             [35mvalid_mode[0m : [92mFalse[0m
+[02/15 10:33:56]         [35mtransform[0m : 
+[02/15 10:33:56]             [35mScale[0m : 
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mdo_round[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mshort_size[0m : [92m256[0m
+[02/15 10:33:56]             [35mMultiScaleCrop[0m : 
+[02/15 10:33:56]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56]             [35mRandomFlip[0m : [92mNone[0m
+[02/15 10:33:56]             [35mImage2Array[0m : [92mNone[0m
+[02/15 10:33:56]             [35mNormalization[0m : 
+[02/15 10:33:56]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/15 10:33:56]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/15 10:33:56]     [35mvalid[0m : 
+[02/15 10:33:56]         [35mdecode[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mFrameDecoder[0m
+[02/15 10:33:56]         [35msample[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mSampler[0m
+[02/15 10:33:56]             [35mnum_seg[0m : [92m3[0m
+[02/15 10:33:56]             [35mseg_len[0m : [92m1[0m
+[02/15 10:33:56]             [35mselect_left[0m : [92mTrue[0m
+[02/15 10:33:56]             [35mvalid_mode[0m : [92mTrue[0m
+[02/15 10:33:56]         [35mtransform[0m : 
+[02/15 10:33:56]             [35mScale[0m : 
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mdo_round[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mshort_size[0m : [92m256[0m
+[02/15 10:33:56]             [35mCenterCrop[0m : 
+[02/15 10:33:56]                 [35mdo_round[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56]             [35mImage2Array[0m : [92mNone[0m
+[02/15 10:33:56]             [35mNormalization[0m : 
+[02/15 10:33:56]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/15 10:33:56]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mepochs[0m : [92m100[0m
+[02/15 10:33:56] [35mlog_interval[0m : [92m20[0m
+[02/15 10:33:56] [35mlog_level[0m : [92mINFO[0m
+[02/15 10:33:56] [35mmodel_name[0m : [92mTSN[0m
+[02/15 10:33:56] [35msave_interval[0m : [92m10[0m
+I0215 10:33:56.513052 3901016 tcp_utils.cc:181] The server starts to listen on IP_ANY:63465
+I0215 10:33:56.513199 3901016 tcp_utils.cc:130] Successfully connected to 172.17.0.3:63465

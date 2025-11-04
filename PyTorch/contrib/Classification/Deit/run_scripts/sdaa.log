@@ -1,0 +1,23 @@
+--------------+------------------------------------------------
+ Host IP      | 10.244.37.147
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.1.1
+--------------+------------------------------------------------
+ SDAA Driver  | 2.1.0 (N/A)
+ SDAA Runtime | 2.1.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.4.0b0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.1.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.1.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.20.0a0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 2.0.1 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.23.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+------------------------------------------------
+/root/miniconda3/envs/test/lib/python3.10/site-packages/torch_sdaa/utils/cuda_migrate.py:441: UserWarning: The cuda_migrate tool does not support torch.jit.script and use eager mode instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/workspace/modelzoo/PyTorch/contrib/Classification/Deit/train_demo.py", line 22, in <module>
+    from engine import train_one_epoch, evaluate
+  File "/workspace/modelzoo/PyTorch/contrib/Classification/Deit/engine.py", line 23, in <module>
+    from tcap_dllogger import Logger, StdOutBackend,    JSONStreamBackend, Verbosity
+ModuleNotFoundError: No module named 'tcap_dllogger'
+Command failed with exit code: 1

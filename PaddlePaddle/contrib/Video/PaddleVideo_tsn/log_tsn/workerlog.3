@@ -1,0 +1,271 @@
+I0214 09:28:59.057718 1679770 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0214 09:28:59.057770 1679770 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0214 09:28:59.158100 1679770 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0214 09:28:59.160706 1679770 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0214 09:28:59.160800 1679770 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0214 09:28:59.160820 1679770 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+I0214 09:29:00.195062 1679770 tcp_utils.cc:130] Successfully connected to 172.17.0.3:35432
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/main.py", line 142, in <module>
+    main()
+  File "/root/cas/tww/PaddleVideo/main.py", line 130, in main
+    train_model(cfg,
+  File "/root/cas/tww/PaddleVideo/paddlevideo/tasks/train.py", line 241, in train_model
+    model = paddle.DataParallel(model)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 398, in __init__
+    sync_params_buffers(self._layers, fuse_params=False)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/base/dygraph/base.py", line 340, in __impl__
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/base/wrapped_decorator.py", line 26, in __impl__
+    return wrapped_func(*args, **kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/base/framework.py", line 593, in __impl__
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 197, in sync_params_buffers
+    paddle.distributed.broadcast(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/communication/broadcast.py", line 64, in broadcast
+    return stream.broadcast(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/communication/stream/broadcast.py", line 124, in broadcast
+    return _broadcast_in_dygraph(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/communication/stream/broadcast.py", line 32, in _broadcast_in_dygraph
+    task = group.process_group.broadcast(tensor, src_rank_in_group, sync_op)
+ValueError: (InvalidArgument) TCP send error. Details: Broken pipe.
+  [Hint: Expected byte_sent > 0, but received byte_sent:-1 <= 0:0.] (at /root/workspace/paddlepaddle-build/usertestdir_247/paddle/phi/core/distributed/store/tcp_utils.h:87)
+
+I0214 09:31:52.029106 1681818 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0214 09:31:52.029148 1681818 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0214 09:31:52.108970 1681818 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0214 09:31:52.110991 1681818 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0214 09:31:52.111066 1681818 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0214 09:31:52.111080 1681818 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+I0214 09:31:52.809113 1681818 tcp_utils.cc:130] Successfully connected to 172.17.0.3:52132
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/main.py", line 142, in <module>
+    main()
+  File "/root/cas/tww/PaddleVideo/main.py", line 130, in main
+    train_model(cfg,
+  File "/root/cas/tww/PaddleVideo/paddlevideo/tasks/train.py", line 241, in train_model
+    model = paddle.DataParallel(model)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 398, in __init__
+    sync_params_buffers(self._layers, fuse_params=False)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/base/dygraph/base.py", line 340, in __impl__
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/base/wrapped_decorator.py", line 26, in __impl__
+    return wrapped_func(*args, **kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/base/framework.py", line 593, in __impl__
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/parallel.py", line 197, in sync_params_buffers
+    paddle.distributed.broadcast(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/communication/broadcast.py", line 64, in broadcast
+    return stream.broadcast(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/communication/stream/broadcast.py", line 124, in broadcast
+    return _broadcast_in_dygraph(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/distributed/communication/stream/broadcast.py", line 32, in _broadcast_in_dygraph
+    task = group.process_group.broadcast(tensor, src_rank_in_group, sync_op)
+ValueError: (InvalidArgument) TCP receive error. Details: Success.
+  [Hint: Expected byte_received > 0, but received byte_received:0 <= 0:0.] (at /root/workspace/paddlepaddle-build/usertestdir_247/paddle/phi/core/distributed/store/tcp_utils.h:107)
+
+I0214 09:33:05.286500 1682882 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0214 09:33:05.286547 1682882 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0214 09:33:05.379671 1682882 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0214 09:33:05.382120 1682882 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0214 09:33:05.382213 1682882 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0214 09:33:05.382239 1682882 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+I0214 09:33:06.004753 1682882 tcp_utils.cc:107] Retry to connect to 172.17.0.3:37271 while the server is not yet listening.
+I0214 09:33:09.004987 1682882 tcp_utils.cc:130] Successfully connected to 172.17.0.3:37271
+/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/nn/layer/norm.py:824: UserWarning: When training, we now always track global mean and variance.
+  warnings.warn(
+Exception in thread Thread-3 (_thread_loop):
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/io/dataloader/dataloader_iter.py", line 692, in _get_data
+    data = self._data_queue.get(timeout=self._timeout)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/multiprocessing/queues.py", line 114, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/tsn/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+  File "/root/miniconda3/envs/tsn/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/io/dataloader/dataloader_iter.py", line 603, in _thread_loop
+    batch = self._get_data()
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle/io/dataloader/dataloader_iter.py", line 707, in _get_data
+    raise RuntimeError(
+RuntimeError: DataLoader 4 workers exit unexpectedly, pids: 1927169, 1927177, 1927182, 1927263
+I0215 10:33:55.730593 3901022 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device
+I0215 10:33:55.730849 3901022 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0215 10:33:55.819263 3901022 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0215 10:33:55.821586 3901022 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0215 10:33:55.821686 3901022 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/tsn/lib/python3.10/site-packages/paddle_custom_device]
+I0215 10:33:55.821707 3901022 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'SimpleITK', [SimpleITK] package and it's dependencies is required for PP-Care.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+Warning! No module named 'lmdb', [lmdb] package and it's dependencies is required for ActBERT.
+Warning! No module named 'paddlenlp', [paddlenlp] package and it's dependencies is required for ActBERT.
+I0215 10:33:56.617929 3901022 tcp_utils.cc:130] Successfully connected to 172.17.0.3:63465

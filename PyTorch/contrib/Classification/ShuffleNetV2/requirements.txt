@@ -1,0 +1,4 @@
+matplotlib==3.7.5
+Pillow==10.3.0
+tqdm==4.66.4
+git+https://gitee.com/xiwei777/tcap_dllogger.git

@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["/root/modelzoo/PyTorch/contrib/Detection/mmdetection/configs/solov2/solov2_r50_fpn_1x_coco.py",
+            "--resume",
+            "/root/modelzoo/PyTorch/contrib/Detection/mmdetection/work_dirs/solov2_r50_fpn_1x_coco/epoch_4.pth"],
+            "cwd": "/root/modelzoo/PyTorch/contrib/Detection/mmdetection",
+            "justMyCode": true
+        },
+        {
+            "name": "test",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "/root/modelzoo/PyTorch/contrib/Detection/mmdetection/configs/solov2/solov2_r50_fpn_1x_coco.py",
+                "/root/modelzoo/PyTorch/contrib/Detection/mmdetection/work_dirs/solov2_r50_fpn_1x_coco/epoch_1.pth",
+                "--show-dir",
+                "./output"
+            ],
+            "cwd": "/root/modelzoo/PyTorch/contrib/Detection/mmdetection"
+        },
+        {
+            "name": "train2",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "/root/modelzoo/PyTorch/contrib/Detection/mmdetection/CO_DETR/configs/codino/co_dino_5scale_r50_lsj_8xb2_1x_coco.py",
+            ],
+            "cwd": "/root/modelzoo/PyTorch/contrib/Detection/mmdetection"
+        }
+    ]
+}

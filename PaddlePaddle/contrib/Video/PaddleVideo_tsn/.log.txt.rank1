@@ -1,0 +1,767 @@
+[02/14 09:29:00] [35mDATASET[0m : 
+[02/14 09:29:00]     [35mbatch_size[0m : [92m32[0m
+[02/14 09:29:00]     [35mnum_workers[0m : [92m4[0m
+[02/14 09:29:00]     [35mtest[0m : 
+[02/14 09:29:00]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:29:00]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:29:00]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:29:00]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:29:00]     [35mtest_batch_size[0m : [92m1[0m
+[02/14 09:29:00]     [35mtrain[0m : 
+[02/14 09:29:00]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/14 09:29:00]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/14 09:29:00]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:29:00]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:29:00]     [35mvalid[0m : 
+[02/14 09:29:00]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:29:00]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:29:00]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:29:00]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:29:00]     [35mvalid_batch_size[0m : [92m32[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mINFERENCE[0m : 
+[02/14 09:29:00]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/14 09:29:00]     [35mnum_seg[0m : [92m25[0m
+[02/14 09:29:00]     [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mMETRIC[0m : 
+[02/14 09:29:00]     [35mname[0m : [92mCenterCropMetric[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mMODEL[0m : 
+[02/14 09:29:00]     [35mbackbone[0m : 
+[02/14 09:29:00]         [35mdepth[0m : [92m50[0m
+[02/14 09:29:00]         [35mname[0m : [92mResNet[0m
+[02/14 09:29:00]         [35mpretrained[0m : [92m../ckpt/ResNet50_pretrain.pdparams[0m
+[02/14 09:29:00]     [35mframework[0m : [92mRecognizer2D[0m
+[02/14 09:29:00]     [35mhead[0m : 
+[02/14 09:29:00]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/14 09:29:00]         [35min_channels[0m : [92m2048[0m
+[02/14 09:29:00]         [35mname[0m : [92mTSNHead[0m
+[02/14 09:29:00]         [35mnum_classes[0m : [92m400[0m
+[02/14 09:29:00]         [35mstd[0m : [92m0.01[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mOPTIMIZER[0m : 
+[02/14 09:29:00]     [35mgrad_clip[0m : 
+[02/14 09:29:00]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/14 09:29:00]         [35mvalue[0m : [92m40.0[0m
+[02/14 09:29:00]     [35mlearning_rate[0m : 
+[02/14 09:29:00]         [35mboundaries[0m : [92m[40, 80][0m
+[02/14 09:29:00]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/14 09:29:00]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/14 09:29:00]     [35mmomentum[0m : [92m0.9[0m
+[02/14 09:29:00]     [35mname[0m : [92mMomentum[0m
+[02/14 09:29:00]     [35mweight_decay[0m : 
+[02/14 09:29:00]         [35mname[0m : [92mL2[0m
+[02/14 09:29:00]         [35mvalue[0m : [92m0.0001[0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mPIPELINE[0m : 
+[02/14 09:29:00]     [35mtest[0m : 
+[02/14 09:29:00]         [35mdecode[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:29:00]         [35msample[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mSampler[0m
+[02/14 09:29:00]             [35mnum_seg[0m : [92m25[0m
+[02/14 09:29:00]             [35mseg_len[0m : [92m1[0m
+[02/14 09:29:00]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:29:00]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:29:00]         [35mtransform[0m : 
+[02/14 09:29:00]             [35mScale[0m : 
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:29:00]             [35mTenCrop[0m : 
+[02/14 09:29:00]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:29:00]             [35mNormalization[0m : 
+[02/14 09:29:00]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:29:00]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:29:00]     [35mtrain[0m : 
+[02/14 09:29:00]         [35mdecode[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:29:00]         [35msample[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mSampler[0m
+[02/14 09:29:00]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:29:00]             [35mseg_len[0m : [92m1[0m
+[02/14 09:29:00]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:29:00]             [35mvalid_mode[0m : [92mFalse[0m
+[02/14 09:29:00]         [35mtransform[0m : 
+[02/14 09:29:00]             [35mScale[0m : 
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:29:00]             [35mMultiScaleCrop[0m : 
+[02/14 09:29:00]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00]             [35mRandomFlip[0m : [92mNone[0m
+[02/14 09:29:00]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:29:00]             [35mNormalization[0m : 
+[02/14 09:29:00]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:29:00]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:29:00]     [35mvalid[0m : 
+[02/14 09:29:00]         [35mdecode[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:29:00]         [35msample[0m : 
+[02/14 09:29:00]             [35mname[0m : [92mSampler[0m
+[02/14 09:29:00]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:29:00]             [35mseg_len[0m : [92m1[0m
+[02/14 09:29:00]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:29:00]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:29:00]         [35mtransform[0m : 
+[02/14 09:29:00]             [35mScale[0m : 
+[02/14 09:29:00]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:29:00]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:29:00]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:29:00]             [35mCenterCrop[0m : 
+[02/14 09:29:00]                 [35mdo_round[0m : [92mFalse[0m
+[02/14 09:29:00]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:29:00]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:29:00]             [35mNormalization[0m : 
+[02/14 09:29:00]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:29:00]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:29:00] ------------------------------------------------------------
+[02/14 09:29:00] [35mepochs[0m : [92m100[0m
+[02/14 09:29:00] [35mlog_interval[0m : [92m20[0m
+[02/14 09:29:00] [35mlog_level[0m : [92mINFO[0m
+[02/14 09:29:00] [35mmodel_name[0m : [92mTSN[0m
+[02/14 09:29:00] [35msave_interval[0m : [92m10[0m
+[02/14 09:29:01] Training in fp32 mode.
+[02/14 09:31:52] [35mDATASET[0m : 
+[02/14 09:31:52]     [35mbatch_size[0m : [92m32[0m
+[02/14 09:31:52]     [35mnum_workers[0m : [92m4[0m
+[02/14 09:31:52]     [35mtest[0m : 
+[02/14 09:31:52]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:31:52]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:31:52]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:31:52]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:31:52]     [35mtest_batch_size[0m : [92m1[0m
+[02/14 09:31:52]     [35mtrain[0m : 
+[02/14 09:31:52]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/14 09:31:52]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/14 09:31:52]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:31:52]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:31:52]     [35mvalid[0m : 
+[02/14 09:31:52]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:31:52]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:31:52]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:31:52]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:31:52]     [35mvalid_batch_size[0m : [92m32[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mINFERENCE[0m : 
+[02/14 09:31:52]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/14 09:31:52]     [35mnum_seg[0m : [92m25[0m
+[02/14 09:31:52]     [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mMETRIC[0m : 
+[02/14 09:31:52]     [35mname[0m : [92mCenterCropMetric[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mMODEL[0m : 
+[02/14 09:31:52]     [35mbackbone[0m : 
+[02/14 09:31:52]         [35mdepth[0m : [92m50[0m
+[02/14 09:31:52]         [35mname[0m : [92mResNet[0m
+[02/14 09:31:52]         [35mpretrained[0m : [92m/ckpt/ResNet50_pretrain.pdparams[0m
+[02/14 09:31:52]     [35mframework[0m : [92mRecognizer2D[0m
+[02/14 09:31:52]     [35mhead[0m : 
+[02/14 09:31:52]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/14 09:31:52]         [35min_channels[0m : [92m2048[0m
+[02/14 09:31:52]         [35mname[0m : [92mTSNHead[0m
+[02/14 09:31:52]         [35mnum_classes[0m : [92m400[0m
+[02/14 09:31:52]         [35mstd[0m : [92m0.01[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mOPTIMIZER[0m : 
+[02/14 09:31:52]     [35mgrad_clip[0m : 
+[02/14 09:31:52]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/14 09:31:52]         [35mvalue[0m : [92m40.0[0m
+[02/14 09:31:52]     [35mlearning_rate[0m : 
+[02/14 09:31:52]         [35mboundaries[0m : [92m[40, 80][0m
+[02/14 09:31:52]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/14 09:31:52]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/14 09:31:52]     [35mmomentum[0m : [92m0.9[0m
+[02/14 09:31:52]     [35mname[0m : [92mMomentum[0m
+[02/14 09:31:52]     [35mweight_decay[0m : 
+[02/14 09:31:52]         [35mname[0m : [92mL2[0m
+[02/14 09:31:52]         [35mvalue[0m : [92m0.0001[0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mPIPELINE[0m : 
+[02/14 09:31:52]     [35mtest[0m : 
+[02/14 09:31:52]         [35mdecode[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:31:52]         [35msample[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mSampler[0m
+[02/14 09:31:52]             [35mnum_seg[0m : [92m25[0m
+[02/14 09:31:52]             [35mseg_len[0m : [92m1[0m
+[02/14 09:31:52]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:31:52]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:31:52]         [35mtransform[0m : 
+[02/14 09:31:52]             [35mScale[0m : 
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:31:52]             [35mTenCrop[0m : 
+[02/14 09:31:52]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:31:52]             [35mNormalization[0m : 
+[02/14 09:31:52]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:31:52]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:31:52]     [35mtrain[0m : 
+[02/14 09:31:52]         [35mdecode[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:31:52]         [35msample[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mSampler[0m
+[02/14 09:31:52]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:31:52]             [35mseg_len[0m : [92m1[0m
+[02/14 09:31:52]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:31:52]             [35mvalid_mode[0m : [92mFalse[0m
+[02/14 09:31:52]         [35mtransform[0m : 
+[02/14 09:31:52]             [35mScale[0m : 
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:31:52]             [35mMultiScaleCrop[0m : 
+[02/14 09:31:52]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52]             [35mRandomFlip[0m : [92mNone[0m
+[02/14 09:31:52]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:31:52]             [35mNormalization[0m : 
+[02/14 09:31:52]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:31:52]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:31:52]     [35mvalid[0m : 
+[02/14 09:31:52]         [35mdecode[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:31:52]         [35msample[0m : 
+[02/14 09:31:52]             [35mname[0m : [92mSampler[0m
+[02/14 09:31:52]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:31:52]             [35mseg_len[0m : [92m1[0m
+[02/14 09:31:52]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:31:52]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:31:52]         [35mtransform[0m : 
+[02/14 09:31:52]             [35mScale[0m : 
+[02/14 09:31:52]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:31:52]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:31:52]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:31:52]             [35mCenterCrop[0m : 
+[02/14 09:31:52]                 [35mdo_round[0m : [92mFalse[0m
+[02/14 09:31:52]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:31:52]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:31:52]             [35mNormalization[0m : 
+[02/14 09:31:52]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:31:52]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:31:52] ------------------------------------------------------------
+[02/14 09:31:52] [35mepochs[0m : [92m100[0m
+[02/14 09:31:52] [35mlog_interval[0m : [92m20[0m
+[02/14 09:31:52] [35mlog_level[0m : [92mINFO[0m
+[02/14 09:31:52] [35mmodel_name[0m : [92mTSN[0m
+[02/14 09:31:52] [35msave_interval[0m : [92m10[0m
+[02/14 09:31:57] Training in fp32 mode.
+[02/14 09:33:06] [35mDATASET[0m : 
+[02/14 09:33:06]     [35mbatch_size[0m : [92m32[0m
+[02/14 09:33:06]     [35mnum_workers[0m : [92m4[0m
+[02/14 09:33:06]     [35mtest[0m : 
+[02/14 09:33:06]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:33:06]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:33:06]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:33:06]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:33:06]     [35mtest_batch_size[0m : [92m1[0m
+[02/14 09:33:06]     [35mtrain[0m : 
+[02/14 09:33:06]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/14 09:33:06]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/14 09:33:06]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:33:06]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:33:06]     [35mvalid[0m : 
+[02/14 09:33:06]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/14 09:33:06]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/14 09:33:06]         [35mformat[0m : [92mFrameDataset[0m
+[02/14 09:33:06]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/14 09:33:06]     [35mvalid_batch_size[0m : [92m32[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mINFERENCE[0m : 
+[02/14 09:33:06]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/14 09:33:06]     [35mnum_seg[0m : [92m25[0m
+[02/14 09:33:06]     [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mMETRIC[0m : 
+[02/14 09:33:06]     [35mname[0m : [92mCenterCropMetric[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mMODEL[0m : 
+[02/14 09:33:06]     [35mbackbone[0m : 
+[02/14 09:33:06]         [35mdepth[0m : [92m50[0m
+[02/14 09:33:06]         [35mname[0m : [92mResNet[0m
+[02/14 09:33:06]         [35mpretrained[0m : [92mckpt/ResNet50_pretrain.pdparams[0m
+[02/14 09:33:06]     [35mframework[0m : [92mRecognizer2D[0m
+[02/14 09:33:06]     [35mhead[0m : 
+[02/14 09:33:06]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/14 09:33:06]         [35min_channels[0m : [92m2048[0m
+[02/14 09:33:06]         [35mname[0m : [92mTSNHead[0m
+[02/14 09:33:06]         [35mnum_classes[0m : [92m400[0m
+[02/14 09:33:06]         [35mstd[0m : [92m0.01[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mOPTIMIZER[0m : 
+[02/14 09:33:06]     [35mgrad_clip[0m : 
+[02/14 09:33:06]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/14 09:33:06]         [35mvalue[0m : [92m40.0[0m
+[02/14 09:33:06]     [35mlearning_rate[0m : 
+[02/14 09:33:06]         [35mboundaries[0m : [92m[40, 80][0m
+[02/14 09:33:06]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/14 09:33:06]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/14 09:33:06]     [35mmomentum[0m : [92m0.9[0m
+[02/14 09:33:06]     [35mname[0m : [92mMomentum[0m
+[02/14 09:33:06]     [35mweight_decay[0m : 
+[02/14 09:33:06]         [35mname[0m : [92mL2[0m
+[02/14 09:33:06]         [35mvalue[0m : [92m0.0001[0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mPIPELINE[0m : 
+[02/14 09:33:06]     [35mtest[0m : 
+[02/14 09:33:06]         [35mdecode[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:33:06]         [35msample[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mSampler[0m
+[02/14 09:33:06]             [35mnum_seg[0m : [92m25[0m
+[02/14 09:33:06]             [35mseg_len[0m : [92m1[0m
+[02/14 09:33:06]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:33:06]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:33:06]         [35mtransform[0m : 
+[02/14 09:33:06]             [35mScale[0m : 
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:33:06]             [35mTenCrop[0m : 
+[02/14 09:33:06]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:33:06]             [35mNormalization[0m : 
+[02/14 09:33:06]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:33:06]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:33:06]     [35mtrain[0m : 
+[02/14 09:33:06]         [35mdecode[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:33:06]         [35msample[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mSampler[0m
+[02/14 09:33:06]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:33:06]             [35mseg_len[0m : [92m1[0m
+[02/14 09:33:06]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:33:06]             [35mvalid_mode[0m : [92mFalse[0m
+[02/14 09:33:06]         [35mtransform[0m : 
+[02/14 09:33:06]             [35mScale[0m : 
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:33:06]             [35mMultiScaleCrop[0m : 
+[02/14 09:33:06]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06]             [35mRandomFlip[0m : [92mNone[0m
+[02/14 09:33:06]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:33:06]             [35mNormalization[0m : 
+[02/14 09:33:06]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:33:06]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:33:06]     [35mvalid[0m : 
+[02/14 09:33:06]         [35mdecode[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mFrameDecoder[0m
+[02/14 09:33:06]         [35msample[0m : 
+[02/14 09:33:06]             [35mname[0m : [92mSampler[0m
+[02/14 09:33:06]             [35mnum_seg[0m : [92m3[0m
+[02/14 09:33:06]             [35mseg_len[0m : [92m1[0m
+[02/14 09:33:06]             [35mselect_left[0m : [92mTrue[0m
+[02/14 09:33:06]             [35mvalid_mode[0m : [92mTrue[0m
+[02/14 09:33:06]         [35mtransform[0m : 
+[02/14 09:33:06]             [35mScale[0m : 
+[02/14 09:33:06]                 [35mbackend[0m : [92mcv2[0m
+[02/14 09:33:06]                 [35mdo_round[0m : [92mTrue[0m
+[02/14 09:33:06]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mshort_size[0m : [92m256[0m
+[02/14 09:33:06]             [35mCenterCrop[0m : 
+[02/14 09:33:06]                 [35mdo_round[0m : [92mFalse[0m
+[02/14 09:33:06]                 [35mtarget_size[0m : [92m224[0m
+[02/14 09:33:06]             [35mImage2Array[0m : [92mNone[0m
+[02/14 09:33:06]             [35mNormalization[0m : 
+[02/14 09:33:06]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/14 09:33:06]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/14 09:33:06] ------------------------------------------------------------
+[02/14 09:33:06] [35mepochs[0m : [92m100[0m
+[02/14 09:33:06] [35mlog_interval[0m : [92m20[0m
+[02/14 09:33:06] [35mlog_level[0m : [92mINFO[0m
+[02/14 09:33:06] [35mmodel_name[0m : [92mTSN[0m
+[02/14 09:33:06] [35msave_interval[0m : [92m10[0m
+[02/14 09:33:07] Training in fp32 mode.
+[02/14 09:33:16] [35mepoch:[  1/100][0m [95mtrain step:0   [0m [92mloss: 6.05842 lr: 0.010000 top1: 0.00000 top5: 0.00000[0m [92mbatch_cost: 1.83559 sec,[0m [92mreader_cost: 0.87280 sec,[0m ips: 17.43307 instance/sec, eta: 3 days, 21:24:39,  
+[02/14 09:33:35] epoch:[  1/100] [95mtrain step:20  [0m [92mloss: 5.84184 lr: 0.010000 top1: 0.00000 top5: 0.00000[0m [92mbatch_cost: 0.94895 sec,[0m [92mreader_cost: 0.00038 sec,[0m ips: 33.72154 instance/sec, eta: 2 days, 2:34:47,  
+[02/14 09:33:54] epoch:[  1/100] [95mtrain step:40  [0m [92mloss: 5.71832 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.94810 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.75186 instance/sec, eta: 2 days, 1:27:21,  
+[02/14 09:34:13] epoch:[  1/100] [95mtrain step:60  [0m [92mloss: 5.40081 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.95428 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.53305 instance/sec, eta: 2 days, 1:04:22,  
+[02/14 09:34:32] epoch:[  1/100] [95mtrain step:80  [0m [92mloss: 5.01374 lr: 0.010000 top1: 0.15625 top5: 0.37500[0m [92mbatch_cost: 0.94999 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.68443 instance/sec, eta: 2 days, 0:53:11,  
+[02/14 09:34:51] epoch:[  1/100] [95mtrain step:100 [0m [92mloss: 4.88905 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.93451 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 34.24254 instance/sec, eta: 2 days, 0:46:00,  
+[02/14 09:35:10] epoch:[  1/100] [95mtrain step:120 [0m [92mloss: 5.05520 lr: 0.010000 top1: 0.03125 top5: 0.28125[0m [92mbatch_cost: 0.95476 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.51630 instance/sec, eta: 2 days, 0:40:59,  
+[02/14 09:35:29] epoch:[  1/100] [95mtrain step:140 [0m [92mloss: 5.05104 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.95938 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.35482 instance/sec, eta: 2 days, 0:37:20,  
+[02/14 09:35:48] epoch:[  1/100] [95mtrain step:160 [0m [92mloss: 4.78228 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.93545 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 34.20830 instance/sec, eta: 2 days, 0:33:48,  
+[02/14 09:36:07] epoch:[  1/100] [95mtrain step:180 [0m [92mloss: 4.83387 lr: 0.010000 top1: 0.15625 top5: 0.34375[0m [92mbatch_cost: 0.93352 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.27887 instance/sec, eta: 2 days, 0:30:44,  
+[02/14 09:36:26] epoch:[  1/100] [95mtrain step:200 [0m [92mloss: 4.84161 lr: 0.010000 top1: 0.12500 top5: 0.25000[0m [92mbatch_cost: 0.95512 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 33.50372 instance/sec, eta: 2 days, 0:29:17,  
+[02/14 09:36:45] epoch:[  1/100] [95mtrain step:220 [0m [92mloss: 4.61199 lr: 0.010000 top1: 0.06250 top5: 0.31250[0m [92mbatch_cost: 0.96192 sec,[0m [92mreader_cost: 0.00022 sec,[0m ips: 33.26678 instance/sec, eta: 2 days, 0:27:39,  
+[02/14 09:37:04] epoch:[  1/100] [95mtrain step:240 [0m [92mloss: 5.08493 lr: 0.010000 top1: 0.12500 top5: 0.18750[0m [92mbatch_cost: 0.93181 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.34172 instance/sec, eta: 2 days, 0:25:41,  
+[02/14 09:37:23] epoch:[  1/100] [95mtrain step:260 [0m [92mloss: 4.91857 lr: 0.010000 top1: 0.12500 top5: 0.28125[0m [92mbatch_cost: 0.92996 sec,[0m [92mreader_cost: 0.00048 sec,[0m ips: 34.41014 instance/sec, eta: 2 days, 0:24:08,  
+[02/14 09:37:42] epoch:[  1/100] [95mtrain step:280 [0m [92mloss: 5.03104 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.94936 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 33.70679 instance/sec, eta: 2 days, 0:23:34,  
+[02/14 09:38:01] epoch:[  1/100] [95mtrain step:300 [0m [92mloss: 5.11785 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.96601 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.12600 instance/sec, eta: 2 days, 0:22:34,  
+[02/14 09:38:20] epoch:[  1/100] [95mtrain step:320 [0m [92mloss: 5.11834 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.96116 sec,[0m [92mreader_cost: 0.00022 sec,[0m ips: 33.29297 instance/sec, eta: 2 days, 0:21:09,  
+[02/14 09:38:39] epoch:[  1/100] [95mtrain step:340 [0m [92mloss: 4.96148 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.94613 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.82210 instance/sec, eta: 2 days, 0:19:22,  
+[02/14 09:38:57] epoch:[  1/100] [95mtrain step:360 [0m [92mloss: 5.02026 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.94920 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 33.71254 instance/sec, eta: 2 days, 0:18:07,  
+[02/14 09:39:16] epoch:[  1/100] [95mtrain step:380 [0m [92mloss: 4.85906 lr: 0.010000 top1: 0.12500 top5: 0.25000[0m [92mbatch_cost: 0.95004 sec,[0m [92mreader_cost: 0.00029 sec,[0m ips: 33.68294 instance/sec, eta: 2 days, 0:17:04,  
+[02/14 09:39:35] epoch:[  1/100] [95mtrain step:400 [0m [92mloss: 5.13589 lr: 0.010000 top1: 0.00000 top5: 0.15625[0m [92mbatch_cost: 0.95027 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.67463 instance/sec, eta: 2 days, 0:16:26,  
+[02/14 09:39:54] epoch:[  1/100] [95mtrain step:420 [0m [92mloss: 4.92821 lr: 0.010000 top1: 0.03125 top5: 0.25000[0m [92mbatch_cost: 0.96034 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.32141 instance/sec, eta: 2 days, 0:15:47,  
+[02/14 09:40:13] epoch:[  1/100] [95mtrain step:440 [0m [92mloss: 5.08041 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.93571 sec,[0m [92mreader_cost: 0.00029 sec,[0m ips: 34.19870 instance/sec, eta: 2 days, 0:15:09,  
+[02/14 09:40:32] epoch:[  1/100] [95mtrain step:460 [0m [92mloss: 5.12372 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95105 sec,[0m [92mreader_cost: 0.00031 sec,[0m ips: 33.64705 instance/sec, eta: 2 days, 0:14:23,  
+[02/14 09:40:51] epoch:[  1/100] [95mtrain step:480 [0m [92mloss: 5.07979 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.93535 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 34.21176 instance/sec, eta: 2 days, 0:13:51,  
+[02/14 09:41:10] epoch:[  1/100] [95mtrain step:500 [0m [92mloss: 5.06396 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.95612 sec,[0m [92mreader_cost: 0.00031 sec,[0m ips: 33.46865 instance/sec, eta: 2 days, 0:13:22,  
+[02/14 09:41:29] epoch:[  1/100] [95mtrain step:520 [0m [92mloss: 5.19994 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.93804 sec,[0m [92mreader_cost: 0.00053 sec,[0m ips: 34.11382 instance/sec, eta: 2 days, 0:12:18,  
+[02/14 09:41:48] epoch:[  1/100] [95mtrain step:540 [0m [92mloss: 5.32935 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.95619 sec,[0m [92mreader_cost: 0.00029 sec,[0m ips: 33.46608 instance/sec, eta: 2 days, 0:11:31,  
+[02/14 09:42:07] epoch:[  1/100] [95mtrain step:560 [0m [92mloss: 4.77306 lr: 0.010000 top1: 0.15625 top5: 0.31250[0m [92mbatch_cost: 0.94565 sec,[0m [92mreader_cost: 0.00030 sec,[0m ips: 33.83898 instance/sec, eta: 2 days, 0:10:29,  
+[02/14 09:42:26] epoch:[  1/100] [95mtrain step:580 [0m [92mloss: 5.06984 lr: 0.010000 top1: 0.00000 top5: 0.09375[0m [92mbatch_cost: 0.93597 sec,[0m [92mreader_cost: 0.00052 sec,[0m ips: 34.18923 instance/sec, eta: 2 days, 0:10:05,  
+[02/14 09:42:45] epoch:[  1/100] [95mtrain step:600 [0m [92mloss: 4.83393 lr: 0.010000 top1: 0.09375 top5: 0.28125[0m [92mbatch_cost: 0.96502 sec,[0m [92mreader_cost: 0.00025 sec,[0m ips: 33.15991 instance/sec, eta: 2 days, 0:09:34,  
+[02/14 09:43:04] epoch:[  1/100] [95mtrain step:620 [0m [92mloss: 5.07487 lr: 0.010000 top1: 0.09375 top5: 0.21875[0m [92mbatch_cost: 0.94536 sec,[0m [92mreader_cost: 0.00037 sec,[0m ips: 33.84943 instance/sec, eta: 2 days, 0:09:01,  
+[02/14 09:43:23] epoch:[  1/100] [95mtrain step:640 [0m [92mloss: 4.98440 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.93059 sec,[0m [92mreader_cost: 0.00042 sec,[0m ips: 34.38675 instance/sec, eta: 2 days, 0:08:23,  
+[02/14 09:43:41] epoch:[  1/100] [95mtrain step:660 [0m [92mloss: 5.56101 lr: 0.010000 top1: 0.00000 top5: 0.09375[0m [92mbatch_cost: 0.96761 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.07101 instance/sec, eta: 2 days, 0:07:20,  
+[02/14 09:44:00] epoch:[  1/100] [95mtrain step:680 [0m [92mloss: 5.73495 lr: 0.010000 top1: 0.03125 top5: 0.03125[0m [92mbatch_cost: 0.97004 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 32.98818 instance/sec, eta: 2 days, 0:06:45,  
+[02/14 09:44:19] epoch:[  1/100] [95mtrain step:700 [0m [92mloss: 5.04425 lr: 0.010000 top1: 0.03125 top5: 0.28125[0m [92mbatch_cost: 0.93148 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 34.35399 instance/sec, eta: 2 days, 0:05:40,  
+[02/14 09:44:38] epoch:[  1/100] [95mtrain step:720 [0m [92mloss: 5.24515 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.94921 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.71215 instance/sec, eta: 2 days, 0:04:51,  
+[02/14 09:44:57] epoch:[  1/100] [95mtrain step:740 [0m [92mloss: 5.61326 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.93616 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 34.18204 instance/sec, eta: 2 days, 0:04:26,  
+[02/14 09:45:16] epoch:[  1/100] [95mtrain step:760 [0m [92mloss: 5.54483 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.94782 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.76163 instance/sec, eta: 2 days, 0:03:53,  
+[02/14 09:45:35] epoch:[  1/100] [95mtrain step:780 [0m [92mloss: 5.35517 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95157 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.62865 instance/sec, eta: 2 days, 0:03:18,  
+[02/14 09:45:54] epoch:[  1/100] [95mtrain step:800 [0m [92mloss: 4.85071 lr: 0.010000 top1: 0.15625 top5: 0.21875[0m [92mbatch_cost: 0.92992 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 34.41151 instance/sec, eta: 2 days, 0:02:05,  
+[02/14 09:46:12] epoch:[  1/100] [95mtrain step:820 [0m [92mloss: 5.32330 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.92884 sec,[0m [92mreader_cost: 0.00035 sec,[0m ips: 34.45164 instance/sec, eta: 2 days, 0:01:26,  
+[02/14 09:46:31] epoch:[  1/100] [95mtrain step:840 [0m [92mloss: 5.18262 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.94996 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.68556 instance/sec, eta: 2 days, 0:00:41,  
+[02/14 09:46:50] epoch:[  1/100] [95mtrain step:860 [0m [92mloss: 5.09894 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.94569 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.83755 instance/sec, eta: 2 days, 0:00:10,  
+[02/14 09:47:09] epoch:[  1/100] [95mtrain step:880 [0m [92mloss: 4.93941 lr: 0.010000 top1: 0.00000 top5: 0.25000[0m [92mbatch_cost: 0.94925 sec,[0m [92mreader_cost: 0.00021 sec,[0m ips: 33.71088 instance/sec, eta: 1 day, 23:59:43,  
+[02/14 09:47:28] epoch:[  1/100] [95mtrain step:900 [0m [92mloss: 5.16295 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.94936 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.70677 instance/sec, eta: 1 day, 23:59:04,  
+[02/14 09:47:47] epoch:[  1/100] [95mtrain step:920 [0m [92mloss: 5.41768 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.97281 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 32.89429 instance/sec, eta: 1 day, 23:58:55,  
+[02/14 09:48:06] epoch:[  1/100] [95mtrain step:940 [0m [92mloss: 5.64978 lr: 0.010000 top1: 0.09375 top5: 0.09375[0m [92mbatch_cost: 0.93438 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 34.24728 instance/sec, eta: 1 day, 23:58:11,  
+[02/14 09:48:25] epoch:[  1/100] [95mtrain step:960 [0m [92mloss: 5.13165 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.94962 sec,[0m [92mreader_cost: 0.00029 sec,[0m ips: 33.69783 instance/sec, eta: 1 day, 23:57:40,  
+[02/14 09:48:44] epoch:[  1/100] [95mtrain step:980 [0m [92mloss: 5.72270 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.92815 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 34.47708 instance/sec, eta: 1 day, 23:57:11,  
+[02/14 09:49:02] epoch:[  1/100] [95mtrain step:1000[0m [92mloss: 4.92108 lr: 0.010000 top1: 0.15625 top5: 0.25000[0m [92mbatch_cost: 0.93143 sec,[0m [92mreader_cost: 0.00037 sec,[0m ips: 34.35578 instance/sec, eta: 1 day, 23:56:51,  
+[02/14 09:49:21] epoch:[  1/100] [95mtrain step:1020[0m [92mloss: 5.24850 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.92803 sec,[0m [92mreader_cost: 0.00054 sec,[0m ips: 34.48162 instance/sec, eta: 1 day, 23:56:21,  
+[02/14 09:49:40] epoch:[  1/100] [95mtrain step:1040[0m [92mloss: 5.21039 lr: 0.010000 top1: 0.12500 top5: 0.15625[0m [92mbatch_cost: 0.94950 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 33.70211 instance/sec, eta: 1 day, 23:56:05,  
+[02/14 09:49:59] epoch:[  1/100] [95mtrain step:1060[0m [92mloss: 5.02967 lr: 0.010000 top1: 0.03125 top5: 0.28125[0m [92mbatch_cost: 0.96421 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 33.18772 instance/sec, eta: 1 day, 23:55:38,  
+[02/14 09:50:18] epoch:[  1/100] [95mtrain step:1080[0m [92mloss: 4.58641 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.95758 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.41743 instance/sec, eta: 1 day, 23:55:00,  
+[02/14 09:50:37] epoch:[  1/100] [95mtrain step:1100[0m [92mloss: 5.38160 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.95145 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.63302 instance/sec, eta: 1 day, 23:54:28,  
+[02/14 09:50:56] epoch:[  1/100] [95mtrain step:1120[0m [92mloss: 5.23572 lr: 0.010000 top1: 0.12500 top5: 0.28125[0m [92mbatch_cost: 0.95023 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.67594 instance/sec, eta: 1 day, 23:54:01,  
+[02/14 09:51:15] epoch:[  1/100] [95mtrain step:1140[0m [92mloss: 5.16659 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.94848 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.73834 instance/sec, eta: 1 day, 23:53:32,  
+[02/14 09:51:34] epoch:[  1/100] [95mtrain step:1160[0m [92mloss: 4.92434 lr: 0.010000 top1: 0.15625 top5: 0.21875[0m [92mbatch_cost: 0.97252 sec,[0m [92mreader_cost: 0.00018 sec,[0m ips: 32.90412 instance/sec, eta: 1 day, 23:53:18,  
+[02/14 09:51:53] epoch:[  1/100] [95mtrain step:1180[0m [92mloss: 5.33751 lr: 0.010000 top1: 0.15625 top5: 0.18750[0m [92mbatch_cost: 0.94867 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.73129 instance/sec, eta: 1 day, 23:52:55,  
+[02/14 09:52:11] epoch:[  1/100] [95mtrain step:1200[0m [92mloss: 5.26331 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.92951 sec,[0m [92mreader_cost: 0.00055 sec,[0m ips: 34.42685 instance/sec, eta: 1 day, 23:52:24,  
+[02/14 09:52:30] epoch:[  1/100] [95mtrain step:1220[0m [92mloss: 5.28313 lr: 0.010000 top1: 0.03125 top5: 0.25000[0m [92mbatch_cost: 0.93147 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 34.35436 instance/sec, eta: 1 day, 23:51:57,  
+[02/14 09:52:49] epoch:[  1/100] [95mtrain step:1240[0m [92mloss: 5.33687 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.92932 sec,[0m [92mreader_cost: 0.00026 sec,[0m ips: 34.43367 instance/sec, eta: 1 day, 23:51:36,  
+[02/14 09:52:54] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf326ec0>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/ice_skating/9D0o8lh8oeY_002353_002363.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/ice_skating/9D0o8lh8oeY_002353_002363.mp4/img_001.0.jpg'
+
+[02/14 09:52:54] Error when loading /data/datasets/22001/raw-part/k400/train_256/ice_skating/9D0o8lh8oeY_002353_002363.mp4, have 0 trys, will try again
+[02/14 09:53:08] epoch:[  1/100] [95mtrain step:1260[0m [92mloss: 4.99484 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.95089 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.65268 instance/sec, eta: 1 day, 23:51:23,  
+[02/14 09:53:27] epoch:[  1/100] [95mtrain step:1280[0m [92mloss: 5.68971 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.95597 sec,[0m [92mreader_cost: 0.00031 sec,[0m ips: 33.47391 instance/sec, eta: 1 day, 23:51:09,  
+[02/14 09:53:44] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf326ec0>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/deadlifting/Hm8X9u8jtOk_000022_000032.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/deadlifting/Hm8X9u8jtOk_000022_000032.mp4/img_001.0.jpg'
+
+[02/14 09:53:44] Error when loading /data/datasets/22001/raw-part/k400/train_256/deadlifting/Hm8X9u8jtOk_000022_000032.mp4, have 0 trys, will try again
+[02/14 09:53:46] epoch:[  1/100] [95mtrain step:1300[0m [92mloss: 4.74485 lr: 0.010000 top1: 0.09375 top5: 0.28125[0m [92mbatch_cost: 0.93553 sec,[0m [92mreader_cost: 0.00054 sec,[0m ips: 34.20516 instance/sec, eta: 1 day, 23:50:45,  
+[02/14 09:54:05] epoch:[  1/100] [95mtrain step:1320[0m [92mloss: 5.12826 lr: 0.010000 top1: 0.09375 top5: 0.18750[0m [92mbatch_cost: 0.94490 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 33.86618 instance/sec, eta: 1 day, 23:50:21,  
+[02/14 09:54:24] epoch:[  1/100] [95mtrain step:1340[0m [92mloss: 4.91930 lr: 0.010000 top1: 0.06250 top5: 0.25000[0m [92mbatch_cost: 0.95075 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 33.65763 instance/sec, eta: 1 day, 23:50:05,  
+[02/14 09:54:43] epoch:[  1/100] [95mtrain step:1360[0m [92mloss: 5.40211 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.94142 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.99126 instance/sec, eta: 1 day, 23:49:45,  
+[02/14 09:55:02] epoch:[  1/100] [95mtrain step:1380[0m [92mloss: 5.29207 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.96799 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.05815 instance/sec, eta: 1 day, 23:49:22,  
+[02/14 09:55:21] epoch:[  1/100] [95mtrain step:1400[0m [92mloss: 5.00615 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.93308 sec,[0m [92mreader_cost: 0.00050 sec,[0m ips: 34.29508 instance/sec, eta: 1 day, 23:48:52,  
+[02/14 09:55:40] epoch:[  1/100] [95mtrain step:1420[0m [92mloss: 5.29228 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.95198 sec,[0m [92mreader_cost: 0.00048 sec,[0m ips: 33.61427 instance/sec, eta: 1 day, 23:48:40,  
+[02/14 09:55:59] epoch:[  1/100] [95mtrain step:1440[0m [92mloss: 5.09722 lr: 0.010000 top1: 0.09375 top5: 0.21875[0m [92mbatch_cost: 0.93680 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 34.15898 instance/sec, eta: 1 day, 23:48:15,  
+[02/14 09:56:17] epoch:[  1/100] [95mtrain step:1460[0m [92mloss: 5.50737 lr: 0.010000 top1: 0.06250 top5: 0.09375[0m [92mbatch_cost: 0.93354 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 34.27805 instance/sec, eta: 1 day, 23:47:42,  
+[02/14 09:56:36] epoch:[  1/100] [95mtrain step:1480[0m [92mloss: 5.08934 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.93181 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 34.34177 instance/sec, eta: 1 day, 23:47:17,  
+[02/14 09:56:55] epoch:[  1/100] [95mtrain step:1500[0m [92mloss: 5.16926 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.94915 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.71447 instance/sec, eta: 1 day, 23:46:52,  
+[02/14 09:57:14] epoch:[  1/100] [95mtrain step:1520[0m [92mloss: 5.05068 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.95000 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.68430 instance/sec, eta: 1 day, 23:46:32,  
+[02/14 09:57:33] epoch:[  1/100] [95mtrain step:1540[0m [92mloss: 5.17989 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.94907 sec,[0m [92mreader_cost: 0.00020 sec,[0m ips: 33.71730 instance/sec, eta: 1 day, 23:45:57,  
+[02/14 09:57:52] epoch:[  1/100] [95mtrain step:1560[0m [92mloss: 5.40234 lr: 0.010000 top1: 0.12500 top5: 0.25000[0m [92mbatch_cost: 0.92804 sec,[0m [92mreader_cost: 0.00026 sec,[0m ips: 34.48140 instance/sec, eta: 1 day, 23:45:29,  
+[02/14 09:58:11] epoch:[  1/100] [95mtrain step:1580[0m [92mloss: 5.63232 lr: 0.010000 top1: 0.00000 top5: 0.09375[0m [92mbatch_cost: 0.93264 sec,[0m [92mreader_cost: 0.00063 sec,[0m ips: 34.31130 instance/sec, eta: 1 day, 23:45:06,  
+[02/14 09:58:30] epoch:[  1/100] [95mtrain step:1600[0m [92mloss: 4.85346 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.95054 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.66519 instance/sec, eta: 1 day, 23:44:52,  
+[02/14 09:58:49] epoch:[  1/100] [95mtrain step:1620[0m [92mloss: 5.29977 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.94975 sec,[0m [92mreader_cost: 0.00030 sec,[0m ips: 33.69304 instance/sec, eta: 1 day, 23:44:34,  
+[02/14 09:59:07] epoch:[  1/100] [95mtrain step:1640[0m [92mloss: 5.12048 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.94993 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 33.68664 instance/sec, eta: 1 day, 23:44:10,  
+[02/14 09:59:26] epoch:[  1/100] [95mtrain step:1660[0m [92mloss: 4.88284 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.93211 sec,[0m [92mreader_cost: 0.00049 sec,[0m ips: 34.33062 instance/sec, eta: 1 day, 23:43:50,  
+[02/14 09:59:45] epoch:[  1/100] [95mtrain step:1680[0m [92mloss: 5.12695 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.92960 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 34.42356 instance/sec, eta: 1 day, 23:43:28,  
+[02/14 10:00:04] epoch:[  1/100] [95mtrain step:1700[0m [92mloss: 5.03668 lr: 0.010000 top1: 0.03125 top5: 0.25000[0m [92mbatch_cost: 0.96076 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.30685 instance/sec, eta: 1 day, 23:43:08,  
+[02/14 10:00:23] epoch:[  1/100] [95mtrain step:1720[0m [92mloss: 4.87315 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.93108 sec,[0m [92mreader_cost: 0.00085 sec,[0m ips: 34.36880 instance/sec, eta: 1 day, 23:42:45,  
+[02/14 10:00:42] epoch:[  1/100] [95mtrain step:1740[0m [92mloss: 5.21214 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.94816 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 33.74966 instance/sec, eta: 1 day, 23:42:21,  
+[02/14 10:01:01] epoch:[  1/100] [95mtrain step:1760[0m [92mloss: 5.18893 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.93408 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 34.25813 instance/sec, eta: 1 day, 23:41:51,  
+[02/14 10:01:20] epoch:[  1/100] [95mtrain step:1780[0m [92mloss: 4.93522 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.95064 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 33.66153 instance/sec, eta: 1 day, 23:41:26,  
+[02/14 10:01:39] epoch:[  1/100] [95mtrain step:1800[0m [92mloss: 5.33997 lr: 0.010000 top1: 0.00000 top5: 0.06250[0m [92mbatch_cost: 0.95134 sec,[0m [92mreader_cost: 0.00027 sec,[0m ips: 33.63693 instance/sec, eta: 1 day, 23:41:06,  
+[02/14 10:01:57] epoch:[  1/100] [95mtrain step:1820[0m [92mloss: 5.34419 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.93446 sec,[0m [92mreader_cost: 0.00041 sec,[0m ips: 34.24452 instance/sec, eta: 1 day, 23:40:47,  
+[02/14 10:02:08] [31mEND epoch:1  [0m [95mtrain[0m [92mloss_avg: 5.17305  top1_avg: 0.06069 top5_avg: 0.17532[0m [92mavg_batch_cost: 0.92939 sec,[0m [92mavg_reader_cost: 0.00017 sec,[0m [92mbatch_cost_sum: 1733.72552 sec,[0m avg_ips: 33.81389 instance/sec.
+[02/14 10:02:09] [35mepoch:[  1/100][0m [95mval step:0   [0m [92mloss: 5.25813 top1: 0.13281 top5: 0.28906[0m [92mbatch_cost: 1.07683 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 29.71683 instance/sec. ,  
+[02/14 10:02:15] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf327160>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/val_256/crossing_river/ZVdAl-yh9m0.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/val_256/crossing_river/ZVdAl-yh9m0.mp4/img_001.0.jpg'
+
+[02/14 10:02:15] Error when loading /data/datasets/22001/raw-part/k400/val_256/crossing_river/ZVdAl-yh9m0.mp4, have 0 trys, will try again
+[02/14 10:02:16] epoch:[  1/100] [95mval step:20  [0m [92mloss: 4.96917 top1: 0.07812 top5: 0.29688[0m [92mbatch_cost: 0.32182 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 99.43534 instance/sec. ,  
+[02/14 10:02:22] epoch:[  1/100] [95mval step:40  [0m [92mloss: 5.31533 top1: 0.03125 top5: 0.03125[0m [92mbatch_cost: 0.32172 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 99.46681 instance/sec. ,  
+[02/14 10:02:28] epoch:[  1/100] [95mval step:60  [0m [92mloss: 5.68390 top1: 0.01562 top5: 0.06250[0m [92mbatch_cost: 0.32300 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 99.07225 instance/sec. ,  
+[02/14 10:02:35] epoch:[  1/100] [95mval step:80  [0m [92mloss: 5.22380 top1: 0.02344 top5: 0.21875[0m [92mbatch_cost: 0.32537 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 98.34940 instance/sec. ,  
+[02/14 10:02:39] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf327160>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/val_256/carrying_baby/lDtudssyAPE.mkv/img_00211.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/val_256/carrying_baby/lDtudssyAPE.mkv/img_00211.jpg'
+
+[02/14 10:02:39] Error when loading /data/datasets/22001/raw-part/k400/val_256/carrying_baby/lDtudssyAPE.mkv, have 0 trys, will try again
+[02/14 10:02:41] epoch:[  1/100] [95mval step:100 [0m [92mloss: 5.43939 top1: 0.05469 top5: 0.10156[0m [92mbatch_cost: 0.32465 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 98.56673 instance/sec. ,  
+[02/14 10:02:48] epoch:[  1/100] [95mval step:120 [0m [92mloss: 5.16722 top1: 0.12500 top5: 0.18750[0m [92mbatch_cost: 0.32868 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 97.35877 instance/sec. ,  
+[02/14 10:02:54] epoch:[  1/100] [95mval step:140 [0m [92mloss: 5.80131 top1: 0.03125 top5: 0.14844[0m [92mbatch_cost: 0.32886 sec,[0m [92mreader_cost: 0.00000 sec,[0m ips: 97.30611 instance/sec. ,  
+[02/14 10:02:59] [31mEND epoch:1  [0m [95mval[0m [92mloss_avg: 5.16924 top1_avg: 0.06225 top5_avg: 0.16884[0m [92mavg_batch_cost: 0.13503 sec,[0m [92mavg_reader_cost: 0.00000 sec,[0m [92mbatch_cost_sum: 50.82621 sec,[0m avg_ips: 97.58745 instance/sec.
+[02/14 10:02:59] Already save the best model (top1 acc)0.0622
+[02/14 10:03:01] [35mepoch:[  2/100][0m [95mtrain step:0   [0m [92mloss: 5.35343 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 2.29611 sec,[0m [92mreader_cost: 0.75141 sec,[0m ips: 13.93664 instance/sec, eta: 0:03:47,  
+[02/14 10:03:01] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf326ec0>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/shaving_head/_M6Ko0yRfD4_000097_000107.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/shaving_head/_M6Ko0yRfD4_000097_000107.mp4/img_001.0.jpg'
+
+[02/14 10:03:01] Error when loading /data/datasets/22001/raw-part/k400/train_256/shaving_head/_M6Ko0yRfD4_000097_000107.mp4, have 0 trys, will try again
+[02/14 10:03:20] epoch:[  2/100] [95mtrain step:20  [0m [92mloss: 4.95939 lr: 0.010000 top1: 0.06250 top5: 0.31250[0m [92mbatch_cost: 0.94400 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.89844 instance/sec, eta: 0:34:30,  
+[02/14 10:03:39] epoch:[  2/100] [95mtrain step:40  [0m [92mloss: 5.34283 lr: 0.010000 top1: 0.12500 top5: 0.15625[0m [92mbatch_cost: 0.93438 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 34.24717 instance/sec, eta: 1:04:35,  
+[02/14 10:03:58] epoch:[  2/100] [95mtrain step:60  [0m [92mloss: 4.87279 lr: 0.010000 top1: 0.03125 top5: 0.21875[0m [92mbatch_cost: 0.93236 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 34.32147 instance/sec, eta: 1:33:58,  
+[02/14 10:04:17] epoch:[  2/100] [95mtrain step:80  [0m [92mloss: 5.26504 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.92871 sec,[0m [92mreader_cost: 0.00047 sec,[0m ips: 34.45653 instance/sec, eta: 2:02:48,  
+[02/14 10:04:36] epoch:[  2/100] [95mtrain step:100 [0m [92mloss: 5.70306 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.92917 sec,[0m [92mreader_cost: 0.00024 sec,[0m ips: 34.43949 instance/sec, eta: 2:31:12,  
+[02/14 10:04:55] epoch:[  2/100] [95mtrain step:120 [0m [92mloss: 5.08947 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.92736 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 34.50670 instance/sec, eta: 2:58:44,  
+[02/14 10:05:13] epoch:[  2/100] [95mtrain step:140 [0m [92mloss: 4.91963 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.94348 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 33.91687 instance/sec, eta: 3:25:48,  
+[02/14 10:05:32] epoch:[  2/100] [95mtrain step:160 [0m [92mloss: 4.99981 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.94136 sec,[0m [92mreader_cost: 0.00028 sec,[0m ips: 33.99340 instance/sec, eta: 3:52:21,  
+[02/14 10:05:51] epoch:[  2/100] [95mtrain step:180 [0m [92mloss: 5.26495 lr: 0.010000 top1: 0.00000 top5: 0.15625[0m [92mbatch_cost: 0.94563 sec,[0m [92mreader_cost: 0.00027 sec,[0m ips: 33.83999 instance/sec, eta: 4:18:20,  
+[02/14 10:06:10] epoch:[  2/100] [95mtrain step:200 [0m [92mloss: 5.10273 lr: 0.010000 top1: 0.09375 top5: 0.15625[0m [92mbatch_cost: 0.96448 sec,[0m [92mreader_cost: 0.00025 sec,[0m ips: 33.17859 instance/sec, eta: 4:43:54,  
+[02/14 10:06:29] epoch:[  2/100] [95mtrain step:220 [0m [92mloss: 5.34370 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.93696 sec,[0m [92mreader_cost: 0.00028 sec,[0m ips: 34.15292 instance/sec, eta: 5:08:45,  
+[02/14 10:06:48] epoch:[  2/100] [95mtrain step:240 [0m [92mloss: 5.84309 lr: 0.010000 top1: 0.00000 top5: 0.03125[0m [92mbatch_cost: 0.92755 sec,[0m [92mreader_cost: 0.00028 sec,[0m ips: 34.49965 instance/sec, eta: 5:33:04,  
+[02/14 10:07:07] epoch:[  2/100] [95mtrain step:260 [0m [92mloss: 5.32219 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.94800 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.75534 instance/sec, eta: 5:57:10,  
+[02/14 10:07:26] epoch:[  2/100] [95mtrain step:280 [0m [92mloss: 5.27023 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.94972 sec,[0m [92mreader_cost: 0.00034 sec,[0m ips: 33.69420 instance/sec, eta: 6:20:50,  
+[02/14 10:07:45] epoch:[  2/100] [95mtrain step:300 [0m [92mloss: 5.46906 lr: 0.010000 top1: 0.06250 top5: 0.12500[0m [92mbatch_cost: 0.93744 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 34.13568 instance/sec, eta: 6:43:55,  
+[02/14 10:08:03] epoch:[  2/100] [95mtrain step:320 [0m [92mloss: 4.82841 lr: 0.010000 top1: 0.09375 top5: 0.25000[0m [92mbatch_cost: 0.95160 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.62759 instance/sec, eta: 7:06:36,  
+[02/14 10:08:22] epoch:[  2/100] [95mtrain step:340 [0m [92mloss: 5.09740 lr: 0.010000 top1: 0.09375 top5: 0.12500[0m [92mbatch_cost: 0.93080 sec,[0m [92mreader_cost: 0.00014 sec,[0m ips: 34.37914 instance/sec, eta: 7:28:50,  
+[02/14 10:08:41] epoch:[  2/100] [95mtrain step:360 [0m [92mloss: 5.11409 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.94467 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 33.87411 instance/sec, eta: 7:50:37,  
+[02/14 10:09:00] epoch:[  2/100] [95mtrain step:380 [0m [92mloss: 5.69756 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.95170 sec,[0m [92mreader_cost: 0.00032 sec,[0m ips: 33.62403 instance/sec, eta: 8:12:06,  
+[02/14 10:09:19] epoch:[  2/100] [95mtrain step:400 [0m [92mloss: 5.31806 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.92997 sec,[0m [92mreader_cost: 0.00036 sec,[0m ips: 34.40957 instance/sec, eta: 8:33:07,  
+[02/14 10:09:38] epoch:[  2/100] [95mtrain step:420 [0m [92mloss: 5.19058 lr: 0.010000 top1: 0.06250 top5: 0.21875[0m [92mbatch_cost: 0.96374 sec,[0m [92mreader_cost: 0.00015 sec,[0m ips: 33.20400 instance/sec, eta: 8:53:54,  
+[02/14 10:09:57] epoch:[  2/100] [95mtrain step:440 [0m [92mloss: 5.17045 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.94758 sec,[0m [92mreader_cost: 0.00033 sec,[0m ips: 33.77035 instance/sec, eta: 9:14:13,  
+[02/14 10:10:16] epoch:[  2/100] [95mtrain step:460 [0m [92mloss: 5.06791 lr: 0.010000 top1: 0.03125 top5: 0.18750[0m [92mbatch_cost: 0.92975 sec,[0m [92mreader_cost: 0.00030 sec,[0m ips: 34.41801 instance/sec, eta: 9:34:14,  
+[02/14 10:10:35] epoch:[  2/100] [95mtrain step:480 [0m [92mloss: 5.08754 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.96763 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.07049 instance/sec, eta: 9:53:55,  
+[02/14 10:10:54] epoch:[  2/100] [95mtrain step:500 [0m [92mloss: 5.55236 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.94768 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.76657 instance/sec, eta: 10:13:11,  
+[02/14 10:11:12] epoch:[  2/100] [95mtrain step:520 [0m [92mloss: 5.26668 lr: 0.010000 top1: 0.06250 top5: 0.09375[0m [92mbatch_cost: 0.92996 sec,[0m [92mreader_cost: 0.00026 sec,[0m ips: 34.41016 instance/sec, eta: 10:32:05,  
+[02/14 10:11:31] epoch:[  2/100] [95mtrain step:540 [0m [92mloss: 5.09737 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.97391 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 32.85711 instance/sec, eta: 10:50:46,  
+[02/14 10:11:50] epoch:[  2/100] [95mtrain step:560 [0m [92mloss: 5.24797 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.95504 sec,[0m [92mreader_cost: 0.00026 sec,[0m ips: 33.50649 instance/sec, eta: 11:09:07,  
+[02/14 10:12:05] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf326ec0>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/crossing_river/LSRil2XG1UU_000191_000201.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/crossing_river/LSRil2XG1UU_000191_000201.mp4/img_001.0.jpg'
+
+[02/14 10:12:05] Error when loading /data/datasets/22001/raw-part/k400/train_256/crossing_river/LSRil2XG1UU_000191_000201.mp4, have 0 trys, will try again
+[02/14 10:12:09] epoch:[  2/100] [95mtrain step:580 [0m [92mloss: 5.26837 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.96107 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 33.29612 instance/sec, eta: 11:27:09,  
+[02/14 10:12:28] epoch:[  2/100] [95mtrain step:600 [0m [92mloss: 4.97141 lr: 0.010000 top1: 0.12500 top5: 0.18750[0m [92mbatch_cost: 0.96990 sec,[0m [92mreader_cost: 0.00019 sec,[0m ips: 32.99308 instance/sec, eta: 11:44:47,  
+[02/14 10:12:47] epoch:[  2/100] [95mtrain step:620 [0m [92mloss: 5.39998 lr: 0.010000 top1: 0.03125 top5: 0.12500[0m [92mbatch_cost: 0.95085 sec,[0m [92mreader_cost: 0.00021 sec,[0m ips: 33.65420 instance/sec, eta: 12:02:12,  
+[02/14 10:13:06] epoch:[  2/100] [95mtrain step:640 [0m [92mloss: 5.30702 lr: 0.010000 top1: 0.06250 top5: 0.18750[0m [92mbatch_cost: 0.92926 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 34.43591 instance/sec, eta: 12:19:22,  
+[02/14 10:13:25] epoch:[  2/100] [95mtrain step:660 [0m [92mloss: 5.53043 lr: 0.010000 top1: 0.06250 top5: 0.09375[0m [92mbatch_cost: 0.94044 sec,[0m [92mreader_cost: 0.00022 sec,[0m ips: 34.02674 instance/sec, eta: 12:36:16,  
+[02/14 10:13:44] epoch:[  2/100] [95mtrain step:680 [0m [92mloss: 5.19318 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.96002 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.33264 instance/sec, eta: 12:52:51,  
+[02/14 10:14:03] epoch:[  2/100] [95mtrain step:700 [0m [92mloss: 4.98902 lr: 0.010000 top1: 0.12500 top5: 0.21875[0m [92mbatch_cost: 0.94214 sec,[0m [92mreader_cost: 0.00041 sec,[0m ips: 33.96513 instance/sec, eta: 13:09:13,  
+[02/14 10:14:22] epoch:[  2/100] [95mtrain step:720 [0m [92mloss: 5.26048 lr: 0.010000 top1: 0.00000 top5: 0.09375[0m [92mbatch_cost: 0.95372 sec,[0m [92mreader_cost: 0.00055 sec,[0m ips: 33.55273 instance/sec, eta: 13:25:16,  
+[02/14 10:14:32] fail to perform transform [<paddlevideo.loader.pipelines.sample.Sampler object at 0x7f3ebf326ec0>] with error: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/punching_bag/ixQrfusr6k8_000001_000011.mp4/img_001.0.jpg' and stack:
+Traceback (most recent call last):
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/compose.py", line 69, in __call__
+    data = p(data)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 303, in __call__
+    return self._get(frames_idx, results)
+  File "/root/cas/tww/PaddleVideo/paddlevideo/loader/pipelines/sample.py", line 76, in _get
+    img = Image.open(
+  File "/root/miniconda3/envs/tsn/lib/python3.10/site-packages/PIL/Image.py", line 3469, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/data/datasets/22001/raw-part/k400/train_256/punching_bag/ixQrfusr6k8_000001_000011.mp4/img_001.0.jpg'
+
+[02/14 10:14:32] Error when loading /data/datasets/22001/raw-part/k400/train_256/punching_bag/ixQrfusr6k8_000001_000011.mp4, have 0 trys, will try again
+[02/14 10:14:41] epoch:[  2/100] [95mtrain step:740 [0m [92mloss: 5.43143 lr: 0.010000 top1: 0.03125 top5: 0.15625[0m [92mbatch_cost: 0.93579 sec,[0m [92mreader_cost: 0.00026 sec,[0m ips: 34.19582 instance/sec, eta: 13:40:58,  
+[02/14 10:15:00] epoch:[  2/100] [95mtrain step:760 [0m [92mloss: 5.25061 lr: 0.010000 top1: 0.00000 top5: 0.15625[0m [92mbatch_cost: 0.94618 sec,[0m [92mreader_cost: 0.00023 sec,[0m ips: 33.82007 instance/sec, eta: 13:56:31,  
+[02/14 10:15:19] epoch:[  2/100] [95mtrain step:780 [0m [92mloss: 5.34762 lr: 0.010000 top1: 0.09375 top5: 0.12500[0m [92mbatch_cost: 0.94022 sec,[0m [92mreader_cost: 0.00028 sec,[0m ips: 34.03468 instance/sec, eta: 14:11:46,  
+[02/14 10:15:37] epoch:[  2/100] [95mtrain step:800 [0m [92mloss: 5.27689 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.93331 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 34.28642 instance/sec, eta: 14:26:42,  
+[02/14 10:15:56] epoch:[  2/100] [95mtrain step:820 [0m [92mloss: 5.27269 lr: 0.010000 top1: 0.06250 top5: 0.15625[0m [92mbatch_cost: 0.93361 sec,[0m [92mreader_cost: 0.00025 sec,[0m ips: 34.27543 instance/sec, eta: 14:41:32,  
+[02/14 10:16:15] epoch:[  2/100] [95mtrain step:840 [0m [92mloss: 5.37216 lr: 0.010000 top1: 0.03125 top5: 0.06250[0m [92mbatch_cost: 0.92977 sec,[0m [92mreader_cost: 0.00042 sec,[0m ips: 34.41713 instance/sec, eta: 14:56:07,  
+[02/14 10:16:34] epoch:[  2/100] [95mtrain step:860 [0m [92mloss: 5.32973 lr: 0.010000 top1: 0.03125 top5: 0.09375[0m [92mbatch_cost: 0.94981 sec,[0m [92mreader_cost: 0.00017 sec,[0m ips: 33.69083 instance/sec, eta: 15:10:28,  
+[02/14 10:16:53] epoch:[  2/100] [95mtrain step:880 [0m [92mloss: 5.39172 lr: 0.010000 top1: 0.06250 top5: 0.06250[0m [92mbatch_cost: 0.94676 sec,[0m [92mreader_cost: 0.00016 sec,[0m ips: 33.79938 instance/sec, eta: 15:24:34,  
+[02/14 10:17:04] main proc 1682877 exit, kill process group 1682877
+[02/15 10:33:56] [35mDATASET[0m : 
+[02/15 10:33:56]     [35mbatch_size[0m : [92m32[0m
+[02/15 10:33:56]     [35mnum_workers[0m : [92m4[0m
+[02/15 10:33:56]     [35mtest[0m : 
+[02/15 10:33:56]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/15 10:33:56]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/15 10:33:56]         [35mformat[0m : [92mFrameDataset[0m
+[02/15 10:33:56]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/15 10:33:56]     [35mtest_batch_size[0m : [92m1[0m
+[02/15 10:33:56]     [35mtrain[0m : 
+[02/15 10:33:56]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/train_256/[0m
+[02/15 10:33:56]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/train_256/train_frames.list[0m
+[02/15 10:33:56]         [35mformat[0m : [92mFrameDataset[0m
+[02/15 10:33:56]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/15 10:33:56]     [35mvalid[0m : 
+[02/15 10:33:56]         [35mdata_prefix[0m : [92m/data/datasets/22001/raw-part/k400/val_256/[0m
+[02/15 10:33:56]         [35mfile_path[0m : [92m/data/datasets/22001/raw-part/k400/val_256/val_frames.list[0m
+[02/15 10:33:56]         [35mformat[0m : [92mFrameDataset[0m
+[02/15 10:33:56]         [35msuffix[0m : [92mimg_{:05}.jpg[0m
+[02/15 10:33:56]     [35mvalid_batch_size[0m : [92m32[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mINFERENCE[0m : 
+[02/15 10:33:56]     [35mname[0m : [92mppTSN_Inference_helper[0m
+[02/15 10:33:56]     [35mnum_seg[0m : [92m25[0m
+[02/15 10:33:56]     [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mMETRIC[0m : 
+[02/15 10:33:56]     [35mname[0m : [92mCenterCropMetric[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mMODEL[0m : 
+[02/15 10:33:56]     [35mbackbone[0m : 
+[02/15 10:33:56]         [35mdepth[0m : [92m50[0m
+[02/15 10:33:56]         [35mname[0m : [92mResNet[0m
+[02/15 10:33:56]         [35mpretrained[0m : [92mckpt/ResNet50_pretrain.pdparams[0m
+[02/15 10:33:56]     [35mframework[0m : [92mRecognizer2D[0m
+[02/15 10:33:56]     [35mhead[0m : 
+[02/15 10:33:56]         [35mdrop_ratio[0m : [92m0.4[0m
+[02/15 10:33:56]         [35min_channels[0m : [92m2048[0m
+[02/15 10:33:56]         [35mname[0m : [92mTSNHead[0m
+[02/15 10:33:56]         [35mnum_classes[0m : [92m400[0m
+[02/15 10:33:56]         [35mstd[0m : [92m0.01[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mOPTIMIZER[0m : 
+[02/15 10:33:56]     [35mgrad_clip[0m : 
+[02/15 10:33:56]         [35mname[0m : [92mClipGradByGlobalNorm[0m
+[02/15 10:33:56]         [35mvalue[0m : [92m40.0[0m
+[02/15 10:33:56]     [35mlearning_rate[0m : 
+[02/15 10:33:56]         [35mboundaries[0m : [92m[40, 80][0m
+[02/15 10:33:56]         [35mname[0m : [92mPiecewiseDecay[0m
+[02/15 10:33:56]         [35mvalues[0m : [92m[0.01, 0.001, 0.0001][0m
+[02/15 10:33:56]     [35mmomentum[0m : [92m0.9[0m
+[02/15 10:33:56]     [35mname[0m : [92mMomentum[0m
+[02/15 10:33:56]     [35mweight_decay[0m : 
+[02/15 10:33:56]         [35mname[0m : [92mL2[0m
+[02/15 10:33:56]         [35mvalue[0m : [92m0.0001[0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mPIPELINE[0m : 
+[02/15 10:33:56]     [35mtest[0m : 
+[02/15 10:33:56]         [35mdecode[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mFrameDecoder[0m
+[02/15 10:33:56]         [35msample[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mSampler[0m
+[02/15 10:33:56]             [35mnum_seg[0m : [92m25[0m
+[02/15 10:33:56]             [35mseg_len[0m : [92m1[0m
+[02/15 10:33:56]             [35mselect_left[0m : [92mTrue[0m
+[02/15 10:33:56]             [35mvalid_mode[0m : [92mTrue[0m
+[02/15 10:33:56]         [35mtransform[0m : 
+[02/15 10:33:56]             [35mScale[0m : 
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mdo_round[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mshort_size[0m : [92m256[0m
+[02/15 10:33:56]             [35mTenCrop[0m : 
+[02/15 10:33:56]                 [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56]             [35mImage2Array[0m : [92mNone[0m
+[02/15 10:33:56]             [35mNormalization[0m : 
+[02/15 10:33:56]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/15 10:33:56]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/15 10:33:56]     [35mtrain[0m : 
+[02/15 10:33:56]         [35mdecode[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mFrameDecoder[0m
+[02/15 10:33:56]         [35msample[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mSampler[0m
+[02/15 10:33:56]             [35mnum_seg[0m : [92m3[0m
+[02/15 10:33:56]             [35mseg_len[0m : [92m1[0m
+[02/15 10:33:56]             [35mselect_left[0m : [92mTrue[0m
+[02/15 10:33:56]             [35mvalid_mode[0m : [92mFalse[0m
+[02/15 10:33:56]         [35mtransform[0m : 
+[02/15 10:33:56]             [35mScale[0m : 
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mdo_round[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mshort_size[0m : [92m256[0m
+[02/15 10:33:56]             [35mMultiScaleCrop[0m : 
+[02/15 10:33:56]                 [35mallow_duplication[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mmore_fix_crop[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56]             [35mRandomFlip[0m : [92mNone[0m
+[02/15 10:33:56]             [35mImage2Array[0m : [92mNone[0m
+[02/15 10:33:56]             [35mNormalization[0m : 
+[02/15 10:33:56]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/15 10:33:56]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/15 10:33:56]     [35mvalid[0m : 
+[02/15 10:33:56]         [35mdecode[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mFrameDecoder[0m
+[02/15 10:33:56]         [35msample[0m : 
+[02/15 10:33:56]             [35mname[0m : [92mSampler[0m
+[02/15 10:33:56]             [35mnum_seg[0m : [92m3[0m
+[02/15 10:33:56]             [35mseg_len[0m : [92m1[0m
+[02/15 10:33:56]             [35mselect_left[0m : [92mTrue[0m
+[02/15 10:33:56]             [35mvalid_mode[0m : [92mTrue[0m
+[02/15 10:33:56]         [35mtransform[0m : 
+[02/15 10:33:56]             [35mScale[0m : 
+[02/15 10:33:56]                 [35mbackend[0m : [92mcv2[0m
+[02/15 10:33:56]                 [35mdo_round[0m : [92mTrue[0m
+[02/15 10:33:56]                 [35mfixed_ratio[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mshort_size[0m : [92m256[0m
+[02/15 10:33:56]             [35mCenterCrop[0m : 
+[02/15 10:33:56]                 [35mdo_round[0m : [92mFalse[0m
+[02/15 10:33:56]                 [35mtarget_size[0m : [92m224[0m
+[02/15 10:33:56]             [35mImage2Array[0m : [92mNone[0m
+[02/15 10:33:56]             [35mNormalization[0m : 
+[02/15 10:33:56]                 [35mmean[0m : [92m[0.485, 0.456, 0.406][0m
+[02/15 10:33:56]                 [35mstd[0m : [92m[0.229, 0.224, 0.225][0m
+[02/15 10:33:56] ------------------------------------------------------------
+[02/15 10:33:56] [35mepochs[0m : [92m100[0m
+[02/15 10:33:56] [35mlog_interval[0m : [92m20[0m
+[02/15 10:33:56] [35mlog_level[0m : [92mINFO[0m
+[02/15 10:33:56] [35mmodel_name[0m : [92mTSN[0m
+[02/15 10:33:56] [35msave_interval[0m : [92m10[0m

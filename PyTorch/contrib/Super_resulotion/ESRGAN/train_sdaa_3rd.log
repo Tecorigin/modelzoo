@@ -1,0 +1,652 @@
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.3
+ PyTorch      | 2.4.0a0+gitd990dad
+ Torch-SDAA   | 2.0.0a2+git842443f
+--------------+----------------------------------------------
+ SDAA Driver  | 1.3.1 (N/A)
+ SDAA Runtime | 1.3.1 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.20.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.3
+ PyTorch      | 2.4.0a0+gitd990dad
+ Torch-SDAA   | 2.0.0a2+git842443f
+--------------+----------------------------------------------
+ SDAA Driver  | 1.3.1 (N/A)
+ SDAA Runtime | 1.3.1 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.20.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.3
+ PyTorch      | 2.4.0a0+gitd990dad
+ Torch-SDAA   | 2.0.0a2+git842443f
+--------------+----------------------------------------------
+ SDAA Driver  | 1.3.1 (N/A)
+ SDAA Runtime | 1.3.1 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.20.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 172.17.0.3
+ PyTorch      | 2.4.0a0+gitd990dad
+ Torch-SDAA   | 2.0.0a2+git842443f
+--------------+----------------------------------------------
+ SDAA Driver  | 1.3.1 (N/A)
+ SDAA Runtime | 1.3.1 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.0 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0b0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0b0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.20.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+02/13 08:40:46 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.10.15 (main, Oct  3 2024, 07:27:34) [GCC 11.2.0]
+    CUDA available: True
+    MUSA available: False
+    numpy_random_seed: 2140588088
+    GPU 0: /dev/tcaicard4
+    GPU 1: /dev/tcaicard5
+    GPU 2: /dev/tcaicard6
+    GPU 3: /dev/tcaicard7
+    CUDA_HOME: None
+    GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+    PyTorch: 2.4.0a0+gitd990dad
+    PyTorch compiling details: PyTorch built with:
+  - GCC 11.4
+  - C++ Version: 201703
+  - Intel(R) oneAPI Math Kernel Library Version 2024.2.2-Product Build 20240823 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v3.4.2 (Git Hash 1137e04ec0b5251ca2b4400a4fd3c667ce843d67)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX512
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CXX_COMPILER=/usr/bin/g++, CXX_FLAGS= -D_GLIBCXX_USE_CXX11_ABI=1 -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=pedantic -Wno-error=old-style-cast -Wno-missing-braces -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=2.4.0, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=1, USE_MPI=0, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, 
+
+    TorchVision: 0.15.1a0+42759b1
+    OpenCV: 4.10.0
+    MMEngine: 0.10.5
+
+Runtime environment:
+    cudnn_benchmark: False
+    mp_cfg: {'mp_start_method': 'fork', 'opencv_num_threads': 4}
+    dist_cfg: {'backend': 'tccl'}
+    seed: 2140588088
+    Distributed launcher: pytorch
+    Distributed training: True
+    GPU number: 4
+------------------------------------------------------------
+
+02/13 08:40:47 - mmengine - INFO - Config:
+custom_hooks = [
+    dict(interval=1, type='BasicVisualizationHook'),
+]
+data_root = 'data'
+dataset_type = 'BasicImageDataset'
+default_hooks = dict(
+    checkpoint=dict(
+        by_epoch=False,
+        interval=5000,
+        max_keep_ckpts=10,
+        out_dir='./work_dirs/',
+        rule='greater',
+        save_best='PSNR',
+        save_optimizer=True,
+        type='CheckpointHook'),
+    logger=dict(interval=100, type='LoggerHook'),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    timer=dict(type='IterTimerHook'))
+default_scope = 'mmagic'
+div2k_data_root = 'data/DIV2K'
+div2k_dataloader = dict(
+    dataset=dict(
+        ann_file='meta_info_DIV2K100sub_GT.txt',
+        data_prefix=dict(
+            gt='DIV2K_train_HR_sub', img='DIV2K_train_LR_bicubic/X4_sub'),
+        data_root='data/DIV2K',
+        metainfo=dict(dataset_type='div2k', task_name='sisr'),
+        pipeline=[
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                imdecode_backend='cv2',
+                key='img',
+                type='LoadImageFromFile'),
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                imdecode_backend='cv2',
+                key='gt',
+                type='LoadImageFromFile'),
+            dict(type='PackInputs'),
+        ],
+        type='BasicImageDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=False,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+div2k_evaluator = dict(
+    metrics=[
+        dict(crop_border=4, prefix='DIV2K', type='PSNR'),
+        dict(crop_border=4, prefix='DIV2K', type='SSIM'),
+    ],
+    type='Evaluator')
+env_cfg = dict(
+    cudnn_benchmark=False,
+    dist_cfg=dict(backend='tccl'),
+    mp_cfg=dict(mp_start_method='fork', opencv_num_threads=4))
+experiment_name = 'esrgan_x4c64b23g32_1xb16-400k_div2k'
+launcher = 'pytorch'
+load_from = None
+log_level = 'INFO'
+log_processor = dict(by_epoch=False, type='LogProcessor', window_size=100)
+model = dict(
+    data_preprocessor=dict(
+        mean=[
+            0.0,
+            0.0,
+            0.0,
+        ],
+        std=[
+            255.0,
+            255.0,
+            255.0,
+        ],
+        type='DataPreprocessor'),
+    discriminator=dict(in_channels=3, mid_channels=64, type='ModifiedVGG'),
+    gan_loss=dict(
+        fake_label_val=0,
+        gan_type='vanilla',
+        loss_weight=0.005,
+        real_label_val=1.0,
+        type='GANLoss'),
+    generator=dict(
+        growth_channels=32,
+        in_channels=3,
+        init_cfg=dict(
+            checkpoint=
+            'https://download.openmmlab.com/mmediting/restorers/esrgan/esrgan_psnr_x4c64b23g32_1x16_1000k_div2k_20200420-bf5c993c.pth',
+            prefix='generator.',
+            type='Pretrained'),
+        mid_channels=64,
+        num_blocks=23,
+        out_channels=3,
+        type='RRDBNet',
+        upscale_factor=4),
+    perceptual_loss=dict(
+        layer_weights=dict({'34': 1.0}),
+        norm_img=False,
+        perceptual_weight=1.0,
+        style_weight=0,
+        type='PerceptualLoss',
+        vgg_type='vgg19'),
+    pixel_loss=dict(loss_weight=0.01, reduction='mean', type='L1Loss'),
+    test_cfg=dict(),
+    train_cfg=dict(),
+    type='ESRGAN')
+model_wrapper_cfg = dict(type='MMSeparateDistributedDataParallel')
+optim_wrapper = dict(
+    constructor='MultiOptimWrapperConstructor',
+    discriminator=dict(
+        loss_scale='dynamic',
+        optimizer=dict(betas=(
+            0.9,
+            0.999,
+        ), lr=0.0001, type='Adam'),
+        type='AmpOptimWrapper'),
+    generator=dict(
+        loss_scale='dynamic',
+        optimizer=dict(betas=(
+            0.9,
+            0.999,
+        ), lr=0.0001, type='Adam'),
+        type='AmpOptimWrapper'))
+param_scheduler = dict(
+    by_epoch=False,
+    gamma=0.5,
+    milestones=[
+        50000,
+        100000,
+        200000,
+        300000,
+    ],
+    type='MultiStepLR')
+pretrain_generator_url = 'https://download.openmmlab.com/mmediting/restorers/esrgan/esrgan_psnr_x4c64b23g32_1x16_1000k_div2k_20200420-bf5c993c.pth'
+resume = False
+save_dir = './work_dirs/'
+scale = 4
+set14_data_root = 'data/Set14'
+set14_dataloader = dict(
+    dataset=dict(
+        data_prefix=dict(gt='GTmod12', img='LRbicx4'),
+        data_root='data/Set14',
+        metainfo=dict(dataset_type='set14', task_name='sisr'),
+        pipeline=[
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                imdecode_backend='cv2',
+                key='img',
+                type='LoadImageFromFile'),
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                imdecode_backend='cv2',
+                key='gt',
+                type='LoadImageFromFile'),
+            dict(type='PackInputs'),
+        ],
+        type='BasicImageDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=False,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+set14_evaluator = dict(
+    metrics=[
+        dict(crop_border=4, prefix='Set14', type='PSNR'),
+        dict(crop_border=4, prefix='Set14', type='SSIM'),
+    ],
+    type='Evaluator')
+set5_data_root = 'data/Set5'
+set5_dataloader = dict(
+    dataset=dict(
+        data_prefix=dict(gt='GTmod12', img='LRbicx4'),
+        data_root='data/Set5',
+        metainfo=dict(dataset_type='set5', task_name='sisr'),
+        pipeline=[
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                imdecode_backend='cv2',
+                key='img',
+                type='LoadImageFromFile'),
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                imdecode_backend='cv2',
+                key='gt',
+                type='LoadImageFromFile'),
+            dict(type='PackInputs'),
+        ],
+        type='BasicImageDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=False,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+set5_evaluator = dict(
+    metrics=[
+        dict(crop_border=4, prefix='Set5', type='PSNR'),
+        dict(crop_border=4, prefix='Set5', type='SSIM'),
+    ],
+    type='Evaluator')
+test_cfg = dict(type='MultiTestLoop')
+test_dataloader = [
+    dict(
+        dataset=dict(
+            data_prefix=dict(gt='GTmod12', img='LRbicx4'),
+            data_root='data/Set5',
+            metainfo=dict(dataset_type='set5', task_name='sisr'),
+            pipeline=[
+                dict(
+                    channel_order='rgb',
+                    color_type='color',
+                    imdecode_backend='cv2',
+                    key='img',
+                    type='LoadImageFromFile'),
+                dict(
+                    channel_order='rgb',
+                    color_type='color',
+                    imdecode_backend='cv2',
+                    key='gt',
+                    type='LoadImageFromFile'),
+                dict(type='PackInputs'),
+            ],
+            type='BasicImageDataset'),
+        drop_last=False,
+        num_workers=4,
+        persistent_workers=False,
+        sampler=dict(shuffle=False, type='DefaultSampler')),
+    dict(
+        dataset=dict(
+            data_prefix=dict(gt='GTmod12', img='LRbicx4'),
+            data_root='data/Set14',
+            metainfo=dict(dataset_type='set14', task_name='sisr'),
+            pipeline=[
+                dict(
+                    channel_order='rgb',
+                    color_type='color',
+                    imdecode_backend='cv2',
+                    key='img',
+                    type='LoadImageFromFile'),
+                dict(
+                    channel_order='rgb',
+                    color_type='color',
+                    imdecode_backend='cv2',
+                    key='gt',
+                    type='LoadImageFromFile'),
+                dict(type='PackInputs'),
+            ],
+            type='BasicImageDataset'),
+        drop_last=False,
+        num_workers=4,
+        persistent_workers=False,
+        sampler=dict(shuffle=False, type='DefaultSampler')),
+    dict(
+        dataset=dict(
+            ann_file='meta_info_DIV2K100sub_GT.txt',
+            data_prefix=dict(
+                gt='DIV2K_train_HR_sub', img='DIV2K_train_LR_bicubic/X4_sub'),
+            data_root='data/DIV2K',
+            metainfo=dict(dataset_type='div2k', task_name='sisr'),
+            pipeline=[
+                dict(
+                    channel_order='rgb',
+                    color_type='color',
+                    imdecode_backend='cv2',
+                    key='img',
+                    type='LoadImageFromFile'),
+                dict(
+                    channel_order='rgb',
+                    color_type='color',
+                    imdecode_backend='cv2',
+                    key='gt',
+                    type='LoadImageFromFile'),
+                dict(type='PackInputs'),
+            ],
+            type='BasicImageDataset'),
+        drop_last=False,
+        num_workers=4,
+        persistent_workers=False,
+        sampler=dict(shuffle=False, type='DefaultSampler')),
+]
+test_evaluator = [
+    dict(
+        metrics=[
+            dict(crop_border=4, prefix='Set5', type='PSNR'),
+            dict(crop_border=4, prefix='Set5', type='SSIM'),
+        ],
+        type='Evaluator'),
+    dict(
+        metrics=[
+            dict(crop_border=4, prefix='Set14', type='PSNR'),
+            dict(crop_border=4, prefix='Set14', type='SSIM'),
+        ],
+        type='Evaluator'),
+    dict(
+        metrics=[
+            dict(crop_border=4, prefix='DIV2K', type='PSNR'),
+            dict(crop_border=4, prefix='DIV2K', type='SSIM'),
+        ],
+        type='Evaluator'),
+]
+test_pipeline = [
+    dict(
+        channel_order='rgb',
+        color_type='color',
+        imdecode_backend='cv2',
+        key='img',
+        type='LoadImageFromFile'),
+    dict(
+        channel_order='rgb',
+        color_type='color',
+        imdecode_backend='cv2',
+        key='gt',
+        type='LoadImageFromFile'),
+    dict(type='PackInputs'),
+]
+train_cfg = dict(
+    max_iters=100000, type='IterBasedTrainLoop', val_interval=5000)
+train_dataloader = dict(
+    batch_size=64,
+    dataset=dict(
+        ann_file='meta_info_DIV2K800sub_GT.txt',
+        data_prefix=dict(
+            gt='DIV2K_train_HR_sub', img='DIV2K_train_LR_bicubic/X4_sub'),
+        data_root='data/DIV2K',
+        filename_tmpl=dict(gt='{}', img='{}'),
+        metainfo=dict(dataset_type='div2k', task_name='sisr'),
+        pipeline=[
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                key='img',
+                type='LoadImageFromFile'),
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                key='gt',
+                type='LoadImageFromFile'),
+            dict(dictionary=dict(scale=4), type='SetValues'),
+            dict(gt_patch_size=128, type='PairedRandomCrop'),
+            dict(
+                direction='horizontal',
+                flip_ratio=0.5,
+                keys=[
+                    'img',
+                    'gt',
+                ],
+                type='Flip'),
+            dict(
+                direction='vertical',
+                flip_ratio=0.5,
+                keys=[
+                    'img',
+                    'gt',
+                ],
+                type='Flip'),
+            dict(
+                keys=[
+                    'img',
+                    'gt',
+                ],
+                transpose_ratio=0.5,
+                type='RandomTransposeHW'),
+            dict(type='PackInputs'),
+        ],
+        type='BasicImageDataset'),
+    num_workers=8,
+    persistent_workers=False,
+    sampler=dict(shuffle=True, type='InfiniteSampler'))
+train_pipeline = [
+    dict(
+        channel_order='rgb',
+        color_type='color',
+        key='img',
+        type='LoadImageFromFile'),
+    dict(
+        channel_order='rgb',
+        color_type='color',
+        key='gt',
+        type='LoadImageFromFile'),
+    dict(dictionary=dict(scale=4), type='SetValues'),
+    dict(gt_patch_size=128, type='PairedRandomCrop'),
+    dict(
+        direction='horizontal',
+        flip_ratio=0.5,
+        keys=[
+            'img',
+            'gt',
+        ],
+        type='Flip'),
+    dict(
+        direction='vertical',
+        flip_ratio=0.5,
+        keys=[
+            'img',
+            'gt',
+        ],
+        type='Flip'),
+    dict(keys=[
+        'img',
+        'gt',
+    ], transpose_ratio=0.5, type='RandomTransposeHW'),
+    dict(type='PackInputs'),
+]
+val_cfg = dict(type='MultiValLoop')
+val_dataloader = dict(
+    dataset=dict(
+        data_prefix=dict(gt='GTmod12', img='LRbicx4'),
+        data_root='data/Set14',
+        metainfo=dict(dataset_type='set14', task_name='sisr'),
+        pipeline=[
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                key='img',
+                type='LoadImageFromFile'),
+            dict(
+                channel_order='rgb',
+                color_type='color',
+                key='gt',
+                type='LoadImageFromFile'),
+            dict(type='PackInputs'),
+        ],
+        type='BasicImageDataset'),
+    drop_last=False,
+    num_workers=4,
+    persistent_workers=False,
+    sampler=dict(shuffle=False, type='DefaultSampler'))
+val_evaluator = dict(
+    metrics=[
+        dict(type='MAE'),
+        dict(crop_border=4, type='PSNR'),
+        dict(crop_border=4, type='SSIM'),
+    ],
+    type='Evaluator')
+val_pipeline = [
+    dict(
+        channel_order='rgb',
+        color_type='color',
+        key='img',
+        type='LoadImageFromFile'),
+    dict(
+        channel_order='rgb',
+        color_type='color',
+        key='gt',
+        type='LoadImageFromFile'),
+    dict(type='PackInputs'),
+]
+vis_backends = [
+    dict(type='LocalVisBackend'),
+]
+visualizer = dict(
+    bgr2rgb=True,
+    fn_key='gt_path',
+    img_keys=[
+        'gt_img',
+        'input',
+        'pred_img',
+    ],
+    type='ConcatImageVisualizer',
+    vis_backends=[
+        dict(type='LocalVisBackend'),
+    ])
+work_dir = './work_dirs/esrgan_x4c64b23g32_1xb16-400k_div2k'
+
+02/13 08:40:52 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) BasicVisualizationHook             
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) BasicVisualizationHook             
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_val:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) BasicVisualizationHook             
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test:
+(VERY_HIGH   ) RuntimeInfoHook                    
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+02/13 08:40:53 - mmengine - INFO - Working directory: ./work_dirs/esrgan_x4c64b23g32_1xb16-400k_div2k
+02/13 08:40:53 - mmengine - INFO - Log directory: /root/cas/lzk/modelzoo/PyTorch/contrib/Super_resulotion/ESRGAN/work_dirs/esrgan_x4c64b23g32_1xb16-400k_div2k/20250213_084043
+02/13 08:40:53 - mmengine - WARNING - div2k is not a meta file, simply parsed as meta information
+02/13 08:40:53 - mmengine - WARNING - sisr is not a meta file, simply parsed as meta information

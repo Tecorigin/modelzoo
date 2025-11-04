@@ -1,0 +1,28 @@
+GENERATOR NET:
+Original:  torch.Size([20, 3, 256, 256])
+D1:  torch.Size([20, 64, 128, 128])
+D2:  torch.Size([20, 128, 64, 64])
+D3:  torch.Size([20, 256, 32, 32])
+D4:  torch.Size([20, 512, 16, 16])
+D5:  torch.Size([20, 512, 8, 8])
+D6:  torch.Size([20, 512, 4, 4])
+D7:  torch.Size([20, 512, 2, 2])
+B:  torch.Size([20, 512, 1, 1])
+U1:  torch.Size([20, 512, 2, 2])
+U2:  torch.Size([20, 512, 4, 4])
+U3:  torch.Size([20, 512, 8, 8])
+U4:  torch.Size([20, 512, 16, 16])
+U5:  torch.Size([20, 256, 32, 32])
+U6:  torch.Size([20, 128, 64, 64])
+U7:  torch.Size([20, 64, 128, 128])
+Out:  torch.Size([20, 3, 256, 256])
+
+
+DISCRIMINATOR NET:
+Original:  torch.Size([20, 3, 256, 256])
+Conv1:  torch.Size([20, 64, 128, 128])
+Conv2:  torch.Size([20, 128, 64, 64])
+Conv3:  torch.Size([20, 256, 32, 32])
+Conv4:  torch.Size([20, 512, 16, 16])
+Conv5:  torch.Size([20, 1, 13, 13])
+Out:  torch.Size([20, 1])

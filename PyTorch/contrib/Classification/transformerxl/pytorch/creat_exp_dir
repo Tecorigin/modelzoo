@@ -1,0 +1,20 @@
+import os
+import shutil
+
+def create_exp_dir(path, scripts_to_save=None, debug=False):
+    if debug:
+        print('Debug Mode: no experiment directory created')
+        return lambda save_path, script: None
+
+    if not os.path.exists(path):
+        os.makedirs(path)
+    print('Experiment directory : {}'.format(path))
+
+    if scripts_to_save is not None:
+        script_path = os.path.join(path, 'scripts')
+        if not os.path.exists(script_path):
+            os.makedirs(script_path)
+        for script in scripts_to_save:
+            dst_file = os.path.join(path, script)
+            shutil.copyfile(script, dst_file)
+            print('Copying script: {}'.format(script))

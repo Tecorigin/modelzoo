@@ -1,0 +1,15 @@
+_BASE_: [
+  '../datasets/coco_detection_ppyoloe.yml',
+  '../runtime.yml',
+  './_base_/optimizer_300e.yml',
+  './_base_/ppyoloe_crn.yml',
+  './_base_/ppyoloe_reader.yml',
+]
+
+log_iter: 100
+snapshot_epoch: 10
+weights: /data/ckpt
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/CSPResNetb_x_pretrained.pdparams
+depth_mult: 1.33
+width_mult: 1.25

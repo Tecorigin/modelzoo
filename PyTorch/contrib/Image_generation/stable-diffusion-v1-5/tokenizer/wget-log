@@ -1,0 +1,87 @@
+Retrying.
+
+--2025-07-22 12:49:01--  (try: 4)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 12:51:15--  (try: 5)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 12:53:31--  (try: 6)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 12:55:47--  (try: 7)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 12:58:04--  (try: 8)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:00:22--  (try: 9)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:02:40--  (try:10)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:05:00--  (try:11)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:07:20--  (try:12)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:09:39--  (try:13)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:11:58--  (try:14)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:14:17--  (try:15)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:16:37--  (try:16)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:18:56--  (try:17)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:21:15--  (try:18)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:23:34--  (try:19)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Retrying.
+
+--2025-07-22 13:25:54--  (try:20)  https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer.json
+Connecting to huggingface.co (huggingface.co)|108.160.165.141|:443... failed: Connection timed out.
+Connecting to huggingface.co (huggingface.co)|2a03:2880:f10e:83:face:b00c:0:25de|:443... failed: Cannot assign requested address.
+Giving up.
+

@@ -1,0 +1,94 @@
+[01/09 06:03:07] __mp_main__ INFO: Namespace(config_file='./configs/config50.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/09 06:03:49] __mp_main__ INFO: Batch: 0| Loss: 7.119 | Top1: 0.000 | Estimated Time Remaining: 21480.23 seconds
+[01/09 06:11:18] __mp_main__ INFO: Batch: 100| Loss: 7.206 | Top1: 0.031 | Estimated Time Remaining: 22360.67 seconds
+[01/09 06:18:54] __mp_main__ INFO: Batch: 200| Loss: 7.071 | Top1: 0.086 | Estimated Time Remaining: 24872.20 seconds
+[01/09 06:27:25] __mp_main__ INFO: Batch: 300| Loss: 7.018 | Top1: 0.093 | Estimated Time Remaining: 25570.00 seconds
+[01/09 06:35:18] __mp_main__ INFO: Batch: 400| Loss: 6.979 | Top1: 0.152 | Estimated Time Remaining: 21512.39 seconds
+[01/09 06:43:37] __mp_main__ INFO: Batch: 500| Loss: 6.944 | Top1: 0.200 | Estimated Time Remaining: 23089.87 seconds
+[01/09 06:51:50] __mp_main__ INFO: Batch: 600| Loss: 6.908 | Top1: 0.237 | Estimated Time Remaining: 22618.90 seconds
+[01/09 07:00:12] __mp_main__ INFO: Batch: 700| Loss: 6.873 | Top1: 0.288 | Estimated Time Remaining: 22050.90 seconds
+[01/09 07:08:17] __mp_main__ INFO: Batch: 800| Loss: 6.838 | Top1: 0.322 | Estimated Time Remaining: 18652.22 seconds
+[01/09 07:16:27] __mp_main__ INFO: Batch: 900| Loss: 6.807 | Top1: 0.373 | Estimated Time Remaining: 21537.41 seconds
+[01/09 07:24:28] __mp_main__ INFO: Batch: 1000| Loss: 6.773 | Top1: 0.417 | Estimated Time Remaining: 19007.15 seconds
+[01/09 07:32:12] __mp_main__ INFO: Batch: 1100| Loss: 6.741 | Top1: 0.468 | Estimated Time Remaining: 18749.18 seconds
+[01/09 07:39:54] __mp_main__ INFO: Batch: 1200| Loss: 6.707 | Top1: 0.536 | Estimated Time Remaining: 16923.42 seconds
+[01/09 07:50:01] __mp_main__ INFO: Namespace(config_file='./configs/config101.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/09 07:50:57] __mp_main__ INFO: Batch: 0| Loss: 6.956 | Top1: 0.000 | Estimated Time Remaining: 59809.63 seconds
+[01/09 08:12:11] __mp_main__ INFO: Batch: 100| Loss: 7.234 | Top1: 0.062 | Estimated Time Remaining: 66493.14 seconds
+[01/09 08:33:48] __mp_main__ INFO: Batch: 200| Loss: 7.082 | Top1: 0.062 | Estimated Time Remaining: 62467.74 seconds
+[01/09 08:55:09] __mp_main__ INFO: Batch: 300| Loss: 7.024 | Top1: 0.083 | Estimated Time Remaining: 57324.57 seconds
+[01/09 09:16:51] __mp_main__ INFO: Batch: 400| Loss: 6.992 | Top1: 0.125 | Estimated Time Remaining: 63014.97 seconds
+[01/09 09:38:16] __mp_main__ INFO: Batch: 500| Loss: 6.962 | Top1: 0.143 | Estimated Time Remaining: 55916.74 seconds
+[01/09 09:59:58] __mp_main__ INFO: Batch: 600| Loss: 6.934 | Top1: 0.172 | Estimated Time Remaining: 56281.89 seconds
+[01/09 10:22:00] __mp_main__ INFO: Batch: 700| Loss: 6.907 | Top1: 0.194 | Estimated Time Remaining: 54578.14 seconds
+[01/09 10:44:21] __mp_main__ INFO: Batch: 800| Loss: 6.879 | Top1: 0.217 | Estimated Time Remaining: 55149.80 seconds
+[01/09 11:06:46] __mp_main__ INFO: Batch: 900| Loss: 6.852 | Top1: 0.255 | Estimated Time Remaining: 56569.11 seconds
+[01/09 11:29:09] __mp_main__ INFO: Batch: 1000| Loss: 6.825 | Top1: 0.279 | Estimated Time Remaining: 53963.32 seconds
+[01/09 11:51:52] __mp_main__ INFO: Batch: 1100| Loss: 6.802 | Top1: 0.316 | Estimated Time Remaining: 52508.81 seconds
+[01/09 12:14:23] __mp_main__ INFO: Batch: 1200| Loss: 6.780 | Top1: 0.356 | Estimated Time Remaining: 52023.78 seconds
+[01/09 12:36:00] __mp_main__ INFO: Batch: 1300| Loss: 6.756 | Top1: 0.408 | Estimated Time Remaining: 47712.08 seconds
+[01/09 12:57:24] __mp_main__ INFO: Batch: 1400| Loss: 6.730 | Top1: 0.449 | Estimated Time Remaining: 47535.47 seconds
+[01/09 13:18:55] __mp_main__ INFO: Batch: 1500| Loss: 6.704 | Top1: 0.509 | Estimated Time Remaining: 48264.66 seconds
+[01/09 13:42:18] __mp_main__ INFO: Batch: 1600| Loss: 6.679 | Top1: 0.565 | Estimated Time Remaining: 51158.46 seconds
+[01/09 14:07:00] __mp_main__ INFO: Batch: 1700| Loss: 6.652 | Top1: 0.636 | Estimated Time Remaining: 47776.15 seconds
+[01/09 14:22:31] __mp_main__ INFO: Namespace(config_file='./configs/config200.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/09 14:23:26] __mp_main__ INFO: Batch: 0| Loss: 7.187 | Top1: 0.000 | Estimated Time Remaining: 87688.48 seconds
+[01/09 14:42:39] __mp_main__ INFO: Batch: 100| Loss: 7.231 | Top1: 0.093 | Estimated Time Remaining: 113366.59 seconds
+[01/09 15:01:55] __mp_main__ INFO: Batch: 200| Loss: 7.081 | Top1: 0.078 | Estimated Time Remaining: 95810.74 seconds
+[01/09 15:19:26] __mp_main__ INFO: Batch: 300| Loss: 7.025 | Top1: 0.093 | Estimated Time Remaining: 101737.19 seconds
+[01/09 15:37:29] __mp_main__ INFO: Batch: 400| Loss: 6.996 | Top1: 0.086 | Estimated Time Remaining: 102931.04 seconds
+[01/09 15:55:44] __mp_main__ INFO: Batch: 500| Loss: 6.980 | Top1: 0.081 | Estimated Time Remaining: 106517.61 seconds
+[01/09 16:14:42] __mp_main__ INFO: Batch: 600| Loss: 6.967 | Top1: 0.094 | Estimated Time Remaining: 106307.18 seconds
+[01/09 16:33:43] __mp_main__ INFO: Batch: 700| Loss: 6.954 | Top1: 0.116 | Estimated Time Remaining: 112591.68 seconds
+[01/09 16:52:38] __mp_main__ INFO: Batch: 800| Loss: 6.940 | Top1: 0.152 | Estimated Time Remaining: 107661.12 seconds
+[01/09 17:11:06] __mp_main__ INFO: Batch: 900| Loss: 6.927 | Top1: 0.180 | Estimated Time Remaining: 100400.60 seconds
+[01/09 17:29:31] __mp_main__ INFO: Batch: 1000| Loss: 6.915 | Top1: 0.178 | Estimated Time Remaining: 102716.65 seconds
+[01/09 17:48:10] __mp_main__ INFO: Batch: 1100| Loss: 6.903 | Top1: 0.190 | Estimated Time Remaining: 87705.18 seconds
+[01/09 18:05:53] __mp_main__ INFO: Batch: 1200| Loss: 6.888 | Top1: 0.208 | Estimated Time Remaining: 92830.14 seconds
+[01/09 18:24:01] __mp_main__ INFO: Batch: 1300| Loss: 6.874 | Top1: 0.209 | Estimated Time Remaining: 96473.22 seconds
+[01/09 18:42:29] __mp_main__ INFO: Batch: 1400| Loss: 6.862 | Top1: 0.225 | Estimated Time Remaining: 94787.21 seconds
+[01/09 19:01:03] __mp_main__ INFO: Batch: 1500| Loss: 6.849 | Top1: 0.242 | Estimated Time Remaining: 96346.27 seconds
+[01/09 19:20:30] __mp_main__ INFO: Batch: 1600| Loss: 6.836 | Top1: 0.260 | Estimated Time Remaining: 108922.01 seconds
+[01/09 19:40:10] __mp_main__ INFO: Batch: 1700| Loss: 6.824 | Top1: 0.277 | Estimated Time Remaining: 97701.44 seconds
+[01/09 20:00:00] __mp_main__ INFO: Batch: 1800| Loss: 6.812 | Top1: 0.288 | Estimated Time Remaining: 96502.66 seconds
+[01/09 20:19:33] __mp_main__ INFO: Batch: 1900| Loss: 6.801 | Top1: 0.316 | Estimated Time Remaining: 91586.79 seconds
+[01/09 20:38:44] __mp_main__ INFO: Batch: 2000| Loss: 6.788 | Top1: 0.336 | Estimated Time Remaining: 88983.04 seconds
+[01/09 20:58:21] __mp_main__ INFO: Batch: 2100| Loss: 6.776 | Top1: 0.355 | Estimated Time Remaining: 91891.62 seconds
+[01/09 21:17:37] __mp_main__ INFO: Batch: 2200| Loss: 6.763 | Top1: 0.385 | Estimated Time Remaining: 86830.39 seconds
+[01/09 21:36:57] __mp_main__ INFO: Batch: 2300| Loss: 6.751 | Top1: 0.398 | Estimated Time Remaining: 89940.04 seconds
+[01/09 21:56:04] __mp_main__ INFO: Batch: 2400| Loss: 6.738 | Top1: 0.423 | Estimated Time Remaining: 86044.68 seconds
+[01/09 22:15:05] __mp_main__ INFO: Batch: 2500| Loss: 6.726 | Top1: 0.449 | Estimated Time Remaining: 84748.14 seconds
+[01/09 22:34:06] __mp_main__ INFO: Batch: 2600| Loss: 6.712 | Top1: 0.482 | Estimated Time Remaining: 83913.08 seconds
+[01/09 22:53:24] __mp_main__ INFO: Batch: 2700| Loss: 6.699 | Top1: 0.509 | Estimated Time Remaining: 85426.47 seconds
+[01/09 23:12:31] __mp_main__ INFO: Batch: 2800| Loss: 6.685 | Top1: 0.534 | Estimated Time Remaining: 83245.57 seconds
+[01/09 23:31:57] __mp_main__ INFO: Batch: 2900| Loss: 6.671 | Top1: 0.558 | Estimated Time Remaining: 83353.50 seconds
+[01/09 23:50:24] __mp_main__ INFO: Batch: 3000| Loss: 6.658 | Top1: 0.601 | Estimated Time Remaining: 77947.24 seconds
+[01/10 00:09:01] __mp_main__ INFO: Batch: 3100| Loss: 6.645 | Top1: 0.636 | Estimated Time Remaining: 79424.89 seconds
+[01/10 00:27:53] __mp_main__ INFO: Batch: 3200| Loss: 6.630 | Top1: 0.678 | Estimated Time Remaining: 78183.61 seconds
+[01/10 00:46:42] __mp_main__ INFO: Batch: 3300| Loss: 6.615 | Top1: 0.707 | Estimated Time Remaining: 76135.54 seconds
+[01/10 01:05:58] __mp_main__ INFO: Batch: 3400| Loss: 6.601 | Top1: 0.765 | Estimated Time Remaining: 75898.29 seconds
+[01/10 01:24:46] __mp_main__ INFO: Batch: 3500| Loss: 6.585 | Top1: 0.808 | Estimated Time Remaining: 73533.87 seconds
+[01/10 01:43:09] __mp_main__ INFO: Batch: 3600| Loss: 6.570 | Top1: 0.844 | Estimated Time Remaining: 68584.67 seconds
+[01/10 02:00:35] __mp_main__ INFO: Batch: 3700| Loss: 6.554 | Top1: 0.875 | Estimated Time Remaining: 63230.13 seconds
+[01/10 02:17:48] __mp_main__ INFO: Batch: 3800| Loss: 6.538 | Top1: 0.919 | Estimated Time Remaining: 67553.11 seconds
+[01/10 02:35:01] __mp_main__ INFO: Batch: 3900| Loss: 6.523 | Top1: 0.978 | Estimated Time Remaining: 64245.70 seconds
+[01/10 02:52:52] __mp_main__ INFO: Batch: 4000| Loss: 6.506 | Top1: 1.040 | Estimated Time Remaining: 62931.55 seconds
+[01/10 03:10:36] __mp_main__ INFO: Batch: 4100| Loss: 6.490 | Top1: 1.090 | Estimated Time Remaining: 59584.87 seconds
+[01/11 02:27:54] __mp_main__ INFO: Namespace(config_file='./configs/config269.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 02:32:42] __mp_main__ INFO: Batch: 0| Loss: 7.380 | Top1: 0.000 | Estimated Time Remaining: 4684664.52 seconds
+[01/11 03:11:04] __mp_main__ INFO: Namespace(config_file='./configs/config50.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 03:12:30] __mp_main__ INFO: Namespace(config_file='./configs/config50.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 03:13:23] __mp_main__ INFO: Namespace(config_file='./configs/config50.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 03:14:09] __mp_main__ INFO: Batch: 0| Loss: 7.119 | Top1: 0.000 | Estimated Time Remaining: 30041.25 seconds
+[01/11 03:21:21] __mp_main__ INFO: Batch: 100| Loss: 7.206 | Top1: 0.031 | Estimated Time Remaining: 19066.17 seconds
+[01/11 03:30:25] __mp_main__ INFO: Namespace(config_file='./configs/config269.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 03:35:09] __mp_main__ INFO: Batch: 0| Loss: 7.380 | Top1: 0.000 | Estimated Time Remaining: 4653153.76 seconds
+[01/11 04:10:59] __mp_main__ INFO: Namespace(config_file='./configs/config269.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 04:15:28] __mp_main__ INFO: Batch: 0| Loss: 7.005 | Top1: 0.000 | Estimated Time Remaining: 17381648.67 seconds
+[01/11 05:27:29] __mp_main__ INFO: Batch: 20| Loss: 16.135 | Top1: 0.000 | Estimated Time Remaining: 17260005.55 seconds
+[01/11 05:40:37] __mp_main__ INFO: Namespace(config_file='./configs/config269.yaml', outdir='output', resume=None, world_size=4, rank=0, dist_url='tcp://localhost:23456', dist_backend='tccl', eval_only=False, export=None, gpu=0)
+[01/11 05:45:08] __mp_main__ INFO: Batch: 0| Loss: 7.330 | Top1: 0.000 | Estimated Time Remaining: 8851431.16 seconds
+[01/11 11:55:06] __mp_main__ INFO: Batch: 100| Loss: 8.038 | Top1: 0.000 | Estimated Time Remaining: 8917341.19 seconds
+[01/11 18:05:18] __mp_main__ INFO: Batch: 200| Loss: 7.483 | Top1: 0.062 | Estimated Time Remaining: 8826081.62 seconds
+[01/12 00:15:15] __mp_main__ INFO: Batch: 300| Loss: 7.295 | Top1: 0.042 | Estimated Time Remaining: 8836505.72 seconds
+[01/12 06:31:06] __mp_main__ INFO: Batch: 400| Loss: 7.200 | Top1: 0.031 | Estimated Time Remaining: 9097306.25 seconds

@@ -1,0 +1,10 @@
+mir_eval
+numpy
+tqdm
+# torch
+# torch_sdaa
+colorednoise
+librosa
+tensorboard
+pandas
+git+https://gitee.com/xiwei777/tcap_dllogger.git

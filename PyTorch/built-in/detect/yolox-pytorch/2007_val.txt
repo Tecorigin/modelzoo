@@ -1,0 +1,736 @@
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000002.jpg 139,200,207,301,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000010.jpg 87,97,258,427,12 133,72,245,284,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000023.jpg 9,230,245,500,1 230,220,334,500,1 2,1,117,369,14 3,2,243,462,14 225,1,334,486,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000027.jpg 174,101,349,351,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000064.jpg 1,23,451,500,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000074.jpg 58,61,475,283,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000098.jpg 69,70,317,162,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000132.jpg 43,66,279,363,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000138.jpg 6,56,154,285,14 145,58,283,258,14 224,54,440,332,14 363,96,500,332,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000141.jpg 25,53,418,399,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000150.jpg 186,78,319,264,12 353,54,379,108,14 415,51,436,109,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000155.jpg 122,160,168,255,1 223,288,305,419,1 89,7,137,89,14 114,120,171,208,14 221,250,299,359,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000160.jpg 2,242,336,373,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000163.jpg 52,22,308,328,14 26,108,456,396,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000169.jpg 23,28,480,284,6 102,3,161,50,14 439,23,500,178,6 419,39,444,81,14 454,36,487,71,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000179.jpg 269,420,366,467,3 85,29,301,493,3 1,419,77,465,3 221,412,246,457,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000190.jpg 426,197,500,273,5 235,216,323,258,5 51,210,152,308,5 1,209,55,313,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000237.jpg 232,37,337,201,14 55,47,387,332,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000238.jpg 1,1,293,373,18 443,252,490,374,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000241.jpg 356,183,500,280,3 60,109,142,213,3 246,134,348,217,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000257.jpg 82,1,183,57,19 20,142,222,375,14 175,68,472,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000264.jpg 2,82,333,500,13 115,47,309,475,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000269.jpg 185,264,205,320,4 298,245,326,312,4 227,56,497,213,14 91,59,245,261,14 37,134,203,332,14 226,75,413,274,14 258,114,477,332,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000285.jpg 224,77,462,375,14 37,97,231,375,14 369,203,437,375,8 120,220,229,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000294.jpg 330,11,454,368,2 55,93,167,371,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000296.jpg 427,125,500,181,6 44,120,459,222,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000321.jpg 44,167,249,458,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000354.jpg 153,116,356,375,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000374.jpg 48,85,499,374,13 125,2,316,344,14 44,4,128,167,14 315,31,352,112,14 217,40,248,84,14 21,43,51,127,14 471,36,497,126,14 447,36,472,117,14 361,41,374,103,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000376.jpg 229,150,265,175,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000385.jpg 154,194,281,372,8 373,173,500,322,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000389.jpg 7,256,194,434,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000404.jpg 133,89,394,321,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000408.jpg 51,114,347,499,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000431.jpg 32,89,497,360,0 85,316,125,340,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000451.jpg 7,15,462,330,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000452.jpg 50,121,295,338,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000455.jpg 213,35,302,212,14 125,79,500,306,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000460.jpg 259,67,471,372,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000468.jpg 1,143,217,500,14 6,191,330,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000469.jpg 16,28,454,315,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000470.jpg 194,89,415,335,12 145,132,173,230,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000501.jpg 22,22,349,492,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000504.jpg 341,102,500,406,9 36,34,79,123,14 2,44,36,120,14 29,42,41,64,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000514.jpg 36,1,500,374,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000527.jpg 384,160,426,238,14 232,156,286,254,14 154,163,222,261,14 53,82,86,149,14 145,208,259,293,1 219,194,323,263,1 369,194,452,259,1 350,170,412,220,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000542.jpg 1,1,497,361,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000543.jpg 22,86,433,344,6 23,96,91,146,6 298,87,500,243,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000552.jpg 4,122,498,258,0 98,75,426,167,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000560.jpg 56,328,204,390,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000574.jpg 160,208,354,355,16 243,291,313,341,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000579.jpg 263,159,309,186,6 2,139,156,225,6 318,163,419,296,13 315,123,389,259,14 333,126,415,271,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000581.jpg 140,184,272,292,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000593.jpg 78,74,382,258,6 270,63,500,228,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000603.jpg 47,151,417,341,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000611.jpg 209,2,500,291,11 118,70,181,297,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000629.jpg 34,84,500,184,18 87,100,107,124,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000643.jpg 161,112,251,375,14 250,157,339,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000660.jpg 169,76,500,322,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000668.jpg 15,107,456,262,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000670.jpg 189,46,500,375,14 2,61,202,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000683.jpg 124,2,284,333,14 284,48,500,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000698.jpg 146,69,228,369,15 201,196,300,358,15 56,355,131,436,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000705.jpg 3,18,489,219,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000707.jpg 93,150,134,187,19 292,289,363,500,19 78,176,139,281,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000709.jpg 120,63,334,355,14 119,57,394,352,14 377,122,473,309,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000714.jpg 190,56,439,300,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000715.jpg 28,96,462,355,6 196,58,245,149,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000717.jpg 207,278,297,375,8 230,39,308,341,14 182,131,240,344,14 15,199,146,372,14 302,128,391,373,14 440,128,500,375,14 393,128,461,369,14 47,146,149,373,14 3,151,36,258,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000720.jpg 217,118,305,263,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000730.jpg 5,52,495,234,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000750.jpg 22,2,375,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000771.jpg 93,143,221,284,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000776.jpg 17,26,481,193,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000801.jpg 55,139,243,221,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000807.jpg 34,31,200,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000833.jpg 12,6,450,382,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000840.jpg 1,179,288,345,17 334,75,385,135,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000843.jpg 170,127,312,219,19 351,54,426,304,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000849.jpg 23,56,159,328,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000856.jpg 174,68,311,314,14 5,190,500,375,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000858.jpg 288,146,404,250,5 71,192,104,293,14 145,195,169,284,14 105,206,119,247,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000862.jpg 304,142,354,160,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000866.jpg 133,159,376,365,12 187,107,277,298,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000869.jpg 144,192,167,243,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000871.jpg 8,114,491,292,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000881.jpg 245,156,432,256,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000886.jpg 51,3,436,356,14 4,106,351,356,8 450,124,489,195,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000892.jpg 350,191,427,375,14 190,212,344,375,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000894.jpg 86,88,265,412,13 5,90,35,106,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000896.jpg 2,189,256,294,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000911.jpg 1,147,110,319,6 78,47,383,288,5 387,208,436,279,1 411,142,456,277,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000917.jpg 2,2,265,355,15 265,163,316,214,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000928.jpg 24,81,204,222,7 256,116,452,269,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000951.jpg 226,73,245,127,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000952.jpg 15,95,246,332,14 196,103,412,332,14 465,189,492,236,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000963.jpg 1,4,381,333,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000975.jpg 111,61,485,462,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000979.jpg 93,261,198,394,13 98,168,190,364,14 3,143,74,404,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000980.jpg 115,46,500,321,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000994.jpg 47,124,153,213,19 310,147,419,236,8 210,188,472,374,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/000995.jpg 1,72,281,314,3 402,128,500,326,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001012.jpg 225,117,307,206,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001021.jpg 138,34,465,375,8 1,51,183,375,14 199,40,401,375,14 75,223,121,290,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001022.jpg 5,139,490,295,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001028.jpg 52,231,301,500,14 7,29,406,493,14 359,164,406,229,14 306,174,357,232,14 285,173,321,221,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001041.jpg 143,138,283,265,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001080.jpg 3,45,500,227,0 137,213,191,255,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001083.jpg 163,55,318,189,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001099.jpg 3,97,500,327,0 66,257,86,301,14 409,240,433,319,14 86,241,106,298,14 433,239,468,318,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001103.jpg 135,121,333,366,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001114.jpg 206,110,401,302,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001125.jpg 266,174,434,272,6 210,171,312,227,6 1,176,223,333,6 164,149,199,220,14 302,152,342,312,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001156.jpg 100,80,414,324,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001162.jpg 196,125,489,327,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001192.jpg 294,172,372,317,11 148,107,216,234,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001197.jpg 33,26,496,313,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001199.jpg 305,254,500,375,13 86,177,395,375,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001204.jpg 81,192,475,373,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001205.jpg 88,76,314,263,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001223.jpg 15,120,486,254,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001224.jpg 101,153,187,280,1 215,166,302,284,1 328,173,433,305,1 274,156,355,262,1 95,78,189,223,14 206,82,298,248,14 326,91,433,247,14 274,87,349,238,14 104,2,135,79,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001238.jpg 174,147,257,320,14 171,227,252,358,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001247.jpg 237,109,459,167,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001256.jpg 385,194,429,352,14 443,188,500,322,1 416,196,472,315,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001262.jpg 41,31,359,372,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001273.jpg 53,132,392,419,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001277.jpg 2,31,500,289,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001319.jpg 68,204,254,375,8 111,99,266,340,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001321.jpg 1,98,456,333,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001322.jpg 1,15,500,375,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001329.jpg 288,229,450,333,1 58,149,82,192,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001335.jpg 1,182,93,271,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001347.jpg 113,65,450,375,14 203,63,493,357,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001353.jpg 121,108,339,331,11 95,2,368,332,14 3,26,95,330,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001374.jpg 323,204,500,374,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001382.jpg 96,227,288,324,6 298,257,421,327,6 421,254,500,333,6 305,227,470,273,6 284,246,329,284,6 16,231,105,287,6 46,241,70,314,14 1,239,25,315,14 76,233,104,295,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001391.jpg 7,174,348,375,17 360,16,407,86,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001397.jpg 128,121,214,263,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001408.jpg 114,245,178,448,4 56,107,230,387,14 20,68,50,167,4 210,1,333,108,14 84,87,333,366,14 119,1,184,130,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001416.jpg 208,78,401,192,16 19,71,183,195,16 1,106,121,249,16 1,185,324,328,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001420.jpg 192,109,340,270,12 281,80,364,268,14 436,148,500,306,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001421.jpg 189,1,372,438,14 116,181,374,476,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001427.jpg 153,199,270,341,1 249,159,332,275,1 229,58,319,266,14 159,114,267,297,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001430.jpg 1,269,250,374,10 100,154,235,286,14 211,146,303,352,14 245,154,398,374,14 316,1,418,66,19 344,83,428,214,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001437.jpg 3,78,44,264,15 43,57,160,241,15 19,100,97,277,15 143,44,394,129,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001440.jpg 49,75,402,272,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001455.jpg 125,176,345,374,1 147,124,300,345,14 51,125,92,187,14 100,122,153,182,14 415,89,500,126,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001464.jpg 31,91,60,122,15 61,92,87,123,15 89,92,121,123,15 75,28,115,93,15 120,91,150,122,15 150,91,178,122,15 288,58,320,104,15 315,59,347,95,15 342,50,376,87,15 368,43,394,81,15 391,37,415,72,15 412,19,434,65,15 351,126,376,155,15 224,103,258,140,15 169,98,222,141,15 127,120,171,148,15 70,119,125,160,15 323,150,354,186,15 292,158,323,190,15 269,140,295,178,15 227,139,266,184,15 211,151,229,176,15 176,152,214,188,15 145,147,176,188,15 70,153,149,213,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001473.jpg 64,106,209,500,14 183,88,331,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001492.jpg 185,168,487,316,6 45,157,104,187,6 1,158,43,189,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001511.jpg 20,42,489,280,6 482,70,500,174,14 384,71,402,107,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001524.jpg 185,158,216,230,11 139,84,205,212,14 281,70,339,210,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001529.jpg 36,170,111,277,19 160,157,450,317,17 354,273,475,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001537.jpg 414,87,500,243,14 104,16,367,332,14 385,212,408,278,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001545.jpg 132,171,338,240,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001546.jpg 94,59,410,330,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001552.jpg 1,30,470,375,6 1,70,132,238,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001565.jpg 98,107,461,243,18 1,115,87,218,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001568.jpg 3,42,400,372,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001574.jpg 31,119,214,500,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001582.jpg 338,176,500,365,7 1,78,124,168,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001598.jpg 269,262,312,311,16 222,252,247,297,16 168,258,198,291,16 150,243,173,267,16 355,234,380,248,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001614.jpg 158,43,436,372,9 100,231,154,319,9 416,100,500,364,9 367,252,440,315,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001628.jpg 104,74,420,344,12 200,55,320,217,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001630.jpg 26,14,54,114,14 190,27,268,214,14 74,95,200,358,14 155,196,343,500,14 333,32,373,255,14 85,231,200,428,1 149,358,340,500,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001642.jpg 11,2,331,463,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001657.jpg 291,258,408,361,11 323,72,433,280,8 1,43,339,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001674.jpg 90,319,360,375,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001682.jpg 3,86,372,333,14 34,11,500,330,14 302,60,500,316,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001714.jpg 127,302,208,357,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001716.jpg 265,181,321,234,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001741.jpg 1,111,115,251,9 332,133,375,156,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001760.jpg 1,155,107,377,14 196,118,272,344,14 257,129,343,348,14 269,255,375,423,14 167,334,323,500,14 11,284,124,500,14 149,274,228,349,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001763.jpg 281,119,500,375,7 1,24,330,366,11 1,48,500,375,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001764.jpg 278,103,349,147,9 221,106,282,148,9 134,103,223,148,9 98,97,144,133,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001767.jpg 110,54,500,375,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001769.jpg 65,100,252,375,12 249,110,458,375,12 287,39,429,234,14 169,25,289,204,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001781.jpg 242,3,455,331,14 380,4,500,308,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001785.jpg 62,1,500,332,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001787.jpg 147,101,277,347,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001794.jpg 66,64,140,320,12 32,23,154,200,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001803.jpg 224,202,365,259,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001811.jpg 1,167,40,241,15 196,169,222,195,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001825.jpg 1,39,403,300,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001845.jpg 27,177,230,343,6 3,194,37,266,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001850.jpg 108,125,500,271,0 253,209,280,295,14 227,221,257,293,14 227,185,256,301,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001852.jpg 72,105,232,305,16 184,58,500,352,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001870.jpg 4,16,400,400,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001873.jpg 203,87,436,230,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001878.jpg 2,1,500,346,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001886.jpg 92,43,192,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001914.jpg 202,215,344,476,11 88,27,291,390,14 1,55,246,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001936.jpg 84,185,134,208,0 202,153,255,178,0 249,189,298,211,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001948.jpg 65,52,398,306,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001952.jpg 26,26,475,372,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001960.jpg 108,138,264,332,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001962.jpg 407,99,500,333,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001980.jpg 218,52,500,375,14 164,18,500,375,14 17,181,135,267,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001983.jpg 61,123,348,226,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001988.jpg 10,151,333,495,1 78,66,269,392,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/001999.jpg 391,74,460,153,8 84,54,262,375,14 174,87,234,165,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002001.jpg 280,71,312,90,0 170,110,206,128,0 183,190,216,204,0 189,206,223,221,0 249,190,283,204,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002023.jpg 27,47,483,300,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002024.jpg 337,124,500,273,5 104,88,343,301,5 1,109,71,297,5 174,160,207,199,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002054.jpg 6,51,498,400,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002086.jpg 281,78,405,179,19 31,134,139,237,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002088.jpg 1,30,470,332,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002091.jpg 1,1,493,357,3 316,117,366,209,14 186,127,220,206,14 48,146,93,216,14 1,184,26,257,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002101.jpg 142,360,333,487,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002142.jpg 178,86,316,333,14 292,71,409,333,14 5,130,62,218,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002164.jpg 1,35,463,345,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002203.jpg 44,136,213,326,11 10,41,436,338,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002219.jpg 220,65,314,177,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002220.jpg 1,41,180,371,14 121,39,365,375,14 305,76,500,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002221.jpg 148,58,375,453,14 1,19,138,281,8 179,2,195,51,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002248.jpg 65,2,500,301,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002251.jpg 2,25,500,375,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002255.jpg 87,70,311,269,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002259.jpg 69,75,500,196,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002270.jpg 70,49,475,317,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002309.jpg 61,43,400,319,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002319.jpg 73,165,375,413,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002323.jpg 70,110,379,283,9 76,115,177,151,9 295,101,364,145,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002335.jpg 1,54,500,375,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002349.jpg 159,164,298,242,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002364.jpg 169,108,397,276,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002366.jpg 231,13,490,316,13 2,180,215,315,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002402.jpg 332,3,351,51,14 250,16,277,54,14 122,22,146,73,14 399,1,500,74,6 55,50,464,240,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002445.jpg 13,89,349,490,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002472.jpg 390,184,414,246,14 422,177,443,247,14 479,181,500,244,14 4,138,200,245,0 136,146,384,235,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002478.jpg 280,250,483,335,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002497.jpg 193,159,393,280,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002508.jpg 67,52,444,293,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002518.jpg 254,128,362,323,14 84,151,121,220,14 141,138,225,246,14 147,198,181,298,4 182,201,216,292,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002522.jpg 1,12,495,286,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002525.jpg 1,234,461,372,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002530.jpg 109,104,391,288,5 2,164,117,278,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002550.jpg 32,50,333,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002553.jpg 114,28,457,377,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002557.jpg 421,76,466,172,15 281,65,342,112,15 330,46,410,113,15 196,2,261,108,15 118,3,212,114,15 100,87,146,123,15 63,89,103,128,15 38,1,105,70,15 25,143,94,245,15 169,177,224,230,15 133,173,182,215,15 86,184,143,234,15 228,188,291,238,15 277,151,345,222,15 340,179,405,267,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002566.jpg 238,144,367,196,5 34,181,104,207,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002572.jpg 135,98,173,195,4 118,142,136,195,4 370,156,500,327,8 339,125,429,273,8 121,30,150,107,14 148,22,182,106,14 201,18,245,86,14 243,23,288,87,14 282,89,401,288,14 242,85,309,175,14 33,73,210,333,14 220,82,263,177,14 197,77,239,175,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002584.jpg 84,7,301,484,14 1,318,91,500,14 253,213,272,269,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002610.jpg 1,241,213,344,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002624.jpg 109,142,281,375,14 254,150,360,256,14 217,245,500,375,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002629.jpg 250,168,339,197,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002635.jpg 137,109,419,281,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002651.jpg 256,57,500,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002666.jpg 3,174,299,448,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002690.jpg 82,296,327,500,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002700.jpg 257,63,412,373,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002704.jpg 12,97,332,500,6 106,83,297,166,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002708.jpg 71,124,312,333,11 254,69,362,194,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002714.jpg 168,91,246,357,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002735.jpg 54,168,334,433,12 135,82,256,270,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002771.jpg 63,7,265,242,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002793.jpg 1,255,145,294,6 139,250,289,293,6 331,94,470,173,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002797.jpg 381,192,422,257,13 383,170,420,243,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002801.jpg 2,2,500,375,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002832.jpg 150,125,166,180,14 135,121,153,186,14 112,115,143,195,14 91,129,108,178,14 5,109,43,235,14 25,78,93,255,14 166,76,314,208,18 304,50,500,226,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002819.jpg 418,134,480,283,12 78,68,410,276,12 197,36,313,207,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002833.jpg 63,41,498,330,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002845.jpg 284,196,326,216,16 14,265,175,347,16 140,199,186,235,16 220,210,248,229,16 254,204,279,227,16 230,201,256,220,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002896.jpg 124,71,253,500,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002913.jpg 176,108,473,166,18 196,122,217,183,14 13,123,39,182,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002916.jpg 83,39,231,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002918.jpg 40,56,324,331,14 420,188,500,331,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002928.jpg 93,55,373,292,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002937.jpg 72,57,369,298,6 283,43,500,179,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002961.jpg 15,7,500,309,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002982.jpg 272,278,353,500,4 14,21,299,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/002991.jpg 72,91,309,500,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003008.jpg 211,127,263,146,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003010.jpg 52,35,113,198,4 104,36,160,196,4 401,25,458,188,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003048.jpg 177,113,470,308,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003059.jpg 217,129,275,210,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003061.jpg 286,11,446,220,8 93,25,259,158,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003074.jpg 298,167,353,196,2 206,192,260,222,2 146,219,196,248,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003075.jpg 145,48,328,500,14 66,5,182,356,14 4,132,167,486,1 248,143,389,500,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003078.jpg 15,181,75,261,8 74,174,110,249,8 303,202,387,317,8 468,188,500,307,8 400,188,465,296,8 379,137,468,296,14 341,146,397,281,14 89,19,323,494,14 196,15,338,481,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003085.jpg 174,81,327,266,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003094.jpg 19,30,500,259,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003098.jpg 4,86,429,352,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003121.jpg 2,16,282,333,12 210,50,482,333,14 468,170,500,333,14 438,146,489,241,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003131.jpg 340,214,410,330,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003141.jpg 391,188,457,340,8 389,219,500,375,8 96,203,404,375,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003157.jpg 137,57,303,185,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003165.jpg 42,52,273,301,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003166.jpg 2,73,500,376,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003172.jpg 43,126,192,334,14 150,94,321,334,14 246,60,418,334,14 321,21,500,322,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003201.jpg 1,53,166,260,9 137,25,416,298,9 320,30,500,261,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003205.jpg 28,76,306,376,14 11,168,322,447,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003219.jpg 14,162,334,500,10 104,126,120,185,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003229.jpg 347,161,433,225,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003238.jpg 59,77,408,397,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003251.jpg 120,159,392,340,10 278,226,446,375,8 258,158,353,283,8 109,174,218,330,8 135,148,202,233,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003255.jpg 33,103,500,375,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003260.jpg 261,111,326,198,19 11,58,112,449,14 118,76,201,431,14 187,72,261,425,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003262.jpg 179,10,339,304,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003269.jpg 359,1,500,373,4 217,2,357,373,4 54,1,220,374,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003276.jpg 21,43,485,359,6 320,69,370,171,14 128,81,161,122,14 159,77,188,118,14 97,80,125,128,14 433,48,487,212,14 471,62,500,243,14 417,68,443,140,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003277.jpg 1,104,348,375,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003295.jpg 258,68,339,300,14 111,139,284,336,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003297.jpg 101,116,257,274,15 26,301,208,500,8 1,214,342,488,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003305.jpg 145,184,234,302,13 146,152,221,259,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003316.jpg 204,112,406,340,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003336.jpg 3,61,242,375,13 291,21,419,91,13 144,29,247,89,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003344.jpg 139,133,415,277,6 116,117,176,154,6 59,89,119,278,14 213,90,257,103,6 245,89,291,103,6 291,89,338,107,6 405,90,451,111,6 436,87,493,115,6 473,89,500,116,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003348.jpg 164,231,430,354,6 3,262,83,304,6 75,264,128,302,6 119,266,155,298,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003368.jpg 21,1,500,333,14 14,20,250,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003369.jpg 259,212,284,310,14 225,215,252,310,14 1,1,447,299,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003394.jpg 35,26,371,375,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003410.jpg 66,149,240,237,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003411.jpg 2,15,500,375,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003435.jpg 255,17,500,334,14 55,151,266,334,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003436.jpg 74,138,135,271,12 151,101,291,358,12 278,92,439,361,12 443,180,477,236,15 122,92,150,135,14 196,58,244,116,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003445.jpg 25,115,493,223,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003464.jpg 1,84,445,288,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003471.jpg 147,54,235,142,16 308,48,468,135,16 242,77,500,333,16 98,135,344,333,16 12,98,222,158,16 215,52,421,141,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003486.jpg 8,104,204,181,6 5,102,333,482,6 1,79,43,181,14 171,84,189,132,14 150,93,174,124,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003490.jpg 71,99,227,333,11 236,236,358,333,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003503.jpg 456,191,500,237,6 1,187,106,244,6 102,76,378,272,5 1,200,35,321,14 16,183,58,281,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003504.jpg 2,41,499,373,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003521.jpg 144,151,351,375,8 357,108,439,279,8 330,110,500,375,14 147,135,328,375,14 1,2,112,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003533.jpg 74,126,123,166,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003535.jpg 10,52,305,264,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003560.jpg 98,56,479,354,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003580.jpg 1,6,352,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003596.jpg 78,107,429,304,6 233,72,286,96,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003602.jpg 3,54,170,333,14 85,47,302,333,14 267,34,500,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003619.jpg 128,241,223,311,2 241,79,321,142,2 175,115,328,348,14 200,44,330,212,14 308,43,377,225,14 178,45,205,164,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003620.jpg 74,1,451,257,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003630.jpg 202,139,334,204,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003632.jpg 76,73,500,368,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003634.jpg 268,102,471,215,6 46,105,200,195,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003637.jpg 2,152,465,251,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003639.jpg 227,5,500,319,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003646.jpg 200,142,276,302,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003652.jpg 334,234,500,269,3 291,275,500,332,3 237,299,500,370,3 334,217,483,244,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003667.jpg 16,45,421,445,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003668.jpg 27,157,376,333,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003719.jpg 6,1,500,375,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003729.jpg 199,1,266,128,4 405,1,500,227,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003768.jpg 36,69,259,383,1 130,11,298,365,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003818.jpg 170,137,341,210,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003822.jpg 51,47,412,499,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003839.jpg 211,210,276,301,14 218,219,260,284,14 263,205,329,304,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003853.jpg 292,176,358,245,8 348,129,388,180,8 346,143,492,245,14 2,157,119,245,14 63,127,134,214,14 33,100,73,148,14 256,55,338,183,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003859.jpg 188,15,227,196,4 112,1,277,128,14 1,120,375,500,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003868.jpg 2,235,500,374,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003886.jpg 24,79,458,228,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003889.jpg 345,75,427,295,12 157,79,282,294,12 52,105,138,297,12 337,32,439,193,14 122,35,239,188,14 1,58,102,308,14 51,48,123,196,14 431,119,472,166,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003911.jpg 211,9,345,95,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003943.jpg 359,310,373,361,4 101,198,186,327,14 275,250,323,316,14 318,256,385,333,14 376,221,480,302,14 412,247,499,375,14 169,224,296,375,14 39,276,158,375,14 218,132,298,177,15 39,119,147,161,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003954.jpg 6,118,135,180,6 159,148,278,217,6 156,227,316,324,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003968.jpg 45,346,500,489,1 48,13,472,483,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003970.jpg 96,115,230,437,12 93,88,254,293,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003973.jpg 1,163,208,356,5 204,284,356,340,6 472,276,500,344,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003975.jpg 3,2,288,328,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003977.jpg 19,1,484,500,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003982.jpg 236,192,295,230,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003984.jpg 137,36,500,261,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003991.jpg 79,53,500,264,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/003995.jpg 1,52,500,375,14 310,105,458,228,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004027.jpg 223,260,280,320,15 178,22,333,401,15 66,38,239,415,15 86,256,201,449,15 1,214,124,417,15 78,365,146,460,15 17,348,71,433,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004029.jpg 10,68,489,195,17 443,52,488,129,7 13,51,59,118,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004076.jpg 77,53,415,280,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004081.jpg 174,96,348,209,9 284,103,500,375,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004090.jpg 163,163,224,333,14 223,169,283,333,14 291,166,355,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004097.jpg 398,148,500,205,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004099.jpg 57,178,333,406,5 174,239,333,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004108.jpg 5,127,493,327,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004165.jpg 118,1,401,330,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004182.jpg 213,129,281,207,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004193.jpg 144,187,246,287,19 277,70,289,111,4 290,68,305,107,4 216,289,380,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004194.jpg 320,274,401,397,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004200.jpg 18,53,151,252,9 160,53,266,246,9 258,31,373,251,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004201.jpg 138,121,487,375,14 114,100,485,375,14 12,190,394,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004215.jpg 8,2,405,374,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004249.jpg 175,158,422,251,6 210,104,229,156,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004264.jpg 143,61,325,308,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004316.jpg 88,114,284,294,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004320.jpg 158,160,334,263,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004322.jpg 3,350,50,489,4 3,37,241,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004328.jpg 44,117,147,265,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004344.jpg 102,224,202,407,1 103,140,196,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004358.jpg 30,93,403,443,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004365.jpg 57,78,484,282,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004370.jpg 207,157,242,201,4 106,59,404,332,14 3,2,261,330,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004374.jpg 180,174,277,226,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004403.jpg 162,29,309,316,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004408.jpg 391,69,500,334,14 99,69,405,333,14 197,30,338,247,14 1,19,91,206,14 100,18,210,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004418.jpg 161,238,300,426,14 38,151,176,260,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004427.jpg 94,32,281,375,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004435.jpg 157,45,327,333,14 302,151,376,333,14 12,199,185,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004460.jpg 1,2,436,374,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004468.jpg 6,5,157,498,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004498.jpg 126,159,215,284,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004520.jpg 2,117,265,478,14 369,72,500,281,14 170,51,447,478,14 1,25,235,299,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004522.jpg 232,186,397,308,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004525.jpg 373,1,500,120,8 48,1,500,334,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004532.jpg 1,72,497,310,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004544.jpg 70,53,465,282,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004549.jpg 139,112,227,190,19 354,147,499,270,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004552.jpg 33,30,433,312,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004553.jpg 140,105,498,334,12 51,164,95,297,14 242,35,368,251,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004554.jpg 80,16,475,284,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004584.jpg 6,89,498,327,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004588.jpg 54,180,146,332,14 57,148,147,302,14 186,157,237,233,14 220,139,302,195,14 224,176,309,233,14 273,174,383,376,14 217,213,342,381,14 234,250,253,295,4 200,274,214,320,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004590.jpg 56,84,312,222,10 201,15,360,157,14 278,70,367,222,14 346,105,400,222,14 1,31,83,222,14 47,3,126,162,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004597.jpg 83,181,120,255,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004603.jpg 6,137,359,224,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004604.jpg 2,52,172,188,6 265,58,309,104,14 411,19,477,272,14 313,1,430,315,14 182,103,332,174,13 58,132,394,280,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004623.jpg 51,83,428,358,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004624.jpg 250,115,399,281,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004625.jpg 82,89,433,375,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004648.jpg 84,184,95,218,14 440,190,461,220,14 468,188,486,219,14 146,166,425,216,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004660.jpg 1,129,40,163,6 440,86,458,123,14 216,89,347,167,14 3,89,499,353,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004666.jpg 21,124,336,280,5 167,195,199,298,14 211,195,231,292,14 238,192,274,261,14 270,192,298,250,14 286,182,320,263,14 444,176,477,250,14 468,175,496,236,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004674.jpg 2,36,500,332,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004675.jpg 3,46,374,150,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004697.jpg 82,2,421,273,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004712.jpg 101,106,380,375,14 15,156,43,214,4 2,146,32,209,4 164,114,229,224,8 406,62,500,269,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004735.jpg 1,206,291,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004743.jpg 1,2,500,375,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004754.jpg 1,270,133,500,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004806.jpg 43,195,316,296,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004810.jpg 8,238,186,340,6 180,226,254,290,6 263,202,312,245,6 358,212,385,283,14 413,219,448,305,14 389,209,420,287,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004814.jpg 1,33,500,265,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004822.jpg 179,28,373,317,14 184,65,465,356,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004830.jpg 104,110,418,212,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004833.jpg 1,1,355,375,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004835.jpg 4,2,276,333,14 295,3,500,332,14 1,194,272,333,1 284,171,500,333,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004845.jpg 3,1,334,333,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004853.jpg 33,84,447,219,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004862.jpg 1,358,50,500,8 232,366,260,393,15 227,295,269,351,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004871.jpg 67,88,478,361,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004877.jpg 101,106,380,293,2 462,114,500,208,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004879.jpg 262,158,332,202,1 269,136,309,192,14 174,131,197,189,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004883.jpg 10,89,488,217,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004893.jpg 241,130,307,189,15 131,245,241,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004899.jpg 144,1,500,333,3 58,116,257,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004906.jpg 131,79,255,249,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004917.jpg 100,123,378,332,13 167,89,298,304,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004919.jpg 310,32,429,261,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004929.jpg 215,21,500,375,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004930.jpg 40,250,327,333,1 48,19,353,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004933.jpg 148,163,227,200,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004934.jpg 178,11,500,333,7 2,2,499,332,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004936.jpg 2,1,500,357,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004950.jpg 77,23,213,195,12 100,9,176,113,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004957.jpg 148,11,494,364,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004964.jpg 111,182,345,289,17 433,203,500,294,8 420,63,486,207,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004963.jpg 68,41,475,304,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004965.jpg 43,400,152,471,6 152,416,281,500,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/004990.jpg 15,102,448,365,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005001.jpg 146,120,309,333,16 125,67,204,252,16 309,138,496,333,16 310,50,442,165,16 1,1,160,287,16 174,12,291,141,16 126,2,193,71,16 4,199,85,333,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005010.jpg 49,138,357,312,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005033.jpg 107,122,478,348,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005043.jpg 309,200,426,227,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005058.jpg 131,266,177,304,16 86,285,127,315,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005066.jpg 102,57,401,347,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005069.jpg 1,36,337,241,18 142,224,243,394,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005072.jpg 4,78,456,299,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005085.jpg 118,334,293,482,10 220,348,348,500,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005121.jpg 30,91,205,333,11 344,66,500,333,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005123.jpg 1,90,495,195,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005124.jpg 179,68,500,324,9 3,33,271,324,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005125.jpg 435,129,475,195,14 61,54,478,333,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005136.jpg 22,82,483,297,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005165.jpg 61,71,473,333,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005167.jpg 242,169,270,215,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005184.jpg 358,178,411,269,15 317,224,396,335,8 179,301,296,375,8 167,262,275,375,8 257,177,348,356,14 294,127,358,312,14 181,178,337,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005187.jpg 51,100,298,295,19 62,117,231,253,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005192.jpg 272,41,500,146,6 54,15,479,310,6 1,39,197,230,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005218.jpg 140,70,401,262,8 114,96,253,357,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005229.jpg 1,1,500,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005241.jpg 102,1,500,349,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005247.jpg 88,128,416,375,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005274.jpg 282,103,435,358,11 170,229,277,341,11 102,62,422,344,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005275.jpg 32,131,478,331,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005283.jpg 303,87,474,375,14 1,99,146,375,14 150,20,345,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005299.jpg 124,23,449,318,12 1,40,286,318,12 156,1,223,47,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005302.jpg 111,193,137,243,8 142,191,166,240,8 187,191,214,237,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005307.jpg 256,170,356,259,7 3,55,378,341,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005337.jpg 284,99,357,130,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005347.jpg 276,199,450,313,13 282,169,335,254,13 60,74,167,313,14 320,138,353,205,14 348,154,381,204,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005393.jpg 53,46,432,175,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005395.jpg 253,209,292,238,16 287,209,312,241,16 345,202,382,229,16 406,224,457,267,16 172,195,207,220,16 147,195,179,215,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005402.jpg 61,127,309,287,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005403.jpg 134,121,283,191,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005444.jpg 109,88,394,375,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005447.jpg 94,158,416,292,17 177,121,263,323,14 284,128,376,305,14 255,117,292,147,6 360,124,390,153,6 338,126,366,149,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005474.jpg 6,8,351,292,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005483.jpg 63,72,376,230,6 1,150,89,257,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005486.jpg 41,71,454,322,6 252,69,500,195,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005522.jpg 429,96,447,130,14 454,93,470,131,14 272,91,306,183,14 116,92,146,216,14 86,108,111,160,14 59,104,82,160,14 1,115,94,312,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005538.jpg 115,174,278,274,7 45,280,163,416,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005547.jpg 171,175,320,368,9 48,150,447,347,6 439,148,471,269,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005560.jpg 141,160,407,348,1 184,54,296,278,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005568.jpg 28,146,236,287,12 272,143,482,294,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005571.jpg 22,74,454,311,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005586.jpg 116,107,212,301,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005587.jpg 244,113,332,208,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005596.jpg 180,75,248,163,14 90,82,126,199,14 4,73,107,456,14 102,174,279,397,14 174,157,213,209,14 203,146,268,249,14 94,293,221,488,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005612.jpg 113,4,270,244,14 1,30,153,312,14 235,59,270,113,14 93,101,111,119,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005616.jpg 36,78,401,175,3 394,94,500,146,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005668.jpg 2,131,185,373,11 167,117,338,373,11 293,112,500,324,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005683.jpg 59,1,500,316,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005695.jpg 71,129,331,499,14 171,196,330,486,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005696.jpg 4,101,325,436,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005702.jpg 38,227,292,500,1 76,63,327,465,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005707.jpg 401,203,466,246,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005709.jpg 154,54,293,257,14 76,130,313,287,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005716.jpg 1,7,295,297,14 368,1,500,206,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005722.jpg 45,149,391,375,12 206,118,297,374,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005732.jpg 349,232,450,406,12 249,209,336,408,12 38,171,195,401,12 348,166,453,385,14 229,157,351,374,14 44,115,173,373,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005738.jpg 58,92,378,270,6 1,103,107,231,6 227,85,247,102,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005740.jpg 255,146,365,312,2 1,26,274,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005746.jpg 261,69,500,234,5 203,118,340,351,14 1,180,23,306,14 14,192,178,280,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005751.jpg 220,121,323,213,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005763.jpg 101,135,148,175,14 182,148,224,172,14 66,130,299,258,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005785.jpg 172,114,331,251,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005802.jpg 94,54,378,306,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005821.jpg 111,232,171,315,15 263,209,311,289,15 199,200,246,254,15 6,143,95,230,15 171,198,195,251,15 355,184,481,354,8 461,171,500,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005822.jpg 161,200,422,500,14 80,19,491,500,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005827.jpg 351,65,450,161,19 18,107,231,344,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005844.jpg 76,67,216,312,8 102,52,278,350,8 199,84,320,292,8 232,76,396,329,8 157,110,390,361,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005848.jpg 60,173,330,408,1 83,48,301,320,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005858.jpg 160,25,206,75,8 224,20,256,82,8 339,22,383,76,8 293,20,338,75,8 419,20,474,76,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005871.jpg 1,53,375,500,10
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005875.jpg 37,4,464,368,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005888.jpg 277,40,500,373,11 13,69,334,375,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005890.jpg 95,80,203,212,12 87,17,196,211,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005897.jpg 419,201,488,240,6 251,246,452,343,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005904.jpg 44,125,447,256,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005917.jpg 315,160,493,360,8 156,130,259,237,8 123,203,158,225,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005920.jpg 15,265,350,375,10 302,272,349,375,8 220,294,309,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005929.jpg 21,123,490,336,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005942.jpg 304,64,500,333,14 1,88,170,311,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005944.jpg 87,46,266,208,12 127,23,181,139,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/005946.jpg 100,9,491,319,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006016.jpg 4,40,482,301,6 90,1,143,56,14 142,29,199,94,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006020.jpg 21,82,500,305,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006036.jpg 400,171,453,253,14 107,3,276,331,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006037.jpg 101,21,312,182,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006048.jpg 1,1,331,390,3 101,234,250,355,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006055.jpg 369,168,423,296,8 412,179,461,306,8 125,149,208,303,8 27,155,118,309,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006080.jpg 2,14,498,500,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006092.jpg 50,1,186,278,14 177,1,331,294,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006112.jpg 1,34,335,371,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006125.jpg 140,128,353,291,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006126.jpg 87,161,302,265,17 325,161,439,274,8 2,212,165,333,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006137.jpg 238,107,273,141,14 237,120,266,140,14 106,136,394,234,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006163.jpg 79,89,305,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006167.jpg 150,220,269,333,11 127,18,315,333,14 145,1,275,103,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006190.jpg 72,35,409,264,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006203.jpg 46,366,275,458,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006217.jpg 231,201,333,318,16 37,199,213,259,16 167,304,270,456,16 82,260,181,449,16 37,242,242,326,16 231,260,300,377,16 8,244,79,358,16 1,327,94,479,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006229.jpg 76,117,157,306,14 306,115,374,248,14 347,115,382,212,14 373,75,462,375,14 168,131,355,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006231.jpg 39,128,375,500,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006232.jpg 86,145,482,282,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006262.jpg 43,98,481,257,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006265.jpg 188,109,386,261,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006278.jpg 50,21,473,327,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006291.jpg 301,27,484,337,9 252,2,387,224,9 100,3,305,220,9 47,12,166,211,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006302.jpg 410,90,500,270,3 150,101,237,273,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006309.jpg 52,48,500,325,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006315.jpg 261,135,407,319,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006328.jpg 164,96,326,284,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006334.jpg 74,170,221,244,5 270,194,350,233,6 282,196,322,236,6 29,200,43,234,14 439,205,468,254,14 467,200,496,280,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006349.jpg 5,36,495,256,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006364.jpg 39,143,500,344,12 256,24,381,344,14 386,173,428,214,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006375.jpg 371,142,437,182,6 194,155,291,218,6 28,160,196,306,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006383.jpg 43,22,481,158,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006388.jpg 15,190,446,344,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006393.jpg 229,219,322,333,8 247,181,299,231,8 405,156,446,213,8 401,148,445,195,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006395.jpg 408,35,479,188,19 134,117,316,347,14 17,183,213,375,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006400.jpg 433,80,500,256,18 189,101,440,235,18 40,125,199,203,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006426.jpg 191,181,369,500,14 121,127,233,486,14 1,150,196,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006430.jpg 274,163,293,224,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006436.jpg 170,36,376,282,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006448.jpg 344,69,392,250,4 395,109,427,235,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006463.jpg 1,4,236,333,14 153,27,465,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006471.jpg 61,39,95,80,14 100,58,121,91,14 255,157,278,186,14 298,114,311,151,14 349,252,372,283,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006473.jpg 223,83,421,223,7 24,104,235,287,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006500.jpg 288,224,330,328,4 233,216,270,314,4 186,207,224,297,4 146,200,183,285,4 111,195,144,273,4 69,161,108,266,4 34,156,72,257,4 11,155,40,250,4 1,151,19,241,4 371,95,415,217,4 326,94,367,213,4 289,94,327,203,4 252,92,290,202,4 225,95,257,188,4 190,93,225,191,4 167,96,195,185,4 141,94,169,186,4 107,98,142,179,4 290,171,332,231,4 210,161,247,282,4 154,158,197,232,4 110,153,149,224,4 86,100,114,178,4 63,98,94,176,4 46,99,69,151,4 384,1,429,128,4 338,1,382,128,4 295,1,344,132,4 252,1,288,128,4 213,1,249,125,4 177,3,213,123,4 149,6,179,124,4 127,9,156,125,4 106,11,132,121,4 81,11,111,119,4 61,11,88,120,4 13,19,40,98,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006501.jpg 118,1,500,211,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006506.jpg 362,133,500,281,12 318,153,386,271,12 236,142,287,285,12 164,175,215,271,12 3,201,115,305,12 72,170,122,276,12 399,109,454,226,14 320,124,376,223,14 231,122,291,233,14 163,133,218,235,14 74,142,121,242,14 31,143,82,260,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006510.jpg 75,110,437,293,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006511.jpg 8,2,497,332,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006533.jpg 196,168,354,209,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006546.jpg 22,149,482,375,10 378,124,500,303,14 290,85,429,223,14 332,84,383,175,14 220,46,286,146,14 2,115,164,322,14 101,107,173,213,14 145,85,206,166,14 90,46,134,140,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006567.jpg 13,174,55,237,13 184,163,272,190,6 270,142,291,192,14 287,145,312,199,14 118,146,171,293,14 86,152,125,282,14 242,180,406,300,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006571.jpg 25,82,278,252,7 160,1,453,336,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006572.jpg 143,33,315,248,12 80,82,152,167,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006579.jpg 144,5,237,131,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006588.jpg 104,28,451,311,18 5,193,86,234,6 86,200,131,227,6 473,187,488,211,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006590.jpg 2,1,491,301,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006592.jpg 2,122,499,232,0 214,188,238,248,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006594.jpg 76,130,255,288,1 1,188,84,295,1 260,208,330,311,1 1,171,75,330,14 84,143,238,382,14 292,172,330,260,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006596.jpg 15,127,500,374,7 214,95,479,215,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006600.jpg 217,63,499,199,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006620.jpg 139,29,220,292,1 193,1,323,297,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006623.jpg 145,106,271,432,12 31,114,183,439,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006628.jpg 64,128,113,155,8 157,124,190,171,8 172,137,209,182,8 213,144,252,195,8 249,161,291,216,8 133,207,271,375,8 17,179,152,373,8 48,150,216,375,10 386,104,429,140,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006650.jpg 195,116,346,291,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006659.jpg 180,99,231,305,3 404,143,500,375,14 248,213,397,375,14 219,192,300,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006682.jpg 307,74,499,373,14 1,127,115,375,14 116,50,314,371,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006684.jpg 76,20,393,351,19 376,64,500,266,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006686.jpg 1,162,232,342,14 146,146,435,367,14 40,150,476,375,17 459,307,500,351,14 479,258,500,302,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006697.jpg 41,77,260,337,14 255,82,500,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006698.jpg 245,1,495,375,14 70,128,387,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006717.jpg 305,159,356,194,6 128,191,201,232,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006748.jpg 47,265,213,385,6 178,180,337,279,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006753.jpg 80,35,260,500,14 251,85,332,500,14 254,1,332,246,14 204,1,250,43,14 44,1,222,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006761.jpg 131,193,348,322,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006766.jpg 100,289,499,357,5 298,339,475,375,6 263,309,442,372,6 58,345,231,375,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006798.jpg 237,217,304,292,19 1,309,95,499,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006800.jpg 148,164,176,195,2 175,110,213,202,2 283,189,375,375,14 361,200,432,375,14 402,164,500,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006815.jpg 216,123,431,248,11 126,90,299,226,16
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006828.jpg 61,30,219,360,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006844.jpg 87,105,492,237,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006847.jpg 68,139,180,300,12 187,96,397,286,12 235,67,297,214,14 85,91,139,242,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006857.jpg 151,110,263,333,14 73,135,178,334,14 442,124,500,334,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006859.jpg 181,1,299,110,15 297,1,500,371,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006862.jpg 115,15,328,375,12 364,171,387,252,14 344,169,371,227,14 298,175,334,349,14 222,205,252,284,14 8,146,68,333,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006870.jpg 1,11,442,311,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006891.jpg 188,2,436,375,14 50,110,186,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006901.jpg 111,56,217,277,14 266,77,396,283,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006914.jpg 238,180,269,235,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006917.jpg 109,11,281,375,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006926.jpg 32,66,254,438,14 276,71,450,439,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006958.jpg 25,2,333,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006964.jpg 338,104,486,375,14 258,239,408,373,14 104,228,291,375,14 38,36,189,371,14 147,39,212,169,14 191,94,290,320,14 266,71,358,243,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006978.jpg 2,192,298,273,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/006999.jpg 11,33,381,375,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007001.jpg 213,135,444,343,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007009.jpg 25,1,432,218,13
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007010.jpg 66,89,379,375,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007049.jpg 1,4,493,375,0 1,14,125,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007083.jpg 40,120,253,412,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007085.jpg 76,128,499,187,18 436,129,495,160,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007091.jpg 147,244,206,262,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007094.jpg 3,195,375,375,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007106.jpg 335,1,456,250,15 108,1,267,284,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007123.jpg 86,121,281,277,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007131.jpg 16,1,316,499,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007149.jpg 18,3,468,443,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007163.jpg 177,116,299,375,14 58,109,223,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007164.jpg 1,58,458,308,0 284,239,325,263,6 426,201,500,231,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007190.jpg 1,47,412,333,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007213.jpg 268,157,341,242,8 25,37,236,375,14 359,75,500,251,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007216.jpg 230,295,270,408,12 217,260,280,347,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007236.jpg 181,41,325,268,5 179,165,218,264,14 465,131,482,171,14 433,123,450,154,14 151,109,164,137,14 75,126,96,167,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007268.jpg 137,46,271,496,14 176,252,321,473,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007269.jpg 195,172,402,248,2 216,139,408,213,2 134,75,288,152,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007277.jpg 6,111,315,500,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007280.jpg 203,103,345,177,0 142,121,281,195,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007290.jpg 129,153,320,224,0 398,177,492,214,0
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007301.jpg 45,29,209,375,14 98,199,463,374,14 149,169,404,310,17 212,205,330,347,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007302.jpg 210,142,465,322,17 19,85,94,173,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007304.jpg 115,179,333,500,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007305.jpg 343,113,463,181,13 58,134,213,233,13 128,113,188,234,14 398,85,445,184,14 442,65,489,99,6 347,63,408,101,6 303,67,348,102,6 263,70,305,101,6 219,72,263,103,6 104,75,165,105,6 53,82,108,104,6 22,81,72,105,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007310.jpg 89,129,240,450,12 106,105,243,294,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007327.jpg 394,259,454,340,8 298,257,361,347,8 145,235,187,291,8 218,240,268,304,8 263,229,294,290,8 385,213,426,239,1 246,212,310,252,1 160,213,183,253,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007335.jpg 240,148,318,237,8 125,152,217,235,8 79,168,134,237,15 166,75,194,127,15 79,146,104,175,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007350.jpg 219,233,459,360,10 4,197,182,328,10 171,75,245,360,14 245,87,316,281,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007386.jpg 1,47,500,321,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007401.jpg 48,94,183,207,17 193,90,245,150,8 261,90,299,124,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007418.jpg 1,99,285,500,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007427.jpg 404,160,500,375,6 379,142,500,357,6 269,208,313,284,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007436.jpg 104,61,380,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007450.jpg 1,178,190,241,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007455.jpg 167,182,323,234,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007460.jpg 121,356,314,394,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007494.jpg 13,162,88,358,4 7,140,500,375,10 210,22,227,57,4 224,17,242,57,4 1,211,16,356,4 410,58,495,213,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007517.jpg 32,55,320,484,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007521.jpg 20,79,109,202,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007557.jpg 167,83,207,172,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007559.jpg 57,78,195,461,14 301,121,375,213,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007609.jpg 49,220,313,430,12 117,174,228,419,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007633.jpg 1,117,236,269,5 225,126,344,255,5 340,130,500,238,5
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007649.jpg 175,2,500,375,14 2,24,179,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007659.jpg 108,195,190,375,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007660.jpg 64,1,465,252,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007663.jpg 49,94,461,296,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007665.jpg 155,148,380,220,6 426,135,500,210,6 18,136,57,195,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007672.jpg 1,166,128,316,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007686.jpg 150,232,186,285,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007697.jpg 70,206,242,436,12 105,116,204,330,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007700.jpg 202,11,280,213,4 70,64,170,222,14 282,71,342,176,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007702.jpg 381,206,460,283,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007707.jpg 29,153,139,293,2 129,181,199,287,2 181,206,285,339,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007717.jpg 4,112,472,296,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007718.jpg 56,174,327,361,14 95,124,496,257,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007721.jpg 214,103,429,299,2 36,172,290,271,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007735.jpg 191,68,284,295,14 4,266,366,333,10 240,209,384,316,8
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007756.jpg 333,269,440,375,8 70,242,193,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007759.jpg 68,1,270,323,14 227,64,366,294,14 341,1,454,321,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007778.jpg 229,99,440,206,4 1,86,427,332,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007788.jpg 5,119,494,327,3
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007810.jpg 80,1,337,127,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007821.jpg 23,58,313,312,6 130,79,278,484,14 21,46,165,428,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007833.jpg 371,2,459,141,3 141,222,277,318,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007842.jpg 1,25,498,375,19
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007855.jpg 7,145,449,295,5 447,216,475,232,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007862.jpg 111,122,500,369,17 213,105,420,375,14 196,84,358,374,14 117,99,274,347,14 29,53,304,301,14 100,45,158,129,14 167,49,212,119,14 458,52,475,90,4 423,53,439,88,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007889.jpg 290,64,424,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007897.jpg 166,70,393,214,14 167,120,468,306,13 419,129,450,197,14 385,114,419,162,14 414,104,444,139,14 67,116,100,178,14 5,111,38,232,14 72,184,138,239,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007901.jpg 48,15,297,500,14 1,13,75,289,14 56,80,121,238,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007903.jpg 100,143,500,375,17 361,103,500,254,14 1,73,185,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007909.jpg 88,96,182,143,17 29,95,97,139,17 2,138,174,210,10 216,113,267,167,15
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007911.jpg 21,38,461,488,13 144,28,163,78,14 236,26,259,83,14 204,23,220,83,14 43,39,61,83,14 299,24,316,76,14 324,25,337,74,14 364,25,384,81,14 377,21,392,75,14 396,26,417,84,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007912.jpg 89,78,500,290,5 408,183,449,289,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007930.jpg 205,274,422,354,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007933.jpg 8,42,492,351,1
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007936.jpg 23,46,477,447,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007957.jpg 91,37,380,332,14 1,141,132,314,14 125,94,213,220,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007958.jpg 162,101,330,306,7
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007962.jpg 72,163,397,375,11 184,177,304,375,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/007965.jpg 77,126,356,499,14 18,86,332,498,14 349,126,389,156,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008025.jpg 72,69,272,246,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008028.jpg 272,175,359,252,2 83,121,245,253,2
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008059.jpg 121,15,206,135,14 107,51,203,203,12
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008078.jpg 245,259,373,349,9
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008079.jpg 148,133,203,309,14 195,127,274,308,14 270,137,320,273,14 338,187,366,275,14 321,151,373,274,14 267,249,356,331,11 48,137,159,198,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008083.jpg 82,85,204,294,14 152,66,362,300,14 95,140,400,300,17
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008094.jpg 230,294,309,372,4
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008095.jpg 373,141,500,175,18 5,86,390,202,18
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008104.jpg 1,76,458,282,0 231,204,266,282,14 409,189,450,310,14 362,188,401,311,14 341,190,376,303,14 472,193,499,274,14 444,192,474,262,14 426,186,447,258,14 135,204,192,222,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008143.jpg 219,181,348,254,6
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008146.jpg 144,381,174,471,14
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008149.jpg 2,22,412,375,11
+/mnt/nvme1/dnn/houjx/project/yolox-pytorch-main/VOCdevkit/VOC2007/JPEGImages/008164.jpg 6,96,233,375,14 153,68,369,344,14 342,90,500,247,14 409,163,440,277,4 461,159,489,266,4

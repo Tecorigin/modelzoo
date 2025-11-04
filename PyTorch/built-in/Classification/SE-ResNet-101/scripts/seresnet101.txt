@@ -1,0 +1,197 @@
+--------------+----------------------------------------------
+ Host IP      | 20.21.22.4
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+/root/miniconda3/envs/torch_env_py310/lib/python3.10/site-packages/torch/distributed/launch.py:208: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use-env is set by default in torchrun.
+If your script expects `--local-rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  main()
+W0214 10:03:47.013000 140427570841408 torch/distributed/run.py:779] 
+W0214 10:03:47.013000 140427570841408 torch/distributed/run.py:779] *****************************************
+W0214 10:03:47.013000 140427570841408 torch/distributed/run.py:779] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0214 10:03:47.013000 140427570841408 torch/distributed/run.py:779] *****************************************
+--------------+----------------------------------------------
+ Host IP      | 20.21.22.4
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 20.21.22.4
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 20.21.22.4
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 20.21.22.4
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.0.0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+Training in distributed mode with multiple processes, 1 GPU per process. Process 0, total 4.
+Training in distributed mode with multiple processes, 1 GPU per process. Process 1, total 4.
+Training in distributed mode with multiple processes, 1 GPU per process. Process 3, total 4.
+Training in distributed mode with multiple processes, 1 GPU per process. Process 2, total 4.
+Model seresnet101 created, param count: 49326872
+Data processing configuration for current model + dataset:
+	input_size: (3, 224, 224)
+	interpolation: bilinear
+	mean: (0.485, 0.456, 0.406)
+	std: (0.229, 0.224, 0.225)
+	crop_pct: 0.875
+NVIDIA APEX not installed. AMP off.
+Using torch DistributedDataParallel. Install NVIDIA Apex for Apex DDP.
+Scheduled epochs: 160
+Train: 0 [   0/10009 (  0%)]  Loss:  7.050704 (7.0507)  Time: 10.078s,   12.70/s  (10.078s,   12.70/s)  LR: 1.000e-04  Data: 9.219 (9.219)
+Train: 0 [   1/10009 (  0%)]  Loss:  7.007562 (7.0291)  Time: 0.424s,  301.59/s  (5.251s,   24.37/s)  LR: 1.000e-04  Data: 0.005 (4.612)
+Train: 0 [   2/10009 (  0%)]  Loss:  7.005488 (7.0213)  Time: 0.423s,  302.35/s  (3.642s,   35.15/s)  LR: 1.000e-04  Data: 0.005 (3.076)
+Train: 0 [   3/10009 (  0%)]  Loss:  6.978128 (7.0105)  Time: 5.225s,   24.50/s  (4.038s,   31.70/s)  LR: 1.000e-04  Data: 4.806 (3.509)
+Train: 0 [   4/10009 (  0%)]  Loss:  6.950240 (6.9984)  Time: 0.424s,  301.59/s  (3.315s,   38.61/s)  LR: 1.000e-04  Data: 0.004 (2.808)
+Train: 0 [   5/10009 (  0%)]  Loss:  6.979025 (6.9952)  Time: 0.424s,  301.92/s  (2.833s,   45.18/s)  LR: 1.000e-04  Data: 0.005 (2.341)
+Train: 0 [   6/10009 (  0%)]  Loss:  6.936941 (6.9869)  Time: 0.424s,  301.73/s  (2.489s,   51.42/s)  LR: 1.000e-04  Data: 0.005 (2.007)
+Train: 0 [   7/10009 (  0%)]  Loss:  7.009439 (6.9897)  Time: 1.709s,   74.88/s  (2.392s,   53.52/s)  LR: 1.000e-04  Data: 1.290 (1.917)
+Train: 0 [   8/10009 (  0%)]  Loss:  6.953701 (6.9857)  Time: 0.427s,  299.56/s  (2.173s,   58.89/s)  LR: 1.000e-04  Data: 0.004 (1.705)
+Train: 0 [   9/10009 (  0%)]  Loss:  6.932327 (6.9804)  Time: 0.426s,  300.69/s  (1.999s,   64.04/s)  LR: 1.000e-04  Data: 0.004 (1.535)
+Train: 0 [  10/10009 (  0%)]  Loss:  7.008393 (6.9829)  Time: 0.423s,  302.31/s  (1.855s,   68.99/s)  LR: 1.000e-04  Data: 0.005 (1.396)
+Train: 0 [  11/10009 (  0%)]  Loss:  6.992960 (6.9837)  Time: 1.817s,   70.46/s  (1.852s,   69.11/s)  LR: 1.000e-04  Data: 1.398 (1.396)
+Train: 0 [  12/10009 (  0%)]  Loss:  7.004167 (6.9853)  Time: 0.429s,  298.03/s  (1.743s,   73.45/s)  LR: 1.000e-04  Data: 0.005 (1.289)
+Train: 0 [  13/10009 (  0%)]  Loss:  6.951331 (6.9829)  Time: 0.424s,  301.62/s  (1.649s,   77.64/s)  LR: 1.000e-04  Data: 0.006 (1.197)
+Train: 0 [  14/10009 (  0%)]  Loss:  6.975732 (6.9824)  Time: 0.424s,  302.08/s  (1.567s,   81.69/s)  LR: 1.000e-04  Data: 0.006 (1.118)
+Train: 0 [  15/10009 (  0%)]  Loss:  6.999387 (6.9835)  Time: 1.756s,   72.90/s  (1.579s,   81.08/s)  LR: 1.000e-04  Data: 1.036 (1.113)
+Train: 0 [  16/10009 (  0%)]  Loss:  7.033575 (6.9864)  Time: 0.425s,  301.48/s  (1.511s,   84.72/s)  LR: 1.000e-04  Data: 0.005 (1.048)
+Train: 0 [  17/10009 (  0%)]  Loss:  7.018432 (6.9882)  Time: 0.423s,  302.30/s  (1.450s,   88.25/s)  LR: 1.000e-04  Data: 0.005 (0.990)
+Train: 0 [  18/10009 (  0%)]  Loss:  6.965378 (6.9870)  Time: 0.424s,  302.02/s  (1.396s,   91.66/s)  LR: 1.000e-04  Data: 0.005 (0.938)
+Train: 0 [  19/10009 (  0%)]  Loss:  6.982138 (6.9868)  Time: 3.894s,   32.87/s  (1.521s,   84.14/s)  LR: 1.000e-04  Data: 2.707 (1.026)
+Train: 0 [  20/10009 (  0%)]  Loss:  7.046851 (6.9896)  Time: 0.425s,  301.52/s  (1.469s,   87.13/s)  LR: 1.000e-04  Data: 0.006 (0.978)
+Train: 0 [  21/10009 (  0%)]  Loss:  6.963693 (6.9884)  Time: 0.424s,  301.74/s  (1.422s,   90.04/s)  LR: 1.000e-04  Data: 0.006 (0.933)
+Train: 0 [  22/10009 (  0%)]  Loss:  7.008166 (6.9893)  Time: 0.423s,  302.27/s  (1.378s,   92.88/s)  LR: 1.000e-04  Data: 0.004 (0.893)
+Train: 0 [  23/10009 (  0%)]  Loss:  6.998545 (6.9897)  Time: 2.449s,   52.27/s  (1.423s,   89.97/s)  LR: 1.000e-04  Data: 1.517 (0.919)
+Train: 0 [  24/10009 (  0%)]  Loss:  7.019373 (6.9909)  Time: 0.425s,  301.27/s  (1.383s,   92.56/s)  LR: 1.000e-04  Data: 0.005 (0.882)
+Train: 0 [  25/10009 (  0%)]  Loss:  6.971909 (6.9901)  Time: 0.424s,  301.82/s  (1.346s,   95.10/s)  LR: 1.000e-04  Data: 0.005 (0.849)
+Train: 0 [  26/10009 (  0%)]  Loss:  7.054940 (6.9925)  Time: 0.423s,  302.44/s  (1.312s,   97.58/s)  LR: 1.000e-04  Data: 0.003 (0.817)
+Train: 0 [  27/10009 (  0%)]  Loss:  6.978466 (6.9920)  Time: 3.964s,   32.29/s  (1.407s,   91.01/s)  LR: 1.000e-04  Data: 2.893 (0.892)
+Train: 0 [  28/10009 (  0%)]  Loss:  7.004560 (6.9925)  Time: 0.635s,  201.57/s  (1.380s,   92.76/s)  LR: 1.000e-04  Data: 0.006 (0.861)
+Train: 0 [  29/10009 (  0%)]  Loss:  6.951890 (6.9911)  Time: 0.424s,  302.19/s  (1.348s,   94.95/s)  LR: 1.000e-04  Data: 0.004 (0.832)
+Train: 0 [  30/10009 (  0%)]  Loss:  6.977990 (6.9907)  Time: 0.427s,  300.10/s  (1.318s,   97.10/s)  LR: 1.000e-04  Data: 0.004 (0.806)
+Train: 0 [  31/10009 (  0%)]  Loss:  7.009671 (6.9913)  Time: 4.561s,   28.06/s  (1.420s,   90.16/s)  LR: 1.000e-04  Data: 2.313 (0.853)
+Train: 0 [  32/10009 (  0%)]  Loss:  6.996837 (6.9915)  Time: 1.063s,  120.44/s  (1.409s,   90.86/s)  LR: 1.000e-04  Data: 0.391 (0.839)
+Train: 0 [  33/10009 (  0%)]  Loss:  6.971343 (6.9909)  Time: 0.423s,  302.36/s  (1.380s,   92.76/s)  LR: 1.000e-04  Data: 0.005 (0.814)
+Train: 0 [  34/10009 (  0%)]  Loss:  6.989808 (6.9908)  Time: 0.425s,  301.03/s  (1.353s,   94.64/s)  LR: 1.000e-04  Data: 0.004 (0.791)
+Train: 0 [  35/10009 (  0%)]  Loss:  6.946716 (6.9896)  Time: 2.017s,   63.46/s  (1.371s,   93.36/s)  LR: 1.000e-04  Data: 1.310 (0.806)
+Train: 0 [  36/10009 (  0%)]  Loss:  6.967930 (6.9890)  Time: 2.207s,   57.99/s  (1.394s,   91.85/s)  LR: 1.000e-04  Data: 1.433 (0.823)
+Train: 0 [  37/10009 (  0%)]  Loss:  7.040020 (6.9904)  Time: 0.424s,  301.54/s  (1.368s,   93.56/s)  LR: 1.000e-04  Data: 0.005 (0.801)
+Train: 0 [  38/10009 (  0%)]  Loss:  6.929951 (6.9888)  Time: 0.426s,  300.56/s  (1.344s,   95.24/s)  LR: 1.000e-04  Data: 0.006 (0.781)
+Train: 0 [  39/10009 (  0%)]  Loss:  6.997458 (6.9890)  Time: 2.521s,   50.78/s  (1.373s,   93.20/s)  LR: 1.000e-04  Data: 1.644 (0.802)
+Train: 0 [  40/10009 (  0%)]  Loss:  6.998605 (6.9893)  Time: 0.670s,  191.16/s  (1.356s,   94.38/s)  LR: 1.000e-04  Data: 0.048 (0.784)
+Train: 0 [  41/10009 (  0%)]  Loss:  6.959565 (6.9886)  Time: 0.423s,  302.38/s  (1.334s,   95.95/s)  LR: 1.000e-04  Data: 0.005 (0.765)
+Train: 0 [  42/10009 (  0%)]  Loss:  6.996027 (6.9887)  Time: 1.195s,  107.15/s  (1.331s,   96.19/s)  LR: 1.000e-04  Data: 0.004 (0.748)
+Train: 0 [  43/10009 (  0%)]  Loss:  6.952923 (6.9879)  Time: 1.415s,   90.45/s  (1.333s,   96.05/s)  LR: 1.000e-04  Data: 0.479 (0.741)
+Train: 0 [  44/10009 (  0%)]  Loss:  6.981146 (6.9878)  Time: 1.763s,   72.59/s  (1.342s,   95.36/s)  LR: 1.000e-04  Data: 1.290 (0.754)
+Train: 0 [  45/10009 (  0%)]  Loss:  6.946347 (6.9869)  Time: 0.424s,  302.08/s  (1.322s,   96.80/s)  LR: 1.000e-04  Data: 0.004 (0.737)
+Train: 0 [  46/10009 (  0%)]  Loss:  6.971609 (6.9865)  Time: 0.423s,  302.54/s  (1.303s,   98.22/s)  LR: 1.000e-04  Data: 0.005 (0.722)
+Train: 0 [  47/10009 (  0%)]  Loss:  7.008690 (6.9870)  Time: 2.024s,   63.25/s  (1.318s,   97.11/s)  LR: 1.000e-04  Data: 0.004 (0.707)
+Train: 0 [  48/10009 (  0%)]  Loss:  6.963297 (6.9865)  Time: 0.426s,  300.50/s  (1.300s,   98.47/s)  LR: 1.000e-04  Data: 0.006 (0.692)
+Train: 0 [  49/10009 (  0%)]  Loss:  6.921160 (6.9852)  Time: 0.424s,  301.81/s  (1.282s,   99.81/s)  LR: 1.000e-04  Data: 0.006 (0.679)
+Train: 0 [  50/10009 (  0%)]  Loss:  7.033237 (6.9862)  Time: 0.424s,  302.22/s  (1.266s,  101.14/s)  LR: 1.000e-04  Data: 0.005 (0.666)
+Train: 0 [  51/10009 (  1%)]  Loss:  6.979481 (6.9860)  Time: 1.995s,   64.17/s  (1.280s,  100.03/s)  LR: 1.000e-04  Data: 0.004 (0.653)
+Train: 0 [  52/10009 (  1%)]  Loss:  6.986527 (6.9860)  Time: 0.425s,  301.01/s  (1.263s,  101.31/s)  LR: 1.000e-04  Data: 0.005 (0.641)
+Train: 0 [  53/10009 (  1%)]  Loss:  6.971929 (6.9858)  Time: 0.424s,  301.92/s  (1.248s,  102.57/s)  LR: 1.000e-04  Data: 0.005 (0.629)
+Train: 0 [  54/10009 (  1%)]  Loss:  6.964760 (6.9854)  Time: 0.425s,  300.85/s  (1.233s,  103.81/s)  LR: 1.000e-04  Data: 0.005 (0.617)
+Train: 0 [  55/10009 (  1%)]  Loss:  6.975517 (6.9852)  Time: 2.591s,   49.40/s  (1.257s,  101.81/s)  LR: 1.000e-04  Data: 1.296 (0.630)
+Train: 0 [  56/10009 (  1%)]  Loss:  6.948538 (6.9846)  Time: 0.424s,  301.71/s  (1.243s,  103.01/s)  LR: 1.000e-04  Data: 0.006 (0.619)
+Train: 0 [  57/10009 (  1%)]  Loss:  7.012620 (6.9851)  Time: 0.424s,  301.92/s  (1.229s,  104.19/s)  LR: 1.000e-04  Data: 0.004 (0.608)
+Train: 0 [  58/10009 (  1%)]  Loss:  6.985032 (6.9851)  Time: 0.424s,  302.14/s  (1.215s,  105.36/s)  LR: 1.000e-04  Data: 0.005 (0.598)
+Train: 0 [  59/10009 (  1%)]  Loss:  6.999617 (6.9853)  Time: 3.339s,   38.33/s  (1.250s,  102.38/s)  LR: 1.000e-04  Data: 1.147 (0.607)
+Train: 0 [  60/10009 (  1%)]  Loss:  6.976603 (6.9852)  Time: 0.426s,  300.34/s  (1.237s,  103.50/s)  LR: 1.000e-04  Data: 0.005 (0.597)
+Train: 0 [  61/10009 (  1%)]  Loss:  6.993908 (6.9853)  Time: 0.423s,  302.69/s  (1.224s,  104.61/s)  LR: 1.000e-04  Data: 0.004 (0.588)
+Train: 0 [  62/10009 (  1%)]  Loss:  6.966546 (6.9850)  Time: 0.424s,  301.54/s  (1.211s,  105.70/s)  LR: 1.000e-04  Data: 0.005 (0.578)
+Train: 0 [  63/10009 (  1%)]  Loss:  7.026465 (6.9856)  Time: 2.725s,   46.98/s  (1.235s,  103.68/s)  LR: 1.000e-04  Data: 1.805 (0.598)
+Train: 0 [  64/10009 (  1%)]  Loss:  6.992125 (6.9857)  Time: 0.424s,  301.63/s  (1.222s,  104.73/s)  LR: 1.000e-04  Data: 0.006 (0.588)
+Train: 0 [  65/10009 (  1%)]  Loss:  7.035290 (6.9865)  Time: 0.427s,  299.85/s  (1.210s,  105.78/s)  LR: 1.000e-04  Data: 0.004 (0.580)
+Train: 0 [  66/10009 (  1%)]  Loss:  6.990604 (6.9866)  Time: 0.423s,  302.31/s  (1.198s,  106.81/s)  LR: 1.000e-04  Data: 0.005 (0.571)
+Train: 0 [  67/10009 (  1%)]  Loss:  6.966208 (6.9863)  Time: 4.417s,   28.98/s  (1.246s,  102.75/s)  LR: 1.000e-04  Data: 1.499 (0.585)
+Train: 0 [  68/10009 (  1%)]  Loss:  6.913451 (6.9852)  Time: 0.424s,  301.68/s  (1.234s,  103.75/s)  LR: 1.000e-04  Data: 0.006 (0.576)
+Train: 0 [  69/10009 (  1%)]  Loss:  6.986378 (6.9852)  Time: 0.424s,  302.16/s  (1.222s,  104.73/s)  LR: 1.000e-04  Data: 0.004 (0.568)
+Train: 0 [  70/10009 (  1%)]  Loss:  6.960756 (6.9849)  Time: 0.425s,  301.53/s  (1.211s,  105.70/s)  LR: 1.000e-04  Data: 0.004 (0.560)
+Train: 0 [  71/10009 (  1%)]  Loss:  7.010744 (6.9852)  Time: 2.538s,   50.43/s  (1.229s,  104.11/s)  LR: 1.000e-04  Data: 1.152 (0.568)
+Train: 0 [  72/10009 (  1%)]  Loss:  6.949572 (6.9847)  Time: 1.446s,   88.53/s  (1.232s,  103.86/s)  LR: 1.000e-04  Data: 0.006 (0.561)
+Train: 0 [  73/10009 (  1%)]  Loss:  7.042641 (6.9855)  Time: 0.423s,  302.35/s  (1.221s,  104.79/s)  LR: 1.000e-04  Data: 0.004 (0.553)
+Train: 0 [  74/10009 (  1%)]  Loss:  6.977244 (6.9854)  Time: 0.424s,  301.72/s  (1.211s,  105.71/s)  LR: 1.000e-04  Data: 0.004 (0.546)
+Train: 0 [  75/10009 (  1%)]  Loss:  6.962384 (6.9851)  Time: 2.937s,   43.58/s  (1.234s,  103.77/s)  LR: 1.000e-04  Data: 0.248 (0.542)
+Train: 0 [  76/10009 (  1%)]  Loss:  6.964824 (6.9849)  Time: 0.424s,  301.59/s  (1.223s,  104.66/s)  LR: 1.000e-04  Data: 0.006 (0.535)
+Train: 0 [  77/10009 (  1%)]  Loss:  6.959027 (6.9845)  Time: 0.424s,  302.23/s  (1.213s,  105.54/s)  LR: 1.000e-04  Data: 0.005 (0.528)
+Train: 0 [  78/10009 (  1%)]  Loss:  7.000099 (6.9847)  Time: 0.423s,  302.32/s  (1.203s,  106.42/s)  LR: 1.000e-04  Data: 0.004 (0.522)
+Train: 0 [  79/10009 (  1%)]  Loss:  6.942344 (6.9842)  Time: 2.668s,   47.98/s  (1.221s,  104.82/s)  LR: 1.000e-04  Data: 0.901 (0.526)
+Train: 0 [  80/10009 (  1%)]  Loss:  6.955541 (6.9838)  Time: 1.338s,   95.69/s  (1.223s,  104.70/s)  LR: 1.000e-04  Data: 0.007 (0.520)
+Train: 0 [  81/10009 (  1%)]  Loss:  6.948630 (6.9834)  Time: 0.424s,  301.70/s  (1.213s,  105.54/s)  LR: 1.000e-04  Data: 0.006 (0.514)
+Train: 0 [  82/10009 (  1%)]  Loss:  6.940178 (6.9829)  Time: 0.423s,  302.31/s  (1.203s,  106.37/s)  LR: 1.000e-04  Data: 0.004 (0.507)
+Train: 0 [  83/10009 (  1%)]  Loss:  6.939507 (6.9824)  Time: 2.376s,   53.88/s  (1.217s,  105.16/s)  LR: 1.000e-04  Data: 0.005 (0.501)
+Train: 0 [  84/10009 (  1%)]  Loss:  6.979417 (6.9823)  Time: 0.424s,  301.64/s  (1.208s,  105.97/s)  LR: 1.000e-04  Data: 0.006 (0.496)
+Train: 0 [  85/10009 (  1%)]  Loss:  7.001713 (6.9826)  Time: 0.426s,  300.42/s  (1.199s,  106.77/s)  LR: 1.000e-04  Data: 0.004 (0.490)
+Train: 0 [  86/10009 (  1%)]  Loss:  7.000447 (6.9828)  Time: 0.425s,  300.84/s  (1.190s,  107.57/s)  LR: 1.000e-04  Data: 0.005 (0.484)
+Train: 0 [  87/10009 (  1%)]  Loss:  6.966480 (6.9826)  Time: 2.006s,   63.81/s  (1.199s,  106.74/s)  LR: 1.000e-04  Data: 0.005 (0.479)
+Train: 0 [  88/10009 (  1%)]  Loss:  6.962286 (6.9824)  Time: 0.555s,  230.70/s  (1.192s,  107.39/s)  LR: 1.000e-04  Data: 0.005 (0.474)
+Train: 0 [  89/10009 (  1%)]  Loss:  6.997306 (6.9825)  Time: 0.423s,  302.30/s  (1.183s,  108.16/s)  LR: 1.000e-04  Data: 0.005 (0.468)
+Train: 0 [  90/10009 (  1%)]  Loss:  6.937574 (6.9820)  Time: 0.423s,  302.34/s  (1.175s,  108.93/s)  LR: 1.000e-04  Data: 0.005 (0.463)
+Train: 0 [  91/10009 (  1%)]  Loss:  6.977170 (6.9820)  Time: 2.125s,   60.23/s  (1.185s,  107.98/s)  LR: 1.000e-04  Data: 0.005 (0.458)
+Train: 0 [  92/10009 (  1%)]  Loss:  7.009225 (6.9823)  Time: 0.538s,  237.83/s  (1.178s,  108.62/s)  LR: 1.000e-04  Data: 0.006 (0.453)
+Train: 0 [  93/10009 (  1%)]  Loss:  6.930286 (6.9817)  Time: 0.424s,  302.20/s  (1.170s,  109.36/s)  LR: 1.000e-04  Data: 0.005 (0.449)
+Train: 0 [  94/10009 (  1%)]  Loss:  6.939163 (6.9813)  Time: 1.304s,   98.15/s  (1.172s,  109.23/s)  LR: 1.000e-04  Data: 0.005 (0.444)
+Train: 0 [  95/10009 (  1%)]  Loss:  6.942683 (6.9809)  Time: 0.994s,  128.75/s  (1.170s,  109.40/s)  LR: 1.000e-04  Data: 0.005 (0.439)
+Train: 0 [  96/10009 (  1%)]  Loss:  7.029389 (6.9814)  Time: 1.642s,   77.94/s  (1.175s,  108.95/s)  LR: 1.000e-04  Data: 0.005 (0.435)
+Train: 0 [  97/10009 (  1%)]  Loss:  7.004093 (6.9816)  Time: 0.423s,  302.51/s  (1.167s,  109.67/s)  LR: 1.000e-04  Data: 0.004 (0.430)
+Train: 0 [  98/10009 (  1%)]  Loss:  6.966657 (6.9814)  Time: 0.424s,  302.02/s  (1.160s,  110.38/s)  LR: 1.000e-04  Data: 0.005 (0.426)
+Train: 0 [  99/10009 (  1%)]  Loss:  6.983856 (6.9815)  Time: 2.366s,   54.09/s  (1.172s,  109.24/s)  LR: 1.000e-04  Data: 0.004 (0.422)

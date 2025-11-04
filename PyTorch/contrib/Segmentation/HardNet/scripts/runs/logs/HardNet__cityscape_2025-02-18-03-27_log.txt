@@ -1,0 +1,94 @@
+2025-02-18 03:27:15,866 Segmentron INFO: Using 4 GPUs
+2025-02-18 03:27:15,902 Segmentron INFO: Found 2975 images in the folder /data/datasets/cityscapes/leftImg8bit/train
+2025-02-18 03:27:15,908 Segmentron INFO: Found 500 images in the folder /data/datasets/cityscapes/leftImg8bit/val
+2025-02-18 03:27:16,958 Segmentron INFO: HardNet flops: 35.579G input shape is [3, 1024, 2048], params: 4.119M
+2025-02-18 03:27:16,959 Segmentron INFO: SyncBatchNorm is effective!
+2025-02-18 03:27:16,959 Segmentron INFO: Model do not have encoder or decoder, params list was from model.parameters(), and arguments BN_EPS_FOR_ENCODER, BN_EPS_FOR_DECODER, DECODER_LR_FACTOR not used!
+2025-02-18 03:27:17,021 Segmentron INFO: Start training, Total Epochs: 500 = Total Iterations 23000
+2025-02-18 03:28:34,874 Segmentron INFO: Epoch: 1/500 || Iters: 10/46 || Lr: 0.019992 || Loss: 1.6279 || Cost Time: 0:01:17 || Estimated Time: 2 days, 1:43:04
+2025-02-18 03:29:50,454 Segmentron INFO: Epoch: 1/500 || Iters: 20/46 || Lr: 0.019984 || Loss: 1.3672 || Cost Time: 0:02:33 || Estimated Time: 2 days, 0:58:13
+2025-02-18 03:31:10,715 Segmentron INFO: Epoch: 1/500 || Iters: 30/46 || Lr: 0.019977 || Loss: 1.2148 || Cost Time: 0:03:53 || Estimated Time: 2 days, 1:42:11
+2025-02-18 03:32:30,379 Segmentron INFO: Epoch: 1/500 || Iters: 40/46 || Lr: 0.019969 || Loss: 1.0703 || Cost Time: 0:05:13 || Estimated Time: 2 days, 1:57:47
+2025-02-18 03:33:49,542 Segmentron INFO: Epoch: 2/500 || Iters: 4/46 || Lr: 0.019961 || Loss: 1.0508 || Cost Time: 0:06:32 || Estimated Time: 2 days, 2:02:47
+2025-02-18 03:35:09,011 Segmentron INFO: Epoch: 2/500 || Iters: 14/46 || Lr: 0.019953 || Loss: 0.9561 || Cost Time: 0:07:51 || Estimated Time: 2 days, 2:07:37
+2025-02-18 03:36:33,434 Segmentron INFO: Epoch: 2/500 || Iters: 24/46 || Lr: 0.019945 || Loss: 0.9043 || Cost Time: 0:09:16 || Estimated Time: 2 days, 2:37:44
+2025-02-18 03:37:57,147 Segmentron INFO: Epoch: 2/500 || Iters: 34/46 || Lr: 0.019937 || Loss: 0.8047 || Cost Time: 0:10:40 || Estimated Time: 2 days, 2:56:35
+2025-02-18 03:39:21,317 Segmentron INFO: Epoch: 2/500 || Iters: 44/46 || Lr: 0.019930 || Loss: 0.9199 || Cost Time: 0:12:04 || Estimated Time: 2 days, 3:12:53
+2025-02-18 03:40:45,102 Segmentron INFO: Epoch: 3/500 || Iters: 8/46 || Lr: 0.019922 || Loss: 0.9517 || Cost Time: 0:13:28 || Estimated Time: 2 days, 3:24:10
+2025-02-18 03:42:09,786 Segmentron INFO: Epoch: 3/500 || Iters: 18/46 || Lr: 0.019914 || Loss: 0.7642 || Cost Time: 0:14:52 || Estimated Time: 2 days, 3:36:16
+2025-02-18 03:43:33,025 Segmentron INFO: Epoch: 3/500 || Iters: 28/46 || Lr: 0.019906 || Loss: 0.7358 || Cost Time: 0:16:16 || Estimated Time: 2 days, 3:41:31
+2025-02-18 03:44:57,112 Segmentron INFO: Epoch: 3/500 || Iters: 38/46 || Lr: 0.019898 || Loss: 0.6460 || Cost Time: 0:17:40 || Estimated Time: 2 days, 3:48:14
+2025-02-18 03:46:21,510 Segmentron INFO: Epoch: 4/500 || Iters: 2/46 || Lr: 0.019890 || Loss: 0.7676 || Cost Time: 0:19:04 || Estimated Time: 2 days, 3:54:38
+2025-02-18 03:47:44,487 Segmentron INFO: Epoch: 4/500 || Iters: 12/46 || Lr: 0.019883 || Loss: 0.7119 || Cost Time: 0:20:27 || Estimated Time: 2 days, 3:56:23
+2025-02-18 03:49:07,654 Segmentron INFO: Epoch: 4/500 || Iters: 22/46 || Lr: 0.019875 || Loss: 0.7178 || Cost Time: 0:21:50 || Estimated Time: 2 days, 3:58:12
+2025-02-18 03:50:28,963 Segmentron INFO: Epoch: 4/500 || Iters: 32/46 || Lr: 0.019867 || Loss: 0.7598 || Cost Time: 0:23:11 || Estimated Time: 2 days, 3:55:29
+2025-02-18 03:51:50,349 Segmentron INFO: Epoch: 4/500 || Iters: 42/46 || Lr: 0.019859 || Loss: 0.6899 || Cost Time: 0:24:33 || Estimated Time: 2 days, 3:53:05
+2025-02-18 03:53:12,198 Segmentron INFO: Epoch: 5/500 || Iters: 6/46 || Lr: 0.019851 || Loss: 0.6069 || Cost Time: 0:25:55 || Estimated Time: 2 days, 3:51:43
+2025-02-18 03:54:36,841 Segmentron INFO: Epoch: 5/500 || Iters: 16/46 || Lr: 0.019843 || Loss: 0.7217 || Cost Time: 0:27:19 || Estimated Time: 2 days, 3:55:39
+2025-02-18 03:55:57,968 Segmentron INFO: Epoch: 5/500 || Iters: 26/46 || Lr: 0.019836 || Loss: 0.7539 || Cost Time: 0:28:40 || Estimated Time: 2 days, 3:52:43
+2025-02-18 03:57:20,157 Segmentron INFO: Epoch: 5/500 || Iters: 36/46 || Lr: 0.019828 || Loss: 0.7778 || Cost Time: 0:30:03 || Estimated Time: 2 days, 3:51:46
+2025-02-18 03:58:41,670 Segmentron INFO: Epoch: 5/500 || Iters: 0/46 || Lr: 0.019820 || Loss: 0.6812 || Cost Time: 0:31:24 || Estimated Time: 2 days, 3:49:40
+2025-02-18 04:00:02,623 Segmentron INFO: Epoch: 6/500 || Iters: 10/46 || Lr: 0.019812 || Loss: 0.6694 || Cost Time: 0:32:45 || Estimated Time: 2 days, 3:46:44
+2025-02-18 04:01:26,443 Segmentron INFO: Epoch: 6/500 || Iters: 20/46 || Lr: 0.019804 || Loss: 0.6348 || Cost Time: 0:34:09 || Estimated Time: 2 days, 3:48:17
+2025-02-18 04:02:51,662 Segmentron INFO: Epoch: 6/500 || Iters: 30/46 || Lr: 0.019796 || Loss: 0.6152 || Cost Time: 0:35:34 || Estimated Time: 2 days, 3:51:38
+2025-02-18 04:04:15,042 Segmentron INFO: Epoch: 6/500 || Iters: 40/46 || Lr: 0.019789 || Loss: 0.5493 || Cost Time: 0:36:58 || Estimated Time: 2 days, 3:52:04
+2025-02-18 04:05:37,758 Segmentron INFO: Epoch: 7/500 || Iters: 4/46 || Lr: 0.019781 || Loss: 0.6157 || Cost Time: 0:38:20 || Estimated Time: 2 days, 3:51:28
+2025-02-18 04:07:01,762 Segmentron INFO: Epoch: 7/500 || Iters: 14/46 || Lr: 0.019773 || Loss: 0.5825 || Cost Time: 0:39:44 || Estimated Time: 2 days, 3:52:29
+2025-02-18 04:08:21,682 Segmentron INFO: Epoch: 7/500 || Iters: 24/46 || Lr: 0.019765 || Loss: 0.7300 || Cost Time: 0:41:04 || Estimated Time: 2 days, 3:48:12
+2025-02-18 04:09:43,318 Segmentron INFO: Epoch: 7/500 || Iters: 34/46 || Lr: 0.019757 || Loss: 0.6084 || Cost Time: 0:42:26 || Estimated Time: 2 days, 3:46:12
+2025-02-18 04:11:04,791 Segmentron INFO: Epoch: 7/500 || Iters: 44/46 || Lr: 0.019749 || Loss: 0.6567 || Cost Time: 0:43:47 || Estimated Time: 2 days, 3:44:03
+2025-02-18 04:12:27,049 Segmentron INFO: Epoch: 8/500 || Iters: 8/46 || Lr: 0.019742 || Loss: 0.5195 || Cost Time: 0:45:10 || Estimated Time: 2 days, 3:42:50
+2025-02-18 04:13:49,821 Segmentron INFO: Epoch: 8/500 || Iters: 18/46 || Lr: 0.019734 || Loss: 0.5234 || Cost Time: 0:46:32 || Estimated Time: 2 days, 3:42:11
+2025-02-18 04:15:10,983 Segmentron INFO: Epoch: 8/500 || Iters: 28/46 || Lr: 0.019726 || Loss: 0.6187 || Cost Time: 0:47:53 || Estimated Time: 2 days, 3:39:46
+2025-02-18 04:16:32,457 Segmentron INFO: Epoch: 8/500 || Iters: 38/46 || Lr: 0.019718 || Loss: 0.6123 || Cost Time: 0:49:15 || Estimated Time: 2 days, 3:37:44
+2025-02-18 04:17:55,063 Segmentron INFO: Epoch: 9/500 || Iters: 2/46 || Lr: 0.019710 || Loss: 0.6367 || Cost Time: 0:50:38 || Estimated Time: 2 days, 3:36:53
+2025-02-18 04:19:19,557 Segmentron INFO: Epoch: 9/500 || Iters: 12/46 || Lr: 0.019702 || Loss: 0.5693 || Cost Time: 0:52:02 || Estimated Time: 2 days, 3:37:53
+2025-02-18 04:20:41,881 Segmentron INFO: Epoch: 9/500 || Iters: 22/46 || Lr: 0.019695 || Loss: 0.5356 || Cost Time: 0:53:24 || Estimated Time: 2 days, 3:36:39
+2025-02-18 04:22:04,694 Segmentron INFO: Epoch: 9/500 || Iters: 32/46 || Lr: 0.019687 || Loss: 0.5210 || Cost Time: 0:54:47 || Estimated Time: 2 days, 3:35:53
+2025-02-18 04:23:28,146 Segmentron INFO: Epoch: 9/500 || Iters: 42/46 || Lr: 0.019679 || Loss: 0.4937 || Cost Time: 0:56:11 || Estimated Time: 2 days, 3:35:40
+2025-02-18 04:24:57,904 Segmentron INFO: Epoch: 10/500 || Iters: 6/46 || Lr: 0.019671 || Loss: 0.5376 || Cost Time: 0:57:40 || Estimated Time: 2 days, 3:41:03
+2025-02-18 04:26:23,996 Segmentron INFO: Epoch: 10/500 || Iters: 16/46 || Lr: 0.019663 || Loss: 0.5015 || Cost Time: 0:59:06 || Estimated Time: 2 days, 3:42:54
+2025-02-18 04:27:52,420 Segmentron INFO: Epoch: 10/500 || Iters: 26/46 || Lr: 0.019655 || Loss: 0.4746 || Cost Time: 1:00:35 || Estimated Time: 2 days, 3:46:36
+2025-02-18 04:29:20,680 Segmentron INFO: Epoch: 10/500 || Iters: 36/46 || Lr: 0.019647 || Loss: 0.5757 || Cost Time: 1:02:03 || Estimated Time: 2 days, 3:49:56
+2025-02-18 04:30:48,548 Segmentron INFO: Epoch: 10/500 || Iters: 0/46 || Lr: 0.019640 || Loss: 0.5376 || Cost Time: 1:03:31 || Estimated Time: 2 days, 3:52:44
+2025-02-18 04:32:15,946 Segmentron INFO: Epoch: 11/500 || Iters: 10/46 || Lr: 0.019632 || Loss: 0.5156 || Cost Time: 1:04:58 || Estimated Time: 2 days, 3:54:59
+2025-02-18 04:33:40,042 Segmentron INFO: Epoch: 11/500 || Iters: 20/46 || Lr: 0.019624 || Loss: 0.4839 || Cost Time: 1:06:23 || Estimated Time: 2 days, 3:54:30
+2025-02-18 04:35:05,460 Segmentron INFO: Epoch: 11/500 || Iters: 30/46 || Lr: 0.019616 || Loss: 0.4509 || Cost Time: 1:07:48 || Estimated Time: 2 days, 3:54:59
+2025-02-18 04:36:31,897 Segmentron INFO: Epoch: 11/500 || Iters: 40/46 || Lr: 0.019608 || Loss: 0.4954 || Cost Time: 1:09:14 || Estimated Time: 2 days, 3:56:09
+2025-02-18 04:37:56,061 Segmentron INFO: Epoch: 12/500 || Iters: 4/46 || Lr: 0.019600 || Loss: 0.4890 || Cost Time: 1:10:39 || Estimated Time: 2 days, 3:55:33
+2025-02-18 04:39:18,136 Segmentron INFO: Epoch: 12/500 || Iters: 14/46 || Lr: 0.019593 || Loss: 0.4536 || Cost Time: 1:12:01 || Estimated Time: 2 days, 3:53:25
+2025-02-18 04:40:39,072 Segmentron INFO: Epoch: 12/500 || Iters: 24/46 || Lr: 0.019585 || Loss: 0.5181 || Cost Time: 1:13:22 || Estimated Time: 2 days, 3:50:30
+2025-02-18 04:41:58,818 Segmentron INFO: Epoch: 12/500 || Iters: 34/46 || Lr: 0.019577 || Loss: 0.4766 || Cost Time: 1:14:41 || Estimated Time: 2 days, 3:46:49
+2025-02-18 04:43:16,443 Segmentron INFO: Epoch: 12/500 || Iters: 44/46 || Lr: 0.019569 || Loss: 0.5254 || Cost Time: 1:15:59 || Estimated Time: 2 days, 3:41:47
+2025-02-18 04:44:37,254 Segmentron INFO: Epoch: 13/500 || Iters: 8/46 || Lr: 0.019561 || Loss: 0.5078 || Cost Time: 1:17:20 || Estimated Time: 2 days, 3:39:00
+2025-02-18 04:45:56,674 Segmentron INFO: Epoch: 13/500 || Iters: 18/46 || Lr: 0.019553 || Loss: 0.5142 || Cost Time: 1:18:39 || Estimated Time: 2 days, 3:35:22
+2025-02-18 04:47:16,842 Segmentron INFO: Epoch: 13/500 || Iters: 28/46 || Lr: 0.019546 || Loss: 0.5166 || Cost Time: 1:19:59 || Estimated Time: 2 days, 3:32:17
+2025-02-18 04:48:37,866 Segmentron INFO: Epoch: 13/500 || Iters: 38/46 || Lr: 0.019538 || Loss: 0.4775 || Cost Time: 1:21:20 || Estimated Time: 2 days, 3:29:49
+2025-02-18 04:49:56,677 Segmentron INFO: Epoch: 14/500 || Iters: 2/46 || Lr: 0.019530 || Loss: 0.4399 || Cost Time: 1:22:39 || Estimated Time: 2 days, 3:26:00
+2025-02-18 04:51:14,578 Segmentron INFO: Epoch: 14/500 || Iters: 12/46 || Lr: 0.019522 || Loss: 0.4780 || Cost Time: 1:23:57 || Estimated Time: 2 days, 3:21:43
+2025-02-18 04:52:34,302 Segmentron INFO: Epoch: 14/500 || Iters: 22/46 || Lr: 0.019514 || Loss: 0.5000 || Cost Time: 1:25:17 || Estimated Time: 2 days, 3:18:37
+2025-02-18 04:53:54,834 Segmentron INFO: Epoch: 14/500 || Iters: 32/46 || Lr: 0.019506 || Loss: 0.5264 || Cost Time: 1:26:37 || Estimated Time: 2 days, 3:16:03
+2025-02-18 04:55:14,798 Segmentron INFO: Epoch: 14/500 || Iters: 42/46 || Lr: 0.019498 || Loss: 0.5596 || Cost Time: 1:27:57 || Estimated Time: 2 days, 3:13:12
+2025-02-18 04:56:33,823 Segmentron INFO: Epoch: 15/500 || Iters: 6/46 || Lr: 0.019491 || Loss: 0.4988 || Cost Time: 1:29:16 || Estimated Time: 2 days, 3:09:51
+2025-02-18 04:57:52,432 Segmentron INFO: Epoch: 15/500 || Iters: 16/46 || Lr: 0.019483 || Loss: 0.4321 || Cost Time: 1:30:35 || Estimated Time: 2 days, 3:06:20
+2025-02-18 04:59:10,468 Segmentron INFO: Epoch: 15/500 || Iters: 26/46 || Lr: 0.019475 || Loss: 0.5811 || Cost Time: 1:31:53 || Estimated Time: 2 days, 3:02:34
+2025-02-18 05:00:30,690 Segmentron INFO: Epoch: 15/500 || Iters: 36/46 || Lr: 0.019467 || Loss: 0.4360 || Cost Time: 1:33:13 || Estimated Time: 2 days, 3:00:03
+2025-02-18 05:01:50,273 Segmentron INFO: Epoch: 15/500 || Iters: 0/46 || Lr: 0.019459 || Loss: 0.4797 || Cost Time: 1:34:33 || Estimated Time: 2 days, 2:57:15
+2025-02-18 05:03:11,165 Segmentron INFO: Epoch: 16/500 || Iters: 10/46 || Lr: 0.019451 || Loss: 0.4143 || Cost Time: 1:35:54 || Estimated Time: 2 days, 2:55:10
+2025-02-18 05:04:29,329 Segmentron INFO: Epoch: 16/500 || Iters: 20/46 || Lr: 0.019443 || Loss: 0.4116 || Cost Time: 1:37:12 || Estimated Time: 2 days, 2:51:41
+2025-02-18 05:05:48,831 Segmentron INFO: Epoch: 16/500 || Iters: 30/46 || Lr: 0.019436 || Loss: 0.4597 || Cost Time: 1:38:31 || Estimated Time: 2 days, 2:48:57
+2025-02-18 05:07:06,570 Segmentron INFO: Epoch: 16/500 || Iters: 40/46 || Lr: 0.019428 || Loss: 0.3999 || Cost Time: 1:39:49 || Estimated Time: 2 days, 2:45:22
+2025-02-18 05:08:34,154 Segmentron INFO: Epoch: 17/500 || Iters: 4/46 || Lr: 0.019420 || Loss: 0.4089 || Cost Time: 1:41:17 || Estimated Time: 2 days, 2:46:46
+2025-02-18 05:10:04,882 Segmentron INFO: Epoch: 17/500 || Iters: 14/46 || Lr: 0.019412 || Loss: 0.3416 || Cost Time: 1:42:47 || Estimated Time: 2 days, 2:49:39
+2025-02-18 05:11:33,872 Segmentron INFO: Epoch: 17/500 || Iters: 24/46 || Lr: 0.019404 || Loss: 0.4331 || Cost Time: 1:44:16 || Estimated Time: 2 days, 2:51:35
+2025-02-18 05:13:03,249 Segmentron INFO: Epoch: 17/500 || Iters: 34/46 || Lr: 0.019396 || Loss: 0.4492 || Cost Time: 1:45:46 || Estimated Time: 2 days, 2:53:36
+2025-02-18 05:14:31,578 Segmentron INFO: Epoch: 17/500 || Iters: 44/46 || Lr: 0.019389 || Loss: 0.3987 || Cost Time: 1:47:14 || Estimated Time: 2 days, 2:55:02
+2025-02-18 05:16:00,238 Segmentron INFO: Epoch: 18/500 || Iters: 8/46 || Lr: 0.019381 || Loss: 0.3845 || Cost Time: 1:48:43 || Estimated Time: 2 days, 2:56:33
+2025-02-18 05:17:31,194 Segmentron INFO: Epoch: 18/500 || Iters: 18/46 || Lr: 0.019373 || Loss: 0.4221 || Cost Time: 1:50:14 || Estimated Time: 2 days, 2:59:03
+2025-02-18 05:18:59,374 Segmentron INFO: Epoch: 18/500 || Iters: 28/46 || Lr: 0.019365 || Loss: 0.3550 || Cost Time: 1:51:42 || Estimated Time: 2 days, 3:00:11
+2025-02-18 05:20:28,189 Segmentron INFO: Epoch: 18/500 || Iters: 38/46 || Lr: 0.019357 || Loss: 0.5020 || Cost Time: 1:53:11 || Estimated Time: 2 days, 3:01:32
+2025-02-18 05:22:01,738 Segmentron INFO: Epoch: 19/500 || Iters: 2/46 || Lr: 0.019349 || Loss: 0.4531 || Cost Time: 1:54:44 || Estimated Time: 2 days, 3:04:56
+2025-02-18 05:23:29,101 Segmentron INFO: Epoch: 19/500 || Iters: 12/46 || Lr: 0.019341 || Loss: 0.4587 || Cost Time: 1:56:12 || Estimated Time: 2 days, 3:05:30
+2025-02-18 05:24:56,334 Segmentron INFO: Epoch: 19/500 || Iters: 22/46 || Lr: 0.019334 || Loss: 0.4519 || Cost Time: 1:57:39 || Estimated Time: 2 days, 3:05:57
+2025-02-18 05:26:26,193 Segmentron INFO: Epoch: 19/500 || Iters: 32/46 || Lr: 0.019326 || Loss: 0.4207 || Cost Time: 1:59:09 || Estimated Time: 2 days, 3:07:29
+2025-02-18 05:27:19,879 Segmentron INFO: Total training time: 2:00:02.858412 (0.3132s / it)

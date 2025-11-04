@@ -1,0 +1,374 @@
+[01/25 07:47:43] ppgan INFO: Configs: 
+dataset:
+  test:
+    batch_size: 1
+    dataroot: /root/facades/test
+    name: PairedDataset
+    num_workers: 4
+    preprocess:
+    - key: pair
+      name: LoadImageFromFile
+    - key: pair
+      name: SplitPairedImage
+      paired_keys:
+      - A
+      - B
+    - input_keys:
+      - A
+      - B
+      name: Transforms
+      pipeline:
+      - interpolation: bicubic
+        keys:
+        - image
+        - image
+        name: Resize
+        size:
+        - 256
+        - 256
+      - keys:
+        - image
+        - image
+        name: Transpose
+      - keys:
+        - image
+        - image
+        mean:
+        - 127.5
+        - 127.5
+        - 127.5
+        name: Normalize
+        std:
+        - 127.5
+        - 127.5
+        - 127.5
+  train:
+    batch_size: 1
+    dataroot: /root/facades/train
+    name: PairedDataset
+    num_workers: 4
+    preprocess:
+    - key: pair
+      name: LoadImageFromFile
+    - key: pair
+      name: SplitPairedImage
+      paired_keys:
+      - A
+      - B
+    - input_keys:
+      - A
+      - B
+      name: Transforms
+      pipeline:
+      - interpolation: bicubic
+        keys:
+        - image
+        - image
+        name: Resize
+        size:
+        - 286
+        - 286
+      - keys:
+        - image
+        - image
+        name: PairedRandomCrop
+        size:
+        - 256
+        - 256
+      - keys:
+        - image
+        - image
+        name: PairedRandomHorizontalFlip
+        prob: 0.5
+      - keys:
+        - image
+        - image
+        name: Transpose
+      - keys:
+        - image
+        - image
+        mean:
+        - 127.5
+        - 127.5
+        - 127.5
+        name: Normalize
+        std:
+        - 127.5
+        - 127.5
+        - 127.5
+epochs: 200
+export_model:
+- inputs_num: 1
+  name: netG
+is_train: true
+log_config:
+  interval: 100
+  visiual_interval: 500
+lr_scheduler:
+  decay_epochs: 100
+  iters_per_epoch: 1
+  learning_rate: 0.0002
+  name: LinearDecay
+  start_epoch: 100
+model:
+  direction: b2a
+  discriminator:
+    input_nc: 6
+    n_layers: 3
+    name: NLayerDiscriminator
+    ndf: 64
+    norm_type: batch
+  gan_criterion:
+    gan_mode: vanilla
+    name: GANLoss
+  generator:
+    input_nc: 3
+    name: UnetGenerator
+    ngf: 64
+    norm_type: batch
+    num_downs: 8
+    output_nc: 3
+    use_dropout: false
+  name: Pix2PixModel
+  pixel_criterion:
+    loss_weight: 100
+    name: L1Loss
+  to_static: false
+optimizer:
+  optimD:
+    beta1: 0.5
+    name: Adam
+    net_names:
+    - netD
+  optimG:
+    beta1: 0.5
+    name: Adam
+    net_names:
+    - netG
+output_dir: output_dir/pix2pix_facades-2025-01-25-07-47
+profiler_options: null
+snapshot_config:
+  interval: 5
+timestamp: -2025-01-25-07-47
+validate:
+  interval: 4000
+  metrics:
+    fid:
+      batch_size: 8
+      name: FID
+  save_img: false
+
+[01/25 07:47:53] ppgan.engine.trainer INFO: Epoch: 1/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.680 D_real_loss: 0.711 G_adv_loss: 0.712 G_L1_loss: 48.480 batch_cost: 0.05363 sec reader_cost: 0.00280 sec ips: 18.64524 images/s eta: 1:11:25
+[01/25 07:47:59] ppgan.engine.trainer INFO: Epoch: 1/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.612 D_real_loss: 0.792 G_adv_loss: 0.771 G_L1_loss: 47.246 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61112 images/s eta: 1:07:49
+[01/25 07:48:04] ppgan.engine.trainer INFO: Epoch: 1/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.610 D_real_loss: 0.792 G_adv_loss: 0.769 G_L1_loss: 47.069 batch_cost: 0.05100 sec reader_cost: 0.00021 sec ips: 19.60962 images/s eta: 1:07:44
+[01/25 07:48:09] ppgan.engine.trainer INFO: Epoch: 1/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.627 D_real_loss: 0.613 G_adv_loss: 0.800 G_L1_loss: nan batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61448 images/s eta: 1:07:38
+[01/25 07:48:14] ppgan.engine.trainer INFO: Epoch: 2/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.576 D_real_loss: 1.132 G_adv_loss: 0.679 G_L1_loss: 7649.724 batch_cost: 0.05268 sec reader_cost: 0.00187 sec ips: 18.98323 images/s eta: 1:09:47
+[01/25 07:48:19] ppgan.engine.trainer INFO: Epoch: 2/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.910 D_real_loss: 0.443 G_adv_loss: 0.563 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61141 images/s eta: 1:07:28
+[01/25 07:48:24] ppgan.engine.trainer INFO: Epoch: 2/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.911 D_real_loss: 0.508 G_adv_loss: 0.584 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.60977 images/s eta: 1:07:23
+[01/25 07:48:29] ppgan.engine.trainer INFO: Epoch: 2/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.970 D_real_loss: 0.447 G_adv_loss: 0.503 G_L1_loss: nan batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61574 images/s eta: 1:07:17
+[01/25 07:48:35] ppgan.engine.trainer INFO: Epoch: 3/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.967 D_real_loss: 0.439 G_adv_loss: 0.538 G_L1_loss: nan batch_cost: 0.05401 sec reader_cost: 0.00318 sec ips: 18.51587 images/s eta: 1:11:12
+[01/25 07:48:40] ppgan.engine.trainer INFO: Epoch: 3/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.260 D_real_loss: 0.496 G_adv_loss: 1.537 G_L1_loss: 163758093388965023725345329643520.000 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61161 images/s eta: 1:07:08
+[01/25 07:48:45] ppgan.engine.trainer INFO: Epoch: 3/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.537 D_real_loss: 0.909 G_adv_loss: 0.922 G_L1_loss: 66.622 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60845 images/s eta: 1:07:03
+[01/25 07:48:50] ppgan.engine.trainer INFO: Epoch: 3/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.397 D_real_loss: 1.273 G_adv_loss: 0.959 G_L1_loss: 7641.508 batch_cost: 0.05097 sec reader_cost: 0.00020 sec ips: 19.61859 images/s eta: 1:06:56
+[01/25 07:48:56] ppgan.engine.trainer INFO: Epoch: 4/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 1.148 D_real_loss: 0.411 G_adv_loss: 0.441 G_L1_loss: 90.856 batch_cost: 0.05399 sec reader_cost: 0.00319 sec ips: 18.52154 images/s eta: 1:10:49
+[01/25 07:49:01] ppgan.engine.trainer INFO: Epoch: 4/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.802 D_real_loss: 0.549 G_adv_loss: 0.652 G_L1_loss: 156263764859108923908524165390401536.000 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60922 images/s eta: 1:06:48
+[01/25 07:49:06] ppgan.engine.trainer INFO: Epoch: 4/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.673 D_real_loss: 0.614 G_adv_loss: 0.718 G_L1_loss: 7638.376 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61301 images/s eta: 1:06:42
+[01/25 07:49:11] ppgan.engine.trainer INFO: Epoch: 4/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.763 D_real_loss: 0.488 G_adv_loss: 0.701 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61355 images/s eta: 1:06:37
+[01/25 07:49:16] ppgan.engine.trainer INFO: Epoch: 5/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.215 D_real_loss: 0.505 G_adv_loss: 1.886 G_L1_loss: nan batch_cost: 0.05420 sec reader_cost: 0.00338 sec ips: 18.44991 images/s eta: 1:10:43
+[01/25 07:49:21] ppgan.engine.trainer INFO: Epoch: 5/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.674 D_real_loss: 0.657 G_adv_loss: 0.650 G_L1_loss: 7638.212 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60867 images/s eta: 1:06:28
+[01/25 07:49:27] ppgan.engine.trainer INFO: Epoch: 5/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.673 D_real_loss: 0.523 G_adv_loss: 0.751 G_L1_loss: 7637.187 batch_cost: 0.05101 sec reader_cost: 0.00019 sec ips: 19.60263 images/s eta: 1:06:24
+[01/25 07:49:32] ppgan.engine.trainer INFO: Epoch: 5/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.678 D_real_loss: 0.498 G_adv_loss: 0.670 G_L1_loss: 7636.667 batch_cost: 0.05098 sec reader_cost: 0.00019 sec ips: 19.61387 images/s eta: 1:06:16
+[01/25 07:49:39] ppgan.engine.trainer INFO: Epoch: 6/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.793 D_real_loss: 0.531 G_adv_loss: 0.623 G_L1_loss: nan batch_cost: 0.05443 sec reader_cost: 0.00363 sec ips: 18.37364 images/s eta: 1:10:39
+[01/25 07:49:44] ppgan.engine.trainer INFO: Epoch: 6/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.117 D_real_loss: 0.335 G_adv_loss: 2.635 G_L1_loss: 266624732147744768.000 batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61600 images/s eta: 1:06:06
+[01/25 07:49:49] ppgan.engine.trainer INFO: Epoch: 6/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.615 D_real_loss: 0.531 G_adv_loss: 0.799 G_L1_loss: nan batch_cost: 0.05098 sec reader_cost: 0.00021 sec ips: 19.61519 images/s eta: 1:06:01
+[01/25 07:49:54] ppgan.engine.trainer INFO: Epoch: 6/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.076 D_real_loss: 0.284 G_adv_loss: 3.009 G_L1_loss: inf batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61718 images/s eta: 1:05:55
+[01/25 07:49:59] ppgan.engine.trainer INFO: Epoch: 7/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.845 D_real_loss: 0.364 G_adv_loss: 0.726 G_L1_loss: inf batch_cost: 0.05484 sec reader_cost: 0.00403 sec ips: 18.23348 images/s eta: 1:10:50
+[01/25 07:50:05] ppgan.engine.trainer INFO: Epoch: 7/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.760 D_real_loss: 0.643 G_adv_loss: 0.638 G_L1_loss: 130.646 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61206 images/s eta: 1:05:46
+[01/25 07:50:10] ppgan.engine.trainer INFO: Epoch: 7/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.906 D_real_loss: 0.542 G_adv_loss: 0.578 G_L1_loss: 93.391 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61294 images/s eta: 1:05:41
+[01/25 07:50:15] ppgan.engine.trainer INFO: Epoch: 7/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.678 D_real_loss: 0.719 G_adv_loss: 0.728 G_L1_loss: 125.682 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61260 images/s eta: 1:05:36
+[01/25 07:50:20] ppgan.engine.trainer INFO: Epoch: 8/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.167 D_real_loss: 0.192 G_adv_loss: 3.791 G_L1_loss: 5477766450564055962612371824836608.000 batch_cost: 0.05455 sec reader_cost: 0.00374 sec ips: 18.33022 images/s eta: 1:10:06
+[01/25 07:50:25] ppgan.engine.trainer INFO: Epoch: 8/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.056 D_real_loss: 0.112 G_adv_loss: 3.802 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61169 images/s eta: 1:05:26
+[01/25 07:50:31] ppgan.engine.trainer INFO: Epoch: 8/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.032 D_real_loss: 0.118 G_adv_loss: 4.273 G_L1_loss: 5477766450564055962612371824836608.000 batch_cost: 0.05098 sec reader_cost: 0.00018 sec ips: 19.61389 images/s eta: 1:05:20
+[01/25 07:50:36] ppgan.engine.trainer INFO: Epoch: 8/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.025 D_real_loss: 0.114 G_adv_loss: 4.421 G_L1_loss: 540922619812146686629470382587904.000 batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61727 images/s eta: 1:05:14
+[01/25 07:50:41] ppgan.engine.trainer INFO: Epoch: 9/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.048 D_real_loss: 0.162 G_adv_loss: 3.339 G_L1_loss: nan batch_cost: 0.05499 sec reader_cost: 0.00417 sec ips: 18.18411 images/s eta: 1:10:17
+[01/25 07:50:46] ppgan.engine.trainer INFO: Epoch: 9/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.049 D_real_loss: 0.279 G_adv_loss: 4.018 G_L1_loss: 216980098526478336.000 batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61415 images/s eta: 1:05:05
+[01/25 07:50:51] ppgan.engine.trainer INFO: Epoch: 9/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 1.012 D_real_loss: 0.287 G_adv_loss: 0.549 G_L1_loss: nan batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61403 images/s eta: 1:05:00
+[01/25 07:50:57] ppgan.engine.trainer INFO: Epoch: 9/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.036 D_real_loss: 0.347 G_adv_loss: 4.316 G_L1_loss: inf batch_cost: 0.05098 sec reader_cost: 0.00019 sec ips: 19.61511 images/s eta: 1:04:54
+[01/25 07:51:02] ppgan.engine.trainer INFO: Epoch: 10/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.066 D_real_loss: 0.183 G_adv_loss: 3.792 G_L1_loss: 216976129976696832.000 batch_cost: 0.05558 sec reader_cost: 0.00484 sec ips: 17.99096 images/s eta: 1:10:41
+[01/25 07:51:07] ppgan.engine.trainer INFO: Epoch: 10/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.040 D_real_loss: 0.261 G_adv_loss: 4.391 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00018 sec ips: 19.61214 images/s eta: 1:04:45
+[01/25 07:51:12] ppgan.engine.trainer INFO: Epoch: 10/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.037 D_real_loss: 0.209 G_adv_loss: 4.303 G_L1_loss: 216976129976696832.000 batch_cost: 0.05101 sec reader_cost: 0.00020 sec ips: 19.60490 images/s eta: 1:04:41
+[01/25 07:51:17] ppgan.engine.trainer INFO: Epoch: 10/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.060 D_real_loss: 0.253 G_adv_loss: 4.246 G_L1_loss: nan batch_cost: 0.05097 sec reader_cost: 0.00020 sec ips: 19.61919 images/s eta: 1:04:33
+[01/25 07:51:18] ppgan.engine.trainer INFO: Test iter: [0/106]
+[01/25 07:51:27] ppgan.engine.trainer INFO: Test iter: [100/106]
+[01/25 07:51:34] ppgan.engine.trainer INFO: Metric fid: 1181951886.5370
+[01/25 07:51:41] ppgan.engine.trainer INFO: Epoch: 11/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.328 D_real_loss: 1.256 G_adv_loss: 0.811 G_L1_loss: 74.142 batch_cost: 0.05492 sec reader_cost: 0.00411 sec ips: 18.20787 images/s eta: 1:09:28
+[01/25 07:51:46] ppgan.engine.trainer INFO: Epoch: 11/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.493 D_real_loss: 0.145 G_adv_loss: 1.464 G_L1_loss: 91.848 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61259 images/s eta: 1:04:24
+[01/25 07:51:51] ppgan.engine.trainer INFO: Epoch: 11/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.260 D_real_loss: 1.544 G_adv_loss: 0.951 G_L1_loss: 73.740 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.60990 images/s eta: 1:04:20
+[01/25 07:51:57] ppgan.engine.trainer INFO: Epoch: 11/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.401 D_real_loss: 0.103 G_adv_loss: 1.666 G_L1_loss: 85.309 batch_cost: 0.05098 sec reader_cost: 0.00019 sec ips: 19.61409 images/s eta: 1:04:14
+[01/25 07:52:02] ppgan.engine.trainer INFO: Epoch: 12/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.581 D_real_loss: 0.081 G_adv_loss: 0.995 G_L1_loss: 68.269 batch_cost: 0.05517 sec reader_cost: 0.00439 sec ips: 18.12443 images/s eta: 1:09:25
+[01/25 07:52:07] ppgan.engine.trainer INFO: Epoch: 12/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.617 D_real_loss: 0.450 G_adv_loss: 0.847 G_L1_loss: 86.281 batch_cost: 0.05101 sec reader_cost: 0.00020 sec ips: 19.60463 images/s eta: 1:04:06
+[01/25 07:52:12] ppgan.engine.trainer INFO: Epoch: 12/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.086 D_real_loss: 0.300 G_adv_loss: 2.950 G_L1_loss: 97.853 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61180 images/s eta: 1:03:59
+[01/25 07:52:17] ppgan.engine.trainer INFO: Epoch: 12/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.503 D_real_loss: 0.335 G_adv_loss: 1.000 G_L1_loss: 96.355 batch_cost: 0.05101 sec reader_cost: 0.00019 sec ips: 19.60556 images/s eta: 1:03:55
+[01/25 07:52:23] ppgan.engine.trainer INFO: Epoch: 13/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.665 D_real_loss: 0.325 G_adv_loss: 0.837 G_L1_loss: nan batch_cost: 0.05516 sec reader_cost: 0.00434 sec ips: 18.12941 images/s eta: 1:09:02
+[01/25 07:52:28] ppgan.engine.trainer INFO: Epoch: 13/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.458 D_real_loss: 0.306 G_adv_loss: 1.051 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61145 images/s eta: 1:03:44
+[01/25 07:52:33] ppgan.engine.trainer INFO: Epoch: 13/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.577 D_real_loss: 0.258 G_adv_loss: 0.890 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00018 sec ips: 19.60913 images/s eta: 1:03:39
+[01/25 07:52:38] ppgan.engine.trainer INFO: Epoch: 13/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.498 D_real_loss: 0.242 G_adv_loss: 1.005 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60801 images/s eta: 1:03:34
+[01/25 07:52:44] ppgan.engine.trainer INFO: Epoch: 14/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.529 D_real_loss: 1.044 G_adv_loss: 0.731 G_L1_loss: 68.390 batch_cost: 0.05610 sec reader_cost: 0.00528 sec ips: 17.82558 images/s eta: 1:09:50
+[01/25 07:52:49] ppgan.engine.trainer INFO: Epoch: 14/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.399 D_real_loss: 0.432 G_adv_loss: 1.117 G_L1_loss: 91.316 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60725 images/s eta: 1:03:24
+[01/25 07:52:54] ppgan.engine.trainer INFO: Epoch: 14/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.390 D_real_loss: 0.467 G_adv_loss: 1.204 G_L1_loss: 60.739 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60745 images/s eta: 1:03:19
+[01/25 07:52:59] ppgan.engine.trainer INFO: Epoch: 14/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.388 D_real_loss: 0.427 G_adv_loss: 1.199 G_L1_loss: 71.060 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61153 images/s eta: 1:03:13
+[01/25 07:53:05] ppgan.engine.trainer INFO: Epoch: 15/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.318 D_real_loss: 1.506 G_adv_loss: 0.879 G_L1_loss: 68.576 batch_cost: 0.05561 sec reader_cost: 0.00480 sec ips: 17.98246 images/s eta: 1:08:51
+[01/25 07:53:10] ppgan.engine.trainer INFO: Epoch: 15/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.409 D_real_loss: 0.202 G_adv_loss: 1.547 G_L1_loss: 87.304 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60716 images/s eta: 1:03:04
+[01/25 07:53:15] ppgan.engine.trainer INFO: Epoch: 15/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.191 D_real_loss: 1.653 G_adv_loss: 1.465 G_L1_loss: 59.199 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60606 images/s eta: 1:02:59
+[01/25 07:53:20] ppgan.engine.trainer INFO: Epoch: 15/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.327 D_real_loss: 0.182 G_adv_loss: 1.629 G_L1_loss: 87.059 batch_cost: 0.05098 sec reader_cost: 0.00021 sec ips: 19.61567 images/s eta: 1:02:52
+[01/25 07:53:27] ppgan.engine.trainer INFO: Epoch: 16/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.644 D_real_loss: 0.675 G_adv_loss: 0.759 G_L1_loss: 72.007 batch_cost: 0.05620 sec reader_cost: 0.00539 sec ips: 17.79287 images/s eta: 1:09:13
+[01/25 07:53:32] ppgan.engine.trainer INFO: Epoch: 16/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.299 D_real_loss: 0.164 G_adv_loss: 1.705 G_L1_loss: 90.935 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61178 images/s eta: 1:02:43
+[01/25 07:53:38] ppgan.engine.trainer INFO: Epoch: 16/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.183 D_real_loss: 1.967 G_adv_loss: 1.461 G_L1_loss: 70.332 batch_cost: 0.05101 sec reader_cost: 0.00019 sec ips: 19.60402 images/s eta: 1:02:39
+[01/25 07:53:43] ppgan.engine.trainer INFO: Epoch: 16/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.434 D_real_loss: 0.176 G_adv_loss: 1.370 G_L1_loss: 88.363 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61125 images/s eta: 1:02:32
+[01/25 07:53:48] ppgan.engine.trainer INFO: Epoch: 17/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.233 D_real_loss: 0.133 G_adv_loss: 1.571 G_L1_loss: 86.440 batch_cost: 0.05628 sec reader_cost: 0.00546 sec ips: 17.76770 images/s eta: 1:08:56
+[01/25 07:53:53] ppgan.engine.trainer INFO: Epoch: 17/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.276 D_real_loss: 0.259 G_adv_loss: 1.561 G_L1_loss: 88.111 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60848 images/s eta: 1:02:23
+[01/25 07:53:59] ppgan.engine.trainer INFO: Epoch: 17/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.103 D_real_loss: 0.238 G_adv_loss: 2.682 G_L1_loss: 87.625 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61316 images/s eta: 1:02:17
+[01/25 07:54:04] ppgan.engine.trainer INFO: Epoch: 17/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.232 D_real_loss: 0.197 G_adv_loss: 1.712 G_L1_loss: 84.337 batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61734 images/s eta: 1:02:11
+[01/25 07:54:09] ppgan.engine.trainer INFO: Epoch: 18/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.287 D_real_loss: 1.642 G_adv_loss: 1.016 G_L1_loss: 72.391 batch_cost: 0.05670 sec reader_cost: 0.00588 sec ips: 17.63683 images/s eta: 1:09:04
+[01/25 07:54:14] ppgan.engine.trainer INFO: Epoch: 18/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 1.038 D_real_loss: 0.378 G_adv_loss: 0.491 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61297 images/s eta: 1:02:02
+[01/25 07:54:20] ppgan.engine.trainer INFO: Epoch: 18/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.753 D_real_loss: 0.271 G_adv_loss: 0.650 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00018 sec ips: 19.60915 images/s eta: 1:01:57
+[01/25 07:54:25] ppgan.engine.trainer INFO: Epoch: 18/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.525 D_real_loss: 0.303 G_adv_loss: 0.950 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61298 images/s eta: 1:01:51
+[01/25 07:54:30] ppgan.engine.trainer INFO: Epoch: 19/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.566 D_real_loss: 1.389 G_adv_loss: 0.854 G_L1_loss: 71.688 batch_cost: 0.05670 sec reader_cost: 0.00591 sec ips: 17.63516 images/s eta: 1:08:42
+[01/25 07:54:35] ppgan.engine.trainer INFO: Epoch: 19/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.364 D_real_loss: 0.188 G_adv_loss: 1.486 G_L1_loss: 84.106 batch_cost: 0.05100 sec reader_cost: 0.00021 sec ips: 19.60955 images/s eta: 1:01:42
+[01/25 07:54:41] ppgan.engine.trainer INFO: Epoch: 19/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.393 D_real_loss: 0.243 G_adv_loss: 1.140 G_L1_loss: 72.622 batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61431 images/s eta: 1:01:36
+[01/25 07:54:46] ppgan.engine.trainer INFO: Epoch: 19/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.292 D_real_loss: 0.349 G_adv_loss: 1.476 G_L1_loss: 64.661 batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61249 images/s eta: 1:01:31
+[01/25 07:54:51] ppgan.engine.trainer INFO: Epoch: 20/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.227 D_real_loss: 1.916 G_adv_loss: 1.466 G_L1_loss: 72.678 batch_cost: 0.05633 sec reader_cost: 0.00547 sec ips: 17.75338 images/s eta: 1:07:52
+[01/25 07:54:57] ppgan.engine.trainer INFO: Epoch: 20/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.423 D_real_loss: 0.144 G_adv_loss: 1.688 G_L1_loss: 89.127 batch_cost: 0.05148 sec reader_cost: 0.00019 sec ips: 19.42598 images/s eta: 1:01:56
+[01/25 07:55:02] ppgan.engine.trainer INFO: Epoch: 20/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.583 D_real_loss: 0.312 G_adv_loss: 0.937 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60968 images/s eta: 1:01:16
+[01/25 07:55:07] ppgan.engine.trainer INFO: Epoch: 20/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.503 D_real_loss: 0.276 G_adv_loss: 0.987 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61227 images/s eta: 1:01:11
+[01/25 07:55:07] ppgan.engine.trainer INFO: Test iter: [0/106]
+[01/25 07:55:17] ppgan.engine.trainer INFO: Test iter: [100/106]
+[01/25 07:55:24] ppgan.engine.trainer INFO: Metric fid: 386112503.2950
+[01/25 07:55:31] ppgan.engine.trainer INFO: Epoch: 21/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.177 D_real_loss: 0.421 G_adv_loss: 2.069 G_L1_loss: nan batch_cost: 0.05693 sec reader_cost: 0.00610 sec ips: 17.56418 images/s eta: 1:08:13
+[01/25 07:55:36] ppgan.engine.trainer INFO: Epoch: 21/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.991 D_real_loss: 0.478 G_adv_loss: 0.548 G_L1_loss: 88.831 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61025 images/s eta: 1:01:01
+[01/25 07:55:41] ppgan.engine.trainer INFO: Epoch: 21/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.089 D_real_loss: 0.391 G_adv_loss: 2.879 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61069 images/s eta: 1:00:56
+[01/25 07:55:46] ppgan.engine.trainer INFO: Epoch: 21/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.913 D_real_loss: 0.579 G_adv_loss: 0.645 G_L1_loss: 93.365 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61313 images/s eta: 1:00:50
+[01/25 07:55:52] ppgan.engine.trainer INFO: Epoch: 22/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.637 D_real_loss: 0.288 G_adv_loss: 1.197 G_L1_loss: nan batch_cost: 0.05695 sec reader_cost: 0.00613 sec ips: 17.55908 images/s eta: 1:07:51
+[01/25 07:55:57] ppgan.engine.trainer INFO: Epoch: 22/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.383 D_real_loss: 0.288 G_adv_loss: 1.531 G_L1_loss: 90.074 batch_cost: 0.05102 sec reader_cost: 0.00020 sec ips: 19.60032 images/s eta: 1:00:42
+[01/25 07:56:02] ppgan.engine.trainer INFO: Epoch: 22/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.412 D_real_loss: 0.301 G_adv_loss: 1.248 G_L1_loss: 59.588 batch_cost: 0.05101 sec reader_cost: 0.00019 sec ips: 19.60430 images/s eta: 1:00:36
+[01/25 07:56:07] ppgan.engine.trainer INFO: Epoch: 22/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.294 D_real_loss: 0.335 G_adv_loss: 1.515 G_L1_loss: 76.892 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.60978 images/s eta: 1:00:30
+[01/25 07:56:13] ppgan.engine.trainer INFO: Epoch: 23/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.092 D_real_loss: 0.193 G_adv_loss: 2.806 G_L1_loss: 97.558 batch_cost: 0.05851 sec reader_cost: 0.00770 sec ips: 17.08997 images/s eta: 1:09:20
+[01/25 07:56:18] ppgan.engine.trainer INFO: Epoch: 23/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.378 D_real_loss: 0.286 G_adv_loss: 1.338 G_L1_loss: 96.194 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60596 images/s eta: 1:00:21
+[01/25 07:56:23] ppgan.engine.trainer INFO: Epoch: 23/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.022 D_real_loss: 0.252 G_adv_loss: 4.293 G_L1_loss: 91.801 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61026 images/s eta: 1:00:15
+[01/25 07:56:28] ppgan.engine.trainer INFO: Epoch: 23/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.427 D_real_loss: 0.193 G_adv_loss: 1.235 G_L1_loss: 88.842 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61010 images/s eta: 1:00:10
+[01/25 07:56:34] ppgan.engine.trainer INFO: Epoch: 24/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.144 D_real_loss: 0.195 G_adv_loss: 2.516 G_L1_loss: nan batch_cost: 0.05704 sec reader_cost: 0.00623 sec ips: 17.53251 images/s eta: 1:07:12
+[01/25 07:56:39] ppgan.engine.trainer INFO: Epoch: 24/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.233 D_real_loss: 0.205 G_adv_loss: 1.946 G_L1_loss: 89.867 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60867 images/s eta: 1:00:00
+[01/25 07:56:44] ppgan.engine.trainer INFO: Epoch: 24/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.261 D_real_loss: 0.349 G_adv_loss: 1.586 G_L1_loss: 84.252 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61043 images/s eta: 0:59:55
+[01/25 07:56:49] ppgan.engine.trainer INFO: Epoch: 24/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.247 D_real_loss: 0.281 G_adv_loss: 1.615 G_L1_loss: 80.384 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60864 images/s eta: 0:59:50
+[01/25 07:56:55] ppgan.engine.trainer INFO: Epoch: 25/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.119 D_real_loss: 0.155 G_adv_loss: 2.781 G_L1_loss: 96.197 batch_cost: 0.05705 sec reader_cost: 0.00622 sec ips: 17.52943 images/s eta: 1:06:50
+[01/25 07:57:00] ppgan.engine.trainer INFO: Epoch: 25/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.061 D_real_loss: 0.194 G_adv_loss: 3.570 G_L1_loss: 90.817 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61098 images/s eta: 0:59:39
+[01/25 07:57:05] ppgan.engine.trainer INFO: Epoch: 25/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.050 D_real_loss: 0.104 G_adv_loss: 3.545 G_L1_loss: 82.097 batch_cost: 0.05101 sec reader_cost: 0.00020 sec ips: 19.60475 images/s eta: 0:59:35
+[01/25 07:57:10] ppgan.engine.trainer INFO: Epoch: 25/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.033 D_real_loss: 0.124 G_adv_loss: 3.729 G_L1_loss: 88.002 batch_cost: 0.05099 sec reader_cost: 0.00018 sec ips: 19.61260 images/s eta: 0:59:29
+[01/25 07:57:17] ppgan.engine.trainer INFO: Epoch: 26/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.620 D_real_loss: 0.216 G_adv_loss: 1.339 G_L1_loss: nan batch_cost: 0.05720 sec reader_cost: 0.00638 sec ips: 17.48105 images/s eta: 1:06:38
+[01/25 07:57:23] ppgan.engine.trainer INFO: Epoch: 26/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.165 D_real_loss: 0.281 G_adv_loss: 2.260 G_L1_loss: 92.524 batch_cost: 0.05104 sec reader_cost: 0.00020 sec ips: 19.59361 images/s eta: 0:59:22
+[01/25 07:57:28] ppgan.engine.trainer INFO: Epoch: 26/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.362 D_real_loss: 0.262 G_adv_loss: 1.332 G_L1_loss: 68.136 batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61261 images/s eta: 0:59:13
+[01/25 07:57:33] ppgan.engine.trainer INFO: Epoch: 26/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.298 D_real_loss: 0.255 G_adv_loss: 1.524 G_L1_loss: 51.258 batch_cost: 0.05098 sec reader_cost: 0.00021 sec ips: 19.61415 images/s eta: 0:59:08
+[01/25 07:57:39] ppgan.engine.trainer INFO: Epoch: 27/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.090 D_real_loss: 0.075 G_adv_loss: 2.816 G_L1_loss: 64.330 batch_cost: 0.05761 sec reader_cost: 0.00678 sec ips: 17.35736 images/s eta: 1:06:44
+[01/25 07:57:44] ppgan.engine.trainer INFO: Epoch: 27/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.052 D_real_loss: 0.077 G_adv_loss: 3.171 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61221 images/s eta: 0:58:58
+[01/25 07:57:49] ppgan.engine.trainer INFO: Epoch: 27/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.071 D_real_loss: 0.114 G_adv_loss: 3.631 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61079 images/s eta: 0:58:53
+[01/25 07:57:54] ppgan.engine.trainer INFO: Epoch: 27/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.027 D_real_loss: 0.124 G_adv_loss: 4.191 G_L1_loss: nan batch_cost: 0.05098 sec reader_cost: 0.00019 sec ips: 19.61364 images/s eta: 0:58:48
+[01/25 07:58:00] ppgan.engine.trainer INFO: Epoch: 28/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.076 D_real_loss: 0.258 G_adv_loss: 3.494 G_L1_loss: nan batch_cost: 0.05946 sec reader_cost: 0.00863 sec ips: 16.81790 images/s eta: 1:08:28
+[01/25 07:58:05] ppgan.engine.trainer INFO: Epoch: 28/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.296 D_real_loss: 0.247 G_adv_loss: 1.859 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60754 images/s eta: 0:58:39
+[01/25 07:58:10] ppgan.engine.trainer INFO: Epoch: 28/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.244 D_real_loss: 0.201 G_adv_loss: 1.649 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60889 images/s eta: 0:58:33
+[01/25 07:58:15] ppgan.engine.trainer INFO: Epoch: 28/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.270 D_real_loss: 0.171 G_adv_loss: 1.566 G_L1_loss: nan batch_cost: 0.05098 sec reader_cost: 0.00019 sec ips: 19.61439 images/s eta: 0:58:27
+[01/25 07:58:21] ppgan.engine.trainer INFO: Epoch: 29/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.143 D_real_loss: 0.203 G_adv_loss: 2.763 G_L1_loss: nan batch_cost: 0.05786 sec reader_cost: 0.00703 sec ips: 17.28363 images/s eta: 1:06:14
+[01/25 07:58:26] ppgan.engine.trainer INFO: Epoch: 29/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.165 D_real_loss: 0.328 G_adv_loss: 2.280 G_L1_loss: 91.593 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60902 images/s eta: 0:58:18
+[01/25 07:58:31] ppgan.engine.trainer INFO: Epoch: 29/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.308 D_real_loss: 0.333 G_adv_loss: 1.521 G_L1_loss: 65.755 batch_cost: 0.05101 sec reader_cost: 0.00018 sec ips: 19.60411 images/s eta: 0:58:14
+[01/25 07:58:36] ppgan.engine.trainer INFO: Epoch: 29/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.411 D_real_loss: 0.242 G_adv_loss: 1.228 G_L1_loss: 68.131 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60835 images/s eta: 0:58:08
+[01/25 07:58:42] ppgan.engine.trainer INFO: Epoch: 30/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.068 D_real_loss: 0.223 G_adv_loss: 3.203 G_L1_loss: nan batch_cost: 0.05818 sec reader_cost: 0.00736 sec ips: 17.18807 images/s eta: 1:06:13
+[01/25 07:58:47] ppgan.engine.trainer INFO: Epoch: 30/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.380 D_real_loss: 0.146 G_adv_loss: 1.421 G_L1_loss: nan batch_cost: 0.05101 sec reader_cost: 0.00018 sec ips: 19.60494 images/s eta: 0:57:58
+[01/25 07:58:53] ppgan.engine.trainer INFO: Epoch: 30/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.289 D_real_loss: 0.129 G_adv_loss: 1.674 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61266 images/s eta: 0:57:52
+[01/25 07:58:58] ppgan.engine.trainer INFO: Epoch: 30/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.346 D_real_loss: 0.117 G_adv_loss: 1.396 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61123 images/s eta: 0:57:47
+[01/25 07:58:58] ppgan.engine.trainer INFO: Test iter: [0/106]
+[01/25 07:59:08] ppgan.engine.trainer INFO: Test iter: [100/106]
+[01/25 07:59:14] ppgan.engine.trainer INFO: Metric fid: 12321651250.4357
+[01/25 07:59:21] ppgan.engine.trainer INFO: Epoch: 31/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.956 D_real_loss: 0.696 G_adv_loss: 0.733 G_L1_loss: 88.169 batch_cost: 0.05808 sec reader_cost: 0.00726 sec ips: 17.21672 images/s eta: 1:05:43
+[01/25 07:59:27] ppgan.engine.trainer INFO: Epoch: 31/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.340 D_real_loss: 1.542 G_adv_loss: 1.322 G_L1_loss: 88.914 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60851 images/s eta: 0:57:37
+[01/25 07:59:32] ppgan.engine.trainer INFO: Epoch: 31/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.862 D_real_loss: 0.642 G_adv_loss: 0.654 G_L1_loss: 96.589 batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61185 images/s eta: 0:57:31
+[01/25 07:59:37] ppgan.engine.trainer INFO: Epoch: 31/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.359 D_real_loss: 1.382 G_adv_loss: 1.340 G_L1_loss: 376275748866804940800.000 batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61186 images/s eta: 0:57:26
+[01/25 07:59:43] ppgan.engine.trainer INFO: Epoch: 32/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.205 D_real_loss: 0.275 G_adv_loss: 2.038 G_L1_loss: 57.108 batch_cost: 0.05859 sec reader_cost: 0.00777 sec ips: 17.06661 images/s eta: 1:05:55
+[01/25 07:59:48] ppgan.engine.trainer INFO: Epoch: 32/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.543 D_real_loss: 0.354 G_adv_loss: 1.060 G_L1_loss: 86.060 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60675 images/s eta: 0:57:17
+[01/25 07:59:53] ppgan.engine.trainer INFO: Epoch: 32/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.051 D_real_loss: 0.128 G_adv_loss: 3.122 G_L1_loss: 97.627 batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61226 images/s eta: 0:57:11
+[01/25 07:59:58] ppgan.engine.trainer INFO: Epoch: 32/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.741 D_real_loss: 0.158 G_adv_loss: 0.859 G_L1_loss: 86.909 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61064 images/s eta: 0:57:06
+[01/25 08:00:04] ppgan.engine.trainer INFO: Epoch: 33/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.089 D_real_loss: 0.111 G_adv_loss: 2.843 G_L1_loss: 82.671 batch_cost: 0.05848 sec reader_cost: 0.00768 sec ips: 17.09874 images/s eta: 1:05:24
+[01/25 08:00:09] ppgan.engine.trainer INFO: Epoch: 33/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.051 D_real_loss: 0.098 G_adv_loss: 3.463 G_L1_loss: 86.711 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60898 images/s eta: 0:56:56
+[01/25 08:00:14] ppgan.engine.trainer INFO: Epoch: 33/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.038 D_real_loss: 0.129 G_adv_loss: 4.185 G_L1_loss: 89.970 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60688 images/s eta: 0:56:52
+[01/25 08:00:19] ppgan.engine.trainer INFO: Epoch: 33/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.030 D_real_loss: 0.138 G_adv_loss: 3.822 G_L1_loss: 79.231 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61353 images/s eta: 0:56:45
+[01/25 08:00:25] ppgan.engine.trainer INFO: Epoch: 34/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.102 D_real_loss: 0.255 G_adv_loss: 2.696 G_L1_loss: nan batch_cost: 0.05846 sec reader_cost: 0.00765 sec ips: 17.10565 images/s eta: 1:04:59
+[01/25 08:00:30] ppgan.engine.trainer INFO: Epoch: 34/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.306 D_real_loss: 0.330 G_adv_loss: 2.097 G_L1_loss: 92.671 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61245 images/s eta: 0:56:35
+[01/25 08:00:35] ppgan.engine.trainer INFO: Epoch: 34/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.395 D_real_loss: 0.299 G_adv_loss: 1.214 G_L1_loss: 62.851 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60897 images/s eta: 0:56:31
+[01/25 08:00:41] ppgan.engine.trainer INFO: Epoch: 34/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.272 D_real_loss: 0.309 G_adv_loss: 1.491 G_L1_loss: 69.250 batch_cost: 0.05099 sec reader_cost: 0.00019 sec ips: 19.61283 images/s eta: 0:56:25
+[01/25 08:00:46] ppgan.engine.trainer INFO: Epoch: 35/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.058 D_real_loss: 0.077 G_adv_loss: 3.719 G_L1_loss: 94.993 batch_cost: 0.05853 sec reader_cost: 0.00772 sec ips: 17.08612 images/s eta: 1:04:40
+[01/25 08:00:52] ppgan.engine.trainer INFO: Epoch: 35/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.034 D_real_loss: 0.117 G_adv_loss: 3.720 G_L1_loss: 93.697 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60670 images/s eta: 0:56:16
+[01/25 08:00:57] ppgan.engine.trainer INFO: Epoch: 35/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.033 D_real_loss: 0.088 G_adv_loss: 3.760 G_L1_loss: 84.375 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60967 images/s eta: 0:56:10
+[01/25 08:01:02] ppgan.engine.trainer INFO: Epoch: 35/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.036 D_real_loss: 0.143 G_adv_loss: 4.251 G_L1_loss: 101.127 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60931 images/s eta: 0:56:05
+[01/25 08:01:09] ppgan.engine.trainer INFO: Epoch: 36/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.082 D_real_loss: 0.096 G_adv_loss: 3.658 G_L1_loss: 67.145 batch_cost: 0.05883 sec reader_cost: 0.00802 sec ips: 16.99893 images/s eta: 1:04:36
+[01/25 08:01:14] ppgan.engine.trainer INFO: Epoch: 36/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.042 D_real_loss: 0.148 G_adv_loss: 5.215 G_L1_loss: 92.901 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60817 images/s eta: 0:55:55
+[01/25 08:01:19] ppgan.engine.trainer INFO: Epoch: 36/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.021 D_real_loss: 0.138 G_adv_loss: 4.592 G_L1_loss: 95.760 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60855 images/s eta: 0:55:50
+[01/25 08:01:24] ppgan.engine.trainer INFO: Epoch: 36/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.032 D_real_loss: 0.117 G_adv_loss: 4.396 G_L1_loss: 94.022 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61217 images/s eta: 0:55:44
+[01/25 08:01:30] ppgan.engine.trainer INFO: Epoch: 37/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.066 D_real_loss: 0.086 G_adv_loss: 3.399 G_L1_loss: 96.801 batch_cost: 0.05922 sec reader_cost: 0.00840 sec ips: 16.88666 images/s eta: 1:04:38
+[01/25 08:01:35] ppgan.engine.trainer INFO: Epoch: 37/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.035 D_real_loss: 0.068 G_adv_loss: 4.014 G_L1_loss: 85.925 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60934 images/s eta: 0:55:35
+[01/25 08:01:40] ppgan.engine.trainer INFO: Epoch: 37/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.125 D_real_loss: 0.070 G_adv_loss: 3.702 G_L1_loss: 96.681 batch_cost: 0.05101 sec reader_cost: 0.00020 sec ips: 19.60590 images/s eta: 0:55:30
+[01/25 08:01:46] ppgan.engine.trainer INFO: Epoch: 37/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.074 D_real_loss: 0.072 G_adv_loss: 4.083 G_L1_loss: 86.294 batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61239 images/s eta: 0:55:24
+[01/25 08:01:52] ppgan.engine.trainer INFO: Epoch: 38/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.064 D_real_loss: 0.426 G_adv_loss: 3.353 G_L1_loss: nan batch_cost: 0.05914 sec reader_cost: 0.00834 sec ips: 16.90780 images/s eta: 1:04:10
+[01/25 08:01:57] ppgan.engine.trainer INFO: Epoch: 38/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.732 D_real_loss: 0.694 G_adv_loss: 0.690 G_L1_loss: 90.023 batch_cost: 0.05098 sec reader_cost: 0.00021 sec ips: 19.61364 images/s eta: 0:55:14
+[01/25 08:02:02] ppgan.engine.trainer INFO: Epoch: 38/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.031 D_real_loss: 0.365 G_adv_loss: 4.074 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.60991 images/s eta: 0:55:09
+[01/25 08:02:07] ppgan.engine.trainer INFO: Epoch: 38/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.843 D_real_loss: 0.590 G_adv_loss: 0.647 G_L1_loss: 90.136 batch_cost: 0.05098 sec reader_cost: 0.00020 sec ips: 19.61492 images/s eta: 0:55:03
+[01/25 08:02:13] ppgan.engine.trainer INFO: Epoch: 39/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.123 D_real_loss: 0.129 G_adv_loss: 2.626 G_L1_loss: 92.532 batch_cost: 0.05920 sec reader_cost: 0.00839 sec ips: 16.89054 images/s eta: 1:03:50
+[01/25 08:02:18] ppgan.engine.trainer INFO: Epoch: 39/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.470 D_real_loss: 0.366 G_adv_loss: 1.155 G_L1_loss: 92.465 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60878 images/s eta: 0:54:54
+[01/25 08:02:23] ppgan.engine.trainer INFO: Epoch: 39/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.106 D_real_loss: 0.115 G_adv_loss: 2.943 G_L1_loss: 82.192 batch_cost: 0.05100 sec reader_cost: 0.00018 sec ips: 19.60746 images/s eta: 0:54:49
+[01/25 08:02:28] ppgan.engine.trainer INFO: Epoch: 39/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.293 D_real_loss: 0.211 G_adv_loss: 1.630 G_L1_loss: 93.496 batch_cost: 0.05121 sec reader_cost: 0.00019 sec ips: 19.52885 images/s eta: 0:54:57
+[01/25 08:02:34] ppgan.engine.trainer INFO: Epoch: 40/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.077 D_real_loss: 0.244 G_adv_loss: 3.022 G_L1_loss: nan batch_cost: 0.05930 sec reader_cost: 0.00847 sec ips: 16.86373 images/s eta: 1:03:32
+[01/25 08:02:39] ppgan.engine.trainer INFO: Epoch: 40/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 1.922 D_real_loss: 0.177 G_adv_loss: 0.709 G_L1_loss: 129.701 batch_cost: 0.05100 sec reader_cost: 0.00021 sec ips: 19.60876 images/s eta: 0:54:34
+[01/25 08:02:44] ppgan.engine.trainer INFO: Epoch: 40/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.100 D_real_loss: 0.425 G_adv_loss: 2.758 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61076 images/s eta: 0:54:28
+[01/25 08:02:50] ppgan.engine.trainer INFO: Epoch: 40/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.284 D_real_loss: 0.233 G_adv_loss: 1.917 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60924 images/s eta: 0:54:23
+[01/25 08:02:50] ppgan.engine.trainer INFO: Test iter: [0/106]
+[01/25 08:03:00] ppgan.engine.trainer INFO: Test iter: [100/106]
+[01/25 08:03:06] ppgan.engine.trainer INFO: Metric fid: 12607007779.3302
+[01/25 08:03:13] ppgan.engine.trainer INFO: Epoch: 41/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.089 D_real_loss: 0.157 G_adv_loss: 3.088 G_L1_loss: nan batch_cost: 0.05948 sec reader_cost: 0.00867 sec ips: 16.81220 images/s eta: 1:03:20
+[01/25 08:03:19] ppgan.engine.trainer INFO: Epoch: 41/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.729 D_real_loss: 0.751 G_adv_loss: 0.755 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60602 images/s eta: 0:54:14
+[01/25 08:03:24] ppgan.engine.trainer INFO: Epoch: 41/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.074 D_real_loss: 0.102 G_adv_loss: 3.026 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61197 images/s eta: 0:54:08
+[01/25 08:03:29] ppgan.engine.trainer INFO: Epoch: 41/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.750 D_real_loss: 0.683 G_adv_loss: 0.713 G_L1_loss: nan batch_cost: 0.05099 sec reader_cost: 0.00021 sec ips: 19.61147 images/s eta: 0:54:03
+[01/25 08:03:35] ppgan.engine.trainer INFO: Epoch: 42/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.092 D_real_loss: 0.139 G_adv_loss: 3.034 G_L1_loss: nan batch_cost: 0.05974 sec reader_cost: 0.00893 sec ips: 16.74008 images/s eta: 1:03:13
+[01/25 08:03:40] ppgan.engine.trainer INFO: Epoch: 42/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.324 D_real_loss: 0.753 G_adv_loss: 2.187 G_L1_loss: 103.880 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60794 images/s eta: 0:53:53
+[01/25 08:03:45] ppgan.engine.trainer INFO: Epoch: 42/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.227 D_real_loss: 0.245 G_adv_loss: 1.850 G_L1_loss: 83.171 batch_cost: 0.05101 sec reader_cost: 0.00020 sec ips: 19.60359 images/s eta: 0:53:49
+[01/25 08:03:50] ppgan.engine.trainer INFO: Epoch: 42/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.227 D_real_loss: 0.179 G_adv_loss: 1.900 G_L1_loss: 60.980 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60902 images/s eta: 0:53:43
+[01/25 08:03:56] ppgan.engine.trainer INFO: Epoch: 43/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.075 D_real_loss: 0.334 G_adv_loss: 3.243 G_L1_loss: nan batch_cost: 0.06005 sec reader_cost: 0.00925 sec ips: 16.65277 images/s eta: 1:03:09
+[01/25 08:04:01] ppgan.engine.trainer INFO: Epoch: 43/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.237 D_real_loss: 0.173 G_adv_loss: 2.170 G_L1_loss: 83.865 batch_cost: 0.05100 sec reader_cost: 0.00021 sec ips: 19.60970 images/s eta: 0:53:32
+[01/25 08:04:06] ppgan.engine.trainer INFO: Epoch: 43/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.423 D_real_loss: 0.160 G_adv_loss: 1.657 G_L1_loss: 64.847 batch_cost: 0.05102 sec reader_cost: 0.00019 sec ips: 19.59845 images/s eta: 0:53:29
+[01/25 08:04:12] ppgan.engine.trainer INFO: Epoch: 43/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.183 D_real_loss: 0.181 G_adv_loss: 2.253 G_L1_loss: 61.395 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61336 images/s eta: 0:53:21
+[01/25 08:04:18] ppgan.engine.trainer INFO: Epoch: 44/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.109 D_real_loss: 0.153 G_adv_loss: 3.194 G_L1_loss: nan batch_cost: 0.06015 sec reader_cost: 0.00933 sec ips: 16.62611 images/s eta: 1:02:51
+[01/25 08:04:23] ppgan.engine.trainer INFO: Epoch: 44/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.171 D_real_loss: 0.183 G_adv_loss: 2.422 G_L1_loss: 98.804 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60822 images/s eta: 0:53:12
+[01/25 08:04:28] ppgan.engine.trainer INFO: Epoch: 44/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.295 D_real_loss: 0.201 G_adv_loss: 1.695 G_L1_loss: 61.289 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60886 images/s eta: 0:53:07
+[01/25 08:04:33] ppgan.engine.trainer INFO: Epoch: 44/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.265 D_real_loss: 0.205 G_adv_loss: 1.857 G_L1_loss: 60.571 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61075 images/s eta: 0:53:01
+[01/25 08:04:39] ppgan.engine.trainer INFO: Epoch: 45/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.053 D_real_loss: 0.149 G_adv_loss: 3.688 G_L1_loss: nan batch_cost: 0.06014 sec reader_cost: 0.00932 sec ips: 16.62876 images/s eta: 1:02:26
+[01/25 08:04:44] ppgan.engine.trainer INFO: Epoch: 45/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.819 D_real_loss: 0.581 G_adv_loss: 0.762 G_L1_loss: 102.963 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60604 images/s eta: 0:52:52
+[01/25 08:04:49] ppgan.engine.trainer INFO: Epoch: 45/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.178 D_real_loss: 0.156 G_adv_loss: 2.436 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60699 images/s eta: 0:52:47
+[01/25 08:04:54] ppgan.engine.trainer INFO: Epoch: 45/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.740 D_real_loss: 0.594 G_adv_loss: 0.708 G_L1_loss: 89.712 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60912 images/s eta: 0:52:41
+[01/25 08:05:02] ppgan.engine.trainer INFO: Epoch: 46/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.058 D_real_loss: 0.148 G_adv_loss: 3.548 G_L1_loss: nan batch_cost: 0.06043 sec reader_cost: 0.00961 sec ips: 16.54930 images/s eta: 1:02:20
+[01/25 08:05:07] ppgan.engine.trainer INFO: Epoch: 46/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.300 D_real_loss: 0.086 G_adv_loss: 2.372 G_L1_loss: 82.523 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60824 images/s eta: 0:52:31
+[01/25 08:05:12] ppgan.engine.trainer INFO: Epoch: 46/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.241 D_real_loss: 0.237 G_adv_loss: 1.703 G_L1_loss: 68.685 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60893 images/s eta: 0:52:26
+[01/25 08:05:17] ppgan.engine.trainer INFO: Epoch: 46/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.271 D_real_loss: 0.180 G_adv_loss: 1.906 G_L1_loss: 65.732 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61299 images/s eta: 0:52:20
+[01/25 08:05:23] ppgan.engine.trainer INFO: Epoch: 47/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.058 D_real_loss: 0.140 G_adv_loss: 3.432 G_L1_loss: nan batch_cost: 0.06071 sec reader_cost: 0.00987 sec ips: 16.47247 images/s eta: 1:02:13
+[01/25 08:05:28] ppgan.engine.trainer INFO: Epoch: 47/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.699 D_real_loss: 0.649 G_adv_loss: 0.690 G_L1_loss: 94.573 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60878 images/s eta: 0:52:11
+[01/25 08:05:33] ppgan.engine.trainer INFO: Epoch: 47/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.116 D_real_loss: 0.178 G_adv_loss: 2.809 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60779 images/s eta: 0:52:06
+[01/25 08:05:38] ppgan.engine.trainer INFO: Epoch: 47/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.642 D_real_loss: 0.753 G_adv_loss: 0.749 G_L1_loss: 85.773 batch_cost: 0.05100 sec reader_cost: 0.00018 sec ips: 19.60643 images/s eta: 0:52:01
+[01/25 08:05:45] ppgan.engine.trainer INFO: Epoch: 48/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.057 D_real_loss: 0.112 G_adv_loss: 3.237 G_L1_loss: nan batch_cost: 0.06083 sec reader_cost: 0.01002 sec ips: 16.43954 images/s eta: 1:01:56
+[01/25 08:05:50] ppgan.engine.trainer INFO: Epoch: 48/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.142 D_real_loss: 0.388 G_adv_loss: 2.125 G_L1_loss: 62.865 batch_cost: 0.05100 sec reader_cost: 0.00021 sec ips: 19.60773 images/s eta: 0:51:51
+[01/25 08:05:55] ppgan.engine.trainer INFO: Epoch: 48/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.247 D_real_loss: 0.184 G_adv_loss: 1.787 G_L1_loss: 54.114 batch_cost: 0.05101 sec reader_cost: 0.00019 sec ips: 19.60566 images/s eta: 0:51:46
+[01/25 08:06:00] ppgan.engine.trainer INFO: Epoch: 48/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.121 D_real_loss: 0.207 G_adv_loss: 2.264 G_L1_loss: 81.250 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61132 images/s eta: 0:51:40
+[01/25 08:06:06] ppgan.engine.trainer INFO: Epoch: 49/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.062 D_real_loss: 0.147 G_adv_loss: 3.531 G_L1_loss: nan batch_cost: 0.06044 sec reader_cost: 0.00962 sec ips: 16.54615 images/s eta: 1:01:08
+[01/25 08:06:11] ppgan.engine.trainer INFO: Epoch: 49/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.689 D_real_loss: 0.636 G_adv_loss: 0.726 G_L1_loss: 95.904 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61002 images/s eta: 0:51:30
+[01/25 08:06:16] ppgan.engine.trainer INFO: Epoch: 49/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.192 D_real_loss: 0.070 G_adv_loss: 2.480 G_L1_loss: 91.882 batch_cost: 0.05100 sec reader_cost: 0.00019 sec ips: 19.60624 images/s eta: 0:51:25
+[01/25 08:06:21] ppgan.engine.trainer INFO: Epoch: 49/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.157 D_real_loss: 0.249 G_adv_loss: 2.135 G_L1_loss: 70.350 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.61036 images/s eta: 0:51:20
+[01/25 08:06:28] ppgan.engine.trainer INFO: Epoch: 50/200, iter: 100/400 lr: 2.000e-04 D_fake_loss: 0.051 D_real_loss: 0.127 G_adv_loss: 3.677 G_L1_loss: nan batch_cost: 0.06129 sec reader_cost: 0.01047 sec ips: 16.31607 images/s eta: 1:01:35
+[01/25 08:06:33] ppgan.engine.trainer INFO: Epoch: 50/200, iter: 200/400 lr: 2.000e-04 D_fake_loss: 0.620 D_real_loss: 0.671 G_adv_loss: 0.705 G_L1_loss: 88.758 batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60678 images/s eta: 0:51:10
+[01/25 08:06:38] ppgan.engine.trainer INFO: Epoch: 50/200, iter: 300/400 lr: 2.000e-04 D_fake_loss: 0.175 D_real_loss: 0.123 G_adv_loss: 2.956 G_L1_loss: nan batch_cost: 0.05100 sec reader_cost: 0.00020 sec ips: 19.60639 images/s eta: 0:51:05
+[01/25 08:06:43] ppgan.engine.trainer INFO: Epoch: 50/200, iter: 0/400 lr: 2.000e-04 D_fake_loss: 0.705 D_real_loss: 0.604 G_adv_loss: 0.680 G_L1_loss: 99.860 batch_cost: 0.05099 sec reader_cost: 0.00020 sec ips: 19.60996 images/s eta: 0:50:59
+[01/25 08:06:43] ppgan.engine.trainer INFO: Test iter: [0/106]
+[01/25 08:06:53] ppgan.engine.trainer INFO: Test iter: [100/106]

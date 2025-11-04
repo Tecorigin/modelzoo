@@ -1,0 +1,65 @@
+data:
+  duration: 0.3483
+  extensions:
+  - wav
+  train_path: data/train
+  valid_path: data/val
+device: sdaa
+env:
+  expdir: exp/yx2_001ac
+  gpu_id: 0
+loss:
+  loss_scale: 10
+mel:
+  fmax: 8000
+  fmin: 0
+  hop_size: 160
+  n_fft: 1024
+  num_mels: 128
+  sr: 16000
+  win_size: 1024
+model:
+  atten_dropout: 0.0
+  conv_dropout: 0.0
+  conv_only: false
+  f0_max: 1975.5
+  f0_min: 32.7
+  hidden_dims: 512
+  n_heads: 8
+  n_layers: 6
+  out_dims: 360
+  type: CFNaiveMelPE
+  use_fa_norm: true
+train:
+  amp_dtype: fp32
+  aug_add_music: true
+  aug_keyshift: true
+  aug_mask: true
+  aug_mask_block_num: 1
+  aug_mask_block_num_v_o: 1
+  aug_mask_iszeropad_mode: noise
+  aug_mask_v_o: true
+  aug_mask_vertical_factor: 0.05
+  aug_mask_vertical_factor_v_o: 0.3
+  aug_noise: true
+  batch_size: 64
+  brown_noise_ratio: 1
+  cache_all_data: false
+  cache_device: sdaa
+  custom_black_list:
+  - conv2d
+  - einsum
+  decay_step: 100000
+  epochs: 100000
+  f0_shift_mode: keyshift
+  gamma: 0.7071
+  interval_force_save: 400
+  interval_log: 100
+  interval_val: 200
+  keyshift_max: 6
+  keyshift_min: -6
+  lr: 0.0005
+  noise_ratio: 0.7
+  num_workers: 0
+  save_opt: false
+  weight_decay: 0.0001

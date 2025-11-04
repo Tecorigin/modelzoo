@@ -1,0 +1,13 @@
+CUDA_VISIBLE_DEVICES=0 python src/train.py \
+  --dataset-name NH \
+  --train-dir ../dataset/NH-HAZE/train_NH/ \
+  --valid-dir ../dataset/NH-HAZE/valid_NH/ \
+  --ckpt-save-path ./ckpts \
+  --ckpt-overwrite \
+  --nb-epochs 2 \
+  --batch-size 1\
+  --train-size 192 288  \
+  --valid-size 192 288 \
+  --loss l1 \
+  --plot-stats \
+  --cuda

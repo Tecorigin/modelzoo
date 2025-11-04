@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/root/zzx/ultralytics-main/train.py", line 27, in <module>
+    from ultralytics import YOLO
+  File "/root/zzx/ultralytics-main/ultralytics/__init__.py", line 11, in <module>
+    from ultralytics.models import NAS, RTDETR, SAM, YOLO, FastSAM, YOLOWorld
+  File "/root/zzx/ultralytics-main/ultralytics/models/__init__.py", line 3, in <module>
+    from .fastsam import FastSAM
+  File "/root/zzx/ultralytics-main/ultralytics/models/fastsam/__init__.py", line 3, in <module>
+    from .model import FastSAM
+  File "/root/zzx/ultralytics-main/ultralytics/models/fastsam/model.py", line 5, in <module>
+    from ultralytics.engine.model import Model
+  File "/root/zzx/ultralytics-main/ultralytics/engine/model.py", line 10, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

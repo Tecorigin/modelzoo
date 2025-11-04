@@ -1,0 +1,1 @@
+python -m torch.distributed.launch --nproc_per_node=4 ../train.py --dataset_path /data/datasets/20241122/coco/train2017 --annotation_path /data/datasets/20241122/coco/annotations/instances_train2017.json --batch_size 4 --epochs 1 --distributed True --lr 0.01 --autocast True

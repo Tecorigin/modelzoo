@@ -1,0 +1,883 @@
+2025-02-12 18:40:59.832 | INFO     | damo.apis.detector_trainer:__init__:114 - args info: Namespace(config_file='configs/damoyolo_tinynasL25_S.py', local_rank=0, opts=[], tea_ckpt=None, tea_config=None)
+2025-02-12 18:40:59.836 | INFO     | damo.apis.detector_trainer:__init__:115 - cfg value:
+╒═════════╤══════════════════════════════════════════════════════════════════════════════════════╕
+│ keys    │ values                                                                               │
+╞═════════╪══════════════════════════════════════════════════════════════════════════════════════╡
+│ model   │ {'backbone': {'act': 'relu',                                                         │
+│         │               'name': 'TinyNAS_res',                                                 │
+│         │               'net_structure_str': "[ {'class': 'ConvKXBNRELU', 'in': 3, 'k': "      │
+│         │                                    "3, 'nbitsA': 8, 'nbitsW': 8, 'out': 32, "        │
+│         │                                    "'s': 1},\n"                                      │
+│         │                                    "  { 'L': 1,\n"                                   │
+│         │                                    "    'btn': 24,\n"                                │
+│         │                                    "    'class': 'SuperResConvK1KX',\n"              │
+│         │                                    "    'in': 32,\n"                                 │
+│         │                                    "    'inner_class': 'ResConvK1KX',\n"             │
+│         │                                    "    'k': 3,\n"                                   │
+│         │                                    "    'nbitsA': [8, 8],\n"                         │
+│         │                                    "    'nbitsW': [8, 8],\n"                         │
+│         │                                    "    'out': 128,\n"                               │
+│         │                                    "    's': 2},\n"                                  │
+│         │                                    "  { 'L': 5,\n"                                   │
+│         │                                    "    'btn': 88,\n"                                │
+│         │                                    "    'class': 'SuperResConvK1KX',\n"              │
+│         │                                    "    'in': 128,\n"                                │
+│         │                                    "    'inner_class': 'ResConvK1KX',\n"             │
+│         │                                    "    'k': 3,\n"                                   │
+│         │                                    "    'nbitsA': [8, 8, 8, 8, 8, 8, 8, 8, 8, "      │
+│         │                                    '8],\n'                                           │
+│         │                                    "    'nbitsW': [8, 8, 8, 8, 8, 8, 8, 8, 8, "      │
+│         │                                    '8],\n'                                           │
+│         │                                    "    'out': 128,\n"                               │
+│         │                                    "    's': 2},\n"                                  │
+│         │                                    "  { 'L': 3,\n"                                   │
+│         │                                    "    'btn': 128,\n"                               │
+│         │                                    "    'class': 'SuperResConvK1KX',\n"              │
+│         │                                    "    'in': 128,\n"                                │
+│         │                                    "    'inner_class': 'ResConvK1KX',\n"             │
+│         │                                    "    'k': 3,\n"                                   │
+│         │                                    "    'nbitsA': [8, 8, 8, 8, 8, 8],\n"             │
+│         │                                    "    'nbitsW': [8, 8, 8, 8, 8, 8],\n"             │
+│         │                                    "    'out': 256,\n"                               │
+│         │                                    "    's': 2},\n"                                  │
+│         │                                    "  { 'L': 2,\n"                                   │
+│         │                                    "    'btn': 120,\n"                               │
+│         │                                    "    'class': 'SuperResConvK1KX',\n"              │
+│         │                                    "    'in': 256,\n"                                │
+│         │                                    "    'inner_class': 'ResConvK1KX',\n"             │
+│         │                                    "    'k': 3,\n"                                   │
+│         │                                    "    'nbitsA': [8, 8, 8, 8],\n"                   │
+│         │                                    "    'nbitsW': [8, 8, 8, 8],\n"                   │
+│         │                                    "    'out': 256,\n"                               │
+│         │                                    "    's': 1},\n"                                  │
+│         │                                    "  { 'L': 1,\n"                                   │
+│         │                                    "    'btn': 144,\n"                               │
+│         │                                    "    'class': 'SuperResConvK1KX',\n"              │
+│         │                                    "    'in': 256,\n"                                │
+│         │                                    "    'inner_class': 'ResConvK1KX',\n"             │
+│         │                                    "    'k': 3,\n"                                   │
+│         │                                    "    'nbitsA': [8, 8],\n"                         │
+│         │                                    "    'nbitsW': [8, 8],\n"                         │
+│         │                                    "    'out': 512,\n"                               │
+│         │                                    "    's': 2}]\n",                                 │
+│         │               'out_indices': (2, 4, 5),                                              │
+│         │               'reparam': True,                                                       │
+│         │               'use_focus': True,                                                     │
+│         │               'with_spp': True},                                                     │
+│         │  'head': {'act': 'silu',                                                             │
+│         │           'in_channels': [128, 256, 512],                                            │
+│         │           'legacy': False,                                                           │
+│         │           'name': 'ZeroHead',                                                        │
+│         │           'nms_conf_thre': 0.05,                                                     │
+│         │           'nms_iou_thre': 0.7,                                                       │
+│         │           'num_classes': 80,                                                         │
+│         │           'reg_max': 16,                                                             │
+│         │           'stacked_convs': 0},                                                       │
+│         │  'neck': {'act': 'relu',                                                             │
+│         │           'block_name': 'BasicBlock_3x3_Reverse',                                    │
+│         │           'depth': 1.0,                                                              │
+│         │           'hidden_ratio': 0.75,                                                      │
+│         │           'in_channels': [128, 256, 512],                                            │
+│         │           'name': 'GiraffeNeckV2',                                                   │
+│         │           'out_channels': [128, 256, 512],                                           │
+│         │           'spp': False}}                                                             │
+├─────────┼──────────────────────────────────────────────────────────────────────────────────────┤
+│ train   │ {'augment': {'mosaic_mixup': {'degrees': 10.0,                                       │
+│         │                               'keep_ratio': False,                                   │
+│         │                               'mixup_prob': 0.15,                                    │
+│         │                               'mixup_scale': (0.5, 1.5),                             │
+│         │                               'mosaic_prob': 1.0,                                    │
+│         │                               'mosaic_scale': (0.1, 2.0),                            │
+│         │                               'mosaic_size': (640, 640),                             │
+│         │                               'shear': 2.0,                                          │
+│         │                               'translate': 0.2},                                     │
+│         │              'transform': {'autoaug_dict': {'autoaug_params': (6, 9, 5, 3, 3, 4,     │
+│         │                                                                2, 4, 4, 4, 5, 2,     │
+│         │                                                                4, 1, 4, 2, 6, 4,     │
+│         │                                                                2, 2, 2, 6, 2, 2,     │
+│         │                                                                2, 0, 5, 1, 3, 0,     │
+│         │                                                                8, 5, 2, 8, 7, 5,     │
+│         │                                                                1, 3, 3, 3),          │
+│         │                                             'box_prob': 0.3,                         │
+│         │                                             'num_subpolicies': 5,                    │
+│         │                                             'scale_splits': [2048, 10240,            │
+│         │                                                              51200]},                │
+│         │                            'flip_prob': 0.5,                                         │
+│         │                            'image_max_range': (640, 640),                            │
+│         │                            'image_mean': [0.0, 0.0, 0.0],                            │
+│         │                            'image_std': [1.0, 1.0, 1.0],                             │
+│         │                            'keep_ratio': False}},                                    │
+│         │  'base_lr_per_img': 0.00015625,                                                      │
+│         │  'batch_size': 64,                                                                   │
+│         │  'ema': True,                                                                        │
+│         │  'ema_momentum': 0.9998,                                                             │
+│         │  'finetune_path': None,                                                              │
+│         │  'min_lr_ratio': 0.05,                                                               │
+│         │  'momentum': 0.9,                                                                    │
+│         │  'no_aug_epochs': 16,                                                                │
+│         │  'optimizer': {'lr': 0.04,                                                           │
+│         │                'momentum': 0.9,                                                      │
+│         │                'name': 'SGD',                                                        │
+│         │                'nesterov': True,                                                     │
+│         │                'weight_decay': 0.0005},                                              │
+│         │  'resume_path': None,                                                                │
+│         │  'total_epochs': 300,                                                                │
+│         │  'warmup_epochs': 5,                                                                 │
+│         │  'warmup_start_lr': 0,                                                               │
+│         │  'weight_decay': 0.0005}                                                             │
+├─────────┼──────────────────────────────────────────────────────────────────────────────────────┤
+│ test    │ {'augment': {'transform': {'flip_prob': 0.0,                                         │
+│         │                            'image_max_range': (640, 640),                            │
+│         │                            'image_mean': [0.0, 0.0, 0.0],                            │
+│         │                            'image_std': [1.0, 1.0, 1.0],                             │
+│         │                            'keep_ratio': False}},                                    │
+│         │  'batch_size': 128}                                                                  │
+├─────────┼──────────────────────────────────────────────────────────────────────────────────────┤
+│ dataset │ {'aspect_ratio_grouping': False,                                                     │
+│         │  'class_names': ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',        │
+│         │                  'train', 'truck', 'boat', 'traffic light', 'fire hydrant',          │
+│         │                  'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog',        │
+│         │                  'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra',               │
+│         │                  'giraffe', 'backpack', 'umbrella', 'handbag', 'tie',                │
+│         │                  'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball',          │
+│         │                  'kite', 'baseball bat', 'baseball glove', 'skateboard',             │
+│         │                  'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup',        │
+│         │                  'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple',                │
+│         │                  'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza',     │
+│         │                  'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed',           │
+│         │                  'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote',        │
+│         │                  'keyboard', 'cell phone', 'microwave', 'oven', 'toaster',           │
+│         │                  'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors',        │
+│         │                  'teddy bear', 'hair drier', 'toothbrush'],                          │
+│         │  'data_dir': None,                                                                   │
+│         │  'paths_catalog': '/data/softws_up/zyt_test/DAMO-YOLO/damo/config/paths_catalog.py', │
+│         │  'train_ann': ('coco_2017_train',),                                                  │
+│         │  'val_ann': ('coco_2017_val',)}                                                      │
+├─────────┼──────────────────────────────────────────────────────────────────────────────────────┤
+│ miscs   │ {'ckpt_interval_epochs': 10,                                                         │
+│         │  'eval_interval_epochs': 10,                                                         │
+│         │  'exp_name': 'damoyolo_tinynasL25_S',                                                │
+│         │  'num_workers': 4,                                                                   │
+│         │  'output_dir': './workdirs',                                                         │
+│         │  'print_interval_iters': 50,                                                         │
+│         │  'seed': 1234}                                                                       │
+╘═════════╧══════════════════════════════════════════════════════════════════════════════════════╛
+2025-02-12 18:41:00.150 | INFO     | damo.apis.detector_trainer:__init__:120 - model:
+2025-02-12 18:41:00.177 | INFO     | damo.apis.detector_trainer:__init__:155 - Start Training...
+2025-02-12 18:41:00.177 | INFO     | damo.apis.detector_trainer:__init__:158 - Enable ema model! Ema model will be evaluated and saved.
+2025-02-12 18:41:00.840 | INFO     | torchvision.datasets.coco:__init__:37 - loading annotations into memory...
+2025-02-12 18:41:33.131 | INFO     | torchvision.datasets.coco:__init__:37 - Done (t=32.29s)
+2025-02-12 18:41:33.132 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2025-02-12 18:41:34.068 | INFO     | pycocotools.coco:__init__:88 - index created!
+2025-02-12 18:41:34.112 | INFO     | torchvision.datasets.coco:__init__:37 - loading annotations into memory...
+2025-02-12 18:41:38.403 | INFO     | torchvision.datasets.coco:__init__:37 - Done (t=4.29s)
+2025-02-12 18:41:38.403 | INFO     | pycocotools.coco:__init__:88 - creating index...
+2025-02-12 18:41:38.432 | INFO     | pycocotools.coco:__init__:88 - index created!
+2025-02-12 18:41:47.929 | INFO     | damo.apis.detector_trainer:train:266 - Model Summary: backbone's params(M): 3.84, flops(G): 18.01, latency(ms): 4.211
+neck's params(M): 11.90, flops(G): 18.18, latency(ms): 8.457
+head's params(M): 1.19, flops(G): 3.82, latency(ms): 1.438
+total latency(ms): 12.707, total flops(G): 40.01, total params(M): 16.94
+
+2025-02-12 18:41:48.023 | INFO     | damo.apis.detector_trainer:train:271 - Model: DistributedDataParallel(
+  (module): Detector(
+    (backbone): TinyNAS(
+      (block_list): ModuleList(
+        (0): Focus(
+          (conv): ConvBNAct(
+            (conv): Conv2d(12, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn): SyncBatchNorm(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+            (act): ReLU(inplace=True)
+          )
+        )
+        (1): SuperResStem(
+          (act): ReLU(inplace=True)
+          (block_list): ModuleList(
+            (0): ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(32, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(24, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(24, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(24, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                  (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+          )
+        )
+        (2): SuperResStem(
+          (act): ReLU(inplace=True)
+          (block_list): ModuleList(
+            (0): ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(128, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(88, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(88, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(88, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                  (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+            (1-4): 4 x ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(128, 88, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(88, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(88, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(88, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+          )
+        )
+        (3): SuperResStem(
+          (act): ReLU(inplace=True)
+          (block_list): ModuleList(
+            (0): ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                  (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+            (1-2): 2 x ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+          )
+        )
+        (4): SuperResStem(
+          (act): ReLU(inplace=True)
+          (block_list): ModuleList(
+            (0-1): 2 x ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(256, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(120, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(120, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(120, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+          )
+        )
+        (5): SuperResStem(
+          (act): ReLU(inplace=True)
+          (block_list): ModuleList(
+            (0): ResConvBlock(
+              (conv1): ConvKXBN(
+                (conv1): Conv2d(256, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn1): SyncBatchNorm(144, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (conv2): RepConv(
+                (nonlinearity): Identity()
+                (rbr_dense): Sequential(
+                  (conv): Conv2d(144, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+                  (bn): SyncBatchNorm(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+                (rbr_1x1): Sequential(
+                  (conv): Conv2d(144, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+                  (bn): SyncBatchNorm(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                )
+              )
+              (activation_function): ReLU(inplace=True)
+            )
+            (1): SPPBottleneck(
+              (conv1): ConvBNAct(
+                (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+              (m): ModuleList(
+                (0): MaxPool2d(kernel_size=5, stride=1, padding=2, dilation=1, ceil_mode=False)
+                (1): MaxPool2d(kernel_size=9, stride=1, padding=4, dilation=1, ceil_mode=False)
+                (2): MaxPool2d(kernel_size=13, stride=1, padding=6, dilation=1, ceil_mode=False)
+              )
+              (conv2): ConvBNAct(
+                (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+                (act): SiLU(inplace=True)
+              )
+            )
+          )
+        )
+      )
+    )
+    (neck): GiraffeNeckV2(
+      (upsample): Upsample(scale_factor=2.0, mode='nearest')
+      (bu_conv13): ConvBNAct(
+        (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): ReLU(inplace=True)
+      )
+      (merge_3): CSPStage(
+        (conv1): ConvBNAct(
+          (conv): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (conv2): ConvBNAct(
+          (conv): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (convs): Sequential(
+          (0): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(192, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(192, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(192, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+        (conv3): ConvBNAct(
+          (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+      )
+      (bu_conv24): ConvBNAct(
+        (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): ReLU(inplace=True)
+      )
+      (merge_4): CSPStage(
+        (conv1): ConvBNAct(
+          (conv): Conv2d(896, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (conv2): ConvBNAct(
+          (conv): Conv2d(896, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (convs): Sequential(
+          (0): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+        (conv3): ConvBNAct(
+          (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+      )
+      (merge_5): CSPStage(
+        (conv1): ConvBNAct(
+          (conv): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (conv2): ConvBNAct(
+          (conv): Conv2d(384, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (convs): Sequential(
+          (0): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(64, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(48, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(64, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(48, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(64, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(48, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(64, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(48, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(48, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(64, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(48, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(64, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(48, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+        (conv3): ConvBNAct(
+          (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+      )
+      (bu_conv57): ConvBNAct(
+        (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): ReLU(inplace=True)
+      )
+      (merge_7): CSPStage(
+        (conv1): ConvBNAct(
+          (conv): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (conv2): ConvBNAct(
+          (conv): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (convs): Sequential(
+          (0): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(96, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(128, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(96, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+        (conv3): ConvBNAct(
+          (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+      )
+      (bu_conv46): ConvBNAct(
+        (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): ReLU(inplace=True)
+      )
+      (bu_conv76): ConvBNAct(
+        (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+        (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): ReLU(inplace=True)
+      )
+      (merge_6): CSPStage(
+        (conv1): ConvBNAct(
+          (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (conv2): ConvBNAct(
+          (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+        (convs): Sequential(
+          (0): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(192, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (1): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(192, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+          (2): BasicBlock_3x3_Reverse(
+            (conv1): ConvBNAct(
+              (conv): Conv2d(192, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+              (bn): SyncBatchNorm(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              (act): ReLU(inplace=True)
+            )
+            (conv2): RepConv(
+              (nonlinearity): ReLU(inplace=True)
+              (rbr_dense): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+              (rbr_1x1): Sequential(
+                (conv): Conv2d(256, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+                (bn): SyncBatchNorm(192, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+              )
+            )
+          )
+        )
+        (conv3): ConvBNAct(
+          (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): SyncBatchNorm(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): ReLU(inplace=True)
+        )
+      )
+    )
+    (head): ZeroHead(
+      (integral): Integral()
+      (loss_dfl): DistributionFocalLoss()
+      (loss_cls): QualityFocalLoss()
+      (loss_bbox): GIoULoss()
+      (cls_convs): ModuleList(
+        (0-2): 3 x ModuleList()
+      )
+      (reg_convs): ModuleList(
+        (0-2): 3 x ModuleList()
+      )
+      (gfl_cls): ModuleList(
+        (0): Conv2d(128, 80, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): Conv2d(256, 80, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (2): Conv2d(512, 80, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (gfl_reg): ModuleList(
+        (0): Conv2d(128, 68, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): Conv2d(256, 68, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (2): Conv2d(512, 68, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (scales): ModuleList(
+        (0-2): 3 x Scale()
+      )
+    )
+  )
+)
+2025-02-12 18:41:48.023 | INFO     | damo.apis.detector_trainer:train:273 - Training start...
+2025-02-12 18:42:36.344 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 1/1849, mem: 6702Mb, iter_time: 48.319s, model_time: 14.717s, total_loss: 2.8, loss_cls: 0.8, loss_bbox: 1.3, loss_dfl: 0.8, lr: 0.000e+00, size: (640, 640), ETA: 1:19:43
+2025-02-12 18:42:36.771 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 2/1849, mem: 6871Mb, iter_time: 0.427s, model_time: 0.331s, total_loss: 2.3, loss_cls: 0.7, loss_bbox: 1.0, loss_dfl: 0.6, lr: 1.170e-10, size: (640, 640), ETA: 0:39:48
+2025-02-12 18:42:37.099 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 3/1849, mem: 6871Mb, iter_time: 0.329s, model_time: 0.282s, total_loss: 4.9, loss_cls: 3.0, loss_bbox: 1.2, loss_dfl: 0.7, lr: 4.680e-10, size: (640, 640), ETA: 0:26:26
+2025-02-12 18:42:37.396 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 4/1849, mem: 6871Mb, iter_time: 0.297s, model_time: 0.258s, total_loss: 3.3, loss_cls: 1.2, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.053e-09, size: (640, 640), ETA: 0:19:44
+2025-02-12 18:43:08.341 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 5/1849, mem: 6871Mb, iter_time: 30.945s, model_time: 8.458s, total_loss: 2.0, loss_cls: 0.7, loss_bbox: 0.8, loss_dfl: 0.5, lr: 1.872e-09, size: (640, 640), ETA: 0:25:26
+2025-02-12 18:43:09.499 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 6/1849, mem: 6871Mb, iter_time: 1.158s, model_time: 0.293s, total_loss: 2.5, loss_cls: 0.8, loss_bbox: 1.0, loss_dfl: 0.7, lr: 2.925e-09, size: (640, 640), ETA: 0:21:16
+2025-02-12 18:43:09.830 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 7/1849, mem: 6871Mb, iter_time: 0.331s, model_time: 0.285s, total_loss: 3.4, loss_cls: 1.4, loss_bbox: 1.2, loss_dfl: 0.7, lr: 4.212e-09, size: (640, 640), ETA: 0:18:06
+2025-02-12 18:43:10.155 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 8/1849, mem: 6871Mb, iter_time: 0.325s, model_time: 0.280s, total_loss: 3.0, loss_cls: 0.8, loss_bbox: 1.4, loss_dfl: 0.8, lr: 5.733e-09, size: (640, 640), ETA: 0:15:44
+2025-02-12 18:43:52.456 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 9/1849, mem: 6871Mb, iter_time: 42.301s, model_time: 11.944s, total_loss: 2.9, loss_cls: 0.7, loss_bbox: 1.4, loss_dfl: 0.8, lr: 7.488e-09, size: (640, 640), ETA: 0:20:58
+2025-02-12 18:43:52.780 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 10/1849, mem: 6871Mb, iter_time: 0.324s, model_time: 0.285s, total_loss: 3.3, loss_cls: 0.7, loss_bbox: 1.7, loss_dfl: 0.9, lr: 9.477e-09, size: (640, 640), ETA: 0:18:42
+2025-02-12 18:43:53.078 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 11/1849, mem: 6871Mb, iter_time: 0.298s, model_time: 0.257s, total_loss: 2.6, loss_cls: 0.5, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.170e-08, size: (640, 640), ETA: 0:16:51
+2025-02-12 18:43:53.373 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 12/1849, mem: 6871Mb, iter_time: 0.295s, model_time: 0.258s, total_loss: 3.0, loss_cls: 0.9, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.416e-08, size: (640, 640), ETA: 0:15:19
+2025-02-12 18:44:19.943 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 13/1849, mem: 6871Mb, iter_time: 26.570s, model_time: 8.105s, total_loss: 7.2, loss_cls: 3.6, loss_bbox: 2.0, loss_dfl: 1.6, lr: 1.685e-08, size: (640, 640), ETA: 0:16:56
+2025-02-12 18:44:20.261 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 14/1849, mem: 6871Mb, iter_time: 0.318s, model_time: 0.276s, total_loss: 2.3, loss_cls: 0.5, loss_bbox: 1.1, loss_dfl: 0.6, lr: 1.977e-08, size: (640, 640), ETA: 0:15:35
+2025-02-12 18:44:20.583 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 15/1849, mem: 6871Mb, iter_time: 0.322s, model_time: 0.282s, total_loss: 2.6, loss_cls: 0.8, loss_bbox: 1.2, loss_dfl: 0.6, lr: 2.293e-08, size: (640, 640), ETA: 0:14:24
+2025-02-12 18:44:24.425 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 16/1849, mem: 6871Mb, iter_time: 3.842s, model_time: 3.807s, total_loss: 2.8, loss_cls: 0.8, loss_bbox: 1.3, loss_dfl: 0.7, lr: 2.633e-08, size: (640, 640), ETA: 0:13:41
+2025-02-12 18:44:56.102 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 17/1849, mem: 6954Mb, iter_time: 31.677s, model_time: 20.641s, total_loss: 5.7, loss_cls: 3.8, loss_bbox: 1.2, loss_dfl: 0.7, lr: 2.995e-08, size: (640, 640), ETA: 0:15:18
+2025-02-12 18:44:56.408 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 18/1849, mem: 6954Mb, iter_time: 0.306s, model_time: 0.268s, total_loss: 2.8, loss_cls: 0.9, loss_bbox: 1.2, loss_dfl: 0.7, lr: 3.381e-08, size: (640, 640), ETA: 0:14:18
+2025-02-12 18:44:56.723 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 19/1849, mem: 6954Mb, iter_time: 0.315s, model_time: 0.274s, total_loss: 5.0, loss_cls: 2.6, loss_bbox: 1.4, loss_dfl: 1.0, lr: 3.791e-08, size: (640, 640), ETA: 0:13:24
+2025-02-12 18:44:59.953 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 20/1849, mem: 6954Mb, iter_time: 3.230s, model_time: 3.193s, total_loss: 1.9, loss_cls: 0.5, loss_bbox: 0.9, loss_dfl: 0.5, lr: 4.224e-08, size: (640, 640), ETA: 0:12:47
+2025-02-12 18:45:35.458 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 21/1849, mem: 6954Mb, iter_time: 35.505s, model_time: 29.204s, total_loss: 2.5, loss_cls: 0.7, loss_bbox: 1.1, loss_dfl: 0.7, lr: 4.680e-08, size: (640, 640), ETA: 0:14:15
+2025-02-12 18:45:35.787 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 22/1849, mem: 6954Mb, iter_time: 0.329s, model_time: 0.291s, total_loss: 4.9, loss_cls: 2.2, loss_bbox: 1.6, loss_dfl: 1.0, lr: 5.160e-08, size: (640, 640), ETA: 0:13:27
+2025-02-12 18:45:36.100 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 23/1849, mem: 6954Mb, iter_time: 0.313s, model_time: 0.268s, total_loss: 8.9, loss_cls: 5.8, loss_bbox: 1.7, loss_dfl: 1.3, lr: 5.663e-08, size: (640, 640), ETA: 0:12:43
+2025-02-12 18:45:36.389 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 24/1849, mem: 6954Mb, iter_time: 0.290s, model_time: 0.250s, total_loss: 3.3, loss_cls: 1.5, loss_bbox: 1.1, loss_dfl: 0.7, lr: 6.189e-08, size: (640, 640), ETA: 0:12:03
+2025-02-12 18:46:05.544 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 25/1849, mem: 6954Mb, iter_time: 29.155s, model_time: 29.102s, total_loss: 4.6, loss_cls: 2.4, loss_bbox: 1.4, loss_dfl: 0.8, lr: 6.739e-08, size: (640, 640), ETA: 0:12:52
+2025-02-12 18:46:05.883 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 26/1849, mem: 6954Mb, iter_time: 0.339s, model_time: 0.290s, total_loss: 6.4, loss_cls: 4.1, loss_bbox: 1.4, loss_dfl: 0.9, lr: 7.313e-08, size: (640, 640), ETA: 0:12:13
+2025-02-12 18:46:06.200 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 27/1849, mem: 6954Mb, iter_time: 0.316s, model_time: 0.274s, total_loss: 3.1, loss_cls: 0.7, loss_bbox: 1.5, loss_dfl: 0.9, lr: 7.909e-08, size: (640, 640), ETA: 0:11:38
+2025-02-12 18:46:06.496 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 28/1849, mem: 6954Mb, iter_time: 0.297s, model_time: 0.258s, total_loss: 2.7, loss_cls: 0.8, loss_bbox: 1.2, loss_dfl: 0.7, lr: 8.529e-08, size: (640, 640), ETA: 0:11:04
+2025-02-12 18:46:40.005 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 29/1849, mem: 6954Mb, iter_time: 33.509s, model_time: 33.460s, total_loss: 3.8, loss_cls: 1.9, loss_bbox: 1.1, loss_dfl: 0.7, lr: 9.173e-08, size: (640, 640), ETA: 0:11:54
+2025-02-12 18:46:40.348 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 30/1849, mem: 6954Mb, iter_time: 0.343s, model_time: 0.287s, total_loss: 4.3, loss_cls: 1.7, loss_bbox: 1.5, loss_dfl: 1.1, lr: 9.840e-08, size: (640, 640), ETA: 0:11:22
+2025-02-12 18:46:40.672 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 31/1849, mem: 6954Mb, iter_time: 0.323s, model_time: 0.282s, total_loss: 2.9, loss_cls: 0.8, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.053e-07, size: (640, 640), ETA: 0:10:51
+2025-02-12 18:46:40.967 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 32/1849, mem: 6954Mb, iter_time: 0.295s, model_time: 0.259s, total_loss: 2.7, loss_cls: 0.9, loss_bbox: 1.1, loss_dfl: 0.7, lr: 1.124e-07, size: (640, 640), ETA: 0:10:22
+2025-02-12 18:47:08.929 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 33/1849, mem: 6954Mb, iter_time: 27.962s, model_time: 20.558s, total_loss: 3.2, loss_cls: 1.0, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.198e-07, size: (640, 640), ETA: 0:10:51
+2025-02-12 18:47:09.255 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 34/1849, mem: 6954Mb, iter_time: 0.326s, model_time: 0.284s, total_loss: 3.1, loss_cls: 1.1, loss_bbox: 1.1, loss_dfl: 0.9, lr: 1.274e-07, size: (640, 640), ETA: 0:10:23
+2025-02-12 18:47:09.564 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 35/1849, mem: 6954Mb, iter_time: 0.309s, model_time: 0.273s, total_loss: 3.6, loss_cls: 1.5, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.353e-07, size: (640, 640), ETA: 0:09:57
+2025-02-12 18:47:09.864 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 36/1849, mem: 6954Mb, iter_time: 0.300s, model_time: 0.261s, total_loss: 2.5, loss_cls: 0.6, loss_bbox: 1.2, loss_dfl: 0.7, lr: 1.433e-07, size: (640, 640), ETA: 0:09:32
+2025-02-12 18:47:41.038 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 37/1849, mem: 6954Mb, iter_time: 31.174s, model_time: 13.751s, total_loss: 3.5, loss_cls: 1.0, loss_bbox: 1.5, loss_dfl: 1.1, lr: 1.516e-07, size: (640, 640), ETA: 0:10:01
+2025-02-12 18:47:41.360 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 38/1849, mem: 6954Mb, iter_time: 0.322s, model_time: 0.280s, total_loss: 2.3, loss_cls: 0.7, loss_bbox: 1.0, loss_dfl: 0.6, lr: 1.602e-07, size: (640, 640), ETA: 0:09:36
+2025-02-12 18:47:41.675 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 39/1849, mem: 6954Mb, iter_time: 0.315s, model_time: 0.278s, total_loss: 2.8, loss_cls: 0.6, loss_bbox: 1.4, loss_dfl: 0.8, lr: 1.689e-07, size: (640, 640), ETA: 0:09:13
+2025-02-12 18:47:41.971 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 40/1849, mem: 6954Mb, iter_time: 0.296s, model_time: 0.260s, total_loss: 3.4, loss_cls: 1.8, loss_bbox: 1.0, loss_dfl: 0.6, lr: 1.780e-07, size: (640, 640), ETA: 0:08:50
+2025-02-12 18:48:18.812 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 41/1849, mem: 6954Mb, iter_time: 36.841s, model_time: 17.119s, total_loss: 2.4, loss_cls: 0.8, loss_bbox: 1.0, loss_dfl: 0.6, lr: 1.872e-07, size: (640, 640), ETA: 0:09:22
+2025-02-12 18:48:19.132 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 42/1849, mem: 6954Mb, iter_time: 0.320s, model_time: 0.284s, total_loss: 2.9, loss_cls: 0.7, loss_bbox: 1.4, loss_dfl: 0.8, lr: 1.967e-07, size: (640, 640), ETA: 0:09:00
+2025-02-12 18:48:19.444 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 43/1849, mem: 6954Mb, iter_time: 0.313s, model_time: 0.276s, total_loss: 3.0, loss_cls: 0.7, loss_bbox: 1.5, loss_dfl: 0.8, lr: 2.064e-07, size: (640, 640), ETA: 0:08:38
+2025-02-12 18:48:19.774 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 44/1849, mem: 6954Mb, iter_time: 0.329s, model_time: 0.281s, total_loss: 2.7, loss_cls: 0.8, loss_bbox: 1.2, loss_dfl: 0.7, lr: 2.163e-07, size: (640, 640), ETA: 0:08:18
+2025-02-12 18:49:02.470 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 45/1849, mem: 6954Mb, iter_time: 42.696s, model_time: 23.833s, total_loss: 2.4, loss_cls: 0.9, loss_bbox: 1.0, loss_dfl: 0.5, lr: 2.265e-07, size: (640, 640), ETA: 0:08:50
+2025-02-12 18:49:02.788 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 46/1849, mem: 6954Mb, iter_time: 0.319s, model_time: 0.284s, total_loss: 3.5, loss_cls: 1.5, loss_bbox: 1.3, loss_dfl: 0.7, lr: 2.369e-07, size: (640, 640), ETA: 0:08:30
+2025-02-12 18:49:03.118 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 47/1849, mem: 6954Mb, iter_time: 0.330s, model_time: 0.294s, total_loss: 3.3, loss_cls: 0.9, loss_bbox: 1.5, loss_dfl: 0.9, lr: 2.476e-07, size: (640, 640), ETA: 0:08:10
+2025-02-12 18:49:03.423 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 48/1849, mem: 7044Mb, iter_time: 0.305s, model_time: 0.265s, total_loss: 3.6, loss_cls: 1.0, loss_bbox: 1.5, loss_dfl: 1.1, lr: 2.585e-07, size: (640, 640), ETA: 0:07:51
+2025-02-12 18:49:30.617 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 49/1849, mem: 7044Mb, iter_time: 27.194s, model_time: 23.623s, total_loss: 2.8, loss_cls: 0.6, loss_bbox: 1.4, loss_dfl: 0.8, lr: 2.696e-07, size: (640, 640), ETA: 0:08:01
+2025-02-12 18:49:30.935 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 50/1849, mem: 7044Mb, iter_time: 0.319s, model_time: 0.283s, total_loss: 2.6, loss_cls: 0.9, loss_bbox: 1.0, loss_dfl: 0.7, lr: 2.809e-07, size: (640, 640), ETA: 0:07:42
+2025-02-12 18:49:31.248 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 51/1849, mem: 7044Mb, iter_time: 0.313s, model_time: 0.278s, total_loss: 2.9, loss_cls: 1.3, loss_bbox: 1.0, loss_dfl: 0.7, lr: 2.925e-07, size: (640, 640), ETA: 0:07:25
+2025-02-12 18:49:31.545 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 52/1849, mem: 7044Mb, iter_time: 0.297s, model_time: 0.254s, total_loss: 2.4, loss_cls: 0.7, loss_bbox: 1.1, loss_dfl: 0.7, lr: 3.043e-07, size: (640, 640), ETA: 0:07:07
+2025-02-12 18:49:58.363 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 53/1849, mem: 7044Mb, iter_time: 26.817s, model_time: 26.776s, total_loss: 3.1, loss_cls: 0.7, loss_bbox: 1.5, loss_dfl: 0.9, lr: 3.164e-07, size: (640, 640), ETA: 0:07:14
+2025-02-12 18:49:58.695 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 54/1849, mem: 7044Mb, iter_time: 0.332s, model_time: 0.270s, total_loss: 3.4, loss_cls: 0.9, loss_bbox: 1.6, loss_dfl: 0.9, lr: 3.287e-07, size: (640, 640), ETA: 0:06:57
+2025-02-12 18:49:59.005 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 55/1849, mem: 7044Mb, iter_time: 0.310s, model_time: 0.268s, total_loss: 2.8, loss_cls: 0.6, loss_bbox: 1.4, loss_dfl: 0.8, lr: 3.412e-07, size: (640, 640), ETA: 0:06:41
+2025-02-12 18:49:59.311 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 56/1849, mem: 7044Mb, iter_time: 0.307s, model_time: 0.272s, total_loss: 2.5, loss_cls: 0.8, loss_bbox: 1.0, loss_dfl: 0.7, lr: 3.539e-07, size: (640, 640), ETA: 0:06:26
+2025-02-12 18:50:21.550 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 57/1849, mem: 7044Mb, iter_time: 22.238s, model_time: 22.198s, total_loss: 2.8, loss_cls: 0.7, loss_bbox: 1.3, loss_dfl: 0.8, lr: 3.669e-07, size: (640, 640), ETA: 0:06:27
+2025-02-12 18:50:21.891 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 58/1849, mem: 7044Mb, iter_time: 0.341s, model_time: 0.275s, total_loss: 2.1, loss_cls: 0.6, loss_bbox: 0.9, loss_dfl: 0.6, lr: 3.801e-07, size: (640, 640), ETA: 0:06:12
+2025-02-12 18:50:22.199 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 59/1849, mem: 7044Mb, iter_time: 0.308s, model_time: 0.267s, total_loss: 3.0, loss_cls: 0.7, loss_bbox: 1.4, loss_dfl: 0.8, lr: 3.936e-07, size: (640, 640), ETA: 0:05:57
+2025-02-12 18:50:34.250 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 60/1849, mem: 7044Mb, iter_time: 12.051s, model_time: 12.015s, total_loss: 2.7, loss_cls: 1.0, loss_bbox: 1.1, loss_dfl: 0.7, lr: 4.073e-07, size: (640, 640), ETA: 0:05:50
+2025-02-12 18:51:02.770 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 61/1849, mem: 7044Mb, iter_time: 28.521s, model_time: 28.470s, total_loss: 2.7, loss_cls: 1.0, loss_bbox: 1.0, loss_dfl: 0.6, lr: 4.212e-07, size: (640, 640), ETA: 0:05:54
+2025-02-12 18:51:03.093 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 62/1849, mem: 7044Mb, iter_time: 0.323s, model_time: 0.264s, total_loss: 6.1, loss_cls: 3.3, loss_bbox: 1.6, loss_dfl: 1.2, lr: 4.354e-07, size: (640, 640), ETA: 0:05:40
+2025-02-12 18:51:03.401 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 63/1849, mem: 7044Mb, iter_time: 0.308s, model_time: 0.272s, total_loss: 2.5, loss_cls: 0.5, loss_bbox: 1.3, loss_dfl: 0.7, lr: 4.497e-07, size: (640, 640), ETA: 0:05:26
+2025-02-12 18:51:09.546 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 64/1849, mem: 7044Mb, iter_time: 6.145s, model_time: 6.109s, total_loss: 3.6, loss_cls: 1.0, loss_bbox: 1.7, loss_dfl: 0.9, lr: 4.644e-07, size: (640, 640), ETA: 0:05:15
+2025-02-12 18:51:37.814 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 65/1849, mem: 7044Mb, iter_time: 28.269s, model_time: 19.014s, total_loss: 2.0, loss_cls: 0.4, loss_bbox: 1.0, loss_dfl: 0.6, lr: 4.792e-07, size: (640, 640), ETA: 0:05:17
+2025-02-12 18:51:38.144 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 66/1849, mem: 7044Mb, iter_time: 0.329s, model_time: 0.273s, total_loss: 2.8, loss_cls: 0.6, loss_bbox: 1.4, loss_dfl: 0.8, lr: 4.943e-07, size: (640, 640), ETA: 0:05:04
+2025-02-12 18:51:38.468 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 67/1849, mem: 7044Mb, iter_time: 0.324s, model_time: 0.273s, total_loss: 4.0, loss_cls: 1.8, loss_bbox: 1.4, loss_dfl: 0.9, lr: 5.097e-07, size: (640, 640), ETA: 0:04:50
+2025-02-12 18:52:05.019 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 68/1849, mem: 7044Mb, iter_time: 26.551s, model_time: 26.508s, total_loss: 2.6, loss_cls: 0.6, loss_bbox: 1.3, loss_dfl: 0.7, lr: 5.252e-07, size: (640, 640), ETA: 0:04:50
+2025-02-12 18:52:10.876 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 69/1849, mem: 7044Mb, iter_time: 5.857s, model_time: 5.785s, total_loss: 4.0, loss_cls: 1.3, loss_bbox: 1.7, loss_dfl: 1.1, lr: 5.410e-07, size: (640, 640), ETA: 0:04:39
+2025-02-12 18:52:11.811 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 70/1849, mem: 7044Mb, iter_time: 0.935s, model_time: 0.881s, total_loss: 2.2, loss_cls: 0.7, loss_bbox: 0.9, loss_dfl: 0.6, lr: 5.570e-07, size: (640, 640), ETA: 0:04:27
+2025-02-12 18:52:12.152 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 71/1849, mem: 7044Mb, iter_time: 0.341s, model_time: 0.288s, total_loss: 2.5, loss_cls: 0.6, loss_bbox: 1.3, loss_dfl: 0.7, lr: 5.733e-07, size: (640, 640), ETA: 0:04:14
+2025-02-12 18:52:37.761 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 72/1849, mem: 7044Mb, iter_time: 25.609s, model_time: 25.567s, total_loss: 2.1, loss_cls: 0.5, loss_bbox: 1.0, loss_dfl: 0.6, lr: 5.898e-07, size: (640, 640), ETA: 0:04:12
+2025-02-12 18:52:48.808 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 73/1849, mem: 7044Mb, iter_time: 11.047s, model_time: 10.982s, total_loss: 2.9, loss_cls: 0.6, loss_bbox: 1.5, loss_dfl: 0.8, lr: 6.065e-07, size: (640, 640), ETA: 0:04:04
+2025-02-12 18:52:52.510 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 74/1849, mem: 7044Mb, iter_time: 3.702s, model_time: 3.646s, total_loss: 3.1, loss_cls: 0.7, loss_bbox: 1.5, loss_dfl: 0.8, lr: 6.235e-07, size: (640, 640), ETA: 0:03:53
+2025-02-12 18:52:52.839 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 75/1849, mem: 7235Mb, iter_time: 0.329s, model_time: 0.277s, total_loss: 2.7, loss_cls: 0.6, loss_bbox: 1.4, loss_dfl: 0.7, lr: 6.407e-07, size: (640, 640), ETA: 0:03:41
+2025-02-12 18:53:11.196 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 76/1849, mem: 7477Mb, iter_time: 18.357s, model_time: 18.316s, total_loss: 3.0, loss_cls: 0.6, loss_bbox: 1.6, loss_dfl: 0.8, lr: 6.581e-07, size: (640, 640), ETA: 0:03:35
+2025-02-12 18:53:11.517 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 77/1849, mem: 7477Mb, iter_time: 0.321s, model_time: 0.267s, total_loss: 2.2, loss_cls: 0.5, loss_bbox: 1.1, loss_dfl: 0.6, lr: 6.758e-07, size: (640, 640), ETA: 0:03:24
+2025-02-12 18:53:22.354 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 78/1849, mem: 7477Mb, iter_time: 10.837s, model_time: 10.792s, total_loss: 2.3, loss_cls: 0.8, loss_bbox: 0.9, loss_dfl: 0.6, lr: 6.937e-07, size: (640, 640), ETA: 0:03:15
+2025-02-12 18:53:22.665 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 79/1849, mem: 7477Mb, iter_time: 0.312s, model_time: 0.264s, total_loss: 2.8, loss_cls: 1.1, loss_bbox: 1.1, loss_dfl: 0.6, lr: 7.118e-07, size: (640, 640), ETA: 0:03:04
+2025-02-12 18:53:31.612 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 80/1849, mem: 7477Mb, iter_time: 8.947s, model_time: 8.899s, total_loss: 2.7, loss_cls: 0.5, loss_bbox: 1.4, loss_dfl: 0.7, lr: 7.302e-07, size: (640, 640), ETA: 0:02:55
+2025-02-12 18:53:31.934 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 81/1849, mem: 7477Mb, iter_time: 0.322s, model_time: 0.269s, total_loss: 2.3, loss_cls: 0.6, loss_bbox: 1.0, loss_dfl: 0.6, lr: 7.488e-07, size: (640, 640), ETA: 0:02:45
+2025-02-12 18:53:50.166 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 82/1849, mem: 7477Mb, iter_time: 18.231s, model_time: 18.176s, total_loss: 1.9, loss_cls: 0.5, loss_bbox: 0.8, loss_dfl: 0.6, lr: 7.676e-07, size: (640, 640), ETA: 0:02:38
+2025-02-12 18:53:50.495 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 83/1849, mem: 7477Mb, iter_time: 0.330s, model_time: 0.280s, total_loss: 2.7, loss_cls: 0.7, loss_bbox: 1.3, loss_dfl: 0.7, lr: 7.867e-07, size: (640, 640), ETA: 0:02:27
+2025-02-12 18:53:59.191 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 84/1849, mem: 7477Mb, iter_time: 8.696s, model_time: 8.659s, total_loss: 2.1, loss_cls: 0.5, loss_bbox: 1.0, loss_dfl: 0.6, lr: 8.060e-07, size: (640, 640), ETA: 0:02:19
+2025-02-12 18:53:59.538 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 85/1849, mem: 7477Mb, iter_time: 0.347s, model_time: 0.281s, total_loss: 4.0, loss_cls: 2.4, loss_bbox: 1.0, loss_dfl: 0.6, lr: 8.256e-07, size: (640, 640), ETA: 0:02:09
+2025-02-12 18:54:13.817 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 86/1849, mem: 7477Mb, iter_time: 14.279s, model_time: 14.241s, total_loss: 2.4, loss_cls: 0.6, loss_bbox: 1.1, loss_dfl: 0.7, lr: 8.453e-07, size: (640, 640), ETA: 0:02:01
+2025-02-12 18:54:14.142 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 87/1849, mem: 7477Mb, iter_time: 0.325s, model_time: 0.276s, total_loss: 2.0, loss_cls: 0.5, loss_bbox: 0.8, loss_dfl: 0.6, lr: 8.653e-07, size: (640, 640), ETA: 0:01:51
+2025-02-12 18:54:36.878 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 88/1849, mem: 7477Mb, iter_time: 22.736s, model_time: 22.702s, total_loss: 2.4, loss_cls: 0.5, loss_bbox: 1.2, loss_dfl: 0.6, lr: 8.856e-07, size: (640, 640), ETA: 0:01:44
+2025-02-12 18:54:37.238 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 89/1849, mem: 7477Mb, iter_time: 0.360s, model_time: 0.301s, total_loss: 2.1, loss_cls: 0.4, loss_bbox: 1.1, loss_dfl: 0.6, lr: 9.060e-07, size: (640, 640), ETA: 0:01:35
+2025-02-12 18:54:40.999 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 90/1849, mem: 7477Mb, iter_time: 3.761s, model_time: 3.704s, total_loss: 3.2, loss_cls: 1.0, loss_bbox: 1.3, loss_dfl: 0.8, lr: 9.268e-07, size: (640, 640), ETA: 0:01:25
+2025-02-12 18:54:41.348 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 91/1849, mem: 7477Mb, iter_time: 0.349s, model_time: 0.292s, total_loss: 2.5, loss_cls: 0.8, loss_bbox: 1.1, loss_dfl: 0.6, lr: 9.477e-07, size: (640, 640), ETA: 0:01:16
+2025-02-12 18:55:08.855 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 92/1849, mem: 7477Mb, iter_time: 27.507s, model_time: 27.470s, total_loss: 2.2, loss_cls: 0.5, loss_bbox: 1.1, loss_dfl: 0.6, lr: 9.689e-07, size: (640, 640), ETA: 0:01:09
+2025-02-12 18:55:09.211 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 93/1849, mem: 7477Mb, iter_time: 0.355s, model_time: 0.294s, total_loss: 4.0, loss_cls: 1.3, loss_bbox: 1.7, loss_dfl: 1.0, lr: 9.903e-07, size: (640, 640), ETA: 0:01:00
+2025-02-12 18:55:09.560 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 94/1849, mem: 7477Mb, iter_time: 0.349s, model_time: 0.284s, total_loss: 1.9, loss_cls: 0.4, loss_bbox: 1.0, loss_dfl: 0.5, lr: 1.012e-06, size: (640, 640), ETA: 0:00:51
+2025-02-12 18:55:09.863 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 95/1849, mem: 7477Mb, iter_time: 0.303s, model_time: 0.262s, total_loss: 1.9, loss_cls: 0.4, loss_bbox: 1.0, loss_dfl: 0.5, lr: 1.034e-06, size: (640, 640), ETA: 0:00:42
+2025-02-12 18:55:37.829 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 96/1849, mem: 7477Mb, iter_time: 27.966s, model_time: 27.932s, total_loss: 2.4, loss_cls: 0.6, loss_bbox: 1.1, loss_dfl: 0.6, lr: 1.056e-06, size: (640, 640), ETA: 0:00:34
+2025-02-12 18:55:38.159 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 97/1849, mem: 7477Mb, iter_time: 0.330s, model_time: 0.259s, total_loss: 2.8, loss_cls: 0.7, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.078e-06, size: (640, 640), ETA: 0:00:25
+2025-02-12 18:55:44.435 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 98/1849, mem: 7477Mb, iter_time: 6.275s, model_time: 6.244s, total_loss: 2.5, loss_cls: 0.5, loss_bbox: 1.3, loss_dfl: 0.7, lr: 1.101e-06, size: (640, 640), ETA: 0:00:17
+2025-02-12 18:55:44.761 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 99/1849, mem: 7477Mb, iter_time: 0.326s, model_time: 0.287s, total_loss: 3.7, loss_cls: 1.5, loss_bbox: 1.3, loss_dfl: 0.8, lr: 1.124e-06, size: (640, 640), ETA: 0:00:08
+2025-02-12 18:56:01.211 | INFO     | damo.apis.detector_trainer:train:367 - epoch: 1/300, iter: 100/1849, mem: 7477Mb, iter_time: 16.450s, model_time: 16.406s, total_loss: 2.9, loss_cls: 1.0, loss_bbox: 1.2, loss_dfl: 0.7, lr: 1.147e-06, size: (640, 640), ETA: 0:00:00
+2025-02-12 18:56:20.264 | INFO     | damo.apis.detector_trainer:save_ckpt:398 - Save weights to ./workdirs/damoyolo_tinynasL25_S

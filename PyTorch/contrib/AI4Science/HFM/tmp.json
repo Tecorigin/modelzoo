@@ -1,0 +1,38 @@
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645373", "type": "INFO", "data": "[133839] rank = 3, world_size = 4"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645321", "type": "INFO", "data": "[133837] rank = 1, world_size = 4"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645431", "type": "INFO", "data": "<LoadDataset_pread_ddp.Dataset3D object at 0x7f2f1b1492e0> Loading dataset..."}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645462", "type": "INFO", "data": "args:path:./Datasets_HFM/gen_data_predict_t1.npy,T_data:10,N_data:1000,cols:9,eqns:True,other_loss:False"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645493", "type": "INFO", "data": "open file: 21"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645478", "type": "INFO", "data": "<LoadDataset_pread_ddp.Dataset3D object at 0x7f8b7f9b2310> Loading dataset..."}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645511", "type": "INFO", "data": "args:path:./Datasets_HFM/gen_data_predict_t1.npy,T_data:10,N_data:1000,cols:9,eqns:True,other_loss:False"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.645541", "type": "INFO", "data": "open file: 19"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655232", "type": "INFO", "data": "[133838] rank = 2, world_size = 4"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655322", "type": "INFO", "data": "<LoadDataset_pread_ddp.Dataset3D object at 0x7f11a11c5310> Loading dataset..."}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655352", "type": "INFO", "data": "args:path:./Datasets_HFM/gen_data_predict_t1.npy,T_data:10,N_data:1000,cols:9,eqns:True,other_loss:False"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655380", "type": "INFO", "data": "open file: 21"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655195", "type": "INFO", "data": "[133836] rank = 0, world_size = 4"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.589246", "type": "INFO", "data": "Error c: 1.704903e+01, Error u: 1.112244e+01, Error v: 1.867807e+01, Error w: 8.652587e-01, Error p: 4.755419e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.596118", "type": "INFO", "data": "Error c: 1.704900e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652693e-01, Error p: 5.188462e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.596181", "type": "INFO", "data": "--------------------0--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.600213", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652690e-01, Error p: 5.171744e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.600273", "type": "INFO", "data": "--------------------1--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.604149", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652689e-01, Error p: 5.181128e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.604206", "type": "INFO", "data": "--------------------2--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.608057", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652686e-01, Error p: 5.175768e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.608114", "type": "INFO", "data": "--------------------3--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.611895", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652683e-01, Error p: 5.192579e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.611945", "type": "INFO", "data": "--------------------4--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.615730", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652682e-01, Error p: 5.185251e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.615782", "type": "INFO", "data": "--------------------5--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.619541", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652680e-01, Error p: 5.179788e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.619589", "type": "INFO", "data": "--------------------6--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.623310", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652678e-01, Error p: 5.185840e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.623354", "type": "INFO", "data": "--------------------7--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.627047", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652675e-01, Error p: 5.180699e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.627090", "type": "INFO", "data": "--------------------8--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.630801", "type": "INFO", "data": "Error c: 1.704901e+01, Error u: 1.112243e+01, Error v: 1.867806e+01, Error w: 8.652673e-01, Error p: 5.209229e-05"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.630842", "type": "INFO", "data": "--------------------9--------------------"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:39.631204", "type": "INFO", "data": "Results already saved! Save: Results/Cylinder3D_results_pread05_21_06_2024.npy"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655284", "type": "INFO", "data": "<LoadDataset_pread_ddp.Dataset3D object at 0x7f574035d2e0> Loading dataset..."}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655313", "type": "INFO", "data": "args:path:./Datasets_HFM/gen_data_predict_t1.npy,T_data:10,N_data:1000,cols:9,eqns:True,other_loss:False"}
+INFO {"local_rank": 0, "datetime": "2024-06-21 05:07:38.655342", "type": "INFO", "data": "open file: 32"}

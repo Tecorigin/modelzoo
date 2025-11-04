@@ -1,0 +1,104 @@
+# cascade-r-cnn
+
+## 1. 模型概述
+Cascade R-CNN 通过多阶段的逐步优化设计，提高了目标检测的精度和鲁棒性。它的核心思想是通过级联多个阶段，逐渐改进检测结果，尤其在处理难度较大的物体检测任务（如小物体、重叠物体等）时具有显著优势。虽然相对于传统的单阶段方法，Cascade R-CNN 的计算量较大，但在追求高精度的目标检测任务中，依然具有很大的应用潜力。
+
+源码链接: https://github.com/open-mmlab/mmdetection
+
+## 2. 快速开始
+
+### 2.1 基础环境安装
+
+请参考[基础环境安装](../../../../doc/Environment.md)章节，完成训练前的基础环境检查和安装。
+
+
+### 2.2 数据集准备
+
+#### 2.2.1 数据集位置
+/data/datasets/20241122/coco/
+
+
+2. 安装python依赖
+``` 
+bash
+# install requirements
+pip install -r requirements.txt
+```
+### 2.4 启动训练
+1. 在训练之前，我们需要对相关库进行必要的修改，这里修改的路径中的mjytorch为本人的环境名，需要更改。
+
+首先安装需要的库：
+``` 
+pip install -r requirements.txt
+```
+接着请开始修改：
+#### 1.修改了/root/miniconda3/envs/mjytorch/lib/python3.10/site-packages/mmengine/optim/optimizer/amp_optimizer_wrapper.py
+第76-77行:
+``` 
+assert is_cuda_available() or is_npu_available() or is_mlu_available(
+        ) or is_musa_available() or torch.sdaa.is_available(), (
+```
+#### 2.修改了/root/anaconda3/envs/mjytorch/lib/python3.10/site-packages/mmengine/device/utils.py
+第53-58行：
+```
+mem = torch.sdaa.max_memory_allocated(device=device)
+mem_mb = torch.tensor([int(mem) // (1024 * 1024)],
+                          dtype=torch.int,
+                          device=device)
+torch.sdaa.reset_peak_memory_stats()
+return int(mem_mb.item())
+```
+第63行:
+ ```
+ return torch.sdaa.is_available()
+ ```
+#### 3.修改了/root/miniconda3/envs/mjytorch/lib/python3.10/site-packages/mmengine/dist/utils.py
+第130行：
+```
+torch.sdaa.set_device(local_rank)
+```
+第133行：
+```
+torch_dist.init_process_group(backend='tccl', **kwargs)
+```
+#### 4.修改了/root/anaconda3/envs/mjytorch/lib/python3.10/site-packages/mmengine/runner/runner.py
+将877行的model = model.to(get_device()) 改为model = model.to("sdaa")
+第2042行的device = get_device() 改为 device = "sdaa"
+
+#### 5./root/miniconda3/envs/mjytorch/lib/python3.10/site-packages/mmcv/ops/roi_align.py
+
+第91行加入input_cloned = input.clone()
+
+将下一行ext_module.roi_align_forward中的input改为input_cloned
+
+#### 6. /root/miniconda3/envs/mjytorch/lib/python3.10/site-packages/mmengine/structures/instance_data.py
+
+25-26行改为：（cuda改为sdaa）
+```
+else:
+    BoolTypeTensor = Union[torch.BoolTensor, torch.sdaa.BoolTensor]
+    LongTypeTensor = Union[torch.LongTensor, torch.sdaa.LongTensor]
+```
+2. 在构建好的环境中，进入训练脚本所在目录。
+    ```
+    cd <ModelZoo_path>/PyTorch/contrib/Classification/cascade-r-cnn
+    ```
+
+- 单机单核组
+    ```
+    torchrun tools/train.py configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py
+    ```
+- 单机单卡
+    ```
+    torchrun tools/train.py configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py --launcher pytorch --nproc_per_node 4
+    ```
+
+
+### 2.5 训练结果
+
+| 芯片 |卡  | 模型 |  混合精度 |Batch size|Shape| 
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|SDAA|1| cascade-r-cnn |是|2|300*300|
+
+
+

@@ -1,0 +1,289 @@
+I0314 02:41:22.038420 151176 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device
+I0314 02:41:22.038476 151176 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 2.0.0        | 2.0.0       | 2.0.0    | 2.0.0     | 1.21.0    | 1.22.0      | 1.3.1 | 2.0.0               | 38be61b            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0314 02:41:22.114167 151176 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0314 02:41:22.116338 151176 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0314 02:41:22.116426 151176 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+I0314 02:41:22.116449 151176 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+[2025-03-14 02:41:23,047] [   DEBUG] __init__.py:342 - matplotlib data path: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/matplotlib/mpl-data
+[2025-03-14 02:41:23,051] [   DEBUG] __init__.py:342 - CONFIGDIR=/root/.config/matplotlib
+[2025-03-14 02:41:23,052] [   DEBUG] __init__.py:1557 - interactive is False
+[2025-03-14 02:41:23,052] [   DEBUG] __init__.py:1558 - platform is linux
+[2025-03-14 02:41:23,145] [   DEBUG] __init__.py:342 - CACHEDIR=/root/.cache/matplotlib
+[2025-03-14 02:41:23,146] [   DEBUG] font_manager.py:1635 - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0314 02:41:23.681075 151176 tcp_utils.cc:181] The server starts to listen on IP_ANY:63440
+I0314 02:41:23.681275 151176 tcp_utils.cc:130] Successfully connected to 192.166.0.6:63440
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   phi::distributed::CreateOrGetGlobalTCPStore()
+1   phi::distributed::TCPStore::TCPStore(std::string, unsigned short, bool, unsigned long, int)
+2   phi::distributed::TCPStore::waitWorkers()
+3   phi::distributed::TCPStore::get(std::string const&)
+4   void phi::distributed::tcputils::receive_bytes<unsigned long>(int, unsigned long*, unsigned long)
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1741920084 (unix time) try "date -d @1741920084" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x24e3e) received by PID 151176 (TID 0x7f3211ad2740) from PID 151102 ***]
+
+I0314 02:42:50.245921 151410 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device
+I0314 02:42:50.245981 151410 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 2.0.0        | 2.0.0       | 2.0.0    | 2.0.0     | 1.21.0    | 1.22.0      | 1.3.1 | 2.0.0               | 38be61b            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0314 02:42:50.345877 151410 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0314 02:42:50.348501 151410 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0314 02:42:50.348603 151410 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+I0314 02:42:50.348624 151410 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+[2025-03-14 02:42:51,499] [   DEBUG] __init__.py:342 - matplotlib data path: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/matplotlib/mpl-data
+[2025-03-14 02:42:51,506] [   DEBUG] __init__.py:342 - CONFIGDIR=/root/.config/matplotlib
+[2025-03-14 02:42:51,507] [   DEBUG] __init__.py:1557 - interactive is False
+[2025-03-14 02:42:51,508] [   DEBUG] __init__.py:1558 - platform is linux
+[2025-03-14 02:42:51,631] [   DEBUG] __init__.py:342 - CACHEDIR=/root/.cache/matplotlib
+[2025-03-14 02:42:51,632] [   DEBUG] font_manager.py:1635 - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+I0314 02:42:52.336014 151410 tcp_utils.cc:181] The server starts to listen on IP_ANY:61634
+I0314 02:42:52.336259 151410 tcp_utils.cc:130] Successfully connected to 192.166.0.6:61634
+[03/14 02:42:52] ppdet.utils.download WARNING: Config dataset_dir dataset/mot/MOT17 is not exits, dataset config is not valid
+Traceback (most recent call last):
+  File "/data/whb/oc_sort/PaddleDetection/tools/train.py", line 215, in <module>
+    main()
+  File "/data/whb/oc_sort/PaddleDetection/tools/train.py", line 211, in main
+    run(FLAGS, cfg)
+  File "/data/whb/oc_sort/PaddleDetection/tools/train.py", line 150, in run
+    trainer = Trainer(cfg, mode='train')
+  File "/data/whb/oc_sort/PaddleDetection/ppdet/engine/trainer.py", line 123, in __init__
+    self.loader = create('{}Reader'.format(capital_mode))(
+  File "/data/whb/oc_sort/PaddleDetection/ppdet/data/reader.py", line 189, in __call__
+    self.dataset.check_or_download_dataset()
+  File "/data/whb/oc_sort/PaddleDetection/ppdet/data/source/dataset.py", line 116, in check_or_download_dataset
+    self.dataset_dir = get_dataset_path(self.dataset_dir, self.anno_path,
+  File "/data/whb/oc_sort/PaddleDetection/ppdet/utils/download.py", line 191, in get_dataset_path
+    raise ValueError(
+ValueError: Dataset /data/whb/oc_sort/PaddleDetection/dataset/mot/MOT17 is not valid for reason above, please check again.
+I0314 02:42:52.778095 151459 tcp_store.cc:289] receive shutdown event and so quit from MasterDaemon run loop
+I0314 02:44:33.027462 151616 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device
+I0314 02:44:33.027521 151616 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 2.0.0        | 2.0.0       | 2.0.0    | 2.0.0     | 1.21.0    | 1.22.0      | 1.3.1 | 2.0.0               | 38be61b            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0314 02:44:33.128536 151616 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0314 02:44:33.131188 151616 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0314 02:44:33.131294 151616 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+I0314 02:44:33.131317 151616 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+[2025-03-14 02:44:34,287] [   DEBUG] __init__.py:342 - matplotlib data path: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/matplotlib/mpl-data
+[2025-03-14 02:44:34,294] [   DEBUG] __init__.py:342 - CONFIGDIR=/root/.config/matplotlib
+[2025-03-14 02:44:34,296] [   DEBUG] __init__.py:1557 - interactive is False
+[2025-03-14 02:44:34,296] [   DEBUG] __init__.py:1558 - platform is linux
+[2025-03-14 02:44:34,430] [   DEBUG] __init__.py:342 - CACHEDIR=/root/.cache/matplotlib
+[2025-03-14 02:44:34,431] [   DEBUG] font_manager.py:1635 - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+I0314 02:44:35.151907 151616 tcp_utils.cc:181] The server starts to listen on IP_ANY:40012
+I0314 02:44:35.152124 151616 tcp_utils.cc:130] Successfully connected to 192.166.0.6:40012
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   phi::distributed::CreateOrGetGlobalTCPStore()
+1   phi::distributed::TCPStore::TCPStore(std::string, unsigned short, bool, unsigned long, int)
+2   phi::distributed::TCPStore::waitWorkers()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1741920276 (unix time) try "date -d @1741920276" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x24fee) received by PID 151616 (TID 0x7ff15e90b740) from PID 151534 ***]
+
+I0314 02:50:15.310089 152086 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device
+I0314 02:50:15.310139 152086 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 2.0.0        | 2.0.0       | 2.0.0    | 2.0.0     | 1.21.0    | 1.22.0      | 1.3.1 | 2.0.0               | 38be61b            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0314 02:50:15.408879 152086 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0314 02:50:15.411502 152086 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0314 02:50:15.411607 152086 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/paddle_custom_device]
+I0314 02:50:15.411629 152086 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+[2025-03-14 02:50:16,551] [   DEBUG] __init__.py:342 - matplotlib data path: /root/miniconda3/envs/paddle_env_py310/lib/python3.10/site-packages/matplotlib/mpl-data
+[2025-03-14 02:50:16,558] [   DEBUG] __init__.py:342 - CONFIGDIR=/root/.config/matplotlib
+[2025-03-14 02:50:16,560] [   DEBUG] __init__.py:1557 - interactive is False
+[2025-03-14 02:50:16,560] [   DEBUG] __init__.py:1558 - platform is linux
+[2025-03-14 02:50:16,692] [   DEBUG] __init__.py:342 - CACHEDIR=/root/.cache/matplotlib
+[2025-03-14 02:50:16,693] [   DEBUG] font_manager.py:1635 - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+I0314 02:50:17.409279 152086 tcp_utils.cc:181] The server starts to listen on IP_ANY:38407
+I0314 02:50:17.409492 152086 tcp_utils.cc:130] Successfully connected to 192.166.0.6:38407
+loading annotations into memory...
+Done (t=0.25s)
+creating index...
+index created!
+[03/14 02:50:21] ppdet.data.source.coco INFO: Load [2664 samples valid, 0 samples invalid] in file dataset/mot/MOT17/annotations/train_half.json.
+[03/14 02:50:23] ppdet.utils.download INFO: Downloading ppyoloe_crn_l_300e_coco.pdparams from https://bj.bcebos.com/v1/paddledet/models/ppyoloe_crn_l_300e_coco.pdparams
+[2025-03-14 02:50:23,966] [   DEBUG] connectionpool.py:1051 - Starting new HTTPS connection (1): bj.bcebos.com:443
+[2025-03-14 02:50:24,127] [   DEBUG] connectionpool.py:546 - https://bj.bcebos.com:443 "GET /v1/paddledet/models/ppyoloe_crn_l_300e_coco.pdparams HTTP/11" 200 216773392
+  0%|          | 0/211693 [00:00<?, ?KB/s]  0%|          | 403/211693 [00:00<00:52, 4024.46KB/s]  3%|▎         | 6114/211693 [00:00<00:05, 35227.74KB/s]  8%|▊         | 17278/211693 [00:00<00:02, 70102.37KB/s] 13%|█▎        | 28429/211693 [00:00<00:02, 86443.37KB/s] 19%|█▊        | 39450/211693 [00:00<00:01, 95008.89KB/s] 24%|██▍       | 50782/211693 [00:00<00:01, 101230.78KB/s] 29%|██▉       | 61901/211693 [00:00<00:01, 104484.22KB/s] 35%|███▍      | 73211/211693 [00:00<00:01, 107224.32KB/s] 40%|███▉      | 84434/211693 [00:00<00:01, 108756.74KB/s] 45%|████▌     | 95632/211693 [00:01<00:01, 109749.18KB/s] 50%|█████     | 106865/211693 [00:01<00:00, 110536.66KB/s] 56%|█████▌    | 117992/211693 [00:01<00:00, 110758.06KB/s] 61%|██████    | 129180/211693 [00:01<00:00, 111094.80KB/s] 66%|██████▋   | 140370/211693 [00:01<00:00, 111304.12KB/s] 72%|███████▏  | 151528/211693 [00:01<00:00, 111384.48KB/s] 77%|███████▋  | 162706/211693 [00:01<00:00, 111486.18KB/s] 82%|████████▏ | 173855/211693 [00:01<00:00, 101761.52KB/s] 87%|████████▋ | 184196/211693 [00:01<00:00, 91462.35KB/s]  91%|█████████▏| 193621/211693 [00:02<00:00, 85578.67KB/s] 96%|█████████▌| 202406/211693 [00:02<00:00, 81436.76KB/s]100%|█████████▉| 210709/211693 [00:02<00:00, 79219.55KB/s]100%|██████████| 211693/211693 [00:02<00:00, 94005.52KB/s]
+[2025-03-14 02:50:26,387] [   DEBUG] connectionpool.py:1051 - Starting new HTTPS connection (1): bj.bcebos.com:443
+[2025-03-14 02:50:26,528] [   DEBUG] connectionpool.py:546 - https://bj.bcebos.com:443 "GET /v1/paddledet/models/ppyoloe_crn_l_300e_coco.pdparams HTTP/11" 200 216773392
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: ['yolo_head.anchor_points', 'yolo_head.stride_tensor'] in pretrained weight is not used in the model, and its will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: The shape [80] in pretrained weight yolo_head.pred_cls.0.bias is unmatched with the shape [1] in model yolo_head.pred_cls.0.bias. And the weight yolo_head.pred_cls.0.bias will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: The shape [80, 768, 3, 3] in pretrained weight yolo_head.pred_cls.0.weight is unmatched with the shape [1, 768, 3, 3] in model yolo_head.pred_cls.0.weight. And the weight yolo_head.pred_cls.0.weight will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: The shape [80] in pretrained weight yolo_head.pred_cls.1.bias is unmatched with the shape [1] in model yolo_head.pred_cls.1.bias. And the weight yolo_head.pred_cls.1.bias will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: The shape [80, 384, 3, 3] in pretrained weight yolo_head.pred_cls.1.weight is unmatched with the shape [1, 384, 3, 3] in model yolo_head.pred_cls.1.weight. And the weight yolo_head.pred_cls.1.weight will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: The shape [80] in pretrained weight yolo_head.pred_cls.2.bias is unmatched with the shape [1] in model yolo_head.pred_cls.2.bias. And the weight yolo_head.pred_cls.2.bias will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: The shape [80, 192, 3, 3] in pretrained weight yolo_head.pred_cls.2.weight is unmatched with the shape [1, 192, 3, 3] in model yolo_head.pred_cls.2.weight. And the weight yolo_head.pred_cls.2.weight will not be loaded
+[03/14 02:50:27] ppdet.utils.checkpoint INFO: Finish loading model weights: /root/.cache/paddle/weights/ppyoloe_crn_l_300e_coco.pdparams
+[03/14 02:50:29] ppdet.engine.callbacks INFO: Epoch: [0] [ 0/83] learning_rate: 0.000001 loss: 2.213919 loss_cls: 1.648692 loss_iou: 0.142067 loss_dfl: 0.420120 loss_l1: 0.599070 eta: 1:02:40 batch_cost: 1.2584 data_cost: 0.0011 ips: 6.3573 images/s
+[03/14 02:51:02] ppdet.engine.callbacks INFO: Epoch: [0] [20/83] learning_rate: 0.000242 loss: 3.382009 loss_cls: 2.213782 loss_iou: 0.215553 loss_dfl: 0.893007 loss_l1: 0.577085 eta: 1:14:01 batch_cost: 1.5083 data_cost: 0.0003 ips: 5.3040 images/s
+[03/14 02:51:37] ppdet.engine.callbacks INFO: Epoch: [0] [40/83] learning_rate: 0.000482 loss: 1.611041 loss_cls: 0.772433 loss_iou: 0.206461 loss_dfl: 0.709065 loss_l1: 0.414895 eta: 1:16:13 batch_cost: 1.6091 data_cost: 0.0003 ips: 4.9717 images/s
+[03/14 02:52:11] ppdet.engine.callbacks INFO: Epoch: [0] [60/83] learning_rate: 0.000723 loss: 1.412198 loss_cls: 0.648528 loss_iou: 0.155797 loss_dfl: 0.660189 loss_l1: 0.333572 eta: 1:15:45 batch_cost: 1.5546 data_cost: 0.0003 ips: 5.1461 images/s
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   add_ad_func(paddle::Tensor const&, paddle::Tensor const&)
+1   paddle::experimental::add(paddle::Tensor const&, paddle::Tensor const&)
+2   custom_kernel::sdaa_ops::doElementAdd(phi::CustomContext const&, phi::DenseTensor const&, phi::DenseTensor const&, int, phi::DenseTensor*)
+3   phi::DenseTensor::dims() const
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1741920760 (unix time) try "date -d @1741920760" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x251cc) received by PID 152086 (TID 0x7fe122379740) from PID 152012 ***]
+

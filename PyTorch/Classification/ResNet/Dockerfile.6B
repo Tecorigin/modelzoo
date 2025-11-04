@@ -1,0 +1,11 @@
+ARG FROM_IMAGE_NAME=jfrog.tecorigin.net/tecotp-docker/release/openeuler22.03/sw_64/pytorch:1.2.2-torch_sdaa1.9.0
+FROM ${FROM_IMAGE_NAME}
+
+WORKDIR /workspace/
+ADD requirements_6B.txt /workspace/
+RUN rm -rf /bin/sh && ln -s /bin/bash /bin/sh
+RUN  pip install --no-cache-dir -r requirements_6B.txt -i http://soft.developer.wxiat.com/pip_openEuler/simple  --trusted-host soft.developer.wxiat.com
+ADD . /workspace/Classification/ResNet/
+WORKDIR /workspace/Classification/ResNet/
+ENV MODELZOO_USE_6B=1
+ENV RDMAV_FORK_SAFE=1

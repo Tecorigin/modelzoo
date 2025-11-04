@@ -1,0 +1,7 @@
+Cython
+numpy
+scipy
+matplotlib
+imageio
+memory-profiler
+git+https://gitee.com/xiwei777/tcap_dllogger.git

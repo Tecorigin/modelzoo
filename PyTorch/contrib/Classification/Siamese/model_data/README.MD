@@ -1,0 +1,2 @@
+这一部分用来存放vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5的权重，训练的时候会自动从远程下载。
+vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5是vgg的权重，可以用于训练其它的数据集。

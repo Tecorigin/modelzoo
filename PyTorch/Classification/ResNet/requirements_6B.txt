@@ -1,0 +1,6 @@
+numpy==1.24.3
+git+https://gitee.com/sunny8654/dllogger.git
+pynvml
+pyyaml
+tensorboard
+git+https://gitee.com/xiwei777/tcap_dlloger.git

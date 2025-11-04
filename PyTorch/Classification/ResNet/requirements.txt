@@ -1,0 +1,6 @@
+git+https://gitee.com/sunny8654/dllogger.git
+pynvml==11.0.0
+mkl==2022.1.0
+pyyaml
+tensorboard
+git+https://gitee.com/xiwei777/tcap_dlloger.git

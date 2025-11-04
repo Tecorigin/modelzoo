@@ -1,0 +1,505 @@
+I0217 08:56:14.182788 72160 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device
+I0217 08:56:14.182864 72160 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0217 08:56:14.275949 72160 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0217 08:56:14.278430 72160 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0217 08:56:14.278550 72160 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+I0217 08:56:14.278574 72160 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+2025-02-17 08:56:15,165 - DEBUG - matplotlib data path: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-02-17 08:56:15,170 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-02-17 08:56:15,172 - DEBUG - interactive is False
+2025-02-17 08:56:15,172 - DEBUG - platform is linux
+2025-02-17 08:56:15,225 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-02-17 08:56:15,227 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0217 08:56:15.742515 72160 tcp_utils.cc:130] Successfully connected to 172.17.0.3:49181
+========= <ppdet.data.source.coco.COCODataSet object at 0x7f9a8a2ab8e0>
+loading annotations into memory...
+Done (t=2.26s)
+creating index...
+index created!
+2025-02-17 08:56:33,129 - DEBUG - Starting new HTTPS connection (1): bj.bcebos.com:443
+2025-02-17 08:56:33,283 - DEBUG - https://bj.bcebos.com:443 "GET /v1/paddledet/models/ppyoloe_crn_l_300e_coco.pdparams HTTP/1.1" 200 216773392
+2025-02-17 08:56:35,260 - INFO - Loss: 3.2063
+2025-02-17 08:56:36,645 - INFO - Loss: 4.2562
+2025-02-17 08:56:37,717 - INFO - Loss: 3.1614
+2025-02-17 08:56:38,758 - INFO - Loss: 3.9175
+2025-02-17 08:56:39,724 - INFO - Loss: 4.3573
+2025-02-17 08:56:40,917 - INFO - Loss: 5.8577
+2025-02-17 08:56:42,424 - INFO - Loss: 6.2086
+2025-02-17 08:56:43,893 - INFO - Loss: 1.6246
+2025-02-17 08:56:45,019 - INFO - Loss: 4.3656
+2025-02-17 08:56:46,041 - INFO - Loss: 2.0967
+2025-02-17 08:56:47,433 - INFO - Loss: 7.0455
+2025-02-17 08:56:48,626 - INFO - Loss: 5.2820
+2025-02-17 08:56:50,054 - INFO - Loss: 4.4261
+2025-02-17 08:56:51,264 - INFO - Loss: 1.7197
+2025-02-17 08:56:52,669 - INFO - Loss: 5.2050
+2025-02-17 08:56:53,731 - INFO - Loss: 2.4187
+2025-02-17 08:56:55,118 - INFO - Loss: 6.2973
+2025-02-17 08:56:56,526 - INFO - Loss: 4.0875
+2025-02-17 08:56:57,944 - INFO - Loss: 2.3174
+2025-02-17 08:56:59,331 - INFO - Loss: 5.7006
+2025-02-17 08:57:00,648 - INFO - Loss: 2.1875
+2025-02-17 08:57:01,698 - INFO - Loss: 2.3695
+2025-02-17 08:57:02,702 - INFO - Loss: 4.1797
+2025-02-17 08:57:03,930 - INFO - Loss: 2.7221
+2025-02-17 08:57:05,147 - INFO - Loss: 1.3799
+2025-02-17 08:57:06,232 - INFO - Loss: 3.2192
+2025-02-17 08:57:07,474 - INFO - Loss: 2.8411
+2025-02-17 08:57:08,530 - INFO - Loss: 5.3565
+2025-02-17 08:57:09,967 - INFO - Loss: 4.6628
+2025-02-17 08:57:11,371 - INFO - Loss: 2.3677
+2025-02-17 08:57:12,652 - INFO - Loss: 4.7798
+2025-02-17 08:57:14,054 - INFO - Loss: 7.3283
+2025-02-17 08:57:15,509 - INFO - Loss: 6.9722
+2025-02-17 08:57:16,576 - INFO - Loss: 4.6322
+2025-02-17 08:57:17,800 - INFO - Loss: 4.1226
+2025-02-17 08:57:19,296 - INFO - Loss: 4.9048
+2025-02-17 08:57:19,940 - INFO - Loss: 5.6264
+2025-02-17 08:57:20,855 - INFO - Loss: 2.0040
+2025-02-17 08:57:22,291 - INFO - Loss: 3.0230
+2025-02-17 08:57:23,512 - INFO - Loss: 4.0288
+2025-02-17 08:57:24,757 - INFO - Loss: 3.2096
+2025-02-17 08:57:26,032 - INFO - Loss: 2.4471
+2025-02-17 08:57:27,276 - INFO - Loss: 5.4256
+2025-02-17 08:57:28,546 - INFO - Loss: 4.7949
+2025-02-17 08:57:29,663 - INFO - Loss: 4.1010
+2025-02-17 08:57:31,060 - INFO - Loss: 4.7957
+2025-02-17 08:57:32,476 - INFO - Loss: 2.7685
+2025-02-17 08:57:34,014 - INFO - Loss: 3.2899
+2025-02-17 08:57:35,257 - INFO - Loss: 5.1586
+2025-02-17 08:57:36,185 - INFO - Loss: 3.3557
+2025-02-17 08:57:37,000 - INFO - Loss: 3.1406
+2025-02-17 08:57:37,874 - INFO - Loss: 7.1840
+2025-02-17 08:57:38,907 - INFO - Loss: 3.3659
+2025-02-17 08:57:40,130 - INFO - Loss: 3.0334
+2025-02-17 08:57:41,135 - INFO - Loss: 3.7411
+2025-02-17 08:57:42,549 - INFO - Loss: 3.6774
+2025-02-17 08:57:43,347 - INFO - Loss: 2.7040
+2025-02-17 08:57:44,568 - INFO - Loss: 6.7735
+2025-02-17 08:57:45,813 - INFO - Loss: 1.5736
+Found inf or nan, current scale is: 1024.0, decrease to: 1024.0*0.5
+2025-02-17 08:57:47,299 - INFO - Loss: 7.3927
+2025-02-17 08:57:48,581 - INFO - Loss: 4.4855
+2025-02-17 08:57:49,830 - INFO - Loss: 4.0336
+2025-02-17 08:57:51,241 - INFO - Loss: 4.9442
+2025-02-17 08:57:52,349 - INFO - Loss: 2.9140
+2025-02-17 08:57:53,828 - INFO - Loss: 1.8991
+2025-02-17 08:57:55,224 - INFO - Loss: 3.0505
+2025-02-17 08:57:56,328 - INFO - Loss: 5.8706
+2025-02-17 08:57:57,266 - INFO - Loss: 3.6290
+2025-02-17 08:57:58,683 - INFO - Loss: 3.9463
+2025-02-17 08:57:59,647 - INFO - Loss: 3.6270
+2025-02-17 08:58:00,686 - INFO - Loss: 2.4295
+2025-02-17 08:58:01,706 - INFO - Loss: 3.5658
+2025-02-17 08:58:02,714 - INFO - Loss: 5.5150
+2025-02-17 08:58:03,492 - INFO - Loss: 4.3806
+2025-02-17 08:58:04,560 - INFO - Loss: 1.9936
+2025-02-17 08:58:05,961 - INFO - Loss: 2.9514
+2025-02-17 08:58:07,212 - INFO - Loss: 2.5359
+2025-02-17 08:58:08,690 - INFO - Loss: 4.6953
+2025-02-17 08:58:09,611 - INFO - Loss: 3.1266
+2025-02-17 08:58:11,012 - INFO - Loss: 3.9485
+2025-02-17 08:58:12,473 - INFO - Loss: 4.5481
+2025-02-17 08:58:13,853 - INFO - Loss: 5.1214
+2025-02-17 08:58:15,310 - INFO - Loss: 4.3657
+2025-02-17 08:58:16,399 - INFO - Loss: 5.2716
+2025-02-17 08:58:17,798 - INFO - Loss: 1.5563
+2025-02-17 08:58:19,310 - INFO - Loss: 2.8518
+2025-02-17 08:58:19,916 - INFO - Loss: 4.7617
+2025-02-17 08:58:21,128 - INFO - Loss: 2.1822
+2025-02-17 08:58:22,576 - INFO - Loss: 4.0310
+2025-02-17 08:58:23,992 - INFO - Loss: 4.1778
+2025-02-17 08:58:24,790 - INFO - Loss: 3.4660
+2025-02-17 08:58:26,182 - INFO - Loss: 2.4718
+2025-02-17 08:58:27,209 - INFO - Loss: 3.6552
+2025-02-17 08:58:28,642 - INFO - Loss: 1.9178
+2025-02-17 08:58:29,887 - INFO - Loss: 5.1970
+2025-02-17 08:58:31,283 - INFO - Loss: 2.2621
+2025-02-17 08:58:32,362 - INFO - Loss: 4.2191
+2025-02-17 08:58:33,752 - INFO - Loss: 2.7474
+2025-02-17 08:58:35,033 - INFO - Loss: 5.5504
+2025-02-17 08:58:36,325 - INFO - Loss: 3.1488
+2025-02-17 08:58:37,560 - INFO - Loss: 4.7137
+2025-02-17 08:58:38,999 - INFO - Loss: 1.1085
+2025-02-17 08:58:40,383 - INFO - Loss: 3.9530
+2025-02-17 08:58:41,769 - INFO - Loss: 2.6439
+2025-02-17 08:58:42,706 - INFO - Loss: 2.1528
+2025-02-17 08:58:44,102 - INFO - Loss: 4.2591
+2025-02-17 08:58:45,534 - INFO - Loss: 3.6333
+2025-02-17 08:58:46,827 - INFO - Loss: 4.4441
+2025-02-17 08:58:48,275 - INFO - Loss: 3.0802
+2025-02-17 08:58:48,975 - INFO - Loss: 2.6084
+2025-02-17 08:58:50,235 - INFO - Loss: 5.3508
+2025-02-17 08:58:51,228 - INFO - Loss: 2.7714
+2025-02-17 08:58:51,903 - INFO - Loss: 1.8848
+2025-02-17 08:58:53,099 - INFO - Loss: 1.7651
+2025-02-17 08:58:54,396 - INFO - Loss: 2.9265
+2025-02-17 08:58:55,834 - INFO - Loss: 3.4074
+2025-02-17 08:58:57,233 - INFO - Loss: 3.3530
+2025-02-17 08:58:58,182 - INFO - Loss: 2.4054
+2025-02-17 08:58:59,488 - INFO - Loss: 5.5691
+2025-02-17 08:59:00,695 - INFO - Loss: 2.5273
+2025-02-17 08:59:02,117 - INFO - Loss: 3.8132
+2025-02-17 08:59:03,609 - INFO - Loss: 3.0054
+2025-02-17 08:59:04,695 - INFO - Loss: 2.9126
+2025-02-17 08:59:06,118 - INFO - Loss: 2.6455
+2025-02-17 08:59:07,340 - INFO - Loss: 3.2914
+2025-02-17 08:59:08,532 - INFO - Loss: 2.2993
+2025-02-17 08:59:09,957 - INFO - Loss: 4.4028
+2025-02-17 08:59:11,032 - INFO - Loss: 1.5515
+2025-02-17 08:59:12,246 - INFO - Loss: 1.9750
+2025-02-17 08:59:12,936 - INFO - Loss: 1.5636
+2025-02-17 08:59:13,972 - INFO - Loss: 2.8493
+2025-02-17 08:59:15,366 - INFO - Loss: 3.4520
+2025-02-17 08:59:16,804 - INFO - Loss: 4.1982
+2025-02-17 08:59:17,605 - INFO - Loss: 3.8192
+2025-02-17 08:59:18,986 - INFO - Loss: 1.7789
+2025-02-17 08:59:20,040 - INFO - Loss: 5.0135
+2025-02-17 08:59:20,949 - INFO - Loss: 1.1301
+2025-02-17 08:59:22,176 - INFO - Loss: 2.4001
+2025-02-17 08:59:23,282 - INFO - Loss: 4.2242
+2025-02-17 08:59:24,246 - INFO - Loss: 4.0553
+2025-02-17 08:59:25,457 - INFO - Loss: 3.7342
+2025-02-17 08:59:26,249 - INFO - Loss: 2.7260
+2025-02-17 08:59:27,440 - INFO - Loss: 3.5469
+2025-02-17 08:59:28,903 - INFO - Loss: 3.1399
+2025-02-17 08:59:30,162 - INFO - Loss: 3.1657
+2025-02-17 08:59:31,051 - INFO - Loss: 2.2322
+2025-02-17 08:59:32,107 - INFO - Loss: 3.0621
+2025-02-17 08:59:33,506 - INFO - Loss: 2.1206
+2025-02-17 08:59:34,442 - INFO - Loss: 2.6543
+2025-02-17 08:59:35,663 - INFO - Loss: 3.8661
+2025-02-17 08:59:37,060 - INFO - Loss: 4.0232
+2025-02-17 08:59:38,307 - INFO - Loss: 4.9448
+2025-02-17 08:59:39,726 - INFO - Loss: 2.3068
+2025-02-17 08:59:41,211 - INFO - Loss: 3.3417
+2025-02-17 08:59:42,690 - INFO - Loss: 2.7657
+2025-02-17 08:59:43,713 - INFO - Loss: 3.0751
+2025-02-17 08:59:45,081 - INFO - Loss: 3.9282
+2025-02-17 08:59:46,563 - INFO - Loss: 2.3958
+2025-02-17 08:59:47,356 - INFO - Loss: 3.3600
+2025-02-17 08:59:48,254 - INFO - Loss: 2.4551
+2025-02-17 08:59:49,450 - INFO - Loss: 2.5683
+2025-02-17 08:59:50,843 - INFO - Loss: 2.5774
+2025-02-17 08:59:52,320 - INFO - Loss: 3.0680
+2025-02-17 08:59:53,574 - INFO - Loss: 2.1721
+2025-02-17 08:59:54,950 - INFO - Loss: 3.6039
+2025-02-17 08:59:56,319 - INFO - Loss: 3.1680
+2025-02-17 08:59:57,582 - INFO - Loss: 2.8867
+2025-02-17 08:59:58,523 - INFO - Loss: 4.2174
+2025-02-17 08:59:59,790 - INFO - Loss: 3.1386
+2025-02-17 09:00:01,184 - INFO - Loss: 3.6330
+2025-02-17 09:00:02,599 - INFO - Loss: 2.5508
+2025-02-17 09:00:03,509 - INFO - Loss: 1.8739
+2025-02-17 09:00:04,885 - INFO - Loss: 1.9946
+2025-02-17 09:00:06,361 - INFO - Loss: 2.7970
+2025-02-17 09:00:07,405 - INFO - Loss: 3.3963
+2025-02-17 09:00:08,880 - INFO - Loss: 3.4350
+2025-02-17 09:00:10,240 - INFO - Loss: 2.0580
+2025-02-17 09:00:11,631 - INFO - Loss: 3.5067
+2025-02-17 09:00:13,015 - INFO - Loss: 2.0532
+2025-02-17 09:00:14,430 - INFO - Loss: 4.1539
+2025-02-17 09:00:15,829 - INFO - Loss: 0.4621
+2025-02-17 09:00:16,731 - INFO - Loss: 2.2134
+2025-02-17 09:00:18,129 - INFO - Loss: 2.9610
+2025-02-17 09:00:19,532 - INFO - Loss: 3.6667
+2025-02-17 09:00:20,950 - INFO - Loss: 1.2967
+2025-02-17 09:00:22,344 - INFO - Loss: 2.4366
+2025-02-17 09:00:23,824 - INFO - Loss: 2.4707
+2025-02-17 09:00:25,048 - INFO - Loss: 3.5663
+2025-02-17 09:00:26,462 - INFO - Loss: 3.3640
+2025-02-17 09:00:27,651 - INFO - Loss: 1.7964
+2025-02-17 09:00:28,849 - INFO - Loss: 1.7778
+2025-02-17 09:00:30,056 - INFO - Loss: 1.1512
+2025-02-17 09:00:31,451 - INFO - Loss: 2.1441
+2025-02-17 09:00:32,654 - INFO - Loss: 4.5126
+2025-02-17 09:00:33,328 - INFO - Loss: 2.0318
+2025-02-17 09:00:34,527 - INFO - Loss: 1.7166
+2025-02-17 09:00:35,453 - INFO - Loss: 2.8377
+2025-02-17 09:00:36,514 - INFO - Loss: 1.7912
+2025-02-17 09:00:37,454 - INFO - Loss: 1.9415
+2025-02-17 09:00:38,913 - INFO - Loss: 3.1413
+2025-02-17 09:00:40,175 - INFO - Loss: 3.2964
+2025-02-17 09:00:41,550 - INFO - Loss: 1.8011
+Found inf or nan, current scale is: 512.0, decrease to: 512.0*0.5
+2025-02-17 09:00:42,800 - INFO - Loss: 6.4313
+2025-02-17 09:00:44,049 - INFO - Loss: 2.5709
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   bvar::detail::SamplerCollector::sampling_thread(void*)
+1   bvar::detail::SamplerCollector::run()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1739782846 (unix time) try "date -d @1739782846" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x11978) received by PID 72160 (TID 0x7f9abadff640) from PID 72056 ***]
+
+I0217 12:23:22.608739 884560 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device
+I0217 12:23:22.608783 884560 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0217 12:23:22.674850 884560 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0217 12:23:22.676565 884560 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0217 12:23:22.676652 884560 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+I0217 12:23:22.676671 884560 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+2025-02-17 12:23:23,383 - DEBUG - matplotlib data path: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-02-17 12:23:23,388 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-02-17 12:23:23,389 - DEBUG - interactive is False
+2025-02-17 12:23:23,389 - DEBUG - platform is linux
+2025-02-17 12:23:23,435 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-02-17 12:23:23,436 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0217 12:23:23.882753 884560 tcp_utils.cc:107] Retry to connect to 172.17.0.3:36646 while the server is not yet listening.
+I0217 12:23:26.883044 884560 tcp_utils.cc:130] Successfully connected to 172.17.0.3:36646
+========= <ppdet.data.source.coco.COCODataSet object at 0x7f600474b880>
+loading annotations into memory...
+Done (t=2.22s)
+creating index...
+index created!
+2025-02-17 12:23:44,897 - DEBUG - Starting new HTTPS connection (1): bj.bcebos.com:443
+2025-02-17 12:23:45,040 - DEBUG - https://bj.bcebos.com:443 "GET /v1/paddledet/models/ppyoloe_crn_l_300e_coco.pdparams HTTP/1.1" 200 216773392
+2025-02-17 12:23:49,608 - INFO - Loss: 3.1972
+2025-02-17 12:23:53,289 - INFO - Loss: 4.2535
+2025-02-17 12:23:56,500 - INFO - Loss: 3.1584
+2025-02-17 12:23:59,518 - INFO - Loss: 3.9001
+2025-02-17 12:24:02,905 - INFO - Loss: 4.3448
+2025-02-17 12:24:06,463 - INFO - Loss: 5.8566
+2025-02-17 12:24:10,189 - INFO - Loss: 6.2026
+2025-02-17 12:24:13,768 - INFO - Loss: 1.6342
+2025-02-17 12:24:16,880 - INFO - Loss: 4.3736
+2025-02-17 12:24:19,916 - INFO - Loss: 2.0989
+2025-02-17 12:24:23,205 - INFO - Loss: 7.0473
+2025-02-17 12:24:26,558 - INFO - Loss: 5.2862
+2025-02-17 12:24:30,107 - INFO - Loss: 4.4199
+2025-02-17 12:24:33,439 - INFO - Loss: 1.7168
+2025-02-17 12:24:36,925 - INFO - Loss: 5.2123
+2025-02-17 12:24:40,131 - INFO - Loss: 2.4144
+2025-02-17 12:24:43,732 - INFO - Loss: 6.3144
+2025-02-17 12:24:46,860 - INFO - Loss: 4.0851
+2025-02-17 12:24:50,074 - INFO - Loss: 2.3139
+2025-02-17 12:24:53,412 - INFO - Loss: 5.6984
+2025-02-17 12:24:56,518 - INFO - Loss: 1.7876
+2025-02-17 12:24:59,799 - INFO - Loss: 2.3595
+2025-02-17 12:25:01,991 - INFO - Loss: 4.1784
+2025-02-17 12:25:03,252 - INFO - Loss: 2.7209
+2025-02-17 12:25:04,497 - INFO - Loss: 1.3814
+2025-02-17 12:25:05,492 - INFO - Loss: 3.2224
+2025-02-17 12:25:06,709 - INFO - Loss: 2.8338
+2025-02-17 12:25:07,763 - INFO - Loss: 5.3720
+2025-02-17 12:25:09,134 - INFO - Loss: 4.6646
+2025-02-17 12:25:10,534 - INFO - Loss: 2.3610
+2025-02-17 12:25:11,774 - INFO - Loss: 4.7666
+2025-02-17 12:25:13,181 - INFO - Loss: 7.3404
+2025-02-17 12:25:14,560 - INFO - Loss: 6.9654
+2025-02-17 12:25:15,563 - INFO - Loss: 4.6280
+2025-02-17 12:25:16,731 - INFO - Loss: 4.1129
+2025-02-17 12:25:18,215 - INFO - Loss: 4.9030
+2025-02-17 12:25:18,840 - INFO - Loss: 5.5878
+2025-02-17 12:25:19,773 - INFO - Loss: 1.9981
+2025-02-17 12:25:21,167 - INFO - Loss: 2.6678
+2025-02-17 12:25:22,481 - INFO - Loss: 4.0278
+2025-02-17 12:25:23,730 - INFO - Loss: 3.2155
+2025-02-17 12:25:24,979 - INFO - Loss: 2.4495
+2025-02-17 12:25:26,222 - INFO - Loss: 5.4166
+2025-02-17 12:25:27,437 - INFO - Loss: 4.8059
+2025-02-17 12:25:28,529 - INFO - Loss: 4.0940
+2025-02-17 12:25:29,892 - INFO - Loss: 4.7932
+2025-02-17 12:25:31,322 - INFO - Loss: 2.7785
+2025-02-17 12:25:32,809 - INFO - Loss: 3.2963
+2025-02-17 12:25:34,003 - INFO - Loss: 5.2420
+2025-02-17 12:25:34,903 - INFO - Loss: 3.3745
+2025-02-17 12:25:35,691 - INFO - Loss: 3.0854
+2025-02-17 12:25:36,603 - INFO - Loss: 7.3178
+2025-02-17 12:25:37,630 - INFO - Loss: 3.3569
+2025-02-17 12:25:38,889 - INFO - Loss: 3.0405
+2025-02-17 12:25:39,918 - INFO - Loss: 3.7099
+2025-02-17 12:25:41,287 - INFO - Loss: 3.6826
+2025-02-17 12:25:42,067 - INFO - Loss: 2.7177
+2025-02-17 12:25:43,292 - INFO - Loss: 6.7998
+2025-02-17 12:25:44,528 - INFO - Loss: 1.5942
+2025-02-17 12:25:45,985 - INFO - Loss: 6.1995
+2025-02-17 12:25:47,183 - INFO - Loss: 4.4739
+2025-02-17 12:25:48,425 - INFO - Loss: 4.0144
+2025-02-17 12:25:49,849 - INFO - Loss: 4.9415
+2025-02-17 12:25:50,956 - INFO - Loss: 2.9630
+2025-02-17 12:25:52,447 - INFO - Loss: 1.9076
+2025-02-17 12:25:53,843 - INFO - Loss: 3.0977
+2025-02-17 12:25:54,941 - INFO - Loss: 5.8629
+2025-02-17 12:25:55,841 - INFO - Loss: 3.6094
+2025-02-17 12:25:57,239 - INFO - Loss: 3.9847
+2025-02-17 12:25:58,219 - INFO - Loss: 3.5931
+2025-02-17 12:25:59,264 - INFO - Loss: 2.4134
+2025-02-17 12:26:00,298 - INFO - Loss: 3.5747
+2025-02-17 12:26:01,331 - INFO - Loss: 5.4856
+2025-02-17 12:26:02,105 - INFO - Loss: 4.3721
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   bvar::detail::SamplerCollector::sampling_thread(void*)
+1   bvar::detail::SamplerCollector::run()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1739795163 (unix time) try "date -d @1739795163" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0xd7efd) received by PID 884560 (TID 0x7f60353ff640) from PID 884477 ***]
+
+I0220 09:03:25.124096 2374007 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device
+I0220 09:03:25.124294 2374007 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0220 09:03:25.215543 2374007 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0220 09:03:25.218099 2374007 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0220 09:03:25.218228 2374007 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+I0220 09:03:25.218261 2374007 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+2025-02-20 09:03:26,661 - DEBUG - matplotlib data path: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-02-20 09:03:26,667 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-02-20 09:03:26,669 - DEBUG - interactive is False
+2025-02-20 09:03:26,669 - DEBUG - platform is linux
+2025-02-20 09:03:26,731 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-02-20 09:03:26,732 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0220 09:03:27.497206 2374007 tcp_utils.cc:107] Retry to connect to 172.17.0.3:62227 while the server is not yet listening.
+I0220 09:03:30.497447 2374007 tcp_utils.cc:130] Successfully connected to 172.17.0.3:62227
+66666
+========= <ppdet.data.source.coco.COCODataSet object at 0x7fe7e7f7b8e0>
+loading annotations into memory...
+Done (t=3.00s)
+creating index...
+index created!
+2025-02-20 09:03:50,770 - DEBUG - Starting new HTTPS connection (1): bj.bcebos.com:443
+2025-02-20 09:03:50,928 - DEBUG - https://bj.bcebos.com:443 "GET /v1/paddledet/models/ppyoloe_crn_l_300e_coco.pdparams HTTP/1.1" 200 216773392
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   bvar::detail::SamplerCollector::sampling_thread(void*)
+1   bvar::detail::SamplerCollector::run()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1740042232 (unix time) try "date -d @1740042232" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x243915) received by PID 2374007 (TID 0x7fe818bff640) from PID 2373909 ***]
+

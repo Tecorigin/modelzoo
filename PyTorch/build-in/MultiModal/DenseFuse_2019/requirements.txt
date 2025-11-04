@@ -1,0 +1,5 @@
+matplotlib
+scipy
+timm
+scikit-image==0.19.3
+git+https://gitee.com/xiwei777/tcap_dlloger.git

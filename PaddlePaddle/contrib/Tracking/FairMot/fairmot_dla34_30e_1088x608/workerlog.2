@@ -1,0 +1,258 @@
+I0222 14:12:50.120257 371816 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device
+I0222 14:12:50.120309 371816 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0222 14:12:50.197438 371816 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0222 14:12:50.199350 371816 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0222 14:12:50.199437 371816 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+I0222 14:12:50.199453 371816 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+2025-02-22 14:12:51,008 - DEBUG - matplotlib data path: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-02-22 14:12:51,013 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-02-22 14:12:51,014 - DEBUG - interactive is False
+2025-02-22 14:12:51,014 - DEBUG - platform is linux
+2025-02-22 14:12:51,059 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-02-22 14:12:51,060 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0222 14:12:51.505234 371816 tcp_utils.cc:107] Retry to connect to 172.17.0.3:46069 while the server is not yet listening.
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   phi::distributed::CreateOrGetGlobalTCPStore()
+1   phi::distributed::TCPStore::TCPStore(std::string, unsigned short, bool, unsigned long, int)
+2   phi::distributed::detail::TCPClient::connect(std::string, unsigned short)
+3   phi::distributed::tcputils::tcp_connect(std::string, std::string, int, std::chrono::duration<long, std::ratio<1l, 1l> >)
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1740233573 (unix time) try "date -d @1740233573" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x5ac1a) received by PID 371816 (TID 0x7fe24a6bb740) from PID 371738 ***]
+
+I0222 14:13:23.915915 372351 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device
+I0222 14:13:23.915952 372351 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0222 14:13:23.993522 372351 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0222 14:13:23.995441 372351 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0222 14:13:23.995528 372351 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+I0222 14:13:23.995544 372351 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+2025-02-22 14:13:24,815 - DEBUG - matplotlib data path: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-02-22 14:13:24,821 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-02-22 14:13:24,822 - DEBUG - interactive is False
+2025-02-22 14:13:24,822 - DEBUG - platform is linux
+2025-02-22 14:13:24,880 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-02-22 14:13:24,881 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0222 14:13:25.401453 372351 tcp_utils.cc:130] Successfully connected to 172.17.0.3:35642
+2025-02-22 14:13:27,066 - DEBUG - Starting new HTTPS connection (1): paddledet.bj.bcebos.com:443
+2025-02-22 14:13:27,237 - DEBUG - https://paddledet.bj.bcebos.com:443 "GET /models/mot/fairmot_dla34_30e_1088x608.pdparams HTTP/1.1" 200 130895015
+2025-02-22 14:18:03,089 - INFO - Loss: 10.2749
+2025-02-22 14:22:34,259 - INFO - Loss: 9.8285
+2025-02-22 14:27:08,323 - INFO - Loss: 9.8494
+2025-02-22 14:31:40,646 - INFO - Loss: 8.5292
+2025-02-22 14:36:11,697 - INFO - Loss: 8.6617
+2025-02-22 14:40:42,741 - INFO - Loss: 8.1372
+2025-02-22 14:45:14,369 - INFO - Loss: 7.7924
+2025-02-22 14:49:46,472 - INFO - Loss: 8.0451
+2025-02-22 14:54:18,346 - INFO - Loss: 7.6813
+2025-02-22 14:58:50,213 - INFO - Loss: 8.0587
+2025-02-22 15:03:21,739 - INFO - Loss: 8.0198
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::pybind::eager_api_deformable_conv(_object*, _object*, _object*)
+1   deformable_conv_ad_func(paddle::Tensor const&, paddle::Tensor const&, paddle::Tensor const&, paddle::optional<paddle::Tensor> const&, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >, std::vector<int, std::allocator<int> >, int, int, int)
+2   paddle::experimental::deformable_conv(paddle::Tensor const&, paddle::Tensor const&, paddle::Tensor const&, paddle::optional<paddle::Tensor> const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, int)
+3   void phi::DeformableConvKernel<float, phi::CPUContext>(phi::CPUContext const&, phi::DenseTensor const&, phi::DenseTensor const&, phi::DenseTensor const&, paddle::optional<phi::DenseTensor> const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int, int, int, phi::DenseTensor*)
+4   phi::DenseTensor::~DenseTensor()
+5   std::_Sp_counted_deleter<phi::Allocation*, std::function<void (phi::Allocation*)>, std::allocator<void>, (__gnu_cxx::_Lock_policy)2>::_M_dispose()
+6   paddle::memory::allocation::StatAllocator::FreeImpl(phi::Allocation*)
+7   paddle::memory::allocation::CPUAllocator::FreeImpl(phi::Allocation*)
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1740236602 (unix time) try "date -d @1740236602" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x5ae21) received by PID 372351 (TID 0x7f8645297740) from PID 372257 ***]
+
+I0222 15:04:08.187291 403075 init.cc:233] ENV [CUSTOM_DEVICE_ROOT]=/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device
+I0222 15:04:08.187328 403075 init.cc:142] Try loading custom device libs from: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+sdaa plugin compiled with gcc
+PaddlePaddle Compilation Commit: e5b01458d31bab831dbd96a53522bf207b2fcd9e
+PaddlePaddle Compilation Version: 2.6.0
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+|         | paddle | paddle_commit | sdaa_runtime | sdaa_driver | teco_dnn | teco_blas | teco_tccl | teco_custom | sdpti | paddle_sdaa_version | paddle_sdaa_commit |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
+| Version | 2.6.0  | e5b0145       | 1.3.1        | 1.3.1       | 2.0.0b0  | 2.0.0b0   | 1.20.0    | 1.22.0      | 1.3.0 | 1.3.1               | 9671916            |
++---------+--------+---------------+--------------+-------------+----------+-----------+-----------+-------------+-------+---------------------+--------------------+
++--------------------------+---------------+---------------+
+| Variable Name            | Default Value | Current Value |
++--------------------------+---------------+---------------+
+| CUSTOM_DEVICE_BLACK_LIST |               |               |
++--------------------------+---------------+---------------+
+| ENABLE_SDPTI             | 1             | 1             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_CONV    | 0             | 0             |
++--------------------------+---------------+---------------+
+| HIGH_PERFORMANCE_GEMM    | 0             | 0             |
++--------------------------+---------------+---------------+
+| RANDOM_ALIGN_NV_DEVICE   |               |               |
++--------------------------+---------------+---------------+
+| PADDLE_XCCL_BACKEND      |               | sdaa          |
++--------------------------+---------------+---------------+
+| HIGH_PRECISION_OP_LIST   |               |               |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_reuse_event   | true          | true          |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_runtime_debug | false         | false         |
++--------------------------+---------------+---------------+
+| FLAGS_sdaa_matmul_scale  | 1.0           | 1.0           |
++--------------------------+---------------+---------------+
+| DUMP_INTO_PROFILER       | 0             | 0             |
++--------------------------+---------------+---------------+
+I0222 15:04:08.266016 403075 custom_device.cc:1109] Successed in loading custom runtime in lib: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device/libpaddle-sdaa.so
+I0222 15:04:08.267999 403075 custom_kernel.cc:63] Successed in loading 271 custom kernel(s) from loaded lib(s), will be used like native ones.
+I0222 15:04:08.268091 403075 init.cc:154] Finished in LoadCustomDevice with libs_path: [/root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/paddle_custom_device]
+I0222 15:04:08.268108 403075 init.cc:239] CustomDevice: sdaa, visible devices count: 1
+Warning: Unable to use JDE/FairMOT/ByteTrack, please install lap, for example: `pip install lap`, see https://github.com/gatagat/lap
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+2025-02-22 15:04:09,117 - DEBUG - matplotlib data path: /root/miniconda3/envs/bytetrack/lib/python3.10/site-packages/matplotlib/mpl-data
+2025-02-22 15:04:09,123 - DEBUG - CONFIGDIR=/root/.config/matplotlib
+2025-02-22 15:04:09,128 - DEBUG - interactive is False
+2025-02-22 15:04:09,129 - DEBUG - platform is linux
+2025-02-22 15:04:09,190 - DEBUG - CACHEDIR=/root/.cache/matplotlib
+2025-02-22 15:04:09,191 - DEBUG - Using fontManager instance from /root/.cache/matplotlib/fontlist-v390.json
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use MOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: Unable to use MCMOT metric, please install motmetrics, for example: `pip install motmetrics`, see https://github.com/longcw/py-motmetrics
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+I0222 15:04:09.717478 403075 tcp_utils.cc:130] Successfully connected to 172.17.0.3:50289
+2025-02-22 15:04:11,653 - DEBUG - Starting new HTTPS connection (1): paddledet.bj.bcebos.com:443
+2025-02-22 15:04:11,777 - DEBUG - https://paddledet.bj.bcebos.com:443 "GET /models/mot/fairmot_dla34_30e_1088x608.pdparams HTTP/1.1" 200 130895015
+2025-02-22 15:08:44,488 - INFO - Loss: 10.2285
+2025-02-22 15:13:14,614 - INFO - Loss: 9.8328
+2025-02-22 15:17:47,056 - INFO - Loss: 9.7239
+2025-02-22 15:22:20,129 - INFO - Loss: 8.4336
+2025-02-22 15:26:52,022 - INFO - Loss: 8.7099
+2025-02-22 15:31:22,584 - INFO - Loss: 7.9672
+2025-02-22 15:35:54,553 - INFO - Loss: 7.6847
+2025-02-22 15:40:26,286 - INFO - Loss: 8.1048
+2025-02-22 15:44:58,672 - INFO - Loss: 7.4626
+2025-02-22 15:49:29,757 - INFO - Loss: 7.8708
+2025-02-22 15:54:02,038 - INFO - Loss: 7.9379
+2025-02-22 15:58:33,855 - INFO - Loss: 7.8086
+2025-02-22 16:03:05,846 - INFO - Loss: 7.7284
+2025-02-22 16:07:38,776 - INFO - Loss: 7.8370
+2025-02-22 16:12:11,523 - INFO - Loss: 7.7105
+2025-02-22 16:16:44,236 - INFO - Loss: 7.4625
+2025-02-22 16:21:16,883 - INFO - Loss: 7.7532
+2025-02-22 16:25:49,054 - INFO - Loss: 7.8859
+2025-02-22 16:30:21,007 - INFO - Loss: 7.9158
+2025-02-22 16:34:53,021 - INFO - Loss: 7.9693
+2025-02-22 16:39:25,714 - INFO - Loss: 7.3791
+2025-02-22 16:43:57,646 - INFO - Loss: 8.2723
+2025-02-22 16:48:29,236 - INFO - Loss: 7.7858
+2025-02-22 16:53:01,641 - INFO - Loss: 7.7109
+2025-02-22 16:57:34,373 - INFO - Loss: 7.4748
+2025-02-22 17:02:06,400 - INFO - Loss: 7.3315
+2025-02-22 17:06:39,142 - INFO - Loss: 7.9267
+2025-02-22 17:11:11,546 - INFO - Loss: 7.7452
+2025-02-22 17:15:43,955 - INFO - Loss: 7.3859
+2025-02-22 17:20:16,382 - INFO - Loss: 7.6767
+2025-02-22 17:24:48,487 - INFO - Loss: 7.7086
+2025-02-22 17:29:20,193 - INFO - Loss: 7.2685
+2025-02-22 17:33:53,559 - INFO - Loss: 7.6061
+2025-02-22 17:38:25,810 - INFO - Loss: 7.6329
+2025-02-22 17:42:58,025 - INFO - Loss: 7.8962
+2025-02-22 17:47:30,956 - INFO - Loss: 7.8037
+2025-02-22 17:52:02,785 - INFO - Loss: 7.5094
+2025-02-22 17:56:36,067 - INFO - Loss: 7.3435
+2025-02-22 18:01:08,862 - INFO - Loss: 7.7112
+2025-02-22 18:05:40,635 - INFO - Loss: 7.3917
+2025-02-22 18:10:11,955 - INFO - Loss: 7.6099
+2025-02-22 18:14:42,960 - INFO - Loss: 7.8390
+2025-02-22 18:19:14,088 - INFO - Loss: 7.3604
+2025-02-22 18:23:45,060 - INFO - Loss: 7.7048
+2025-02-22 18:28:15,960 - INFO - Loss: 7.3802
+2025-02-22 18:32:47,272 - INFO - Loss: 7.7754
+2025-02-22 18:37:18,318 - INFO - Loss: 7.4634
+2025-02-22 18:41:49,190 - INFO - Loss: 7.5098
+2025-02-22 18:46:20,360 - INFO - Loss: 7.2963

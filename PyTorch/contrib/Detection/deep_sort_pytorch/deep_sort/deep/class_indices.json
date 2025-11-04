@@ -1,0 +1,7 @@
+{
+    "0": "bounding_box_test",
+    "1": "bounding_box_train",
+    "2": "gt_bbox",
+    "3": "gt_query",
+    "4": "query"
+}

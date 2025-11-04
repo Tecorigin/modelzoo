@@ -1,0 +1,57 @@
+{
+  "os": "Linux-5.15.0-43-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.15",
+  "startedAt": "2025-03-13T08:17:52.822547Z",
+  "args": [
+    "--pretrained_model_name_or_path=CompVis/stable-diffusion-v1-4",
+    "--output_dir=model_out",
+    "--train_data_dir=/data/datasets/20241122/fusing-fill50k/fill50k_data/train",
+    "--conditioning_image_column=conditioning_image",
+    "--image_column=image",
+    "--caption_column=text",
+    "--resolution=512",
+    "--learning_rate=1e-5",
+    "--validation_image",
+    "/data/datasets/20241122/fusing-fill50k/conditioning_images/0.png",
+    "--validation_prompt",
+    "pale golden rod circle with old lace background",
+    "--train_batch_size=1",
+    "--num_train_epochs=3",
+    "--tracker_project_name=controlnet",
+    "--enable_xformers_memory_efficient_attention",
+    "--checkpointing_steps=5000",
+    "--validation_steps=5000",
+    "--report_to",
+    "wandb",
+    "--push_to_hub",
+    "--gradient_accumulation_steps=4",
+    "--mixed_precision=no"
+  ],
+  "program": "/root/cas/tww/controlnet_sd/diffusers-main/examples/controlnet/train_controlnet.py",
+  "codePath": "controlnet_sd/diffusers-main/examples/controlnet/train_controlnet.py",
+  "git": {
+    "remote": "https://github.com/wenet-e2e/wenet",
+    "commit": "d00940f8c41f6f432b3982c9318559d65c8da9aa"
+  },
+  "email": "wtan0370@gmail.com",
+  "root": "/root/cas/tww/controlnet_sd",
+  "host": "2925cee6f0b3",
+  "username": "root",
+  "executable": "/root/miniconda3/envs/controlnet/bin/python",
+  "codePathLocal": "diffusers-main/examples/controlnet/train_controlnet.py",
+  "cpu_count": 36,
+  "cpu_count_logical": 72,
+  "disk": {
+    "/": {
+      "total": "15358679318528",
+      "used": "5800343683072"
+    }
+  },
+  "memory": {
+    "total": "270092185600"
+  },
+  "cpu": {
+    "count": 36,
+    "countLogical": 72
+  }
+}

@@ -1,0 +1,61 @@
+
+{
+  "schemaVersion": 1,
+  "record_shapes": 1,
+  "traceEvents": [
+  {
+    "ph": "X", "cat": "privateuse1_runtime", "name": "sdaaDeviceSynchronize", "pid": 3250119, "tid": 3250119,
+    "ts": 1739408191835467.929, "dur": 17.129,
+    "args": {
+      "External id": 1,
+      "cbid": 7, "correlation": 1
+    }
+  },
+  {
+    "ph": "f", "id": 1, "pid": 3250119, "tid": 3250119, "ts": 1739408191835467.929,
+    "cat": "ac2g", "name": "ac2g", "bp": "e"
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1739408191830003.448, "pid": 3250119, "tid": 0,
+    "args": {
+      "name": "python"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1739408191830003.448, "pid": 3250119, "tid": 0,
+    "args": {
+      "labels": "CPU"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1739408191830003.448, "pid": 3250119, "tid": 0,
+    "args": {
+      "sort_index": 3250119
+    }
+  },
+  {
+    "ph": "X", "cat": "Trace", "ts": 1739408191829935.491, "dur": 5566.150,
+    "pid": "Spans", "tid": "PyTorch Profiler",
+    "name": "PyTorch Profiler (0)",
+    "args": {
+      "Op count": 0
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1739408191829935.491,
+    "pid": "Spans", "tid": 0,
+    "args": {
+      "sort_index": 536870912
+    }
+  },
+  {
+    "name": "Iteration Start: PyTorch Profiler", "ph": "i", "s": "g",
+    "pid": "Traces", "tid": "Trace PyTorch Profiler", "ts": 1739408191829935.491
+  },
+  {
+    "name": "Record Window End", "ph": "i", "s": "g",
+    "pid": "", "tid": "", "ts": 1739408191835627.859
+  }
+  ],
+  "traceName": "/root/cas/tww/RNN-Transducer/torch_profiler_trace.json"
+}

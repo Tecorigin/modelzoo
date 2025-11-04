@@ -1,0 +1,65 @@
+# config.yaml
+#python train_dist.py --dataset imagenet --model resnest50 --lr-scheduler cos 
+#--epochs 270 --checkname resnest50_rt_bots --lr 0.1 --batch-size 256 --label-smoothing 0.1 
+#--mixup 0.2  --last-gamma --no-bn-wd --warmup-epochs 5 --dropblock-prob 0.1 --rectify
+# BSD 3- Clause License Copyright (c) 2023, Tecorigin Co., Ltd. All rights
+# reserved.
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+# Redistributions of source code must retain the above copyright notice,
+# this list of conditions and the following disclaimer.
+# Redistributions in binary form must reproduce the above copyright notice,
+# this list of conditions and the following disclaimer in the documentation
+# and/or other materials provided with the distribution.
+# Neither the name of the copyright holder nor the names of its contributors
+# may be used to endorse or promote products derived from this software
+# without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+# LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+# STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)  ARISING IN ANY
+# WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+# OF SUCH DAMAGE.
+# Model settings
+MODEL:
+  NAME: "resnest269"  # 模型名称
+  FINAL_DROP: False    # 最终的 dropout 概率
+  
+
+# Data settings
+DATA:
+  DATASET: "ImageNet"  # 数据集名称
+  #ROOT: "~/.encoding/data/ILSVRC2012"
+  ROOT: "/data/datasets/imagenet"  # 数据集根目录
+  BASE_SIZE: None  # 基础图像大小
+  CROP_SIZE: 416  # 裁剪后的图像大小
+  RAND_AUG: False  # 是否使用随机增强
+  MIXUP: 0.0    # 是否使用 mixup 数据增强
+
+# Training settings
+TRAINING:
+  BATCH_SIZE: 4  # 训练批次大小
+  TEST_BATCH_SIZE: 256  # 验证批次大小
+  WORKERS: 8  # 数据加载的工作线程数
+  EPOCHS: 120  # 训练的总 epoch 数
+  START_EPOCHS: 0  # 开始的 epoch 数（用于恢复训练）
+  LAST_GAMMA: False   # 是否使用 last gamma
+
+# Optimizer settings
+OPTIMIZER:
+  LR: 0.0125  # 初始学习率
+  MOMENTUM: 0.9  # SGD 动量
+  WEIGHT_DECAY: 0.0001  # 权重衰减
+  DISABLE_BN_WD: False  # 是否禁用 BN 层的权重衰减
+  LR_SCHEDULER: "cos"  # 学习率调度器类型
+  WARMUP_EPOCHS: 0  # 学习率 warmup 的 epoch 数
+
+# Seed for reproducibility
+SEED: 1  # 随机种子

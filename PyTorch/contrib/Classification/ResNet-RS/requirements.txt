@@ -1,0 +1,5 @@
+matplotlib
+loguru
+scipy
+git+https://gitee.com/sunny8654/dllogger.git
+git+https://gitee.com/xiwei777/tcap_dllogger.git

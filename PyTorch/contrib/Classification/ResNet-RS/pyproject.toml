@@ -1,0 +1,9 @@
+[tool.black]
+line-length = 128
+target-version = ["py310"]
+preview = true
+unstable = true
+enable-unstable-feature = ["string_processing", "wrap_long_dict_values_in_parens", "multiline_string_handling", "hug_parens_with_braces_and_square_brackets"]
+
+[tool.isort]
+line_length = 128

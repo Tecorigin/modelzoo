@@ -1,0 +1,4 @@
+[
+'How do I access the index while iterating over a sequence with a for loop?',
+'# Use the built-in enumerator\nfor idx, x in enumerate(xs):\n    print(idx, x)',
+]

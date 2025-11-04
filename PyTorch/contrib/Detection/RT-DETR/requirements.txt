@@ -1,0 +1,7 @@
+onnx==1.14.0
+onnxruntime==1.15.1
+pycocotools
+PyYAML
+scipy
+transformers
+matplotlib

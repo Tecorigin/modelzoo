@@ -1,0 +1,39 @@
+[submodule "third_party/dmlc-core"]
+	path = third_party/dmlc-core
+	url = https://github.com/dmlc/dmlc-core.git
+[submodule "third_party/dlpack"]
+	path = third_party/dlpack
+	url = https://github.com/dmlc/dlpack.git
+[submodule "third_party/googletest"]
+	path = third_party/googletest
+	url = https://github.com/google/googletest.git
+[submodule "third_party/METIS"]
+	path = third_party/METIS
+	url = https://github.com/KarypisLab/METIS.git
+[submodule "third_party/nanoflann"]
+	path = third_party/nanoflann
+	url = https://github.com/jlblancoc/nanoflann
+[submodule "third_party/libxsmm"]
+	path = third_party/libxsmm
+	url = https://github.com/hfp/libxsmm.git
+[submodule "third_party/pcg"]
+	path = third_party/pcg
+	url = https://github.com/imneme/pcg-cpp.git
+[submodule "third_party/cccl"]
+	path = third_party/cccl
+	url = https://github.com/NVIDIA/cccl.git
+[submodule "third_party/liburing"]
+	path = third_party/liburing
+	url = https://github.com/axboe/liburing.git
+[submodule "third_party/cuco"]
+	path = third_party/cuco
+	url = https://github.com/NVIDIA/cuCollections.git
+[submodule "third_party/GKlib"]
+	path = third_party/GKlib
+	url = https://github.com/KarypisLab/GKlib.git
+[submodule "third_party/taskflow"]
+	path = third_party/taskflow
+	url = https://github.com/taskflow/taskflow.git
+[submodule "third_party/tsl_robin_map"]
+	path = third_party/tsl_robin_map
+	url = https://github.com/Tessil/robin-map.git

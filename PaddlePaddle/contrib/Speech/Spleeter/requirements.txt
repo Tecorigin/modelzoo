@@ -1,0 +1,14 @@
+psutil
+visualdl
+musdb
+museval
+numpy==1.23.4
+numba==0.56.4
+llvmlite==0.39.1
+paddleaudio
+librosa
+soundfile==0.12.1
+ffmpeg-python
+git+https://gitee.com/xiwei777/tcap_dllogger.git
+# export SDAA_VISIBLE_DEVICES=0,1,2,3
+# export PADDLE_XCCL_BACKEND=sdaa

@@ -1,0 +1,8 @@
+numpy
+tqdm
+tensorboard
+ml-collections
+matplotlib
+scipy
+git+https://github.com/rwightman/pytorch-image-models.git@9d6aad44f8fd32e89e5cca503efe3ada5071cc2a
+git+https://github.com/Tecorigin/tcap_dllogger.git

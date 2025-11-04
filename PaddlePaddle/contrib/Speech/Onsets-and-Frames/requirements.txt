@@ -1,0 +1,11 @@
+mir-eval
+soundfile==0.12.1
+mido
+librosa==0.8.1
+visualdl
+numpy==1.23.4
+git+https://gitee.com/xiwei777/tcap_dllogger.git
+tqdm
+#paddlepaddle==2.5.0
+pretty_midi
+onnxruntime

@@ -1,0 +1,20 @@
+# progress bars in model download and training scripts
+tqdm
+# Accessing files from S3 directly.
+boto3
+# Used for downloading models over HTTP
+requests
+six
+ipdb
+#Data processing
+h5py
+nltk
+pandas
+scikit-learn
+#Others
+# onnxruntime
+git+https://gitee.com/sunny8654/dllogger.git
+
+# add
+pyrouge
+git+https://gitee.com/xiwei777/tcap_dllogger.git

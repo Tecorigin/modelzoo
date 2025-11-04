@@ -1,0 +1,15 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: PaddleVideo
+message: >-
+  If you use this repository, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: PaddlePaddle Authors
+repository-code: 'https://github.com/PaddlePaddle/PaddleVideo'
+repository: 'https://github.com/PaddlePaddle/PaddleVideo'
+keywords:
+  - PaddleVideo
+license: Apache-2.0

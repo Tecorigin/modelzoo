@@ -1,0 +1,277 @@
+Experiment dir : out_put-enwik8/20250729-065719
+Loading cached dataset...
+====================================================================================================
+    - data : /home/01/zjh/transformer-xl/data/enwik8
+    - dataset : enwik8
+    - n_layer : 12
+    - n_head : 10
+    - d_head : 50
+    - d_embed : 500
+    - d_model : 500
+    - d_inner : 1000
+    - dropout : 0.0
+    - dropatt : 0.0
+    - init : normal
+    - emb_init : normal
+    - init_range : 0.1
+    - emb_init_range : 0.01
+    - init_std : 0.02
+    - proj_init_std : 0.01
+    - optim : adam
+    - lr : 0.00025
+    - mom : 0.0
+    - scheduler : cosine
+    - warmup_step : 0
+    - decay_rate : 0.5
+    - lr_min : 0.0
+    - clip : 0.25
+    - clip_nonemb : False
+    - max_step : 100
+    - batch_size : 2
+    - batch_chunk : 1
+    - tgt_len : 70
+    - eval_tgt_len : 50
+    - ext_len : 0
+    - mem_len : 0
+    - not_tied : False
+    - seed : 1111
+    - cuda : False
+    - adaptive : False
+    - div_val : 1
+    - pre_lnorm : False
+    - varlen : False
+    - multi_gpu : False
+    - log_interval : 1
+    - eval_interval : 400
+    - work_dir : out_put-enwik8/20250729-065719
+    - restart : False
+    - restart_dir : 
+    - debug : False
+    - same_length : False
+    - attn_type : 0
+    - clamp_len : -1
+    - eta_min : 0.0
+    - gpu0_bsz : -1
+    - max_eval_steps : -1
+    - sample_softmax : -1
+    - patience : 0
+    - finetune_v2 : False
+    - finetune_v3 : False
+    - fp16 : False
+    - static_loss_scale : 1
+    - dynamic_loss_scale : False
+    - tied : True
+    - n_token : 204
+    - n_all_param : 27145204
+    - n_nonemb_param : 27042000
+====================================================================================================
+#params = 27145204
+#non emb params = 27042000
+| epoch   1 step        1 |      1 batches | lr 0.00025 | ms/batch 276.93 | loss  7.55 | bpc  10.89743
+TCAPPDLL 2025-07-29 06:57:29.923221 - Epoch: 1 Iteration: 1  rank : 0  train.loss : 7.553520679473877  train.ips : 505.5470982394606  train.total_time : 0.2769277095794678 
+| epoch   1 step        2 |      2 batches | lr 0.00025 | ms/batch 186.84 | loss  4.88 | bpc   7.03788
+TCAPPDLL 2025-07-29 06:57:30.181717 - Epoch: 1 Iteration: 2  rank : 0  train.loss : 4.8782854080200195  train.ips : 749.3068558981498  train.total_time : 0.18683934211730957 
+| epoch   1 step        3 |      3 batches | lr 0.000249 | ms/batch 182.75 | loss  4.47 | bpc   6.44713
+TCAPPDLL 2025-07-29 06:57:31.628098 - Epoch: 1 Iteration: 3  rank : 0  train.loss : 4.468807697296143  train.ips : 766.0819229198657  train.total_time : 0.18274807929992676 
+| epoch   1 step        4 |      4 batches | lr 0.000249 | ms/batch 194.79 | loss  4.40 | bpc   6.35179
+TCAPPDLL 2025-07-29 06:57:31.880068 - Epoch: 1 Iteration: 4  rank : 0  train.loss : 4.40272331237793  train.ips : 718.7134693318026  train.total_time : 0.1947925090789795 
+| epoch   1 step        5 |      5 batches | lr 0.000248 | ms/batch 201.98 | loss  4.27 | bpc   6.15875
+TCAPPDLL 2025-07-29 06:57:32.137482 - Epoch: 1 Iteration: 5  rank : 0  train.loss : 4.268919944763184  train.ips : 693.1228162949253  train.total_time : 0.20198440551757812 
+| epoch   1 step        6 |      6 batches | lr 0.000248 | ms/batch 183.40 | loss  3.95 | bpc   5.69229
+TCAPPDLL 2025-07-29 06:57:32.326199 - Epoch: 1 Iteration: 6  rank : 0  train.loss : 3.945596218109131  train.ips : 763.3452367178897  train.total_time : 0.18340325355529785 
+| epoch   1 step        7 |      7 batches | lr 0.000247 | ms/batch 198.76 | loss  3.93 | bpc   5.67239
+TCAPPDLL 2025-07-29 06:57:32.579841 - Epoch: 1 Iteration: 7  rank : 0  train.loss : 3.9318020343780518  train.ips : 704.3661152434862  train.total_time : 0.1987602710723877 
+| epoch   1 step        8 |      8 batches | lr 0.000246 | ms/batch 212.90 | loss  4.01 | bpc   5.78449
+TCAPPDLL 2025-07-29 06:57:32.845665 - Epoch: 1 Iteration: 8  rank : 0  train.loss : 4.0095062255859375  train.ips : 657.5749119243166  train.total_time : 0.21290349960327148 
+| epoch   1 step        9 |      9 batches | lr 0.000245 | ms/batch 215.34 | loss  3.65 | bpc   5.26417
+TCAPPDLL 2025-07-29 06:57:33.098327 - Epoch: 1 Iteration: 9  rank : 0  train.loss : 3.6488471031188965  train.ips : 650.1335358717807  train.total_time : 0.21534037590026855 
+| epoch   1 step       10 |     10 batches | lr 0.000244 | ms/batch 219.90 | loss  3.61 | bpc   5.20786
+TCAPPDLL 2025-07-29 06:57:34.522124 - Epoch: 1 Iteration: 10  rank : 0  train.loss : 3.609811305999756  train.ips : 636.6533344464599  train.total_time : 0.21989989280700684 
+| epoch   1 step       11 |     11 batches | lr 0.000243 | ms/batch 208.40 | loss  3.95 | bpc   5.70555
+TCAPPDLL 2025-07-29 06:57:34.818702 - Epoch: 1 Iteration: 11  rank : 0  train.loss : 3.9547829627990723  train.ips : 671.7750021164481  train.total_time : 0.2084031105041504 
+| epoch   1 step       12 |     12 batches | lr 0.000241 | ms/batch 223.71 | loss  3.57 | bpc   5.15327
+TCAPPDLL 2025-07-29 06:57:35.055493 - Epoch: 1 Iteration: 12  rank : 0  train.loss : 3.571977138519287  train.ips : 625.8153682191197  train.total_time : 0.2237081527709961 
+| epoch   1 step       13 |     13 batches | lr 0.00024 | ms/batch 223.32 | loss  3.49 | bpc   5.04157
+TCAPPDLL 2025-07-29 06:57:35.318445 - Epoch: 1 Iteration: 13  rank : 0  train.loss : 3.4945504665374756  train.ips : 626.8983931528304  train.total_time : 0.22332167625427246 
+| epoch   1 step       14 |     14 batches | lr 0.000238 | ms/batch 222.08 | loss  3.24 | bpc   4.67769
+TCAPPDLL 2025-07-29 06:57:35.614139 - Epoch: 1 Iteration: 14  rank : 0  train.loss : 3.24232816696167  train.ips : 630.3919749905527  train.total_time : 0.22208404541015625 
+| epoch   1 step       15 |     15 batches | lr 0.000236 | ms/batch 222.90 | loss  3.68 | bpc   5.31071
+TCAPPDLL 2025-07-29 06:57:35.877645 - Epoch: 1 Iteration: 15  rank : 0  train.loss : 3.6811044216156006  train.ips : 628.0980222272138  train.total_time : 0.22289514541625977 
+| epoch   1 step       16 |     16 batches | lr 0.000235 | ms/batch 224.28 | loss  3.41 | bpc   4.91457
+TCAPPDLL 2025-07-29 06:57:36.196073 - Epoch: 1 Iteration: 16  rank : 0  train.loss : 3.4065213203430176  train.ips : 624.2061231887525  train.total_time : 0.22428488731384277 
+| epoch   1 step       17 |     17 batches | lr 0.000233 | ms/batch 221.30 | loss  3.44 | bpc   4.96510
+TCAPPDLL 2025-07-29 06:57:37.384538 - Epoch: 1 Iteration: 17  rank : 0  train.loss : 3.4415481090545654  train.ips : 632.6366244587543  train.total_time : 0.22129607200622559 
+| epoch   1 step       18 |     18 batches | lr 0.000231 | ms/batch 292.04 | loss  3.10 | bpc   4.46586
+TCAPPDLL 2025-07-29 06:57:37.700394 - Epoch: 1 Iteration: 18  rank : 0  train.loss : 3.0954973697662354  train.ips : 479.3787696216255  train.total_time : 0.29204463958740234 
+| epoch   1 step       19 |     19 batches | lr 0.000228 | ms/batch 203.31 | loss  3.37 | bpc   4.86063
+TCAPPDLL 2025-07-29 06:57:38.092854 - Epoch: 1 Iteration: 19  rank : 0  train.loss : 3.3691327571868896  train.ips : 688.599529287047  train.total_time : 0.20331120491027832 
+| epoch   1 step       20 |     20 batches | lr 0.000226 | ms/batch 201.62 | loss  3.12 | bpc   4.49566
+TCAPPDLL 2025-07-29 06:57:38.332827 - Epoch: 1 Iteration: 20  rank : 0  train.loss : 3.116152763366699  train.ips : 694.3924506435992  train.total_time : 0.2016150951385498 
+| epoch   1 step       21 |     21 batches | lr 0.000224 | ms/batch 190.66 | loss  3.38 | bpc   4.87179
+TCAPPDLL 2025-07-29 06:57:38.577566 - Epoch: 1 Iteration: 21  rank : 0  train.loss : 3.3768694400787354  train.ips : 734.289572933444  train.total_time : 0.1906604766845703 
+| epoch   1 step       22 |     22 batches | lr 0.000221 | ms/batch 192.03 | loss  3.54 | bpc   5.10650
+TCAPPDLL 2025-07-29 06:57:38.772094 - Epoch: 1 Iteration: 22  rank : 0  train.loss : 3.5395591259002686  train.ips : 729.0493099389647  train.total_time : 0.1920309066772461 
+| epoch   1 step       23 |     23 batches | lr 0.000219 | ms/batch 189.35 | loss  3.06 | bpc   4.41194
+TCAPPDLL 2025-07-29 06:57:39.044631 - Epoch: 1 Iteration: 23  rank : 0  train.loss : 3.0581228733062744  train.ips : 739.3822055453423  train.total_time : 0.1893472671508789 
+| epoch   1 step       24 |     24 batches | lr 0.000216 | ms/batch 195.63 | loss  3.35 | bpc   4.83973
+TCAPPDLL 2025-07-29 06:57:39.271251 - Epoch: 1 Iteration: 24  rank : 0  train.loss : 3.354646921157837  train.ips : 715.631159068806  train.total_time : 0.1956315040588379 
+| epoch   1 step       25 |     25 batches | lr 0.000213 | ms/batch 194.38 | loss  3.03 | bpc   4.37505
+TCAPPDLL 2025-07-29 06:57:40.592662 - Epoch: 1 Iteration: 25  rank : 0  train.loss : 3.032552719116211  train.ips : 720.2235234378257  train.total_time : 0.19438409805297852 
+| epoch   1 step       26 |     26 batches | lr 0.000211 | ms/batch 193.54 | loss  3.38 | bpc   4.87085
+TCAPPDLL 2025-07-29 06:57:40.806595 - Epoch: 1 Iteration: 26  rank : 0  train.loss : 3.3762128353118896  train.ips : 723.3803594218896  train.total_time : 0.19353580474853516 
+| epoch   1 step       27 |     27 batches | lr 0.000208 | ms/batch 191.45 | loss  2.83 | bpc   4.07726
+TCAPPDLL 2025-07-29 06:57:41.089539 - Epoch: 1 Iteration: 27  rank : 0  train.loss : 2.826140880584717  train.ips : 731.2600606973092  train.total_time : 0.1914503574371338 
+| epoch   1 step       28 |     28 batches | lr 0.000205 | ms/batch 200.86 | loss  2.94 | bpc   4.24864
+TCAPPDLL 2025-07-29 06:57:41.356932 - Epoch: 1 Iteration: 28  rank : 0  train.loss : 2.9449315071105957  train.ips : 696.9994967191788  train.total_time : 0.20086097717285156 
+| epoch   1 step       29 |     29 batches | lr 0.000202 | ms/batch 200.72 | loss  3.31 | bpc   4.77039
+TCAPPDLL 2025-07-29 06:57:41.607866 - Epoch: 1 Iteration: 29  rank : 0  train.loss : 3.3065810203552246  train.ips : 697.5003890163173  train.total_time : 0.20071673393249512 
+| epoch   1 step       30 |     30 batches | lr 0.000198 | ms/batch 192.16 | loss  3.00 | bpc   4.32607
+TCAPPDLL 2025-07-29 06:57:41.888952 - Epoch: 1 Iteration: 30  rank : 0  train.loss : 2.998601198196411  train.ips : 728.5716979914736  train.total_time : 0.19215679168701172 
+| epoch   1 step       31 |     31 batches | lr 0.000195 | ms/batch 194.48 | loss  3.05 | bpc   4.40405
+TCAPPDLL 2025-07-29 06:57:42.234506 - Epoch: 1 Iteration: 31  rank : 0  train.loss : 3.052654266357422  train.ips : 719.8526956355443  train.total_time : 0.19448423385620117 
+| epoch   1 step       32 |     32 batches | lr 0.000192 | ms/batch 212.45 | loss  2.98 | bpc   4.30491
+TCAPPDLL 2025-07-29 06:57:43.448153 - Epoch: 1 Iteration: 32  rank : 0  train.loss : 2.983935594558716  train.ips : 658.9888515553281  train.total_time : 0.2124466896057129 
+| epoch   1 step       33 |     33 batches | lr 0.000189 | ms/batch 190.41 | loss  2.80 | bpc   4.04663
+TCAPPDLL 2025-07-29 06:57:43.726553 - Epoch: 1 Iteration: 33  rank : 0  train.loss : 2.8049092292785645  train.ips : 735.2595747984368  train.total_time : 0.19040894508361816 
+| epoch   1 step       34 |     34 batches | lr 0.000185 | ms/batch 195.66 | loss  2.89 | bpc   4.16290
+TCAPPDLL 2025-07-29 06:57:43.944815 - Epoch: 1 Iteration: 34  rank : 0  train.loss : 2.885503053665161  train.ips : 715.509950930756  train.total_time : 0.195664644241333 
+| epoch   1 step       35 |     35 batches | lr 0.000182 | ms/batch 190.17 | loss  2.96 | bpc   4.26511
+TCAPPDLL 2025-07-29 06:57:44.180998 - Epoch: 1 Iteration: 35  rank : 0  train.loss : 2.9563519954681396  train.ips : 736.1924523050421  train.total_time : 0.19016766548156738 
+| epoch   1 step       36 |     36 batches | lr 0.000178 | ms/batch 190.90 | loss  3.08 | bpc   4.44958
+TCAPPDLL 2025-07-29 06:57:44.475574 - Epoch: 1 Iteration: 36  rank : 0  train.loss : 3.0842151641845703  train.ips : 733.3532656683014  train.total_time : 0.190903902053833 
+| epoch   1 step       37 |     37 batches | lr 0.000175 | ms/batch 199.69 | loss  2.78 | bpc   4.01060
+TCAPPDLL 2025-07-29 06:57:44.819627 - Epoch: 1 Iteration: 37  rank : 0  train.loss : 2.7799394130706787  train.ips : 701.089669121027  train.total_time : 0.19968914985656738 
+| epoch   1 step       38 |     38 batches | lr 0.000171 | ms/batch 208.13 | loss  2.87 | bpc   4.14353
+TCAPPDLL 2025-07-29 06:57:45.070890 - Epoch: 1 Iteration: 38  rank : 0  train.loss : 2.872079372406006  train.ips : 672.6491861117793  train.total_time : 0.20813226699829102 
+| epoch   1 step       39 |     39 batches | lr 0.000167 | ms/batch 194.42 | loss  2.50 | bpc   3.60983
+TCAPPDLL 2025-07-29 06:57:45.322553 - Epoch: 1 Iteration: 39  rank : 0  train.loss : 2.5021443367004395  train.ips : 720.1078194882008  train.total_time : 0.19441533088684082 
+| epoch   1 step       40 |     40 batches | lr 0.000164 | ms/batch 188.17 | loss  2.62 | bpc   3.78123
+TCAPPDLL 2025-07-29 06:57:46.497094 - Epoch: 1 Iteration: 40  rank : 0  train.loss : 2.6209468841552734  train.ips : 743.9978815411534  train.total_time : 0.1881725788116455 
+| epoch   1 step       41 |     41 batches | lr 0.00016 | ms/batch 255.71 | loss  3.01 | bpc   4.33827
+TCAPPDLL 2025-07-29 06:57:46.888626 - Epoch: 1 Iteration: 41  rank : 0  train.loss : 3.0070626735687256  train.ips : 547.493920904629  train.total_time : 0.2557106018066406 
+| epoch   1 step       42 |     42 batches | lr 0.000156 | ms/batch 215.09 | loss  2.54 | bpc   3.66755
+TCAPPDLL 2025-07-29 06:57:47.188148 - Epoch: 1 Iteration: 42  rank : 0  train.loss : 2.542151689529419  train.ips : 650.8894933680946  train.total_time : 0.21509027481079102 
+| epoch   1 step       43 |     43 batches | lr 0.000152 | ms/batch 211.76 | loss  2.55 | bpc   3.67300
+TCAPPDLL 2025-07-29 06:57:47.417987 - Epoch: 1 Iteration: 43  rank : 0  train.loss : 2.5459299087524414  train.ips : 661.1398081667074  train.total_time : 0.21175551414489746 
+| epoch   1 step       44 |     44 batches | lr 0.000148 | ms/batch 211.83 | loss  2.54 | bpc   3.66518
+TCAPPDLL 2025-07-29 06:57:47.639246 - Epoch: 1 Iteration: 44  rank : 0  train.loss : 2.540508985519409  train.ips : 660.9180552976201  train.total_time : 0.21182656288146973 
+| epoch   1 step       45 |     45 batches | lr 0.000145 | ms/batch 198.44 | loss  2.57 | bpc   3.70918
+TCAPPDLL 2025-07-29 06:57:47.893528 - Epoch: 1 Iteration: 45  rank : 0  train.loss : 2.571007013320923  train.ips : 705.4975706575805  train.total_time : 0.1984415054321289 
+| epoch   1 step       46 |     46 batches | lr 0.000141 | ms/batch 210.51 | loss  3.29 | bpc   4.74718
+TCAPPDLL 2025-07-29 06:57:48.136122 - Epoch: 1 Iteration: 46  rank : 0  train.loss : 3.290494441986084  train.ips : 665.0401944373345  train.total_time : 0.21051359176635742 
+| epoch   1 step       47 |     47 batches | lr 0.000137 | ms/batch 218.90 | loss  2.54 | bpc   3.66282
+TCAPPDLL 2025-07-29 06:57:48.417280 - Epoch: 1 Iteration: 47  rank : 0  train.loss : 2.538872241973877  train.ips : 639.5650279699563  train.total_time : 0.21889877319335938 
+| epoch   1 step       48 |     48 batches | lr 0.000133 | ms/batch 208.85 | loss  2.68 | bpc   3.86580
+TCAPPDLL 2025-07-29 06:57:49.489125 - Epoch: 1 Iteration: 48  rank : 0  train.loss : 2.6795713901519775  train.ips : 670.340157332898  train.total_time : 0.20884919166564941 
+| epoch   1 step       49 |     49 batches | lr 0.000129 | ms/batch 226.91 | loss  2.80 | bpc   4.03428
+TCAPPDLL 2025-07-29 06:57:49.770312 - Epoch: 1 Iteration: 49  rank : 0  train.loss : 2.796351432800293  train.ips : 616.9908796704913  train.total_time : 0.22690773010253906 
+| epoch   1 step       50 |     50 batches | lr 0.000125 | ms/batch 212.11 | loss  2.38 | bpc   3.42742
+TCAPPDLL 2025-07-29 06:57:50.043302 - Epoch: 1 Iteration: 50  rank : 0  train.loss : 2.3757035732269287  train.ips : 660.0473676342149  train.total_time : 0.21210598945617676 
+| epoch   1 step       51 |     51 batches | lr 0.000121 | ms/batch 207.19 | loss  2.80 | bpc   4.04383
+TCAPPDLL 2025-07-29 06:57:50.349710 - Epoch: 1 Iteration: 51  rank : 0  train.loss : 2.802969217300415  train.ips : 675.704279403422  train.total_time : 0.20719122886657715 
+| epoch   1 step       52 |     52 batches | lr 0.000117 | ms/batch 213.30 | loss  2.39 | bpc   3.44816
+TCAPPDLL 2025-07-29 06:57:50.617840 - Epoch: 1 Iteration: 52  rank : 0  train.loss : 2.3900794982910156  train.ips : 656.3371805791212  train.total_time : 0.21330499649047852 
+| epoch   1 step       53 |     53 batches | lr 0.000113 | ms/batch 206.34 | loss  2.58 | bpc   3.72588
+TCAPPDLL 2025-07-29 06:57:50.869603 - Epoch: 1 Iteration: 53  rank : 0  train.loss : 2.58258056640625  train.ips : 678.5056763361778  train.total_time : 0.20633578300476074 
+| epoch   1 step       54 |     54 batches | lr 0.000109 | ms/batch 209.49 | loss  2.39 | bpc   3.44539
+TCAPPDLL 2025-07-29 06:57:51.139821 - Epoch: 1 Iteration: 54  rank : 0  train.loss : 2.3881630897521973  train.ips : 668.2871801408496  train.total_time : 0.20949077606201172 
+| epoch   1 step       55 |     55 batches | lr 0.000105 | ms/batch 185.04 | loss  2.55 | bpc   3.67772
+TCAPPDLL 2025-07-29 06:57:51.394224 - Epoch: 1 Iteration: 55  rank : 0  train.loss : 2.5492007732391357  train.ips : 756.6068290168793  train.total_time : 0.18503665924072266 
+| epoch   1 step       56 |     56 batches | lr 0.000102 | ms/batch 177.77 | loss  2.94 | bpc   4.24684
+TCAPPDLL 2025-07-29 06:57:52.578049 - Epoch: 1 Iteration: 56  rank : 0  train.loss : 2.9436867237091064  train.ips : 787.5475752036255  train.total_time : 0.17776703834533691 
+| epoch   1 step       57 |     57 batches | lr 9.77e-05 | ms/batch 215.80 | loss  2.92 | bpc   4.21738
+TCAPPDLL 2025-07-29 06:57:52.842232 - Epoch: 1 Iteration: 57  rank : 0  train.loss : 2.9232676029205322  train.ips : 648.737232736782  train.total_time : 0.215803861618042 
+| epoch   1 step       58 |     58 batches | lr 9.39e-05 | ms/batch 207.68 | loss  2.87 | bpc   4.13512
+TCAPPDLL 2025-07-29 06:57:53.175634 - Epoch: 1 Iteration: 58  rank : 0  train.loss : 2.8662497997283936  train.ips : 674.0978126356054  train.total_time : 0.20768499374389648 
+| epoch   1 step       59 |     59 batches | lr 9.01e-05 | ms/batch 206.00 | loss  2.77 | bpc   3.99104
+TCAPPDLL 2025-07-29 06:57:53.408008 - Epoch: 1 Iteration: 59  rank : 0  train.loss : 2.7663815021514893  train.ips : 679.611354737757  train.total_time : 0.20600008964538574 
+| epoch   1 step       60 |     60 batches | lr 8.64e-05 | ms/batch 219.41 | loss  2.97 | bpc   4.28996
+TCAPPDLL 2025-07-29 06:57:53.719002 - Epoch: 1 Iteration: 60  rank : 0  train.loss : 2.9735755920410156  train.ips : 638.0632170981072  train.total_time : 0.21941399574279785 
+| epoch   1 step       61 |     61 batches | lr 8.27e-05 | ms/batch 219.76 | loss  3.70 | bpc   5.34167
+TCAPPDLL 2025-07-29 06:57:53.994786 - Epoch: 1 Iteration: 61  rank : 0  train.loss : 3.7025630474090576  train.ips : 637.0663828522266  train.total_time : 0.2197573184967041 
+| epoch   1 step       62 |     62 batches | lr 7.9e-05 | ms/batch 207.40 | loss  3.04 | bpc   4.38570
+TCAPPDLL 2025-07-29 06:57:54.323527 - Epoch: 1 Iteration: 62  rank : 0  train.loss : 3.0399327278137207  train.ips : 675.0238361005128  train.total_time : 0.20740008354187012 
+| epoch   1 step       63 |     63 batches | lr 7.54e-05 | ms/batch 192.78 | loss  3.85 | bpc   5.55469
+TCAPPDLL 2025-07-29 06:57:55.468721 - Epoch: 1 Iteration: 63  rank : 0  train.loss : 3.85021710395813  train.ips : 726.2154470991703  train.total_time : 0.1927802562713623 
+| epoch   1 step       64 |     64 batches | lr 7.18e-05 | ms/batch 287.39 | loss  3.41 | bpc   4.91961
+TCAPPDLL 2025-07-29 06:57:55.853086 - Epoch: 1 Iteration: 64  rank : 0  train.loss : 3.4100122451782227  train.ips : 487.1437258534311  train.total_time : 0.28738951683044434 
+| epoch   1 step       65 |     65 batches | lr 6.83e-05 | ms/batch 201.99 | loss  2.90 | bpc   4.18336
+TCAPPDLL 2025-07-29 06:57:56.065070 - Epoch: 1 Iteration: 65  rank : 0  train.loss : 2.8996851444244385  train.ips : 693.1154530313636  train.total_time : 0.20198655128479004 
+| epoch   1 step       66 |     66 batches | lr 6.48e-05 | ms/batch 215.56 | loss  2.69 | bpc   3.88641
+TCAPPDLL 2025-07-29 06:57:56.294408 - Epoch: 1 Iteration: 66  rank : 0  train.loss : 2.6938536167144775  train.ips : 649.4633655372262  train.total_time : 0.2155625820159912 
+| epoch   1 step       67 |     67 batches | lr 6.14e-05 | ms/batch 197.75 | loss  3.08 | bpc   4.44869
+TCAPPDLL 2025-07-29 06:57:56.555392 - Epoch: 1 Iteration: 67  rank : 0  train.loss : 3.083597421646118  train.ips : 707.9625668836038  train.total_time : 0.19775056838989258 
+| epoch   1 step       68 |     68 batches | lr 5.8e-05 | ms/batch 194.52 | loss  3.13 | bpc   4.51238
+TCAPPDLL 2025-07-29 06:57:56.802449 - Epoch: 1 Iteration: 68  rank : 0  train.loss : 3.1277408599853516  train.ips : 719.7097640852666  train.total_time : 0.19452285766601562 
+| epoch   1 step       69 |     69 batches | lr 5.47e-05 | ms/batch 192.54 | loss  2.82 | bpc   4.06149
+TCAPPDLL 2025-07-29 06:57:57.174743 - Epoch: 1 Iteration: 69  rank : 0  train.loss : 2.8152124881744385  train.ips : 727.112896415344  train.total_time : 0.19254231452941895 
+| epoch   1 step       70 |     70 batches | lr 5.15e-05 | ms/batch 206.96 | loss  3.47 | bpc   5.00967
+TCAPPDLL 2025-07-29 06:57:57.434458 - Epoch: 1 Iteration: 70  rank : 0  train.loss : 3.472440004348755  train.ips : 676.4570027740145  train.total_time : 0.20696067810058594 
+| epoch   1 step       71 |     71 batches | lr 4.84e-05 | ms/batch 203.15 | loss  3.73 | bpc   5.37767
+TCAPPDLL 2025-07-29 06:57:58.543957 - Epoch: 1 Iteration: 71  rank : 0  train.loss : 3.727515459060669  train.ips : 689.1426009621197  train.total_time : 0.20315098762512207 
+| epoch   1 step       72 |     72 batches | lr 4.53e-05 | ms/batch 216.06 | loss  3.54 | bpc   5.11322
+TCAPPDLL 2025-07-29 06:57:58.763029 - Epoch: 1 Iteration: 72  rank : 0  train.loss : 3.5442135334014893  train.ips : 647.9590922432837  train.total_time : 0.2160630226135254 
+| epoch   1 step       73 |     73 batches | lr 4.23e-05 | ms/batch 209.93 | loss  3.00 | bpc   4.32652
+TCAPPDLL 2025-07-29 06:57:58.998186 - Epoch: 1 Iteration: 73  rank : 0  train.loss : 2.9989166259765625  train.ips : 666.8997474150933  train.total_time : 0.20992660522460938 
+| epoch   1 step       74 |     74 batches | lr 3.94e-05 | ms/batch 193.02 | loss  2.68 | bpc   3.86374
+TCAPPDLL 2025-07-29 06:57:59.332530 - Epoch: 1 Iteration: 74  rank : 0  train.loss : 2.678138494491577  train.ips : 725.3112512923256  train.total_time : 0.19302058219909668 
+| epoch   1 step       75 |     75 batches | lr 3.66e-05 | ms/batch 205.13 | loss  2.50 | bpc   3.60490
+TCAPPDLL 2025-07-29 06:57:59.677873 - Epoch: 1 Iteration: 75  rank : 0  train.loss : 2.4987244606018066  train.ips : 682.5048002938291  train.total_time : 0.20512676239013672 
+| epoch   1 step       76 |     76 batches | lr 3.39e-05 | ms/batch 198.96 | loss  2.79 | bpc   4.02228
+TCAPPDLL 2025-07-29 06:57:59.941224 - Epoch: 1 Iteration: 76  rank : 0  train.loss : 2.7880351543426514  train.ips : 703.6731289590429  train.total_time : 0.19895601272583008 
+| epoch   1 step       77 |     77 batches | lr 3.12e-05 | ms/batch 200.22 | loss  2.56 | bpc   3.68818
+TCAPPDLL 2025-07-29 06:58:00.322335 - Epoch: 1 Iteration: 77  rank : 0  train.loss : 2.556450605392456  train.ips : 699.2179795403424  train.total_time : 0.20022368431091309 
+| epoch   1 step       78 |     78 batches | lr 2.87e-05 | ms/batch 229.21 | loss  3.27 | bpc   4.71164
+TCAPPDLL 2025-07-29 06:58:01.442804 - Epoch: 1 Iteration: 78  rank : 0  train.loss : 3.2658586502075195  train.ips : 610.791956138006  train.total_time : 0.22921061515808105 
+| epoch   1 step       79 |     79 batches | lr 2.62e-05 | ms/batch 212.54 | loss  2.73 | bpc   3.93630
+TCAPPDLL 2025-07-29 06:58:01.702181 - Epoch: 1 Iteration: 79  rank : 0  train.loss : 2.7284367084503174  train.ips : 658.7079419280584  train.total_time : 0.21253728866577148 
+| epoch   1 step       80 |     80 batches | lr 2.39e-05 | ms/batch 260.09 | loss  2.83 | bpc   4.07685
+TCAPPDLL 2025-07-29 06:58:02.323275 - Epoch: 1 Iteration: 80  rank : 0  train.loss : 2.825859785079956  train.ips : 538.2823806791203  train.total_time : 0.2600865364074707 
+| epoch   1 step       81 |     81 batches | lr 2.16e-05 | ms/batch 224.06 | loss  2.52 | bpc   3.63056
+TCAPPDLL 2025-07-29 06:58:02.591419 - Epoch: 1 Iteration: 81  rank : 0  train.loss : 2.516514778137207  train.ips : 624.8251571898738  train.total_time : 0.22406268119812012 
+| epoch   1 step       82 |     82 batches | lr 1.95e-05 | ms/batch 239.15 | loss  2.69 | bpc   3.88435
+/root/miniconda3/envs/train1/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:156: UserWarning: The epoch parameter in `scheduler.step()` was not necessary and is being deprecated where possible. Please use `scheduler.step()` to step the scheduler. During the deprecation, if epoch is different from None, the closed form is used instead of the new chainable form, where available. Please open an issue if you are unable to replicate your use case: https://github.com/pytorch/pytorch/issues/new/choose.
+  warnings.warn(EPOCH_DEPRECATION_WARNING, UserWarning)
+TCAPPDLL 2025-07-29 06:58:02.877895 - Epoch: 1 Iteration: 82  rank : 0  train.loss : 2.6924242973327637  train.ips : 585.398362247553  train.total_time : 0.23915338516235352 
+| epoch   1 step       83 |     83 batches | lr 1.74e-05 | ms/batch 226.78 | loss  2.71 | bpc   3.90990
+TCAPPDLL 2025-07-29 06:58:03.226476 - Epoch: 1 Iteration: 83  rank : 0  train.loss : 2.7101387977600098  train.ips : 617.3398571461613  train.total_time : 0.22677946090698242 
+| epoch   1 step       84 |     84 batches | lr 1.55e-05 | ms/batch 219.60 | loss  2.70 | bpc   3.89814
+TCAPPDLL 2025-07-29 06:58:04.532496 - Epoch: 1 Iteration: 84  rank : 0  train.loss : 2.7019834518432617  train.ips : 637.5118040137446  train.total_time : 0.2196037769317627 
+| epoch   1 step       85 |     85 batches | lr 1.36e-05 | ms/batch 230.56 | loss  2.64 | bpc   3.81590
+TCAPPDLL 2025-07-29 06:58:04.847305 - Epoch: 1 Iteration: 85  rank : 0  train.loss : 2.6449832916259766  train.ips : 607.2252038724915  train.total_time : 0.23055696487426758 
+| epoch   1 step       86 |     86 batches | lr 1.19e-05 | ms/batch 199.58 | loss  2.52 | bpc   3.62975
+TCAPPDLL 2025-07-29 06:58:05.194799 - Epoch: 1 Iteration: 86  rank : 0  train.loss : 2.515949249267578  train.ips : 701.4724166766217  train.total_time : 0.19958019256591797 
+| epoch   1 step       87 |     87 batches | lr 1.03e-05 | ms/batch 208.51 | loss  2.72 | bpc   3.92149
+TCAPPDLL 2025-07-29 06:58:05.426107 - Epoch: 1 Iteration: 87  rank : 0  train.loss : 2.718168020248413  train.ips : 671.4278069607733  train.total_time : 0.2085108757019043 
+| epoch   1 step       88 |     88 batches | lr 8.78e-06 | ms/batch 206.78 | loss  2.77 | bpc   3.99667
+TCAPPDLL 2025-07-29 06:58:05.771206 - Epoch: 1 Iteration: 88  rank : 0  train.loss : 2.7702832221984863  train.ips : 677.0450892538008  train.total_time : 0.20678091049194336 
+| epoch   1 step       89 |     89 batches | lr 7.39e-06 | ms/batch 213.76 | loss  2.62 | bpc   3.77669
+TCAPPDLL 2025-07-29 06:58:05.995618 - Epoch: 1 Iteration: 89  rank : 0  train.loss : 2.617802858352661  train.ips : 654.9396982962942  train.total_time : 0.2137601375579834 
+| epoch   1 step       90 |     90 batches | lr 6.12e-06 | ms/batch 211.18 | loss  2.85 | bpc   4.11308
+TCAPPDLL 2025-07-29 06:58:06.278645 - Epoch: 1 Iteration: 90  rank : 0  train.loss : 2.8509702682495117  train.ips : 662.9431521951428  train.total_time : 0.21117949485778809 
+| epoch   1 step       91 |     91 batches | lr 4.96e-06 | ms/batch 215.60 | loss  2.70 | bpc   3.89434
+TCAPPDLL 2025-07-29 06:58:07.601124 - Epoch: 1 Iteration: 91  rank : 0  train.loss : 2.6993496417999268  train.ips : 649.3592250187995  train.total_time : 0.21559715270996094 
+| epoch   1 step       92 |     92 batches | lr 3.93e-06 | ms/batch 233.38 | loss  2.57 | bpc   3.71329
+TCAPPDLL 2025-07-29 06:58:07.934210 - Epoch: 1 Iteration: 92  rank : 0  train.loss : 2.5738584995269775  train.ips : 599.8798202411564  train.total_time : 0.23338007926940918 
+| epoch   1 step       93 |     93 batches | lr 3.01e-06 | ms/batch 216.06 | loss  3.04 | bpc   4.39031
+TCAPPDLL 2025-07-29 06:58:08.276694 - Epoch: 1 Iteration: 93  rank : 0  train.loss : 3.0431323051452637  train.ips : 647.9733925982163  train.total_time : 0.21605825424194336 
+| epoch   1 step       94 |     94 batches | lr 2.21e-06 | ms/batch 207.30 | loss  3.18 | bpc   4.59161
+TCAPPDLL 2025-07-29 06:58:08.552253 - Epoch: 1 Iteration: 94  rank : 0  train.loss : 3.1826586723327637  train.ips : 675.3429144508033  train.total_time : 0.20730209350585938 
+| epoch   1 step       95 |     95 batches | lr 1.54e-06 | ms/batch 227.75 | loss  2.64 | bpc   3.81290
+TCAPPDLL 2025-07-29 06:58:08.843032 - Epoch: 1 Iteration: 95  rank : 0  train.loss : 2.642904281616211  train.ips : 614.7173066454503  train.total_time : 0.22774696350097656 
+| epoch   1 step       96 |     96 batches | lr 9.86e-07 | ms/batch 185.84 | loss  2.66 | bpc   3.84303
+TCAPPDLL 2025-07-29 06:58:09.052856 - Epoch: 1 Iteration: 96  rank : 0  train.loss : 2.6637823581695557  train.ips : 753.3501741601503  train.total_time : 0.1858365535736084 
+| epoch   1 step       97 |     97 batches | lr 5.55e-07 | ms/batch 190.43 | loss  2.70 | bpc   3.90092
+TCAPPDLL 2025-07-29 06:58:09.248843 - Epoch: 1 Iteration: 97  rank : 0  train.loss : 2.7039084434509277  train.ips : 735.1804076277139  train.total_time : 0.1904294490814209 
+| epoch   1 step       98 |     98 batches | lr 2.47e-07 | ms/batch 194.46 | loss  3.13 | bpc   4.51072
+TCAPPDLL 2025-07-29 06:58:10.636790 - Epoch: 1 Iteration: 98  rank : 0  train.loss : 3.1265950202941895  train.ips : 719.947132178137  train.total_time : 0.1944587230682373 
+| epoch   1 step       99 |     99 batches | lr 6.17e-08 | ms/batch 201.87 | loss  2.91 | bpc   4.20316
+TCAPPDLL 2025-07-29 06:58:11.015057 - Epoch: 1 Iteration: 99  rank : 0  train.loss : 2.9134104251861572  train.ips : 693.4993693340451  train.total_time : 0.2018747329711914 
+| epoch   1 step      100 |    100 batches | lr 0 | ms/batch 209.38 | loss  3.02 | bpc   4.35744
+TCAPPDLL 2025-07-29 06:58:11.305413 - Epoch: 1 Iteration: 100  rank : 0  train.loss : 3.020345687866211  train.ips : 668.6349408057972  train.total_time : 0.2093818187713623 
+----------------------------------------------------------------------------------------------------
+End of training
+Traceback (most recent call last):
+  File "train.py", line 588, in <module>
+    with open(os.path.join(args.work_dir, 'model.pt'), 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'out_put-enwik8/20250729-065719/model.pt'

@@ -1,0 +1,16 @@
+*~
+*.o
+*build*/
+./models/
+__pycache__/
+.vscode
+.idea
+./translation
+.cache
+*.pth
+# !tests/data/**/*.npy
+# /models
+/notebooks
+**/.ipynb_checkpoints/
+*.xlsx
+trt_analysis_outputs

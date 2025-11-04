@@ -1,0 +1,40 @@
+### DeepCTR_PyTorch_classification_criteo
+
+**1. 模型概述**
+
+DeepCTR是一个易于使用、模块化和可拓展的基于深度学习的点击率（CTR）模型的软件包，包含许多核心组件层，可用于轻松构建自定义模型。
+classification_criteo是基于DeepCTR实现的在Criteo数据集上进行分类预测用户是否点击某个广告
+
+**2. 快速开始**
+
+使用本模型执行训练的主要流程如下：
+1. 基础环境按照：介绍训练前需要完成的基础环境检查和安装
+2. 获取数据集：介绍如何获取训练所需的数据集
+3. 启动训练：介绍如何运行训练
+
+**2.1 基础环境安装**
+
+注意激活自身环境
+（注意克隆torch.sdaa库）
+
+**2.2 获取数据集**
+
+数据集已提供，无需额外下载
+路径：examples/criteo_sample.txt
+
+**2.3 启动训练**
+
+1. 安装依赖
+
+    pip install -U deepctr-torch
+
+2. 运行指令
+
+    **单机单卡**
+    cd examples
+    python ./run_classification_criteo.py
+
+
+
+    
+

@@ -1,0 +1,5 @@
+# These must be installed before building mmdetection
+setuptools==60.2.0
+shapely
+terminaltables
+scipy
