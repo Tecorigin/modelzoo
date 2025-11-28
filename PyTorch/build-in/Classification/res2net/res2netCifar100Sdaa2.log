@@ -1,0 +1,343 @@
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+--------------+----------------------------------------------
+ Host IP      | 192.166.0.3
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 3.0.0b0 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+warning: driver api and driver versions are different
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+==== Epoch 0/99 ====
+Epoch[0]: train_loss 6.8596 acc1 1.70 acc5 6.99 | val_loss 2526.2751 acc1 1.03 acc5 4.69 lr 0.100000
+==== Epoch 1/99 ====
+Epoch[1]: train_loss 4.9876 acc1 4.61 acc5 17.17 | val_loss 4.7624 acc1 3.95 acc5 18.77 lr 0.100000
+==== Epoch 2/99 ====
+Epoch[2]: train_loss 4.4792 acc1 6.40 acc5 23.20 | val_loss 4.0772 acc1 6.48 acc5 23.69 lr 0.100000
+==== Epoch 3/99 ====
+Epoch[3]: train_loss 4.1495 acc1 9.09 acc5 27.52 | val_loss 4.0485 acc1 7.80 acc5 26.77 lr 0.100000
+==== Epoch 4/99 ====
+Epoch[4]: train_loss 3.9052 acc1 10.86 acc5 32.69 | val_loss 3.7319 acc1 12.18 acc5 35.43 lr 0.100000
+==== Epoch 5/99 ====
+Epoch[5]: train_loss 3.8073 acc1 12.24 acc5 34.82 | val_loss 3.7380 acc1 12.00 acc5 34.69 lr 0.100000
+==== Epoch 6/99 ====
+Epoch[6]: train_loss 3.6834 acc1 14.27 acc5 38.19 | val_loss 3.5803 acc1 14.24 acc5 40.14 lr 0.100000
+==== Epoch 7/99 ====
+Epoch[7]: train_loss 3.5465 acc1 16.32 acc5 42.03 | val_loss 3.4668 acc1 16.61 acc5 43.59 lr 0.100000
+==== Epoch 8/99 ====
+Epoch[8]: train_loss 3.3932 acc1 18.69 acc5 45.57 | val_loss 3.3447 acc1 19.60 acc5 46.51 lr 0.100000
+==== Epoch 9/99 ====
+Epoch[9]: train_loss 3.3153 acc1 19.10 acc5 47.18 | val_loss 3.2366 acc1 20.99 acc5 49.69 lr 0.100000
+==== Epoch 10/99 ====
+Epoch[10]: train_loss 3.2156 acc1 21.26 acc5 49.82 | val_loss 3.2025 acc1 22.16 acc5 50.63 lr 0.100000
+==== Epoch 11/99 ====
+Epoch[11]: train_loss 3.1224 acc1 23.26 acc5 51.95 | val_loss 3.1588 acc1 22.97 acc5 51.42 lr 0.100000
+==== Epoch 12/99 ====
+Epoch[12]: train_loss 3.0607 acc1 24.26 acc5 53.95 | val_loss 3.0978 acc1 23.98 acc5 53.01 lr 0.100000
+==== Epoch 13/99 ====
+Epoch[13]: train_loss 2.9753 acc1 25.58 acc5 55.47 | val_loss 3.0221 acc1 25.89 acc5 54.68 lr 0.100000
+==== Epoch 14/99 ====
+Epoch[14]: train_loss 2.9748 acc1 25.90 acc5 56.11 | val_loss 3.0304 acc1 25.31 acc5 54.72 lr 0.100000
+==== Epoch 15/99 ====
+Epoch[15]: train_loss 2.9206 acc1 27.54 acc5 57.41 | val_loss 2.9439 acc1 27.52 acc5 56.74 lr 0.100000
+==== Epoch 16/99 ====
+Epoch[16]: train_loss 2.7881 acc1 29.18 acc5 60.59 | val_loss 2.8993 acc1 28.24 acc5 57.88 lr 0.100000
+==== Epoch 17/99 ====
+Epoch[17]: train_loss 2.7601 acc1 29.31 acc5 60.82 | val_loss 2.9305 acc1 27.80 acc5 57.50 lr 0.100000
+==== Epoch 18/99 ====
+Epoch[18]: train_loss 2.7341 acc1 30.14 acc5 61.55 | val_loss 2.8663 acc1 29.25 acc5 58.65 lr 0.100000
+==== Epoch 19/99 ====
+Epoch[19]: train_loss 2.6608 acc1 31.89 acc5 63.38 | val_loss 2.8346 acc1 29.50 acc5 59.60 lr 0.100000
+==== Epoch 20/99 ====
+Epoch[20]: train_loss 2.6279 acc1 32.48 acc5 64.29 | val_loss 2.8241 acc1 29.55 acc5 59.70 lr 0.100000
+==== Epoch 21/99 ====
+Epoch[21]: train_loss 2.5800 acc1 33.70 acc5 65.39 | val_loss 2.7926 acc1 30.61 acc5 60.60 lr 0.100000
+==== Epoch 22/99 ====
+Epoch[22]: train_loss 2.5571 acc1 34.11 acc5 65.49 | val_loss 2.7478 acc1 31.96 acc5 61.64 lr 0.100000
+==== Epoch 23/99 ====
+Epoch[23]: train_loss 2.5065 acc1 34.83 acc5 67.04 | val_loss 2.8312 acc1 30.06 acc5 60.05 lr 0.100000
+==== Epoch 24/99 ====
+Epoch[24]: train_loss 2.4813 acc1 36.21 acc5 67.66 | val_loss 2.7447 acc1 31.85 acc5 62.03 lr 0.100000
+==== Epoch 25/99 ====
+Epoch[25]: train_loss 2.3731 acc1 37.30 acc5 70.18 | val_loss 2.7019 acc1 32.13 acc5 63.45 lr 0.100000
+==== Epoch 26/99 ====
+Epoch[26]: train_loss 2.3260 acc1 38.50 acc5 71.79 | val_loss 2.7075 acc1 32.96 acc5 62.61 lr 0.100000
+==== Epoch 27/99 ====
+Epoch[27]: train_loss 2.3004 acc1 39.36 acc5 71.70 | val_loss 2.7529 acc1 33.13 acc5 62.66 lr 0.100000
+==== Epoch 28/99 ====
+Epoch[28]: train_loss 2.2618 acc1 40.24 acc5 72.70 | val_loss 2.7288 acc1 33.12 acc5 62.61 lr 0.100000
+==== Epoch 29/99 ====
+Epoch[29]: train_loss 2.1986 acc1 42.00 acc5 73.26 | val_loss 2.7013 acc1 33.69 acc5 63.95 lr 0.100000
+==== Epoch 30/99 ====
+Epoch[30]: train_loss 2.1543 acc1 41.81 acc5 74.69 | val_loss 2.6997 acc1 33.56 acc5 63.75 lr 0.100000
+==== Epoch 31/99 ====
+Epoch[31]: train_loss 2.0825 acc1 43.39 acc5 76.30 | val_loss 3.4839 acc1 32.30 acc5 62.70 lr 0.100000
+==== Epoch 32/99 ====
+Epoch[32]: train_loss 2.1948 acc1 41.17 acc5 73.92 | val_loss 2.7108 acc1 33.95 acc5 64.11 lr 0.100000
+==== Epoch 33/99 ====
+Epoch[33]: train_loss 2.0472 acc1 44.37 acc5 77.15 | val_loss 2.7224 acc1 33.59 acc5 63.50 lr 0.100000
+==== Epoch 34/99 ====
+Epoch[34]: train_loss 1.9970 acc1 45.68 acc5 78.22 | val_loss 2.7915 acc1 33.97 acc5 63.34 lr 0.100000
+==== Epoch 35/99 ====
+Epoch[35]: train_loss 1.9031 acc1 47.70 acc5 79.49 | val_loss 2.7154 acc1 34.82 acc5 64.86 lr 0.100000
+==== Epoch 36/99 ====
+Epoch[36]: train_loss 1.8701 acc1 48.35 acc5 80.78 | val_loss 2.7150 acc1 34.48 acc5 64.85 lr 0.100000
+==== Epoch 37/99 ====
+Epoch[37]: train_loss 1.8399 acc1 49.06 acc5 81.15 | val_loss 2.6931 acc1 35.83 acc5 65.23 lr 0.100000
+==== Epoch 38/99 ====
+Epoch[38]: train_loss 1.7678 acc1 50.21 acc5 82.35 | val_loss 2.8276 acc1 34.71 acc5 64.30 lr 0.100000
+==== Epoch 39/99 ====
+Epoch[39]: train_loss 1.7137 acc1 51.60 acc5 83.14 | val_loss 2.7039 acc1 35.86 acc5 65.05 lr 0.100000
+==== Epoch 40/99 ====
+Epoch[40]: train_loss 1.6358 acc1 53.25 acc5 84.78 | val_loss 2.9021 acc1 35.51 acc5 64.69 lr 0.100000
+==== Epoch 41/99 ====
+Epoch[41]: train_loss 1.6012 acc1 54.62 acc5 85.44 | val_loss 2.8208 acc1 34.88 acc5 64.53 lr 0.100000
+==== Epoch 42/99 ====
+Epoch[42]: train_loss 1.5344 acc1 56.50 acc5 86.19 | val_loss 2.8272 acc1 34.75 acc5 64.50 lr 0.100000
+==== Epoch 43/99 ====
+Epoch[43]: train_loss 1.5015 acc1 56.38 acc5 87.49 | val_loss 2.8198 acc1 36.15 acc5 65.59 lr 0.100000
+==== Epoch 44/99 ====
+Epoch[44]: train_loss 1.4567 acc1 57.28 acc5 88.42 | val_loss 2.8767 acc1 36.17 acc5 64.77 lr 0.100000
+==== Epoch 45/99 ====
+Epoch[45]: train_loss 1.3678 acc1 59.94 acc5 89.63 | val_loss 3.0360 acc1 34.59 acc5 64.35 lr 0.100000
+==== Epoch 46/99 ====
+Epoch[46]: train_loss 1.3553 acc1 60.06 acc5 89.94 | val_loss 2.9163 acc1 35.08 acc5 64.25 lr 0.100000
+==== Epoch 47/99 ====
+Epoch[47]: train_loss 1.2887 acc1 61.81 acc5 90.80 | val_loss 3.1798 acc1 33.98 acc5 63.31 lr 0.100000
+==== Epoch 48/99 ====
+Epoch[48]: train_loss 1.2845 acc1 61.58 acc5 91.28 | val_loss 2.9015 acc1 36.37 acc5 64.78 lr 0.100000
+==== Epoch 49/99 ====
+Epoch[49]: train_loss 1.1717 acc1 64.67 acc5 92.26 | val_loss 3.2123 acc1 35.02 acc5 64.05 lr 0.100000
+==== Epoch 50/99 ====
+Epoch[50]: train_loss 1.1508 acc1 65.39 acc5 92.10 | val_loss 2.8995 acc1 37.46 acc5 65.92 lr 0.100000
+==== Epoch 51/99 ====
+Epoch[51]: train_loss 1.1013 acc1 67.26 acc5 93.25 | val_loss 2.9311 acc1 37.56 acc5 66.09 lr 0.100000
+==== Epoch 52/99 ====
+Epoch[52]: train_loss 1.0131 acc1 68.96 acc5 94.50 | val_loss 3.0282 acc1 37.02 acc5 65.48 lr 0.100000
+==== Epoch 53/99 ====
+Epoch[53]: train_loss 0.9447 acc1 71.42 acc5 95.23 | val_loss 3.0796 acc1 36.31 acc5 65.51 lr 0.100000
+==== Epoch 54/99 ====
+Epoch[54]: train_loss 0.9082 acc1 71.54 acc5 95.74 | val_loss 3.0355 acc1 37.04 acc5 65.63 lr 0.100000
+==== Epoch 55/99 ====
+Epoch[55]: train_loss 0.8851 acc1 72.53 acc5 96.08 | val_loss 3.0768 acc1 36.99 acc5 64.81 lr 0.100000
+==== Epoch 56/99 ====
+Epoch[56]: train_loss 0.8472 acc1 73.87 acc5 96.27 | val_loss 3.0748 acc1 36.95 acc5 65.41 lr 0.100000
+==== Epoch 57/99 ====
+Epoch[57]: train_loss 0.8155 acc1 74.94 acc5 96.24 | val_loss 3.0405 acc1 37.57 acc5 66.29 lr 0.100000
+==== Epoch 58/99 ====
+Epoch[58]: train_loss 0.7558 acc1 77.50 acc5 96.77 | val_loss 3.0269 acc1 37.84 acc5 66.50 lr 0.100000
+==== Epoch 59/99 ====
+Epoch[59]: train_loss 0.7205 acc1 77.04 acc5 97.41 | val_loss 3.1655 acc1 37.20 acc5 65.53 lr 0.100000
+==== Epoch 60/99 ====
+Epoch[60]: train_loss 0.6924 acc1 78.90 acc5 97.63 | val_loss 3.1847 acc1 36.52 acc5 65.24 lr 0.100000
+==== Epoch 61/99 ====
+Epoch[61]: train_loss 0.6536 acc1 79.25 acc5 98.19 | val_loss 3.1352 acc1 37.71 acc5 66.07 lr 0.100000
+==== Epoch 62/99 ====
+Epoch[62]: train_loss 0.6503 acc1 80.10 acc5 97.90 | val_loss 3.1301 acc1 38.49 acc5 66.36 lr 0.100000
+==== Epoch 63/99 ====
+Epoch[63]: train_loss 0.5974 acc1 80.86 acc5 98.05 | val_loss 3.1554 acc1 38.95 acc5 66.06 lr 0.100000
+==== Epoch 64/99 ====
+Epoch[64]: train_loss 0.5565 acc1 82.82 acc5 98.66 | val_loss 3.2824 acc1 37.29 acc5 65.57 lr 0.100000
+==== Epoch 65/99 ====
+Epoch[65]: train_loss 0.5523 acc1 82.27 acc5 98.64 | val_loss 3.1937 acc1 37.94 acc5 65.89 lr 0.100000
+==== Epoch 66/99 ====
+Epoch[66]: train_loss 0.4959 acc1 84.59 acc5 99.06 | val_loss 3.1840 acc1 38.67 acc5 66.37 lr 0.100000
+==== Epoch 67/99 ====
+Epoch[67]: train_loss 0.4663 acc1 85.74 acc5 99.01 | val_loss 3.1591 acc1 38.68 acc5 66.59 lr 0.100000
+==== Epoch 68/99 ====
+Epoch[68]: train_loss 0.4878 acc1 85.01 acc5 98.91 | val_loss 3.1657 acc1 38.93 acc5 66.46 lr 0.100000
+==== Epoch 69/99 ====
+Epoch[69]: train_loss 0.4450 acc1 86.80 acc5 98.91 | val_loss 3.1925 acc1 39.10 acc5 66.86 lr 0.100000
+==== Epoch 70/99 ====
+Epoch[70]: train_loss 0.4100 acc1 87.54 acc5 99.14 | val_loss 3.2506 acc1 37.96 acc5 66.10 lr 0.100000
+==== Epoch 71/99 ====
+Epoch[71]: train_loss 0.3782 acc1 88.75 acc5 99.44 | val_loss 3.3402 acc1 36.52 acc5 64.86 lr 0.100000
+==== Epoch 72/99 ====
+Epoch[72]: train_loss 0.4570 acc1 85.97 acc5 98.94 | val_loss 3.2634 acc1 38.61 acc5 65.86 lr 0.100000
+==== Epoch 73/99 ====
+Epoch[73]: train_loss 0.4101 acc1 87.55 acc5 99.17 | val_loss 3.2072 acc1 38.41 acc5 66.59 lr 0.100000
+==== Epoch 74/99 ====
+Epoch[74]: train_loss 0.3600 acc1 89.22 acc5 99.26 | val_loss 3.2001 acc1 39.02 acc5 66.35 lr 0.100000
+==== Epoch 75/99 ====
+Epoch[75]: train_loss 0.3502 acc1 89.39 acc5 99.39 | val_loss 3.3137 acc1 37.61 acc5 65.69 lr 0.100000
+==== Epoch 76/99 ====
+Epoch[76]: train_loss 0.3199 acc1 90.29 acc5 99.52 | val_loss 3.3154 acc1 39.10 acc5 66.40 lr 0.100000
+==== Epoch 77/99 ====
+Epoch[77]: train_loss 0.2980 acc1 91.26 acc5 99.60 | val_loss 3.2010 acc1 39.19 acc5 66.25 lr 0.100000
+==== Epoch 78/99 ====
+Epoch[78]: train_loss 0.2801 acc1 91.95 acc5 99.63 | val_loss 3.1928 acc1 40.00 acc5 66.51 lr 0.100000
+==== Epoch 79/99 ====
+Epoch[79]: train_loss 0.2720 acc1 91.82 acc5 99.63 | val_loss 3.2124 acc1 39.30 acc5 66.62 lr 0.100000
+==== Epoch 80/99 ====
+Epoch[80]: train_loss 0.2857 acc1 91.71 acc5 99.49 | val_loss 3.3428 acc1 38.45 acc5 65.46 lr 0.100000
+==== Epoch 81/99 ====
+Epoch[81]: train_loss 0.3567 acc1 89.49 acc5 99.17 | val_loss 3.2459 acc1 39.18 acc5 66.63 lr 0.100000
+==== Epoch 82/99 ====
+Epoch[82]: train_loss 0.3212 acc1 90.30 acc5 99.39 | val_loss 3.2388 acc1 39.74 acc5 66.55 lr 0.100000
+==== Epoch 83/99 ====
+Epoch[83]: train_loss 0.3083 acc1 90.62 acc5 99.46 | val_loss 3.2630 acc1 38.71 acc5 66.39 lr 0.100000
+==== Epoch 84/99 ====
+Epoch[84]: train_loss 0.2641 acc1 92.53 acc5 99.54 | val_loss 3.1942 acc1 39.89 acc5 66.65 lr 0.100000
+==== Epoch 85/99 ====
+Epoch[85]: train_loss 0.2693 acc1 92.38 acc5 99.70 | val_loss 3.2200 acc1 39.22 acc5 66.41 lr 0.100000
+==== Epoch 86/99 ====
+Epoch[86]: train_loss 0.2641 acc1 92.03 acc5 99.74 | val_loss 3.1941 acc1 39.95 acc5 67.16 lr 0.100000
+==== Epoch 87/99 ====
+Epoch[87]: train_loss 0.2603 acc1 92.48 acc5 99.49 | val_loss 3.2233 acc1 39.55 acc5 67.10 lr 0.100000
+==== Epoch 88/99 ====
+Epoch[88]: train_loss 0.2535 acc1 92.98 acc5 99.44 | val_loss 3.2232 acc1 39.47 acc5 66.73 lr 0.100000
+==== Epoch 89/99 ====
+Epoch[89]: train_loss 0.2229 acc1 94.05 acc5 99.74 | val_loss 3.1465 acc1 39.85 acc5 67.00 lr 0.100000
+==== Epoch 90/99 ====
+Epoch[90]: train_loss 0.2287 acc1 93.30 acc5 99.66 | val_loss 3.1954 acc1 39.85 acc5 67.27 lr 0.100000
+==== Epoch 91/99 ====
+Epoch[91]: train_loss 0.2321 acc1 93.46 acc5 99.63 | val_loss 3.1567 acc1 39.58 acc5 67.12 lr 0.100000
+==== Epoch 92/99 ====
+Epoch[92]: train_loss 0.2274 acc1 93.47 acc5 99.65 | val_loss 3.2656 acc1 38.78 acc5 66.17 lr 0.100000
+==== Epoch 93/99 ====
+Epoch[93]: train_loss 0.2080 acc1 94.26 acc5 99.78 | val_loss 3.1320 acc1 40.49 acc5 67.25 lr 0.100000
+==== Epoch 94/99 ====
+Epoch[94]: train_loss 0.2095 acc1 94.05 acc5 99.84 | val_loss 3.2433 acc1 39.06 acc5 65.87 lr 0.100000
+==== Epoch 95/99 ====
+Epoch[95]: train_loss 0.2263 acc1 93.34 acc5 99.84 | val_loss 3.2711 acc1 38.63 acc5 66.08 lr 0.100000
+==== Epoch 96/99 ====
+Epoch[96]: train_loss 0.2144 acc1 94.11 acc5 99.68 | val_loss 3.2296 acc1 39.51 acc5 66.39 lr 0.100000
+==== Epoch 97/99 ====
+Epoch[97]: train_loss 0.2124 acc1 94.02 acc5 99.74 | val_loss 3.2011 acc1 40.07 acc5 66.49 lr 0.100000
+==== Epoch 98/99 ====
+Epoch[98]: train_loss 0.2343 acc1 93.54 acc5 99.65 | val_loss 3.1931 acc1 39.45 acc5 66.36 lr 0.100000
+==== Epoch 99/99 ====
+Epoch[99]: train_loss 0.2398 acc1 93.06 acc5 99.76 | val_loss 3.3225 acc1 38.26 acc5 65.57 lr 0.010000
+Training finished. Best val acc1: 40.49
