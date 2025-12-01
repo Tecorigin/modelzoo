@@ -1,0 +1,211 @@
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+[INFO] Creating model with 100 output classes.
+==== Epoch 0/99 ====
+Epoch[0]: train_loss 4.1116 acc1 6.46 acc5 22.61 | val_loss 4.0334 acc1 7.07 acc5 25.50 lr 0.100000
+==== Epoch 1/99 ====
+Epoch[1]: train_loss 3.3740 acc1 16.99 acc5 43.92 | val_loss 3.4776 acc1 15.84 acc5 43.82 lr 0.100000
+==== Epoch 2/99 ====
+Epoch[2]: train_loss 2.8974 acc1 25.95 acc5 57.79 | val_loss 2.7387 acc1 28.74 acc5 62.00 lr 0.100000
+==== Epoch 3/99 ====
+Epoch[3]: train_loss 2.5325 acc1 33.49 acc5 66.59 | val_loss 2.5057 acc1 33.52 acc5 67.48 lr 0.100000
+==== Epoch 4/99 ====
+Epoch[4]: train_loss 2.2333 acc1 40.46 acc5 73.55 | val_loss 2.2767 acc1 38.32 acc5 72.21 lr 0.100000
+==== Epoch 5/99 ====
+Epoch[5]: train_loss 1.9981 acc1 45.09 acc5 78.02 | val_loss 2.0858 acc1 42.73 acc5 75.93 lr 0.100000
+==== Epoch 6/99 ====
+Epoch[6]: train_loss 1.8086 acc1 49.63 acc5 81.79 | val_loss 1.9552 acc1 45.65 acc5 78.48 lr 0.100000
+==== Epoch 7/99 ====
+Epoch[7]: train_loss 1.6387 acc1 53.79 acc5 84.24 | val_loss 1.9788 acc1 46.22 acc5 78.21 lr 0.100000
+==== Epoch 8/99 ====
+Epoch[8]: train_loss 1.5206 acc1 56.59 acc5 86.32 | val_loss 1.7180 acc1 51.48 acc5 82.74 lr 0.100000
+==== Epoch 9/99 ====
+Epoch[9]: train_loss 1.4298 acc1 58.83 acc5 87.89 | val_loss 1.6456 acc1 53.89 acc5 83.90 lr 0.100000
+==== Epoch 10/99 ====
+Epoch[10]: train_loss 1.3034 acc1 62.13 acc5 89.44 | val_loss 1.6092 acc1 54.68 acc5 84.75 lr 0.100000
+==== Epoch 11/99 ====
+Epoch[11]: train_loss 1.2687 acc1 63.30 acc5 90.10 | val_loss 1.5691 acc1 55.91 acc5 84.99 lr 0.100000
+==== Epoch 12/99 ====
+Epoch[12]: train_loss 1.1636 acc1 65.46 acc5 91.65 | val_loss 1.4968 acc1 57.27 acc5 86.37 lr 0.100000
+==== Epoch 13/99 ====
+Epoch[13]: train_loss 1.1010 acc1 67.65 acc5 91.79 | val_loss 1.4392 acc1 58.63 acc5 87.11 lr 0.100000
+==== Epoch 14/99 ====
+Epoch[14]: train_loss 1.0761 acc1 68.13 acc5 92.59 | val_loss 1.4078 acc1 59.67 acc5 87.21 lr 0.100000
+==== Epoch 15/99 ====
+Epoch[15]: train_loss 1.0434 acc1 68.70 acc5 92.93 | val_loss 1.5388 acc1 57.89 acc5 85.54 lr 0.100000
+==== Epoch 16/99 ====
+Epoch[16]: train_loss 0.9765 acc1 71.01 acc5 93.76 | val_loss 1.3551 acc1 61.11 acc5 88.48 lr 0.100000
+==== Epoch 17/99 ====
+Epoch[17]: train_loss 0.9263 acc1 72.90 acc5 94.59 | val_loss 1.4478 acc1 59.91 acc5 87.11 lr 0.100000
+==== Epoch 18/99 ====
+Epoch[18]: train_loss 0.8962 acc1 73.44 acc5 94.77 | val_loss 1.3431 acc1 61.44 acc5 88.44 lr 0.100000
+==== Epoch 19/99 ====
+Epoch[19]: train_loss 0.8580 acc1 74.43 acc5 94.69 | val_loss 1.3527 acc1 61.80 acc5 88.50 lr 0.100000
+==== Epoch 20/99 ====
+Epoch[20]: train_loss 0.8179 acc1 75.41 acc5 95.70 | val_loss 1.4467 acc1 60.29 acc5 87.65 lr 0.100000
+==== Epoch 21/99 ====
+Epoch[21]: train_loss 0.8046 acc1 75.46 acc5 96.11 | val_loss 1.3852 acc1 61.19 acc5 88.28 lr 0.100000
+==== Epoch 22/99 ====
+Epoch[22]: train_loss 0.7677 acc1 76.64 acc5 95.92 | val_loss 1.4095 acc1 60.51 acc5 87.70 lr 0.100000
+==== Epoch 23/99 ====
+Epoch[23]: train_loss 0.7428 acc1 77.33 acc5 96.45 | val_loss 1.3029 acc1 63.59 acc5 89.29 lr 0.100000
+==== Epoch 24/99 ====
+Epoch[24]: train_loss 0.7237 acc1 78.08 acc5 96.85 | val_loss 1.3056 acc1 63.13 acc5 89.59 lr 0.100000
+==== Epoch 25/99 ====
+Epoch[25]: train_loss 0.6907 acc1 78.78 acc5 97.14 | val_loss 1.3753 acc1 62.62 acc5 88.44 lr 0.100000
+==== Epoch 26/99 ====
+Epoch[26]: train_loss 0.6459 acc1 80.22 acc5 97.15 | val_loss 1.2534 acc1 65.36 acc5 90.08 lr 0.100000
+==== Epoch 27/99 ====
+Epoch[27]: train_loss 0.6461 acc1 80.10 acc5 97.34 | val_loss 1.3982 acc1 62.04 acc5 87.47 lr 0.100000
+==== Epoch 28/99 ====
+Epoch[28]: train_loss 0.6199 acc1 80.96 acc5 97.41 | val_loss 1.3254 acc1 63.52 acc5 89.57 lr 0.100000
+==== Epoch 29/99 ====
+Epoch[29]: train_loss 0.6154 acc1 80.96 acc5 97.66 | val_loss 1.2336 acc1 65.96 acc5 90.35 lr 0.100000
+==== Epoch 30/99 ====
+Epoch[30]: train_loss 0.5823 acc1 81.86 acc5 97.89 | val_loss 1.3754 acc1 63.85 acc5 88.22 lr 0.100000
+==== Epoch 31/99 ====
+Epoch[31]: train_loss 0.5690 acc1 82.34 acc5 97.87 | val_loss 1.3657 acc1 63.32 acc5 88.28 lr 0.100000
+==== Epoch 32/99 ====
+Epoch[32]: train_loss 0.5573 acc1 82.80 acc5 97.74 | val_loss 1.2874 acc1 65.89 acc5 89.46 lr 0.100000
+==== Epoch 33/99 ====
+Epoch[33]: train_loss 0.5380 acc1 83.55 acc5 98.19 | val_loss 1.3867 acc1 64.19 acc5 88.53 lr 0.100000
+==== Epoch 34/99 ====
+Epoch[34]: train_loss 0.5344 acc1 83.38 acc5 98.21 | val_loss 1.2434 acc1 66.29 acc5 90.31 lr 0.100000
+==== Epoch 35/99 ====
+Epoch[35]: train_loss 0.5069 acc1 84.54 acc5 98.35 | val_loss 1.5047 acc1 61.84 acc5 87.18 lr 0.100000
+==== Epoch 36/99 ====
+Epoch[36]: train_loss 0.4951 acc1 84.61 acc5 98.34 | val_loss 1.2778 acc1 66.53 acc5 90.10 lr 0.100000
+==== Epoch 37/99 ====
+Epoch[37]: train_loss 0.4944 acc1 85.30 acc5 98.34 | val_loss 1.2840 acc1 66.71 acc5 89.79 lr 0.100000
+==== Epoch 38/99 ====
+Epoch[38]: train_loss 0.4621 acc1 85.79 acc5 98.72 | val_loss 1.2954 acc1 65.64 acc5 89.73 lr 0.100000
+==== Epoch 39/99 ====
+Epoch[39]: train_loss 0.4470 acc1 86.58 acc5 98.62 | val_loss 1.3084 acc1 65.32 acc5 89.64 lr 0.100000
+==== Epoch 40/99 ====
+Epoch[40]: train_loss 0.4464 acc1 85.65 acc5 98.78 | val_loss 1.3711 acc1 65.07 acc5 89.34 lr 0.100000
+==== Epoch 41/99 ====
+Epoch[41]: train_loss 0.4296 acc1 86.82 acc5 99.10 | val_loss 1.3371 acc1 64.27 acc5 89.30 lr 0.100000
+==== Epoch 42/99 ====
+Epoch[42]: train_loss 0.4051 acc1 87.68 acc5 98.99 | val_loss 1.2883 acc1 65.74 acc5 89.99 lr 0.100000
+==== Epoch 43/99 ====
+Epoch[43]: train_loss 0.4234 acc1 86.80 acc5 98.90 | val_loss 1.3345 acc1 65.34 acc5 89.64 lr 0.100000
+==== Epoch 44/99 ====
+Epoch[44]: train_loss 0.4306 acc1 86.21 acc5 99.01 | val_loss 1.4396 acc1 63.22 acc5 87.81 lr 0.100000
+==== Epoch 45/99 ====
+Epoch[45]: train_loss 0.4074 acc1 87.60 acc5 99.04 | val_loss 1.4156 acc1 65.83 acc5 89.46 lr 0.100000
+==== Epoch 46/99 ====
+Epoch[46]: train_loss 0.3841 acc1 87.76 acc5 99.28 | val_loss 1.4238 acc1 63.86 acc5 88.73 lr 0.100000
+==== Epoch 47/99 ====
+Epoch[47]: train_loss 0.3752 acc1 88.37 acc5 99.14 | val_loss 1.2544 acc1 67.45 acc5 90.73 lr 0.100000
+==== Epoch 48/99 ====
+Epoch[48]: train_loss 0.3737 acc1 88.38 acc5 99.22 | val_loss 1.4013 acc1 65.31 acc5 89.79 lr 0.100000
+==== Epoch 49/99 ====
+Epoch[49]: train_loss 0.3515 acc1 89.44 acc5 99.33 | val_loss 1.4768 acc1 63.91 acc5 87.91 lr 0.100000
+==== Epoch 50/99 ====
+Epoch[50]: train_loss 0.3749 acc1 88.32 acc5 99.25 | val_loss 1.5229 acc1 62.53 acc5 87.30 lr 0.100000
+==== Epoch 51/99 ====
+Epoch[51]: train_loss 0.3672 acc1 88.70 acc5 99.28 | val_loss 1.3372 acc1 66.08 acc5 89.80 lr 0.100000
+==== Epoch 52/99 ====
+Epoch[52]: train_loss 0.3463 acc1 89.44 acc5 99.50 | val_loss 1.3536 acc1 66.38 acc5 89.63 lr 0.100000
+==== Epoch 53/99 ====
+Epoch[53]: train_loss 0.3293 acc1 90.35 acc5 99.33 | val_loss 1.3193 acc1 66.20 acc5 89.57 lr 0.100000
+==== Epoch 54/99 ====
+Epoch[54]: train_loss 0.3282 acc1 90.43 acc5 99.47 | val_loss 1.4387 acc1 63.24 acc5 88.66 lr 0.100000
+==== Epoch 55/99 ====
+Epoch[55]: train_loss 0.3126 acc1 90.43 acc5 99.65 | val_loss 1.4555 acc1 64.20 acc5 88.50 lr 0.100000
+==== Epoch 56/99 ====
+Epoch[56]: train_loss 0.3430 acc1 89.44 acc5 99.39 | val_loss 1.2921 acc1 66.73 acc5 89.97 lr 0.100000
+==== Epoch 57/99 ====
+Epoch[57]: train_loss 0.3082 acc1 90.77 acc5 99.66 | val_loss 1.3001 acc1 67.43 acc5 90.75 lr 0.100000
+==== Epoch 58/99 ====
+Epoch[58]: train_loss 0.3012 acc1 90.70 acc5 99.55 | val_loss 1.3073 acc1 67.09 acc5 90.12 lr 0.100000
+==== Epoch 59/99 ====
+Epoch[59]: train_loss 0.3084 acc1 90.69 acc5 99.58 | val_loss 1.2820 acc1 67.64 acc5 89.99 lr 0.100000
+==== Epoch 60/99 ====
+Epoch[60]: train_loss 0.3292 acc1 90.13 acc5 99.39 | val_loss 1.4476 acc1 65.17 acc5 88.32 lr 0.100000
+==== Epoch 61/99 ====
+Epoch[61]: train_loss 0.3005 acc1 91.15 acc5 99.52 | val_loss 1.3736 acc1 65.39 acc5 89.07 lr 0.100000
+==== Epoch 62/99 ====
+Epoch[62]: train_loss 0.3154 acc1 90.19 acc5 99.58 | val_loss 1.3628 acc1 66.30 acc5 89.66 lr 0.100000
+==== Epoch 63/99 ====
+Epoch[63]: train_loss 0.3075 acc1 90.45 acc5 99.44 | val_loss 1.3989 acc1 65.37 acc5 89.25 lr 0.100000
+==== Epoch 64/99 ====
+Epoch[64]: train_loss 0.2911 acc1 91.31 acc5 99.41 | val_loss 1.3937 acc1 65.25 acc5 88.78 lr 0.100000
+==== Epoch 65/99 ====
+Epoch[65]: train_loss 0.3039 acc1 90.58 acc5 99.60 | val_loss 1.3304 acc1 66.19 acc5 89.67 lr 0.100000
+==== Epoch 66/99 ====
+Epoch[66]: train_loss 0.2860 acc1 91.41 acc5 99.63 | val_loss 1.4233 acc1 65.69 acc5 88.87 lr 0.100000
+==== Epoch 67/99 ====
+Epoch[67]: train_loss 0.2862 acc1 91.20 acc5 99.58 | val_loss 1.4542 acc1 63.70 acc5 88.06 lr 0.100000
+==== Epoch 68/99 ====
+Epoch[68]: train_loss 0.2935 acc1 91.06 acc5 99.71 | val_loss 1.3241 acc1 66.29 acc5 89.71 lr 0.100000
+==== Epoch 69/99 ====
+Epoch[69]: train_loss 0.2747 acc1 92.03 acc5 99.73 | val_loss 1.3628 acc1 66.15 acc5 89.58 lr 0.100000
+==== Epoch 70/99 ====
+Epoch[70]: train_loss 0.2775 acc1 91.62 acc5 99.57 | val_loss 1.4248 acc1 65.47 acc5 88.74 lr 0.100000
+==== Epoch 71/99 ====
+Epoch[71]: train_loss 0.3049 acc1 90.48 acc5 99.66 | val_loss 1.3116 acc1 66.95 acc5 90.15 lr 0.100000
+==== Epoch 72/99 ====
+Epoch[72]: train_loss 0.2772 acc1 91.79 acc5 99.81 | val_loss 1.3868 acc1 65.67 acc5 89.35 lr 0.100000
+==== Epoch 73/99 ====
+Epoch[73]: train_loss 0.2717 acc1 91.39 acc5 99.66 | val_loss 1.3354 acc1 66.03 acc5 89.81 lr 0.100000
+==== Epoch 74/99 ====
+Epoch[74]: train_loss 0.2770 acc1 91.66 acc5 99.71 | val_loss 1.4437 acc1 65.85 acc5 89.33 lr 0.100000
+==== Epoch 75/99 ====
+Epoch[75]: train_loss 0.2619 acc1 92.27 acc5 99.63 | val_loss 1.5027 acc1 66.15 acc5 89.22 lr 0.100000
+==== Epoch 76/99 ====
+Epoch[76]: train_loss 0.2986 acc1 91.50 acc5 99.49 | val_loss 1.5174 acc1 64.94 acc5 89.02 lr 0.100000
+==== Epoch 77/99 ====
+Epoch[77]: train_loss 0.2689 acc1 91.84 acc5 99.71 | val_loss 1.3420 acc1 65.99 acc5 89.41 lr 0.100000
+==== Epoch 78/99 ====
+Epoch[78]: train_loss 0.2738 acc1 91.97 acc5 99.68 | val_loss 1.3658 acc1 66.80 acc5 89.97 lr 0.100000
+==== Epoch 79/99 ====
+Epoch[79]: train_loss 0.2542 acc1 92.69 acc5 99.70 | val_loss 1.3463 acc1 65.85 acc5 88.85 lr 0.100000
+==== Epoch 80/99 ====
+Epoch[80]: train_loss 0.2486 acc1 92.96 acc5 99.71 | val_loss 1.6283 acc1 62.86 acc5 87.72 lr 0.100000
+==== Epoch 81/99 ====
+Epoch[81]: train_loss 0.2524 acc1 92.27 acc5 99.81 | val_loss 1.3927 acc1 66.39 acc5 89.24 lr 0.100000
+==== Epoch 82/99 ====
+Epoch[82]: train_loss 0.2756 acc1 91.58 acc5 99.57 | val_loss 1.3176 acc1 66.65 acc5 89.79 lr 0.100000
+==== Epoch 83/99 ====
+Epoch[83]: train_loss 0.2481 acc1 92.50 acc5 99.86 | val_loss 1.4661 acc1 63.78 acc5 88.31 lr 0.100000
+==== Epoch 84/99 ====
+Epoch[84]: train_loss 0.2670 acc1 91.89 acc5 99.76 | val_loss 1.4187 acc1 65.98 acc5 88.72 lr 0.100000
+==== Epoch 85/99 ====
+Epoch[85]: train_loss 0.2614 acc1 92.53 acc5 99.65 | val_loss 1.4471 acc1 65.21 acc5 88.49 lr 0.100000
+==== Epoch 86/99 ====
+Epoch[86]: train_loss 0.2564 acc1 92.13 acc5 99.65 | val_loss 1.5322 acc1 65.25 acc5 88.85 lr 0.100000
+==== Epoch 87/99 ====
+Epoch[87]: train_loss 0.2652 acc1 92.08 acc5 99.54 | val_loss 1.3290 acc1 67.23 acc5 89.51 lr 0.100000
+==== Epoch 88/99 ====
+Epoch[88]: train_loss 0.2378 acc1 93.09 acc5 99.78 | val_loss 1.7410 acc1 61.38 acc5 86.72 lr 0.100000
+==== Epoch 89/99 ====
+Epoch[89]: train_loss 0.2618 acc1 92.10 acc5 99.50 | val_loss 1.3903 acc1 66.19 acc5 88.74 lr 0.100000
+==== Epoch 90/99 ====
+Epoch[90]: train_loss 0.2503 acc1 92.70 acc5 99.68 | val_loss 1.2871 acc1 68.37 acc5 89.88 lr 0.100000
+==== Epoch 91/99 ====
+Epoch[91]: train_loss 0.2405 acc1 92.64 acc5 99.66 | val_loss 1.3990 acc1 66.97 acc5 89.58 lr 0.100000
+==== Epoch 92/99 ====
+Epoch[92]: train_loss 0.2284 acc1 93.38 acc5 99.73 | val_loss 1.4174 acc1 65.11 acc5 88.68 lr 0.100000
+==== Epoch 93/99 ====
+Epoch[93]: train_loss 0.2373 acc1 93.04 acc5 99.74 | val_loss 1.4137 acc1 64.77 acc5 88.99 lr 0.100000
+==== Epoch 94/99 ====
+Epoch[94]: train_loss 0.2423 acc1 92.88 acc5 99.68 | val_loss 1.3482 acc1 65.58 acc5 89.62 lr 0.100000
+==== Epoch 95/99 ====
+Epoch[95]: train_loss 0.2556 acc1 92.69 acc5 99.65 | val_loss 1.6211 acc1 62.12 acc5 86.56 lr 0.100000
+==== Epoch 96/99 ====
+Epoch[96]: train_loss 0.2464 acc1 92.67 acc5 99.74 | val_loss 1.2749 acc1 68.18 acc5 89.99 lr 0.100000
+==== Epoch 97/99 ====
+Epoch[97]: train_loss 0.2356 acc1 93.09 acc5 99.78 | val_loss 1.5497 acc1 65.78 acc5 88.25 lr 0.100000
+==== Epoch 98/99 ====
+Epoch[98]: train_loss 0.2362 acc1 93.02 acc5 99.81 | val_loss 1.4754 acc1 65.56 acc5 89.14 lr 0.100000
+==== Epoch 99/99 ====
+Epoch[99]: train_loss 0.2348 acc1 93.15 acc5 99.65 | val_loss 1.3992 acc1 65.10 acc5 88.33 lr 0.010000
+Training finished. Best val acc1: 68.37
+
+
