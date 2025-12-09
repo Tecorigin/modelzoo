@@ -1,0 +1,4 @@
+MeanRelativeError: -0.0024846086273140437
+MeanAbsoluteError: -0.390901
+Rule,mean_absolute_error -0.390901
+pass mean_relative_error=-0.0024846086273140437 <= 0.05 or mean_absolute_error=-0.390901 <= 0.0002
