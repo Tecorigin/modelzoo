@@ -61,10 +61,12 @@ FastFCN是一种高效的实时分割分割模型，通过使用联合金字塔�
 
 ![loss](./image/loss.jpg)
 
-MeanRelativeError: 0.024320320785466323
-MeanAbsoluteError: -0.12326593210201452
-Rule,mean_absolute_error -0.12326593210201452
-pass mean_relative_error=0.024320320785466323 <= 0.05 or mean_absolute_error=-0.12326593210201452 <= 0.0002
+MeanRelativeError: 0.1648580524821943
+MeanAbsoluteError: 0.1602607540564962
+Rule,mean_absolute_error 0.1602607540564962
+pass mean_relative_error=0.1648580524821943 <= 0.05 or mean_absolute_error=0.1602607540564962 <= 0.0002
+
+
 
 
 
