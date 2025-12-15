@@ -1,10 +1,10 @@
 
 # fastfcn
 ## 1. 模型概述
-FastFCN是一种高效的实时语义分割模型，通过使用Joint Pyramid Upsampling（JPU）模块替代传统计算密集的扩张卷积，在保持高精度的同时显著提升分割速度，适用于资源受限场景。
+fastfcn是一种基于动态卷积核的通用分割架构，通过迭代学习可自适应更新的卷积核，统一处理语义、实例和全景分割任务，实现端到端的高效分割。
 
-- 论文链接：[1903.11816\]FastFCN: Rethinking Dilated Convolution in the Backbone for Semantic Segmentation(https://arxiv.org/abs/1903.11816)
-- 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/fastfcn
+- 论文链接：[1903.11816 \]FastFCN: Rethinking Dilated Convolution in the Backbone for Semantic Segmentation(https://arxiv.org/pdf/1903.11816.pdf )
+- 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/fastscn
 
 ## 2. 快速开始
 使用本模型执行训练的主要流程如下：
@@ -19,7 +19,7 @@ FastFCN是一种高效的实时语义分割模型，通过使用Joint Pyramid Up
 
 ### 2.2 准备数据集
 #### 2.2.1 获取数据集
- 使用 Cityspaces 数据集，该数据集为开源数据集，可从 (https://opendatalab.com/) 下载。
+ 使用 Cityscapes数据集，该数据集为开源数据集，可从 (https://opendatalab.com/) 下载。
 
 #### 2.2.2 处理数据集
 具体配置方式可参考：https://github.com/open-mmlab/mmsegmentation/blob/main/docs/en/advanced_guides/datasets.md。
@@ -51,7 +51,7 @@ FastFCN是一种高效的实时语义分割模型，通过使用Joint Pyramid Up
 
 2. 运行训练。该模型支持单机单卡。
     ```
-python run_fastfcn.py --config ../configs/fastfcn/fastfcn_r50-d32_jpu_psp_4xb2-80k_cityscapes-512x1024.py \
+    python run_knet.py --config ../configs/fastfcn/fastfcn_r50-d32_jpu_psp_4xb2-80k_cityscapes-512x1024.py \
        --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
@@ -61,9 +61,10 @@ python run_fastfcn.py --config ../configs/fastfcn/fastfcn_r50-d32_jpu_psp_4xb2-8
 
 ![loss](./image/loss.jpg)
 
-MeanRelativeError: 0.1648580524821943
-MeanAbsoluteError: 0.1602607540564962
-Rule,mean_absolute_error 0.1602607540564962
-fail mean_relative_error=0.1648580524821943 <= 0.05 or mean_absolute_error=0.1602607540564962 <= 0.0002
+MeanRelativeError: 0.04445695808240128
+MeanAbsoluteError: 0.4338244872518105
+Rule,mean_relative_error 0.04445695808240128
+pass mean_relative_error=0.04445695808240128 <= 0.05 or mean_absolute_error=0.4338244872518105 <= 0.0002
+
 
 
