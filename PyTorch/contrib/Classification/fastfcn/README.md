@@ -1,7 +1,7 @@
 
 # fastfcn
 ## 1. 模型概述
-fastfcn是一种基于动态卷积核的通用分割架构，通过迭代学习可自适应更新的卷积核，统一处理语义、实例和全景分割任务，实现端到端的高效分割。
+FastFCN是一种高效的实时分割分割模型，通过使用联合金字塔上采样（JPU）模块替代传统计算的密集扩展稀疏，在保持头部的同时显着提升分割速度，适用于资源设定场景。
 
 - 论文链接：[1903.11816 \]FastFCN: Rethinking Dilated Convolution in the Backbone for Semantic Segmentation(https://arxiv.org/pdf/1903.11816.pdf )
 - 仓库链接：https://github.com/open-mmlab/mmsegmentation/tree/main/configs/fastscn
@@ -51,8 +51,8 @@ fastfcn是一种基于动态卷积核的通用分割架构，通过迭代学习�
 
 2. 运行训练。该模型支持单机单卡。
     ```
-    python run_knet.py --config ../configs/fastfcn/fastfcn_r50-d32_jpu_psp_4xb2-80k_cityscapes-512x1024.py \
-       --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
+    python run_fastfcn.py --config ../configs/fastfcn/fastfcn_r50-d32_jpu_psp_4xb2-80k_cityscapes-512x1024.py \
+    --launcher pytorch --nproc-per-node 1 --amp 2>&1 | tee sdaa.log
    ```
     更多训练参数参考 run_scripts/argument.py
 
@@ -61,10 +61,10 @@ fastfcn是一种基于动态卷积核的通用分割架构，通过迭代学习�
 
 ![loss](./image/loss.jpg)
 
-MeanRelativeError: 0.04445695808240128
-MeanAbsoluteError: 0.4338244872518105
-Rule,mean_relative_error 0.04445695808240128
-pass mean_relative_error=0.04445695808240128 <= 0.05 or mean_absolute_error=0.4338244872518105 <= 0.0002
+MeanRelativeError: 0.024320320785466323
+MeanAbsoluteError: -0.12326593210201452
+Rule,mean_absolute_error -0.12326593210201452
+pass mean_relative_error=0.024320320785466323 <= 0.05 or mean_absolute_error=-0.12326593210201452 <= 0.0002
 
 
 
