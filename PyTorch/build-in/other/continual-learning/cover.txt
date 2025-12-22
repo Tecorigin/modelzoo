@@ -1,0 +1,5 @@
+all api: ['_copy_from_and_resize', '_has_compatible_shallow_copy_type', '_index_put_impl_', '_local_scalar_dense', '_log_softmax', '_log_softmax_backward_data', '_pin_memory', 'add', 'add_', 'amax', 'argmax', 'as_strided', 'clone', 'copy_', 'empty', 'empty_strided', 'eq', 'fill_', 'fused_adam', 'index', 'is_pinned', 'matmul', 'max', 'mm', 'mul', 'neg', 'nll_loss_backward', 'nll_loss_forward', 'relu', 'resize_', 'slice_backward', 'sub', 'sum', 'threshold_backward', 'uniform_', 'view', 'zero_'], total: 37
+
+fallback op: ['_index_put_impl_'], total: 1
+
+coverage rate: 97.30%
