@@ -1,0 +1,3 @@
+5_o_Clock_Shadow ;Arched_Eyebrows ;Attractive ;Bags_Under_Eyes ;Bald ;Bangs ;Big_Lips ;Big_Nose ;Black_Hair ;Blond_Hair ;Blurry ;Brown_Hair ;Bushy_Eyebrows ;Chubby ;Double_Chin ;Eyeglasses ;Goatee ;Gray_Hair ;Heavy_Makeup ;High_Cheekbones ;Male ;Mouth_Slightly_Open ;Mustache ;Narrow_Eyes ;No_Beard ;Oval_Face ;Pale_Skin ;Pointy_Nose ;Receding_Hairline ;Rosy_Cheeks ;Sideburns ;Smiling ;Straight_Hair ;Wavy_Hair ;Wearing_Earrings ;Wearing_Hat ;Wearing_Lipstick ;Wearing_Necklace ;Wearing_Necktie ;Young ;
+ 
+5点钟阴影；弓形眉毛；迷人；眼袋；秃头；刘海；大嘴唇；大鼻子；黑发；金发；模糊；棕色头发；浓密眉毛；胖乎乎的；双下巴；眼镜；山羊胡；灰白头发；浓妆；高颧骨；男性；嘴微微张开；小胡子；窄眼睛；没有胡子；椭圆形脸；苍白皮肤；尖鼻子；后退的发际线；玫瑰色的脸颊；鬓角；微笑；直发；波浪形的头发；戴耳环；戴帽子；涂口红；戴项链；戴领带；年轻；

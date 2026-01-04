@@ -1,0 +1,9 @@
+(betr) huangyun@node03:~/BETR_mutimodal_transformers$ python get_loss.py
+Parsed loss array (first 10): [2.65162  2.28587  2.175225 2.2234   2.270472 2.123973 2.443415 2.307617
+ 2.817311 2.151849]
+Parsed loss array (first 10): [2.742823 2.500564 2.177278 2.804527 1.979944 2.473871 3.056848 2.192954
+ 2.936263 2.487271]
+MeanRelativeError: 2.3158449e-05
+MeanAbsoluteError: -0.039004575
+Rule,mean_absolute_error -0.039004575
+pass mean_relative_error=2.3158449e-05 <= 0.05 or mean_absolute_error=-0.039004575 <= 0.0002

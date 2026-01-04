@@ -1,0 +1,8 @@
+Parsed loss array (first 10): [7.943e-06 3.417e-06 7.077e-06 3.098e-06 6.700e-08 3.389e-06 5.936e-06
+ 4.004e-06 1.570e-06 2.243e-06]
+Parsed loss array (first 10): [3.80450e-05 5.37410e-05 1.67558e-04 1.37382e-04 3.11290e-05 2.92800e-06
+ 3.35840e-05 5.42160e-05 4.04680e-05 1.39770e-05]
+MeanRelativeError: -0.86731875
+MeanAbsoluteError: -2.7383194e-05
+Rule,mean_relative_error -0.86731875
+pass mean_relative_error=-0.86731875 <= 0.05 or mean_absolute_error=-2.7383194e-05 <= 0.0002

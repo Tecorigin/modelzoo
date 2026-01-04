@@ -1,0 +1,6 @@
+(torch_env_py310) root@tcyc-14:/data/application/huangyun/PPO-PyTorch# python coverage.py --path cov.log
+all api: ['_copy_from', '_has_compatible_shallow_copy_type', '_local_scalar_dense', '_reshape_alias', 'abs_out', 'add', 'add_', 'all', 'all_out', 'any', 'as_strided', 'as_strided_', 'bitwise_and_', 'bitwise_or_', 'bmm', 'bmm_forward', 'contiguous', 'copy_stride', 'eq', 'fill_', 'le', 'linear', 'log', 'matmul', 'mm', 'mul', 'ne', 'normal_', 'pow', 'resize_', 'sub', 'sum', 'tanh', 'view', 'zero_'], total: 35
+
+fallback op: ['linalg_cholesky_ex_out', 'linalg_solve_triangular'], total: 2
+
+coverage rate: 94.29%

@@ -1,0 +1,6 @@
+(torch_env_py310) root@tcyc-14:/data/application/huangyun/dface# python coverage.py --path cov.log
+all api: ['_copy_from', '_has_compatible_shallow_copy_type', '_index_put_impl_', '_local_scalar_dense', '_prelu_kernel', '_prelu_kernel_backward', 'add', 'add_', 'as_strided', 'binary_cross_entropy', 'binary_cross_entropy_backward', 'convolution', 'convolution_backward', 'div', 'eq', 'fill_', 'fused_adam', 'ge', 'gt', 'index', 'masked_scatter_', 'masked_select', 'max_pool2d', 'maxpool2d_backward', 'maxpool2d_forward', 'mse_loss', 'mse_loss_backward', 'mul', 'nonzero', 'sigmoid', 'sigmoid_backward', 'slice_backward', 'sum', 'view', 'zero_'], total: 35
+
+fallback op: [], total: 0
+
+coverage rate: 100.00%

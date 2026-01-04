@@ -1,0 +1,9 @@
+(betr) huangyun@node03:~/SpanBERT$ python get_loss.py
+Parsed loss array (first 10): [6.216124 6.210921 6.233663 6.240364 6.222059 6.238259 6.201701 6.218564
+ 6.166391 6.264441]
+Parsed loss array (first 10): [6.249962 6.239908 6.235353 6.242831 6.225614 6.225792 6.217155 6.245805
+ 6.183338 6.259238]
+MeanRelativeError: -0.001032805
+MeanAbsoluteError: -0.0064111818
+Rule,mean_absolute_error -0.0064111818
+pass mean_relative_error=-0.001032805 <= 0.05 or mean_absolute_error=-0.0064111818 <= 0.0002
