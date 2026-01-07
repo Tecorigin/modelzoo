@@ -1,3 +1,0 @@
-all api: ['_amp_foreach_non_finite_check_and_unscale_', '_amp_update_scale_', '_copy_from', '_has_compatible_shallow_copy_type', '_local_scalar_dense', '_log_softmax', '_log_softmax_backward_data', '_pin_memory', '_reshape_alias', 'add', 'add_', 'addmm', 'as_strided', 'cat', 'contiguous', 'convolution', 'convolution_backward', 'copy_stride', 'div', 'dropout', 'eq', 'fill_', 'fused_sgd', 'gelu', 'gelu_backward', 'is_pinned', 'linear', 'lstm', 'matmul', 'mean', 'mm', 'mul', 'mul_', 'native_layer_norm', 'native_layer_norm_backward', 'nll_loss_backward', 'nll_loss_forward', 'reciprocal', 'set_', 'sigmoid_', 'sigmoid_backward', 'sum', 'tanh', 'tanh_', 'tanh_backward', 'topk_out', 'view', 'zero_'], total: 48
-fallback op: [], total: 0
-coverage rate: 100.00%
