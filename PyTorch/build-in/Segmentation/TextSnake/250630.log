@@ -1,0 +1,192 @@
+--------------+----------------------------------------------
+ Host IP      | 127.0.1.1
+ PyTorch      | 2.4.0a0+git4451b0e
+ Torch-SDAA   | 2.0.0
+--------------+----------------------------------------------
+ SDAA Driver  | 2.2.0b2 (N/A)
+ SDAA Runtime | 2.0.0 (/opt/tecoai/lib64/libsdaart.so)
+ SDPTI        | 1.3.1 (/opt/tecoai/lib64/libsdpti.so)
+ TecoDNN      | 2.0.0 (/opt/tecoai/lib64/libtecodnn.so)
+ TecoBLAS     | 2.0.0 (/opt/tecoai/lib64/libtecoblas.so)
+ CustomDNN    | 1.22.0 (/opt/tecoai/lib64/libtecodnn_ext.so)
+ TecoRAND     | 1.8.0 (/opt/tecoai/lib64/libtecorand.so)
+ TCCL         | 1.21.0 (/opt/tecoai/lib64/libtccl.so)
+--------------+----------------------------------------------
+/root/miniconda3/envs/torch_env_py310/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:216: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+/root/miniconda3/envs/torch_env_py310/lib/python3.10/site-packages/torch/utils/_device.py:79: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at /home/local_ci_env/workspace/torch-sdaa-build_pt2.4.0/torch/include/ATen/native/IndexingUtils.h:27.)
+  return func(*args, **kwargs)
+/root/miniconda3/envs/torch_env_py310/lib/python3.10/site-packages/torch/utils/_device.py:79: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at /root/pytorch/aten/src/ATen/native/IndexingUtils.h:27.)
+  return func(*args, **kwargs)
+/root/miniconda3/envs/torch_env_py310/lib/python3.10/site-packages/torch/autograd/graph.py:768: UserWarning: indexing with dtype torch.uint8 is now deprecated, please use a dtype torch.bool instead. (Triggered internally at /root/pytorch/aten/src/ATen/native/IndexingUtils.h:27.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+==========Options============
+num_workers: 0
+batch_size: 2
+max_epoch: 200
+start_epoch: 0
+lr: 0.0001
+cuda: True
+n_disk: 15
+output_dir: output
+input_size: 512
+max_annotation: 200
+max_points: 20
+use_hard: True
+tr_thresh: 0.6
+tcl_thresh: 0.4
+post_process_expand: 0.3
+post_process_merge: False
+exp_name: total-text
+net: vgg
+dataset: total-text
+resume: None
+mgpu: False
+save_dir: ./save/
+vis_dir: ./vis/
+log_dir: ./logs/
+loss: CrossEntropyLoss
+input_channel: 1
+pretrain: False
+verbose: True
+viz: True
+start_iter: 0
+lr_adjust: fix
+stepvalues: []
+weight_decay: 0.0
+gamma: 0.1
+momentum: 0.9
+optim: SGD
+display_freq: 50
+viz_freq: 50
+save_freq: 10
+log_freq: 100
+val_freq: 100
+rescale: 255.0
+means: [0.485, 0.456, 0.406]
+stds: [0.229, 0.224, 0.225]
+checkepoch: -1
+img_root: None
+device: cuda
+=============End=============
+Start training TextSnake.
+Epoch: 0 : LR = 0.0001
+(0 / 628) - Loss: 3.0619 - tr_loss: 0.7952 - tcl_loss: 0.7358 - sin_loss: 0.4894 - cos_loss: 0.1186 - radii_loss: 0.9228
+(1 / 628) - Loss: 2.2233 - tr_loss: 0.7940 - tcl_loss: 0.7379 - sin_loss: 0.4915 - cos_loss: 0.1639 - radii_loss: 0.0360
+(2 / 628) - Loss: 3.3618 - tr_loss: 0.7953 - tcl_loss: 0.7370 - sin_loss: 0.4897 - cos_loss: 0.1674 - radii_loss: 1.1725
+(3 / 628) - Loss: 3.5044 - tr_loss: 0.8005 - tcl_loss: 0.7374 - sin_loss: 0.4814 - cos_loss: 0.0816 - radii_loss: 1.4034
+(4 / 628) - Loss: 2.7643 - tr_loss: 0.7961 - tcl_loss: 0.7386 - sin_loss: 0.4809 - cos_loss: 0.0814 - radii_loss: 0.6673
+(5 / 628) - Loss: 3.4907 - tr_loss: 0.8066 - tcl_loss: 0.7357 - sin_loss: 0.4774 - cos_loss: 0.0997 - radii_loss: 1.3714
+(6 / 628) - Loss: 2.1638 - tr_loss: 0.8055 - tcl_loss: 0.7398 - sin_loss: 0.4814 - cos_loss: 0.1275 - radii_loss: 0.0096
+(7 / 628) - Loss: 3.4346 - tr_loss: 0.8035 - tcl_loss: 0.7388 - sin_loss: 0.4827 - cos_loss: 0.1943 - radii_loss: 1.2152
+(8 / 628) - Loss: 3.1747 - tr_loss: 0.7961 - tcl_loss: 0.7402 - sin_loss: 0.4824 - cos_loss: 0.0517 - radii_loss: 1.1043
+(9 / 628) - Loss: 3.5123 - tr_loss: 0.8174 - tcl_loss: 0.7354 - sin_loss: 0.4862 - cos_loss: 0.1428 - radii_loss: 1.3304
+(10 / 628) - Loss: 2.0926 - tr_loss: 0.8062 - tcl_loss: 0.7354 - sin_loss: 0.4845 - cos_loss: 0.0634 - radii_loss: 0.0030
+(11 / 628) - Loss: 2.2477 - tr_loss: 0.7899 - tcl_loss: 0.7389 - sin_loss: 0.4893 - cos_loss: 0.1799 - radii_loss: 0.0497
+(12 / 628) - Loss: 3.1015 - tr_loss: 0.7925 - tcl_loss: 0.7434 - sin_loss: 0.4934 - cos_loss: 0.2159 - radii_loss: 0.8562
+(13 / 628) - Loss: 3.5226 - tr_loss: 0.7936 - tcl_loss: 0.7381 - sin_loss: 0.4938 - cos_loss: 0.0419 - radii_loss: 1.4552
+(14 / 628) - Loss: 2.1911 - tr_loss: 0.7915 - tcl_loss: 0.7385 - sin_loss: 0.4953 - cos_loss: 0.1303 - radii_loss: 0.0354
+(15 / 628) - Loss: 3.2974 - tr_loss: 0.7923 - tcl_loss: 0.7365 - sin_loss: 0.4940 - cos_loss: 0.1554 - radii_loss: 1.1191
+(16 / 628) - Loss: 3.2893 - tr_loss: 0.7952 - tcl_loss: 0.7392 - sin_loss: 0.4877 - cos_loss: 0.2247 - radii_loss: 1.0426
+(17 / 628) - Loss: 2.1173 - tr_loss: 0.7926 - tcl_loss: 0.7374 - sin_loss: 0.4923 - cos_loss: 0.0513 - radii_loss: 0.0437
+(18 / 628) - Loss: 2.0680 - tr_loss: 0.7931 - tcl_loss: 0.7390 - sin_loss: 0.4837 - cos_loss: 0.0408 - radii_loss: 0.0113
+(19 / 628) - Loss: 3.2653 - tr_loss: 0.7901 - tcl_loss: 0.7368 - sin_loss: 0.4928 - cos_loss: 0.0643 - radii_loss: 1.1815
+(20 / 628) - Loss: 2.3340 - tr_loss: 0.7960 - tcl_loss: 0.7395 - sin_loss: 0.4886 - cos_loss: 0.1481 - radii_loss: 0.1617
+(21 / 628) - Loss: 2.2665 - tr_loss: 0.7925 - tcl_loss: 0.7391 - sin_loss: 0.4906 - cos_loss: 0.1481 - radii_loss: 0.0962
+(22 / 628) - Loss: 2.0666 - tr_loss: 0.7903 - tcl_loss: 0.7376 - sin_loss: 0.4893 - cos_loss: 0.0458 - radii_loss: 0.0036
+(23 / 628) - Loss: 3.4665 - tr_loss: 0.7947 - tcl_loss: 0.7376 - sin_loss: 0.4916 - cos_loss: 0.1376 - radii_loss: 1.3049
+(24 / 628) - Loss: 3.5177 - tr_loss: 0.7917 - tcl_loss: 0.7396 - sin_loss: 0.4877 - cos_loss: 0.0148 - radii_loss: 1.4841
+(25 / 628) - Loss: 2.3832 - tr_loss: 0.7925 - tcl_loss: 0.7395 - sin_loss: 0.4948 - cos_loss: 0.2904 - radii_loss: 0.0660
+(26 / 628) - Loss: 3.4896 - tr_loss: 0.7947 - tcl_loss: 0.7363 - sin_loss: 0.4875 - cos_loss: 0.1201 - radii_loss: 1.3509
+(27 / 628) - Loss: 2.8869 - tr_loss: 0.7953 - tcl_loss: 0.7382 - sin_loss: 0.4792 - cos_loss: 0.1215 - radii_loss: 0.7526
+(28 / 628) - Loss: 2.4719 - tr_loss: 0.7912 - tcl_loss: 0.7385 - sin_loss: 0.4916 - cos_loss: 0.0562 - radii_loss: 0.3944
+(29 / 628) - Loss: 3.3602 - tr_loss: 0.7950 - tcl_loss: 0.7385 - sin_loss: 0.4792 - cos_loss: 0.2378 - radii_loss: 1.1097
+(30 / 628) - Loss: 3.5078 - tr_loss: 0.7926 - tcl_loss: 0.7393 - sin_loss: 0.4729 - cos_loss: 0.1206 - radii_loss: 1.3824
+(31 / 628) - Loss: 2.1108 - tr_loss: 0.7885 - tcl_loss: 0.7355 - sin_loss: 0.4924 - cos_loss: 0.0839 - radii_loss: 0.0104
+(32 / 628) - Loss: 2.1126 - tr_loss: 0.7907 - tcl_loss: 0.7359 - sin_loss: 0.4887 - cos_loss: 0.0784 - radii_loss: 0.0189
+(33 / 628) - Loss: 3.3624 - tr_loss: 0.8003 - tcl_loss: 0.7387 - sin_loss: 0.4859 - cos_loss: 0.4097 - radii_loss: 0.9277
+(34 / 628) - Loss: 2.2703 - tr_loss: 0.7917 - tcl_loss: 0.7349 - sin_loss: 0.4893 - cos_loss: 0.1488 - radii_loss: 0.1056
+(35 / 628) - Loss: 2.3520 - tr_loss: 0.7919 - tcl_loss: 0.7378 - sin_loss: 0.4822 - cos_loss: 0.1342 - radii_loss: 0.2060
+(36 / 628) - Loss: 2.1179 - tr_loss: 0.7932 - tcl_loss: 0.7374 - sin_loss: 0.4915 - cos_loss: 0.0859 - radii_loss: 0.0100
+(37 / 628) - Loss: 3.5193 - tr_loss: 0.7905 - tcl_loss: 0.7365 - sin_loss: 0.4919 - cos_loss: 0.0480 - radii_loss: 1.4524
+(38 / 628) - Loss: 2.1055 - tr_loss: 0.7364 - tcl_loss: 0.7286 - sin_loss: 0.4973 - cos_loss: 0.1100 - radii_loss: 0.0333
+(39 / 628) - Loss: 2.2871 - tr_loss: 0.7922 - tcl_loss: 0.7351 - sin_loss: 0.4922 - cos_loss: 0.2155 - radii_loss: 0.0521
+(40 / 628) - Loss: 2.5980 - tr_loss: 0.7924 - tcl_loss: 0.7333 - sin_loss: 0.4914 - cos_loss: 0.2073 - radii_loss: 0.3737
+(41 / 628) - Loss: 3.4495 - tr_loss: 0.7889 - tcl_loss: 0.7363 - sin_loss: 0.4912 - cos_loss: 0.0352 - radii_loss: 1.3979
+(42 / 628) - Loss: 3.5053 - tr_loss: 0.7905 - tcl_loss: 0.7390 - sin_loss: 0.4911 - cos_loss: 0.0470 - radii_loss: 1.4378
+(43 / 628) - Loss: 3.5070 - tr_loss: 0.7910 - tcl_loss: 0.7384 - sin_loss: 0.4873 - cos_loss: 0.0631 - radii_loss: 1.4272
+(44 / 628) - Loss: 2.4877 - tr_loss: 0.7939 - tcl_loss: 0.7338 - sin_loss: 0.4857 - cos_loss: 0.1633 - radii_loss: 0.3111
+(45 / 628) - Loss: 3.1908 - tr_loss: 0.7928 - tcl_loss: 0.7308 - sin_loss: 0.4896 - cos_loss: 0.0770 - radii_loss: 1.1007
+(46 / 628) - Loss: 2.2365 - tr_loss: 0.7945 - tcl_loss: 0.7376 - sin_loss: 0.4833 - cos_loss: 0.1878 - radii_loss: 0.0332
+(47 / 628) - Loss: 2.2771 - tr_loss: 0.7938 - tcl_loss: 0.7323 - sin_loss: 0.4904 - cos_loss: 0.2315 - radii_loss: 0.0291
+(48 / 628) - Loss: 3.3168 - tr_loss: 0.7955 - tcl_loss: 0.7391 - sin_loss: 0.4666 - cos_loss: 0.1151 - radii_loss: 1.2004
+(49 / 628) - Loss: 2.3858 - tr_loss: 0.7926 - tcl_loss: 0.7358 - sin_loss: 0.4909 - cos_loss: 0.1242 - radii_loss: 0.2423
+(50 / 628) - Loss: 3.4652 - tr_loss: 0.7886 - tcl_loss: 0.7340 - sin_loss: 0.4940 - cos_loss: 0.0629 - radii_loss: 1.3857
+(51 / 628) - Loss: 2.2306 - tr_loss: 0.7937 - tcl_loss: 0.7341 - sin_loss: 0.4877 - cos_loss: 0.1702 - radii_loss: 0.0450
+(52 / 628) - Loss: 2.3694 - tr_loss: 0.7907 - tcl_loss: 0.7341 - sin_loss: 0.4931 - cos_loss: 0.0765 - radii_loss: 0.2751
+(53 / 628) - Loss: 3.0736 - tr_loss: 0.7923 - tcl_loss: 0.7357 - sin_loss: 0.4875 - cos_loss: 0.1965 - radii_loss: 0.8616
+(54 / 628) - Loss: 3.4941 - tr_loss: 0.7931 - tcl_loss: 0.7359 - sin_loss: 0.4932 - cos_loss: 0.1575 - radii_loss: 1.3144
+(55 / 628) - Loss: 2.9707 - tr_loss: 0.7912 - tcl_loss: 0.7351 - sin_loss: 0.4926 - cos_loss: 0.1721 - radii_loss: 0.7798
+(56 / 628) - Loss: 2.4556 - tr_loss: 0.7917 - tcl_loss: 0.7391 - sin_loss: 0.4940 - cos_loss: 0.1585 - radii_loss: 0.2722
+(57 / 628) - Loss: 3.5180 - tr_loss: 0.7944 - tcl_loss: 0.7359 - sin_loss: 0.4932 - cos_loss: 0.0525 - radii_loss: 1.4420
+(58 / 628) - Loss: 2.0823 - tr_loss: 0.7964 - tcl_loss: 0.7362 - sin_loss: 0.4840 - cos_loss: 0.0412 - radii_loss: 0.0245
+(59 / 628) - Loss: 3.5330 - tr_loss: 0.7914 - tcl_loss: 0.7335 - sin_loss: 0.4889 - cos_loss: 0.2027 - radii_loss: 1.3165
+(60 / 628) - Loss: 3.4528 - tr_loss: 0.7910 - tcl_loss: 0.7351 - sin_loss: 0.4917 - cos_loss: 0.1200 - radii_loss: 1.3150
+(61 / 628) - Loss: 3.3540 - tr_loss: 0.7887 - tcl_loss: 0.7343 - sin_loss: 0.4919 - cos_loss: 0.3859 - radii_loss: 0.9531
+(62 / 628) - Loss: 3.3790 - tr_loss: 0.7928 - tcl_loss: 0.7344 - sin_loss: 0.4827 - cos_loss: 0.1433 - radii_loss: 1.2258
+(63 / 628) - Loss: 3.5148 - tr_loss: 0.7936 - tcl_loss: 0.7364 - sin_loss: 0.4768 - cos_loss: 0.2499 - radii_loss: 1.2581
+(64 / 628) - Loss: 2.6016 - tr_loss: 0.7912 - tcl_loss: 0.7347 - sin_loss: 0.4888 - cos_loss: 0.2153 - radii_loss: 0.3717
+(65 / 628) - Loss: 2.1801 - tr_loss: 0.7918 - tcl_loss: 0.7394 - sin_loss: 0.4853 - cos_loss: 0.1153 - radii_loss: 0.0483
+(66 / 628) - Loss: 2.1644 - tr_loss: 0.7910 - tcl_loss: 0.7317 - sin_loss: 0.4868 - cos_loss: 0.0342 - radii_loss: 0.1206
+(67 / 628) - Loss: 2.3535 - tr_loss: 0.7924 - tcl_loss: 0.7366 - sin_loss: 0.4888 - cos_loss: 0.1963 - radii_loss: 0.1393
+(68 / 628) - Loss: 2.0863 - tr_loss: 0.7921 - tcl_loss: 0.7312 - sin_loss: 0.4911 - cos_loss: 0.0651 - radii_loss: 0.0069
+(69 / 628) - Loss: 3.4061 - tr_loss: 0.7911 - tcl_loss: 0.7334 - sin_loss: 0.4860 - cos_loss: 0.0986 - radii_loss: 1.2970
+(70 / 628) - Loss: 2.7531 - tr_loss: 0.7888 - tcl_loss: 0.7344 - sin_loss: 0.4930 - cos_loss: 0.1532 - radii_loss: 0.5837
+(71 / 628) - Loss: 2.9611 - tr_loss: 0.8061 - tcl_loss: 0.7322 - sin_loss: 0.4767 - cos_loss: 0.2267 - radii_loss: 0.7194
+(72 / 628) - Loss: 2.0681 - tr_loss: 0.7962 - tcl_loss: 0.7337 - sin_loss: 0.4864 - cos_loss: 0.0504 - radii_loss: 0.0015
+(73 / 628) - Loss: 3.3665 - tr_loss: 0.7903 - tcl_loss: 0.7375 - sin_loss: 0.4816 - cos_loss: 0.1977 - radii_loss: 1.1594
+(74 / 628) - Loss: 2.0930 - tr_loss: 0.7910 - tcl_loss: 0.7403 - sin_loss: 0.4896 - cos_loss: 0.0649 - radii_loss: 0.0072
+(75 / 628) - Loss: 2.3874 - tr_loss: 0.7928 - tcl_loss: 0.7480 - sin_loss: 0.4937 - cos_loss: 0.2874 - radii_loss: 0.0655
+(76 / 628) - Loss: 2.9698 - tr_loss: 0.7947 - tcl_loss: 0.7338 - sin_loss: 0.4846 - cos_loss: 0.0713 - radii_loss: 0.8854
+(77 / 628) - Loss: 3.0351 - tr_loss: 0.7915 - tcl_loss: 0.7359 - sin_loss: 0.4914 - cos_loss: 0.0580 - radii_loss: 0.9582
+(78 / 628) - Loss: 3.2279 - tr_loss: 0.7914 - tcl_loss: 0.7347 - sin_loss: 0.4897 - cos_loss: 0.0538 - radii_loss: 1.1584
+(79 / 628) - Loss: 2.8842 - tr_loss: 0.7927 - tcl_loss: 0.7362 - sin_loss: 0.4891 - cos_loss: 0.1249 - radii_loss: 0.7413
+(80 / 628) - Loss: 3.5043 - tr_loss: 0.7846 - tcl_loss: 0.7337 - sin_loss: 0.4976 - cos_loss: 0.0692 - radii_loss: 1.4193
+(81 / 628) - Loss: 3.5059 - tr_loss: 0.7919 - tcl_loss: 0.7361 - sin_loss: 0.4872 - cos_loss: 0.0269 - radii_loss: 1.4639
+(82 / 628) - Loss: 2.2273 - tr_loss: 0.8012 - tcl_loss: 0.7378 - sin_loss: 0.4809 - cos_loss: 0.1648 - radii_loss: 0.0427
+(83 / 628) - Loss: 3.4370 - tr_loss: 0.7913 - tcl_loss: 0.7391 - sin_loss: 0.4889 - cos_loss: 0.0208 - radii_loss: 1.3969
+(84 / 628) - Loss: 2.4795 - tr_loss: 0.7918 - tcl_loss: 0.7357 - sin_loss: 0.4937 - cos_loss: 0.2043 - radii_loss: 0.2540
+(85 / 628) - Loss: 2.8394 - tr_loss: 0.7974 - tcl_loss: 0.7394 - sin_loss: 0.4590 - cos_loss: 0.4149 - radii_loss: 0.4287
+(86 / 628) - Loss: 3.4551 - tr_loss: 0.7935 - tcl_loss: 0.7396 - sin_loss: 0.4845 - cos_loss: 0.1378 - radii_loss: 1.2998
+(87 / 628) - Loss: 2.5136 - tr_loss: 0.7976 - tcl_loss: 0.7364 - sin_loss: 0.4839 - cos_loss: 0.2650 - radii_loss: 0.2307
+(88 / 628) - Loss: 2.6131 - tr_loss: 0.7956 - tcl_loss: 0.7409 - sin_loss: 0.4834 - cos_loss: 0.0841 - radii_loss: 0.5091
+(89 / 628) - Loss: 2.1115 - tr_loss: 0.7954 - tcl_loss: 0.7345 - sin_loss: 0.4809 - cos_loss: 0.0923 - radii_loss: 0.0085
+(90 / 628) - Loss: 3.5247 - tr_loss: 0.7900 - tcl_loss: 0.7356 - sin_loss: 0.4966 - cos_loss: 0.0267 - radii_loss: 1.4758
+(91 / 628) - Loss: 2.8076 - tr_loss: 0.7943 - tcl_loss: 0.7379 - sin_loss: 0.4890 - cos_loss: 0.1859 - radii_loss: 0.6005
+(92 / 628) - Loss: 3.4378 - tr_loss: 0.7952 - tcl_loss: 0.7360 - sin_loss: 0.4811 - cos_loss: 0.1689 - radii_loss: 1.2566
+(93 / 628) - Loss: 3.3748 - tr_loss: 0.7920 - tcl_loss: 0.7344 - sin_loss: 0.4942 - cos_loss: 0.2235 - radii_loss: 1.1307
+(94 / 628) - Loss: 2.5267 - tr_loss: 0.7948 - tcl_loss: 0.7383 - sin_loss: 0.4890 - cos_loss: 0.0877 - radii_loss: 0.4168
+(95 / 628) - Loss: 2.5676 - tr_loss: 0.7884 - tcl_loss: 0.7391 - sin_loss: 0.4932 - cos_loss: 0.0847 - radii_loss: 0.4622
+(96 / 628) - Loss: 2.9409 - tr_loss: 0.7931 - tcl_loss: 0.7360 - sin_loss: 0.4901 - cos_loss: 0.2730 - radii_loss: 0.6487
+(97 / 628) - Loss: 2.1267 - tr_loss: 0.8028 - tcl_loss: 0.7329 - sin_loss: 0.4762 - cos_loss: 0.1100 - radii_loss: 0.0048
+(98 / 628) - Loss: 2.0269 - tr_loss: 0.7921 - tcl_loss: 0.7371 - sin_loss: 0.4914 - cos_loss: 0.0063 - radii_loss: 0.0000
+(99 / 628) - Loss: 2.2755 - tr_loss: 0.7954 - tcl_loss: 0.7363 - sin_loss: 0.4807 - cos_loss: 0.0377 - radii_loss: 0.2253
+(100 / 628) - Loss: 3.3203 - tr_loss: 0.7909 - tcl_loss: 0.7369 - sin_loss: 0.4883 - cos_loss: 0.0618 - radii_loss: 1.2424
+(101 / 628) - Loss: 3.5151 - tr_loss: 0.7933 - tcl_loss: 0.7391 - sin_loss: 0.4884 - cos_loss: 0.1552 - radii_loss: 1.3391
+(102 / 628) - Loss: 3.5145 - tr_loss: 0.7934 - tcl_loss: 0.7373 - sin_loss: 0.4866 - cos_loss: 0.0504 - radii_loss: 1.4467
+(103 / 628) - Loss: 3.5100 - tr_loss: 0.7996 - tcl_loss: 0.7378 - sin_loss: 0.4779 - cos_loss: 0.0418 - radii_loss: 1.4528
+(104 / 628) - Loss: 2.0317 - tr_loss: 0.7995 - tcl_loss: 0.7400 - sin_loss: 0.4585 - cos_loss: 0.0313 - radii_loss: 0.0024
+(105 / 628) - Loss: 3.4596 - tr_loss: 0.7920 - tcl_loss: 0.7372 - sin_loss: 0.4919 - cos_loss: 0.0990 - radii_loss: 1.3395
+(106 / 628) - Loss: 3.4139 - tr_loss: 0.7945 - tcl_loss: 0.7387 - sin_loss: 0.4732 - cos_loss: 0.1208 - radii_loss: 1.2867
+(107 / 628) - Loss: 3.5097 - tr_loss: 0.7902 - tcl_loss: 0.7375 - sin_loss: 0.4899 - cos_loss: 0.0471 - radii_loss: 1.4450
+(108 / 628) - Loss: 3.3803 - tr_loss: 0.7929 - tcl_loss: 0.7358 - sin_loss: 0.4922 - cos_loss: 0.2424 - radii_loss: 1.1170
+(109 / 628) - Loss: 2.2976 - tr_loss: 0.7934 - tcl_loss: 0.7413 - sin_loss: 0.4831 - cos_loss: 0.1898 - radii_loss: 0.0900
+warning: driver api and driver versions are different
+Traceback (most recent call last):
+  File "/mnt/nvme1/application/huangyun/TextSnake.pytorch-master/train_textsnake.py", line 240, in <module>
+    main()
+  File "/mnt/nvme1/application/huangyun/TextSnake.pytorch-master/train_textsnake.py", line 223, in main
+    train(model, train_loader, criterion, scheduler, optimizer, epoch, logger)
+  File "/mnt/nvme1/application/huangyun/TextSnake.pytorch-master/train_textsnake.py", line 91, in train
+    i, len(train_loader), loss.item(), tr_loss.item(), tcl_loss.item(), sin_loss.item(), cos_loss.item(), radii_loss.item())
+AttributeError: 'float' object has no attribute 'item'

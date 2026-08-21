@@ -1,0 +1,4 @@
+INFO train_amp.py(365): 
+save models to ./res/model_final.pth
+INFO train_amp.py(369): 
+evaluating the final model

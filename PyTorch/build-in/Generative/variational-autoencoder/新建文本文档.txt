@@ -1,0 +1,10 @@
+Parsed loss array (first 10): [71444.46  50069.72  34836.406 32787.33  33787.41  28635.59  26524.402
+ 27646.795 27809.295 29520.043]
+Parsed loss array (first 10): [71433.5   49633.582 33739.617 50043.84  39603.188 31352.4   27636.39
+ 27726.91  27186.06  28107.71 ]
+MeanRelativeError: -0.007548614
+MeanAbsoluteError: -262.15176
+Rule,mean_absolute_error -262.15176
+pass mean_relative_error=-0.007548614 <= 0.05 or mean_absolute_error=-262.15176 <= 0.0002
+
+python train_variational_autoencoder_pytorch.py --variational mean-field --use_gpu --data_dir "/data/application/huangyun/variational-autoencoder" --max_iterations 30000 --log_interval 10000

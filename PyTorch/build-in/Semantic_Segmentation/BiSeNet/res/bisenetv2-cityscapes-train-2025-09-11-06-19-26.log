@@ -1,0 +1,47 @@
+INFO train_amp.py(365): iter: 1/150000, lr: 0.000055, eta: 10 days, 7:56:41, time: 11.90, loss: 44.0030, loss_pre: 13.4527, loss_aux0: 4.1075, loss_aux1: 3.1170, loss_aux2: 8.6773, loss_aux3: 14.6487
+INFO train_amp.py(365): iter: 2/150000, lr: 0.000055, eta: 10 days, 21:05:22, time: 6.90, loss: 37.9461, loss_pre: 9.7616, loss_aux0: 3.3775, loss_aux1: 3.4310, loss_aux2: 7.5126, loss_aux3: 13.8633
+INFO train_amp.py(365): iter: 3/150000, lr: 0.000055, eta: 11 days, 4:24:35, time: 6.97, loss: 38.3111, loss_pre: 11.4264, loss_aux0: 3.3266, loss_aux1: 3.5845, loss_aux2: 7.3263, loss_aux3: 12.6473
+INFO train_amp.py(365): iter: 4/150000, lr: 0.000056, eta: 11 days, 9:55:16, time: 7.10, loss: 38.1603, loss_pre: 10.9760, loss_aux0: 3.4431, loss_aux1: 4.1327, loss_aux2: 7.0406, loss_aux3: 12.5679
+INFO train_amp.py(365): iter: 5/150000, lr: 0.000056, eta: 11 days, 14:00:44, time: 7.16, loss: 35.4457, loss_pre: 9.9842, loss_aux0: 3.4383, loss_aux1: 3.0840, loss_aux2: 7.4229, loss_aux3: 11.5163
+INFO train_amp.py(365): iter: 6/150000, lr: 0.000056, eta: 11 days, 13:00:27, time: 6.50, loss: 33.2515, loss_pre: 7.7203, loss_aux0: 3.5265, loss_aux1: 3.2607, loss_aux2: 7.3493, loss_aux3: 11.3946
+INFO train_amp.py(365): iter: 7/150000, lr: 0.000056, eta: 11 days, 15:21:53, time: 7.10, loss: 33.1149, loss_pre: 7.0339, loss_aux0: 3.8540, loss_aux1: 3.5223, loss_aux2: 8.1517, loss_aux3: 10.5530
+INFO train_amp.py(365): iter: 8/150000, lr: 0.000056, eta: 11 days, 21:52:57, time: 8.11, loss: 29.6865, loss_pre: 5.5235, loss_aux0: 3.3252, loss_aux1: 2.9158, loss_aux2: 6.4763, loss_aux3: 11.4457
+INFO train_amp.py(365): iter: 9/150000, lr: 0.000056, eta: 12 days, 2:16:39, time: 7.92, loss: 35.6942, loss_pre: 12.9513, loss_aux0: 3.3580, loss_aux1: 3.7652, loss_aux2: 6.9541, loss_aux3: 8.6655
+INFO train_amp.py(365): iter: 10/150000, lr: 0.000056, eta: 12 days, 6:29:16, time: 8.08, loss: 34.0388, loss_pre: 10.6598, loss_aux0: 3.4050, loss_aux1: 3.2687, loss_aux2: 6.8802, loss_aux3: 9.8251
+INFO train_amp.py(365): iter: 11/150000, lr: 0.000056, eta: 12 days, 9:07:43, time: 7.83, loss: 33.7418, loss_pre: 11.5875, loss_aux0: 3.4545, loss_aux1: 2.9209, loss_aux2: 6.3410, loss_aux3: 9.4379
+INFO train_amp.py(365): iter: 12/150000, lr: 0.000057, eta: 12 days, 11:18:03, time: 7.81, loss: 27.9583, loss_pre: 8.4703, loss_aux0: 3.4591, loss_aux1: 3.0534, loss_aux2: 6.3756, loss_aux3: 6.5998
+INFO train_amp.py(365): iter: 13/150000, lr: 0.000057, eta: 12 days, 12:04:55, time: 7.45, loss: 29.0963, loss_pre: 8.4691, loss_aux0: 3.8843, loss_aux1: 2.9320, loss_aux2: 6.4661, loss_aux3: 7.3449
+INFO train_amp.py(365): iter: 14/150000, lr: 0.000057, eta: 12 days, 11:14:58, time: 6.90, loss: 33.3342, loss_pre: 13.5150, loss_aux0: 3.5422, loss_aux1: 3.1437, loss_aux2: 6.2704, loss_aux3: 6.8629
+INFO train_amp.py(365): iter: 15/150000, lr: 0.000057, eta: 12 days, 11:24:34, time: 7.24, loss: 32.8119, loss_pre: 11.3750, loss_aux0: 3.2231, loss_aux1: 3.0517, loss_aux2: 5.8939, loss_aux3: 9.2682
+INFO train_amp.py(365): iter: 16/150000, lr: 0.000057, eta: 12 days, 12:23:53, time: 7.59, loss: 33.0418, loss_pre: 11.1075, loss_aux0: 3.2607, loss_aux1: 3.9211, loss_aux2: 5.4259, loss_aux3: 9.3266
+INFO train_amp.py(365): iter: 17/150000, lr: 0.000057, eta: 12 days, 12:57:37, time: 7.45, loss: 35.2531, loss_pre: 11.4261, loss_aux0: 3.7535, loss_aux1: 3.1764, loss_aux2: 6.3039, loss_aux3: 10.5931
+INFO train_amp.py(365): iter: 18/150000, lr: 0.000057, eta: 12 days, 13:53:44, time: 7.65, loss: 27.4786, loss_pre: 6.5130, loss_aux0: 3.3490, loss_aux1: 3.0350, loss_aux2: 5.1006, loss_aux3: 9.4809
+INFO train_amp.py(365): iter: 19/150000, lr: 0.000057, eta: 12 days, 14:41:57, time: 7.63, loss: 35.8613, loss_pre: 13.8173, loss_aux0: 3.3371, loss_aux1: 3.1746, loss_aux2: 5.3910, loss_aux3: 10.1413
+INFO train_amp.py(365): iter: 20/150000, lr: 0.000058, eta: 12 days, 15:25:31, time: 7.63, loss: 33.5224, loss_pre: 10.4830, loss_aux0: 4.0025, loss_aux1: 2.9218, loss_aux2: 6.1424, loss_aux3: 9.9727
+INFO train_amp.py(365): iter: 21/150000, lr: 0.000058, eta: 12 days, 15:39:17, time: 7.41, loss: 29.6756, loss_pre: 7.4464, loss_aux0: 3.2605, loss_aux1: 3.2848, loss_aux2: 5.3972, loss_aux3: 10.2867
+INFO train_amp.py(365): iter: 22/150000, lr: 0.000058, eta: 12 days, 14:53:39, time: 6.87, loss: 28.4390, loss_pre: 9.7076, loss_aux0: 3.4657, loss_aux1: 2.6600, loss_aux2: 4.9218, loss_aux3: 7.6839
+INFO train_amp.py(365): iter: 23/150000, lr: 0.000058, eta: 12 days, 14:34:55, time: 7.09, loss: 28.8614, loss_pre: 8.7839, loss_aux0: 3.2674, loss_aux1: 2.5579, loss_aux2: 5.0557, loss_aux3: 9.1965
+INFO train_amp.py(365): iter: 24/150000, lr: 0.000058, eta: 12 days, 14:46:27, time: 7.38, loss: 43.3892, loss_pre: 13.7811, loss_aux0: 3.8233, loss_aux1: 3.8420, loss_aux2: 7.1475, loss_aux3: 14.7954
+INFO train_amp.py(365): iter: 25/150000, lr: 0.000058, eta: 12 days, 15:04:20, time: 7.46, loss: 34.0851, loss_pre: 13.8438, loss_aux0: 3.4913, loss_aux1: 2.8982, loss_aux2: 4.6826, loss_aux3: 9.1692
+INFO train_amp.py(365): iter: 26/150000, lr: 0.000058, eta: 12 days, 15:14:15, time: 7.38, loss: 32.1972, loss_pre: 11.1762, loss_aux0: 3.3760, loss_aux1: 2.4648, loss_aux2: 4.8045, loss_aux3: 10.3756
+INFO train_amp.py(365): iter: 27/150000, lr: 0.000059, eta: 12 days, 15:16:56, time: 7.31, loss: 30.8810, loss_pre: 10.9943, loss_aux0: 3.4907, loss_aux1: 2.7667, loss_aux2: 4.1644, loss_aux3: 9.4650
+INFO train_amp.py(365): iter: 28/150000, lr: 0.000059, eta: 12 days, 15:22:51, time: 7.35, loss: 26.6875, loss_pre: 7.1061, loss_aux0: 3.6775, loss_aux1: 2.8470, loss_aux2: 5.2730, loss_aux3: 7.7838
+INFO train_amp.py(365): iter: 29/150000, lr: 0.000059, eta: 12 days, 15:43:52, time: 7.54, loss: 31.2162, loss_pre: 9.1295, loss_aux0: 3.1638, loss_aux1: 3.2589, loss_aux2: 4.9101, loss_aux3: 10.7539
+INFO train_amp.py(365): iter: 30/150000, lr: 0.000059, eta: 12 days, 15:00:56, time: 6.76, loss: 26.3049, loss_pre: 8.2792, loss_aux0: 3.0665, loss_aux1: 2.7229, loss_aux2: 3.9273, loss_aux3: 8.3091
+INFO train_amp.py(365): iter: 31/150000, lr: 0.000059, eta: 12 days, 14:40:14, time: 7.01, loss: 31.1637, loss_pre: 11.0576, loss_aux0: 3.3569, loss_aux1: 2.8407, loss_aux2: 4.7393, loss_aux3: 9.1693
+INFO train_amp.py(365): iter: 32/150000, lr: 0.000059, eta: 12 days, 15:14:25, time: 7.72, loss: 30.1767, loss_pre: 9.8771, loss_aux0: 3.0841, loss_aux1: 3.2757, loss_aux2: 4.7931, loss_aux3: 9.1467
+INFO train_amp.py(365): iter: 33/150000, lr: 0.000059, eta: 12 days, 15:49:02, time: 7.75, loss: 29.9053, loss_pre: 10.5052, loss_aux0: 3.4628, loss_aux1: 2.3641, loss_aux2: 4.7521, loss_aux3: 8.8211
+INFO train_amp.py(365): iter: 34/150000, lr: 0.000059, eta: 12 days, 16:14:52, time: 7.66, loss: 26.8593, loss_pre: 6.2011, loss_aux0: 3.0373, loss_aux1: 2.8435, loss_aux2: 4.4367, loss_aux3: 10.3408
+INFO train_amp.py(365): iter: 35/150000, lr: 0.000060, eta: 12 days, 16:32:35, time: 7.56, loss: 23.8411, loss_pre: 7.4875, loss_aux0: 2.8892, loss_aux1: 2.5130, loss_aux2: 3.6551, loss_aux3: 7.2963
+INFO train_amp.py(365): iter: 36/150000, lr: 0.000060, eta: 12 days, 16:52:38, time: 7.61, loss: 24.8947, loss_pre: 6.9601, loss_aux0: 3.1372, loss_aux1: 2.8040, loss_aux2: 4.4058, loss_aux3: 7.5875
+INFO train_amp.py(365): iter: 37/150000, lr: 0.000060, eta: 12 days, 17:14:27, time: 7.65, loss: 23.5643, loss_pre: 7.9008, loss_aux0: 3.1350, loss_aux1: 2.2984, loss_aux2: 3.5553, loss_aux3: 6.6747
+INFO train_amp.py(369): 
+save models to ./res/model_final.pth
+INFO train_amp.py(373): 
+evaluating the final model
+WARNING train_amp.py(378): Failed to empty cache: SDAA error: invalid argument
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_SDAA_DSA` to enable device-side assertions.
+
+INFO evaluate.py(329): compute single scale metrics
