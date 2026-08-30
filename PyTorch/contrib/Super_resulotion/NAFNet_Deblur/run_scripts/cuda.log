@@ -1,0 +1,353 @@
+/root/miniconda3/envs/NAFNet/lib/python3.9/site-packages/torch/distributed/launch.py:178: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torchrun.
+Note that --use_env is set by default in torchrun.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+init dist ..  pytorch
+2025-05-21 02:55:07,982 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.2.0+2b4af71
+	PyTorch: 1.11.0
+	TorchVision: 0.12.0
+2025-05-21 02:55:07,983 INFO: 
+  name: NAFNet-GoPro-width32
+  model_type: ImageRestorationModel
+  scale: 1
+  num_gpu: 1
+  manual_seed: 42
+  datasets:[
+    train:[
+      name: gopro-train
+      type: PairedImageDataset
+      dataroot_gt: ./datasets/GoPro/train/sharp_crops.lmdb
+      dataroot_lq: ./datasets/GoPro/train/blur_crops.lmdb
+      filename_tmpl: {}
+      io_backend:[
+        type: lmdb
+      ]
+      gt_size: 256
+      use_flip: True
+      use_rot: True
+      use_shuffle: True
+      num_worker_per_gpu: 4
+      batch_size_per_gpu: 4
+      dataset_enlarge_ratio: 1
+      prefetch_mode: None
+      phase: train
+      scale: 1
+    ]
+    val:[
+      name: gopro-test
+      type: PairedImageDataset
+      dataroot_gt: ./datasets/GoPro/test/target.lmdb
+      dataroot_lq: ./datasets/GoPro/test/input.lmdb
+      io_backend:[
+        type: lmdb
+      ]
+      phase: val
+      scale: 1
+    ]
+  ]
+  network_g:[
+    type: NAFNetLocal
+    width: 32
+    enc_blk_nums: [1, 1, 1, 28]
+    middle_blk_num: 1
+    dec_blk_nums: [1, 1, 1, 1]
+  ]
+  path:[
+    pretrain_network_g: None
+    strict_load_g: True
+    resume_state: None
+    root: /home/01/raithan/NAFNet
+    experiments_root: /home/01/raithan/NAFNet/experiments/NAFNet-GoPro-width32
+    models: /home/01/raithan/NAFNet/experiments/NAFNet-GoPro-width32/models
+    training_states: /home/01/raithan/NAFNet/experiments/NAFNet-GoPro-width32/training_states
+    log: /home/01/raithan/NAFNet/experiments/NAFNet-GoPro-width32
+    visualization: /home/01/raithan/NAFNet/experiments/NAFNet-GoPro-width32/visualization
+  ]
+  train:[
+    optim_g:[
+      type: AdamW
+      lr: 0.001
+      weight_decay: 0.001
+      betas: [0.9, 0.9]
+    ]
+    scheduler:[
+      type: TrueCosineAnnealingLR
+      T_max: 200000
+      eta_min: 1e-07
+    ]
+    total_iter: 100
+    warmup_iter: -1
+    pixel_opt:[
+      type: PSNRLoss
+      loss_weight: 1
+      reduction: mean
+    ]
+  ]
+  val:[
+    val_freq: 20000.0
+    save_img: False
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 0
+        test_y_channel: False
+      ]
+      ssim:[
+        type: calculate_ssim
+        crop_border: 0
+        test_y_channel: False
+      ]
+    ]
+  ]
+  logger:[
+    print_freq: 1
+    save_checkpoint_freq: 5000.0
+    use_tb_logger: True
+    wandb:[
+      project: None
+      resume_id: None
+    ]
+  ]
+  dist_params:[
+    backend: nccl
+    port: 29500
+  ]
+  is_train: True
+  dist: True
+  rank: 0
+  world_size: 1
+
+2025-05-21 02:55:08,167 INFO: Dataset PairedImageDataset - gopro-train is created.
+2025-05-21 02:55:08,168 INFO: Training statistics:
+	Number of train images: 16824
+	Dataset enlarge ratio: 1
+	Batch size per gpu: 4
+	World size (gpu number): 1
+	Require iter number per epoch: 4206
+	Total epochs: 1; iters: 100.
+2025-05-21 02:55:08,176 INFO: Dataset PairedImageDataset - gopro-test is created.
+2025-05-21 02:55:08,176 INFO: Number of val images/folders in gopro-test: 1111
+.. cosineannealingLR
+2025-05-21 02:55:12,829 INFO: Model [ImageRestorationModel] is created.
+2025-05-21 02:55:17,790 INFO: Start training from epoch: 0, iter: 0
+TCAPPDLL 2025-05-21 02:55:20.843562 - Epoch: 0 Iteration: 1  rank : 0  train.loss : -12.64857292175293  train.ips : 0.327555810285366 imgs/s
+2025-05-21 02:55:20,844 INFO: [NAFNe..][epoch:  0, iter:       1, lr:(1.000e-03,)] [eta: 0:06:32, time (data): 3.053 (1.489)] l_pix: -1.2649e+01 
+2025-05-21 02:55:20,856 INFO: Reducer buckets have been rebuilt in this iteration.
+TCAPPDLL 2025-05-21 02:55:21.066024 - Epoch: 0 Iteration: 2  rank : 0  train.loss : -18.583803176879883  train.ips : 4.533373108259133 imgs/s
+2025-05-21 02:55:21,066 INFO: [NAFNe..][epoch:  0, iter:       2, lr:(1.000e-03,)] [eta: 0:04:26, time (data): 0.221 (0.001)] l_pix: -1.8584e+01 
+TCAPPDLL 2025-05-21 02:55:21.283608 - Epoch: 0 Iteration: 3  rank : 0  train.loss : -24.415395736694336  train.ips : 4.615602334264677 imgs/s
+2025-05-21 02:55:21,283 INFO: [NAFNe..][epoch:  0, iter:       3, lr:(1.000e-03,)] [eta: 0:03:22, time (data): 0.217 (0.001)] l_pix: -2.4415e+01 
+TCAPPDLL 2025-05-21 02:55:21.491167 - Epoch: 0 Iteration: 4  rank : 0  train.loss : -23.049976348876953  train.ips : 4.852743672453131 imgs/s
+2025-05-21 02:55:21,491 INFO: [NAFNe..][epoch:  0, iter:       4, lr:(1.000e-03,)] [eta: 0:02:44, time (data): 0.206 (0.001)] l_pix: -2.3050e+01 
+TCAPPDLL 2025-05-21 02:55:21.707097 - Epoch: 0 Iteration: 5  rank : 0  train.loss : -20.698993682861328  train.ips : 4.663301564994641 imgs/s
+2025-05-21 02:55:21,707 INFO: [NAFNe..][epoch:  0, iter:       5, lr:(1.000e-03,)] [eta: 0:02:19, time (data): 0.214 (0.005)] l_pix: -2.0699e+01 
+TCAPPDLL 2025-05-21 02:55:21.919353 - Epoch: 0 Iteration: 6  rank : 0  train.loss : -22.91905403137207  train.ips : 4.742391692709864 imgs/s
+2025-05-21 02:55:21,919 INFO: [NAFNe..][epoch:  0, iter:       6, lr:(1.000e-03,)] [eta: 0:02:00, time (data): 0.211 (0.002)] l_pix: -2.2919e+01 
+TCAPPDLL 2025-05-21 02:55:22.138715 - Epoch: 0 Iteration: 7  rank : 0  train.loss : -27.346406936645508  train.ips : 4.594715036577591 imgs/s
+2025-05-21 02:55:22,139 INFO: [NAFNe..][epoch:  0, iter:       7, lr:(1.000e-03,)] [eta: 0:01:47, time (data): 0.218 (0.002)] l_pix: -2.7346e+01 
+TCAPPDLL 2025-05-21 02:55:22.355286 - Epoch: 0 Iteration: 8  rank : 0  train.loss : -22.951589584350586  train.ips : 4.643276316911083 imgs/s
+2025-05-21 02:55:22,355 INFO: [NAFNe..][epoch:  0, iter:       8, lr:(1.000e-03,)] [eta: 0:01:36, time (data): 0.215 (0.001)] l_pix: -2.2952e+01 
+TCAPPDLL 2025-05-21 02:55:22.568432 - Epoch: 0 Iteration: 9  rank : 0  train.loss : -25.07880401611328  train.ips : 4.723836639629148 imgs/s
+2025-05-21 02:55:22,568 INFO: [NAFNe..][epoch:  0, iter:       9, lr:(1.000e-03,)] [eta: 0:01:27, time (data): 0.212 (0.003)] l_pix: -2.5079e+01 
+TCAPPDLL 2025-05-21 02:55:22.786869 - Epoch: 0 Iteration: 10  rank : 0  train.loss : -24.152671813964844  train.ips : 4.613936951832185 imgs/s
+2025-05-21 02:55:22,787 INFO: [NAFNe..][epoch:  0, iter:      10, lr:(1.000e-03,)] [eta: 0:01:20, time (data): 0.217 (0.003)] l_pix: -2.4153e+01 
+TCAPPDLL 2025-05-21 02:55:23.008178 - Epoch: 0 Iteration: 11  rank : 0  train.loss : -24.179672241210938  train.ips : 4.549827522617317 imgs/s
+2025-05-21 02:55:23,009 INFO: [NAFNe..][epoch:  0, iter:      11, lr:(1.000e-03,)] [eta: 0:01:14, time (data): 0.220 (0.002)] l_pix: -2.4180e+01 
+TCAPPDLL 2025-05-21 02:55:23.249386 - Epoch: 0 Iteration: 12  rank : 0  train.loss : -26.945438385009766  train.ips : 4.181729539275399 imgs/s
+2025-05-21 02:55:23,249 INFO: [NAFNe..][epoch:  0, iter:      12, lr:(1.000e-03,)] [eta: 0:01:09, time (data): 0.239 (0.003)] l_pix: -2.6945e+01 
+TCAPPDLL 2025-05-21 02:55:23.475249 - Epoch: 0 Iteration: 13  rank : 0  train.loss : -26.604415893554688  train.ips : 4.462191677349688 imgs/s
+2025-05-21 02:55:23,475 INFO: [NAFNe..][epoch:  0, iter:      13, lr:(1.000e-03,)] [eta: 0:01:05, time (data): 0.224 (0.003)] l_pix: -2.6604e+01 
+TCAPPDLL 2025-05-21 02:55:23.700472 - Epoch: 0 Iteration: 14  rank : 0  train.loss : -25.693408966064453  train.ips : 4.472435840019108 imgs/s
+2025-05-21 02:55:23,700 INFO: [NAFNe..][epoch:  0, iter:      14, lr:(1.000e-03,)] [eta: 0:01:01, time (data): 0.224 (0.003)] l_pix: -2.5693e+01 
+TCAPPDLL 2025-05-21 02:55:23.918099 - Epoch: 0 Iteration: 15  rank : 0  train.loss : -25.399595260620117  train.ips : 4.629137391757333 imgs/s
+2025-05-21 02:55:23,918 INFO: [NAFNe..][epoch:  0, iter:      15, lr:(1.000e-03,)] [eta: 0:00:58, time (data): 0.216 (0.003)] l_pix: -2.5400e+01 
+TCAPPDLL 2025-05-21 02:55:24.140918 - Epoch: 0 Iteration: 16  rank : 0  train.loss : -25.796998977661133  train.ips : 4.50994610822226 imgs/s
+2025-05-21 02:55:24,141 INFO: [NAFNe..][epoch:  0, iter:      16, lr:(1.000e-03,)] [eta: 0:00:55, time (data): 0.222 (0.003)] l_pix: -2.5797e+01 
+TCAPPDLL 2025-05-21 02:55:24.353525 - Epoch: 0 Iteration: 17  rank : 0  train.loss : -24.12026596069336  train.ips : 4.725119161481691 imgs/s
+2025-05-21 02:55:24,353 INFO: [NAFNe..][epoch:  0, iter:      17, lr:(1.000e-03,)] [eta: 0:00:52, time (data): 0.212 (0.002)] l_pix: -2.4120e+01 
+TCAPPDLL 2025-05-21 02:55:24.568442 - Epoch: 0 Iteration: 18  rank : 0  train.loss : -23.72916030883789  train.ips : 4.674089989212706 imgs/s
+2025-05-21 02:55:24,568 INFO: [NAFNe..][epoch:  0, iter:      18, lr:(1.000e-03,)] [eta: 0:00:50, time (data): 0.214 (0.003)] l_pix: -2.3729e+01 
+TCAPPDLL 2025-05-21 02:55:24.786008 - Epoch: 0 Iteration: 19  rank : 0  train.loss : -24.41469955444336  train.ips : 4.617314665791855 imgs/s
+2025-05-21 02:55:24,786 INFO: [NAFNe..][epoch:  0, iter:      19, lr:(1.000e-03,)] [eta: 0:00:47, time (data): 0.217 (0.003)] l_pix: -2.4415e+01 
+TCAPPDLL 2025-05-21 02:55:24.998572 - Epoch: 0 Iteration: 20  rank : 0  train.loss : -23.762197494506836  train.ips : 4.7382771725132065 imgs/s
+2025-05-21 02:55:24,998 INFO: [NAFNe..][epoch:  0, iter:      20, lr:(1.000e-03,)] [eta: 0:00:45, time (data): 0.211 (0.002)] l_pix: -2.3762e+01 
+TCAPPDLL 2025-05-21 02:55:25.221731 - Epoch: 0 Iteration: 21  rank : 0  train.loss : -25.666065216064453  train.ips : 4.510479598925478 imgs/s
+2025-05-21 02:55:25,222 INFO: [NAFNe..][epoch:  0, iter:      21, lr:(1.000e-03,)] [eta: 0:00:43, time (data): 0.222 (0.003)] l_pix: -2.5666e+01 
+TCAPPDLL 2025-05-21 02:55:25.437665 - Epoch: 0 Iteration: 22  rank : 0  train.loss : -27.204673767089844  train.ips : 4.6702386837874075 imgs/s
+2025-05-21 02:55:25,437 INFO: [NAFNe..][epoch:  0, iter:      22, lr:(1.000e-03,)] [eta: 0:00:42, time (data): 0.214 (0.003)] l_pix: -2.7205e+01 
+TCAPPDLL 2025-05-21 02:55:25.662702 - Epoch: 0 Iteration: 23  rank : 0  train.loss : -23.98320770263672  train.ips : 4.464609305811022 imgs/s
+2025-05-21 02:55:25,663 INFO: [NAFNe..][epoch:  0, iter:      23, lr:(1.000e-03,)] [eta: 0:00:40, time (data): 0.224 (0.003)] l_pix: -2.3983e+01 
+TCAPPDLL 2025-05-21 02:55:25.891092 - Epoch: 0 Iteration: 24  rank : 0  train.loss : -24.597951889038086  train.ips : 4.405550128669713 imgs/s
+2025-05-21 02:55:25,891 INFO: [NAFNe..][epoch:  0, iter:      24, lr:(1.000e-03,)] [eta: 0:00:39, time (data): 0.227 (0.002)] l_pix: -2.4598e+01 
+TCAPPDLL 2025-05-21 02:55:26.110321 - Epoch: 0 Iteration: 25  rank : 0  train.loss : -27.860183715820312  train.ips : 4.583823576019401 imgs/s
+2025-05-21 02:55:26,110 INFO: [NAFNe..][epoch:  0, iter:      25, lr:(1.000e-03,)] [eta: 0:00:37, time (data): 0.218 (0.003)] l_pix: -2.7860e+01 
+TCAPPDLL 2025-05-21 02:55:26.349894 - Epoch: 0 Iteration: 26  rank : 0  train.loss : -20.885326385498047  train.ips : 4.594704969896676 imgs/s
+2025-05-21 02:55:26,350 INFO: [NAFNe..][epoch:  0, iter:      26, lr:(1.000e-03,)] [eta: 0:00:36, time (data): 0.218 (0.002)] l_pix: -2.0885e+01 
+TCAPPDLL 2025-05-21 02:55:26.560704 - Epoch: 0 Iteration: 27  rank : 0  train.loss : -23.590757369995117  train.ips : 4.764402925226787 imgs/s
+2025-05-21 02:55:26,561 INFO: [NAFNe..][epoch:  0, iter:      27, lr:(1.000e-03,)] [eta: 0:00:35, time (data): 0.210 (0.003)] l_pix: -2.3591e+01 
+TCAPPDLL 2025-05-21 02:55:26.776218 - Epoch: 0 Iteration: 28  rank : 0  train.loss : -26.143611907958984  train.ips : 4.669677132041861 imgs/s
+2025-05-21 02:55:26,776 INFO: [NAFNe..][epoch:  0, iter:      28, lr:(1.000e-03,)] [eta: 0:00:34, time (data): 0.214 (0.003)] l_pix: -2.6144e+01 
+TCAPPDLL 2025-05-21 02:55:26.994142 - Epoch: 0 Iteration: 29  rank : 0  train.loss : -27.429386138916016  train.ips : 4.611578026114989 imgs/s
+2025-05-21 02:55:26,994 INFO: [NAFNe..][epoch:  0, iter:      29, lr:(1.000e-03,)] [eta: 0:00:33, time (data): 0.217 (0.002)] l_pix: -2.7429e+01 
+TCAPPDLL 2025-05-21 02:55:27.208970 - Epoch: 0 Iteration: 30  rank : 0  train.loss : -26.666746139526367  train.ips : 4.680594349992467 imgs/s
+2025-05-21 02:55:27,209 INFO: [NAFNe..][epoch:  0, iter:      30, lr:(1.000e-03,)] [eta: 0:00:32, time (data): 0.214 (0.003)] l_pix: -2.6667e+01 
+TCAPPDLL 2025-05-21 02:55:27.423230 - Epoch: 0 Iteration: 31  rank : 0  train.loss : -29.589906692504883  train.ips : 4.696122229164008 imgs/s
+2025-05-21 02:55:27,423 INFO: [NAFNe..][epoch:  0, iter:      31, lr:(1.000e-03,)] [eta: 0:00:31, time (data): 0.213 (0.002)] l_pix: -2.9590e+01 
+TCAPPDLL 2025-05-21 02:55:27.637992 - Epoch: 0 Iteration: 32  rank : 0  train.loss : -23.53626251220703  train.ips : 4.6794037483836926 imgs/s
+2025-05-21 02:55:27,638 INFO: [NAFNe..][epoch:  0, iter:      32, lr:(1.000e-03,)] [eta: 0:00:30, time (data): 0.214 (0.003)] l_pix: -2.3536e+01 
+TCAPPDLL 2025-05-21 02:55:27.847421 - Epoch: 0 Iteration: 33  rank : 0  train.loss : -25.640857696533203  train.ips : 4.807236234352399 imgs/s
+2025-05-21 02:55:27,848 INFO: [NAFNe..][epoch:  0, iter:      33, lr:(1.000e-03,)] [eta: 0:00:29, time (data): 0.208 (0.003)] l_pix: -2.5641e+01 
+TCAPPDLL 2025-05-21 02:55:28.066433 - Epoch: 0 Iteration: 34  rank : 0  train.loss : -28.900558471679688  train.ips : 4.585176544925242 imgs/s
+2025-05-21 02:55:28,066 INFO: [NAFNe..][epoch:  0, iter:      34, lr:(1.000e-03,)] [eta: 0:00:28, time (data): 0.218 (0.002)] l_pix: -2.8901e+01 
+TCAPPDLL 2025-05-21 02:55:28.285391 - Epoch: 0 Iteration: 35  rank : 0  train.loss : -25.180362701416016  train.ips : 4.5984679462651945 imgs/s
+2025-05-21 02:55:28,285 INFO: [NAFNe..][epoch:  0, iter:      35, lr:(1.000e-03,)] [eta: 0:00:27, time (data): 0.217 (0.003)] l_pix: -2.5180e+01 
+TCAPPDLL 2025-05-21 02:55:28.496089 - Epoch: 0 Iteration: 36  rank : 0  train.loss : -26.9505558013916  train.ips : 4.777552371004615 imgs/s
+2025-05-21 02:55:28,496 INFO: [NAFNe..][epoch:  0, iter:      36, lr:(1.000e-03,)] [eta: 0:00:26, time (data): 0.209 (0.003)] l_pix: -2.6951e+01 
+TCAPPDLL 2025-05-21 02:55:28.715006 - Epoch: 0 Iteration: 37  rank : 0  train.loss : -27.203861236572266  train.ips : 4.594715036577591 imgs/s
+2025-05-21 02:55:28,715 INFO: [NAFNe..][epoch:  0, iter:      37, lr:(1.000e-03,)] [eta: 0:00:25, time (data): 0.218 (0.003)] l_pix: -2.7204e+01 
+TCAPPDLL 2025-05-21 02:55:28.926445 - Epoch: 0 Iteration: 38  rank : 0  train.loss : -23.124025344848633  train.ips : 4.759926007467344 imgs/s
+2025-05-21 02:55:28,926 INFO: [NAFNe..][epoch:  0, iter:      38, lr:(1.000e-03,)] [eta: 0:00:25, time (data): 0.210 (0.002)] l_pix: -2.3124e+01 
+TCAPPDLL 2025-05-21 02:55:29.147575 - Epoch: 0 Iteration: 39  rank : 0  train.loss : -27.026437759399414  train.ips : 4.542195278581864 imgs/s
+2025-05-21 02:55:29,147 INFO: [NAFNe..][epoch:  0, iter:      39, lr:(1.000e-03,)] [eta: 0:00:24, time (data): 0.220 (0.003)] l_pix: -2.7026e+01 
+TCAPPDLL 2025-05-21 02:55:29.369536 - Epoch: 0 Iteration: 40  rank : 0  train.loss : -23.153804779052734  train.ips : 4.534671941237333 imgs/s
+2025-05-21 02:55:29,369 INFO: [NAFNe..][epoch:  0, iter:      40, lr:(1.000e-03,)] [eta: 0:00:23, time (data): 0.221 (0.002)] l_pix: -2.3154e+01 
+TCAPPDLL 2025-05-21 02:55:29.582313 - Epoch: 0 Iteration: 41  rank : 0  train.loss : -26.68099021911621  train.ips : 4.72063603540333 imgs/s
+2025-05-21 02:55:29,582 INFO: [NAFNe..][epoch:  0, iter:      41, lr:(1.000e-03,)] [eta: 0:00:23, time (data): 0.212 (0.003)] l_pix: -2.6681e+01 
+TCAPPDLL 2025-05-21 02:55:29.801156 - Epoch: 0 Iteration: 42  rank : 0  train.loss : -25.83812141418457  train.ips : 4.597046660916208 imgs/s
+2025-05-21 02:55:29,801 INFO: [NAFNe..][epoch:  0, iter:      42, lr:(1.000e-03,)] [eta: 0:00:22, time (data): 0.218 (0.003)] l_pix: -2.5838e+01 
+TCAPPDLL 2025-05-21 02:55:30.020091 - Epoch: 0 Iteration: 43  rank : 0  train.loss : -27.019229888916016  train.ips : 4.590500956558666 imgs/s
+2025-05-21 02:55:30,020 INFO: [NAFNe..][epoch:  0, iter:      43, lr:(1.000e-03,)] [eta: 0:00:21, time (data): 0.218 (0.003)] l_pix: -2.7019e+01 
+TCAPPDLL 2025-05-21 02:55:30.240403 - Epoch: 0 Iteration: 44  rank : 0  train.loss : -26.94999885559082  train.ips : 4.5687744611600625 imgs/s
+2025-05-21 02:55:30,240 INFO: [NAFNe..][epoch:  0, iter:      44, lr:(1.000e-03,)] [eta: 0:00:21, time (data): 0.219 (0.002)] l_pix: -2.6950e+01 
+TCAPPDLL 2025-05-21 02:55:30.453239 - Epoch: 0 Iteration: 45  rank : 0  train.loss : -28.67627716064453  train.ips : 4.724081382566542 imgs/s
+2025-05-21 02:55:30,453 INFO: [NAFNe..][epoch:  0, iter:      45, lr:(1.000e-03,)] [eta: 0:00:20, time (data): 0.212 (0.003)] l_pix: -2.8676e+01 
+TCAPPDLL 2025-05-21 02:55:30.672811 - Epoch: 0 Iteration: 46  rank : 0  train.loss : -29.66493797302246  train.ips : 4.584620227705976 imgs/s
+2025-05-21 02:55:30,673 INFO: [NAFNe..][epoch:  0, iter:      46, lr:(1.000e-03,)] [eta: 0:00:20, time (data): 0.218 (0.002)] l_pix: -2.9665e+01 
+TCAPPDLL 2025-05-21 02:55:30.884734 - Epoch: 0 Iteration: 47  rank : 0  train.loss : -24.323572158813477  train.ips : 4.73883928319235 imgs/s
+2025-05-21 02:55:30,885 INFO: [NAFNe..][epoch:  0, iter:      47, lr:(1.000e-03,)] [eta: 0:00:19, time (data): 0.211 (0.003)] l_pix: -2.4324e+01 
+TCAPPDLL 2025-05-21 02:55:31.097175 - Epoch: 0 Iteration: 48  rank : 0  train.loss : -21.692907333374023  train.ips : 4.741576793506523 imgs/s
+2025-05-21 02:55:31,097 INFO: [NAFNe..][epoch:  0, iter:      48, lr:(1.000e-03,)] [eta: 0:00:19, time (data): 0.211 (0.001)] l_pix: -2.1693e+01 
+TCAPPDLL 2025-05-21 02:55:31.315983 - Epoch: 0 Iteration: 49  rank : 0  train.loss : -27.88461685180664  train.ips : 4.602383541471668 imgs/s
+2025-05-21 02:55:31,316 INFO: [NAFNe..][epoch:  0, iter:      49, lr:(1.000e-03,)] [eta: 0:00:18, time (data): 0.217 (0.004)] l_pix: -2.7885e+01 
+TCAPPDLL 2025-05-21 02:55:31.529290 - Epoch: 0 Iteration: 50  rank : 0  train.loss : -23.727514266967773  train.ips : 4.725747372239993 imgs/s
+2025-05-21 02:55:31,529 INFO: [NAFNe..][epoch:  0, iter:      50, lr:(1.000e-03,)] [eta: 0:00:17, time (data): 0.212 (0.002)] l_pix: -2.3728e+01 
+TCAPPDLL 2025-05-21 02:55:31.745643 - Epoch: 0 Iteration: 51  rank : 0  train.loss : -27.31583023071289  train.ips : 4.6435076423009045 imgs/s
+2025-05-21 02:55:31,746 INFO: [NAFNe..][epoch:  0, iter:      51, lr:(1.000e-03,)] [eta: 0:00:17, time (data): 0.215 (0.003)] l_pix: -2.7316e+01 
+TCAPPDLL 2025-05-21 02:55:31.958821 - Epoch: 0 Iteration: 52  rank : 0  train.loss : -26.756488800048828  train.ips : 4.722007191701398 imgs/s
+2025-05-21 02:55:31,959 INFO: [NAFNe..][epoch:  0, iter:      52, lr:(1.000e-03,)] [eta: 0:00:16, time (data): 0.212 (0.003)] l_pix: -2.6756e+01 
+TCAPPDLL 2025-05-21 02:55:32.179845 - Epoch: 0 Iteration: 53  rank : 0  train.loss : -27.69451332092285  train.ips : 4.544483738991748 imgs/s
+2025-05-21 02:55:32,180 INFO: [NAFNe..][epoch:  0, iter:      53, lr:(1.000e-03,)] [eta: 0:00:16, time (data): 0.220 (0.003)] l_pix: -2.7695e+01 
+TCAPPDLL 2025-05-21 02:55:32.396781 - Epoch: 0 Iteration: 54  rank : 0  train.loss : -29.23943328857422  train.ips : 4.630777978349315 imgs/s
+2025-05-21 02:55:32,397 INFO: [NAFNe..][epoch:  0, iter:      54, lr:(1.000e-03,)] [eta: 0:00:16, time (data): 0.216 (0.002)] l_pix: -2.9239e+01 
+TCAPPDLL 2025-05-21 02:55:32.610465 - Epoch: 0 Iteration: 55  rank : 0  train.loss : -30.508935928344727  train.ips : 4.712605812466714 imgs/s
+2025-05-21 02:55:32,610 INFO: [NAFNe..][epoch:  0, iter:      55, lr:(1.000e-03,)] [eta: 0:00:15, time (data): 0.212 (0.003)] l_pix: -3.0509e+01 
+TCAPPDLL 2025-05-21 02:55:32.820940 - Epoch: 0 Iteration: 56  rank : 0  train.loss : -25.359310150146484  train.ips : 4.783262304261402 imgs/s
+2025-05-21 02:55:32,821 INFO: [NAFNe..][epoch:  0, iter:      56, lr:(1.000e-03,)] [eta: 0:00:15, time (data): 0.209 (0.003)] l_pix: -2.5359e+01 
+TCAPPDLL 2025-05-21 02:55:33.041632 - Epoch: 0 Iteration: 57  rank : 0  train.loss : -22.70264434814453  train.ips : 4.55832251978499 imgs/s
+2025-05-21 02:55:33,041 INFO: [NAFNe..][epoch:  0, iter:      57, lr:(1.000e-03,)] [eta: 0:00:14, time (data): 0.219 (0.004)] l_pix: -2.2703e+01 
+TCAPPDLL 2025-05-21 02:55:33.333852 - Epoch: 0 Iteration: 58  rank : 0  train.loss : -27.005578994750977  train.ips : 3.4380470947164965 imgs/s
+2025-05-21 02:55:33,334 INFO: [NAFNe..][epoch:  0, iter:      58, lr:(1.000e-03,)] [eta: 0:00:14, time (data): 0.291 (0.002)] l_pix: -2.7006e+01 
+TCAPPDLL 2025-05-21 02:55:33.565637 - Epoch: 0 Iteration: 59  rank : 0  train.loss : -26.2342472076416  train.ips : 4.3399348539594635 imgs/s
+2025-05-21 02:55:33,565 INFO: [NAFNe..][epoch:  0, iter:      59, lr:(1.000e-03,)] [eta: 0:00:13, time (data): 0.230 (0.002)] l_pix: -2.6234e+01 
+TCAPPDLL 2025-05-21 02:55:33.791298 - Epoch: 0 Iteration: 60  rank : 0  train.loss : -27.853384017944336  train.ips : 4.46119024523068 imgs/s
+2025-05-21 02:55:33,791 INFO: [NAFNe..][epoch:  0, iter:      60, lr:(1.000e-03,)] [eta: 0:00:13, time (data): 0.224 (0.003)] l_pix: -2.7853e+01 
+TCAPPDLL 2025-05-21 02:55:34.006451 - Epoch: 0 Iteration: 61  rank : 0  train.loss : -26.826431274414062  train.ips : 4.675986746756925 imgs/s
+2025-05-21 02:55:34,006 INFO: [NAFNe..][epoch:  0, iter:      61, lr:(1.000e-03,)] [eta: 0:00:12, time (data): 0.214 (0.003)] l_pix: -2.6826e+01 
+TCAPPDLL 2025-05-21 02:55:34.227389 - Epoch: 0 Iteration: 62  rank : 0  train.loss : -26.451763153076172  train.ips : 4.554461724228545 imgs/s
+2025-05-21 02:55:34,227 INFO: [NAFNe..][epoch:  0, iter:      62, lr:(1.000e-03,)] [eta: 0:00:12, time (data): 0.220 (0.003)] l_pix: -2.6452e+01 
+TCAPPDLL 2025-05-21 02:55:34.438219 - Epoch: 0 Iteration: 63  rank : 0  train.loss : -35.07665252685547  train.ips : 4.766124560239266 imgs/s
+2025-05-21 02:55:34,438 INFO: [NAFNe..][epoch:  0, iter:      63, lr:(1.000e-03,)] [eta: 0:00:12, time (data): 0.210 (0.002)] l_pix: -3.5077e+01 
+TCAPPDLL 2025-05-21 02:55:34.653774 - Epoch: 0 Iteration: 64  rank : 0  train.loss : -30.085084915161133  train.ips : 4.67064433293913 imgs/s
+2025-05-21 02:55:34,654 INFO: [NAFNe..][epoch:  0, iter:      64, lr:(1.000e-03,)] [eta: 0:00:11, time (data): 0.214 (0.003)] l_pix: -3.0085e+01 
+TCAPPDLL 2025-05-21 02:55:34.861742 - Epoch: 0 Iteration: 65  rank : 0  train.loss : -31.31770896911621  train.ips : 4.841255495650227 imgs/s
+2025-05-21 02:55:34,862 INFO: [NAFNe..][epoch:  0, iter:      65, lr:(1.000e-03,)] [eta: 0:00:11, time (data): 0.207 (0.002)] l_pix: -3.1318e+01 
+TCAPPDLL 2025-05-21 02:55:35.075588 - Epoch: 0 Iteration: 66  rank : 0  train.loss : -30.57262420654297  train.ips : 4.707200574609445 imgs/s
+2025-05-21 02:55:35,076 INFO: [NAFNe..][epoch:  0, iter:      66, lr:(1.000e-03,)] [eta: 0:00:10, time (data): 0.212 (0.002)] l_pix: -3.0573e+01 
+TCAPPDLL 2025-05-21 02:55:35.288215 - Epoch: 0 Iteration: 67  rank : 0  train.loss : -26.49953842163086  train.ips : 4.723724917588575 imgs/s
+2025-05-21 02:55:35,288 INFO: [NAFNe..][epoch:  0, iter:      67, lr:(1.000e-03,)] [eta: 0:00:10, time (data): 0.212 (0.003)] l_pix: -2.6500e+01 
+TCAPPDLL 2025-05-21 02:55:35.501736 - Epoch: 0 Iteration: 68  rank : 0  train.loss : -26.402130126953125  train.ips : 4.704502602767537 imgs/s
+2025-05-21 02:55:35,502 INFO: [NAFNe..][epoch:  0, iter:      68, lr:(1.000e-03,)] [eta: 0:00:10, time (data): 0.213 (0.002)] l_pix: -2.6402e+01 
+TCAPPDLL 2025-05-21 02:55:35.722781 - Epoch: 0 Iteration: 69  rank : 0  train.loss : -28.329904556274414  train.ips : 4.543130069896741 imgs/s
+2025-05-21 02:55:35,723 INFO: [NAFNe..][epoch:  0, iter:      69, lr:(1.000e-03,)] [eta: 0:00:09, time (data): 0.220 (0.002)] l_pix: -2.8330e+01 
+TCAPPDLL 2025-05-21 02:55:35.951456 - Epoch: 0 Iteration: 70  rank : 0  train.loss : -27.179861068725586  train.ips : 4.390975806367186 imgs/s
+2025-05-21 02:55:35,951 INFO: [NAFNe..][epoch:  0, iter:      70, lr:(1.000e-03,)] [eta: 0:00:09, time (data): 0.228 (0.003)] l_pix: -2.7180e+01 
+TCAPPDLL 2025-05-21 02:55:36.171618 - Epoch: 0 Iteration: 71  rank : 0  train.loss : -27.263151168823242  train.ips : 4.563892585463413 imgs/s
+2025-05-21 02:55:36,172 INFO: [NAFNe..][epoch:  0, iter:      71, lr:(1.000e-03,)] [eta: 0:00:09, time (data): 0.219 (0.002)] l_pix: -2.7263e+01 
+TCAPPDLL 2025-05-21 02:55:36.386881 - Epoch: 0 Iteration: 72  rank : 0  train.loss : -23.110157012939453  train.ips : 4.671648357523382 imgs/s
+2025-05-21 02:55:36,387 INFO: [NAFNe..][epoch:  0, iter:      72, lr:(1.000e-03,)] [eta: 0:00:08, time (data): 0.214 (0.003)] l_pix: -2.3110e+01 
+TCAPPDLL 2025-05-21 02:55:36.597647 - Epoch: 0 Iteration: 73  rank : 0  train.loss : -22.148372650146484  train.ips : 4.774088390495312 imgs/s
+2025-05-21 02:55:36,598 INFO: [NAFNe..][epoch:  0, iter:      73, lr:(1.000e-03,)] [eta: 0:00:08, time (data): 0.209 (0.002)] l_pix: -2.2148e+01 
+TCAPPDLL 2025-05-21 02:55:36.814897 - Epoch: 0 Iteration: 74  rank : 0  train.loss : -25.537450790405273  train.ips : 4.635491543106726 imgs/s
+2025-05-21 02:55:36,815 INFO: [NAFNe..][epoch:  0, iter:      74, lr:(1.000e-03,)] [eta: 0:00:07, time (data): 0.216 (0.003)] l_pix: -2.5537e+01 
+TCAPPDLL 2025-05-21 02:55:37.031700 - Epoch: 0 Iteration: 75  rank : 0  train.loss : -25.77772331237793  train.ips : 4.63061437859429 imgs/s
+2025-05-21 02:55:37,032 INFO: [NAFNe..][epoch:  0, iter:      75, lr:(1.000e-03,)] [eta: 0:00:07, time (data): 0.216 (0.002)] l_pix: -2.5778e+01 
+TCAPPDLL 2025-05-21 02:55:37.241543 - Epoch: 0 Iteration: 76  rank : 0  train.loss : -27.244651794433594  train.ips : 4.798963846764653 imgs/s
+2025-05-21 02:55:37,241 INFO: [NAFNe..][epoch:  0, iter:      76, lr:(1.000e-03,)] [eta: 0:00:07, time (data): 0.208 (0.003)] l_pix: -2.7245e+01 
+TCAPPDLL 2025-05-21 02:55:37.448149 - Epoch: 0 Iteration: 77  rank : 0  train.loss : -27.31614875793457  train.ips : 4.875119282988647 imgs/s
+2025-05-21 02:55:37,448 INFO: [NAFNe..][epoch:  0, iter:      77, lr:(1.000e-03,)] [eta: 0:00:06, time (data): 0.205 (0.002)] l_pix: -2.7316e+01 
+TCAPPDLL 2025-05-21 02:55:37.662153 - Epoch: 0 Iteration: 78  rank : 0  train.loss : -29.75780487060547  train.ips : 4.7010804752297695 imgs/s
+2025-05-21 02:55:37,662 INFO: [NAFNe..][epoch:  0, iter:      78, lr:(1.000e-03,)] [eta: 0:00:06, time (data): 0.213 (0.002)] l_pix: -2.9758e+01 
+TCAPPDLL 2025-05-21 02:55:37.868787 - Epoch: 0 Iteration: 79  rank : 0  train.loss : -27.587913513183594  train.ips : 4.871801007044667 imgs/s
+2025-05-21 02:55:37,869 INFO: [NAFNe..][epoch:  0, iter:      79, lr:(1.000e-03,)] [eta: 0:00:06, time (data): 0.205 (0.003)] l_pix: -2.7588e+01 
+TCAPPDLL 2025-05-21 02:55:38.089663 - Epoch: 0 Iteration: 80  rank : 0  train.loss : -26.15072250366211  train.ips : 4.555233360050219 imgs/s
+2025-05-21 02:55:38,090 INFO: [NAFNe..][epoch:  0, iter:      80, lr:(1.000e-03,)] [eta: 0:00:05, time (data): 0.220 (0.003)] l_pix: -2.6151e+01 
+TCAPPDLL 2025-05-21 02:55:38.302378 - Epoch: 0 Iteration: 81  rank : 0  train.loss : -30.122882843017578  train.ips : 4.732887687259367 imgs/s
+2025-05-21 02:55:38,302 INFO: [NAFNe..][epoch:  0, iter:      81, lr:(1.000e-03,)] [eta: 0:00:05, time (data): 0.211 (0.002)] l_pix: -3.0123e+01 
+TCAPPDLL 2025-05-21 02:55:38.522590 - Epoch: 0 Iteration: 82  rank : 0  train.loss : -27.110427856445312  train.ips : 4.569695332145051 imgs/s
+2025-05-21 02:55:38,522 INFO: [NAFNe..][epoch:  0, iter:      82, lr:(1.000e-03,)] [eta: 0:00:05, time (data): 0.219 (0.003)] l_pix: -2.7110e+01 
+TCAPPDLL 2025-05-21 02:55:38.740422 - Epoch: 0 Iteration: 83  rank : 0  train.loss : -26.644752502441406  train.ips : 4.6186976524973735 imgs/s
+2025-05-21 02:55:38,740 INFO: [NAFNe..][epoch:  0, iter:      83, lr:(1.000e-03,)] [eta: 0:00:04, time (data): 0.217 (0.003)] l_pix: -2.6645e+01 
+TCAPPDLL 2025-05-21 02:55:38.947991 - Epoch: 0 Iteration: 84  rank : 0  train.loss : -28.858551025390625  train.ips : 4.840529165132713 imgs/s
+2025-05-21 02:55:38,948 INFO: [NAFNe..][epoch:  0, iter:      84, lr:(1.000e-03,)] [eta: 0:00:04, time (data): 0.207 (0.002)] l_pix: -2.8859e+01 
+TCAPPDLL 2025-05-21 02:55:39.176379 - Epoch: 0 Iteration: 85  rank : 0  train.loss : -29.620834350585938  train.ips : 4.405013411526982 imgs/s
+2025-05-21 02:55:39,176 INFO: [NAFNe..][epoch:  0, iter:      85, lr:(1.000e-03,)] [eta: 0:00:04, time (data): 0.227 (0.002)] l_pix: -2.9621e+01 
+TCAPPDLL 2025-05-21 02:55:39.386573 - Epoch: 0 Iteration: 86  rank : 0  train.loss : -28.57266616821289  train.ips : 4.79158460406604 imgs/s
+2025-05-21 02:55:39,386 INFO: [NAFNe..][epoch:  0, iter:      86, lr:(1.000e-03,)] [eta: 0:00:03, time (data): 0.209 (0.003)] l_pix: -2.8573e+01 
+TCAPPDLL 2025-05-21 02:55:39.604085 - Epoch: 0 Iteration: 87  rank : 0  train.loss : -29.453824996948242  train.ips : 4.626752694055264 imgs/s
+2025-05-21 02:55:39,604 INFO: [NAFNe..][epoch:  0, iter:      87, lr:(1.000e-03,)] [eta: 0:00:03, time (data): 0.216 (0.003)] l_pix: -2.9454e+01 
+TCAPPDLL 2025-05-21 02:55:39.811300 - Epoch: 0 Iteration: 88  rank : 0  train.loss : -27.651493072509766  train.ips : 4.848127295151415 imgs/s
+2025-05-21 02:55:39,811 INFO: [NAFNe..][epoch:  0, iter:      88, lr:(1.000e-03,)] [eta: 0:00:03, time (data): 0.206 (0.002)] l_pix: -2.7651e+01 
+TCAPPDLL 2025-05-21 02:55:40.034420 - Epoch: 0 Iteration: 89  rank : 0  train.loss : -26.339000701904297  train.ips : 4.50634108187323 imgs/s
+2025-05-21 02:55:40,034 INFO: [NAFNe..][epoch:  0, iter:      89, lr:(1.000e-03,)] [eta: 0:00:03, time (data): 0.222 (0.003)] l_pix: -2.6339e+01 
+TCAPPDLL 2025-05-21 02:55:40.288713 - Epoch: 0 Iteration: 90  rank : 0  train.loss : -23.377452850341797  train.ips : 3.94581622333545 imgs/s
+2025-05-21 02:55:40,289 INFO: [NAFNe..][epoch:  0, iter:      90, lr:(1.000e-03,)] [eta: 0:00:02, time (data): 0.253 (0.002)] l_pix: -2.3377e+01 
+TCAPPDLL 2025-05-21 02:55:40.496184 - Epoch: 0 Iteration: 91  rank : 0  train.loss : -23.313854217529297  train.ips : 4.853580384347007 imgs/s
+2025-05-21 02:55:40,496 INFO: [NAFNe..][epoch:  0, iter:      91, lr:(1.000e-03,)] [eta: 0:00:02, time (data): 0.206 (0.002)] l_pix: -2.3314e+01 
+TCAPPDLL 2025-05-21 02:55:40.712234 - Epoch: 0 Iteration: 92  rank : 0  train.loss : -22.50066375732422  train.ips : 4.645806726738036 imgs/s
+2025-05-21 02:55:40,712 INFO: [NAFNe..][epoch:  0, iter:      92, lr:(1.000e-03,)] [eta: 0:00:02, time (data): 0.215 (0.003)] l_pix: -2.2501e+01 
+TCAPPDLL 2025-05-21 02:55:40.925632 - Epoch: 0 Iteration: 93  rank : 0  train.loss : -27.322153091430664  train.ips : 4.715143461950516 imgs/s
+2025-05-21 02:55:40,925 INFO: [NAFNe..][epoch:  0, iter:      93, lr:(1.000e-03,)] [eta: 0:00:01, time (data): 0.212 (0.001)] l_pix: -2.7322e+01 
+TCAPPDLL 2025-05-21 02:55:41.142056 - Epoch: 0 Iteration: 94  rank : 0  train.loss : -26.16234588623047  train.ips : 4.649200360026426 imgs/s
+2025-05-21 02:55:41,142 INFO: [NAFNe..][epoch:  0, iter:      94, lr:(1.000e-03,)] [eta: 0:00:01, time (data): 0.215 (0.003)] l_pix: -2.6162e+01 
+TCAPPDLL 2025-05-21 02:55:41.360907 - Epoch: 0 Iteration: 95  rank : 0  train.loss : -27.154233932495117  train.ips : 4.588642783531095 imgs/s
+2025-05-21 02:55:41,361 INFO: [NAFNe..][epoch:  0, iter:      95, lr:(1.000e-03,)] [eta: 0:00:01, time (data): 0.218 (0.004)] l_pix: -2.7154e+01 
+TCAPPDLL 2025-05-21 02:55:41.587408 - Epoch: 0 Iteration: 96  rank : 0  train.loss : -27.165428161621094  train.ips : 4.455517632224421 imgs/s
+2025-05-21 02:55:41,587 INFO: [NAFNe..][epoch:  0, iter:      96, lr:(1.000e-03,)] [eta: 0:00:00, time (data): 0.224 (0.004)] l_pix: -2.7165e+01 
+TCAPPDLL 2025-05-21 02:55:41.804534 - Epoch: 0 Iteration: 97  rank : 0  train.loss : -27.266090393066406  train.ips : 4.626456693260798 imgs/s
+2025-05-21 02:55:41,804 INFO: [NAFNe..][epoch:  0, iter:      97, lr:(1.000e-03,)] [eta: 0:00:00, time (data): 0.216 (0.002)] l_pix: -2.7266e+01 
+TCAPPDLL 2025-05-21 02:55:42.041474 - Epoch: 0 Iteration: 98  rank : 0  train.loss : -26.7936954498291  train.ips : 4.244168738508739 imgs/s
+2025-05-21 02:55:42,042 INFO: [NAFNe..][epoch:  0, iter:      98, lr:(1.000e-03,)] [eta: 0:00:00, time (data): 0.236 (0.003)] l_pix: -2.6794e+01 
+TCAPPDLL 2025-05-21 02:55:42.270056 - Epoch: 0 Iteration: 99  rank : 0  train.loss : -29.069067001342773  train.ips : 4.41128635313816 imgs/s
+2025-05-21 02:55:42,270 INFO: [NAFNe..][epoch:  0, iter:      99, lr:(1.000e-03,)] [eta: 0:00:00, time (data): 0.227 (0.003)] l_pix: -2.9069e+01 
+TCAPPDLL 2025-05-21 02:55:42.484835 - Epoch: 0 Iteration: 100  rank : 0  train.loss : -25.24736976623535  train.ips : 4.685054040650007 imgs/s
+2025-05-21 02:55:42,485 INFO: [NAFNe..][epoch:  0, iter:     100, lr:(1.000e-03,)] [eta: 0:00:00, time (data): 0.213 (0.003)] l_pix: -2.5247e+01 
+2025-05-21 02:55:42,489 INFO: End of training. Time consumed: 0:00:24
+2025-05-21 02:55:42,489 INFO: Save the latest model.

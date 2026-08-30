@@ -176,4 +176,3 @@ outputs/
 
 !requirements.txt
 .DS_Store
-PyTorch/build-in/Detection/ConvNeXt/
